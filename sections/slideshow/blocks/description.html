@@ -1,0 +1,51 @@
+<h2 class="{{block.settings | class_list()}} body1 text-{{block.settings.text_align}}" {{{block.shopline_attributes}}}>
+  {{{ block.settings.text | newline_to_br() }}}
+</h2>
+
+{{#schema}}
+{
+  "name": "t:sections.slideshow.blocks.description.name",
+  "icon": "content",
+  "tag": "",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "t:sections.slideshow.blocks.description.settings.text.label",
+      "default": "And optional subtext"
+    },
+    {
+      "type": "text_align",
+      "id": "text_align",
+      "label": "t:sections.slideshow.blocks.description.settings.text_align.label",
+      "default": "center"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.slideshow.blocks.description.settings.spacing.label",
+      "default": {
+        "padding-top": "0px",
+        "padding-right": "0px",
+        "padding-bottom": "0px",
+        "padding-left": "0px"
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.slideshow.blocks.description.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.slideshow.blocks.description.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

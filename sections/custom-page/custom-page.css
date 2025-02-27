@@ -1,0 +1,14 @@
+.custom-page {
+  background-color: rgb(var(--color-background));
+}
+
+.custom-page .empty-image-class {
+  height: 525px;
+  background-color: rgba(var(--color-text), 0.05);
+}
+
+@media (max-width: 959px) {
+  .custom-page .empty-image-class {
+    height: 335px;
+  }
+}

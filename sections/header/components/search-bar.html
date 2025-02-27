@@ -1,0 +1,52 @@
+{{#var form_class = props.form_class /}}
+{{#var show_divider = props.show_divider /}}
+
+<theme-search-bar class="header-search-bar{{#if show_divider}} divider{{/if}}">
+  <div class="header-search-bar__backdrop" data-role="search-bar-dismiss"></div>
+
+  <form class="header-search-bar__form {{form_class}}" action="{{routes.search_url}}" method="get" role="search">
+    <label class="header-search-bar__icon body3" for="search-input-{{section.id}}" aria-label="Search">
+      {{#component "icons/search" /}}
+    </label>
+
+    
+    <input
+      id="search-input-{{section.id}}"
+      class="field__input body3"
+      type="search"
+      name="keyword"
+      value="{{#if search.terms}}{{search.terms}}{{/if}}"
+      placeholder="{{`general.search.search` | t()}}"
+      maxlength="255"
+      autocorrect="off"
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+      autofocus
+    />
+
+    <button
+      class="header-search-bar__icon button button--icon"
+      name="close"
+      aria-label="Close search"
+      data-role="search-bar-dismiss"
+      role="button"
+      type="button"
+    >
+      {{#component "icons/close" /}}
+    </button>
+  </form>
+
+  <div class="header-search-bar__results" data-role="search-bar-result">
+    <div class="header-search-bar__results-loading">
+      {{#component "icons/loading" class="header-search-bar__results-spinner" /}}
+    </div>
+
+    <form
+      action="{{routes.search_url}}"
+      method="get"
+      class="header-search-bar__results-list"
+      data-role="search-bar-result-list"
+    ></form>
+  </div>
+</theme-search-bar>

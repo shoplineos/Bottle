@@ -1,0 +1,79 @@
+<div class="text-columns-with-image__card" {{{block.shopline_attributes}}}>
+  {{#content "blocks" /}}
+
+  {{#capture html}}
+    {{block.settings.button_text}}
+    <span class="text-columns-with-image__card-link-icon">{{#component "icons/caret-right" /}}</span>
+  {{/capture}}
+
+  <div class="text-columns-with-image__card-link">
+    {{#component "button" type="link" link_url=block.settings.link style_link=true html=html /}}
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.text_columns_with_image.blocks.card.name",
+  "icon": "cardComponent",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "t:sections.text_columns_with_image.blocks.card.settings.button_text.label",
+      "default": "Optional button"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:sections.text_columns_with_image.blocks.card.settings.link.label"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.text_columns_with_image.blocks.card.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "flex-start",
+        "justify-content": "flex-start",
+        "row-gap": "16px",
+        "column-gap": "16px",
+        "@media (--mobile)": {
+          "row-gap": "8px",
+          "column-gap": "8px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$image",
+      "limit": 1
+    },
+    {
+      "type": "$title",
+      "limit": 1
+    },
+    {
+      "type": "$text",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.text_columns_with_image.blocks.card.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "$image"
+        },
+        {
+          "type": "$title"
+        },
+        {
+          "type": "$text"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

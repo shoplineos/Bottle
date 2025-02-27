@@ -1,0 +1,36 @@
+.image-with-text-section {
+  word-break: break-word;
+  background-color: rgb(var(--color-background));
+}
+.image-with-text__image {
+  position: relative;
+  display: flex;
+}
+.image-with-text__image > img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: var(--aspect-ratio);
+  object-fit: cover;
+}
+.image-with-text__image .hover-scale__image {
+  width: 100%;
+}
+.image-with-text__image .empty-image-class {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(var(--color-image-background));
+}
+.image-with-text__subheading {
+  font-size: var(--body3-font-size);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+.image-with-text__button {
+  max-width: 100%;
+  padding-block-start: 0;
+}
+.image-with-text__button .button {
+  word-break: break-all;
+  white-space: normal;
+}

@@ -1,0 +1,15 @@
+
+
+<div class="cart-checkout">
+  {{#if !props.hide_additional_checkout_buttons && additional_checkout_buttons}}
+    {{{content_for_additional_checkout_buttons}}}
+  {{/if}}
+
+  {{#var form_id = "cart-form-" | append(props.scene) /}}
+
+  {{#cart_form id=form_id}}
+  <button type="submit" class="button button--fill" name="checkout">
+    {{"cart.checkout_proceeding.checkout" | t()}}
+  </button>
+  {{/cart_form}}
+</div>

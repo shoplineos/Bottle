@@ -1,0 +1,67 @@
+{{#component "stylesheet" src="./detail-inventory.css" | asset_url() /}}
+
+{{#var product = props.product /}}
+{{#var target_variant = product.selected_or_first_available_variant /}}
+
+<div class="product-detail__inventory body3 title-font-bold" {{{block.shopline_attributes}}}>
+  {{#if target_variant.inventory_management}}
+    {{#if target_variant.inventory_quantity > 0}}
+      {{#if target_variant.inventory_quantity <= block.settings.inventory_threshold}}
+        <span class="low-stock">
+          {{#if block.settings.show_inventory_quantity}}
+            {{"products.product_details.inventory_low_stock_show_count" | t(quantity=target_variant.inventory_quantity) }}
+          {{#else/}}
+            {{"products.product_details.inventory_low_stock" | t() }}
+          {{/if}}
+        </span>
+      {{#else/}}
+         <span class="in-stock">
+          {{#if block.settings.show_inventory_quantity}}
+            {{"products.product_details.inventory_in_stock_show_count" | t(quantity=target_variant.inventory_quantity) }}
+          {{#else/}}
+            {{"products.product_details.inventory_in_stock" | t() }}
+          {{/if}}
+        </span>
+      {{/if}}
+    {{#else/}}
+       <span class="out-stock">
+        {{#if target_variant.inventory_policy == "continue"}}
+          {{"products.product_details.inventory_out_of_stock_continue_selling" | t() }}
+        {{#else/}}
+          {{"products.product_details.inventory_out_of_stock" | t() }}
+        {{/if}}
+      </span>
+    {{/if}}
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_inventory.name",
+  "tag": "",
+  "icon": "general",
+  "settings": [
+    {
+      "type": "range",
+      "id": "inventory_threshold",
+      "label": "t:blocks.product.detail_inventory.settings.inventory_threshold.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "info": "t:blocks.product.detail_inventory.settings.inventory_threshold.info",
+      "default": 10
+    },
+    {
+      "type": "switch",
+      "id": "show_inventory_quantity",
+      "label": "t:blocks.product.detail_inventory.settings.show_inventory_quantity.label",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_inventory.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

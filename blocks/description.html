@@ -1,0 +1,47 @@
+<p class="block-description {{block.settings | class_list()}} text-{{block.settings.text_align}} " {{{block.shopline_attributes}}}>
+  {{block.settings.content}}
+</p>
+
+{{#schema}}
+{
+  "name": "t:blocks.description.name",
+  "tag": "",
+  "icon": "content",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "content",
+      "limit": 0,
+      "label": "t:blocks.description.settings.content.label",
+      "default": "A short description."
+    },
+    {
+      "type": "text_align",
+      "id": "text_align",
+      "label": "t:blocks.description.settings.text_align.label",
+      "default": "center"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:blocks.description.settings.spacing.label",
+      "default": {
+        "padding-top": "0",
+        "padding-right": "0",
+        "padding-bottom": "0",
+        "padding-left": "0"
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:blocks.description.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ]
+}
+{{/schema}}

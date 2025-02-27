@@ -1,0 +1,23 @@
+<div class="main-cart-footer__subtotal" {{{block.shopline_attributes}}}>
+  {{#if shop.cart_discount_enable}}
+    {{#component "cart/widgets/cart-coupon" /}}
+  {{/if}}
+
+  <div class="main-cart-footer__amount">
+    {{#component "cart/widgets/cart-amount" is_flex_end=true /}}
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_cart_footer.blocks.subtotal.name",
+  "icon": "currency",
+  "tag": "",
+  "settings": [],
+  "presets": [
+    {
+      "name": "t:sections.main_cart_footer.blocks.subtotal.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

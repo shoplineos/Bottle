@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "main-article": {
+      "type": "main-article",
+      "blocks": {
+        "main-article__title": {
+          "type": "$title"
+        },
+        "main-article__info": {
+          "type": "$info"
+        },
+        "main-article__cover_image": {
+          "type": "$cover_image"
+        },
+        "main-article__content": {
+          "type": "$content"
+        },
+        "main-article__share": {
+          "type": "$share"
+        },
+        "main-article__button_back": {
+          "type": "$button_back"
+        },
+        "main-article__comment": {
+          "type": "$comment"
+        }
+      },
+      "block_order": [
+        "main-article__title",
+        "main-article__info",
+        "main-article__cover_image",
+        "main-article__content",
+        "main-article__share",
+        "main-article__button_back",
+        "main-article__comment"
+      ]
+    }
+  },
+  "order": [
+    "main-article"
+  ]
+}

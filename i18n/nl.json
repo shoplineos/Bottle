@@ -1,0 +1,1178 @@
+{
+  "blog": {
+    "blog": {
+      "next": "Volgende",
+      "previous": "Vorig",
+      "read_more": "Bekijk meer",
+      "related_articles": "Gerelateerde blogs"
+    },
+    "blog_list": {
+      "empty_description": "Er zijn geen blogberichten in deze blog",
+      "readmore": "Meer lezen",
+      "title": "Blog",
+      "view_more": "Meer bekijken"
+    },
+    "comment": {
+      "comment": "Opmerking",
+      "comment_audit_tip": "Uw opmerking is ingediend en moet worden beoordeeld.",
+      "comment_empty": "Gelieve de opmerkingen in te vullen",
+      "email": "E-mail",
+      "email_empty": "E-mail mag niet leeg zijn",
+      "email_format": "Voer het juiste e-mailadres in",
+      "form_title": "Opmerking",
+      "loadmore": "meer laden",
+      "moderated_tip": "Let op: commentaren moeten worden goedgekeurd voordat ze geplaatst kunnen worden.",
+      "name": "Naam",
+      "name_empty": "Vul a.u.b. naam in",
+      "post_comment": "Plaats commentaar",
+      "single_count": "{{count}} commentaren",
+      "submit": "indienen",
+      "submit_audit_tip": "Succesvol ingediend, in afwachting van beoordeling",
+      "success": "Succesvol ingediend",
+      "title": "{{comment_length}} reacties"
+    },
+    "general": {
+      "back": "Terug naar de blog",
+      "back_to": "Ga terug naar {{{collectionTitle}}}"
+    }
+  },
+  "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "De initiële groothandelshoeveelheid voor dit artikel is {{num}} stuks"
+        },
+        "most": {
+          "desc": "De maximale groothandelshoeveelheid van dit product is {{num}} stuks"
+        },
+        "noIncrement": {
+          "desc": "De extra hoeveelheid van dit artikel is {{num}} stuks"
+        }
+      }
+    },
+    "cart": {
+      "added_to_cart": "Aan winkelwagen toegevoegd",
+      "buy_now": "Nu kopen",
+      "cancel": "Annuleren",
+      "cart_subtotal": "Winkelwagen totaal",
+      "cart_view": "Winkelwagen bekijken",
+      "confirm": "Oké",
+      "got_it": "Ik begrijp"
+    },
+    "cart_error": "Fout tijdens het updaten van het winkelwagentje. Probeer het opnieuw",
+    "cart_quantity_error": "U kunt alleen {{quantity}} van dit artikel toevoegen aan uw winkelwagen.",
+    "checkout": {
+      "max_amount_limit": "Je hebt het maximale bedrag voor het afrekenen overschreden"
+    },
+    "checkout_proceeding": {
+      "checkout": "Bestellen",
+      "checkout_proceed": "De volgende artikelen hebben de aankoop limiet overschreden, wilt u doorgaan met afrekenen?",
+      "continue": "Verdergaan",
+      "continue_shopping": "Naar winkelen",
+      "day": "dagen",
+      "remove": "Verwijderen",
+      "return_to_cart": "Terug naar de winkelwagen",
+      "subtotal": "Subtotaal",
+      "tax_included": "Inclusief belasting"
+    },
+    "couponCode": {
+      "exceedLimit": "Kortingscodes overschrijden de hoeveelheidslimiet",
+      "existCode": "Kortingscode bestaat al",
+      "list": {
+        "unavailable": "Alle kortingscodes zijn verlopen"
+      },
+      "notSupport": {
+        "stacked": "Kortingscodes zijn niet stapelbaar"
+      },
+      "unavailable": "Kortingscode is verlopen"
+    },
+    "discount": {
+      "coupon_code_amount": "Kortingscode aanbieding",
+      "coupon_code_length_limit": "Kortingscodes mogen niet langer zijn dan {{range}} tekens",
+      "expected_discount": "Verwachte korting"
+    },
+    "discount_item": {
+      "buy_limit5": "U kunt tot {{stock}} artikelen tegelijk met korting kopen"
+    },
+    "discount_price": {
+      "buy_limit1": "Nog maar {{stock}} items voor deze kortingsprijs",
+      "buy_limit2": "U kunt tot {{stock}} artikelen tegelijk met korting kopen",
+      "buy_limit3": "Slechts {{stock}} artikelen kunnen worden gekocht voor deze voorkeursprijs"
+    },
+    "error": {
+      "default": "Bron niet geladen",
+      "noshipping": "Geen beschikbare verzendtariefplannen",
+      "order": "Mislukt om een orderaanvraag te plaatsen",
+      "renew": "Mislukt om gegevens bij te werken"
+    },
+    "general": {
+      "continue_as_a_guest": "Belijven bezoeken als een gast",
+      "support_oneTime_purchase_only": "Producten zijn alleen beschikbaar voor eenmalige aankoop",
+      "support_subscription_only": "Producten zijn alleen beschikbaar voor aankoop na abonnement"
+    },
+    "item": {
+      "add_limit2": "U kunt maximaal 99999 stuks toevoegen aan de winkelwagen",
+      "click_to_view": "Klik om te bekijken",
+      "custom_preview": "Aangepast voorbeeld",
+      "empty_cart": "Uw winkelwagen is momenteel leeg.",
+      "item_left": "{{stock}} stukken overblijven",
+      "market": {
+        "illegal": {
+          "excludedState": "Markt goederen illegaal, de goederen is uitgesloten status in de markt"
+        }
+      },
+      "none_existent": "Item bestaat niet"
+    },
+    "next_step": {
+      "calculated_taxes_fees": "De volgende stap is het berekenen van belasting en bezorgkosten",
+      "included_taxes_fees": "Inclusief belasting en verzendkosten berekend bij het afrekenen",
+      "taxes_included_and_shipping_at_checkout": "Inclusief belasting en berekende bezorgkosten bij het afrekenen",
+      "taxes_included_and_shipping_policy": "Belasting inclusief. <a href=\"{{link}}\">Verzendkosten</a> berekend bij het afrekenen.",
+      "taxes_not_included_and_shipping_policy_at_checkout": "Belastingen en <a href=\"{{ link }}\">verzendkosten</a> berekend bij het afrekenen"
+    },
+    "notices": {
+      "change_password_after_verification": "Wachtwoord kan worden gewijzigd na het voltooien van de validatie",
+      "excess_product": "De volgende artikelen hebben de aankoop limiet overschreden, verander het aantal a.u.b.",
+      "product_amount_limit": "Sorry! Het aantal artikelen in de winkelwagen is de limiet overschreden",
+      "product_selected_invalid": "Sorry, het artikel dat u hebt gekozen is niet langer beschikbaar, kies opnieuw austublieft",
+      "store_nonexistent": "De winkel bestaat niet"
+    },
+    "order": {
+      "invalid_order_number": "ongeldig bestelnummer",
+      "paymentVoucher": {
+        "downloadDoc": "Bestand downloaden",
+        "format": "Formaat",
+        "formatLimit": "Ondersteunt .jpg, .png, .pdf bestanden met een bestandsgrootte kleiner dan 20MB. U kunt maximaal 5 afbeeldingen uploaden",
+        "uploadAmount": "{{num}} betalingsbewijs(en) geüpload",
+        "uploadLimit": "Upload .jpg, .png, .pdf bestanden alstublieft met een grootte van minder dan 20MB"
+      },
+      "payment_voucher_confirmation": "Ik snap het",
+      "shipping_address": "Ontvangen adres",
+      "sign_in": "Of log in op de volgende manieren",
+      "tax_included": "Inclusief {{price}} aan belastingen",
+      "try_again": "Upload mislukt. Probeer het opnieuw.",
+      "try_later": "systeem bezet, probeer het later opnieuw.",
+      "upload_bank_transfer_vouhcer_for_confirmation": "Upload de bankoverschrijvingsvoucher en wij zullen bevestigen.",
+      "upload_image_within_10_m_b": "Upload JPG-, PNG-, GIF-afbeeldingen binnen 10 MB"
+    },
+    "payment": {
+      "channel": "Betalingskanalen",
+      "create_time": "Gecreëerd",
+      "free": "Gratis",
+      "log_in": "Naar inloggen",
+      "payment_details": "Betalingsgegevens",
+      "pending_review": "Aan het betalen",
+      "reference_number": "Referentienummer transactie",
+      "status": "Status",
+      "subtotal_price": "Totale prijs van de artikelen",
+      "sum": "Bedrag",
+      "total_sum": "Totaal",
+      "update_time": "Bijgewerkt"
+    },
+    "policy": {
+      "privacy_policy": "Privacybeleid"
+    },
+    "product": {
+      "unavailable_sale": "Dit artikel kunt u niet online te kopen"
+    },
+    "promotion": {
+      "no_promotion": "Niet deelnemen aan de aanbieding"
+    },
+    "shpping": {
+      "service_terms": "Dienst voorwaarden"
+    },
+    "stock": {
+      "limit": "Nog {{stock}} op voorraad"
+    },
+    "subscription": {
+      "information": "Abonneren"
+    },
+    "tips": {
+      "agree_with_the_shop": "Ik ga akkoord met de winkels",
+      "change_binding_after_verification": "U kunt {{value}} verbinden/wijzigen na verificatie",
+      "forget_password": "Wachtwoord vergeten",
+      "proceed_to_checkout": "Een afrekening maken",
+      "reset_password": "U bent uw wachtwoord aan het resetten voor account {{account}}"
+    }
+  },
+  "customer": {
+    "account": {
+      "account_binding": "Account verbinden",
+      "account_information": "Account",
+      "address": "adres",
+      "bind": "Verbinden",
+      "birthday": "Geboortedatum",
+      "change_password": "Wachtwoord wijzigen",
+      "confirm_btn": "Bevestigen",
+      "confirm_subscription_modal_btn": "Abonnement bevestigen",
+      "confirm_subscription_modal_content": "U heeft eerder een inschrijving ingediend. Er is een bevestigingsmail naar dit e-mailadres gestuurd. U kunt dit bevestigen in uw e-mail of door op deze knop te klikken.",
+      "confirm_subscription_modal_title": "Gelieve uw e-mail inschrijving te bevestigen.",
+      "credit_card_number": "Krediet kaart nummer",
+      "deadline": "Voor zakelijke rapportagedoeleinden blijft uw bestelling zichtbaar. Uw accountgegevens zullen worden verwijderd na 9 dagen en u kunt dit proces voor die datum annuleren",
+      "delete_account": "Account verwijderen",
+      "delete_account_email": "E-mail",
+      "delete_account_notify": "U kunt een aanvraag indienen om deze rekening te verwijderen. Zodra de rekening is verwijderd, wordt alle informatie die is gebruikt om deze rekening te identificeren verwijderd, waaronder",
+      "delete_deadline_tip": "Gebruikersgegevens worden verwijderd op {{time}}",
+      "email": "E-mail",
+      "email_repeat_tip": "Geregistreerd e-mailadres",
+      "email_subscribe_invalid_tip": "Ongeldig e-mailadres",
+      "first_name": "Voornaam",
+      "gender": "Geslacht",
+      "gender_female": "Vrouw",
+      "gender_male": "Man",
+      "gender_secret": "Geheim",
+      "invalidEmail": "Ongeldig e-mailadres",
+      "ip_address": "IP-adres",
+      "last_name": "Achternaam",
+      "modify_email": "E-mail wijzigen",
+      "modify_email_modal_title": "E-mail wijzigen",
+      "modify_phone": "Telefoon",
+      "modify_phone_modal_title": "Telefoon",
+      "name": "Naam",
+      "next": "Volgende stap",
+      "nickname_empty_error": "Voornaam en achternaam kunnen niet beide leeg zijn",
+      "not_set": "Niet opgezet",
+      "password": "Wachtwoord",
+      "personal_information": "Persoonlijke gegevens",
+      "phone": "Telefoon",
+      "reset_password_error_hint": "Verbind eerst e-mailadres of telefoon",
+      "revoke": "Annuleren van een verwijdering",
+      "revoke_btn": "Verwijdering ongedaan maken",
+      "revoke_message": "De account wordt momenteel verwijderd, de accountgegevens worden op {{time}} verwijderd en u hebt tot die datum de tijd om het verwijderingsproces te annuleren",
+      "save_btn": "Bewaren",
+      "select_date": "Kies de datum",
+      "subscribe_confirm_tip": "Bedankt voor uw inschrijving.",
+      "timeout_tip": "Het operatie is verlopen, controleer opnieuw a.u.b.",
+      "unknow_error_tip": "Service uitzondering, probeer later opnieuw",
+      "unregister": "Account verwijderen",
+      "username": "Naam",
+      "verify_email_message": "Voordat u uw account kunt verwijderen, moeten wij uw identiteit verifiëren.Uw emailadres {{email}} zal een verificatiecode ontvangen",
+      "verify_phone_message": "Wij moeten uw identiteit verifiëren voordat wij u kunnen verwijderen.Uw telefoon {{phone}} zal een verificatie-sms ontvangen"
+    },
+    "activate": {
+      "account_activated": "De account is geactiveerd",
+      "apply_code": "Kortingscode toepassen",
+      "apply_success": "Toegepast",
+      "button": "Activeren",
+      "copy_success": "De bon is gekopieerd",
+      "discount_title": "Activeer account en ontvang een kortingscode",
+      "normal_title": "Activeer account",
+      "normal_title_with_discount_code": "",
+      "subscription_text": "Meld u aan voor e-mails om updates te ontvangen, toegang tot exclusieve aanbiedingen en meer.",
+      "success_title": "Gefeliciteerd met het krijgen van een korting",
+      "token_expired": "Uw link is verlopen"
+    },
+    "address": {
+      "add_address": "Nieuw adres toevoegen",
+      "address": "Adres",
+      "address1": "Gedetailleerd adres ",
+      "address2": "Gedetailleerd adres 2",
+      "address_full_tip": "Al vijftig adressen opgeslagen en kunnen op dit moment niet worden toegevoegd",
+      "adress_full_tip": "Al vijftig adressen opgeslagen en kunnen op dit moment niet worden toegevoegd",
+      "city": "Stad",
+      "common_max": "Minder dan {{max}} tekens!",
+      "common_min": "Meer dan {{min}} tekens",
+      "company": "Bedrijf",
+      "country": "Land/regio",
+      "default": "Standaard",
+      "delete_address": "Adres verwijderen",
+      "district": "District",
+      "edit_last_name_hint": "Vul uw achernaam in",
+      "edit_phone_hint": "Vul uw telefoonnummer in",
+      "edit_shipping_address": "Bezorgadres wijzigen",
+      "first_name": "Voornaam",
+      "last_name": "Achternaam",
+      "max_address_tip": "Tot maximale 50 adressen aanmaken",
+      "no_address_data": "Momenteel geen afleveradres",
+      "no_adress_data": "Momenteel geen afleveradres",
+      "phone": "Mobiel telefoonnummer",
+      "province": "Provincie",
+      "set_default_address": "Als standaardadres instellen",
+      "zip_code": "Postcode"
+    },
+    "company": {
+      "account": {
+        "billTitle": "Factuuradres van bedrijf",
+        "link": "Aanvraag bedrijfsaccount",
+        "shipping": "Verzendadres van bedrijf",
+        "title": "Aanvraag bedrijfsaccount"
+      },
+      "address": {
+        "placeholder": "Gedetailleerd adres"
+      },
+      "address2": {
+        "placeholder": "Gedetailleerd adres 2"
+      },
+      "bill": {
+        "sameAsCompany": "Factuuradres van het bedrijf is hetzelfde als het verzendadres van het bedrijf"
+      },
+      "billing": {
+        "address": {
+          "placeholder": "Gedetailleerd adres"
+        },
+        "address2": {
+          "placeholder": "Gedetailleerd adres 2"
+        },
+        "city": {
+          "placeholder": "Stad"
+        },
+        "country": {
+          "placeholder": "Land/Regio"
+        },
+        "district": {
+          "placeholder": "District"
+        },
+        "phone": {
+          "placeholder": "Mobiel telefoonnummer"
+        },
+        "province": {
+          "placeholder": "Provincie"
+        },
+        "zip": {
+          "placeholder": "Postcode"
+        }
+      },
+      "billingSameAsShipping": {
+        "placeholder": "Het factuuradres van het bedrijf is hetzelfde als het verzendadres"
+      },
+      "billing_address": {
+        "title": "Factuuradres van het bedrijf"
+      },
+      "city": {
+        "placeholder": "Stad"
+      },
+      "company_name": {
+        "placeholder": "Bedrijfsnaam"
+      },
+      "country": {
+        "placeholder": "Land/Regio"
+      },
+      "create": {
+        "limit": "Het aantal bedrijven voor de winkel heeft zijn limiet bereikt. Neem voor hulp contact op met de verkoper.",
+        "success": "Bedankt. Het formulier is verzonden."
+      },
+      "district": {
+        "placeholder": "District"
+      },
+      "email": {
+        "placeholder": "Mailbox"
+      },
+      "field": {
+        "companyName": "Bedrijfsnaam",
+        "email": "E-mail"
+      },
+      "first_name": {
+        "placeholder": "Achternamen"
+      },
+      "form": {
+        "submit": "Indienen"
+      },
+      "last_name": {
+        "placeholder": "Namen"
+      },
+      "phone": {
+        "placeholder": "Mobiel telefoonnummer"
+      },
+      "province": {
+        "placeholder": "Provincie"
+      },
+      "register": {
+        "button": "Verzend",
+        "success": {
+          "description": "Het formulier is succesvol verzonden.",
+          "title": "Bedankt voor het invullen!"
+        },
+        "title": "Aanvraag bedrijfsaccount"
+      },
+      "shipping_address": {
+        "title": "Het verzendadres van het bedrijf"
+      },
+      "zip": {
+        "placeholder": "Postcode"
+      }
+    },
+    "email": {
+      "mail_common": "E-mail"
+    },
+    "forget_password": {
+      "forget_password_tips": "Wachtwoord vergeten",
+      "reset_password": "WACHTWOORD RESETTEN",
+      "tips_password_can_be_changed_after_verification": "Wachtwoord kan worden gewijzigd na het voltooien van de validatie",
+      "tips_reset_password": "U bent uw wachtwoord aan het resetten voor account {{account}}",
+      "token_expired": "Uw link om uw wachtwoord te resetten is verlopen"
+    },
+    "general": {
+      "account": "REKENING",
+      "and_button": "en",
+      "apr": "Apr",
+      "april": "April",
+      "aug": "Aug",
+      "august": "Augustus",
+      "back_to_user_center": "Terug naar het gebruikerscentrum",
+      "bind_change_email": "E-mailadres verbinden/wijzigen",
+      "bind_change_phone": "Telefoonnummer verbinden/wijzigen",
+      "bind_email": "E-mail binden",
+      "bind_phone": "Mobiele telefoon binden",
+      "bind_success": "Succesvol verbinden",
+      "cancel": "Annuleren",
+      "cancel_common": "Annuleren",
+      "cancel_mobile_button": "Annuleren",
+      "clear_button": "Legen",
+      "company_empty_hint": "Bedrijfsnaam mag niet leeg zijn",
+      "company_existed": "Bedrijfsnaam bestaat al.",
+      "company_frequent_operation": "Herhaal de handeling, probeer het later opnieuw",
+      "company_registry_closed": "De verkoper heeft de functie voor het aanvragen van een bedrijfsaccount niet ingeschakeld. Neem contact op met de verkoper om dit aan te vragen.",
+      "confirm": "Oké",
+      "confirm_button": "Oké",
+      "continue_as_a_guest": "Belijven bezoeken als een gast",
+      "date_format": "dd-MM-yyyy",
+      "dec": "Dec",
+      "december": "December",
+      "edit": "Redigeren",
+      "email": "E-mailadres",
+      "email_empty_hint": "Vul de e-mailadres in",
+      "email_error_hint": "Vul de e-mailadres in in de juiste formaat, binnen 50 tekens",
+      "email_tip": "Wij sturen u een E-mail om uw wachtwoord opnieuw in te stellen.",
+      "enter_verification_code": "Vul de verificatiecode in",
+      "feb": "Feb",
+      "february": "Februari",
+      "first_day": "0",
+      "fr": "vr",
+      "fri": "vr",
+      "friday": "vrijdag",
+      "image_size_less_than_tips": "De beeldgrootte moet kleiner zijn dan {{max}}mb",
+      "jan": "Jan",
+      "january": "Januari",
+      "jul": "Jul",
+      "july": "Juli",
+      "jun": "Jun",
+      "june": "Juni",
+      "login_method": "Of log in op de volgende manieren",
+      "mar": "Mrt",
+      "march": "Maart",
+      "max_image_upload_tips": "Uploaden tot maximaal {{max}} bladen",
+      "may": "Mei",
+      "may_short": "Mei",
+      "mo": "ma",
+      "mon": "ma",
+      "monday": "maandag",
+      "network_error_message": "Geen netwerk",
+      "new_email": "Nieuwe e-mail",
+      "new_phone": "Nieuwe mobiele telefoon",
+      "nov": "Nov",
+      "november": "November",
+      "oct": "Okt",
+      "october": "Oktober",
+      "ok": "Oké",
+      "okay_common": "Oké",
+      "orders": "Bestellingen",
+      "password": "Wachtwoord",
+      "password_empty_hint": "Vul de wachtwoord in",
+      "phone": "Telefoonnummer",
+      "phone_empty_message": "Vul de telefoonnummer in",
+      "phone_error_message": "Vul de e-mailadres in in de juiste formaat, binnen 50 tekens",
+      "phone_number_error_message": "Vul een wettelijk telefoonnummer in",
+      "phone_tip": "Voor het opnieuw instellen van uw wachtwoord, sturen wij u een sms",
+      "proceed_to_checkout": "Een afrekening maken",
+      "register": "Registreren",
+      "repeat_passport_error": "De ingevoerde wachtwoorden komen niet overeen",
+      "repeat_password": "Wachtwoord herhalen",
+      "resend": "Verzend opnieuw",
+      "sa": "za",
+      "sat": "za",
+      "saturday": "zaterdag",
+      "save": "Bewaren",
+      "select_date": "Kies de datum",
+      "send": "Verzend",
+      "send_error": "Verzend eerst de verificatiecode",
+      "send_verification_code_hint": "Vul de wachtwoord opnieuw in",
+      "sep": "Sep",
+      "september": "September",
+      "set_password": "Het wachtwoord moet 6-18 tekens lang zijn, bestaande uit cijfers, hoofdletters en kleine letters",
+      "sign_in": "Inloggen",
+      "sign_in_activate": "Verificatiecode is verzonden naar uw account {{account}}, u kunt uw account activeren na verificatie.",
+      "sign_in_activate_title": "Account activeren",
+      "sign_out": "Uitloggen",
+      "sign_up": "Registreren",
+      "su": "zo",
+      "subscription_desc": "Ontvang het laatste nieuws over de evenement van de winkel",
+      "sun": "zo",
+      "sunday": "zondag",
+      "th": "do",
+      "thu": "do",
+      "thursday": "donderdag",
+      "time_format": "HH:mm",
+      "title": "Titel van de pagina",
+      "today": "Vandaag",
+      "tu": "di",
+      "tue": "di",
+      "tuesday": "dinsdag",
+      "update_passport": "Wachtwoord wijzigen",
+      "user_agreement_tip": "Lees eerst de Gebruikersovereenkomst en ga ermee akkoord",
+      "username": "E-mailadres/Telefoonnummer",
+      "username_empty_hint": "Vul de e-mailadress of telefoonnummer in",
+      "verification_code": "Verificatiecode",
+      "verification_code_sent_tip": "De verificatiecode is naar uw account gestuurd",
+      "verification_code_success": "De verificatiecode is verzonden naar uw login {{type}} <em>{{value}}</em>, voer de code hieronder in.",
+      "verift_account_tip": "Verifieer uw account om uw wachtwoord opnieuw in te stellen",
+      "we": "wo",
+      "wed": "wo",
+      "wednesday": "woensdag"
+    },
+    "login": {
+      "member_login_common": "Inloggen als lid",
+      "subscribe_confirm_tip": "Bedankt voor uw inschrijving. U kunt inloggen voor een betere ervaring."
+    },
+    "message": {
+      "format_error": "Berichtformaat niet ondersteund",
+      "input_placeholder": "Heeft u een bericht achter te laten?",
+      "message": "Bericht",
+      "send": "Verzenden"
+    },
+    "phone": {
+      "mobile_common": "Mobieltje"
+    },
+    "register": {
+      "go_to_login": "Naar inloggen",
+      "privacy_policy": "Privacybeleid",
+      "terms_of_service": "Dienst voorwaarden",
+      "tips_agree_with_the_shop": "Ik ga akkoord met de winkels"
+    },
+    "subscribe": {
+      "email_has_bind": "Dit e-mailadres is gekoppeld aan een ander account",
+      "phone_has_bind": "Deze telefoon is aan een ander account gekoppeld"
+    },
+    "subscription": {
+      "email": "E-mail",
+      "email_subscribe_error_tip": "Dit e-mailadres is gekoppeld aan een ander account",
+      "email_subscription_text": "Ontvang geabonneerde promoties via e-mail",
+      "line": "LINE",
+      "messenger": "Messenger",
+      "phone": "Telefoon",
+      "phone_subscribe_error_tip": "Deze mobiele telefoon is gekoppeld aan een andere account",
+      "phone_subscription_text": "Ontvang geabonneerde promoties via telefoon",
+      "reason_other_length": "Voer maximaal 300 tekens in",
+      "reason_other_placeholder": "Inhoud invoeren",
+      "save_button": "Bewaren",
+      "subscribe_button": "Abonneren",
+      "subscription_cancel_text": "Abonnement opzeggen",
+      "subscription_hint": "Successvol abonneren",
+      "subscription_title": "Abonneren",
+      "unsubscribe": "Abonnement opzeggen",
+      "unsubscribe_btn": "Abonnement opzeggen",
+      "unsubscribe_confirm_text": "Abonnement opzeggen",
+      "unsubscribe_feedback_text": "U zult geen promoties meer ontvangen en kunt nadien op elk moment abonneren",
+      "unsubscribe_feedback_title": "Abonnement opgezegd van mailing lijst <italic>{{name}}</italic>",
+      "unsubscribe_reason1": "Ik wil zulke e-mails niet ontvangen",
+      "unsubscribe_reason2": "Ik ontvang te veel e-mails",
+      "unsubscribe_reason3": "Ik heb me niet geabonneerd op deze lijst",
+      "unsubscribe_reason4": "De inhoud van de e-mails is niet relevant voor mij",
+      "unsubscribe_reason5": "De inhoud van de e-mail is te lang",
+      "unsubscribe_reason6": "Andere",
+      "unsubscribe_subtitle": "Het spijt ons zeer te horen dat u ons verlaat! Laat ons alstublieft weten waarom u zich heeft uitgeschreven:",
+      "unsubscribe_success": "Abonnement is geannuleerd en zal binnenkort worden doorverwezen naar de hoofdpagina",
+      "unsubscribe_tip": "Als u abonnement opgezegd, ontvangt u niet langer de laatste promoties.",
+      "unsubscribe_title": "Abonnement opzeggen"
+    },
+    "unsubscribe": {
+      "content_placeholder": "Voer inhoud in",
+      "goto_btn": "Ga de winkel binnen",
+      "notyet": "Je bent nog niet geabonneerd",
+      "notyet_desc": "Je kunt naar de winkel gaan om je te abonneren",
+      "success": "Abonnement opgezegd",
+      "success_tip": "Je hebt je afgemeld voor {{storeName}}"
+    }
+  },
+  "filters": {
+    "clear_all_filter": "Alles verwijderen",
+    "max_price": "De hoogste prijs is {{ price }}",
+    "price": {
+      "label": "Prijs"
+    },
+    "product_count": "{{product_count}} producten",
+    "reset": "Reset"
+  },
+  "footer": {
+    "subscribe": {
+      "error": "Mislukte abonnement"
+    }
+  },
+  "general": {
+    "404": {
+      "subtext": "De pagina die u zoekt bestaat niet",
+      "title": "404-pagina niet gevonden "
+    },
+    "abandon": {
+      "Order": {
+        "risk": "Verzoeken zijn te vaak"
+      }
+    },
+    "activate_account_discount": "Activeer account en ontvang de kortingscode",
+    "address": {
+      "address": "adres"
+    },
+    "contact_us": {
+      "contact_us": "Neem contact met ons op",
+      "send_success": "Bedankt dat u contact met ons opneemt, we zullen zo snel mogelijk u antwoorden",
+      "success_feedback": "Bedankt dat u contact met ons opneemt, we nemen zo snel mogelijk contact met u op."
+    },
+    "copy_button_text": "Kopiëren",
+    "copy_success_text": "Link is gekopieerd naar het plakbord",
+    "footer": {
+      "copyright": "© {{year}} {{storeName}}",
+      "subscribe_format_error": "Onjuist formaat van e-mail adres",
+      "subscribe_success": "Abonneren succes"
+    },
+    "general": {
+      "accept": "Accepteren",
+      "decline": "Afwijzen",
+      "email_tip": "Ongeldig e-mailadres, gelieve opnieuw in te voeren",
+      "home": "Homepage",
+      "link": "Privacybeleid",
+      "loading": "Laden",
+      "more": "Meer",
+      "no_data": "Geen gegevens beschikbaar",
+      "pack_up": "Minder",
+      "privacy_policy": "Privacybeleid",
+      "proofing_tip": "SORRY, DE WINKEL DIE U ZOEKT IS NU GESLOTEN, <br/>PROBEER HET LATER NOG EENS.",
+      "tel_phone": "Telefoonnummer",
+      "tips": "Om u een betere ervaring te bieden, gebruiken wij cookies om uw aanmeldingsstatus te registreren, statistieken te verzamelen en u interessante inhoud aan te bieden. Klik op 'Accepteren' om het gebruik van cookies toe te staan. Of zie onze ’Privacybeleid‘.",
+      "title": "Wij hechten waarde aan uw privacy",
+      "username": "Naam"
+    },
+    "handle_success": "Succesvolle bewerking",
+    "header": {
+      "cart": "Winkelwagen",
+      "center": "Centrum",
+      "close": "Gesloten",
+      "login": "Inloggen",
+      "no_currency_fallback": "Geen relevante valuta gevonden",
+      "search_input_placeholder": "Vul hier in en druk op zoeken"
+    },
+    "order_tracking": {
+      "code": "Verificatie code",
+      "email": "E-mail",
+      "form_error": "Zoekopdracht mislukt",
+      "orderId": "Order ID",
+      "orderId_error": "Bestel-ID mag niet leeg zijn",
+      "other_email": "E-mailadres",
+      "other_phone": "Telefoonnummer",
+      "phone": "Telefoon",
+      "query_illegal": "bestelling bestaat niet",
+      "risk_black_user": "Dit account loopt risico",
+      "risk_interception": "bestelling bestaat niet",
+      "submit_btn": "Bestelling bekijken",
+      "username": "E-mail/Telefoonnummer"
+    },
+    "password": {
+      "back": "Terug",
+      "entry_store": "De winkel binnengaan",
+      "forget_password": "Toegang met wachtwoord",
+      "goto_admin": "Ga naar inloggen",
+      "i_am_admin": "Ik ben de winkelier",
+      "input_password": "Wachtwoord invullen",
+      "log_in_here": "Hier inloggen",
+      "password_is_error": "Onjuist wachtwoord, vul het opnieuw in",
+      "use_password_enter": "Gebruik het wachtwoord om toegang te krijgen tot de winkel",
+      "you_are_admin": "Bent u een winkeleigenaar?"
+    },
+    "policy": {
+      "service": "Dienst voorwaarden",
+      "shipping": "Verzendingsovereenkomst"
+    },
+    "search": {
+      "search": "Vul hier in en druk op zoeken",
+      "search_hint": "Zoek naar “{{key}}”"
+    },
+    "select": {
+      "placeholder": "Selecteer..."
+    },
+    "share_button_text": "Deel"
+  },
+  "onboarding": {
+    "product_title": "Voorbeeld producttitel"
+  },
+  "order": {
+    "buy_again": "Koop opnieuw",
+    "checkout_order": {
+      "pay_amount": "bedrag betalen",
+      "receiver_account": "ontvanger account",
+      "reference_number": "referentienummer",
+      "upload_time": "Upload tijd",
+      "upload_voucher": "Voucher uploaden",
+      "voucher_amount_limit": "U kunt maximaal 5 vouchers uploaden."
+    },
+    "detail": {
+      "dutyFee": "Tarieven",
+      "orderstatus": {
+        "detail": "Details"
+      }
+    },
+    "fulfillment": {
+      "createTime": "Levertijd:{{time}}"
+    },
+    "order_details": {
+      "adjust": "Afronding",
+      "details": "Bestelling gegevens",
+      "insuranceService": "Verzekeringen Service",
+      "insuranceService_applyClaim": "Compensatie aanvragen",
+      "insuranceService_content_line1_email": "1. De polis is naar uw e-mailadres \"{{email}}\" gestuurd door {{serviceName}}. Als u de e-mail met de polis niet ontvangt, neem dan contact op met de klantenservice van de winkel.  ",
+      "insuranceService_content_line1_phone": "1. De verzekeringspolis is gekocht door {{serviceName}}. Als u nog andere vragen hebt, neem dan contact op met de klantenservice van de winkel.",
+      "insuranceService_content_line2": "2.Als er schade, verlies of vertraging optreedt tijdens de levering, kunt u een compensatie aanvragen.",
+      "order": "Bestelling",
+      "products": {
+        "price": "Prijs",
+        "quantity": "Hoeveelheid"
+      },
+      "remark": "Bestelnotitie",
+      "tax_included": "Inclusief {{price}} aan belastingen",
+      "time": "Besteld op:"
+    },
+    "order_list": {
+      "item_amount": "Producten ({{item}})",
+      "no_more_information": "Geen verdere informatie",
+      "no_record": "Er is momenteel geen bestelgeschiedenis, ga winkelen",
+      "package_amount": "Pakkje {{num}}（{{item}} items）",
+      "total_amount": "Totaal {{transPackages}} artikelen"
+    },
+    "order_status": {
+      "canceled": "Geannuleerd",
+      "click_to_track": "Klik op de volgende link om uw pakje te volgen:",
+      "contact_us": "Neem contact met ons op",
+      "help_tips": "Hulp nodig? Neem contact met ons op：{{email}}",
+      "payment_voucher_transfer_success": "Betaling succesvol overgemaakt",
+      "payment_voucher_waiting_for_payment": "wachten op betaling",
+      "sequence": "No.{{id}}",
+      "tracking": "Volgen"
+    },
+    "payment": {
+      "authorized": "Geautoriseerd",
+      "billing_address": "Factuuradres",
+      "detail": "Details",
+      "method": "Betaalmethode",
+      "paid": "Betaald",
+      "partially_paid": "Gedeeltelijk betaling",
+      "partially_refund": "Gedeeltelijke terugbetaling",
+      "paying": "Aan het betalen",
+      "payment": "Betaling",
+      "payment_status": "Betaling status",
+      "refund": "Terugbetaald",
+      "unpaid": "Onbetaald"
+    },
+    "shipping": {
+      "information": "Informatie",
+      "no_information": "Geen bezorginformatie beschikbaar, kom later terug",
+      "package_tracking": "Pakkjes volgen",
+      "partially_shipped": "Gedeeltelijke bezorging",
+      "preparing_order": "De producten klaarmaken",
+      "processing_amount": "In behandeling ({{num}} items)",
+      "shipped_order": "Verzonden"
+    }
+  },
+  "products": {
+    "collection": {
+      "collection": "Collecties"
+    },
+    "filters": {
+      "clear": "Verwijderen",
+      "clear_all_filter": "Alles verwijderen",
+      "confirm": "Bevestigen",
+      "filter_and_sort": "Filteren en sorteren",
+      "filter_button": "Filteren",
+      "in_stock_only": "Alleen op voorraad",
+      "less_than": "minder dan",
+      "max_price": "De hoogste prijs is {{ price }}",
+      "more_than": "meer dan",
+      "price": {
+        "label": "Prijs"
+      },
+      "product_count": "{{product_count}} producten",
+      "reset": "Reset",
+      "sort_button": "Sorteren",
+      "stock": {
+        "label": "Leveringsstatus",
+        "value": "Op voorraad"
+      }
+    },
+    "general": {
+      "added_to_cart_successfully": "Succesvol toegevoegd aan winkelwagen",
+      "load_more_btn": "Meer artikelen laden",
+      "load_more_items": "Laden {{current_offset}} ~ {{last_current_offset}} van {{total}} items",
+      "loading_btn": "Meer laden",
+      "no_product_data_found": "Geen gegevens van dit artikel, probeer het later nog eens",
+      "sold_out": "Niet op voorraad",
+      "unavailable": "Dit artikel bestaat niet"
+    },
+    "giftcard": {
+      "balance": "Saldo",
+      "buy_giftcard": "Koop een cadeaubon",
+      "description": "Hier is uw {{price}} cadeaubon voor {{shop}}!",
+      "expired_date": "Vervaldatum",
+      "invalid_tip": "Uw cadeaubon is ongeldig, koop een andere a.u.b.",
+      "permanent": "Permanent",
+      "receive_at": "Verlopen op",
+      "receive_tip": "Gelieve uw cadeaubon te ontvangen",
+      "seoTitle": "Uw {{ shop }} cadeaukaartsaldo is {{ value }}!",
+      "title": "Uw cadeaubon",
+      "use_giftcard": "Gebruik de cadeaubon",
+      "use_giftcard_tip": "U kunt het cadeaubonnummer invoeren bij het afrekenen"
+    },
+    "product_details": {
+      "activity_toast_price_limit": "Slechts {{num}} artikelen kunnen worden gekocht voor deze voorkeursprijs",
+      "activity_toast_product_limit": "U kunt tot {{stock}} artikelen tegelijk met korting kopen",
+      "activity_toast_title_limit": "De volgende artikelen hebben de aankoop limiet overschreden",
+      "amount": "Hoeveelheid",
+      "buy_more_save_more": "Koop Meer Bespaar Meer!",
+      "cancel": "Annuleren",
+      "copy_button_text": "Kopiëren",
+      "copy_success_text": "Link is gekopieerd naar het plakbord",
+      "country_region": "Land/regio",
+      "default_placeholder": "Kies {{attrName}} a.u. b.",
+      "description": "Beschrijving",
+      "each_price": "{{price}}/per stuk",
+      "email": "E-mail",
+      "enter_email_address": "Vul uw e-mailadres in",
+      "enter_valid_email_address": "Vul het juiste e-mailadres in",
+      "give_us_more_of_your_information": "U kunt ook meer informatie achterlaten, zodat wij u een dienst kunnen verlenen die beter bij u past",
+      "go_to_amazon_by_link": "Ga winkelen bij Amazon",
+      "go_to_rakuten_by_link": "Ga winkelen bij Rakuten",
+      "go_to_yahoo_by_link": "Ga winkelen bij Yahoo",
+      "in_stock": "Voorraad beschikbaar",
+      "inventory_in_stock": "Op voorraad",
+      "inventory_in_stock_show_count": "Op voorraad: Resterende {{ quantity }}",
+      "inventory_low_stock": "Laag op voorraad",
+      "inventory_low_stock_show_count": "Laag op voorraad: Resterende {{ quantity }}",
+      "inventory_out_of_stock": "Niet op voorraad",
+      "inventory_out_of_stock_continue_selling": "Op voorraad",
+      "inventory_quantity": "Aantal inventaris",
+      "leave_us_message": "Vul de bericht in",
+      "leave_us_message_get_back": "Laat een bericht achter met uw vraag en wij zullen zo spoedig mogelijk contact met u opnemen",
+      "link_preview_does_not_support": "De voorbeeldlink ondersteunt deze bewerking niet",
+      "load_more": "Meer tonen",
+      "maximum_length_of_message": "Berichtlengte niet meer dan 1500 tekens",
+      "message": "Berichten",
+      "moq_increment": "Veelvouden van {{num}}",
+      "moq_increment_tips": "Het aantal aankopen wordt alleen ondersteund in veelvouden van {{num}}",
+      "moq_max_tips": "Maximale aankoop van {{num}} stuks van deze specificatie",
+      "moq_maximum": "Maximale aankoop van {{num}}",
+      "moq_min_tips": "Er moet meer dan {{num}} worden gekocht voor deze specificatie",
+      "moq_minimum": "Minimale aankoop van {{num}}",
+      "more_payment_options": "Meer betalingsmogelijkheden",
+      "name": "Naam",
+      "optional": "Optioneel",
+      "phone_number": "Telefoonnummer",
+      "price": "Prijs",
+      "price_break_title": "Bulkprijzen",
+      "price_breaks_view_less": "Opbergen",
+      "price_breaks_view_more": "Meer bekijken",
+      "product_enquiry": "Het artikel aanvragen",
+      "share_button_text": "Deel",
+      "shipping_policy": "Bereken <a href=\"{{ link }}\">bezorgkosten</a> bij het afrekenen",
+      "submission_failed": "Indiening mislukt, probeer het opnieuw.",
+      "submission_successfully": "Succesvol ingediend",
+      "submit": "Indienen",
+      "table_each_price": "{{price}}per stuk",
+      "table_each_price_ssr": "{{{priceDom}}}per stuk",
+      "tax_included": "inclusief belasting",
+      "taxes_included": "Inclusief belasting",
+      "view_details": "Details bekijken",
+      "view_product_detail": "De productdetails bekijken"
+    },
+    "product_list": {
+      "add_to_cart": "Aan winkelwagen toevoegen",
+      "filter": "Filter",
+      "filters_selected": "{{count}} zijn geselecteerd",
+      "from_price": "van {{price}}",
+      "infinite_btn_desc": "{{last_current_offset}} van {{total}} items",
+      "less": "Minder labels",
+      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} van {{total}} items",
+      "load_more_tip": "Meer items laden",
+      "more": "Meer labels",
+      "more_product_num": "{{num}} Producten",
+      "new_arrivals": "Nieuwe releases",
+      "new_products": "Volgens aanmaaktijd van dichtbij tot veraf",
+      "no_product": "Sorry, er zijn geen producten in deze categorie",
+      "one_product_num": "{{num}} Product",
+      "price_break_tag": "Bulkprijzen beschikbaar",
+      "price_high_to_low": "Prijs van hoog tot laag",
+      "price_low_to_high": "Prijs van laag tot hoog",
+      "product_has_been_removed": "Het artikel is huidig uit de schappen gehaald",
+      "product_sold_out": "Het artikel is uitverkocht",
+      "products": "Producten",
+      "quick_shop": "Snel winkelen",
+      "recommend": "Aanbevelingen",
+      "sale": "Uitverkoop",
+      "save": "Bespaar {{{priceDom}}}",
+      "save_byjs": "Bespaar {{priceDom}}",
+      "save_ratio": "{{price}}% korting",
+      "select_product_all_options": "De geselecteerde productvariant is onvolledig of niet beschikbaar. Kies alstublieft opnieuw",
+      "show": "Laten zien",
+      "sort_button": "Sorteren",
+      "top_sellers": "Bestseller"
+    },
+    "product_search": {
+      "back_to_home": "Terug naar homepage",
+      "ount_results": "{{count}} records",
+      "results_found_for": "{{count}} records voor \"{{keyword}}\" gevonden",
+      "search": "Zoek",
+      "search_no_results": "Er zijn geen records van uw zoekopdracht voor \"{{keyword}}\""
+    },
+    "recently_viewed_products": {
+      "recently_viewed_products": "Recent bekeken producten"
+    }
+  },
+  "reduction_code": {
+    "giftcard": "Cadeaubonnen"
+  },
+  "sales": {
+    "discount_coupon": {
+      "active_date_until": "Geldig tot: {{endTime}}",
+      "applied": "Toegepast",
+      "applied_successfully": "Kortingscode is succesvol toegepast",
+      "apply": "Toepassen",
+      "buy_x_get_y_all_discount_content": "Krijg {{benefitCount}} {{discount}} KORTING",
+      "buy_x_get_y_all_free_content": "Krijg {{benefitCount}} GRATIS",
+      "buy_x_get_y_discount_content": "{{discount}} korting",
+      "buy_x_get_y_free_content": "Gratis",
+      "buy_x_get_y_threshold": "Koop {{threshold}}, krijg {{benefitCount}}",
+      "coupon_content_level": "Beschikbaar voor {{level}}",
+      "coupon_discount_content": "{discount} korting",
+      "coupon_not_found": "Kortingscode bestaat niet",
+      "failed_to_apply_coupon_code": "Toepassing mislukt",
+      "free_shipping": "Gratis bezorgen",
+      "get_code": "Kortingscode krijgen",
+      "popup_label": "Winkel coupons:",
+      "shipping_rate_below": "Verzendkosten onder {value}",
+      "specified_customer": "Beschikbaar voor bepaalde klanten",
+      "threshold": "Koop {threshold}"
+    },
+    "flash": {
+      "day": "dag",
+      "days": "dagen"
+    },
+    "general": {
+      "activity_banner_benefit": "{{benefit}} korting",
+      "activity_banner_copy_success_text": "De kortingscode is succesvol gekopieerd",
+      "activity_banner_free_shipping": "Gratis verzending",
+      "activity_selector_new_arrivals": "Nieuwe Aankomsten",
+      "activity_selector_price_high_to_low": "Prijs van hoog naar laag",
+      "activity_selector_price_low_to_high": "Prijs van laag naar hoog",
+      "activity_selector_recommended": "Aanraden",
+      "apply_common": "Toepassen",
+      "bundle_save_tip": "Koop samen en bespaar {{amount}}",
+      "bundle_title": "Vaak samen gekocht",
+      "common_buy_now": "Nu kopen",
+      "coupon_code_copied": "De kortingscode is succesvol gekopieerd",
+      "coupon_code_copy": "Kopiëren",
+      "flash_sale_text": "Beperkte tijd promotie",
+      "flash_sale_tip": "Aankooplimiet: {{count}} artikelen",
+      "hot_sale": "Hete verkoop",
+      "product_tabs_benefit_amount_locked": "krijg {{benefitAmount}} korting",
+      "product_tabs_benefit_amount_unlocked": "{{benefitAmount}} korting is vrijgespeeld",
+      "product_tabs_benefit_discount_locked": "krijg {{offPercent}}% korting",
+      "product_tabs_benefit_discount_unlocked": "{{offPercent}}% korting is vrijgespeeld",
+      "product_tabs_benefit_free_locked": "gratis aanbod",
+      "product_tabs_benefit_free_unlocked": "gratis aanbod is vrijgespeeld",
+      "product_tabs_benefit_unlocked_tip": "U kunt nu genieten van productkorting",
+      "product_tabs_code_benefit_amount_unlocked": "Krijg {{benefitCount}} item(s) met {{benefitAmount}} korting",
+      "product_tabs_code_benefit_discount_unlocked": "Krijg {{benefitCount}} bij {{offPercent}}% KORTING",
+      "product_tabs_code_benefit_free_unlocked": "Krijg {{benefitCount}} GRATIS",
+      "product_tabs_threshold": "koop {{threshold}}",
+      "purchase_limit": "Aankoop beperkt tot {{count}} promotioneel producten in totaal",
+      "purchase_limit_each_item": "Aankoop beperkt tot {{count}} items voor elke variant",
+      "purchase_limit_each_product": "Aankoop beperkt tot {{count}} artikelen voor elk promotioneel product",
+      "select_promotional_product": "{{selectCount}} artikelen in deze campagne gekozen",
+      "sold": "{{count}} verkocht"
+    },
+    "gift": {
+      "got_all_gifts_tip": "Gefeliciteerd! Je hebt {{saved}} cadeautjes gekregen!",
+      "not_meet_amount_tip": "Koop {{threshold}} meer en geniet tot {{willSave}} gratis cadeautjes",
+      "not_meet_quantity_tip": "Koop {{threshold}} meer artikelen en geniet tot {{willSave}} gratis cadeautjes",
+      "select": "Kiezen",
+      "select_gift_tip": "Gefeliciteerd! U kunt {{willSave}} cadeautjes kiezen",
+      "spend_more_money_get_more_tip": "Gefeliciteerd! Je hebt {{saved}} cadeautjes gekregen! Koop {{threshold}} meer en krijg tot {{willSave}} gratis cadeautjes",
+      "spend_more_quantity_get_more_tip": "Gefeliciteerd! Je hebt {{saved}} cadeautjes gekregen! Koop {{threshold}} meer artikelen en krijg tot {{willSave}} gratis cadeautjes"
+    },
+    "promotion": {
+      "discount_tag": {
+        "b11_t1_free": "Koop {{threshold}} stukken en krijg één gratis ervan",
+        "b11_t1_normal": "Koop {{threshold}} stukken en krijg {{save}} korting op één ervan",
+        "b1_t0": "Koop {{threshold}} en bespaar {{save}}",
+        "b1_t1": "Koop {{threshold}} stukken en bespaar {{save}}",
+        "b2_t0": "Koop {{threshold}} en bespaar {{save}}",
+        "b2_t1": "Koop {{threshold}} stukken en bespaar {{save}}",
+        "label": "Korting:"
+      }
+    }
+  },
+  "search": {
+    "count_results": "{{count}} records",
+    "product_list": {
+      "title": "Producten"
+    }
+  },
+  "trade": {
+    "order_summary": {
+      "rounding": "Afronding"
+    },
+    "payments_name": {
+      "COD": "Rembours",
+      "MultiplePayment": "Betalingen via meerdere kanalen",
+      "Paypal": "Paypal",
+      "adjustPay": "manual",
+      "mpay": {
+        "alipay": "Alipay (For Real-name user of the Mainland China.)",
+        "mpay": "MPay (For MPay Users)"
+      },
+      "third_part": "Kredietkaart"
+    },
+    "reduction_code": {
+      "giftcard": "Cadeaubonnen"
+    }
+  },
+  "transaction": {
+    "contact": {
+      "discounts_stack_not": "Beperkte korting en kortingscode campagnes zijn exclusief"
+    },
+    "couponCode": {
+      "freeShipping": {
+        "existCode": "Gedupliceerde kortingscodes voor gratis verzending"
+      }
+    },
+    "discount": {
+      "code": {
+        "country_not_support": "Betaling Gratis verzending kortingscode - land mismatch",
+        "logistics_fee_over_limit": "Gratis verzending kortingscode - verzendkosten overschrijden limiet"
+      },
+      "code_error": "Fout bij kortingscode invullen",
+      "code_item_unmatched": "{{discountCode}} is correct ingevuld, maar de prijs of de aantal van het artikel komt niet overeen met de eis",
+      "code_overdue": "Kortingscode is verlopen",
+      "code_user_exceedLimit": "Gebruiker heeft de campagne vaker gebruikt dan de limiet",
+      "code_user_notSupport": "Gebruiker kan de campagne niet gebruiken",
+      "coupon_code": "Kortingscode",
+      "coupon_invalid_for_the_shipping_method": "{{discountCode}} kortingscode is niet van toepassing op deze bezorgmethode",
+      "discount_codes_cannot_stack": "Er bestaat al een aanbieding voor dit product en het kan niet worden gecombineerd met andere aanbiedingen",
+      "use_coupon_alone": "Deze kortingscode kan niet worden gebruiken met andere promoties of aanbieding."
+    },
+    "general": {
+      "discount_off": "Korting",
+      "free_charge": "Gratis bezorging",
+      "free_shipping": "Bezorging inbegrepen",
+      "order_seller_discount": "Handelaar extra korting",
+      "order_tax": "Belasting",
+      "order_tip": "Tips",
+      "payment_subtotal_cost": "De product kost",
+      "point_discount": "Punten korting",
+      "shipping_fee": "Verzendkosten",
+      "trade_coupon_discount": "Aanbiedingen"
+    },
+    "item": {
+      "invalid_product": "INACTIEVE LIJST",
+      "remove_invalid_product": "Het ongeldig artikel annuleren",
+      "removed": "uit de schappen gehaald",
+      "sold_out": "Uitverkocht"
+    },
+    "lack_multilingualism": "*Deze verklaring word niet geladen, neem contact op met de klantenservice om de situatie te melden*",
+    "notices": {
+      "insufficient_product_inventory": "Artikel niet op voorraad",
+      "network": "Internet fout",
+      "product_expired": "Artikel niet langer beschikbaar",
+      "product_limit": "De productlimiet is overschreden"
+    },
+    "order": {
+      "deleted": "Verwijderd",
+      "rebuy": "Opnieuw kopen"
+    },
+    "payment": {
+      "continue_shopping": "Ga verder met winkelen",
+      "more": "Koop meer",
+      "saved": "opgeslagen",
+      "total": "Totaal"
+    },
+    "payment_disconut_channelinvalid_code": {
+      "tips": "Deze kortingscode {{discountCode}} is ongeldig voor het verkoopkanaal"
+    },
+    "policy": {
+      "refund_policy": "Teruggavebeleid"
+    },
+    "refund": {
+      "cost_points": "{{value}} punten kosten",
+      "deduct_point": "U kunt {{deductMemberPointNum}} punten gebruiken om {{deductMemberPointAmount}} af te trekken"
+    }
+  },
+  "unvisiable": {
+    "applepay": {
+      "cancel": "Annuleren",
+      "enquire": "Doorgaan met het plaatsen van de bestelling met Apple Pay?",
+      "paywith": "Betalen met"
+    },
+    "customer": {
+      "error_message_1": "Meld u aan met e-mail om updates, exclusieve aanbiedingen en meer te krijgen",
+      "error_message_1001": "Fout wachtwoord",
+      "error_message_1002": "Gebruiker bestaat niet",
+      "error_message_1003": "Uw account is geblokkeerd als gevolg van de fout, neem contact op met de handelaar om het te deblokkeren.",
+      "error_message_1004": "Te vaak bewerken, probeer het later nog eens",
+      "error_message_1005": "Verificatiecode verlopen",
+      "error_message_1006": "Fout verificatiecode",
+      "error_message_1007": "De verificatiecode is te vaak gebruikt, vraag een nieuwe verificatiecode aan",
+      "error_message_1008": "Geen kanalen van derden login geconfigureerd",
+      "error_message_1009": "Validatie door derde partij mislukt",
+      "error_message_1010": "Code verzenden mislukt",
+      "error_message_1011": "Het account is niet geactiveerd. Registreer u om het wachtwoord en andere informatie in te vullen.",
+      "error_message_1012": "Service fout",
+      "error_message_1013": "Service fout",
+      "error_message_1014": "Verificatiecode verifiëren mislukt",
+      "error_message_1015": "Verifieer de dynamische verificatiecode",
+      "error_message_1016": "Service fout",
+      "error_message_1017": "Deze account is in gevaar",
+      "error_message_1018": "E-mailadres is gebonden",
+      "error_message_1020": "Inloggen time-out",
+      "error_message_1021": "Inloggen time-out",
+      "error_message_1022": "Account is gebonden",
+      "error_message_1023": "Service fout",
+      "error_message_1024": "Service fout",
+      "error_message_1035": "Stuur a.u.b. verificatiecode",
+      "error_message_2": "Service fout",
+      "error_message_2001": "Geregistreerd telefoonnummer",
+      "error_message_2002": "Geregistreerd e-mailadres",
+      "error_message_2003": "De verificatiecode meerdere keren versturen",
+      "error_message_2004": "Verificatiecode verlopen",
+      "error_message_2005": "Fout verificatiecode",
+      "error_message_2006": "Verificatiecode is al meerdere keren gebruikt, gebruik een andere verificatiecode",
+      "error_message_2007": "Service uitzondering, probeer later opnieuw",
+      "error_message_2014": "Account is in gevaar",
+      "error_message_2016": "Account is in gevaar",
+      "error_message_2020": "Het systeem is bezet, probeer het later opnieuw",
+      "error_message_3": "Het verblijf is te lang, vernieuw alstublieft de pagina.",
+      "error_message_3001": "Service uitzondering, probeer later opnieuw",
+      "error_message_3002": "Gebruikers die niet aan een telefoon/e-mail gebonden zijn, probeert de wachtwoord te wijzigen",
+      "error_message_3003": "De verificatiecode meerdere keren versturen",
+      "error_message_3004": "Verificatiecode verlopen",
+      "error_message_3005": "Fout verificatiecode",
+      "error_message_3006": "Verificatiecode is al meerdere keren gebruikt, gebruik een andere verificatiecode",
+      "error_message_3007": "Niet-geregistreerd telefoonnummer",
+      "error_message_3008": "Niet-geregistreerd e-mailadres",
+      "error_message_3009": "Telefoonnummer al gebonden",
+      "error_message_3010": "E-mail al gebonden",
+      "error_message_3014": "SMS/email sjabloon rendering mislukt",
+      "error_message_3015": "De account is geactiveerd",
+      "error_message_3021": "Het systeem is bezet, probeer het later opnieuw",
+      "error_message_3022": "De link is verlopen",
+      "error_message_3023": "Link formaat fout",
+      "error_message_3024": "Link parameter fout",
+      "error_message_3026": "Verkeerd formaat van het account",
+      "error_message_3027": "Het wachtwoord mag niet hetzelfde zijn als de vorige keer。",
+      "error_message_3029": "Activering via mobiele telefoon is op dit moment niet beschikbaar.",
+      "error_message_4": "Service fout",
+      "error_message_5": "Service fout",
+      "error_message_6": "Service fout",
+      "error_message_7": "Het wachtwoord moet 6-18 tekens lang zijn, bestaande uit cijfers, hoofdletters en kleine letters"
+    },
+    "editorSwitchCountryTip": "Het wisselen van land wordt momenteel niet ondersteund in de editor.",
+    "shopby": {
+      "button": {
+        "show": "Veilig en sneller"
+      }
+    }
+  }
+}

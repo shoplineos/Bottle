@@ -1,0 +1,145 @@
+<theme-collapse class="product-detail__additional" {{{block.shopline_attributes}}}>
+  {{#component "stylesheet" src="./detail-additional.css" | asset_url() /}}
+  {{#component "script" src="components/collapse/index.js" | asset_url() /}}
+
+  <details {{#if !block.settings.enabled_fold}}open{{/if}}>
+    <summary class="additional__trigger">
+      {{#switch block.settings.icon}}
+        {{#case "pay" /}}
+          {{#component "icons/pay" /}}
+        {{#case "package" /}}
+          {{#component "icons/package" /}}
+        {{#case "email" /}}
+          {{#component "icons/email" /}}
+        {{#case "position" /}}
+          {{#component "icons/position" /}}
+        {{#case "customer" /}}
+          {{#component "icons/customer" /}}
+        {{#case "chat" /}}
+          {{#component "icons/chat" /}}
+        {{#case "gift" /}}
+          {{#component "icons/gift" /}}
+        {{#case "phone" /}}
+          {{#component "icons/phone" /}}
+        {{#case "faq" /}}
+          {{#component "icons/faq" /}}
+        {{#case "logistics" /}}
+          {{#component "icons/logistics" /}}
+        {{#case "discount" /}}
+          {{#component "icons/discount" /}}
+      {{/switch}}
+      <div class="additional__title body2 title-font-bold">{{block.settings.title}}</div>
+
+      {{#component "icons/arrow-thin" class="additional__arrow" /}}
+    </summary>
+
+    {{#if block.settings.enabled_fold}}<template>{{/if}}
+    <div class="additional__content body3 rte">
+      {{{block.settings.description}}}
+      {{{block.settings.custom_page.content}}}
+    </div>
+    {{#if block.settings.enabled_fold}}</template>{{/if}}
+  </details>
+</theme-collapse>
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_additional.name",
+  "tag": "",
+  "icon": "content",
+  "settings": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "t:blocks.product.detail_additional.settings.title.label",
+      "default": "Example title"
+    },
+    {
+      "id": "icon",
+      "type": "select",
+      "label": "t:blocks.product.detail_additional.settings.icon.label",
+      "default": "none",
+      "options": [
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_0.label",
+          "value": "none"
+        },
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_1.label",
+          "value": "pay"
+        },
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_2.label",
+          "value": "package"
+        },
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_3.label",
+          "value": "email"
+        },
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_4.label",
+          "value": "position"
+        },
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_5.label",
+          "value": "customer"
+        },
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_6.label",
+          "value": "chat"
+        },
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_7.label",
+          "value": "gift"
+        },
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_8.label",
+          "value": "phone"
+        },
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_9.label",
+          "value": "faq"
+        },
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_10.label",
+          "value": "logistics"
+        },
+        {
+          "label": "t:blocks.product.detail_additional.settings.icon.options_11.label",
+          "value": "discount"
+        }
+      ]
+    },
+    {
+      "id": "description",
+      "type": "richtext",
+      "label": "t:blocks.product.detail_additional.settings.description.label",
+      "default": ""
+    },
+    {
+      "id": "custom_page",
+      "type": "page",
+      "label": "t:blocks.product.detail_additional.settings.custom_page.label",
+      "default": ""
+    },
+    {
+      "id": "enabled_fold",
+      "type": "switch",
+      "label": "t:blocks.product.detail_additional.settings.enabled_fold.label",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_additional.presets.presets_0.name",
+      "settings": {
+        "title": "Example title",
+        "icon": "none",
+        "description": "",
+        "custom_page": "",
+        "enabled_fold": true
+      }
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,103 @@
+{{#component "stylesheet" src="./detail-quantity-selector.css" | asset_url() /}}
+
+{{#var product = props.product /}}
+{{#var first_variant = product | get_variants() | first() /}}
+{{#var current_variant = product.selected_or_first_available_variant | default(first_variant) /}}
+
+<div class="product-detail__quantity-selector product-detail__row" {{{block.shopline_attributes}}}>
+  <div class="body3 title-font-bold">
+    {{"products.product_details.amount" | t() }}
+  </div>
+
+  {{#component
+    "input/input-number"
+    name="quantity"
+    form_id="product-form-" | append(section.id)
+    value=current_variant.quantity_rule.min
+    min=current_variant.quantity_rule.min
+    max=current_variant.quantity_rule.max | default(99999)
+    step=current_variant.quantity_rule.increment
+  /}}
+
+  {{#if product.quantity_price_breaks_configured}}
+    {{#for price_break in current_variant.quantity_price_breaks}}
+      {{#if current_variant.quantity_rule.min >= price_break.minimum_quantity}}
+        {{#var current_price_break = price_break.price /}}
+      {{/if}}
+    {{/for}}
+
+    <div class="volume-pricing__tip body4 body-font-bold">
+      {{#var current_price_str = current_price_break | default(current_variant.price) | money_with_currency() /}}
+      {{{"products.product_details.each_price" | t(price=current_price_str)}}}
+    </div>
+  {{/if}}
+
+  <div class="quantity-selector__rules hidden-empty body4">
+    {{~#if current_variant.quantity_rule.increment > 1}}
+      <span>
+        {{"products.product_details.moq_increment" | t(num=current_variant.quantity_rule.increment) }}
+      </span>
+    {{/if~}}
+    {{~#if current_variant.quantity_rule.min > 1}}
+      <span>
+        {{"products.product_details.moq_minimum" | t(num=current_variant.quantity_rule.min) }}
+      </span>
+    {{/if~}}
+    {{~#if current_variant.quantity_rule.max > 1}}
+      <span>
+        {{"products.product_details.moq_maximum" | t(num=current_variant.quantity_rule.max) }}
+      </span>
+    {{/if~}}
+  </div>
+</div>
+
+
+{{#if product.quantity_price_breaks_configured}}
+  {{#component "stylesheet" src="product/volume-pricing.css" | asset_url() /}}
+  {{#component "script" src="product/volume-pricing.js" | asset_url() /}}
+
+  <theme-product-volume-pricing class="product-detail__volume-pricing hidden-empty">
+    {{~#if current_variant.quantity_price_breaks | size() > 0}}
+      <theme-show-more class="product-detail__row">
+        <div class="body3 title-font-bold">
+          {{"products.product_details.price_break_title" | t() }}
+        </div>
+
+        <ul class="volume-pricing__list body3">
+          <li class="volume-pricing__item">
+            <span>{{current_variant.quantity_rule.min}} +</span>
+            {{#var current_variant_price = current_variant.price | money_with_currency() /}}
+            <span>{{{"products.product_details.each_price" | t(price=current_variant_price)}}}</span>
+          </li>
+          {{#for price_break in current_variant.quantity_price_breaks}}
+            <li class="volume-pricing__item" {{#if forloop.index0 >= 2}}data-more="true"{{/if}}>
+              <span>{{price_break.minimum_quantity}} +</span>
+              {{#var price_break_price = price_break.price | money_with_currency() /}}
+              <span>{{{"products.product_details.each_price" | t(price=price_break_price)}}}</span>
+            </li>
+          {{/for}}
+        </ul>
+        <div>
+          <button class="button button--link" name="toggle-more" type="button">
+            <span class="view-more">{{"products.product_details.price_breaks_view_more" | t() }}</span>
+            <span class="view-less">{{"products.product_details.price_breaks_view_less" | t() }}</span>
+          </button>
+        </div>
+      </theme-show-more>
+    {{/if~}}
+  </theme-product-volume-pricing>
+{{/if}}
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_quantity_selector.name",
+  "tag": "",
+  "icon": "number",
+  "settings": [],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_quantity_selector.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

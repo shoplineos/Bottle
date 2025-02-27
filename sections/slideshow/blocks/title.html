@@ -1,0 +1,64 @@
+<h2 class="{{block.settings.text_size}} text-{{block.settings.text_align}} {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{{ block.settings.text | newline_to_br() }}}
+</h2>
+
+{{#schema}}
+{
+  "name": "t:sections.slideshow.blocks.title.name",
+  "icon": "title",
+  "tag": "",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "t:sections.slideshow.blocks.title.settings.text.label",
+      "default": "Two Line\nTitle Slide"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "t:sections.slideshow.blocks.title.settings.text_size.label",
+      "default": "title2",
+      "options": [
+        {
+          "value": "title0",
+          "label": "t:sections.slideshow.blocks.title.settings.text_size.options_0.label"
+        },
+        {
+          "value": "title1",
+          "label": "t:sections.slideshow.blocks.title.settings.text_size.options_1.label"
+        },
+        {
+          "value": "title2",
+          "label": "t:sections.slideshow.blocks.title.settings.text_size.options_2.label"
+        },
+        {
+          "value": "title5",
+          "label": "t:sections.slideshow.blocks.title.settings.text_size.options_3.label"
+        }
+      ]
+    },
+    {
+      "type": "text_align",
+      "id": "text_align",
+      "label": "t:sections.slideshow.blocks.title.settings.text_align.label",
+      "default": "center"
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.slideshow.blocks.title.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.slideshow.blocks.title.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

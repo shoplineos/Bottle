@@ -1,0 +1,27 @@
+{{#var results = props.results /}}
+{{#var selected_sort_by = results.sort_by | default(results.default_sort_by) /}}
+{{#var selected_sort = results.sort_options | where("value", equals=selected_sort_by) | first() /}}
+{{#var type = props.type /}}
+
+<theme-modal data-lock-scroll="false" data-mask-closable data-esc-to-exit data-placement="bottom" class="js-action">
+  <details class="facets-sorting__details">
+    <summary class="facets-sorting__summary body3">
+      <span>{{selected_sort.name}}</span>
+      {{#if type == "desktop"}}
+        {{#component "icons/arrow-thin" /}}
+      {{/if}}
+    </summary>
+    <div class="facets-sorting__content">
+      <div class="facets-sorting__content-header hidden-desktop">{{ "products.filters.sort_button" | t()}}:</div>
+      <div class="facets-sorting__content-body">
+        {{#for sort in results.sort_options}}
+          <label class="body3">
+            <input type="radio" name="sort_by" value="{{sort.value}}" {{#if selected_sort_by == sort.value}}checked{{/if}} />
+            {{#component "icons/check" /}}
+            <span>{{sort.name}}</span>
+          </label>
+        {{/for}}
+      </div>
+    </div>
+  </details>
+</theme-modal>

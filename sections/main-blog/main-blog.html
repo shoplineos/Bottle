@@ -1,0 +1,98 @@
+
+
+{{#component "stylesheet" src="./main-blog.css" | asset_url() /}}
+
+{{#var article_paginate = blog | get_article_pagination(section.settings.page_size) /}}
+
+<div class="main-blog color-{{section.settings.color_scheme.id}}" data-section-id="{{section.id}}">
+  <div class="page-width">
+    <div class="main-blog__container {{section.settings | class_list()}}">
+      {{#blocks}}
+        {{#if forblock.type == "article/card"}}
+          <ul
+            class="main-blog__list grid"
+            style="--desktop-columns:{{section.settings.desktop_columns}};"
+          >
+            {{#for article in article_paginate.list}}
+              <li>
+                {{#block article=article /}}
+              </li>
+            {{/for}}
+          </ul>
+
+          {{#component "pagination/pagination" paginate=article_paginate /}}
+
+        {{#else/}}
+          {{#block /}}
+        {{/if}}
+      {{/blocks}}
+    </div>
+  </div>
+</div>
+
+
+{{#schema}}
+{
+  "name": "t:sections.main_blog.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "desktop_columns",
+      "label": "t:sections.main_blog.settings.desktop_columns.label",
+      "default": "2",
+      "options": [
+        {
+          "label": "t:sections.main_blog.settings.desktop_columns.options_0.label",
+          "value": "1"
+        },
+        {
+          "label": "t:sections.main_blog.settings.desktop_columns.options_1.label",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "t:sections.main_blog.settings.page_size.label",
+      "default": 6,
+      "max": 24,
+      "min": 2,
+      "step": 1
+    },
+    {
+      "id": "color_scheme",
+      "type": "color_scheme",
+      "label": "t:sections.main_blog.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.main_blog.settings.spacing.label",
+      "default": {
+        "padding-block-start": "60px",
+        "padding-inline-end": "60px",
+        "padding-block-end": "60px",
+        "padding-inline-start": "60px",
+        "@media (--mobile)": {
+          "padding-block-start": "30px",
+          "padding-inline-end": "20px",
+          "padding-block-end": "30px",
+          "padding-inline-start": "20px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$title",
+      "limit": 1
+    },
+    {
+      "type": "article/card",
+      "limit": 1
+    }
+  ]
+}
+{{/schema}}

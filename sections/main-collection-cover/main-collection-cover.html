@@ -1,0 +1,29 @@
+{{#component "stylesheet" src="./main-collection-cover.css" | asset_url() /}}
+
+<div class="main-collection-cover">
+  {{#content "blocks" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_collection_cover.name",
+  "tag": "",
+  "blocks": [
+    {
+      "name": "t:sections.main_collection_cover.blocks.$banner.name",
+      "type": "$banner",
+      "limit": 1
+    },
+    {
+      "name": "t:sections.main_collection_cover.blocks.$heading.name",
+      "type": "$heading",
+      "limit": 1
+    },
+    {
+      "name": "t:sections.main_collection_cover.blocks.$description.name",
+      "type": "$description",
+      "limit": 1
+    }
+  ]
+}
+{{/schema}}

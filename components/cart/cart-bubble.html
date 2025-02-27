@@ -1,0 +1,31 @@
+
+
+{{#component "stylesheet" src="./cart-bubble.css" | asset_url() /}}
+
+{{#component "script" src="./cart-bubble.js" | asset_url() /}}
+
+{{#var is_cart_page = false /}}
+{{#if request.page_type == "cart"}}
+{{#set is_cart_page = true /}}
+{{/if}}
+
+<theme-cart-bubble data-cart-section-to-render class="cart-bubble">
+  {{#if settings.cart_add_type != "drawer" || is_cart_page}}
+  <a href="{{routes.cart_url}}">
+    {{/if}}
+
+    {{#component "icons/bag" /}}
+
+    <span class="cart-bubble__count body6">
+      {{#if cart && cart.item_count > 0}}
+        {{#capture total_number}}
+          {{#if cart.item_count > 99}}99+{{#else /}}{{cart.item_count}}{{/if}}
+        {{/capture}}
+        {{total_number}}
+      {{/if}}
+    </span>
+
+    {{#if settings.cart_add_type != "drawer" || is_cart_page}}
+  </a>
+  {{/if}}
+</theme-cart-bubble>

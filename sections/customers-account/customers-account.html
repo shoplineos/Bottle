@@ -1,0 +1,70 @@
+{{#component "stylesheet" src="./customers-account.css" | asset_url() /}}
+{{#component "stylesheet" src="components/modal/index.css" | asset_url() /}}
+
+{{#component "script" src="components/modal/index.js" | asset_url() /}}
+{{#component "script" src="customers/base.js" | asset_url() /}}
+{{#component "script" src="customers/base-form.js" | asset_url() /}}
+{{#component "script" src="./components/email-and-phone-modal.js" | asset_url() /}}
+{{#component "script" src="./customers-account.js" | asset_url() /}}
+
+<script>
+  if (window.Shopline.i18nInit) {
+    window.Shopline.i18nInit();
+  }
+</script>
+
+<div class="page-width">
+  <theme-customers-account
+    class="customer-account {{section.settings.spacing | class_list()}} color-{{section.settings.color_scheme.id}}"
+  >
+
+    {{#component "customers/message-bar" /}}
+
+    {{#component "customers/navbar" /}}
+
+    <div class="customer-account__body body4">
+      <div>
+        {{#component "./components/card-account" /}}
+        {{#component "./components/card-subscriptions" /}}
+        {{#component "./components/card-personal" /}}
+      </div>
+      <div>
+        {{#component "./components/card-address" /}}
+      </div>
+    </div>
+
+    {{#component "customers/footer" /}}
+
+  </theme-customers-account>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.customers_account.name",
+  "settings": [
+    {
+      "id": "color_scheme",
+      "type": "color_scheme",
+      "label": "t:sections.customers_account.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.customers_account.settings.spacing.label",
+      "default": {
+        "padding-top": "80px",
+        "padding-right": "0",
+        "padding-bottom": "80px",
+        "padding-left": "0",
+        "@media (--mobile)": {
+          "padding-top": "40px",
+          "padding-right": "0",
+          "padding-bottom": "40px",
+          "padding-left": "0"
+        }
+      }
+    }
+  ]
+}
+{{/schema}}

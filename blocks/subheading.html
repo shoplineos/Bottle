@@ -1,0 +1,30 @@
+<div class="subheading text-{{block.settings.text_align}} {{ block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{block.settings.subtitle}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.subheading.name",
+  "tag": "",
+  "icon": "title",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "t:blocks.subheading.settings.subtitle.label",
+      "default": "Subtitle"
+    },
+    {
+      "type": "text_align",
+      "id": "text_align",
+      "label": "t:blocks.subheading.settings.text_align.label",
+      "default": "center"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.subheading.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

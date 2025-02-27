@@ -1,0 +1,120 @@
+.main-collection-container {
+  background-color: rgb(var(--color-background));
+}
+
+.main-collection {
+  padding-block: 40px;
+}
+
+.main-collection .facets-loading {
+  position: fixed;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  z-index: var(--z-index-fixed);
+  display: none;
+  width: 92px;
+  height: 92px;
+  background-color: rgb(var(--color-page-background));
+  border-radius: 12px;
+  box-shadow: 0 10px 50px 0 rgba(var(--color-text), 0.08);
+  transform: translate(-50%, -50%);
+}
+
+.main-collection .facets-loading > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main-collection .facets-loading > div svg {
+  width: 60%;
+  height: 60%;
+}
+
+.main-collection__products.loading::before {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-fixed);
+  display: block;
+  content: "";
+  opacity: 0;
+}
+
+.main-collection__products.loading .facets-loading {
+  display: block;
+}
+
+.main-collection__no-products-tips {
+  color: rgb(var(--color-text));
+}
+
+.main-collection__list {
+  margin-block-end: 40px;
+  overflow: visible;
+}
+
+@media (max-width: 959px) {
+  .main-collection__list {
+    margin-block-end: 20px;
+  }
+}
+
+@media (max-width: 959px) {
+  .main-collection {
+    padding-block: 20px;
+  }
+}
+
+@media (min-width: 960px) {
+  .main-collection {
+    display: grid;
+  }
+
+  .main-collection .main-collection__products {
+    grid-area: list;
+  }
+
+  .main-collection .facets-filtering {
+    grid-area: filtering;
+  }
+
+  .main-collection .facets-sorting {
+    grid-area: sorting;
+  }
+
+  .main-collection .facets-count {
+    grid-area: count;
+  }
+
+  .main-collection.facets-layout-horizontal {
+    grid-template:
+      "filtering sorting count"
+      "list list list" /
+      1fr auto auto;
+    row-gap: 40px;
+  }
+
+  .main-collection.facets-layout-vertical {
+    grid-template:
+      "count count sorting" 10px
+      "list list list" /
+      256px auto auto;
+    gap: 40px;
+  }
+
+  .main-collection.facets-layout-vertical.enable-filtering {
+    grid-template:
+      "filtering count sorting" 10px
+      "filtering list list" /
+      256px auto auto;
+  }
+
+  .main-collection.facets-layout-drawer {
+    grid-template:
+      "filtering sorting count"
+      "list list list" /
+      1fr auto auto;
+  }
+}

@@ -1,0 +1,81 @@
+{{#component "stylesheet" src="./card.css" | asset_url() /}}
+{{#var collection = block.settings.collection | default(props.collection) /}}
+{{#var collection_card_style = settings.collection_card_style /}}
+
+<a
+  href="{{collection.url | default(`javascript:void(0)`)}}"
+  class="
+    block-collection-card
+    {{block.settings | class_list()}}
+    color-{{block.settings.color_scheme.id}}
+    {{#if collection_card_style == "card"}}collection-card-border-shadow{{/if}}
+  "
+  {{{block.shopline_attributes}}}
+>
+  {{#blocks}}
+    {{#if forblock.type == "collection/image"}}
+      {{#block
+        collection=collection
+        mobile_columns=props.mobile_columns
+        desktop_columns=props.desktop_columns
+      /}}
+    {{#else/}}
+      {{#block collection=collection /}}
+    {{/if}}
+  {{/blocks}}
+</a>
+
+{{#schema}}
+{
+  "name": "t:blocks.collection.card.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:blocks.collection.card.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:blocks.collection.card.settings.collection.label"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:blocks.collection.card.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "row-gap": "8px",
+        "column-gap": "8px"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection/image",
+      "limit": 1
+    },
+    {
+      "type": "collection/title",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.collection.card.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "collection/image"
+        },
+        {
+          "type": "collection/title"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

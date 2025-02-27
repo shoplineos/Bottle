@@ -1,0 +1,49 @@
+.share-button {
+  display: inline-block;
+}
+
+@media (min-width: 960px) {
+  .share-button details[open]::before {
+    display: none;
+  }
+}
+
+.share-button__close-button {
+  width: 28px;
+  height: 28px;
+}
+
+.share-button__trigger {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.share-button__content {
+  --modal-animation-name: animation-fade-in-center;
+
+  inset: 0;
+  z-index: var(--z-index-popover);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: calc(100% - 40px);
+  min-width: 250px;
+  max-width: 650px;
+  padding: 60px 30px;
+  padding-block-end: 30px;
+}
+
+@media (min-width: 960px) {
+  .share-button__content {
+    position: absolute;
+    inset: unset;
+    width: 100%;
+    margin-block-start: 10px;
+  }
+}
+
+.share-button__href {
+  margin: 0;
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+{{#var product = props.product /}}
+
+<div class="product-detail__description rte text-{{block.settings.text_align}}" {{{block.shopline_attributes}}}>
+  {{{product.description}}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_description.name",
+  "tag": "",
+  "icon": "imageTextGrid",
+  "settings": [
+    {
+      "type": "text_align",
+      "label": "t:blocks.product.detail_description.settings.text_align.label",
+      "id": "text_align",
+      "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_description.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

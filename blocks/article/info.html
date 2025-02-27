@@ -1,0 +1,58 @@
+<div class="block-article-card__info {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{#blocks}}
+    {{#block article=props.article /}}
+  {{/blocks}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.article.info.name",
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:blocks.article.info.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "align-items": "center",
+        "row-gap": "10px",
+        "column-gap": "10px",
+        "@media (--mobile)": {
+          "row-gap": "4px",
+          "column-gap": "4px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article/title",
+      "limit": 1
+    },
+    {
+      "type": "article/date_author",
+      "limit": 1
+    },
+    {
+      "type": "article/excerpt",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.article.info.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "article/title"
+        },
+        {
+          "type": "article/date_author"
+        },
+        {
+          "type": "article/excerpt"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

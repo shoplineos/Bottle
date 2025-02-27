@@ -1,0 +1,285 @@
+{{#component "stylesheet" src="./customers-addresses.css" | asset_url() /}}
+{{#component "stylesheet" src="components/address-cascade/index.css" | asset_url() /}}
+{{#component "script" src="components/address-cascade/index.js" | asset_url() /}}
+
+<section class="page-width">
+  <div class="customers-addresses-section color-{{section.settings.color_scheme.id}}">
+    <h1 class="customers-addresses__title">{{"customer.address.edit_shipping_address" | t()}}</h1>
+
+    {{#customer_address_form address=customer.editing_address class="customers-addresses__form" return_to=routes.account_url}}
+      <div class="customers-addresses__form-container">
+        <label class="field cols-2-desktop">
+          <input
+            type="text"
+            id="AddressFirstName"
+            name="address[first_name]"
+            value="{{form.address.first_name}}"
+            autocomplete="given-name"
+            placeholder="{{`customer.address.first_name` | t() }}"
+            class="field__input"
+            maxlength="64"
+          />
+
+          <span class="field__label body3">{{"customer.address.first_name" | t() }}</span>
+        </label>
+
+        <label class="field cols-2-desktop">
+          <input
+            type="text"
+            name="address[last_name]"
+            value="{{form.address.last_name}}"
+            autocomplete="family-name"
+            placeholder="{{`customer.address.last_name` | t() }}"
+            class="field__input"
+            maxlength="64"
+          />
+          <span class="field__label body3">
+            {{"customer.address.last_name" | t() }}
+          </span>
+        </label>
+
+        <label class="field">
+          <input
+            type="text"
+            id="AddressCompany"
+            name="address[company]"
+            value="{{form.address.company}}"
+            autocomplete="family-name"
+            placeholder="{{`customer.address.company` | t() }}"
+            class="field__input"
+            maxlength="255"
+          />
+          <span class="field__label body3">
+            {{"customer.address.company" | t() }}
+          </span>
+        </label>
+
+        <label class="field">
+          <input
+            type="text"
+            id="AddressAddress1"
+            name="address[address1]"
+            value="{{form.address.address1}}"
+            autocomplete="address-line1"
+            placeholder="{{`customer.address.address1` | t() }}"
+            class="field__input"
+            maxlength="255"
+            required
+          />
+          <span class="field__label body3">
+            {{"customer.address.address1" | t() }}
+          </span>
+        </label>
+
+        <label class="field">
+          <input
+            type="text"
+            id="AddressAddress2"
+            name="address[address2]"
+            value="{{form.address.address2}}"
+            autocomplete="address-line2"
+            placeholder="{{`customer.address.company` | t() }}"
+            class="field__input"
+            maxlength="255"
+          />
+          <span class="field__label body3">
+            {{"customer.address.address2" | t() }}
+          </span>
+        </label>
+
+        
+        <theme-address-cascade class="customers-addresses__cascade">
+          
+          <label class="field">
+            <select
+              id="AddressCountry"
+              class="field__input"
+              name="address[country_code]"
+              data-default="{{#if form.address.country_code}}{{form.address.country_code}}{{#else/}}{{country_code}}{{/if}}"
+              autocomplete="country"
+              required
+            ></select>
+
+            <span class="field__label body3">
+              {{"customer.address.country" | t() }}
+            </span>
+            {{#component "icons/arrow-thin" class="icon-arrow" /}}
+          </label>
+
+          
+          <div class="address-cascade__group" id="AddressProvinceGroup">
+            <label class="field address-cascade__select">
+              <select
+                class="field__input"
+                id="AddressProvinceSelect"
+                name="address[province_code]"
+                data-default="{{form.address.province_code}}"
+                autocomplete="address-level1"
+              ></select>
+              <span class="field__label body3">
+                {{"customer.address.province" | t() }}
+              </span>
+              {{#component "icons/arrow-thin" class="icon-arrow" /}}
+            </label>
+
+            <label class="field address-cascade__input">
+              <input
+                class="field__input"
+                id="AddressProvinceInput"
+                name="address[province]"
+                value="{{form.address.province}}"
+                placeholder="{{`customer.address.province` | t() }}"
+                autocomplete="address-level1"
+              />
+              <span class="field__label body3">
+                {{"customer.address.province" | t() }}
+              </span>
+            </label>
+          </div>
+
+          
+          <div class="address-cascade__group" id="AddressCityGroup">
+            <label class="field address-cascade__select">
+              <select
+                type="text"
+                id="AddressCitySelect"
+                name="address[city_code]"
+                data-default="{{form.address.city_code}}"
+                autocomplete="address-level2"
+                placeholder="{{`customer.address.city` | t() }}"
+                class="field__input"
+              >
+              </select>
+              <span class="field__label body3">
+                {{"customer.address.city" | t() }}
+              </span>
+              {{#component "icons/arrow-thin" class="icon-arrow" /}}
+            </label>
+
+            <label class="field address-cascade__input">
+              <input
+                type="text"
+                id="AddressCityInput"
+                name="address[city]"
+                value="{{form.address.city}}"
+                maxlength="64"
+                placeholder="{{`customer.address.city` | t() }}"
+                class="field__input"
+              />
+              <span class="field__label body3">
+                {{"customer.address.city" | t() }}
+              </span>
+            </label>
+          </div>
+
+          
+          <div class="address-cascade__group" id="AddressDistrictGroup">
+            <label class="field address-cascade__select">
+              <select
+                type="text"
+                id="AddressDistrictSelect"
+                name="address[district_code]"
+                data-default="{{form.address.district_code}}"
+                autocomplete="address-level2"
+                placeholder="{{`customer.address.district` | t() }}"
+                class="field__input"
+              >
+              </select>
+              <span class="field__label body3">
+                {{"customer.address.district" | t() }}
+              </span>
+              {{#component "icons/arrow-thin" class="icon-arrow" /}}
+            </label>
+
+            <label class="field address-cascade__input">
+              <input
+                type="text"
+                id="AddressDistrictInput"
+                name="address[district]"
+                value="{{form.address.district}}"
+                maxlength="64"
+                placeholder="{{`customer.address.district` | t() }}"
+                class="field__input"
+              />
+              <span class="field__label body3">
+                {{"customer.address.district" | t() }}
+              </span>
+            </label>
+          </div>
+        </theme-address-cascade>
+
+        <label class="field">
+          <input
+            type="text"
+            id="AddressZipCode"
+            name="address[zip]"
+            value="{{form.address.zip}}"
+            autocapitalize="characters"
+            autocomplete="postal-code"
+            placeholder="{{`customer.address.zip_code` | t() }}"
+            class="field__input"
+            maxlength="10" />
+          <span class="field__label body3">
+            {{"customer.address.zip_code" | t() }}
+          </span>
+        </label>
+
+        <label class="field">
+          <input
+            type="tel"
+            id="AddressPhone"
+            name="address[phone]"
+            value="{{form.address.phone}}"
+            autocomplete="tel"
+            placeholder="{{`customer.address.phone` | t() }}"
+            class="field__input"
+            maxlength="16"
+          />
+          <span class="field__label body3">
+            {{"customer.address.phone" | t() }}
+          </span>
+        </label>
+      </div>
+
+      <footer class="customers-addresses__footer">
+        <div>
+          <label class="field--checkbox">
+            <input
+              type="checkbox"
+              name="address[def]"
+              value="true"
+              {{#if form.address.id == customer.default_address.id}}checked{{/if}}
+            />
+
+            {{#component "icons/checkbox" /}}
+            <span>{{"customer.address.set_default_address" | t() }}</span>
+          </label>
+        </div>
+
+        <div class="customers-addresses__actions">
+          <a class="button button--secondary button--mobile-block" href="{{routes.account_url}}">
+            {{"customer.general.cancel" | t() }}
+          </a>
+
+          <button class="button button--mobile-block" type="submit">
+            {{"customer.general.save" | t() }}
+          </button>
+        </div>
+      </footer>
+    {{/customer_address_form}}
+  </div>
+</section>
+
+{{#schema}}
+{
+  "name": "t:sections.customers_addresses.name",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.customers_addresses.settings.color_scheme.label",
+      "default": "scheme-1"
+    }
+  ]
+}
+{{/schema}}

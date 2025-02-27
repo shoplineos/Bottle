@@ -1,0 +1,32 @@
+
+
+{{#var is_show_total = props.show_total | default(true, allow_false=true) /}}
+
+<ul class="cart-amount {{#if props.is_flex_end}}cart-amount__flex-end{{/if}}">
+  {{#if cart.items_subtotal_price != cart.total_price}}
+    <li class="cart-amount__subtotal">
+      <em class="body3">{{"cart.checkout_proceeding.subtotal" | t()}}</em>
+      <span class="body2">{{{cart.items_subtotal_price | money_with_currency()}}}</span>
+    </li>
+  {{/if}}
+
+  {{#if cart.total_discount | to_float() > 0}}
+    {{#for level_discount_application in cart.cart_level_discount_applications}}
+    <li class="cart-amount__discount">
+      <div class="cart-amount__discount-label">
+        {{#component "icons/bookmark" /}}
+        <em class="body3">{{level_discount_application.title}}</em>
+      </div>
+      <span class="body2">-{{{level_discount_application.value | money_with_currency()}}}</span>
+    </li>
+    {{/for}}
+  {{/if}}
+
+  {{#if is_show_total}}
+    <li class="cart-amount__total">
+      <em class="body2 font-bold">{{"cart.payment.total_sum" | t()}}</em>
+      <span class="body2">{{{cart.total_price | money_with_currency()}}}</span>
+    </li>
+  {{/if}}
+</ul>
+

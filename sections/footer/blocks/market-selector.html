@@ -1,0 +1,126 @@
+{{#var show_locale_selector = false /}}
+
+{{#if block.settings.show_type == "all" || block.settings.show_type == "only_language" && localization.available_countries | size() >= 1}}
+  {{#set show_locale_selector = true /}}
+{{/if}}
+
+{{#var show_country_selector = false /}}
+
+{{#if block.settings.show_type == "all" || block.settings.show_type == "only_country" && localization.available_countries | size() >= 1}}
+  {{#set show_country_selector = true /}}
+{{/if}}
+
+{{#if show_locale_selector || show_country_selector}}
+  <div class="footer__localization-form {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+    {{#localization_form id="footer-localization-form" enctype="multipart/form-data" accept-charset="UTF-8"}}
+
+      {{#component "stylesheet" src="components/select/index.css" | asset_url() /}}
+      {{#component "script" src="components/select/index.js" | asset_url() /}}
+
+      {{#if show_locale_selector}}
+        <theme-select class="localization__selector" data-position="top">
+          <select name="locale_code" onchange="this.form.submit();">
+            {{#for language in localization.available_languages}}
+              <option value="{{language.iso_code}}" {{#if localization.language.endonym_name == language.endonym_name}}selected{{/if}}>{{language.endonym_name}}</option>
+            {{/for}}
+          </select>
+
+          {{#component "icons/arrow-thin" class="theme-select__arrow" /}}
+        </theme-select>
+      {{/if}}
+
+      {{#if show_country_selector}}
+        <theme-select class="localization__selector" data-position="top">
+          <select name="country_code" onchange="this.form.submit();">
+            {{#for country in localization.available_countries}}
+              <option value="{{country.iso_code}}" {{#if localization.country.iso_code == country.iso_code}}selected{{/if}}>
+                {{country.name}}（{{country.currency.iso_code}}
+                {{country.currency.symbol}}）
+              </option>
+            {{/for}}
+          </select>
+
+          {{#component "icons/arrow-thin" class="theme-select__arrow" /}}
+        </theme-select>
+      {{/if}}
+    {{/localization_form}}
+  </div>
+{{/if}}
+
+{{#schema}}
+{
+  "name": "t:sections.footer.blocks.market_selector.name",
+  "icon": "marketSelector",
+  "tag": "",
+  "settings": [
+    {
+      "type": "select",
+      "id": "show_type",
+      "label": "t:sections.footer.blocks.market_selector.settings.show_type.label",
+      "info": "t:sections.footer.blocks.market_selector.settings.show_type.info",
+      "default": "all",
+      "options": [
+        {
+          "value": "all",
+          "label": "t:sections.footer.blocks.market_selector.settings.show_type.options_0.label"
+        },
+        {
+          "value": "only_country",
+          "label": "t:sections.footer.blocks.market_selector.settings.show_type.options_1.label"
+        },
+        {
+          "value": "only_language",
+          "label": "t:sections.footer.blocks.market_selector.settings.show_type.options_2.label"
+        }
+      ]
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.footer.blocks.market_selector.settings.layout.label",
+      "default": {
+        "flex-direction": "row",
+        "flex-wrap": "nowrap",
+        "align-items": "flex-start",
+        "justify-content": "flex-start",
+        "row-gap": "15px",
+        "column-gap": "15px",
+        "@media (--mobile)": {
+          "justify-content": "center",
+          "row-gap": "20px",
+          "column-gap": "6px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.footer.blocks.market_selector.settings.spacing.label",
+      "default": {
+        "padding-top": "0px",
+        "padding-right": "0px",
+        "padding-bottom": "0px",
+        "padding-left": "0px"
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.footer.blocks.market_selector.settings.size.label",
+      "default": {
+        "width": "50%",
+        "height": "auto",
+        "@media (--mobile)": {
+          "width": "100%",
+          "height": "auto"
+        }
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.footer.blocks.market_selector.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

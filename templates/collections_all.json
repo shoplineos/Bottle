@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "main-collections-all": {
+      "type": "main-collections-all",
+      "settings": {},
+      "blocks": {
+        "main-collections-all__heading": {
+          "type": "heading",
+          "settings": {
+            "text": "All Collections",
+            "text_size": "title1"
+          }
+        },
+        "main-collections-all__list": {
+          "type": "$list",
+          "settings": {},
+          "blocks": {
+            "main-collections-all__list__card": {
+              "type": "collection/card",
+              "settings": {},
+              "blocks": {
+                "main-collections-all__list__card__image": {
+                  "type": "collection/image",
+                  "settings": {},
+                  "blocks": {
+                    "main-collections-all__list__card__image__title": {
+                      "type": "collection/title"
+                    }
+                  },
+                  "block_order": [
+                    "main-collections-all__list__card__image__title"
+                  ]
+                }
+              },
+              "block_order": [
+                "main-collections-all__list__card__image"
+              ]
+            }
+          },
+          "block_order": ["main-collections-all__list__card"]
+        }
+      },
+      "block_order": [
+        "main-collections-all__heading",
+        "main-collections-all__list"
+      ]
+    }
+  },
+  "order": ["main-collections-all"]
+}

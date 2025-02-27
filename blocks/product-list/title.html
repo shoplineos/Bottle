@@ -1,0 +1,38 @@
+{{#var placeholder_title = "onboarding.product_title" | t()/}}
+
+{{#var max_row /}}
+{{#switch settings.product_title_display_type}}
+  {{#case "max_1"/}}
+    {{#set max_row = 1 /}}
+  {{#case "max_2"/}}
+    {{#set max_row = 2 /}}
+  {{#else "all"/}}
+{{/switch}}
+
+<div>
+  <div
+    style="--max-row:{{max_row}};"
+    class="
+      body3
+      block-product-card__title
+      product-card-style--{{settings.product_card_style}}
+      {{#if !settings.product_desktop_title_show}}hidden-desktop{{/if}}
+      {{#if !settings.product_mobile_title_show}}hidden-mobile{{/if}}
+    "
+    {{{block.shopline_attributes}}}
+  >
+    {{props.product.title | default(placeholder_title)}}
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product_list.title.name",
+  "tag": "",
+  "presets": [
+    {
+      "name": "t:blocks.product_list.title.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

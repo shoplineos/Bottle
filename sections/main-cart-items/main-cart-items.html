@@ -1,0 +1,61 @@
+{{#component "stylesheet" src="./main-cart-items.css" | asset_url() /}}
+
+{{#component "script" src="cart/base-items.js" | asset_url() /}}
+{{#component "script" src="./main-cart-items.js" | asset_url() /}}
+
+<div class="main-cart-items__container color-{{settings.cart_color_scheme.id}}">
+  <div class="page-width">
+    <theme-main-cart-items
+      data-cart-section-to-render
+      data-section-id="{{section.id}}"
+      class="main-cart-items {{section.settings.spacing | class_list()}}"
+    >
+      <div class="main-cart-items__infos">
+        <h2 class="title4">{{"general.header.cart" | t()}}</h2>
+        <a class="body3" href="{{routes.all_products_collection_url}}">
+          {{"cart.checkout_proceeding.continue_shopping" | t()}}
+        </a>
+      </div>
+
+      <div class="main-cart-items__content">
+        {{#component "cart/widgets/cart-empty" /}}
+
+        {{#if !cart.empty}}
+          <div class="main-cart-items__header">
+            <div>{{"products.product_list.products" | t()}}</div>
+            <div>{{"products.product_details.amount" | t()}}</div>
+            <div>{{"cart.payment.total_sum" | t()}}</div>
+          </div>
+
+          <div class="main-cart-items__list">
+            {{#component "cart/widgets/cart-items" scene="page" /}}
+          </div>
+        {{/if}}
+      </div>
+    </theme-main-cart-items>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_cart_items.name",
+  "icon": "collection",
+  "settings": [
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.main_cart_items.settings.spacing.label",
+      "default": {
+        "padding-top": "40px",
+        "padding-right": "0",
+        "padding-bottom": "40px",
+        "padding-left": "0",
+        "@media (--mobile)": {
+          "padding-right": "0",
+          "padding-left": "0"
+        }
+      }
+    }
+  ]
+}
+{{/schema}}

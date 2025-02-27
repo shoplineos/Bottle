@@ -1,0 +1,39 @@
+<div class="custom-html-block color-{{block.settings.color_scheme.id}} {{{block.settings | class_list()}}}" {{{block.shopline_attributes}}}
+>
+  {{{block.settings.html}}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.custom_html.name",
+  "tag": "",
+  "settings": [
+    {
+      "id": "html",
+      "label": "t:blocks.custom_html.settings.html.label",
+      "type": "sline",
+      "default": "<div style=\"text-align:center;\"><h2>Use HTML to format your text so it can be easily read.</h2>This text can be used to share information about your brand with customers.</div>"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:blocks.custom_html.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:blocks.custom_html.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.custom_html.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,76 @@
+{{#component "stylesheet" src="./custom-html.css" | asset_url() /}}
+
+<div class="custom-html color-{{section.settings.color_scheme.id}}">
+  <div class="page-width">
+    <div class="custom-html__inner {{section.settings | class_list()}}">
+      <div class="rte">{{{section.settings.html}}}</div>
+    </div>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.custom_html.name",
+  "icon": "code",
+  "class": "section",
+  "settings": [
+    {
+      "type": "sline",
+      "id": "html",
+      "label": "t:sections.custom_html.settings.html.label",
+      "default": "<div style=\"text-align:center;\"><h2>Use HTML to format your text so it can be easily read.</h2>This text can be used to share information about your brand with customers.</div>"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.custom_html.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.custom_html.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "30px",
+        "column-gap": "30px",
+        "@media (--mobile)": {
+          "row-gap": "20px",
+          "column-gap": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.custom_html.settings.spacing.label",
+      "default": {
+        "padding-top": "80px",
+        "padding-bottom": "80px",
+        "@media (--mobile)": {
+          "padding-top": "40px",
+          "padding-bottom": "40px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.custom_html.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "category": "t:sections.custom_html.presets.presets_0.category",
+      "name": "t:sections.custom_html.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

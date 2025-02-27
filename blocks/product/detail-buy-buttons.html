@@ -1,0 +1,66 @@
+{{#component "stylesheet" src="./detail-buy-buttons.css" | asset_url() /}}
+{{#component "script" src="product/form.js" | asset_url() /}}
+
+{{#var product = props.product /}}
+{{#var first_variant = product | get_variants() | first() /}}
+{{#var current_variant = product.selected_or_first_available_variant | default(first_variant) /}}
+
+<div class="product-detail__buy-buttons" {{{block.shopline_attributes}}}>
+  {{#if product}}
+    <theme-product-form
+      data-default-error-message="{{`products.general.no_product_data_found` | t() }}"
+      data-add-to-cart-text="{{`products.product_list.add_to_cart` | t() }}"
+      data-sold-out-text="{{`products.general.sold_out` | t() }}"
+      data-unavailable-text="{{`products.general.unavailable` | t() }}">
+      {{#product_form
+        product
+        id="product-form-" | append(section.id)
+        class="product-detail__form"
+      }}
+        <input type="hidden" name="id" value="{{current_variant.id}}" />
+
+        <div class="form__error-message body6 hidden">
+          {{#component "icons/warning" /}}
+        </div>
+
+        <div class="form__buttons">
+          <button
+            type="submit"
+            name="add"
+            class="button button--fill button--secondary"
+            {{#if !current_variant.available}}disabled{{/if}}>
+            <span>
+              {{#if current_variant.available}}
+                {{"products.product_list.add_to_cart" | t() }}
+              {{#else/}}
+                {{"products.general.sold_out" | t() }}
+              {{/if}}
+            </span>
+
+            {{#component "icons/loading" class="button__spinner" /}}
+          </button>
+
+          {{#payment_button/}}
+        </div>
+      {{/product_form}}
+    </theme-product-form>
+  {{#else/}}
+     <button class="button button--fill button--secondary" type="button" disabled>
+      {{"products.general.sold_out" | t() }}
+    </button>
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_buy_buttons.name",
+  "tag": "",
+  "icon": "button",
+  "settings": [],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_buy_buttons.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

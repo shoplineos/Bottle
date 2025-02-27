@@ -1,0 +1,150 @@
+
+
+{{#component "stylesheet" src="customers/base.css" | asset_url() /}}
+{{#component "stylesheet" src="./customers-login.css" | asset_url() /}}
+
+{{#component "script" src="customers/base.js" | asset_url() /}}
+{{#component "script" src="customers/base-form.js" | asset_url() /}}
+{{#component "script" src="./customers-login.js" | asset_url() /}}
+
+<script>
+  if (window.Shopline.i18nInit) {
+    window.Shopline.i18nInit();
+  }
+</script>
+
+<div class="customer-container color-{{section.settings.color_scheme.id}}">
+  <theme-main-login class="customer customer-login {{section.settings.spacing | class_list()}}">
+    <theme-base-form>
+      {{#customer_login_form class="customer-login__form" thirdLogin="true"}}
+        
+        {{#var activation_tag = form.register_config.activation_tag /}}
+        
+        {{#var support_type_list = form.register_config.types | split(",") /}}
+
+        {{#var has_switch = false /}}
+        {{#if support_type_list | contains("email") && support_type_list | contains("mobile")}}
+          {{#set has_switch = true /}}
+        {{/if}}
+
+        {{#var has_third_login = false /}}
+        {{#if support_type_list | contains("line") || support_type_list | contains("facebook") || support_type_list | contains("google") || support_type_list | contains("tiktok") || support_type_list | contains("apple") }}
+          {{#set has_third_login = true /}}
+        {{/if}}
+
+        <h2 class="title5 text-center customer__title">{{"customer.general.sign_in" | t()}}</h2>
+
+        
+        {{#if activation_tag}}
+          <p class="body6 text-center customer-login__activation-tips hidden" data-step-type="activate"></p>
+        {{/if}}
+
+        
+        {{#if has_switch}}
+          <div class="customer__tab" data-step-type="normal">
+            <span class="body3 active" data-login-type="email">
+              {{"customer.account.email" | t()}}
+            </span>
+            <span class="body3" data-login-type="mobile">
+              {{"customer.account.phone" | t()}}
+            </span>
+          </div>
+        {{/if}}
+
+        
+        {{#for type in support_type_list}}
+          {{#if type == "email"}}
+            <div data-login-type="email">
+              {{#component "input/input-email" input_name="customer[email]" input_required=true input_autocomplete="email" input_placeholder="customer.general.email" | t() /}}
+            </div>
+          {{/if}}
+
+          {{#if type == "mobile"}}
+            <div class="{{#if has_switch}}hidden{{/if}}" data-login-type="mobile">
+              {{#component "input/input-phone" all_country_dialing_code=all_country_dialing_code input_name="customer[phone]" code_name="customer[code]" input_required=true input_autocomplete="tel" country_iso_code=localization.country.iso_code /}}
+            </div>
+          {{/if}}
+        {{/for}}
+
+        
+        {{#component "input/input-password" input_name="customer[password]" input_required=true input_autocomplete="password" /}}
+
+        
+        {{#if activation_tag}}
+          
+          <div class="hidden" data-step-type="activate">
+            {{#component "input/input-verify-code" input_name="customer[verifycode]" input_disabled=true button_id="login-activate-send-button" /}}
+          </div>
+        {{/if}}
+
+        
+        <button class="button customer__submit" type="submit">
+          <span data-step-type="normal">
+            {{"customer.general.sign_in" | t()}}
+          </span>
+
+          {{#if activation_tag}}
+            <span class="hidden" data-step-type="activate">
+              {{"customer.activate.button" | t()}}
+            </span>
+          {{/if}}
+
+          {{#component "icons/loading" class="button__spinner" /}}
+        </button>
+
+        
+        <div class="customer__extra body4">
+          <a class="button button--link body5 font-bold" href="{{routes.account_recover_url}}">
+            {{"customer.forget_password.forget_password_tips" | t()}}
+          </a>
+          <a class="button button--link body5 font-bold" href="{{routes.account_register_url}}">
+            {{"customer.general.register" | t()}}
+          </a>
+        </div>
+
+        
+        {{#if has_third_login}}
+          <div class="customer-login__third">
+            <div class="customer-login__third-desc">
+              <span class="body4">{{"customer.general.login_method" | t()}}</span>
+            </div>
+            <div class="customer-login__third-buttons">
+              <div class="customer-login__third-container"></div>
+            </div>
+          </div>
+        {{/if}}
+
+      {{/customer_login_form}}
+    </theme-base-form>
+  </theme-main-login>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.customers_login.name",
+  "icon": "customer",
+  "settings": [
+    {
+      "id": "color_scheme",
+      "type": "color_scheme",
+      "label": "t:sections.customers_login.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.customers_login.settings.spacing.label",
+      "default": {
+        "padding-top": "80px",
+        "padding-bottom": "80px",
+        "@media (--mobile)": {
+          "padding-top": "40px",
+          "padding-right": "20px",
+          "padding-bottom": "40px",
+          "padding-left": "20px"
+        }
+      }
+    }
+  ]
+}
+{{/schema}}

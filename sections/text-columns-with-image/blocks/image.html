@@ -1,0 +1,22 @@
+<div class="text-columns-with-image__card-image text-columns-with-image--full-width" {{{block.shopline_attributes}}}>
+  {{#if block.settings.image}}
+    {{#component "image" data=block.settings.image /}}
+  {{#else/}}
+    {{#placeholder_svg "image" class="empty-image-class" /}}
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.text_columns_with_image.blocks.image.name",
+  "icon": "image",
+  "settings": [
+    {
+      "type": "image",
+      "id": "image",
+      "label": "t:sections.text_columns_with_image.blocks.image.settings.image.label",
+      "default": {}
+    }
+  ]
+}
+{{/schema}}

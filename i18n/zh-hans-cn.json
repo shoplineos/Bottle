@@ -1,0 +1,1178 @@
+{
+  "blog": {
+    "blog": {
+      "next": "下一篇",
+      "previous": "上一篇",
+      "read_more": "查看更多",
+      "related_articles": "相关博客"
+    },
+    "blog_list": {
+      "empty_description": "此博客中没有博客文章",
+      "readmore": "查看更多",
+      "title": "博客",
+      "view_more": "查看更多"
+    },
+    "comment": {
+      "comment": "评论",
+      "comment_audit_tip": "您的评论已提交，但需要审核。",
+      "comment_empty": "请填写评论内容",
+      "email": "邮箱",
+      "email_empty": "邮箱不能为空",
+      "email_format": "请输入正确邮箱",
+      "form_title": "发表评论",
+      "loadmore": "加载更多",
+      "moderated_tip": "请注意，评论需要经过审核通过后才能发布",
+      "name": "姓名",
+      "name_empty": "请填写名字",
+      "post_comment": "提交评论",
+      "single_count": "{{count}}评论",
+      "submit": "提交",
+      "submit_audit_tip": "提交成功,待审核",
+      "success": "提交成功",
+      "title": "{{comment_length}} 评论"
+    },
+    "general": {
+      "back": "返回博客",
+      "back_to": "返回 {{{collectionTitle}}}"
+    }
+  },
+  "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "此商品的起批量为 {{num}} 件"
+        },
+        "most": {
+          "desc": "此商品的最大批发量为 {{num}} 件"
+        },
+        "noIncrement": {
+          "desc": "此商品的增量必须为 {{num}} 件"
+        }
+      }
+    },
+    "cart": {
+      "added_to_cart": "已加入购物车",
+      "buy_now": "立即购买",
+      "cancel": "取消",
+      "cart_subtotal": "购物车总金额",
+      "cart_view": "查看购物车",
+      "confirm": "确定",
+      "got_it": "我知道了"
+    },
+    "cart_error": "更新购物车时出错。请重试。",
+    "cart_quantity_error": "您只能向购物车添加 {{quantity}} 件此商品。",
+    "checkout": {
+      "max_amount_limit": "你超过了结账的最大金额"
+    },
+    "checkout_proceeding": {
+      "checkout": "结账",
+      "checkout_proceed": "以下商品超过购买限制，是否继续结账？",
+      "continue": "继续",
+      "continue_shopping": "前去购物",
+      "day": "天",
+      "remove": "移除",
+      "return_to_cart": "返回购物车",
+      "subtotal": "小计",
+      "tax_included": "已包含税费"
+    },
+    "couponCode": {
+      "exceedLimit": "折扣码超过数量限制",
+      "existCode": "折扣码已存在",
+      "list": {
+        "unavailable": "所有折扣码均已失效"
+      },
+      "notSupport": {
+        "stacked": "折扣码不可叠加"
+      },
+      "unavailable": "折扣码失效"
+    },
+    "discount": {
+      "coupon_code_amount": "优惠码优惠",
+      "coupon_code_length_limit": "优惠码不能超过{{range}}长度",
+      "expected_discount": "预计优惠"
+    },
+    "discount_item": {
+      "buy_limit5": "最多可同时购买{{stock}} 件优惠价商品"
+    },
+    "discount_price": {
+      "buy_limit1": "此商品优惠价仅剩{{stock}}件",
+      "buy_limit2": "最多可同时购买{{stock}} 件优惠价商品",
+      "buy_limit3": "此商品优惠价仅支持买{{stock}}件"
+    },
+    "error": {
+      "default": "加载资源失败",
+      "noshipping": "无可选的运费方案",
+      "order": "下单请求失败",
+      "renew": "更新数据失败"
+    },
+    "general": {
+      "continue_as_a_guest": "继续以访客身份访问",
+      "support_oneTime_purchase_only": "商品仅支持一次性购买",
+      "support_subscription_only": "商品仅支持订阅购买"
+    },
+    "item": {
+      "add_limit2": "最多可添加99999件商品至购物车",
+      "click_to_view": "点击查看",
+      "custom_preview": "定制预览",
+      "empty_cart": "您的购物车目前是空的。",
+      "item_left": "剩余{{stock}}件",
+      "market": {
+        "illegal": {
+          "excludedState": "市场商品非法,该商品在市场是排除状态"
+        }
+      },
+      "none_existent": "商品不存在"
+    },
+    "next_step": {
+      "calculated_taxes_fees": "下一步将计算税费和运费",
+      "included_taxes_fees": "已含税且运费在结账时计算",
+      "taxes_included_and_shipping_at_checkout": "结账时包含的税费和计算的运费",
+      "taxes_included_and_shipping_policy": "含税费。结账时计算 <a href=\"{{link}}\">运费</a>",
+      "taxes_not_included_and_shipping_policy_at_checkout": "结账时计算的税费和<a href=\"{{ link }}\">运费</a>"
+    },
+    "notices": {
+      "change_password_after_verification": "完成验证后可修改密码",
+      "excess_product": "以下商品超过购买限制，请修改数量",
+      "product_amount_limit": "抱歉！加入购物车的商品数量超过限制。",
+      "product_selected_invalid": "抱歉，你所选择的商品因已失效而无法购买，请重新选择",
+      "store_nonexistent": "店铺不存在"
+    },
+    "order": {
+      "invalid_order_number": "无效订单号",
+      "paymentVoucher": {
+        "downloadDoc": "下载文档",
+        "format": "格式",
+        "formatLimit": "支持上传20MB以内的JPG、PNG、GIF、PDF文件。最多可上传5张图片。",
+        "uploadAmount": "{{num}}张凭证已上传",
+        "uploadLimit": "请上传20MB以内的JPG，PNG，GIF，PDF文件"
+      },
+      "payment_voucher_confirmation": "知道了",
+      "shipping_address": "收货信息",
+      "sign_in": "或者使用以下方式登录",
+      "tax_included": "包含{{price}}税费",
+      "try_again": "上传失败，请重试",
+      "try_later": "凭证校验服务繁忙，请稍后再试",
+      "upload_bank_transfer_vouhcer_for_confirmation": "请上传并确认支付凭证",
+      "upload_image_within_10_m_b": "请提供10MB以下的JPG，PNG，GIF图片"
+    },
+    "payment": {
+      "channel": "付款渠道",
+      "create_time": "创建于",
+      "free": "免费",
+      "log_in": "去登录",
+      "payment_details": "付款详情",
+      "pending_review": "支付中",
+      "reference_number": "支付流水号",
+      "status": "状态",
+      "subtotal_price": "商品总价",
+      "sum": "金额",
+      "total_sum": "合计",
+      "update_time": "更新于"
+    },
+    "policy": {
+      "privacy_policy": "隐私政策"
+    },
+    "product": {
+      "unavailable_sale": "此商品不支持在线销售"
+    },
+    "promotion": {
+      "no_promotion": "不参与优惠"
+    },
+    "shpping": {
+      "service_terms": "服务条款"
+    },
+    "stock": {
+      "limit": "还剩{{stock}}个库存"
+    },
+    "subscription": {
+      "information": "订阅"
+    },
+    "tips": {
+      "agree_with_the_shop": "我同意店铺的",
+      "change_binding_after_verification": "完成验证后可绑定/改绑{{value}}",
+      "forget_password": "忘记密码",
+      "proceed_to_checkout": "进行结算",
+      "reset_password": "你正在为账号{{account}}重置密码"
+    }
+  },
+  "customer": {
+    "account": {
+      "account_binding": "账户绑定",
+      "account_information": "账户",
+      "address": "地址",
+      "bind": "绑定",
+      "birthday": "生日",
+      "change_password": "更改密码",
+      "confirm_btn": "确认",
+      "confirm_subscription_modal_btn": "确认订阅",
+      "confirm_subscription_modal_content": "您此前已提交订阅。 确认邮件已发送到此邮箱。 您可以在您的电子邮件中进行确认或单击此按钮。",
+      "confirm_subscription_modal_title": "请确认您的邮箱订阅。",
+      "credit_card_number": "信用卡号",
+      "deadline": "出于业务报告的目的，您的订单仍将可见。您的账户数据将于9天后被删除，您可在该日期之前取消此过程",
+      "delete_account": "注销账户",
+      "delete_account_email": "电子邮件",
+      "delete_account_notify": "您可申请注销此账户。账户注销后，任何用于识别此账户的信息将被删除，包括：",
+      "delete_deadline_tip": "用户数据将在{{time}}删除",
+      "email": "电子邮件",
+      "email_repeat_tip": "邮箱已注册",
+      "email_subscribe_invalid_tip": "无效的邮箱地址",
+      "first_name": "名字",
+      "gender": "性别",
+      "gender_female": "女",
+      "gender_male": "男",
+      "gender_secret": "保密",
+      "invalidEmail": "无效的邮箱地址",
+      "ip_address": "IP地址",
+      "last_name": "姓氏",
+      "modify_email": "修改电子邮件",
+      "modify_email_modal_title": "修改电子邮件",
+      "modify_phone": "手机",
+      "modify_phone_modal_title": "手机",
+      "name": "名称",
+      "next": "下一步",
+      "nickname_empty_error": "First Name 和 Last Name 不能都为空",
+      "not_set": "未设置",
+      "password": "密码",
+      "personal_information": "个人信息",
+      "phone": "手机",
+      "reset_password_error_hint": "请先绑定电子邮件或手机",
+      "revoke": "取消注销",
+      "revoke_btn": "取消注销",
+      "revoke_message": "账号处于注销中，账户数据将于{{time}}被删除，您可在该日期之前撤销此注销流程",
+      "save_btn": "保存",
+      "select_date": "请选择日期",
+      "subscribe_confirm_tip": "感谢您的订阅。",
+      "timeout_tip": "操作超时，请重新验证",
+      "unknow_error_tip": "服务异常，稍后重试",
+      "unregister": "账号注销",
+      "username": "姓名",
+      "verify_email_message": "在进行注销操作前，我们需要验证您的身份\n您的邮箱{{email}}将收到验证码邮件",
+      "verify_phone_message": "在进行注销操作前，我们需要验证您的身份\n您的手机{{phone}}将收到验证短信"
+    },
+    "activate": {
+      "account_activated": "该账号已激活",
+      "apply_code": "应用折扣码",
+      "apply_success": "已应用",
+      "button": "激活",
+      "copy_success": "优惠券已复制",
+      "discount_title": "激活账号并获取折扣码",
+      "normal_title": "激活账号",
+      "normal_title_with_discount_code": "激活账号并获取折扣码",
+      "subscription_text": "订阅电子邮件以接收更新、访问独家优惠等。",
+      "success_title": "恭喜您获得折扣",
+      "token_expired": "您的链接已失效"
+    },
+    "address": {
+      "add_address": "新增地址",
+      "address": "地址",
+      "address1": "详细地址",
+      "address2": "详细地址2",
+      "address_full_tip": "已保存 50 个地址，目前无法添加",
+      "adress_full_tip": "已保存 50 个地址，目前无法添加",
+      "city": "城市",
+      "common_max": "少于 {{max}} 个字符！",
+      "common_min": "大于 {{min}} 个字符！",
+      "company": "公司",
+      "country": "国家/地区",
+      "default": "默认",
+      "delete_address": "删除地址",
+      "district": "区",
+      "edit_last_name_hint": "请输入您的姓氏",
+      "edit_phone_hint": "请输入您的手机号码",
+      "edit_shipping_address": "编辑配送地址",
+      "first_name": "名",
+      "last_name": "姓",
+      "max_address_tip": "最多可创建50条地址",
+      "no_address_data": "目前没有送货地址",
+      "no_adress_data": "目前没有送货地址",
+      "phone": "手机号码",
+      "province": "省份",
+      "set_default_address": "设为默认地址",
+      "zip_code": "邮编"
+    },
+    "company": {
+      "account": {
+        "billTitle": "公司账单地址",
+        "link": "公司账号申请",
+        "shipping": "公司收货地址",
+        "title": "公司账号申请"
+      },
+      "address": {
+        "placeholder": "详细地址"
+      },
+      "address2": {
+        "placeholder": "详细地址2"
+      },
+      "bill": {
+        "sameAsCompany": "公司账单地址与收货地址相同"
+      },
+      "billing": {
+        "address": {
+          "placeholder": "详细地址"
+        },
+        "address2": {
+          "placeholder": "详细地址2"
+        },
+        "city": {
+          "placeholder": "城市"
+        },
+        "country": {
+          "placeholder": "国家/地区"
+        },
+        "district": {
+          "placeholder": "区"
+        },
+        "phone": {
+          "placeholder": "手机号"
+        },
+        "province": {
+          "placeholder": "省份"
+        },
+        "zip": {
+          "placeholder": "邮政编码"
+        }
+      },
+      "billingSameAsShipping": {
+        "placeholder": "公司账单地址与收货地址相同"
+      },
+      "billing_address": {
+        "title": "公司账单地址"
+      },
+      "city": {
+        "placeholder": "城市"
+      },
+      "company_name": {
+        "placeholder": "公司名称"
+      },
+      "country": {
+        "placeholder": "国家/地区"
+      },
+      "create": {
+        "limit": "公司数量已经达到上限，请联系商家进行处理。",
+        "success": "感谢，表单已提交！"
+      },
+      "district": {
+        "placeholder": "区"
+      },
+      "email": {
+        "placeholder": "邮箱"
+      },
+      "field": {
+        "companyName": "公司名称",
+        "email": "邮箱"
+      },
+      "first_name": {
+        "placeholder": "名字"
+      },
+      "form": {
+        "submit": "提交"
+      },
+      "last_name": {
+        "placeholder": "姓氏"
+      },
+      "phone": {
+        "placeholder": "手机号"
+      },
+      "province": {
+        "placeholder": "省份"
+      },
+      "register": {
+        "button": "提交",
+        "success": {
+          "description": "表单已提交成功。",
+          "title": "感谢填写！"
+        },
+        "title": "公司账号申请"
+      },
+      "shipping_address": {
+        "title": "公司收货地址"
+      },
+      "zip": {
+        "placeholder": "邮政编码"
+      }
+    },
+    "email": {
+      "mail_common": "邮箱"
+    },
+    "forget_password": {
+      "forget_password_tips": "忘记密码",
+      "reset_password": "重置密码",
+      "tips_password_can_be_changed_after_verification": "完成验证后可修改密码",
+      "tips_reset_password": "你正在为账号{{account}}重置密码",
+      "token_expired": "您的重置密码链接已失效"
+    },
+    "general": {
+      "account": "账户",
+      "and_button": "和",
+      "apr": "四月",
+      "april": "四月",
+      "aug": "八月",
+      "august": "八月",
+      "back_to_user_center": "返回用户中心",
+      "bind_change_email": "绑定/改绑邮箱",
+      "bind_change_phone": "绑定/改绑手机号码",
+      "bind_email": "绑定邮箱",
+      "bind_phone": "绑定手机",
+      "bind_success": "绑定成功",
+      "cancel": "取消",
+      "cancel_common": "取消",
+      "cancel_mobile_button": "取消",
+      "clear_button": "清除",
+      "company_empty_hint": "公司名称不能为空",
+      "company_existed": "公司名称已存在",
+      "company_frequent_operation": "重复操作，请稍后再试",
+      "company_registry_closed": "商家未启用公司账号申请功能，请联系商家进行申请",
+      "confirm": "确定",
+      "confirm_button": "确定",
+      "continue_as_a_guest": "继续以访客身份访问",
+      "date_format": "yyyy-MM-dd",
+      "dec": "十二月",
+      "december": "十二月",
+      "edit": "编辑",
+      "email": "邮箱",
+      "email_empty_hint": "请输入邮箱",
+      "email_error_hint": "请输入正确格式的邮箱，50个字符以内",
+      "email_tip": "我们将向您发送用于重置密码的电子邮件",
+      "enter_verification_code": "请输入验证码",
+      "feb": "二月",
+      "february": "二月",
+      "first_day": "1",
+      "fr": "五",
+      "fri": "五",
+      "friday": "周五",
+      "image_size_less_than_tips": "图片大小要小于{{max}}mb",
+      "jan": "一月",
+      "january": "一月",
+      "jul": "七月",
+      "july": "七月",
+      "jun": "六月",
+      "june": "六月",
+      "login_method": "或者使用以下方式登录",
+      "mar": "三月",
+      "march": "三月",
+      "max_image_upload_tips": "最多上传{{max}}张",
+      "may": "五月",
+      "may_short": "五月",
+      "mo": "一",
+      "mon": "一",
+      "monday": "周一",
+      "network_error_message": "没有网络",
+      "new_email": "新邮箱",
+      "new_phone": "新手机",
+      "nov": "十一月",
+      "november": "十一月",
+      "oct": "十月",
+      "october": "十月",
+      "ok": "确定",
+      "okay_common": "确认",
+      "orders": "订单",
+      "password": "密码",
+      "password_empty_hint": "请输入密码",
+      "phone": "手机号",
+      "phone_empty_message": "请输入手机号",
+      "phone_error_message": "请输入正确格式的手机号",
+      "phone_number_error_message": "请输入正确的电话号码",
+      "phone_tip": "我们将向您发送用于重置密码的手机短信",
+      "proceed_to_checkout": "进行结算",
+      "register": "注册",
+      "repeat_passport_error": "两次输入的密码不一致",
+      "repeat_password": "重复密码",
+      "resend": "重新发送",
+      "sa": "六",
+      "sat": "六",
+      "saturday": "周六",
+      "save": "保存",
+      "select_date": "选择日期",
+      "send": "发送",
+      "send_error": "请先发送验证码",
+      "send_verification_code_hint": "请再次输入密码",
+      "sep": "九月",
+      "september": "九月",
+      "set_password": "请设置6-18位密码，支持输入大小写字母及数字",
+      "sign_in": "登录",
+      "sign_in_activate": "验证码已发送至您的帐户{{account}}， 验证后即可激活账户。",
+      "sign_in_activate_title": "账号激活",
+      "sign_out": "退出登录",
+      "sign_up": "注册",
+      "su": "日",
+      "subscription_desc": "可以获取店铺的最新活动消息",
+      "sun": "日",
+      "sunday": "周日",
+      "th": "四",
+      "thu": "四",
+      "thursday": "周四",
+      "time_format": "HH:mm",
+      "title": "页面标题",
+      "today": "今天",
+      "tu": "二",
+      "tue": "二",
+      "tuesday": "周二",
+      "update_passport": "修改密码",
+      "user_agreement_tip": "请先阅读并同意用户协议",
+      "username": "邮箱/手机号",
+      "username_empty_hint": "请输入邮箱或者手机号",
+      "verification_code": "验证码",
+      "verification_code_sent_tip": "验证码已发送到你的账号",
+      "verification_code_success": "验证码已发送至您的登录{{type}} <em>{{value}}</em>，请在下方输入验证码。",
+      "verift_account_tip": "请验证你的账号以重置密码",
+      "we": "三",
+      "wed": "三",
+      "wednesday": "周三"
+    },
+    "login": {
+      "member_login_common": "会员登录",
+      "subscribe_confirm_tip": "感谢您的订阅。您可以登录以获得更好的体验。"
+    },
+    "message": {
+      "format_error": "消息格式不支持",
+      "input_placeholder": "您有什么要留言的吗？",
+      "message": "消息",
+      "send": "发送"
+    },
+    "phone": {
+      "mobile_common": "手机"
+    },
+    "register": {
+      "go_to_login": "去登录",
+      "privacy_policy": "隐私政策",
+      "terms_of_service": "服务条款",
+      "tips_agree_with_the_shop": "我同意店铺的"
+    },
+    "subscribe": {
+      "email_has_bind": "此邮箱已绑定至其他账号",
+      "phone_has_bind": "此手机已绑定至其他账号"
+    },
+    "subscription": {
+      "email": "电子邮件",
+      "email_subscribe_error_tip": "此邮箱已绑定至其他账号",
+      "email_subscription_text": "通过电子邮件接收订阅的促销信息",
+      "line": "LINE",
+      "messenger": "Messenger",
+      "phone": "手机",
+      "phone_subscribe_error_tip": "此手机已绑定至其他账号",
+      "phone_subscription_text": "通过手机接收订阅的促销信息",
+      "reason_other_length": "最多输入300个字",
+      "reason_other_placeholder": "输入内容",
+      "save_button": "保存",
+      "subscribe_button": "订阅",
+      "subscription_cancel_text": "取消订阅",
+      "subscription_hint": "订阅成功",
+      "subscription_title": "订阅",
+      "unsubscribe": "取消订阅",
+      "unsubscribe_btn": "取消订阅",
+      "unsubscribe_confirm_text": "取消订阅",
+      "unsubscribe_feedback_text": "您将不再收到任何营销信息，之后可以随时订阅",
+      "unsubscribe_feedback_title": "已从邮件列表 <italic>{{name}}</italic> 中取消订阅",
+      "unsubscribe_reason1": "我不想接收此类邮件",
+      "unsubscribe_reason2": "我收到的邮件数量过多",
+      "unsubscribe_reason3": "我未订阅过此类邮件",
+      "unsubscribe_reason4": "邮件内容与我无关",
+      "unsubscribe_reason5": "邮件内容过长",
+      "unsubscribe_reason6": "其他",
+      "unsubscribe_subtitle": "我们对您的离开感到遗憾！请告知我们您取消订阅的原因：",
+      "unsubscribe_success": "订阅已取消，即将跳转至主页",
+      "unsubscribe_tip": "取消订阅后，您将不再收到最新促销信息。",
+      "unsubscribe_title": "取消订阅"
+    },
+    "unsubscribe": {
+      "content_placeholder": "请输入内容",
+      "goto_btn": "进入商店",
+      "notyet": "您还未订阅",
+      "notyet_desc": "您可以前往店铺进行订阅",
+      "success": "订阅已取消",
+      "success_tip": "您已经从{{storeName}}取消订阅"
+    }
+  },
+  "filters": {
+    "clear_all_filter": "全部删除",
+    "max_price": "最高价格为 {{ price }}",
+    "price": {
+      "label": "价格"
+    },
+    "product_count": "{{product_count}} 件产品",
+    "reset": "重置"
+  },
+  "footer": {
+    "subscribe": {
+      "error": "订阅失败"
+    }
+  },
+  "general": {
+    "404": {
+      "subtext": "您要查找的页面不存在。",
+      "title": "404页面不存在"
+    },
+    "abandon": {
+      "Order": {
+        "risk": "请求过于频繁"
+      }
+    },
+    "activate_account_discount": "激活账号并获取折扣码",
+    "address": {
+      "address": "地址"
+    },
+    "contact_us": {
+      "contact_us": "联络我们",
+      "send_success": "谢谢您联系我们，我们将尽快回复您。",
+      "success_feedback": "感谢您联系我们,我们会尽快回复您。"
+    },
+    "copy_button_text": "复制",
+    "copy_success_text": "链接已复制到粘贴板",
+    "footer": {
+      "copyright": "© {{year}} {{storeName}}",
+      "subscribe_format_error": "电子邮件地址格式错误",
+      "subscribe_success": "订阅成功"
+    },
+    "general": {
+      "accept": "接受",
+      "decline": "拒绝",
+      "email_tip": "无效的邮箱地址, 请重新输入",
+      "home": "首页",
+      "link": "隐私政策",
+      "loading": "加载中",
+      "more": "展开",
+      "no_data": "暂无可用数据",
+      "pack_up": "折叠",
+      "privacy_policy": "隐私政策",
+      "proofing_tip": "抱歉，您访问的店铺已打烊，<br/>请稍后重试",
+      "tel_phone": "电话号码",
+      "tips": "为了给您提供更好的体验，我们使用cookie去记录您的登陆状态，收集统计数据，为您提供感兴趣的内容。点击“接受”允许cookie的使用。或是查看我们的“隐私政策”。",
+      "title": "我们重视您的隐私",
+      "username": "姓名"
+    },
+    "handle_success": "操作成功",
+    "header": {
+      "cart": "购物车",
+      "center": "账号管理",
+      "close": "关闭",
+      "login": "登录",
+      "no_currency_fallback": "未找到相关货币",
+      "search_input_placeholder": "在此处输入并按搜索"
+    },
+    "order_tracking": {
+      "code": "验证码",
+      "email": "Email",
+      "form_error": "查询失败",
+      "orderId": "Order ID",
+      "orderId_error": "订单id不能为空",
+      "other_email": "邮箱",
+      "other_phone": "手机号",
+      "phone": "手机",
+      "query_illegal": "该订单不存在",
+      "risk_black_user": "此帐号存在风险",
+      "risk_interception": "该订单不存在",
+      "submit_btn": "查看订单",
+      "username": "Email/Phone Number"
+    },
+    "password": {
+      "back": "返回",
+      "entry_store": "进入商店",
+      "forget_password": "使用密码访问",
+      "goto_admin": "去登录",
+      "i_am_admin": "我是店主",
+      "input_password": "输入密码",
+      "log_in_here": "在此处登录",
+      "password_is_error": "密码错误，请重新输入",
+      "use_password_enter": "使用密码进入商店",
+      "you_are_admin": "您是否是店主？"
+    },
+    "policy": {
+      "service": "服务条款",
+      "shipping": "发货政策"
+    },
+    "search": {
+      "search": "在此处输入并按搜索",
+      "search_hint": "搜索“{{key}}”"
+    },
+    "select": {
+      "placeholder": "选择..."
+    },
+    "share_button_text": "分享"
+  },
+  "onboarding": {
+    "product_title": "产品标题示例"
+  },
+  "order": {
+    "buy_again": "再次购买",
+    "checkout_order": {
+      "pay_amount": "支付金额",
+      "receiver_account": "收款账户",
+      "reference_number": "流水号",
+      "upload_time": "上传时间",
+      "upload_voucher": "上传凭证",
+      "voucher_amount_limit": "最多支持上传5个凭证"
+    },
+    "detail": {
+      "dutyFee": "关税",
+      "orderstatus": {
+        "detail": "详细"
+      }
+    },
+    "fulfillment": {
+      "createTime": "配送时间:{{time}}"
+    },
+    "order_details": {
+      "adjust": "舍入",
+      "details": "订单详情",
+      "insuranceService": "保险服务",
+      "insuranceService_applyClaim": "申请索赔",
+      "insuranceService_content_line1_email": "1.保单已由{{serviceName}}发送到您的邮箱\"{{email}}\"。如果您没有收到保单邮件，请联系店铺客服。",
+      "insuranceService_content_line1_phone": "1.已通过{{serviceName}}购买了运输保障服务。如果您有其他疑问，请联系店铺客服。",
+      "insuranceService_content_line2": "2.如运送过程中出现损坏、遗失、延误等情况，您可以申请索赔。",
+      "order": "订单",
+      "products": {
+        "price": "价格",
+        "quantity": "数量"
+      },
+      "remark": "订单备注",
+      "tax_included": "包含{{price}}税费",
+      "time": "订购时间："
+    },
+    "order_list": {
+      "item_amount": "商品 ({{item}})",
+      "no_more_information": "无更多信息",
+      "no_record": "目前没有订单记录，请前去购物",
+      "package_amount": "Package {{num}}（{{item}} items）",
+      "total_amount": "总计 {{transPackages}} 个商品"
+    },
+    "order_status": {
+      "canceled": "已取消",
+      "click_to_track": "请点击以下链接跟踪您的包裹：",
+      "contact_us": "联系我们",
+      "help_tips": "需要帮助？请联系我们：{{email}}",
+      "payment_voucher_transfer_success": "汇款成功",
+      "payment_voucher_waiting_for_payment": "待付款",
+      "sequence": "编号 {{id}}",
+      "tracking": "追踪"
+    },
+    "payment": {
+      "authorized": "已授权",
+      "billing_address": "账单地址",
+      "detail": "详情",
+      "method": "付款方式",
+      "paid": "已付款",
+      "partially_paid": "部分付款",
+      "partially_refund": "部分退款",
+      "paying": "付款中",
+      "payment": "支付",
+      "payment_status": "支付状态",
+      "refund": "已退款",
+      "unpaid": "未支付"
+    },
+    "shipping": {
+      "information": "信息",
+      "no_information": "暂无送货信息，请稍后查询。",
+      "package_tracking": "包裹跟踪",
+      "partially_shipped": "部分发货",
+      "preparing_order": "备货中",
+      "processing_amount": "正在处理（{{num}} 项）",
+      "shipped_order": "已发货"
+    }
+  },
+  "products": {
+    "collection": {
+      "collection": "分类"
+    },
+    "filters": {
+      "clear": "清除",
+      "clear_all_filter": "全部删除",
+      "confirm": "确认",
+      "filter_and_sort": "筛选和排序",
+      "filter_button": "筛选",
+      "in_stock_only": "仅显示有货",
+      "less_than": "小于",
+      "max_price": "最高价格为 {{ price }}",
+      "more_than": "大于",
+      "price": {
+        "label": "价格"
+      },
+      "product_count": "{{product_count}} 件产品",
+      "reset": "重置",
+      "sort_button": "排序",
+      "stock": {
+        "label": "供货情况",
+        "value": "现货"
+      }
+    },
+    "general": {
+      "added_to_cart_successfully": "加购成功",
+      "load_more_btn": "加载更多项目",
+      "load_more_items": "加载 {{current_offset}} ~ {{last_current_offset}} / {{total}} 项目",
+      "loading_btn": "加载更多",
+      "no_product_data_found": "暂无当前商品数据，请稍后再试",
+      "sold_out": "已售罄",
+      "unavailable": "该商品不存在"
+    },
+    "giftcard": {
+      "balance": "面额",
+      "buy_giftcard": "购买一张礼品卡",
+      "description": "这是您在{{shop}}面额为{{price}}的礼品卡",
+      "expired_date": "失效时期",
+      "invalid_tip": "您的礼品卡不合法，请购买另外一个",
+      "permanent": "永久生效",
+      "receive_at": "失效时期",
+      "receive_tip": "请查收您的礼品卡",
+      "seoTitle": "您的 {{ shop }} 的礼品卡余额为 {{ value }}！",
+      "title": "您的礼品卡",
+      "use_giftcard": "使用礼品卡",
+      "use_giftcard_tip": "您可以在结账页面通过输入礼品卡卡号来使用"
+    },
+    "product_details": {
+      "activity_toast_price_limit": "此商品优惠价仅支持购买{{num}}件",
+      "activity_toast_product_limit": "最多可同时购买{{stock}}件优惠价商品",
+      "activity_toast_title_limit": "以下商品超过购买限制",
+      "amount": "数量",
+      "buy_more_save_more": "Buy More Save More!",
+      "cancel": "取消",
+      "copy_button_text": "复制",
+      "copy_success_text": "链接已复制到粘贴板",
+      "country_region": "国家/地区",
+      "default_placeholder": "请选择{{attrName}}",
+      "description": "描述",
+      "each_price": "{{price}}/每项",
+      "email": "邮箱",
+      "enter_email_address": "请填写邮箱",
+      "enter_valid_email_address": "请填写正确的邮箱",
+      "give_us_more_of_your_information": "你还可以留下更多信息，以便我们提供更适合你的服务",
+      "go_to_amazon_by_link": "去亚马逊购物",
+      "go_to_rakuten_by_link": "去乐天购物",
+      "go_to_yahoo_by_link": "去雅虎购物",
+      "in_stock": "有货",
+      "inventory_in_stock": "有货",
+      "inventory_in_stock_show_count": "库存：剩余 {{ quantity }}",
+      "inventory_low_stock": "低库存",
+      "inventory_low_stock_show_count": "低库存：剩余 {{ quantity }}",
+      "inventory_out_of_stock": "缺货",
+      "inventory_out_of_stock_continue_selling": "有货",
+      "inventory_quantity": "库存数",
+      "leave_us_message": "请填写留言",
+      "leave_us_message_get_back": "请留言你的咨询内容，我们将会尽快与你联系",
+      "link_preview_does_not_support": "预览链接不支持此操作",
+      "load_more": "展示更多",
+      "maximum_length_of_message": "留言长度不超过1500个字",
+      "message": "留言",
+      "moq_increment": "{{num}}的倍数",
+      "moq_increment_tips": "加购的数量仅支持{{num}}的倍数",
+      "moq_max_tips": "该规格最多可购买 {{num}}件",
+      "moq_maximum": "最多购买 {{num}}",
+      "moq_min_tips": "该规格必须购买 {{num}}以上",
+      "moq_minimum": "最小购买{{num}}",
+      "more_payment_options": "更多支付选项",
+      "name": "姓名",
+      "optional": "可选",
+      "phone_number": "电话号码",
+      "price": "价格",
+      "price_break_title": "批量定价",
+      "price_breaks_view_less": "收起",
+      "price_breaks_view_more": "查看更多",
+      "product_enquiry": "咨询商品",
+      "share_button_text": "分享",
+      "shipping_policy": "结账时计算<a href=\"{{ link }}\">运费</a>",
+      "submission_failed": "提交失败，请重试",
+      "submission_successfully": "提交成功",
+      "submit": "提交",
+      "table_each_price": "{{price}} 每项",
+      "table_each_price_ssr": "{{{priceDom}}} 每项",
+      "tax_included": "内含税费",
+      "taxes_included": "含税费",
+      "view_details": "查看细节",
+      "view_product_detail": "查看商品详情"
+    },
+    "product_list": {
+      "add_to_cart": "添加到购物车",
+      "filter": "筛选",
+      "filters_selected": "已选择{{count}}个",
+      "from_price": "{{price}} 起",
+      "infinite_btn_desc": "{{last_current_offset}} / {{total}} 项目",
+      "less": "更少标签",
+      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 项目",
+      "load_more_tip": "加载更多项目",
+      "more": "更多标签",
+      "more_product_num": "{{num}} 商品",
+      "new_arrivals": "最新上架",
+      "new_products": "创建时间新-旧",
+      "no_product": "分类下无商品",
+      "one_product_num": "{{num}} 商品",
+      "price_break_tag": "可批量定价",
+      "price_high_to_low": "价格从高到低",
+      "price_low_to_high": "价格从低到高",
+      "product_has_been_removed": "当前商品已下架",
+      "product_sold_out": "商品售罄",
+      "products": "商品",
+      "quick_shop": "快速购物",
+      "recommend": "推荐",
+      "sale": "热销",
+      "save": "优惠 {{{priceDom}}}",
+      "save_byjs": "优惠 {{priceDom}}",
+      "save_ratio": "优惠 {{price}}%",
+      "select_product_all_options": "选择的商品规格不完整或不可用，请重新选择",
+      "show": "显示",
+      "sort_button": "排序",
+      "top_sellers": "热销"
+    },
+    "product_search": {
+      "back_to_home": "返回首页",
+      "ount_results": "{{count}} 条记录",
+      "results_found_for": "找到 \"{{keyword}}\" 的 {{count}} 个记录",
+      "search": "搜索",
+      "search_no_results": "您搜索的 \"{{keyword}}\" 没有任何记录"
+    },
+    "recently_viewed_products": {
+      "recently_viewed_products": "最近浏览商品"
+    }
+  },
+  "reduction_code": {
+    "giftcard": "礼品卡"
+  },
+  "sales": {
+    "discount_coupon": {
+      "active_date_until": "有效期至: {{endTime}}",
+      "applied": "已应用",
+      "applied_successfully": "折扣码应用成功",
+      "apply": "应用",
+      "buy_x_get_y_all_discount_content": "减免{{discount}} 获得 {{benefitCount}} 件",
+      "buy_x_get_y_all_free_content": "免费获得{{benefitCount}}件",
+      "buy_x_get_y_discount_content": "减免 {{discount}}",
+      "buy_x_get_y_free_content": "免费",
+      "buy_x_get_y_threshold": "买 {{threshold}}，获得 {{benefitCount}} 件",
+      "coupon_content_level": "{{level}}可用",
+      "coupon_discount_content": "优惠{discount}",
+      "coupon_not_found": "折扣码不存在",
+      "failed_to_apply_coupon_code": "应用失败",
+      "free_shipping": "免运费",
+      "get_code": "获取折扣券",
+      "popup_label": "店铺优惠券：",
+      "shipping_rate_below": "运费低于{value}",
+      "specified_customer": "指定客户可用",
+      "threshold": "买{threshold}"
+    },
+    "flash": {
+      "day": "天",
+      "days": "天"
+    },
+    "general": {
+      "activity_banner_benefit": "减 {{benefit}}",
+      "activity_banner_copy_success_text": "折扣码复制成功",
+      "activity_banner_free_shipping": "免运费",
+      "activity_selector_new_arrivals": "最新上架",
+      "activity_selector_price_high_to_low": "价格从高到低",
+      "activity_selector_price_low_to_high": "价格从低到高",
+      "activity_selector_recommended": "推荐",
+      "apply_common": "应用",
+      "bundle_save_tip": "一起购买可节省 {{amount}}",
+      "bundle_title": "经常一起购买",
+      "common_buy_now": "立即购买",
+      "coupon_code_copied": "折扣码复制成功",
+      "coupon_code_copy": "复制",
+      "flash_sale_text": "FLASH SALE",
+      "flash_sale_tip": "限购数量：{{count}}件",
+      "hot_sale": "Hot sale!",
+      "product_tabs_benefit_amount_locked": "减免{{benefitAmount}}",
+      "product_tabs_benefit_amount_unlocked": "已解锁减免{{benefitAmount}}！",
+      "product_tabs_benefit_discount_locked": "减免{{offPercent}}%",
+      "product_tabs_benefit_discount_unlocked": "已解锁减免{{offPercent}}%！",
+      "product_tabs_benefit_free_locked": "免费商品",
+      "product_tabs_benefit_free_unlocked": "已解锁免费商品！",
+      "product_tabs_benefit_unlocked_tip": "您现在可以享受商品优惠",
+      "product_tabs_code_benefit_amount_unlocked": "以减免 {{benefitAmount}} 购买 {{benefitCount}}件",
+      "product_tabs_code_benefit_discount_unlocked": "以 {{offPercent}}% 的折扣购买 {{benefitCount}}件",
+      "product_tabs_code_benefit_free_unlocked": "免费获得{{benefitCount}}件",
+      "product_tabs_threshold": "购买{{threshold}}",
+      "purchase_limit": "活动商品限购 {{count}}件",
+      "purchase_limit_each_item": "每个款式限购 {{count}}件",
+      "purchase_limit_each_product": "每个活动商品限购 {{count}}件",
+      "select_promotional_product": "已选择{{selectCount}}件参加该活动的商品",
+      "sold": "{{count}} sold"
+    },
+    "gift": {
+      "got_all_gifts_tip": "恭喜！您已获得{{saved}}件赠品！",
+      "not_meet_amount_tip": "再购买{{threshold}}，最多可享{{willSave}}件赠品",
+      "not_meet_quantity_tip": "再购买{{threshold}}件商品，最多可享{{willSave}}件赠品",
+      "select": "选择",
+      "select_gift_tip": "恭喜！您可以选择{{willSave}}件赠品",
+      "spend_more_money_get_more_tip": "恭喜！已获得{{saved}}件赠品！再购买{{threshold}}，最多可享{{willSave}}件赠品",
+      "spend_more_quantity_get_more_tip": "恭喜！已获得{{saved}}件赠品！再购买{{threshold}}件商品，最多可享{{willSave}}件赠品"
+    },
+    "promotion": {
+      "discount_tag": {
+        "b11_t1_free": "买{{threshold}}件，其中一件享受免费",
+        "b11_t1_normal": "买{{threshold}}件，其中一件可减免{{save}}",
+        "b1_t0": "买{{threshold}}节省{{save}}",
+        "b1_t1": "买{{threshold}}件节省{{save}}",
+        "b2_t0": "买{{threshold}}节省{{save}}",
+        "b2_t1": "买{{threshold}}件节省{{save}}",
+        "label": "折扣："
+      }
+    }
+  },
+  "search": {
+    "count_results": "{{count}} 条记录",
+    "product_list": {
+      "title": "商品"
+    }
+  },
+  "trade": {
+    "order_summary": {
+      "rounding": "舍入"
+    },
+    "payments_name": {
+      "COD": "货到付款",
+      "MultiplePayment": "多渠道付款",
+      "Paypal": "Paypal",
+      "adjustPay": "manual",
+      "mpay": {
+        "alipay": "支付宝（推荐中国内地实名用户使用）",
+        "mpay": "MPay（推荐MPay用户使用）"
+      },
+      "third_part": "信用卡"
+    },
+    "reduction_code": {
+      "giftcard": "礼品卡"
+    }
+  },
+  "transaction": {
+    "contact": {
+      "discounts_stack_not": "限时折扣和优惠码活动互斥"
+    },
+    "couponCode": {
+      "freeShipping": {
+        "existCode": "免运费折扣码重复"
+      }
+    },
+    "discount": {
+      "code": {
+        "country_not_support": "支付 免邮优惠码-国家不匹配",
+        "logistics_fee_over_limit": "免邮优惠码-运费超过限制"
+      },
+      "code_error": "优惠码输入错误",
+      "code_item_unmatched": "{{discountCode}}输入正确，但商品价格或数量不符合要求",
+      "code_overdue": "优惠码已过期",
+      "code_user_exceedLimit": "用户使用该活动次数超过限制",
+      "code_user_notSupport": "用户不能使用该活动",
+      "coupon_code": "优惠码",
+      "coupon_invalid_for_the_shipping_method": "{{discountCode}} 优惠码不适用当前物流方式",
+      "discount_codes_cannot_stack": "商品已经存在一个优惠活动，不可与其他优惠叠加",
+      "use_coupon_alone": "这个优惠码不能与其他促销或优惠同时使用"
+    },
+    "general": {
+      "discount_off": "折扣",
+      "free_charge": "免邮费",
+      "free_shipping": "包邮",
+      "order_seller_discount": "商家自定义折扣",
+      "order_tax": "税费",
+      "order_tip": "小费",
+      "payment_subtotal_cost": "商品费用",
+      "point_discount": "积分折扣",
+      "shipping_fee": "运费",
+      "trade_coupon_discount": "优惠"
+    },
+    "item": {
+      "invalid_product": "失效商品",
+      "remove_invalid_product": "删除失效商品",
+      "removed": "已下架",
+      "sold_out": "售罄"
+    },
+    "lack_multilingualism": "*此语句加载失败，可联系客服反映情况*",
+    "notices": {
+      "insufficient_product_inventory": "商品库存不足",
+      "network": "网络异常",
+      "product_expired": "商品已失效",
+      "product_limit": "已超出商品限购数量"
+    },
+    "order": {
+      "deleted": "已删除",
+      "rebuy": "再次购买"
+    },
+    "payment": {
+      "continue_shopping": "继续购物",
+      "more": "更多",
+      "saved": "已节省",
+      "total": "共计"
+    },
+    "payment_disconut_channelinvalid_code": {
+      "tips": "此折扣码{{discountCode}}不适用于本次销售渠道"
+    },
+    "policy": {
+      "refund_policy": "退款政策"
+    },
+    "refund": {
+      "cost_points": "花费{{value}}积分",
+      "deduct_point": "你可以使用{{deductMemberPointNum}}积分抵扣{{deductMemberPointAmount}}"
+    }
+  },
+  "unvisiable": {
+    "applepay": {
+      "cancel": "取消",
+      "enquire": "继续使用Apple Pay完成支付吗？",
+      "paywith": "通过"
+    },
+    "customer": {
+      "error_message_1": "注册电子邮件以获取更新和独家优惠等信息",
+      "error_message_1001": "密码错误",
+      "error_message_1002": "用户不存在",
+      "error_message_1003": "您的账号因异常被禁用，请联系商家解禁处理",
+      "error_message_1004": "操作频繁，请稍后重试",
+      "error_message_1005": "验证码已过期",
+      "error_message_1006": "验证码错误",
+      "error_message_1007": "验证码操作频繁，请重新获取验证码",
+      "error_message_1008": "未配置第三方渠道登录",
+      "error_message_1009": "调用第三方接口失败",
+      "error_message_1010": "发送失败",
+      "error_message_1011": "账号未激活，请进行注册以完善密码等信息",
+      "error_message_1012": "服务异常",
+      "error_message_1013": "服务异常",
+      "error_message_1014": "校验验证码失败",
+      "error_message_1015": "请校验动态验证码",
+      "error_message_1016": "服务异常",
+      "error_message_1017": "我们无法完成您的登录请求，请确认您的账号状态",
+      "error_message_1018": "邮箱已绑定",
+      "error_message_1020": "登录超时",
+      "error_message_1021": "登录超时",
+      "error_message_1022": "账号已绑定",
+      "error_message_1023": "服务异常",
+      "error_message_1024": "服务异常",
+      "error_message_1035": "请发送验证码",
+      "error_message_2": "服务异常",
+      "error_message_2001": "手机号已注册",
+      "error_message_2002": "邮箱已注册",
+      "error_message_2003": "多次发送验证码",
+      "error_message_2004": "验证码已过期",
+      "error_message_2005": "验证码错误",
+      "error_message_2006": "验证码被多次使用，请使用另一个验证码",
+      "error_message_2007": "服务异常，稍后重试",
+      "error_message_2014": "账号有风险",
+      "error_message_2016": "账号有风险",
+      "error_message_2020": "系统繁忙，请稍后再试",
+      "error_message_3": "停留时间过长，请刷新页面",
+      "error_message_3001": "服务异常，稍后重试",
+      "error_message_3002": "未绑定手机/邮箱的用户尝试修改密码",
+      "error_message_3003": "多次发送验证码",
+      "error_message_3004": "验证码已过期",
+      "error_message_3005": "验证码错误",
+      "error_message_3006": "验证码被多次使用，请使用另一个验证码",
+      "error_message_3007": "手机号未注册",
+      "error_message_3008": "邮箱未注册",
+      "error_message_3009": "手机号已存在绑定",
+      "error_message_3010": "邮箱已存在绑定",
+      "error_message_3014": "短信/邮件模板渲染失败",
+      "error_message_3015": "该账号已激活",
+      "error_message_3021": "系统繁忙，请稍后再试",
+      "error_message_3022": "链接已失效",
+      "error_message_3023": "链接格式错误",
+      "error_message_3024": "链接参数错误",
+      "error_message_3026": "账号格式错误",
+      "error_message_3027": "密码不能与上一次相同",
+      "error_message_3029": "暂不支持手机号激活",
+      "error_message_4": "服务异常",
+      "error_message_5": "服务异常",
+      "error_message_6": "服务异常",
+      "error_message_7": "请设置6-18位密码，支持输入大小写字母及数字"
+    },
+    "editorSwitchCountryTip": "编辑器内暂不支持切换国家",
+    "shopby": {
+      "button": {
+        "show": "安全快捷"
+      }
+    }
+  }
+}

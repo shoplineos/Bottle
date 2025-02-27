@@ -1,0 +1,70 @@
+{
+  "name": "Footer Group",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {},
+      "blocks": {
+        "footer__information-group-1": {
+          "type": "$information-group",
+          "blocks": {
+            "footer__navigation-1": {
+              "type": "$navigation"
+            },
+            "footer__navigation-2": {
+              "type": "$navigation"
+            },
+            "footer__navigation-3": {
+              "type": "$navigation"
+            },
+            "footer__custom-text": {
+              "type": "$custom-text"
+            }
+          },
+          "block_order": ["footer__navigation-1", "footer__navigation-2", "footer__navigation-3", "footer__custom-text"]
+        },
+        "footer__contact-group": {
+          "type": "$contact-group",
+          "blocks": {
+            "footer__social-media": {
+              "type": "$social-media"
+            },
+            "footer__email-subscribe": {
+              "type": "$email-subscribe"
+            }
+          },
+          "block_order": ["footer__social-media", "footer__email-subscribe"]
+        },
+        "footer__additional-group": {
+          "type": "$additional-group",
+          "blocks": {
+            "footer__market-selector": {
+              "type": "$market-selector"
+            },
+            "footer__payment-icons": {
+              "type": "$payment-icons"
+            }
+          },
+          "block_order": ["footer__market-selector", "footer__payment-icons"]
+        },
+        "footer__information-group-2": {
+          "type": "$information-group",
+          "blocks": {
+            "footer__copyright": {
+              "type": "$copyright"
+            }
+          },
+          "block_order": ["footer__copyright"]
+        }
+      },
+      "block_order": [
+        "footer__information-group-1",
+        "footer__contact-group",
+        "footer__additional-group",
+        "footer__information-group-2"
+      ]
+    }
+  },
+  "order": ["footer"]
+}

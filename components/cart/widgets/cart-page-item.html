@@ -1,0 +1,9 @@
+
+
+<div class="cart-item" data-key="{{props.item.key}}">
+  {{#component "./cart-item-product" item=props.item widgets="image,title,options,properties,discount,total,quantity" /}}
+
+  <div class="cart-item__total-wrapper">
+    {{#component "./cart-item-total" item=props.item /}}
+  </div>
+</div>

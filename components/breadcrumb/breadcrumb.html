@@ -1,0 +1,6 @@
+{{#component "stylesheet" src="./breadcrumb.css" | asset_url() /}}
+
+<a class="breadcrumb {{props.class}}" href="{{props.href | default("javascript:;")}}">
+  {{#component "icons/arrow" class="breadcrumb__icon" /}}
+  <div class="breadcrumb__title body1">{{props.title}}</div>
+</a>

@@ -1,0 +1,87 @@
+{{#component "script" src="./card-address.js" | asset_url() /}}
+
+<theme-card-address class="card card-address">
+  <div class="body2 card__title">
+    <p class="card__title-text font-bold">{{"general.address.address" | t()}}</p>
+  </div>
+
+  <div class="card__detail">
+    {{#if customer.addresses | size() == 0}}
+      
+      <div class="card-address__empty">
+        {{#component "icons/location" class="icon-location" /}}
+
+        <p class="body4">{{"customer.address.no_address_data" | t()}}</p>
+
+        <a href="{{routes.account_address_new_url}}" class="button">
+          {{#component "icons/plus" class="icon-plus" /}}
+          <span>{{"customer.address.add_address" | t()}}</span>
+        </a>
+      </div>
+    {{#else/}}
+      
+      {{#if customer.addresses | size() >= 50}}
+        <p class="card-address__max">{{"customer.address.address_full_tip" | t()}}</p>
+      {{#else/}}
+        <a href="{{routes.account_address_new_url}}" class="body4">
+          {{#component "icons/plus" /}}
+          <span>{{"customer.address.add_address" | t()}}</span>
+        </a>
+      {{/if}}
+
+      <div class="card-address__list">
+        {{#for address in customer.addresses}}
+          <div class="card-address__list-item">
+
+            <div class="card-address__list-header">
+              <p class="card-address__list-title">
+                {{#if address.id == customer.default_address.id}}
+                  <span class="card-address__default">{{"customer.address.default" | t()}}</span>
+                {{/if}}
+
+                {{#var first_name_str = address.first_name | default("") /}}
+
+                {{#if first_name_str}}
+                  {{#if address.last_name}}
+                    {{#set first_name_str = address.first_name | prepend(", ") /}}
+                  {{/if}}
+                {{/if}}
+
+                <span class="body3 fw-bold">{{address.last_name}}{{first_name_str}}</span>
+              </p>
+
+              <div class="card-address__list-operations">
+                <a href="{{address.url}}">{{#component "icons/edit" /}}</a>
+
+                {{#customer_address_form
+                  address_seq=address.id
+                  return_to=routes.account_url
+                  id="address-form-" | append(address.id)
+                }}
+                  <button
+                    class="card-address__list-remove"
+                    type="button"
+                    data-form-id="{{`address-form-` | append(address.id)}}"
+                    data-confirm-message="{{`customer.address.delete_address` | t()}}"
+                  >
+                    {{#component "icons/delete" /}}
+                  </button>
+                {{/customer_address_form}}
+              </div>
+            </div>
+
+            <div class="body4 card-address__list-phone">{{address.phone}}</div>
+
+            <div class="body4 card-address__list-detail">
+              <div class="pay-info__content">
+                {{#capture addressHtml}}{{#format_address address /}}{{/capture}}
+                {{{addressHtml | replace("<br>" ,", ") | replace("<p>" ,"")| replace("</p>" ,"")}}}
+              </div>
+            </div>
+
+          </div>
+        {{/for}}
+      </div>
+    {{/if}}
+  </div>
+</theme-card-address>

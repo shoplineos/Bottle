@@ -1,0 +1,58 @@
+
+
+{{#component "script" src="./cart-fixed-checkout.js" | asset_url() /}}
+
+{{#var fixed_scene = "-fixed" | prepend(props.scene) /}}
+
+<theme-cart-fixed-checkout class="cart-fixed-checkout
+    color-{{settings.cart_color_scheme.id}}
+    {{props.class_name}}
+    {{#if cart.total_discount | to_float() > 0}}cart-fixed-checkout--collapsed{{/if}}">
+  <div class="cart-fixed-checkout__container">
+
+    {{#if cart.total_discount | to_float() > 0}}
+    <div class="cart-fixed-checkout__inner">
+      <div class="cart-fixed-checkout__dropdown">
+        <span>
+          {{#component "icons/dropdown" /}}
+        </span>
+      </div>
+
+      <div class="cart-fixed-checkout__sub-info">
+        {{#component "./cart-amount" show_total=false /}}
+
+        {{#component "./cart-taxes" /}}
+      </div>
+    </div>
+    {{/if}}
+
+    <div class="cart-fixed-checkout__main-info">
+      <div class="cart-fixed-checkout__total">
+        <b class="body3 cart-fixed-checkout__total-text">{{"cart.payment.total_sum" | t()}}</b>
+
+        <div class="cart-fixed-checkout__total-amount">
+          {{#if cart.total_discount | to_float() > 0}}
+          <div class="cart-fixed-checkout__total-saved">
+            <span class="body3">{{"transaction.payment.saved" | t()}} {{{cart.total_discount |
+              money_with_currency()}}}</span>
+          </div>
+          {{/if}}
+
+          <div class="cart-fixed-checkout__total-price">
+            <span class="body2">{{{cart.total_price | money_with_currency()}}}</span>
+          </div>
+
+          {{#if cart.total_discount | to_float() > 0}}
+          <span class="cart-fixed-checkout__arrow">
+            {{#component "icons/arrow-thin" /}}
+          </span>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="cart-fixed-checkout__buttons">
+        {{#component "./cart-checkout" scene=fixed_scene /}}
+      </div>
+    </div>
+  </div>
+</theme-cart-fixed-checkout>

@@ -1,0 +1,16 @@
+<div class="main-article__share" {{{block.shopline_attributes}}}>
+  {{#var share_url = request.origin | append(article.url) /}}
+  {{#component "share-button/share-button" href=share_url /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_article.blocks.share.name",
+  "tag": "",
+  "presets": [
+    {
+      "name": "t:sections.main_article.blocks.share.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

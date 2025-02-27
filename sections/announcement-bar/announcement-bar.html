@@ -1,0 +1,187 @@
+{{#component "stylesheet" src="./announcement-bar.css" | asset_url() /}}
+
+{{#if section.settings.sticky_mode != "none"}}
+  {{#component "script" src="./announcement-bar-sticky.js" | asset_url() /}}
+{{/if}}
+
+{{#if section.settings.display_mode != "tiled"}}
+  {{#component "stylesheet" src="components/carousel/index.css" | asset_url() /}}
+  {{#component "script" src="components/carousel/index.js" | asset_url() /}}
+  {{#component "script" src="./announcement-bar-carousel.js" | asset_url() /}}
+{{/if}}
+
+
+{{#if section.settings.sticky_mode != "none"}}
+  <theme-announcement-bar-sticky data-sticky-mode="{{section.settings.sticky_mode}}">
+{{/if}}
+
+{{#if section.settings.display_mode == "tiled"}}
+  
+  <div class="announcement-bar__group announcement-bar__group-{{section.settings.display_mode}}">
+    {{#blocks}}
+      {{#block section_settings=section.settings /}}
+    {{/blocks}}
+  </div>
+{{#else/}}
+  <theme-announcement-bar-carousel class="{{#if section.settings.display_mode == "vertical"}}announcement-bar__carousel-vertical{{/if}}">
+    
+    {{#if section.settings.display_mode == "vertical"}}
+      <div class="announcement-bar__carousel-wrapper announcement-bar__carousel-vertical-fake">
+        <div class="carousel__track announcement-bar__group announcement-bar__group-horizontal">
+          {{#blocks}}
+            {{#block section_settings=section.settings /}}
+          {{/blocks}}
+        </div>
+      </div>
+    {{/if}}
+
+    {{#var is_autoplay = true /}}
+
+    {{#if section.settings.display_mode == "manual"}}
+      {{#set is_autoplay = false /}}
+    {{/if}}
+
+    {{#var direction = "horizontal" /}}
+
+    {{#if section.settings.display_mode == "vertical"}}
+      {{#set direction = "vertical" /}}
+    {{/if}}
+
+    <theme-carousel
+      data-direction="{{direction}}"
+      data-loop="true"
+      data-autoplay="{{is_autoplay}}"
+      data-autoplay-speed="{{section.settings.interval}}"
+    >
+      <div class="announcement-bar__carousel-wrapper">
+
+        <div class="carousel__track announcement-bar__group announcement-bar__group-{{section.settings.display_mode}}">
+          {{#blocks}}
+            {{#block section_settings=section.settings /}}
+          {{/blocks}}
+        </div>
+
+        {{#if section.settings.display_mode == "manual" && section.blocks_size > 1}}
+        <div class="page-width announcement-bar__button-wrapper">
+          <button class="announcement-bar__button" name="previous">
+            {{#component "icons/arrow-thin" /}}
+          </button>
+          <button class="announcement-bar__button" name="next">
+            {{#component "icons/arrow-thin" /}}
+          </button>
+        </div>
+        {{/if}}
+
+      </div>
+    </theme-carousel>
+  </theme-announcement-bar-carousel>
+
+{{/if}}
+
+{{#if section.settings.sticky_mode != "none"}}
+  </theme-announcement-bar-sticky>
+{{/if}}
+
+
+{{#schema}}
+{
+  "name": "t:sections.announcement_bar.name",
+  "icon": "announcementBar",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "id": "sticky_mode",
+      "type": "select",
+      "label": "t:sections.announcement_bar.settings.sticky_mode.label",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.announcement_bar.settings.sticky_mode.options_0.label"
+        },
+        {
+          "value": "always",
+          "label": "t:sections.announcement_bar.settings.sticky_mode.options_1.label"
+        },
+        {
+          "value": "desktop",
+          "label": "t:sections.announcement_bar.settings.sticky_mode.options_2.label"
+        },
+        {
+          "value": "mobile",
+          "label": "t:sections.announcement_bar.settings.sticky_mode.options_3.label"
+        }
+      ]
+    },
+    {
+      "id": "display_mode",
+      "type": "select",
+      "label": "t:sections.announcement_bar.settings.display_mode.label",
+      "default": "manual",
+      "options": [
+        {
+          "value": "tiled",
+          "label": "t:sections.announcement_bar.settings.display_mode.options_0.label"
+        },
+        {
+          "value": "compact",
+          "label": "t:sections.announcement_bar.settings.display_mode.options_1.label"
+        },
+        {
+          "value": "horizontal",
+          "label": "t:sections.announcement_bar.settings.display_mode.options_2.label"
+        },
+        {
+          "value": "vertical",
+          "label": "t:sections.announcement_bar.settings.display_mode.options_3.label"
+        },
+        {
+          "value": "manual",
+          "label": "t:sections.announcement_bar.settings.display_mode.options_4.label"
+        }
+      ]
+    },
+    {
+      "id": "interval",
+      "type": "range",
+      "max": 10,
+      "min": 3,
+      "step": 1,
+      "label": "t:sections.announcement_bar.settings.interval.label",
+      "unit": "s",
+      "default": 5
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.announcement_bar.settings.spacing.label",
+      "default": {
+        "padding-top": "10px",
+        "padding-right": "30px",
+        "padding-bottom": "10px",
+        "padding-left": "30px",
+        "@media (--mobile)": {
+          "padding-top": "6px",
+          "padding-right": "10px",
+          "padding-bottom": "6px",
+          "padding-left": "10px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.announcement_bar.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$item"
+    }
+  ]
+}
+{{/schema}}

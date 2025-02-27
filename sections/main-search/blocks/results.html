@@ -1,0 +1,174 @@
+{{#component "stylesheet" src="./results.css" | asset_url() /}}
+
+{{#var section = props.section /}}
+
+{{#var search_result_paginate = search | get_search_pagination(block.settings.page_size) /}}
+
+<div
+  class="
+    main-search__results
+    facets-layout-{{block.settings.filter_layout}}
+  "
+  {{{block.shopline_attributes}}}
+>
+  {{#if (search_result_paginate.list | size()) > 0}}
+    {{#component
+      "facets/form"
+      section=section
+      results=search
+      enable_filtering=block.settings.enable_filtering
+      enable_sorting=block.settings.enable_sorting
+      filter_layout=block.settings.filter_layout
+    /}}
+  {{/if}}
+  <div class="main-search__results-wrapper" id="ResultsContainer">
+    <ul
+      class="main-search__results grid"
+      style="
+        --mobile-columns: {{block.settings.mobile_columns}};
+        --desktop-columns: {{block.settings.desktop_columns}};
+      "
+    >
+      {{#blocks}}
+        {{#for item in search_result_paginate.list}}
+          {{~#switch item.object_type}}
+            {{#case "product" /}}
+              {{#if forblock.type == "product-list/card"}}
+                <li>{{#block product=item /}}</li>
+              {{/if}}
+
+            {{#case "article" /}}
+              {{#if forblock.type == "article/card"}}
+                <li>{{#block article=item /}}</li>
+              {{/if}}
+
+            {{#case "collection" /}}
+              {{#if forblock.type == "collection/card"}}
+                <li>{{#block collection=item /}}</li>
+              {{/if}}
+
+            {{#case "page" /}}
+              {{#if forblock.type == "$page-card"}}
+                <li>{{#block page=item /}}</li>
+              {{/if}}
+
+          {{~/switch}}
+        {{/for}}
+      {{/blocks}}
+    </ul>
+
+    {{#component "pagination/pagination" paginate=search_result_paginate /}}
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_search.blocks.results.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "t:sections.main_search.blocks.results.settings.page_size.label",
+      "default": 16,
+      "min": 16,
+      "max": 48,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "label": "t:sections.main_search.blocks.results.settings.desktop_columns.label",
+      "default": 4,
+      "min": 1,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "select",
+      "id": "mobile_columns",
+      "label": "t:sections.main_search.blocks.results.settings.mobile_columns.label",
+      "default": 2,
+      "options": [
+        {
+          "value": 1,
+          "label": "t:sections.main_search.blocks.results.settings.mobile_columns.options_0.label"
+        },
+        {
+          "value": 2,
+          "label": "t:sections.main_search.blocks.results.settings.mobile_columns.options_1.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "filter_layout",
+      "label": "t:sections.main_search.blocks.results.settings.filter_layout.label",
+      "default": "horizontal",
+      "options": [
+        {
+          "value": "drawer",
+          "label": "t:sections.main_search.blocks.results.settings.filter_layout.options_0.label"
+        },
+        {
+          "value": "horizontal",
+          "label": "t:sections.main_search.blocks.results.settings.filter_layout.options_1.label"
+        },
+        {
+          "value": "vertical",
+          "label": "t:sections.main_search.blocks.results.settings.filter_layout.options_2.label"
+        }
+      ]
+    },
+    {
+      "type": "switch",
+      "id": "enable_filtering",
+      "label": "t:sections.main_search.blocks.results.settings.enable_filtering.label",
+      "default": true
+    },
+    {
+      "type": "switch",
+      "id": "enable_sorting",
+      "label": "t:sections.main_search.blocks.results.settings.enable_sorting.label",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product-list/card",
+      "limit": 1
+    },
+    {
+      "type": "article/card",
+      "limit": 1
+    },
+    {
+      "type": "collection/card",
+      "limit": 1
+    },
+    {
+      "type": "$page-card",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main_search.blocks.results.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "product-list/card"
+        },
+        {
+          "type": "article/card"
+        },
+        {
+          "type": "collection/card"
+        },
+        {
+          "type": "$page-card"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

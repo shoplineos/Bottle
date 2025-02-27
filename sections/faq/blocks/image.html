@@ -1,0 +1,58 @@
+{{#var image = block.settings.image /}}
+
+<div class="faq-image{{#if block.settings.image_height != "fit_to_image"}} {{block.settings.image_height}}{{/if}}" style="--aspect-ratio: {{block.settings.image_aspect_ratio}};" {{{block.shopline_attributes}}}>
+  {{#if image}}
+    {{#component "image" sizes="100%" data=image /}}
+  {{#else/}}
+    {{#placeholder_svg "image" /}}
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.faq.blocks.image.name",
+  "icon": "image",
+  "tag": "",
+  "settings": [
+    {
+      "type": "image",
+      "id": "image",
+      "label": "t:sections.faq.blocks.image.settings.image.label",
+      "default": {}
+    },
+    {
+      "type": "select",
+      "label": "t:sections.faq.blocks.image.settings.image_aspect_ratio.label",
+      "id": "image_aspect_ratio",
+      "default": "unset",
+      "options": [
+        {
+          "value": "unset",
+          "label": "t:sections.faq.blocks.image.settings.image_aspect_ratio.options_0.label"
+        },
+        {
+          "value": "1/1",
+          "label": "t:sections.faq.blocks.image.settings.image_aspect_ratio.options_1.label"
+        },
+        {
+          "value": "4/3",
+          "label": "t:sections.faq.blocks.image.settings.image_aspect_ratio.options_2.label"
+        },
+        {
+          "value": "3/2",
+          "label": "t:sections.faq.blocks.image.settings.image_aspect_ratio.options_3.label"
+        },
+        {
+          "value": "16/9",
+          "label": "t:sections.faq.blocks.image.settings.image_aspect_ratio.options_4.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.faq.blocks.image.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

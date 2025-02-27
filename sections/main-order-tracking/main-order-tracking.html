@@ -1,0 +1,101 @@
+{{#component "stylesheet" src="./main-order-tracking.css" | asset_url() /}}
+{{#component "script" src="./main-order-tracking.js" | asset_url() /}}
+
+<div class="main-order-tracking {{section.settings | class_list()}} color-{{section.settings.color_scheme.id}}">
+  <div class="main-order-tracking__wrapper">
+    <div class="title5 text-center main-order-tracking__title">
+      {{section.settings.title}}
+    </div>
+    <theme-order-tracking>
+      {{#order_tracking_form}}
+        <div class="text-center main-order-tracking__tabs">
+          <span class="body3 active" data-type="email">
+            {{"general.order_tracking.email" | t()}}
+          </span>
+          <span class="body3" data-type="phone">
+            {{"general.order_tracking.phone" | t()}}
+          </span>
+        </div>
+
+        <div class="main-order-tracking__panes">
+          <div data-type="email">
+            {{#component
+              "input/input-email"
+              input_class="field__input"
+              input_name="order_tracking[email]"
+              input_required=true
+              input_placeholder="general.order_tracking.other_email" | t()
+            /}}
+          </div>
+
+          <div class="hidden" data-type="phone">
+            {{#component
+              "input/input-phone"
+              all_country_dialing_code=all_country_dialing_code
+              input_name="order_tracking[phone]"
+              code_name="order_tracking[phone_area_code]"
+              input_required=true
+              input_disabled=true
+              country_iso_code=localization.country.iso_code
+            /}}
+          </div>
+
+          <p class="body6 error-message" id="account-error-message"></p>
+
+          <label class="field" id="order_number_field">
+            <input type="text" class="field__input" id="order_number" name="order_tracking[order_number]" required placeholder="{{`general.order_tracking.orderId` | t()}}" />
+            <span for="order_number" class="field__label body3">
+              {{"general.order_tracking.orderId" | t()}}
+            </span>
+          </label>
+
+          <p class="body6 error-message" id="order-error-message"></p>
+
+          <button class="button main-order-tracking__submit" type="submit">
+            {{section.settings.btn_text | default("View Order", allow_empty_str=false)}}
+            {{#component "icons/loading-spinner" /}}
+          </button>
+        </div>
+      {{/order_tracking_form}}
+    </theme-order-tracking>
+  </div>
+</div>
+{{#schema}}
+{
+  "name": "t:sections.main_order_tracking.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.main_order_tracking.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.main_order_tracking.settings.spacing.label",
+      "default": {
+        "padding-top": "80px",
+        "padding-bottom": "80px",
+        "@media (--mobile)": {
+          "padding-top": "40px",
+          "padding-bottom": "40px"
+        }
+      }
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.main_order_tracking.settings.title.label",
+      "default": "Order Tracking"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "t:sections.main_order_tracking.settings.btn_text.label",
+      "default": "View Order"
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,25 @@
+{{#if props.collection.title}}
+  <div class="body3 body-font-bold block-collection-card__title {{ block.settings | class_list() }}" {{{block.shopline_attributes}}}>
+    {{props.collection.title}}
+  </div>
+{{/if}}
+
+{{#schema}}
+{
+  "name": "t:blocks.collection.title.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:blocks.collection.title.settings.size.label",
+      "default": {}
+    }
+  ],
+  "preset": [
+    {
+      "name": "分类名称"
+    }
+  ]
+}
+{{/schema}}

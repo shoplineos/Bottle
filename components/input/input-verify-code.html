@@ -1,0 +1,31 @@
+
+
+{{#component "script" src="./input-verify-code.js" | asset_url() /}}
+
+<theme-input-verify-code data-total-countdown="{{props.total_countdown}}" class="field{{#if props.class}} {{props.class}}{{/if}}">
+  <label class="field__inner">
+    <input
+      type="text"
+      class="field__input"
+      name="{{props.input_name}}"
+      autocomplete="off"
+      {{#if props.input_required}}required{{/if}}
+      {{#if props.input_disabled}}disabled{{/if}}
+      placeholder="{{#if props.input_placeholder}}{{props.input_placeholder}}{{#else/}}{{"customer.general.verification_code" | t()}}{{/if}}"
+    />
+
+    <span class="field__label">
+      {{#if props.input_placeholder}}
+        {{props.input_placeholder}}
+      {{#else/}}
+        {{"customer.general.verification_code" | t()}}
+      {{/if}}
+    </span>
+  </label>
+
+  <div class="field__suffix input-verify-code">
+    <button class="button button--link input-verify-code__button" id="{{props.button_id}}" type="button">
+      {{"customer.general.send" | t()}}
+    </button>
+  </div>
+</theme-input-verify-code>

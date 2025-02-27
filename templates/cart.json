@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main-cart-items": {
+      "type": "main-cart-items"
+    },
+    "main-cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "$subtotal"
+        },
+        "buttons": {
+          "type": "$buttons"
+        }
+      },
+      "block_order": ["subtotal", "buttons"]
+    }
+  },
+  "order": ["main-cart-items", "main-cart-footer"]
+}

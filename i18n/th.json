@@ -1,0 +1,1178 @@
+{
+  "blog": {
+    "blog": {
+      "next": "ต่อไป",
+      "previous": "ก่อนหน้า",
+      "read_more": "ดูเพิ่มเติม",
+      "related_articles": "บล็อกที่เกี่ยวข้อง"
+    },
+    "blog_list": {
+      "empty_description": "ไม่มีการโพสต์บทความในบล็อกนี้",
+      "readmore": "อ่านเพิ่มเติม",
+      "title": "บล็อก",
+      "view_more": "ดูเพิ่มเติม"
+    },
+    "comment": {
+      "comment": "ความคิดเห็น",
+      "comment_audit_tip": "ความคิดเห็นของคุณถูกส่งไปแล้วและจำเป็นต้องได้รับการตรวจสอบ",
+      "comment_empty": "กรุณากรอกความคิดเห็น",
+      "email": "ไปรษณีย์",
+      "email_empty": "อีเมลต้องไม่ว่างเปล่า",
+      "email_format": "กรุณากรอกอีเมลที่ถูกต้อง",
+      "form_title": "ความคิดเห็น",
+      "loadmore": "โหลดเพิ่ม",
+      "moderated_tip": "โปรดทราบ ความคิดเห็นต้องได้รับการอนุมัติก่อนจึงจะสามารถโพสต์ได้",
+      "name": "ชื่อ",
+      "name_empty": "กรุณากรอกชื่อ",
+      "post_comment": "ส่งความคิดเห็น",
+      "single_count": "{{count}} ความคิดเห็น",
+      "submit": "ส่ง",
+      "submit_audit_tip": "ส่งเรียบร้อยแล้ว รอการตรวจสอบ",
+      "success": "ส่งเรียบร้อยแล้ว",
+      "title": "{{comment_length}} ความคิดเห็น"
+    },
+    "general": {
+      "back": "กลับไปที่บล็อก",
+      "back_to": "กลับไปที่ {{collectionTitle}}"
+    }
+  },
+  "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "จำนวนขั้นต่ำสำหรับผลิตภัณฑ์นี้คือ {{num}} ชิ้น"
+        },
+        "most": {
+          "desc": "จำนวนการขายส่งสูงสุดสำหรับสินค้านี้คือ {{num}} ชิ้น"
+        },
+        "noIncrement": {
+          "desc": "รายการนี้จะต้องเพิ่มทีละ {{num}} ชิ้น"
+        }
+      }
+    },
+    "cart": {
+      "added_to_cart": "เพิ่มลงตะกร้าแล้ว",
+      "buy_now": "ซื้อตอนนี้",
+      "cancel": "ยกเลิก",
+      "cart_subtotal": "จำนวนเงินทั้งหมดในตะกร้า",
+      "cart_view": "ตรวจสอบตะกร้าสินค้า",
+      "confirm": "ตกลง",
+      "got_it": "รับทราบ"
+    },
+    "cart_error": "เกิดข้อผิดพลาดในการอัปเดตตะกร้าสินค้า กรุณาลองอีกครั้ง",
+    "cart_quantity_error": "คุณสามารถเพิ่มสินค้าได้เพียง {{quantity}} รายการในตะกร้าสินค้าของคุณ",
+    "checkout": {
+      "max_amount_limit": "คุณชำระเงินเกินจำนวนสูงสุดที่กำหนดไว้"
+    },
+    "checkout_proceeding": {
+      "checkout": "ชำระเงิน",
+      "checkout_proceed": "รายการสินค้าต่อไปนี้เกินขีดจำกัดการซื้อ คุณยังคงดำเนินการชำระเงินหรือไม่?",
+      "continue": "ดำเนินการต่อ",
+      "continue_shopping": "ดำเนินการซื้อสินค้าต่อ",
+      "day": "วัน",
+      "remove": "ลบออก",
+      "return_to_cart": "กลับไปที่ตะกร้าสินค้า",
+      "subtotal": "ยอดรวม",
+      "tax_included": "รวมภาษี"
+    },
+    "couponCode": {
+      "exceedLimit": "รหัสส่วนลดเกินจำนวนจำกัด",
+      "existCode": "รหัสส่วนลดมีอยู่แล้ว",
+      "list": {
+        "unavailable": "โค้ดส่วนลดทั้งหมดหมดอายุแล้ว"
+      },
+      "notSupport": {
+        "stacked": "รหัสส่วนลดไม่สามารถวางซ้อนกันได้"
+      },
+      "unavailable": "โค้ดส่วนลดหมดอายุ"
+    },
+    "discount": {
+      "coupon_code_amount": "รหัสคูปองส่วนลด",
+      "coupon_code_length_limit": "รหัสคูปองต้องไม่เกิน {{range}} ตัวอักษร",
+      "expected_discount": "ส่วนลดโดยประมาณ"
+    },
+    "discount_item": {
+      "buy_limit5": "คุณสามารถซื้อสินค้าลดราคาได้สูงสุด {{stock}} ชิ้นในเวลาเดียวกัน"
+    },
+    "discount_price": {
+      "buy_limit1": "เหลือเพียง {{stock}} ชิ้น สำหรับราคาส่วนลดนี้",
+      "buy_limit2": "คุณสามารถซื้อสินค้าลดราคาได้สูงสุด {{stock}} ชิ้นในเวลาเดียวกัน",
+      "buy_limit3": "คุณสามารถซื้อสินค้านี้ในราคาส่วนลดได้เพียง {{stock}} ชิ้นเท่านั้น"
+    },
+    "error": {
+      "default": "โหลดทรัพยากรไม่สำเร็จ",
+      "noshipping": "ไม่มีแผนการจัดส่งที่ให้เลือกได้",
+      "order": "ขอทำคำสั่งซื้อล้มเหลว",
+      "renew": "อัปเดตข้อมูลไม่สำเร็จ"
+    },
+    "general": {
+      "continue_as_a_guest": "เยี่ยมชมในฐานะแขกต่อไป",
+      "support_oneTime_purchase_only": "สินค้ารองรับการซื้อเพียงครั้งเดียวเท่านั้น",
+      "support_subscription_only": "สินค้ารองรับการซื้อแบบสมัครสมาชิกเท่านั้น"
+    },
+    "item": {
+      "add_limit2": "คุณสามารถเพิ่มได้สูงสุด 99999 รายการในตะกร้าสินค้า",
+      "click_to_view": "คลิกเพื่อดู",
+      "custom_preview": "ตัวอย่างแบบกำหนดเอง",
+      "empty_cart": "ไม่มีสินค้าในตะกร้าสินค้าของคุณขณะนี้",
+      "item_left": "เหลือเพียง {{stock}} รายการเท่านั้น",
+      "market": {
+        "illegal": {
+          "excludedState": "สินค้าในตลาดผิดกฎหมาย สินค้านั้นถูกแยกออกจากตลาด"
+        }
+      },
+      "none_existent": "ไม่มีสินค้า"
+    },
+    "next_step": {
+      "calculated_taxes_fees": "ภาษีและค่าธรรมเนียมการจัดส่งจะถูกคำนวณในขั้นตอนการชำระเงิน",
+      "included_taxes_fees": "รวมภาษีและค่าจัดส่งคำนวณเมื่อชำระเงิน",
+      "taxes_included_and_shipping_at_checkout": "ภาษีและค่าขนส่งที่คำนวณเมื่อชำระเงิน",
+      "taxes_included_and_shipping_policy": "รวมภาษีแล้ว คำนวณ <a href=\"{{link}}\">ค่าขนส่ง</a> ตอนชำระเงิน",
+      "taxes_not_included_and_shipping_policy_at_checkout": "ภาษีและ <a href=\"{{ link }}\">ค่าขนส่ง</a> คำนวณเมื่อชำระเงิน"
+    },
+    "notices": {
+      "change_password_after_verification": "คุณสามารถเปลี่ยนรหัสผ่านได้หลังจากยืนยันตัวตนแล้ว",
+      "excess_product": "สินค้าต่อไปนี้เกินขีดจำกัดการซื้อ โปรดแก้ไขจำนวน",
+      "product_amount_limit": "ขออภัย! จำนวนสินค้าในตะกร้าเกินจำนวนจำกัด",
+      "product_selected_invalid": "ขออภัย สินค้าที่คุณเลือกไม่สามารถซื้อได้ โปรดเลือกอีกครั้ง",
+      "store_nonexistent": "ไม่มีร้านค้า"
+    },
+    "order": {
+      "invalid_order_number": "หมายเลขคำสั่งซื้อที่ไม่ถูกต้อง",
+      "paymentVoucher": {
+        "downloadDoc": "ดาวน์โหลดเอกสาร",
+        "format": "รูปแบบ",
+        "formatLimit": "รองรับการอัปโหลดไฟล์ JPG, PNG, GIF, PDF ภายใน 20MB สามารถอัปโหลดภาพได้สูงสุด 5 ภาพ",
+        "uploadAmount": "อัปโหลดใบสำคัญแล้ว {{num}} ใบ",
+        "uploadLimit": "โปรดอัปโหลดไฟล์ JPG, PNG, GIF, PDF ภายใน 20MB"
+      },
+      "payment_voucher_confirmation": "เข้าใจแล้ว",
+      "shipping_address": "ที่อยู่สำหรับการจัดส่ง",
+      "sign_in": "หรือเข้าสู่ระบบด้วยวิธีต่อไปนี้",
+      "tax_included": "รวมภาษี {{price}} แล้ว",
+      "try_again": "การอัพโหลดล้มเหลว. กรุณาลองอีกครั้ง.",
+      "try_later": "ระบบไม่ว่าง โปรดลองอีกครั้งในภายหลัง",
+      "upload_bank_transfer_vouhcer_for_confirmation": "โปรดอัปโหลดบัตรกำนัลการโอนเงินผ่านธนาคารและเราจะทำการยืนยัน",
+      "upload_image_within_10_m_b": "โปรดอัปโหลดรูปภาพ JPG, PNG, GIF ภายใน 10MB"
+    },
+    "payment": {
+      "channel": "ช่องทางการชำระเงิน",
+      "create_time": "สร้างขึ้นเมื่อ",
+      "free": "ฟรี",
+      "log_in": "ไปที่การเข้าสู่ระบบ",
+      "payment_details": "รายละเอียดการชำระเงิน",
+      "pending_review": "กำลังชำระเงิน",
+      "reference_number": "หมายเลขอ้างอิงการชำระเงิน",
+      "status": "สถานะ",
+      "subtotal_price": "ยอดรวม",
+      "sum": "จำนวนเงิน",
+      "total_sum": "ยอดรวมทั้งสิ้น",
+      "update_time": "อัปเดตเมื่อ"
+    },
+    "policy": {
+      "privacy_policy": "นโยบายความเป็นส่วนตัว"
+    },
+    "product": {
+      "unavailable_sale": "สินค้านี้ไม่รองรับการขายออนไลน์"
+    },
+    "promotion": {
+      "no_promotion": "ไม่เข้าร่วมรายการโปรโมชัน"
+    },
+    "shpping": {
+      "service_terms": "เงื่อนไขการให้บริการ"
+    },
+    "stock": {
+      "limit": "สินค้าเหลือเพียง {{stock}} ชิ้น"
+    },
+    "subscription": {
+      "information": "สมัครสมาชิก"
+    },
+    "tips": {
+      "agree_with_the_shop": "ฉันยอมรับ",
+      "change_binding_after_verification": "คุณสามารถเชื่อมต่อ/เปลี่ยนแปลง {{value}} ได้หลังจากการยืนยันตัวตน",
+      "forget_password": "ลืมรหัสผ่าน",
+      "proceed_to_checkout": "ดำเนินการชำระเงิน",
+      "reset_password": "คุณกำลังตั้งค่ารหัสผ่านใหม่สำหรับบัญชี {{account}}"
+    }
+  },
+  "customer": {
+    "account": {
+      "account_binding": "การผูกบัญชี",
+      "account_information": "บัญชี",
+      "address": "ที่อยู่",
+      "bind": "การผูก",
+      "birthday": "วันเกิด",
+      "change_password": "เปลี่ยนรหัสผ่าน",
+      "confirm_btn": "ยืนยัน",
+      "confirm_subscription_modal_btn": "ยืนยันการสมัครสมาชิก",
+      "confirm_subscription_modal_content": "คุณได้ส่งการสมัครสมาชิกก่อนหน้านี้ อีเมลยืนยันถูกส่งไปยังกล่องจดหมายนี้แล้ว คุณสามารถยืนยันในอีเมลของคุณหรือคลิกปุ่มนี้",
+      "confirm_subscription_modal_title": "โปรดยืนยันการสมัครอีเมลของคุณ",
+      "credit_card_number": "หมายเลขบัตรเครดิต",
+      "deadline": "คำสั่งซื้อของคุณจะยังคงมองเห็นได้เพื่อวัตถุประสงค์ในการรายงานทางธุรกิจ ข้อมูลบัญชีของคุณจะถูกลบหลังจาก 9 วัน คุณสามารถยกเลิกขั้นตอนนี้ก่อนวันที่ดังกล่าว",
+      "delete_account": "ลบบัญชีผู้ใช้",
+      "delete_account_email": "อีเมล",
+      "delete_account_notify": "คุณสามารถขอลบบัญชีผู้ใช้นี้ได้ หลังจากลบบัญชีผู้ใช้แล้ว ข้อมูลใดๆ ที่ใช้ในการระบุบัญชีนี้จะถูกลบออก ซึ่งรวมถึง:",
+      "delete_deadline_tip": "ข้อมูลผู้ใช้จะถูกลบออกหลังจาก{{time}}",
+      "email": "อีเมล",
+      "email_repeat_tip": "อีเมลนี้ลงทะเบียนแล้ว",
+      "email_subscribe_invalid_tip": "ที่อยู่อีเมลที่ไม่ถูกต้อง",
+      "first_name": "ชื่อ",
+      "gender": "เพศ",
+      "gender_female": "หญิง",
+      "gender_male": "ชาย",
+      "gender_secret": "เก็บเป็นความลับ",
+      "invalidEmail": "ที่อยู่อีเมลที่ไม่ถูกต้อง",
+      "ip_address": "ที่อยู่ IP",
+      "last_name": "นามสกุล",
+      "modify_email": "แก้ไขอีเมล",
+      "modify_email_modal_title": "แก้ไขอีเมล",
+      "modify_phone": "แก้ไขโทรศัพท์",
+      "modify_phone_modal_title": "แก้ไขโทรศัพท์",
+      "name": "ชื่อ",
+      "next": "ขั้นตอนต่อไป",
+      "nickname_empty_error": "ชื่อและนามสกุลไม่สามารถเว้นว่างได้",
+      "not_set": "ยังไม่ได้ตั้งค่า",
+      "password": "รหัสผ่าน",
+      "personal_information": "ข้อมูลส่วนตัว",
+      "phone": "โทรศัพท์มือถือ",
+      "reset_password_error_hint": "โปรดผูกอีเมลหรือโทรศัพท์มือถือก่อน",
+      "revoke": "ยกเลิกการลบบัญชีผู้ใช้",
+      "revoke_btn": "ยกเลิกการลบบัญชี",
+      "revoke_message": "บัญชีผู้ใช้กำลังถูกลบออก ข้อมูลบัญชีจะถูกลบเมื่อวันที่ {{time}} คุณสามารถยกเลิกขั้นตอนการลบบัญชีผู้ใช้ก่อนวันที่ดังกล่าว",
+      "save_btn": "บันทึก",
+      "select_date": "เลือกวันที่",
+      "subscribe_confirm_tip": "ขอบคุณสำหรับการสมัครสมาชิก",
+      "timeout_tip": "หมดเวลาดำเนินการ โปรดยืนยันอีกครั้ง",
+      "unknow_error_tip": "ระบบเกิดข้อผิดพลาด โปรดลองอีกครั้งในภายหลัง",
+      "unregister": "ลบบัญชี",
+      "username": "ชื่อ-นามสกุล",
+      "verify_email_message": "ก่อนที่จะลบบัญชีผู้ใช้ เราจำเป็นต้องยืนยันตัวตนของคุณ\nอีเมลของคุณ{{email}}จะได้รับอีเมลรหัสยืนยัน",
+      "verify_phone_message": "ก่อนที่จะลบบัญชีผู้ใช้ เราจำเป็นต้องยืนยันตัวตนของคุณ\nโทรศัพท์ของคุณ{{phone}}จะได้รับ SMS ยืนยัน"
+    },
+    "activate": {
+      "account_activated": "เปิดใช้งานบัญชีแล้ว",
+      "apply_code": "ใช้รหัสส่วนลด",
+      "apply_success": "ใช้งานแล้ว",
+      "button": "เปิดใช้งาน",
+      "copy_success": "คัดลอกคูปองแล้ว",
+      "discount_title": "เปิดใช้งานบัญชีและรับรหัสส่วนลด",
+      "normal_title": "เปิดใช้งานบัญชี",
+      "normal_title_with_discount_code": "",
+      "subscription_text": "สมัครรับอีเมลเพื่อรับการอัปเดต การเข้าถึงส่วนลดพิเศษ และอื่นๆ",
+      "success_title": "ยินดีด้วยที่คุณได้รับส่วนลด",
+      "token_expired": "ลิงก์ของคุณหมดอายุ"
+    },
+    "address": {
+      "add_address": "เพิ่มที่อยู่ใหม่",
+      "address": "ที่อยู่",
+      "address1": "ที่อยู่โดยละเอียด",
+      "address2": "ที่อยู่โดยละเอียด2",
+      "address_full_tip": "มีการบันทึกที่อยู่ 50 ที่อยู่แล้วและไม่สามารถเพิ่มได้อีกในขณะนี้",
+      "adress_full_tip": "มีการบันทึกที่อยู่ 50 ที่อยู่แล้วและไม่สามารถเพิ่มได้อีกในขณะนี้",
+      "city": "เมือง",
+      "common_max": "น้อยกว่า {{max}} ตัวอักษร！",
+      "common_min": "ตงมากกว่า {{min}} ตัวอักษร！",
+      "company": "บริษัท",
+      "country": "ประเทศ/ภูมิภาค",
+      "default": "ค่าเริ่มต้น",
+      "delete_address": "ลบที่อยู่",
+      "district": "เขต",
+      "edit_last_name_hint": "โปรดป้อนนามสกุลของคุณ",
+      "edit_phone_hint": "โปรดป้อนโทรศัพท์มือถือของคุณ",
+      "edit_shipping_address": "แก้ไขที่อยู่ในการจัดส่งสินค้า",
+      "first_name": "ชื่อ",
+      "last_name": "นามสกุล",
+      "max_address_tip": "สามารถสร้างที่อยู่ได้สูงสุด 50 รายการ",
+      "no_address_data": "ขณะนี้ไม่มีที่อยู่การจัดส่ง",
+      "no_adress_data": "ขณะนี้ไม่มีที่อยู่การจัดส่ง",
+      "phone": "หมายเลขโทรศัพท์",
+      "province": "จังหวัด",
+      "set_default_address": "ตั้งค่าเป็นที่อยู่เริ่มต้น",
+      "zip_code": "รหัสไปรษณีย์"
+    },
+    "company": {
+      "account": {
+        "billTitle": "ที่อยู่ใบเรียกเก็บเงินของบริษัท",
+        "link": "การสมัครบัญชีของบริษัท",
+        "shipping": "ที่อยู่จัดส่งของบริษัท",
+        "title": "การสมัครบัญชีของบริษัท"
+      },
+      "address": {
+        "placeholder": "ที่อยู่ละเอียด"
+      },
+      "address2": {
+        "placeholder": "ที่อยู่ละเอียด2"
+      },
+      "bill": {
+        "sameAsCompany": "ที่อยู่ใบเรียกเก็บเงินของบริษัทเหมือนกับที่อยู่จัดส่งของบริษัท"
+      },
+      "billing": {
+        "address": {
+          "placeholder": "ที่อยู่ละเอียด"
+        },
+        "address2": {
+          "placeholder": "ที่อยู่ละเอียด2"
+        },
+        "city": {
+          "placeholder": "เมือง"
+        },
+        "country": {
+          "placeholder": "ประเทศ/ภูมิภาค"
+        },
+        "district": {
+          "placeholder": "เขต"
+        },
+        "phone": {
+          "placeholder": "เบอร์มือถือ"
+        },
+        "province": {
+          "placeholder": "จังหวัด"
+        },
+        "zip": {
+          "placeholder": "รหัสไปรษณีย์"
+        }
+      },
+      "billingSameAsShipping": {
+        "placeholder": "ที่อยู่สำหรับใบเสร็จของบริษัทเหมือนกับที่อยู่รับสินค้า"
+      },
+      "billing_address": {
+        "title": "ที่อยู่สำหรับใบเสร็จของบริษัท"
+      },
+      "city": {
+        "placeholder": "เมือง"
+      },
+      "company_name": {
+        "placeholder": "ชื่อบริษัท"
+      },
+      "country": {
+        "placeholder": "ประเทศ/ภูมิภาค"
+      },
+      "create": {
+        "limit": "จำนวนบริษัทสำหรับร้านค้าได้ถึงขีดจำกัดของมัน กรุณาติดต่อผู้ขายสำหรับความช่วยเหลือ",
+        "success": "ขอบคุณค่ะ แบบฟอร์มถูกส่งแล้ว"
+      },
+      "district": {
+        "placeholder": "เขต"
+      },
+      "email": {
+        "placeholder": "อีเมล"
+      },
+      "field": {
+        "companyName": "ชื่อบริษัท",
+        "email": "อีเมล"
+      },
+      "first_name": {
+        "placeholder": "ชื่อ"
+      },
+      "form": {
+        "submit": "ส่ง"
+      },
+      "last_name": {
+        "placeholder": "นามสกุล"
+      },
+      "phone": {
+        "placeholder": "เบอร์มือถือ"
+      },
+      "province": {
+        "placeholder": "จังหวัด"
+      },
+      "register": {
+        "button": "ส่ง",
+        "success": {
+          "description": "ฟอร์มส่งเรียบร้อยแล้ว",
+          "title": "ขอบคุณที่กรอก!"
+        },
+        "title": "การสมัครบัญชีบริษัท"
+      },
+      "shipping_address": {
+        "title": "ที่อยู่รับสินค้าของบริษัท"
+      },
+      "zip": {
+        "placeholder": "รหัสไปรษณีย์"
+      }
+    },
+    "email": {
+      "mail_common": "ไปรษณีย์"
+    },
+    "forget_password": {
+      "forget_password_tips": "ลืมรหัสผ่าน",
+      "reset_password": "รีเซ็ตรหัสผ่าน",
+      "tips_password_can_be_changed_after_verification": "คุณสามารถเปลี่ยนรหัสผ่านได้หลังจากยืนยันตัวตนแล้ว",
+      "tips_reset_password": "คุณกำลังตั้งค่ารหัสผ่านใหม่สำหรับบัญชี {{account}}",
+      "token_expired": "ลิงก์รีเซ็ตรหัสผ่านของคุณหมดอายุแล้ว"
+    },
+    "general": {
+      "account": "บัญชีผู้ใช้",
+      "and_button": "และ",
+      "apr": "เม.ย.",
+      "april": "เมษายน",
+      "aug": "ส.ค.",
+      "august": "สิงหาคม",
+      "back_to_user_center": "กลับไปที่ศูนย์ผู้ใช้",
+      "bind_change_email": "เชื่อมต่อ/เปลี่ยนอีเมล",
+      "bind_change_phone": "เชื่อมต่อ/เปลี่ยนหมายเลขโทรศัพท์มือถือ",
+      "bind_email": "ผูกอีเมล",
+      "bind_phone": "ผูกโทรศัพท์มือถือ",
+      "bind_success": "เชื่อมต่อแล้ว",
+      "cancel": "ยกเลิก",
+      "cancel_common": "ยกเลิก",
+      "cancel_mobile_button": "ยกเลิก",
+      "clear_button": "ล้าง",
+      "company_empty_hint": "ชื่อบริษัทต้องไม่เว้นว่าง",
+      "company_existed": "ชื่อบริษัทนี้มีอยู่แล้ว",
+      "company_frequent_operation": "ทำซ้ำ โปรดลองอีกครั้งในภายหลัง",
+      "company_registry_closed": "ร้านค้าไม่ได้เปิดใช้งานฟังก์ชั่นการสมัครบัญชีบริษัท โปรดติดต่อร้านค้าเพื่อสมัคร",
+      "confirm": "ตกลง",
+      "confirm_button": "ตกลง",
+      "continue_as_a_guest": "เยี่ยมชมในฐานะแขกต่อไป",
+      "date_format": "dd/MM/yyyy",
+      "dec": "ธ.ค.",
+      "december": "ธันวาคม",
+      "edit": "แก้ไข",
+      "email": "ที่อยู่อีเมล",
+      "email_empty_hint": "โปรดป้อนที่อยู่อีเมล",
+      "email_error_hint": "โปรดป้อนที่อยู่อีเมลที่มีรูปแบบถูกต้องและน้อยกว่า 50 ตัวอักษร",
+      "email_tip": "เราจะส่ง อีเมล เพื่อรีเซ็ตรหัสผ่านของคุณ",
+      "enter_verification_code": "โปรดป้อนรหัสยืนยัน",
+      "feb": "ก.พ.",
+      "february": "กุมภาพันธ์",
+      "first_day": "0",
+      "fr": "ศ.",
+      "fri": "ศ.",
+      "friday": "วันศุกร์",
+      "image_size_less_than_tips": "รูปภาพควรมีขนาดเล็กกว่า {{max}} MB",
+      "jan": "ม.ค.",
+      "january": "มกราคม",
+      "jul": "ก.ค.",
+      "july": "กรกฎาคม",
+      "jun": "มิ.ย.",
+      "june": "มิถุนายน",
+      "login_method": "หรือเข้าสู่ระบบด้วยวิธีต่อไปนี้",
+      "mar": "มี.ค.",
+      "march": "มีนาคม",
+      "max_image_upload_tips": "คุณสามารถอัปโหลดรูปภาพได้สูงสุด {{max}} รูปภาพ",
+      "may": "พฤษภาคม",
+      "may_short": "พ.ค.",
+      "mo": "จ.",
+      "mon": "จ.",
+      "monday": "วันจันทร์",
+      "network_error_message": "ไม่มีเคลือข่ายอินเทอร์เน็ต",
+      "new_email": "อีเมลใหม่",
+      "new_phone": "โทรศัพท์ใหม่",
+      "nov": "พ.ย.",
+      "november": "พฤศจิกายน",
+      "oct": "ต.ค.",
+      "october": "ตุลาคม",
+      "ok": "ตกลง",
+      "okay_common": "ตกลง",
+      "orders": "คำสั่งซื้อ",
+      "password": "รหัสผ่าน",
+      "password_empty_hint": "โปรดป้อนรหัสผ่าน",
+      "phone": "หมายเลขโทรศัพท์มือถือ",
+      "phone_empty_message": "โปรดป้อนหมายเลขโทรศัพท์",
+      "phone_error_message": "โปรดป้อนหมายเลขโทรศัพท์มือถือที่มีรูปแบบที่ถูกต้อง",
+      "phone_number_error_message": "กรุณากรอกหมายเลขโทรศัพท์ที่ถูกต้อง",
+      "phone_tip": "เราจะส่ง SMS เพื่อรีเซ็ตรหัสผ่านของคุณ",
+      "proceed_to_checkout": "ดำเนินการชำระเงิน",
+      "register": "ลงทะเบียน",
+      "repeat_passport_error": "รหัสผ่านที่คุณป้อนไม่ตรงกัน",
+      "repeat_password": "ป้อนรหัสผ่านอีกครั้ง",
+      "resend": "ส่งอีกครั้ง",
+      "sa": "ส.",
+      "sat": "ส.",
+      "saturday": "วันเสาร์",
+      "save": "บันทึก",
+      "select_date": "เลือกวันที่",
+      "send": "ส่ง",
+      "send_error": "โปรดส่งรหัสยืนยันก่อน",
+      "send_verification_code_hint": "โปรดป้อนรหัสผ่านอีกครั้ง",
+      "sep": "ก.ย.",
+      "september": "กันยายน",
+      "set_password": "รหัสผ่านต้องมีความยาว 6-18 ตัวอักษร ประกอบด้วยตัวเลข ตัวพิมพ์ใหญ่ และตัวพิมพ์เล็ก",
+      "sign_in": "ลงชื่อเข้าใช้",
+      "sign_in_activate": "รหัสยืนยันได้ถูกส่งไปยังบัญชีของคุณแล้ว {{account}} เมื่อยืนยันแล้ว บัญชีจะสามารถเปิดใช้งานได้",
+      "sign_in_activate_title": "เปิดใช้งานบัญชี",
+      "sign_out": "ออกจากระบบ",
+      "sign_up": "ลงทะเบียน",
+      "su": "อา.",
+      "subscription_desc": "สามารถรับข่าวสารล่าสุดเกี่ยวกับร้านค้า",
+      "sun": "อา.",
+      "sunday": "วันอาทิตย์",
+      "th": "พฤ.",
+      "thu": "พฤ.",
+      "thursday": "วันพฤหัสบดี",
+      "time_format": "HH:mm",
+      "title": "หัวข้อของหน้า",
+      "today": "วันนี้",
+      "tu": "อ.",
+      "tue": "อ.",
+      "tuesday": "วันอังคาร",
+      "update_passport": "เปลี่ยนรหัสผ่าน",
+      "user_agreement_tip": "โปรดอ่านและข้อตกลงในการใช้งานก่อน",
+      "username": "ที่อยู่อีเมล/หมายเลขโทรศัพท์มือถือ",
+      "username_empty_hint": "โปรดป้อนที่อยู่อีเมลหรือหมายเลขโทรศัพท์มือถือ",
+      "verification_code": "รหัสยืนยัน",
+      "verification_code_sent_tip": "ส่งรหัสการยืนยันตัวตนไปยังบัญชีของคุณแล้ว",
+      "verification_code_success": "รหัสยืนยันได้ถูกส่งไปยัง {{type}} <em>{{value}}</em> ที่คุณกำลังเข้าสู่ระบบอยู่ โปรดป้อนรหัสด้านล่าง",
+      "verift_account_tip": "โปรดตรวจสอบบัญชีของคุณและรีเซ็ตรหัสผ่าน",
+      "we": "พ.",
+      "wed": "พ.",
+      "wednesday": "วันพุธ"
+    },
+    "login": {
+      "member_login_common": "ลงชื่อเข้าใช้ในฐานะสมาชิก",
+      "subscribe_confirm_tip": "ขอบคุณสำหรับการสมัครสมาชิก คุณสามารถเข้าสู่ระบบเพื่อการใช้งานที่ดียิ่งขึ้น"
+    },
+    "message": {
+      "format_error": "ไม่รองรับรูปแบบข้อความ",
+      "input_placeholder": "คุณต้องการฝากข้อความไว้หรือไม่?",
+      "message": "ข้อความ",
+      "send": "ส่ง"
+    },
+    "phone": {
+      "mobile_common": "หมายเลขโทรศัพท์"
+    },
+    "register": {
+      "go_to_login": "ไปที่การเข้าสู่ระบบ",
+      "privacy_policy": "นโยบายความเป็นส่วนตัว",
+      "terms_of_service": "เงื่อนไขการให้บริการ",
+      "tips_agree_with_the_shop": "ฉันยอมรับ"
+    },
+    "subscribe": {
+      "email_has_bind": "ที่อยู่อีเมลนี้ถูกผูกไว้กับบัญชีอื่น",
+      "phone_has_bind": "โทรศัพท์เครื่องนี้ถูกผูกไว้กับบัญชีอื่น"
+    },
+    "subscription": {
+      "email": "อีเมล",
+      "email_subscribe_error_tip": "อีเมลนี้ถูกผูกไว้กับบัญชีอื่นแล้ว",
+      "email_subscription_text": "สมัครรับโปรโมชั่นทางอีเมล",
+      "line": "LINE",
+      "messenger": "แอปส่งข้อความ",
+      "phone": "โทรศัพท์มือถือ",
+      "phone_subscribe_error_tip": "โทรศัพท์นี้ถูกผูกไว้กับบัญชีอื่นแล้ว",
+      "phone_subscription_text": "สมัครใช้รับโปรโมชั่นทางโทรศัพท์",
+      "reason_other_length": "ป้อนตัวอักษรสูงสุด 300 ตัว",
+      "reason_other_placeholder": "ป้อนข้อมูล",
+      "save_button": "บันทึก",
+      "subscribe_button": "สมัครสมาชิก",
+      "subscription_cancel_text": "ยกเลิกการสมัครสมาชิก",
+      "subscription_hint": "สมัครสมาชิกแล้ว",
+      "subscription_title": "การสมัครสมาชิก",
+      "unsubscribe": "ยกเลิกการสมัครสมาชิก",
+      "unsubscribe_btn": "ยกเลิกการสมัครสมาชิก",
+      "unsubscribe_confirm_text": "ยกเลิกการสมัครสมาชิก",
+      "unsubscribe_feedback_text": "คุณจะไม่ได้รับข้อมูลอัปเดตทางการตลาดจากเราอีกต่อไป คุณสามารถสมัครใหม่ได้ตลอดเวลา",
+      "unsubscribe_feedback_title": "คุณได้ยกเลิกการสมัครรับจดหมายจาก <italic>{{name}}</italic> แล้ว",
+      "unsubscribe_reason1": "ฉันไม่ต้องการรับอีเมลแบบนี้",
+      "unsubscribe_reason2": "ฉันได้รับอีเมลมากเกินไป",
+      "unsubscribe_reason3": "ฉันไม่ได้สมัครรับอีเมลเหล่านี้",
+      "unsubscribe_reason4": "เนื้อหาของอีเมลไม่เกี่ยวกับฉัน",
+      "unsubscribe_reason5": "เนื้อหาอีเมลยาวเกินไป",
+      "unsubscribe_reason6": "อื่นๆ",
+      "unsubscribe_subtitle": "เราเสียใจที่คุณจากไป! โปรดบอกเราว่าเหตุผลที่คุณต้องยกเลิกการสมัคร:",
+      "unsubscribe_success": "ยกเลิกการสมัครสมาชิกแล้ว กำลังจะเปลี่ยนเส้นทางไปยังหน้าแรก",
+      "unsubscribe_tip": "เมื่อยกเลิกการสมัครแล้ว คุณจะไม่ได้รับโปรโมชั่นล่าสุดอีกต่อไป",
+      "unsubscribe_title": "ยกเลิกการสมัครสมาชิก"
+    },
+    "unsubscribe": {
+      "content_placeholder": "กรุณากรอกเนื้อหา",
+      "goto_btn": "เข้าร้าน",
+      "notyet": "คุณยังไม่ได้สมัครสมาชิก",
+      "notyet_desc": "คุณสามารถไปที่ร้านเพื่อสมัครสมาชิก",
+      "success": "ยกเลิกการสมัครสมาชิกแล้ว",
+      "success_tip": "คุณได้ยกเลิกการสมัครจาก {{storeName}}"
+    }
+  },
+  "filters": {
+    "clear_all_filter": "ลบทั้งหมด",
+    "max_price": "ราคาสูงสุดคือ {{ price }}",
+    "price": {
+      "label": "ราคา"
+    },
+    "product_count": "สินค้า {{product_count}} ชิ้น",
+    "reset": "รีเซ็ต"
+  },
+  "footer": {
+    "subscribe": {
+      "error": "การสมัครสมาชิกล้มเหลว"
+    }
+  },
+  "general": {
+    "404": {
+      "subtext": "ไม่มีหน้าเพจที่คุณค่นหา",
+      "title": "ไม่มีหน้า 404 "
+    },
+    "abandon": {
+      "Order": {
+        "risk": "คำขอบ่อยครั้งเกินไป"
+      }
+    },
+    "activate_account_discount": "เปิดใช้งานบัญชีและรับโค้ดส่วนลด",
+    "address": {
+      "address": "ที่อยู่"
+    },
+    "contact_us": {
+      "contact_us": "ติดต่อเรา",
+      "send_success": "ขอบคุณที่ติดต่อเรา เราจะติดต่อกลับโดยเร็วที่สุด",
+      "success_feedback": "ขอบคุณที่ติดต่อเรา เราจะติดต่อกลับโดยเร็วที่สุด"
+    },
+    "copy_button_text": "คัดลอก",
+    "copy_success_text": "คัดลอกลิงก์ไปยังคลิปบอร์ดแล้ว",
+    "footer": {
+      "copyright": "© {{year}} {{storeName}}",
+      "subscribe_format_error": "รูปแบบอีเมลไม่ถูกต้อง",
+      "subscribe_success": "สมัครสมาชิกสำเร็จแล้ว"
+    },
+    "general": {
+      "accept": "ยินยอม",
+      "decline": "ไม่ยินยอม",
+      "email_tip": "ที่อยู่อีเมลไม่ถูกต้อง โปรดป้อนใหม่",
+      "home": "หน้าโฮมเพจ",
+      "link": "นโยบายความเป็นส่วนตัว",
+      "loading": "กำลังโหลด",
+      "more": "ขยาย",
+      "no_data": "ไม่มีข้อมูล",
+      "pack_up": "เก็บ",
+      "privacy_policy": "นโยบายความเป็นส่วนตัว",
+      "proofing_tip": "ขออภัย ร้านค้าที่คุณเยี่ยมชมปิดให้บริการ <br/>โปรดลองอีกครั้งในภายหลัง",
+      "tel_phone": "หมายเลขโทรศัพท์",
+      "tips": "เว็บไซต์นี้ใช้คุกกี้เพื่อมอบประสบการณ์เยี่ยมชมเว็บไซต์ที่ดีที่สุดให้แก่คุณ",
+      "title": "เราเป็นห่วงเรื่องความเป็นส่วนตัวของคุณ",
+      "username": "ชื่อ"
+    },
+    "handle_success": "ดำเนินงานสำเร็จ",
+    "header": {
+      "cart": "ตะกร้าสินค้า",
+      "center": "ศูนย์ผู้ใช้",
+      "close": "ปิด",
+      "login": "เข้าสู่ระบบ",
+      "no_currency_fallback": "ไม่พบสกุลเงินที่เกี่ยวข้อง",
+      "search_input_placeholder": "พิมพ์ที่นี่แล้วแตะค้นหา"
+    },
+    "order_tracking": {
+      "code": "รหัสยืนยัน",
+      "email": "อีเมล",
+      "form_error": "แบบสอบถามล้มเหลว",
+      "orderId": "รหัสคำสั่งซื้อ",
+      "orderId_error": "ต้องระบุรหัสคำสั่งซื้อ",
+      "other_email": "ที่อยู่อีเมล",
+      "other_phone": "หมายเลขโทรศัพท์มือถือ",
+      "phone": "โทรศัพท์มือถือ",
+      "query_illegal": "ไม่มีคำสั่งซื้อ",
+      "risk_black_user": "บัญชีนี้มีความเสี่ยง",
+      "risk_interception": "ไม่มีคำสั่งซื้อ",
+      "submit_btn": "ดูคำสั่งซื้อ",
+      "username": "อีเมล/หมายเลขโทรศัพท์"
+    },
+    "password": {
+      "back": "กลับ",
+      "entry_store": "เข้าสู่ร้าน",
+      "forget_password": "เข้าถึงด้วยรหัสผ่าน",
+      "goto_admin": "เข้าสู่ระบบ",
+      "i_am_admin": "ฉันเป็นเจ้าของร้าน",
+      "input_password": "ใส่รหัสผ่าน",
+      "log_in_here": "เข้าสู่ระบบที่นี่",
+      "password_is_error": "รหัสผ่านผิด กรุณากรอกใหม่",
+      "use_password_enter": "เข้าสู่ร้านค้าด้วยรหัสผ่าน",
+      "you_are_admin": "คุณเป็นเจ้าของร้านหรือไม่?"
+    },
+    "policy": {
+      "service": "เงื่อนไขการให้บริการ",
+      "shipping": "นโยบายการจัดส่งสินค้า"
+    },
+    "search": {
+      "search": "พิมพ์ที่นี่แล้วแตะค้นหา",
+      "search_hint": "ค้นหา “{{key}}”"
+    },
+    "select": {
+      "placeholder": "เลือก..."
+    },
+    "share_button_text": "แบ่งปัน"
+  },
+  "onboarding": {
+    "product_title": "ตัวอย่างชื่อสินค้า"
+  },
+  "order": {
+    "buy_again": "ซื้ออีกครั้ง",
+    "checkout_order": {
+      "pay_amount": "จำนวนเงินที่จ่าย",
+      "receiver_account": "บัญชีผู้รับ",
+      "reference_number": "หมายเลขอ้างอิง",
+      "upload_time": "เวลาอัพโหลด",
+      "upload_voucher": "อัพโหลดบัตรกำนัล",
+      "voucher_amount_limit": "คุณสามารถอัปโหลดคูปองได้สูงสุด 5 ใบเท่านั้น"
+    },
+    "detail": {
+      "dutyFee": "ภาษีอากร",
+      "orderstatus": {
+        "detail": "รายละเอียด"
+      }
+    },
+    "fulfillment": {
+      "createTime": "เวลาจัดส่ง:{{time}}"
+    },
+    "order_details": {
+      "adjust": "ปัดเศษ",
+      "details": "รายละเอียดคำสั่งซื้อ",
+      "insuranceService": "บริการการรับประกัน",
+      "insuranceService_applyClaim": "ยื่นคำร้องการเคลม",
+      "insuranceService_content_line1_email": "1. กรมธรรม์ได้ถูกส่งไปยังที่อยู่อีเมลของคุณ \"{{email}}\" โดย {{serviceName}} หากคุณไม่ได้รับอีเมลกรมธรรม์ โปรดติดต่อฝ่ายบริการลูกค้าของร้านค้า ",
+      "insuranceService_content_line1_phone": "1. มีการซื้อกรมธรรม์ผ่าน {{serviceName}} หากคุณมีคำถามอื่น ๆ โปรดติดต่อฝ่ายบริการลูกค้าของร้านค้า",
+      "insuranceService_content_line2": "2. หากมีความเสียหาย การสูญหาย ความล่าช้า ฯลฯ ระหว่างการขนส่ง คุณสามารถยื่นคำร้องการเคลมได้",
+      "order": "คำสั่งซื้อ",
+      "products": {
+        "price": "ราคา",
+        "quantity": "จำนวน"
+      },
+      "remark": "หมายเหตุคำสั่งซื้อ",
+      "tax_included": "รวมภาษี {{price}} แล้ว",
+      "time": "สั่งซื้อเมื่อ:"
+    },
+    "order_list": {
+      "item_amount": "สินค้า ({{item}})",
+      "no_more_information": "ไม่มีข้อมูลเพิ่มเติม",
+      "no_record": "ไม่มีบันทึกคำสั่งซื้อในขณะนี้ ดำเนินการซื้อสินค้าต่อ",
+      "package_amount": "พัสดุ {{num}}（{{item}} รายการ）",
+      "total_amount": "ทั้งหมด {{transPackages}} รายการ"
+    },
+    "order_status": {
+      "canceled": "ยกเลิกแล้ว",
+      "click_to_track": "โปรดคลิกที่ลิงก์ด้านล่างเพื่อติดตามพัสดุของคุณ:",
+      "contact_us": "ติดต่อเรา",
+      "help_tips": "ต้องการความช่วยเหลือ?กรุณาติดต่อเรา:{{email}}",
+      "payment_voucher_transfer_success": "โอนเงินเรียบร้อย",
+      "payment_voucher_waiting_for_payment": "รอการชำระเงิน",
+      "sequence": "หมายเลข {{id}}",
+      "tracking": "การติดตาม"
+    },
+    "payment": {
+      "authorized": "ได้รับอนุญาต",
+      "billing_address": "ที่อยู่เรียกเก็บเงิน",
+      "detail": "รายละเอียด",
+      "method": "วิธีการชำระเงิน",
+      "paid": "ชำระเงินแล้ว",
+      "partially_paid": "ชำระเงินแล้วบางส่วน",
+      "partially_refund": "การคืนเงินบางส่วน",
+      "paying": "กำลังชำระเงิน",
+      "payment": "การชำระเงิน",
+      "payment_status": "สถานะการชำระเงิน",
+      "refund": " ได้รับเงินคืน",
+      "unpaid": "ยังไม่ได้ชำระเงิน"
+    },
+    "shipping": {
+      "information": "ข้อมูล",
+      "no_information": "ยังไม่มีข้อมูลการจัดส่ง โปรดตรวจสอบในภายหลัง",
+      "package_tracking": "การติดตามพัสดุ",
+      "partially_shipped": "จัดส่งแล้วบางส่วน",
+      "preparing_order": "กำลังเตรียมสินค้า",
+      "processing_amount": "กำลังประมวลผล ({{num}} รายการ)",
+      "shipped_order": "จัดส่งแล้ว"
+    }
+  },
+  "products": {
+    "collection": {
+      "collection": "หมวดหมู่"
+    },
+    "filters": {
+      "clear": "ล้าง",
+      "clear_all_filter": "ลบทั้งหมด",
+      "confirm": "ยืนยัน",
+      "filter_and_sort": "กรองและจัดเรียงลำดับ",
+      "filter_button": "กรอง",
+      "in_stock_only": "แสดงเฉพาะสินค้าที่มีของ",
+      "less_than": "น้อยกว่า",
+      "max_price": "ราคาสูงสุดคือ {{ price }}",
+      "more_than": "มากกว่า",
+      "price": {
+        "label": "ราคา"
+      },
+      "product_count": "สินค้า {{product_count}} ชิ้น",
+      "reset": "รีเซ็ต",
+      "sort_button": "จัดเรียงลำดับ",
+      "stock": {
+        "label": "สถานะสินค้า",
+        "value": "สินค้าพร้อมขาย"
+      }
+    },
+    "general": {
+      "added_to_cart_successfully": "ซื้อสินค้าเพิ่มเติมสำเร็จ",
+      "load_more_btn": "โหลดรายการเพิ่มเติม",
+      "load_more_items": "กำลังโหลด{{current_offset}} ~ {{last_current_offset}} / {{total}}รายการ",
+      "loading_btn": "หลดเพิ่มเติม",
+      "no_product_data_found": "ไม่พบข้อมูลสินค้า โปรดลองอีกครั้งในภายหลัง",
+      "sold_out": "ขายหมดแล้ว",
+      "unavailable": "สินค้านี้ไม่มีอยู่"
+    },
+    "giftcard": {
+      "balance": "มูลค่าบัตร",
+      "buy_giftcard": "ซื้อบัตรของขวัญหนึ่งใบ",
+      "description": "นี่คือบัตรของขวัญของคุณโดยมีมูลค่าบัตร {{shop}} {{price}}",
+      "expired_date": "วันหมดอายุ",
+      "invalid_tip": "บัตรของขวัญของคุณไม่ถูกต้อง โปรดซื้อใหม่",
+      "permanent": "หมดอายถาวร",
+      "receive_at": "หมดอายุ ณ",
+      "receive_tip": "กรุณาตรวจสอบบัตรของขวัญของคุณ",
+      "seoTitle": "ยอดเงินคงเหลือบัตรของขวัญ {{ shop }} ของคุณคือ {{ value }}!",
+      "title": "บัตรของขวัญของคุณ",
+      "use_giftcard": "ใช้บัตรของขวัญ",
+      "use_giftcard_tip": "คุณสามารถใช้งานได้โดยป้อนหมายเลขบัตรของขวัญในหน้าชำระเงิน"
+    },
+    "product_details": {
+      "activity_toast_price_limit": "จำนวนสูงสุดที่สามารถซื้อสินค้าที่จำกัดชิ้นนี้ได้คือ {{num}} ชิ้น",
+      "activity_toast_product_limit": "คุณสามารถซื้อสินค้าลดราคาได้สูงสุด {{stock}} ชิ้นพร้อมกัน",
+      "activity_toast_title_limit": "สินค้าต่อไปนี้เกินขีดจำกัดการซื้อ",
+      "amount": "จำนวน",
+      "buy_more_save_more": "ยิ่งซื้อเยอะยิ่งประหยัดมากขึ้น!",
+      "cancel": "ยกเลิก",
+      "copy_button_text": "คัดลอก",
+      "copy_success_text": "คัดลอกลิงก์ไปยังคลิปบอร์ดแล้ว",
+      "country_region": "ประเทศ/ภูมิภาค",
+      "default_placeholder": "โปรดเลือก {{attrName}}",
+      "description": "คำอธิบาย",
+      "each_price": "{{price}}/ชิ้น",
+      "email": "อีเมล",
+      "enter_email_address": "กรุณากรอกอีเมลของคุณ",
+      "enter_valid_email_address": "กรุณากรอกอีเมลที่ถูกต้อง",
+      "give_us_more_of_your_information": "คุณสามารถให้ข้อมูลอื่นๆเพิ่มเติมเพื่อให้เราสามารถเสนอบริการที่เหมาะสมกับคุณได้มากขึ้น",
+      "go_to_amazon_by_link": "ไปที่ Amazon",
+      "go_to_rakuten_by_link": "ไปที่ Rakuten",
+      "go_to_yahoo_by_link": "ไปที่ Yahoo",
+      "in_stock": "มีสินค้าคงคลัง",
+      "inventory_in_stock": "มีสินค้า",
+      "inventory_in_stock_show_count": "สต็อก: เหลือ {{ quantity }}",
+      "inventory_low_stock": "สินค้าคงคลังต่ำ",
+      "inventory_low_stock_show_count": "สต็อกต่ำ: เหลือ {{ quantity }}",
+      "inventory_out_of_stock": "สินค้าหมด",
+      "inventory_out_of_stock_continue_selling": "มีสินค้า",
+      "inventory_quantity": "ปริมาณสินค้าคงคลัง",
+      "leave_us_message": "กรุณากรอกข้อความของคุณ",
+      "leave_us_message_get_back": "กรุณาฝากข้อความของคุณไว้และเราจะติดต่อกลับโดยเร็วที่สุด",
+      "link_preview_does_not_support": "ไม่รองรับการแสดงตัวอย่างลิงก์",
+      "load_more": "แสดงเพิ่มเติม",
+      "maximum_length_of_message": "ความยาวสูงสุดของข้อความไม่ควรเกิน 1500 ตัวอักษร",
+      "message": "ข้อความของคุณ",
+      "moq_increment": "พหุคูณของ {{num}}",
+      "moq_increment_tips": "ปริมาณการซื้อเพิ่มเติมรองรับเฉพาะจำนวนทวีคูณของ {{num}}",
+      "moq_max_tips": "สเปคนี้สามารถซื้อได้สูงสุด {{num}} ชิ้น",
+      "moq_maximum": "การสั่งซื้อสูงสุด {{num}}",
+      "moq_min_tips": "สเปคนี้จะต้องซื้อ {{num}} ชิ้นหรือมากกว่า",
+      "moq_minimum": "การซื้อขั้นต่ำ{{num}}",
+      "more_payment_options": "ตัวเลือกการชำระเงินเพิ่มเติม",
+      "name": "ชื่อ",
+      "optional": "ไม่จำเป็น",
+      "phone_number": "เบอร์โทรศัพท์",
+      "price": "ราคา",
+      "price_break_title": "การกำหนดราคาแบบแบทช์",
+      "price_breaks_view_less": "เก็บ",
+      "price_breaks_view_more": "ดูเพิ่มเติม",
+      "product_enquiry": "สอบถามสินค้า",
+      "share_button_text": "แบ่งปัน",
+      "shipping_policy": "คำนวณ <a href=\"{{ link }}\">ค่าขนส่ง</a> เมื่อชำระเงิน",
+      "submission_failed": "การส่งไม่สำเร็จ โปรดลองอีกครั้ง",
+      "submission_successfully": "ส่งเรียบร้อยแล้ว",
+      "submit": "ส่ง",
+      "table_each_price": "{{price}}ชิ้น",
+      "table_each_price_ssr": "{{{priceDom}}}ชิ้น",
+      "tax_included": "รวมภาษี",
+      "taxes_included": "รวมภาษี",
+      "view_details": "ดูรายละเอียด",
+      "view_product_detail": "หน้าหลัก"
+    },
+    "product_list": {
+      "add_to_cart": "เพิ่มลงในตะกร้า",
+      "filter": "กรอง",
+      "filters_selected": "เลือก {{count}} รายการแล้ว",
+      "from_price": "จาก {{price}}",
+      "infinite_btn_desc": "{{last_current_offset}} / {{total}}รายการ",
+      "less": "น้อยลง",
+      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} / {{total}}รายการ",
+      "load_more_tip": "โหลดรายการเพิ่มเติม",
+      "more": "เพิ่มเติม",
+      "more_product_num": "{{num}} สินค้า",
+      "new_arrivals": "สินค้าใหม่",
+      "new_products": "เวลาสร้างใหม่-เก่า",
+      "no_product": "ขออภัย ไม่มีสินค้าในหมวดหมู่นี้",
+      "one_product_num": "{{num}} สินค้า",
+      "price_break_tag": "สามารถกำหนดราคาแบบแบทช์",
+      "price_high_to_low": "ราคา: สูงไปต่ำ",
+      "price_low_to_high": "ราคา: ต่ำไปสูง",
+      "product_has_been_removed": "สินค้าถูกนำออกจากร้านค้าแล้ว",
+      "product_sold_out": "ขายหมดแล้ว",
+      "products": "สินค้า",
+      "quick_shop": "ซื้อด่วน",
+      "recommend": "แนะนำ",
+      "sale": "สินค้าขายดี",
+      "save": "ประหยัด {{{priceDom}}}",
+      "save_byjs": "ประหยัด {{priceDom}}",
+      "save_ratio": "ส่วนลด {{price}}%",
+      "select_product_all_options": "ตัวเลือกตัวแปรผลิตภัณฑ์ที่เลือกไม่สมบูรณ์หรือไม่พร้อมใช้งาน กรุณาเลือกใหม่อีกครั้งค่ะ",
+      "show": "แสดง",
+      "sort_button": "จัดเรียงลำดับ",
+      "top_sellers": "สินค้าขายดี"
+    },
+    "product_search": {
+      "back_to_home": "กลับสู่หน้าโฮมเพจ",
+      "ount_results": "{{count}} ผลลัพธ์",
+      "results_found_for": "พบ {{count}} ผลลัพธ์สำหรับ \"{{keyword}}\"",
+      "search": "ค้นหา",
+      "search_no_results": "ไม่พบผลลัพธ์ \"{{keyword}}\" ที่คุณค้นหา"
+    },
+    "recently_viewed_products": {
+      "recently_viewed_products": "สินค้าที่ดูล่าสุด"
+    }
+  },
+  "reduction_code": {
+    "giftcard": "บัตรของขวัญ"
+  },
+  "sales": {
+    "discount_coupon": {
+      "active_date_until": "ใช้ได้ถึง: {{endTime}}",
+      "applied": "ใช้โค้ดคูปองแล้ว",
+      "applied_successfully": "ใช้รหัสคูปองสำเร็จแล้ว",
+      "apply": "ใช้โค้ดคูปอง",
+      "buy_x_get_y_all_discount_content": "ส่วนลด{{discount}} รับ{{benefitCount}}ชิ้น",
+      "buy_x_get_y_all_free_content": "รับ{{benefitCount}}ชิ้นฟรี",
+      "buy_x_get_y_discount_content": "ส่วนลด{{discount}}",
+      "buy_x_get_y_free_content": "ฟรี",
+      "buy_x_get_y_threshold": "ซื้อ{{threshold}}แถม{{benefitCount}}",
+      "coupon_content_level": "คูปองนี้ ใช้ได้สำหรับ {{level}} เท่านั้น",
+      "coupon_discount_content": "ลด {discount}",
+      "coupon_not_found": "ไม่พบรหัสคูปองนี้",
+      "failed_to_apply_coupon_code": "ไม่สามารถใช้โค้ดคูปองได้",
+      "free_shipping": "จัดส่งฟรี",
+      "get_code": "รับรหัสส่วนลด",
+      "popup_label": "คูปองร้านค้า:",
+      "shipping_rate_below": "สำหรับค่าจัดส่งที่น้อยกว่า {value}",
+      "specified_customer": "ใช้ได้สำหรับลูกค้าที่ตรงตามเงื่อนไขที่กำหนดเท่านั้น",
+      "threshold": "ซื้อ {threshold}"
+    },
+    "flash": {
+      "day": "วัน",
+      "days": "วัน"
+    },
+    "general": {
+      "activity_banner_benefit": "ส่วนลด {{benefit}}",
+      "activity_banner_copy_success_text": "คัดลอกรหัสส่วนลดเรียบร้อยแล้ว",
+      "activity_banner_free_shipping": "จัดส่งฟรี",
+      "activity_selector_new_arrivals": "ลงรายการใหม่ล่าสุด",
+      "activity_selector_price_high_to_low": "ราคาจากสูงไปต่ำ",
+      "activity_selector_price_low_to_high": "ราคาจากต่ำไปสูง",
+      "activity_selector_recommended": "แนะนำ",
+      "apply_common": "ใช้",
+      "bundle_save_tip": "ซื้อพร้อมกันประหยัด {{amount}}",
+      "bundle_title": "สินค้าที่มักจะซื้อพร้อมกัน",
+      "common_buy_now": "ซื้อตอนนี้",
+      "coupon_code_copied": "คัดลอกรหัสส่วนลดเรียบร้อยแล้ว",
+      "coupon_code_copy": "คัดลอก",
+      "flash_sale_text": "FLASH SALE",
+      "flash_sale_tip": "จำนวนจำกัดซื้อไม่เกิน: {{count}} ชิ้น",
+      "hot_sale": "สินค้าขายดี",
+      "product_tabs_benefit_amount_locked": "ส่วนลด {{benefitAmount}}",
+      "product_tabs_benefit_amount_unlocked": "ปลดล็อกส่วนลด {{benefitAmount}} แล้ว!",
+      "product_tabs_benefit_discount_locked": "ส่วนลด {{offPercent}}%",
+      "product_tabs_benefit_discount_unlocked": "ปลดล็อกส่วนลด {{offPercent}}% แล้ว!",
+      "product_tabs_benefit_free_locked": "สินค้าฟรี",
+      "product_tabs_benefit_free_unlocked": "ปลดล็อกสินค้าฟรี!",
+      "product_tabs_benefit_unlocked_tip": "ตอนนี้คุณสามารถรับสินค้าส่วนลด",
+      "product_tabs_code_benefit_amount_unlocked": "รับส่วนลด {{benefitCount}} รายการในราคา {{benefitAmount}}",
+      "product_tabs_code_benefit_discount_unlocked": "ซื้อ{{benefitCount}}ชิ้นในราคาส่วนลด{{offPercent}}%",
+      "product_tabs_code_benefit_free_unlocked": "รับ{{benefitCount}}ชิ้นฟรี",
+      "product_tabs_threshold": "ซื้อ {{threshold}}",
+      "purchase_limit": "สินค้าโปรโมชั่นจำกัดซื้อไม่เกิน {{count}} ชิ้น",
+      "purchase_limit_each_item": "แต่ละรุ่นจำกัดซื้อไม่เกิน {{count}} ชิ้น",
+      "purchase_limit_each_product": "สินค้าโปรโมชั่นแต่ละรายการจำกัดซื้อไม่เกิน {{count}} ชิ้น",
+      "select_promotional_product": "เลือกโปรโมชันสินค้าแล้ว {{selectCount}}",
+      "sold": "ขายแล้ว {{count}}"
+    },
+    "gift": {
+      "got_all_gifts_tip": "ยินดีด้วย! คุณได้รับ {{saved}} เป็นของขวัญฟรี !",
+      "not_meet_amount_tip": "ซื้อเพิ่มอีก {{threshold}} เพื่อรับของของขวัญสูงสุด {{willSave}} ชิ้น",
+      "not_meet_quantity_tip": "ซื้อสินค้าเพิ่มอีก {{threshold}} ชิ้น เพื่อรับของขวัญสูงสุด {{willSave}} ชิ้น",
+      "select": "เลือก",
+      "select_gift_tip": "ยินดีด้วย! คุณสามารถเลือกของขวัญฟรีได้ {{willSave}} ชิ้น",
+      "spend_more_money_get_more_tip": "ยินดีด้วย! คุณได้รับของขวัญฟรี {{saved}} ชิ้น! ซื้อเพิ่มอีก {{threshold}} เพื่อรับของของขวัญสูงสุด {{willSave}} ชิ้น",
+      "spend_more_quantity_get_more_tip": "ยินดีด้วย! คุณได้รับของขวัญฟรี {{saved}} ชิ้น! ซื้อสินค้าเพิ่มอีก {{threshold}} ชิ้น เพื่อรับของขวัญสูงสุด {{willSave}} ชิ้น"
+    },
+    "promotion": {
+      "discount_tag": {
+        "b11_t1_free": "ซื้อเพิ่ม {{threshold}} ชิ้น เพื่อรับฟรี 1 ชิ้น",
+        "b11_t1_normal": "ซื้อ {{threshold}} ชิ้นเพื่อรับส่วนลด {{save}} รายการใดรายการหนึ่ง!",
+        "b1_t0": "ซื้อ {{threshold}} ประหยัด {{save}}",
+        "b1_t1": "ซื้อ {{threshold}} รับส่วนลด {{save}}",
+        "b2_t0": "ซื้อ {{threshold}} ประหยัด {{save}}",
+        "b2_t1": "ซื้อ {{threshold}} รับส่วนลด {{save}}",
+        "label": "ส่วนลด:"
+      }
+    }
+  },
+  "search": {
+    "count_results": "{{count}} ผลลัพธ์",
+    "product_list": {
+      "title": "สินค้า"
+    }
+  },
+  "trade": {
+    "order_summary": {
+      "rounding": "ปัดเศษ"
+    },
+    "payments_name": {
+      "COD": "เก็บเงินปลายทาง",
+      "MultiplePayment": "การชำระเงินหลายช่องทาง",
+      "Paypal": "Paypal",
+      "adjustPay": "manual",
+      "mpay": {
+        "alipay": "Alipay (For Real-name user of the Mainland China.)",
+        "mpay": "MPay (For MPay Users)"
+      },
+      "third_part": "บัตรเครดิต"
+    },
+    "reduction_code": {
+      "giftcard": "บัตรของขวัญ"
+    }
+  },
+  "transaction": {
+    "contact": {
+      "discounts_stack_not": "มีส่วนลดที่ใช้กับคำสั่งซื้อนี้แล้ว คุณไม่สามารถเพิ่มส่วนลดอื่นได้อีก"
+    },
+    "couponCode": {
+      "freeShipping": {
+        "existCode": "รหัสคูปองจัดส่งฟรีซ้ำ"
+      }
+    },
+    "discount": {
+      "code": {
+        "country_not_support": "จ่าย รหัสคูปองจัดส่งฟรี - ประเทศไม่ตรงกัน",
+        "logistics_fee_over_limit": "รหัสคูปองจัดส่งฟรี - ค่าจัดส่งเกินขีดจำกัด"
+      },
+      "code_error": "กรุณาป้อนรหัสส่วนลดที่ถูกต้อง",
+      "code_item_unmatched": "รหัสส่วนลด {{discountCode}} ไม่สามารถใช้กับสินค้าในตะกร้าสินค้าของคุณได้",
+      "code_overdue": "รหัสคูปองหมดอายุ",
+      "code_user_exceedLimit": "จำนวนครั้งที่ผู้ใช้ใช้กิจกรรมนี้เกินขีดจำกัด",
+      "code_user_notSupport": "ผู้ใช้ไม่สามารถใช้กิจกรรมนี้ได้",
+      "coupon_code": "รหัสคูปอง",
+      "coupon_invalid_for_the_shipping_method": "รหัสคูปอง {{discountCode}} ไม่สามารถใช้กับวิธีการจัดส่งนี้ได้",
+      "discount_codes_cannot_stack": "ไม่สามารถใช้รหัสส่วนลดร่วมกับโปรโมชันอื่นได้ สามารถใช้ส่วนลดได้เพียงหนึ่งครั้งต่อการสั่งซื้อ",
+      "use_coupon_alone": "ไม่สามารถใช้รหัสคูปองนี้ร่วมกับโปรโมชันหรือข้อเสนอส่วนลดอื่นๆ ได้"
+    },
+    "general": {
+      "discount_off": "ส่วนลด",
+      "free_charge": "จัดส่งฟรี",
+      "free_shipping": "จัดส่งฟรี",
+      "order_seller_discount": "ส่วนลดที่กำหนดโดยร้านค้า",
+      "order_tax": "ภาษี",
+      "order_tip": "ทิป",
+      "payment_subtotal_cost": "ยอดรวม",
+      "point_discount": "คะแนนส่วนลด",
+      "shipping_fee": "ค่าธรรมเนียมการจัดส่ง",
+      "trade_coupon_discount": "ส่วนลด"
+    },
+    "item": {
+      "invalid_product": "สินค้าไม่ถูกต้อง",
+      "remove_invalid_product": "ลบสินค้าที่ไม่ถูกต้อง",
+      "removed": "ลบออกแล้ว",
+      "sold_out": "ขายหมดแล้ว"
+    },
+    "lack_multilingualism": "*ประโยคนี้ไม่สามารถโหลดได้ โปรดติดต่อฝ่ายบริการลูกค้าเพื่อรายงานปัญหา*",
+    "notices": {
+      "insufficient_product_inventory": "สินค้าคงคลังไม่เพียงพอ",
+      "network": "เกิดข้อผิดพลาดของเครือข่าย",
+      "product_expired": "สินค้าหมดอายุแล้ว",
+      "product_limit": "สินค้าเกินจำนวนจำกัด"
+    },
+    "order": {
+      "deleted": "ลบแล้ว",
+      "rebuy": "ซื้ออีกครั้ง"
+    },
+    "payment": {
+      "continue_shopping": "ชอปปิ้งต่อไป ",
+      "more": "ซื้อเพิ่ม",
+      "saved": "บันทึกแล้ว",
+      "total": "ยอดรวมทั้งสิ้น"
+    },
+    "payment_disconut_channelinvalid_code": {
+      "tips": "รหัสส่วนลด {{discountCode}} นี้ใช้กับช่องทางการขายนี้ไม่ได้"
+    },
+    "policy": {
+      "refund_policy": "นโยบายการคืนเงิน"
+    },
+    "refund": {
+      "cost_points": "ใช้ {{value}} คะแนน",
+      "deduct_point": "คุณสามารถใช้ {{deductMemberPointNum}} คะแนนเพื่อลด {{deductMemberPointAmount}}"
+    }
+  },
+  "unvisiable": {
+    "applepay": {
+      "cancel": "ยกเลิก",
+      "enquire": "ดำเนินการชำระเงินด้วย Apple Pay ต่อไปหรือไม่?",
+      "paywith": "ผ่าน"
+    },
+    "customer": {
+      "error_message_1": "ลงทะเบียนอีเมลเพื่อรับข้อมูลอัปเดตและข้อเสนอพิเศษอื่น ๆ",
+      "error_message_1001": "รหัสผ่านผิดพลาด",
+      "error_message_1002": "ไม่มีผู้ใช้",
+      "error_message_1003": "บัญชีถูกล็อคชั่วคราว",
+      "error_message_1004": "ดำเนินการบ่อยเกินไป โปรดลองอีกครั้งในภายหลัง",
+      "error_message_1005": "รหัสหมดอายุ",
+      "error_message_1006": "รหัสผิดพลาด",
+      "error_message_1007": "รหัสยืนยันใช้งานบ่อยเกินไป โปรดรับรหัสยืนยันอีกครั้ง",
+      "error_message_1008": "ไม่มีการกำหนดค่าการเข้าสู่ระบบช่องบุคคลที่สาม",
+      "error_message_1009": "ไม่สามารถเรียกอินเทอร์เฟซบุคคลที่สาม",
+      "error_message_1010": "ส่งไม่สำเร็จ",
+      "error_message_1011": "บัญชีไม่ได้เปิดใช้งาน กรุณาลงทะเบียนเพื่อกรอกรหัสผ่านและข้อมูลอื่น ๆ",
+      "error_message_1012": "การบริการผิดปกติ",
+      "error_message_1013": "การบริการผิดปกติ",
+      "error_message_1014": "ตรวจสอบรหัสยืนยันไม่สำเร็จ",
+      "error_message_1015": "กรุณาตรวจสอบรหัสยืนยันไดนามิก",
+      "error_message_1016": "การบริการผิดปกติ",
+      "error_message_1017": "บัญชีนี้มีความเสี่ยง",
+      "error_message_1018": "อีเมลถูกผูกไว้",
+      "error_message_1020": "เข้าสู่ระบบหมดเวลา",
+      "error_message_1021": "เข้าสู่ระบบหมดเวลา",
+      "error_message_1022": "บัญชีถูกผูกไว้",
+      "error_message_1023": "การบริการผิดปกติ",
+      "error_message_1024": "การบริการผิดปกติ",
+      "error_message_1035": "กรุณาส่งรหัสยืนยัน",
+      "error_message_2": "การบริการผิดปกติ",
+      "error_message_2001": "โทรศัพท์มือถือนี้ลงทะเบียนแล้ว",
+      "error_message_2002": "อีเมลนี้ลงทะเบียนแล้ว",
+      "error_message_2003": "อย่าลองถี่เกินไป",
+      "error_message_2004": "รหัสหมดอายุ",
+      "error_message_2005": "รหัสผิดพลาด",
+      "error_message_2006": "มีการยืนยันมากเกินไป โปรดรับรหัสอื่น",
+      "error_message_2007": "ระบบเกิดข้อผิดพลาด โปรดลองอีกครั้งในภายหลัง",
+      "error_message_2014": "บัญชีของคุณมีความเสี่ยง",
+      "error_message_2016": "บัญชีของคุณมีความเสี่ยง",
+      "error_message_2020": "ระบบไม่ว่าง โปรดลองอีกครั้งในภายหลัง",
+      "error_message_3": "การพักอาศัยนานเกินไป กรุณาโหลดหน้าใหม่",
+      "error_message_3001": "ระบบเกิดข้อผิดพลาด โปรดลองอีกครั้งในภายหลัง",
+      "error_message_3002": "การดำเนินการไม่ถูกต้อง",
+      "error_message_3003": "อย่าลองถี่เกินไป",
+      "error_message_3004": "รหัสหมดอายุ",
+      "error_message_3005": "รหัสผิดพลาด",
+      "error_message_3006": "มีการยืนยันมากเกินไป โปรดรับรหัสอื่น",
+      "error_message_3007": "ไม่พบโทรศัพท์มือถือ",
+      "error_message_3008": "ไม่พบอีเมล",
+      "error_message_3009": "โทรศัพท์มือถือถูกผูกโดยบัญชีอื่นแล้ว",
+      "error_message_3010": "อีเมลถูกผูกโดยบัญชีอื่นแล้ว",
+      "error_message_3014": "ส่งรหัสไม่สำเร็จ",
+      "error_message_3015": "เปิดใช้งานบัญชีแล้ว",
+      "error_message_3021": "ระบบไม่ว่าง โปรดลองอีกครั้งในภายหลัง",
+      "error_message_3022": "ลิงก์หมดอายุ",
+      "error_message_3023": "ลิงก์ผิดรูปแบบ",
+      "error_message_3024": "พารามิเตอร์ลิงก์เกิดข้อผิดพลาด",
+      "error_message_3026": "รูปแบบบัญชีไม่ถูกต้อง",
+      "error_message_3027": "รหัสผ่านไม่สามารถเหมือนกับครั้งก่อนได้。",
+      "error_message_3029": "ขณะนี้ยังไม่รองรับการเปิดใช้งานหมายเลขโทรศัพท์มือถือ",
+      "error_message_4": "การบริการผิดปกติ",
+      "error_message_5": "การบริการผิดปกติ",
+      "error_message_6": "การบริการผิดปกติ",
+      "error_message_7": "รหัสผ่านต้องมีความยาว 6-18 ตัวอักษร ประกอบด้วยตัวเลข ตัวพิมพ์ใหญ่ และตัวพิมพ์เล็ก"
+    },
+    "editorSwitchCountryTip": "ตัวแก้ไขไม่รองรับการสลับเปลี่ยนประเทศ",
+    "shopby": {
+      "button": {
+        "show": "ปลอดภัยและรวดเร็ว"
+      }
+    }
+  }
+}

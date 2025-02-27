@@ -1,0 +1,58 @@
+{{#capture content}}
+  {{#content "blocks" /}}
+{{/capture}}
+
+{{#component "product/detail" product=product can_update_url=true content=content section_type="main-product" /}}
+
+{{#schema}}
+{
+  "name": "t:sections.main_product.name",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.main_product.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.main_product.settings.layout.label",
+      "default": {
+        "flex-direction": "row",
+        "flex-wrap": "nowrap",
+        "row-gap": "60px",
+        "column-gap": "60px",
+        "@media (--mobile)": {
+          "flex-direction": "column",
+          "row-gap": "20px",
+          "column-gap": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.main_product.settings.spacing.label",
+      "default": {
+        "padding-block-start": "60px",
+        "padding-block-end": "60px",
+        "@media (--mobile)": {
+          "padding-block-start": "20px",
+          "padding-block-end": "20px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$product-media",
+      "limit": 1
+    },
+    {
+      "type": "$product-info",
+      "limit": 1
+    }
+  ]
+}
+{{/schema}}

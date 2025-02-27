@@ -1,0 +1,72 @@
+<div
+  style="
+    --aspect-ratio: {{block.settings.aspect_ratio}};
+    --border-radius: {{block.settings.border_radius}}px;
+    --padding: {{settings.article_card_image_padding}}px;
+  "
+  class="block-article-card__image-wrapper"
+  {{{block.shopline_attributes}}}
+>
+  {{#if props.image}}
+    {{#component
+      "image"
+      data=props.image
+      mobile_size=props.mobile_columns
+      desktop_size=props.desktop_columns
+    /}}
+  {{#else/}}
+    {{#placeholder_svg "image" /}}
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.article.cover.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "t:blocks.article.cover.settings.aspect_ratio.label",
+      "default": "16/9",
+      "options": [
+        {
+          "value": "unset",
+          "label": "t:blocks.article.cover.settings.aspect_ratio.options_0.label"
+        },
+        {
+          "value": "1/1",
+          "label": "t:blocks.article.cover.settings.aspect_ratio.options_1.label"
+        },
+        {
+          "value": "4/3",
+          "label": "t:blocks.article.cover.settings.aspect_ratio.options_2.label"
+        },
+        {
+          "value": "3/2",
+          "label": "t:blocks.article.cover.settings.aspect_ratio.options_3.label"
+        },
+        {
+          "value": "16/9",
+          "label": "t:blocks.article.cover.settings.aspect_ratio.options_4.label"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "t:blocks.article.cover.settings.border_radius.label",
+      "default": 0,
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.article.cover.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

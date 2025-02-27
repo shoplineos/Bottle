@@ -1,0 +1,77 @@
+<h1
+  class="main-blog__title body-font-bold
+    {{block.settings | class_list()}}
+    {{block.settings.text_size}}
+    text-{{block.settings.text_align}}
+  "
+  {{{block.shopline_attributes}}}
+>
+  {{blog.title}}
+</h1>
+
+{{#schema}}
+{
+  "name": "t:sections.main_blog.blocks.title.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "t:sections.main_blog.blocks.title.settings.text_size.label",
+      "default": "title3",
+      "options": [
+        {
+          "value": "title1",
+          "label": "t:sections.main_blog.blocks.title.settings.text_size.options_0.label"
+        },
+        {
+          "value": "title2",
+          "label": "t:sections.main_blog.blocks.title.settings.text_size.options_1.label"
+        },
+        {
+          "value": "title3",
+          "label": "t:sections.main_blog.blocks.title.settings.text_size.options_2.label"
+        },
+        {
+          "value": "title4",
+          "label": "t:sections.main_blog.blocks.title.settings.text_size.options_3.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "t:sections.main_blog.blocks.title.settings.text_align.label",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.main_blog.blocks.title.settings.text_align.options_0.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.main_blog.blocks.title.settings.text_align.options_1.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.main_blog.blocks.title.settings.text_align.options_2.label"
+        }
+      ]
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.main_blog.blocks.title.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main_blog.blocks.title.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

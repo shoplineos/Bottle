@@ -1,0 +1,22 @@
+{{#component "script" src="./input-number.js" | asset_url() /}}
+
+<theme-input-number>
+  <button name="minus" type="button" {{#if props.min == props.value || props.disabled}}disabled{{/if}}>
+    {{#component "icons/minus" /}}
+  </button>
+  <input
+    class="body3"
+    type="number"
+    value="{{props.value | default(1)}}"
+    step="{{props.step | default(1)}}"
+    min="{{props.min | default(1)}}"
+    max="{{props.max | default(99999)}}"
+    autocomplete="off"
+    {{#if props.name}}name="{{props.name}}"{{/if}}
+    {{#if props.form_id}}form="{{props.form_id}}"{{/if}}
+    {{#if props.disabled}}disabled{{/if}}
+  />
+  <button name="plus" type="button" {{#if props.max == props.value || props.disabled}}disabled{{/if}}>
+    {{#component "icons/plus" /}}
+  </button>
+</theme-input-number>

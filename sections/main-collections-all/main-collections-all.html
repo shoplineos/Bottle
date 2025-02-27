@@ -1,0 +1,29 @@
+{{#component "stylesheet" src="./main-collections-all.css" | asset_url() /}}
+
+<div class="section-main-collections-all color-{{section.settings.color_scheme.id}}">
+  {{#content "blocks" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_collections_all.name",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.main_collections_all.settings.color_scheme.label",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "limit": 1
+    },
+    {
+      "type": "$list",
+      "limit": 1
+    }
+  ]
+}
+{{/schema}}

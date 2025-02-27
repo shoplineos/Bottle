@@ -1,0 +1,111 @@
+{{#component "stylesheet" src="./faq.css" | asset_url() /}}
+
+<div
+  class="faq-section {{section.settings | class_list()}} color-{{section.settings.color_scheme.id}}"
+  data-section-id="{{section.id}}"
+>
+  <section class="page-width">
+    {{#content "blocks" /}}
+  </section>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.faq.name",
+  "icon": "frequentlyAskedQuestions",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.faq.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "switch",
+      "id": "expand_first_label",
+      "label": "t:sections.faq.settings.expand_first_label.label",
+      "default": false
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.faq.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "40px",
+        "column-gap": "40px",
+        "@media (--mobile)": {
+          "row-gap": "20px",
+          "column-gap": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.faq.settings.spacing.label",
+      "default": {
+        "padding-block-start": "60px",
+        "padding-inline-end": "30px",
+        "padding-block-end": "60px",
+        "padding-inline-start": "30px",
+        "@media (--mobile)": {
+          "padding-block-start": "24px",
+          "padding-inline-end": "20px",
+          "padding-block-end": "24px",
+          "padding-inline-start": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.faq.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "max_blocks": 2,
+  "blocks": [
+    {
+      "type": "$heading",
+      "name": "t:sections.faq.blocks.$heading.name",
+      "limit": 1
+    },
+    {
+      "type": "$group",
+      "name": "t:sections.faq.blocks.$group.name",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "category": "t:sections.faq.presets.presets_0.category",
+      "name": "t:sections.faq.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "$heading"
+        },
+        {
+          "type": "$group",
+          "blocks": [
+            {
+              "type": "$collapsible-group",
+              "blocks": [
+                {
+                  "type": "$collapsible-panel"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

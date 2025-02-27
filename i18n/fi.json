@@ -1,0 +1,1178 @@
+{
+  "blog": {
+    "blog": {
+      "next": "Seuraava",
+      "previous": "Edellinen",
+      "read_more": "Katso lisää",
+      "related_articles": "Aiheeseen liittyvät blogit"
+    },
+    "blog_list": {
+      "empty_description": "Tässä blogissa ei ole blogikirjoituksia.",
+      "readmore": "Lue lisää",
+      "title": "Blogi",
+      "view_more": "Näytä lisää"
+    },
+    "comment": {
+      "comment": "Kommentti",
+      "comment_audit_tip": "Kommenttisi on lähetetty ja se on tarkistettava.",
+      "comment_empty": "Ole hyvä ja täytä kommentit",
+      "email": "Posti",
+      "email_empty": "Sähköposti ei voi olla tyhjä",
+      "email_format": "Anna oikea sähköpostiosoite",
+      "form_title": "Kommentti",
+      "loadmore": "lataa lisää",
+      "moderated_tip": "Huomaa, että kommentit tulee hyväksyä ennen kuin ne voidaan julkaista",
+      "name": "Nimi",
+      "name_empty": "Täytä nimi",
+      "post_comment": "Julkaise kommentti",
+      "single_count": "{{count}} kommenttia",
+      "submit": "Lähetä",
+      "submit_audit_tip": "Lähetetty onnistuneesti, odottaa tarkistusta",
+      "success": "Lähetetty onnistuneesti",
+      "title": "{{comment_length}} kommenttia"
+    },
+    "general": {
+      "back": "Takaisin blogiin",
+      "back_to": "Palata takaisin {{{collectionTitle}}}"
+    }
+  },
+  "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "Tämä tuote myydään vain aluksi määrällä {{num}}"
+        },
+        "most": {
+          "desc": "Tämä tuote myydään vain enintään {{num}}:n määrällä"
+        },
+        "noIncrement": {
+          "desc": "Tätä tuotetta myydään vain {{num}}:n suuruisella lisäyksellä"
+        }
+      }
+    },
+    "cart": {
+      "added_to_cart": "Lisätty ostoskoriin",
+      "buy_now": "OSTA NYT",
+      "cancel": "Peruuta",
+      "cart_subtotal": "Ostoskorin välisumma",
+      "cart_view": "Näytä ostoskori",
+      "confirm": "OK",
+      "got_it": "Ymmärretty"
+    },
+    "cart_error": "Ostoskorin päivittämisessä oli virhe. Yritä uudelleen.",
+    "cart_quantity_error": "Voit lisätä ostoskoriin vain {{quantity}} tuotteita.",
+    "checkout": {
+      "max_amount_limit": "Ylitit kassalle maksettavan enimmäissumman"
+    },
+    "checkout_proceeding": {
+      "checkout": "KASSALLE",
+      "checkout_proceed": "Alla olevat tuotteet ylittävät ostorajan, siirrytäänkö silti kassalle?",
+      "continue": "Jatka",
+      "continue_shopping": "JATKA OSTOKSILLE",
+      "day": "päivää",
+      "remove": "Poista",
+      "return_to_cart": "Palaa ostoskoriin",
+      "subtotal": "Välisumma",
+      "tax_included": "Sisältäen verot"
+    },
+    "couponCode": {
+      "exceedLimit": "Alennuskoodit ylittävät määrärajan",
+      "existCode": "Alennuskoodi on jo olemassa",
+      "list": {
+        "unavailable": "Kaikki alennuskoodit ovat vanhentuneet"
+      },
+      "notSupport": {
+        "stacked": "Alennuskoodeja ei voi pinota"
+      },
+      "unavailable": "Alennuskoodi on vanhentunut"
+    },
+    "discount": {
+      "coupon_code_amount": "Kuponki",
+      "coupon_code_length_limit": "Kuponkikoodi saa olla enintään {{range}} merkkiä.",
+      "expected_discount": "Alennus"
+    },
+    "discount_item": {
+      "buy_limit5": "Voit ostaa kerralla enintään {{stock}} tuotetta alennuksilla"
+    },
+    "discount_price": {
+      "buy_limit1": "Tällä alennushinnalla on jäljellä vain {{stock}} kappaletta",
+      "buy_limit2": "Tätä tuotetta voit ostaa kerralla {{stock}} kpl alennuksilla",
+      "buy_limit3": "Voit ostaa vain {{stock}} kappaleen tätä tuotetta alennuksilla"
+    },
+    "error": {
+      "default": "Virhe resurssien lataamisessa",
+      "noshipping": "Ei valinnaista rahtisuunnitelmaa",
+      "order": "Ei voinut pyytää sekvenssiä",
+      "renew": "Tietojen päivittäminen epäonnistui"
+    },
+    "general": {
+      "continue_as_a_guest": "Jatka vieraana",
+      "support_oneTime_purchase_only": "Tuote tukee vain yksittäisiä ostoa",
+      "support_subscription_only": "Tuote tukee ostoa vasta tilaus jälkeen"
+    },
+    "item": {
+      "add_limit2": "Yhden tuotteen enimmäismäärä on 99999 kappaletta",
+      "click_to_view": "Napsauta nähdäksesi",
+      "custom_preview": "Mukautettu esikatselu",
+      "empty_cart": "Ostoskorisi on tällä hetkellä tyhjä.",
+      "item_left": "{{stock}} kpl varastossa",
+      "market": {
+        "illegal": {
+          "excludedState": "Markkinoiden tuotteet ovat laittomia, tuotteet suljetaan pois markkinoilta"
+        }
+      },
+      "none_existent": "Tavaransa ovat olemattomat"
+    },
+    "next_step": {
+      "calculated_taxes_fees": "Verot ja toimituskulut lasketaan seuraavassa vaiheessa",
+      "included_taxes_fees": "Tämä sisältää jo verot. Toimituskulut lasketaan kassalla",
+      "taxes_included_and_shipping_at_checkout": "Sisällytettävä vero ja toimitus lasketaan kassalla",
+      "taxes_included_and_shipping_policy": "Verot sisältyvät hintaan. <a href=\"{{link}}\"> rahti </a>, joka lasketaan oston lopussa",
+      "taxes_not_included_and_shipping_policy_at_checkout": "Verot ja toimituskulut , jotka lisätään kassalla"
+    },
+    "notices": {
+      "change_password_after_verification": "Voit vaihtaa salasanaa vahvistuksen jälkeen",
+      "excess_product": "Alla olevat tuotteet ylittävät ostorajan, vaihda tuotteiden määrät",
+      "product_amount_limit": "Anteeksi! Ostoskorissa olevien tuotteiden määrä ylittää sen rajan.",
+      "product_selected_invalid": "Valitettavasti valitsemaasi tuotetta ei ole saatavilla Valitse uudelleen",
+      "store_nonexistent": "Myymälää ei löydy"
+    },
+    "order": {
+      "invalid_order_number": "virheellinen tilausnumero",
+      "paymentVoucher": {
+        "downloadDoc": "Ladataan tiedostoa",
+        "format": "Muoto",
+        "formatLimit": "Tuetaan .jpg-, .png- ja .pdf-tiedostomuotoja, joiden tiedostokoko on alle 20 Mt. Voit ladata enintään 5 kuvaa",
+        "uploadAmount": "{{num}} kuponki(a) ladattiin",
+        "uploadLimit": "Lataa .jpg-, .png- ja .pdf-tiedostoja, joiden tiedostokoko on alle 20 Mt."
+      },
+      "payment_voucher_confirmation": "Sain sen",
+      "shipping_address": "Toimitusosoite",
+      "sign_in": "Tai kirjaudu sisään jollakin seuraavista tavoista",
+      "tax_included": "Sisältää {{price}} verot",
+      "try_again": "Lataus epäonnistui. Yritä uudelleen.",
+      "try_later": "järjestelmä varattu, yritä myöhemmin uudelleen.",
+      "upload_bank_transfer_vouhcer_for_confirmation": "Lataa pankkisiirtokuponki, niin vahvistamme sen.",
+      "upload_image_within_10_m_b": "Lataa JPG-, PNG- tai GIF-kuvia 10 Mt:n sisällä"
+    },
+    "payment": {
+      "channel": "Maksukanava",
+      "create_time": "Luotu",
+      "free": "Ilmainen",
+      "log_in": "Siirry kirjautumaan sisään",
+      "payment_details": "Maksutiedot",
+      "pending_review": "Maksaminen",
+      "reference_number": "Tapahtuman viitenumero",
+      "status": "Tila",
+      "subtotal_price": "Välisumma",
+      "sum": "Määrä",
+      "total_sum": "Yhteensä",
+      "update_time": "Päivitetty"
+    },
+    "policy": {
+      "privacy_policy": "Tietosuojakäytäntö"
+    },
+    "product": {
+      "unavailable_sale": "Tämä tuote ei tue verkkomyyntiä"
+    },
+    "promotion": {
+      "no_promotion": "Tuotteet, joihin alennus ei sovellu"
+    },
+    "shpping": {
+      "service_terms": "Käyttöehdot"
+    },
+    "stock": {
+      "limit": "Vain {{stock}} kpl jäljellä"
+    },
+    "subscription": {
+      "information": "Tilaus"
+    },
+    "tips": {
+      "agree_with_the_shop": "Hyväksyn",
+      "change_binding_after_verification": "Voit yhdistää/vaihtaa {{value}} vahvistuksen jälkeen",
+      "forget_password": "Unohdin salasanan",
+      "proceed_to_checkout": "Siirry maksamaan",
+      "reset_password": "Olet vaihtamassa tilin {{account}} salasanaa"
+    }
+  },
+  "customer": {
+    "account": {
+      "account_binding": "Tilin linkittäminen",
+      "account_information": "Tili",
+      "address": "Osoite",
+      "bind": "Linkitys",
+      "birthday": "Syntymäpäivä",
+      "change_password": "Vaihda salasana",
+      "confirm_btn": "Vahvistaa",
+      "confirm_subscription_modal_btn": "Vahvista tilaus",
+      "confirm_subscription_modal_content": "Olet tehnyt tilauksen aiemmin. Vahvistusviesti on lähetetty tähän sähköpostiosoitteeseen. Voit vahvistaa sähköpostillasi tai napsauttaa tätä painiketta.",
+      "confirm_subscription_modal_title": "Vahvista sähköpostitilauksesi.",
+      "credit_card_number": "Luottokortin korttinumero",
+      "deadline": "Kaupallista raportointia varten tilaus on aina näkyvissä. Tilitietosi poistetaan 9 päivän kuluttua, voit peruuttaa ennen tätä päivämäärää",
+      "delete_account": "Sulje tili",
+      "delete_account_email": "Sähköposti",
+      "delete_account_notify": "Voit hakea tämän tilin sulkemista. Sulkemisen jälkeen kaikki tämän tilin tunnistamista koskevat tiedot poistetaan, mukaan lukien:",
+      "delete_deadline_tip": "Käyttäjätiedot poistetaan osoitteessa {{time}}",
+      "email": "Sähköposti",
+      "email_repeat_tip": "Sähköpostiosoite on jo rekisteröity",
+      "email_subscribe_invalid_tip": "Virheellinen sähköpostiosoite",
+      "first_name": "Nimi",
+      "gender": "Sukupuoli",
+      "gender_female": "Nainen",
+      "gender_male": "Mies",
+      "gender_secret": "En halua kertoa",
+      "invalidEmail": "Virheellinen sähköpostiosoite",
+      "ip_address": "IP-osoite",
+      "last_name": "Sukunimi",
+      "modify_email": "Muokkaa sähköpostia",
+      "modify_email_modal_title": "Muokkaa sähköpostia",
+      "modify_phone": "Muokkaa puhelinnumeroa",
+      "modify_phone_modal_title": "Muokkaa puhelinnumeroa",
+      "name": "Nimi",
+      "next": "Seuraava",
+      "nickname_empty_error": "Tyhjäksi ei saa jättää kumpaakaan Etunimi ja Sukunimi -kohdista",
+      "not_set": "Ei asetettu",
+      "password": "Salasana",
+      "personal_information": "Henkilökohtaisia tietoja",
+      "phone": "Matkapuhelinnumero",
+      "reset_password_error_hint": "Linkitä ensin sähköposti tai matkapuhelinnumero",
+      "revoke": "Peruuta sulkeminen",
+      "revoke_btn": "Peruuta uloskirjautuminen",
+      "revoke_message": "Tämä tili suljetaan parhaillaan, tilitiedot poistetaan {{time}} ja ennen sitä päivää voit peruuttaa sulkemisprosessin",
+      "save_btn": "TALLENNA",
+      "select_date": "Valitse päivämäärä",
+      "subscribe_confirm_tip": "Kiitos tilaamisesta.",
+      "timeout_tip": "Operaatio aikakatkaistiinn, vahvista uudelleen",
+      "unknow_error_tip": "Palvelupoikkeus, yritä myöhemmin uudelleen",
+      "unregister": "Tilin peruuttaminen",
+      "username": "Nimi",
+      "verify_email_message": "Ennen tilin sulkemista meidän on vahvistettava henkilöllisyytesi\nSaat sähköpostiisi {{email}} vahvistussähköpostin",
+      "verify_phone_message": "Ennen tilin sulkemista meidän on vahvistettava henkilöllisyytesi\nSaat puhelimeesi {{phone}} vahvistusviestin"
+    },
+    "activate": {
+      "account_activated": "Tili on aktivoitu",
+      "apply_code": "Käytä koodia",
+      "apply_success": "Sovellettu",
+      "button": "Aktivoida",
+      "copy_success": "Kuponkikoodi kopioitu",
+      "discount_title": "Aktivoi tili ja hanki alennuskoodi",
+      "normal_title": "Aktivoi tili",
+      "normal_title_with_discount_code": "",
+      "subscription_text": "Tilaa sähköposteja saadaksesi päivityksiä, käyttääksesi eksklusiivisia tarjouksia ja paljon muuta.",
+      "success_title": "Onnittelut suuren alennuksen saamisesta",
+      "token_expired": "Linkki on vanhentunut"
+    },
+    "address": {
+      "add_address": "Lisää uusi osoite",
+      "address": "Osoite",
+      "address1": "Tarkempi osoite ",
+      "address2": "Tarkempi osoite 2",
+      "address_full_tip": "50 osoitetta on tallennettu ja tällä hetkellä ei voida lisätä muita osoitteita",
+      "adress_full_tip": "50 osoitetta on tallennettu ja tällä hetkellä ei voida lisätä muita osoitteita",
+      "city": "Kaupunki",
+      "common_max": "Alle {{max}} merkkiä!",
+      "common_min": "suurempi kuin {{min}} merkkiä",
+      "company": "Yritys",
+      "country": "Maa/Alue",
+      "default": "Oletus",
+      "delete_address": "Poista osoite",
+      "district": "Kaupunginosa",
+      "edit_last_name_hint": "Kirjoita tähän sukunimesi",
+      "edit_phone_hint": "Kirjoita tähän matkapuhelinnumerosi",
+      "edit_shipping_address": "MUOKKAA TOIMITUSOSOITETTA",
+      "first_name": "Etunimi",
+      "last_name": "Sukunimi",
+      "max_address_tip": "Jopa 50 osoitetta voidaan luoda",
+      "no_address_data": "Tällä hetkellä toimitusosoitetta ei ole saatavilla",
+      "no_adress_data": "Tällä hetkellä toimitusosoitetta ei ole saatavilla",
+      "phone": "Puhelinnumero",
+      "province": "Maakunta",
+      "set_default_address": "Aseta oletusosoitteeksi",
+      "zip_code": "Postinumero"
+    },
+    "company": {
+      "account": {
+        "billTitle": "Yrityksen laskutusosoite",
+        "link": "Yritystilihakemus",
+        "shipping": "Yrityksen toimitusosoite",
+        "title": "Yritystilihakemus"
+      },
+      "address": {
+        "placeholder": "Yksityiskohtainen osoite"
+      },
+      "address2": {
+        "placeholder": "Yksityiskohtainen osoite 2"
+      },
+      "bill": {
+        "sameAsCompany": "Yrityksen laskutusosoite on sama kuin yrityksen toimitusosoite"
+      },
+      "billing": {
+        "address": {
+          "placeholder": "Yksityiskohtainen osoite"
+        },
+        "address2": {
+          "placeholder": "Yksityiskohtainen osoite 2"
+        },
+        "city": {
+          "placeholder": "Kaupunki"
+        },
+        "country": {
+          "placeholder": "Maa/Regio"
+        },
+        "district": {
+          "placeholder": "Piiri"
+        },
+        "phone": {
+          "placeholder": "Matkapuhelinnumero"
+        },
+        "province": {
+          "placeholder": "Maakunta"
+        },
+        "zip": {
+          "placeholder": "Postinumero"
+        }
+      },
+      "billingSameAsShipping": {
+        "placeholder": "Yrityksen laskutusosoite on sama kuin toimitusosoite."
+      },
+      "billing_address": {
+        "title": "Yrityksen laskutusosoite"
+      },
+      "city": {
+        "placeholder": "Kaupunki"
+      },
+      "company_name": {
+        "placeholder": "Yrityksen nimi"
+      },
+      "country": {
+        "placeholder": "Maa/Regio"
+      },
+      "create": {
+        "limit": "Kaupan yritysten määrä on saavuttanut rajansa. Ota yhteyttä myyjään saadaksesi apua.",
+        "success": "Kiitos. Lomake on lähetetty."
+      },
+      "district": {
+        "placeholder": "Piiri"
+      },
+      "email": {
+        "placeholder": "Postilaatikko"
+      },
+      "field": {
+        "companyName": "Yrityksen nimi",
+        "email": "Sähköposti"
+      },
+      "first_name": {
+        "placeholder": "Sukunimet"
+      },
+      "form": {
+        "submit": "Lähetä"
+      },
+      "last_name": {
+        "placeholder": "Nimet"
+      },
+      "phone": {
+        "placeholder": "Matkapuhelinnumero"
+      },
+      "province": {
+        "placeholder": "Maakunta"
+      },
+      "register": {
+        "button": "Lähetä",
+        "success": {
+          "description": "Lomake on lähetetty onnistuneesti.",
+          "title": "Kiitos täyttämisestä!"
+        },
+        "title": "Yritystilin hakemus"
+      },
+      "shipping_address": {
+        "title": "Yrityksen toimitusosoite"
+      },
+      "zip": {
+        "placeholder": "Postinumero"
+      }
+    },
+    "email": {
+      "mail_common": "Posti"
+    },
+    "forget_password": {
+      "forget_password_tips": "Unohdin salasanan",
+      "reset_password": "SALASANAN VAIHTAMINEN",
+      "tips_password_can_be_changed_after_verification": "Voit vaihtaa salasanaa vahvistuksen jälkeen",
+      "tips_reset_password": "Olet vaihtamassa tilin {{account}} salasanaa",
+      "token_expired": "Salasanan palautus linkki on vanhentunut"
+    },
+    "general": {
+      "account": "TILI",
+      "and_button": "ja",
+      "apr": "Huhti",
+      "april": "Huhtikuu",
+      "aug": "Elo",
+      "august": "Elokuu",
+      "back_to_user_center": "Takaisin käyttäjän keskukseen",
+      "bind_change_email": "Yhdistä/Vaihda sähköposti",
+      "bind_change_phone": "Yhdistä/Vaihda matkapuhelinnumero",
+      "bind_email": "Yhdistä sähköposti",
+      "bind_phone": "Yhdistä matkapuhelin",
+      "bind_success": "Yhdistetty",
+      "cancel": "PERUUTA",
+      "cancel_common": "Peruuta",
+      "cancel_mobile_button": "peruutettu",
+      "clear_button": "Tyhjennä",
+      "company_empty_hint": "Yrityksen nimi ei voi olla tyhjä",
+      "company_existed": "Yrityksen nimi on jo käytössä.",
+      "company_frequent_operation": "Toista toimenpide, yritä myöhemmin uudelleen",
+      "company_registry_closed": "Kauppias ei ole ottanut yritystilin hakutoimintoa käyttöön, ota yhteyttä kauppiaaseen hakeaksesi hakemusta.",
+      "confirm": "OK",
+      "confirm_button": "OK",
+      "continue_as_a_guest": "Jatka vieraana",
+      "date_format": "dd.MM.yyyy",
+      "dec": "Joulu",
+      "december": "Joulukuu",
+      "edit": "Muokkaa",
+      "email": "Sähköpostiosoite",
+      "email_empty_hint": "Kirjoita tähän sähköpostiosoite",
+      "email_error_hint": "Kirjoita tähän sähköpostiosoite kelvollisessa muodossa ja sen pituus on oltava enintään 50 merkkiä",
+      "email_tip": "Lähetämme sinulle tekstiviestin salasanan vaihtamiseksi",
+      "enter_verification_code": "Kirjoita tähän vahvistuskoodi",
+      "feb": "Helmi",
+      "february": "Helmikuu",
+      "first_day": "1",
+      "fr": "Pe",
+      "fri": "Pe",
+      "friday": "Perjantai",
+      "image_size_less_than_tips": "Kuvien tulee olla pienempiä kuin {{max}} Mt",
+      "jan": "Tammi",
+      "january": "Tammikuu",
+      "jul": "Heinä",
+      "july": "Heinäkuu",
+      "jun": "Kesä",
+      "june": "Kesäkuu",
+      "login_method": "Tai kirjaudu sisään jollakin seuraavista tavoista",
+      "mar": "Maalis",
+      "march": "Maaliskuu",
+      "max_image_upload_tips": "Voit ladata enintään {{max}} kuvaa",
+      "may": "Toukokuu",
+      "may_short": "Touko",
+      "mo": "Ma",
+      "mon": "Ma",
+      "monday": "Maanantai",
+      "network_error_message": "Ei internetiä",
+      "new_email": "Uusi postilaatikko",
+      "new_phone": "Uusi puhelin",
+      "nov": "Marras",
+      "november": "Marraskuu",
+      "oct": "Loka",
+      "october": "Lokakuu",
+      "ok": "OK",
+      "okay_common": "OK",
+      "orders": "Tilaukset",
+      "password": "Salasana",
+      "password_empty_hint": "Kirjoita tähän salasana",
+      "phone": "Matkapuhelinnumero",
+      "phone_empty_message": "Kirjoita tähän matkapuhelinnumero",
+      "phone_error_message": "Kirjoita matkapuhelinnumero kelvollisessa muodossa",
+      "phone_number_error_message": "Kirjoita tähän käytössä oleva matkapuhelinnumero",
+      "phone_tip": "Lähetämme sinulle tekstiviestin salasanan vaihtamiseksi",
+      "proceed_to_checkout": "Siirry maksamaan",
+      "register": "Kirjaudu",
+      "repeat_passport_error": "Syötetyt salasanat eivät täsmää",
+      "repeat_password": "Kirjoita salasana uudelleen",
+      "resend": "Lähetä uudelleen",
+      "sa": "La",
+      "sat": "La",
+      "saturday": "Lauantai",
+      "save": "TALLENNA",
+      "select_date": "Valitse päivämäärä",
+      "send": "Lähetä",
+      "send_error": "Lähetä ensin vahvistuskoodi",
+      "send_verification_code_hint": "Syötä salasana uudelleen",
+      "sep": "Syys",
+      "september": "Syyskuu",
+      "set_password": "Salasanan tulee olla 6-18 merkkiä, joka koostuu numeroista, isoista ja pienistä kirjaimista",
+      "sign_in": "KIRJAUDU SISÄÄN",
+      "sign_in_activate": "Vahvistuskoodi on lähetetty tilillesi {{account}}. Voit aktivoida tilisi vahvistuksen jälkeen",
+      "sign_in_activate_title": "Tilin aktivointi",
+      "sign_out": "Kirjaudu ulos",
+      "sign_up": "KIRJAUDU",
+      "su": "Su",
+      "subscription_desc": "Hanki uusimmat uutiset kaupasta",
+      "sun": "Su",
+      "sunday": "Sunnuntai",
+      "th": "To",
+      "thu": "To",
+      "thursday": "Torstai",
+      "time_format": "HH:mm",
+      "title": "Sivun otsikko",
+      "today": "Tänään",
+      "tu": "Ti",
+      "tue": "Ti",
+      "tuesday": "Tiistai",
+      "update_passport": "Vaihda salasana",
+      "user_agreement_tip": "Lue ja hyväksy ensin käyttösopimus",
+      "username": "Sähköpostiosoite/Matkapuhelinnumero",
+      "username_empty_hint": "Kirjoita tähän sähköpostiosoite tai matkapuhelinnumero",
+      "verification_code": "Vahvistuskoodi",
+      "verification_code_sent_tip": "Vahvistuskoodi on lähetetty tilillesi",
+      "verification_code_success": "Vahvistuskoodi on lähetetty kirjautua sisään {{type}} <em>{{value}}</em>, syötä alla oleva koodi.",
+      "verift_account_tip": "Vahvista tilisi ja vaihda salasana",
+      "we": "Ke",
+      "wed": "Ke",
+      "wednesday": "Keskiviikko"
+    },
+    "login": {
+      "member_login_common": "Kirjaudu jäsenpalveluun",
+      "subscribe_confirm_tip": "Kiitos tilaamisesta. Voit kirjautua sisään paremman kokemuksen saamiseksi."
+    },
+    "message": {
+      "format_error": "Viestin muotoa ei tueta",
+      "input_placeholder": "Onko jotain, josta haluat jättää viestin?",
+      "message": "Viesti",
+      "send": "Lähetä"
+    },
+    "phone": {
+      "mobile_common": "Puhelinnumero"
+    },
+    "register": {
+      "go_to_login": "Siirry kirjautumaan sisään",
+      "privacy_policy": "Tietosuojakäytäntö",
+      "terms_of_service": "Käyttöehdot",
+      "tips_agree_with_the_shop": "Hyväksyn"
+    },
+    "subscribe": {
+      "email_has_bind": "Tämä sähköpostiosoite on sidottu toiseen tiliin",
+      "phone_has_bind": "Tämä puhelin on sidottu toiseen tiliin"
+    },
+    "subscription": {
+      "email": "Sähköposti",
+      "email_subscribe_error_tip": "Tämä sähköpostiosoite on yhdistetty toiseen tiliin",
+      "email_subscription_text": "Saat tiedot kampanjoista sähköpostitse tilattuasi uutiskirjeemme",
+      "line": "LINE",
+      "messenger": "Messenger",
+      "phone": "Matkapuhelinnumero",
+      "phone_subscribe_error_tip": "Tämä matkapuhelin on yhdistetty toiseen tiliin",
+      "phone_subscription_text": "Tilaa markkinointiviesti tekstiviestinä",
+      "reason_other_length": "Kirjoita enintään 300 sanaa",
+      "reason_other_placeholder": "Sisällön syöttö",
+      "save_button": "TALLENNA",
+      "subscribe_button": "TILAA",
+      "subscription_cancel_text": "LOPETA TILAUS",
+      "subscription_hint": "Tilattu",
+      "subscription_title": "Tilaus",
+      "unsubscribe": "Lopeta tilaus",
+      "unsubscribe_btn": "Lopeta tilaus",
+      "unsubscribe_confirm_text": "Lopeta tilaus",
+      "unsubscribe_feedback_text": "Et saa meiltä enää markkinointipäivityksiä. Voit tilata uudelleen milloin tahansa",
+      "unsubscribe_feedback_title": "Olet peruuttanut <italic>{{name}}</italic>-postituslistan tilauksen",
+      "unsubscribe_reason1": "En enää saa näitä sähköposteja",
+      "unsubscribe_reason2": "Saan paljon sähköposteja",
+      "unsubscribe_reason3": "En tilannut tätä luetteloa",
+      "unsubscribe_reason4": "Sähköpostit eivät ole minulle merkityksellisiä",
+      "unsubscribe_reason5": "Sähköpostin sisältö on erittäin laaja",
+      "unsubscribe_reason6": "Muiden",
+      "unsubscribe_subtitle": "Olemme pahoillamme, että lähdit! Kerro meille, miksi peruit tilaus:",
+      "unsubscribe_success": "Tilaus on peruutettu. Siirryt etusivulle",
+      "unsubscribe_tip": "Et saa enää uusinta kampanjaa kerran, kun olet peruuttanut tilauksen.",
+      "unsubscribe_title": "Lopeta tilaus"
+    },
+    "unsubscribe": {
+      "content_placeholder": "Anna sisältö",
+      "goto_btn": "Mene kauppaan",
+      "notyet": "Et ole vielä tilannut",
+      "notyet_desc": "Voit mennä kauppaan tilaamaan",
+      "success": "Tilaus peruttu",
+      "success_tip": "Olet peruuttanut myymälän {{storeName}} tilauksen"
+    }
+  },
+  "filters": {
+    "clear_all_filter": "Poista kaikki",
+    "max_price": "Korkein hinta on {{ price }}",
+    "price": {
+      "label": "Hinta"
+    },
+    "product_count": "{{product_count}} Osa tuottee",
+    "reset": "Aseta uudelleen"
+  },
+  "footer": {
+    "subscribe": {
+      "error": "Tilaus epäonnistui"
+    }
+  },
+  "general": {
+    "404": {
+      "subtext": "Etsimääsi sivua ei ole olemassa.",
+      "title": "404 sivua ei löydy"
+    },
+    "abandon": {
+      "Order": {
+        "risk": "Liian monta pyyntöä"
+      }
+    },
+    "activate_account_discount": "Aktivoi tilisi ja saat alennuskoodin",
+    "address": {
+      "address": "Osoite"
+    },
+    "contact_us": {
+      "contact_us": "OTA YHTEYTTÄ MEIHIN",
+      "send_success": "Kiitos yhteydenotosta, ja vastaamme sinulle mahdollisimman pian.",
+      "success_feedback": "Kiitos, että otit meihin yhteyttä. Vastaamme mahdollisimman pian."
+    },
+    "copy_button_text": "Kopioida",
+    "copy_success_text": "Linkki on kopioitu leikepöydälle",
+    "footer": {
+      "copyright": "© {{year}} {{storeName}}",
+      "subscribe_format_error": "Virhe sähköpostiosoitteen muodossa",
+      "subscribe_success": "Tilaaminen onnistui"
+    },
+    "general": {
+      "accept": "Hyväksyä",
+      "decline": "Lasku",
+      "email_tip": "Virheellinen postilaatikko. Syötä uudelleen",
+      "home": "Kotisivu",
+      "link": "Tietosuojakäytäntö",
+      "loading": "Lataus",
+      "more": "Enemmän",
+      "no_data": "Tietoja ei ole saatavilla",
+      "pack_up": "Vähemmän",
+      "privacy_policy": "Tietosuojakäytäntö",
+      "proofing_tip": "PAHOITTELEMME,ETSIMÄSI KAUPPA ON SULJETTU JUURI NYT,<br/>KOITA MYÖHEMMIN UUDELLEEN.",
+      "tel_phone": "Puhelinnumero",
+      "tips": "Käyttökokemuksesi parantamiseksi käytämme evästeitä muistaaksemme kirjautumistiedot, kerätäksemme tilastoja ja toimittaaksemme kiinnostuksen kohteidesi mukaan räätälöityä sisältöä. Hyväksy evästeet klikkaamalla Hyväksy tai tutustu tietosuojakäytäntöömme.",
+      "title": "Välitämme yksityisyydestäsi",
+      "username": "Nimi"
+    },
+    "handle_success": "Onnistunut operaatio",
+    "header": {
+      "cart": "Ostoskorisi",
+      "center": "Käyttäjän keskus",
+      "close": "Sulje",
+      "login": "Kirjaudu sisään",
+      "no_currency_fallback": "Sopivaa valuuttaa ei löytynyt",
+      "search_input_placeholder": "Kirjoita hakusana tähän ja napsauta Hae-painiketta"
+    },
+    "order_tracking": {
+      "code": "Vahvistuskoodi",
+      "email": "Sähköposti",
+      "form_error": "Kysely epäonnistui",
+      "orderId": "tilausnumero",
+      "orderId_error": "Tilaustunnus ei voi olla tyhjä",
+      "other_email": "Sähköpostiosoite",
+      "other_phone": "Matkapuhelinnumero",
+      "phone": "Matkapuhelinnumero",
+      "query_illegal": "järjestystä ei ole olemassa",
+      "risk_black_user": "Tämä tili on vaarassa",
+      "risk_interception": "järjestystä ei ole olemassa",
+      "submit_btn": "Katso tilaus",
+      "username": "Sähköposti/Puhelinnumero"
+    },
+    "password": {
+      "back": "Takaisin",
+      "entry_store": "Siirry kauppaan",
+      "forget_password": "Pääsy salasanalla",
+      "goto_admin": "Kirjaudu sisään nyt",
+      "i_am_admin": "Olen omistaja",
+      "input_password": "Syötä salasana",
+      "log_in_here": "Rekisteröidy täällä",
+      "password_is_error": "Väärä salasana, yritä uudelleen",
+      "use_password_enter": "Käytä salasanaa päästäksesi kauppaan",
+      "you_are_admin": "Oletko kauppias?"
+    },
+    "policy": {
+      "service": "Käyttöehdot",
+      "shipping": "Toimitusehdot"
+    },
+    "search": {
+      "search": "Kirjoita hakusana tähän ja napsauta Hae-painiketta",
+      "search_hint": "Etsi “{{key}}”"
+    },
+    "select": {
+      "placeholder": "Valikoida..."
+    },
+    "share_button_text": "Jakaa"
+  },
+  "onboarding": {
+    "product_title": "Esimerkkituotteen nimi"
+  },
+  "order": {
+    "buy_again": "Osta uudelleen",
+    "checkout_order": {
+      "pay_amount": "maksaa summa",
+      "receiver_account": "vastaanottajan tili",
+      "reference_number": "viitenumero",
+      "upload_time": "latausaika",
+      "upload_voucher": "Lataa kuponki",
+      "voucher_amount_limit": "Voit ladata enintään 5 kuponkia."
+    },
+    "detail": {
+      "dutyFee": "Tariffi",
+      "orderstatus": {
+        "detail": "Yksityiskohta"
+      }
+    },
+    "fulfillment": {
+      "createTime": "Toimitusaika:{{time}}"
+    },
+    "order_details": {
+      "adjust": "Pyöristys",
+      "details": "Tilauksen tiedot",
+      "insuranceService": "Vakuutuspalvelut",
+      "insuranceService_applyClaim": "Hae vaatimusta",
+      "insuranceService_content_line1_email": "1. Politiikka on lähetetty sähköpostiisi \"{{email}}\" by {{serviceName}}. Jos et ole saanut käytäntötietoja, ota yhteyttä kaupan asiakaspalveluun. ",
+      "insuranceService_content_line1_phone": "1. Lähde hankittiin {{serviceName}}:n kautta. Jos sinulla on kysyttävää, ota yhteyttä kaupan asiakaspalveluun.",
+      "insuranceService_content_line2": "2. Jos kuljetuksen aikana on vahinko, menetys, viivästys tai muu tilanne, voit hakea vaatimusta.",
+      "order": "Tilaus",
+      "products": {
+        "price": "Hinta",
+        "quantity": "Määrä"
+      },
+      "remark": "Tilauksen huomautukset",
+      "tax_included": "Sisältää {{price}} verot",
+      "time": "Tilausaika:"
+    },
+    "order_list": {
+      "item_amount": "tuotetta ({{item}})",
+      "no_more_information": "Enempää tietoa ei ole saatavilla",
+      "no_record": "Tällä hetkellä ei ole tilaushistoriaa, jatka ostoksille",
+      "package_amount": "Paketti{{num}}（{{item}} tuotetta ）",
+      "total_amount": "Yhteensä {{transPackages}} kpl tuotteita"
+    },
+    "order_status": {
+      "canceled": "Peruutettu",
+      "click_to_track": "Seuraa pakettiasi napsauttamalla alla olevaa linkkiä:",
+      "contact_us": "Ota yhteyttä meihin",
+      "help_tips": "Tarvitsetko apua? Ota yhteyttä: {{email}}",
+      "payment_voucher_transfer_success": "Maksu siirretty onnistuneesti",
+      "payment_voucher_waiting_for_payment": "odottaa maksua",
+      "sequence": "Nro. {{id}}",
+      "tracking": "Seuranta"
+    },
+    "payment": {
+      "authorized": "Valtuutettu",
+      "billing_address": "Laskutusosoite",
+      "detail": "Tarkemmat tiedot",
+      "method": "Maksutapa",
+      "paid": "Maksettu",
+      "partially_paid": "Osittain maksettu",
+      "partially_refund": "Osa hyvitys",
+      "paying": "Maksaminen",
+      "payment": "Maksaminen",
+      "payment_status": "Maksun tilanne",
+      "refund": "Palautettu",
+      "unpaid": "Maksamatta"
+    },
+    "shipping": {
+      "information": "Tiedot",
+      "no_information": "Toimitustietoja ei ole vielä saatavilla, tarkista myöhemmin.",
+      "package_tracking": "Paketin seuranta",
+      "partially_shipped": "Osittainen toimitus",
+      "preparing_order": "Tuotteiden valmistelu",
+      "processing_amount": "Käsitellään ({{num}} tuotetta)",
+      "shipped_order": "Toimitettu"
+    }
+  },
+  "products": {
+    "collection": {
+      "collection": "Kategoria"
+    },
+    "filters": {
+      "clear": "Selvä",
+      "clear_all_filter": "Poista kaikki",
+      "confirm": "Vahvistaa",
+      "filter_and_sort": "Näyttö ja lajittelu",
+      "filter_button": "Näyttö",
+      "in_stock_only": "Vain varastossa",
+      "less_than": "vähemmän kuin",
+      "max_price": "Korkein hinta on {{ price }}",
+      "more_than": "enemmän kuin",
+      "price": {
+        "label": "Hinta"
+      },
+      "product_count": "{{product_count}} Osa tuottee",
+      "reset": "Aseta uudelleen",
+      "sort_button": "Lajittelu",
+      "stock": {
+        "label": "Tarjonta asema",
+        "value": "Pistetavaroita"
+      }
+    },
+    "general": {
+      "added_to_cart_successfully": "Lisätty onnistuneesti ostoskoriin",
+      "load_more_btn": "Ladataan lisää kohteita",
+      "load_more_items": "Ladataan {{current_offset}} ~ {{last_current_offset}} kohdetta {{total}}",
+      "loading_btn": "Lataa lisää",
+      "no_product_data_found": "Tuotetietoja ei löytynyt Yritä myöhemmin uudelleen",
+      "sold_out": "Loppuunmyyty",
+      "unavailable": "Tätä tuotetta ei ole enää saatavilla"
+    },
+    "giftcard": {
+      "balance": "Tase",
+      "buy_giftcard": "Osta lahjakortti",
+      "description": "Tässä on {{price}} lahjakortti {{shop}}",
+      "expired_date": "New-osoite",
+      "invalid_tip": "Lahjakortti on virheellinen, osta uusi",
+      "permanent": "Vakituinen",
+      "receive_at": "Lisää osoite",
+      "receive_tip": "Hanki lahjakortti",
+      "seoTitle": "{{ shop }} -lahjakorttisi saldo on {{ value }}!",
+      "title": "Lahjakortti",
+      "use_giftcard": "Tallenna lahjakortti",
+      "use_giftcard_tip": "Voit vähentää kirjoittamalla lahjakortti numeron ruutuun"
+    },
+    "product_details": {
+      "activity_toast_price_limit": "Tämän rajoitetun tuotteen sallittu enimmäismäärä on {{num}}",
+      "activity_toast_product_limit": "Osto on rajoitettu {{stock}} kampanjatuotteeseen",
+      "activity_toast_title_limit": "Alla olevat tuotteet ylittävät ostorajan",
+      "amount": "Määrä",
+      "buy_more_save_more": "Osta lisää Säästä enemmän!",
+      "cancel": "Peruuta",
+      "copy_button_text": "Kopioida",
+      "copy_success_text": "Linkki on kopioitu leikepöydälle",
+      "country_region": "Maa/Alue",
+      "default_placeholder": "Valitse {{attrName}}",
+      "description": "Kuvaus",
+      "each_price": "{{price}}/kpl",
+      "email": "Sähköposti",
+      "enter_email_address": "Kirjoita tähän sähköpostiosoite",
+      "enter_valid_email_address": "Kirjoita tähän käytössä oleva sähköpostiosoite",
+      "give_us_more_of_your_information": "Voit halutessasi lähettää lisätietoja, jotta voimme tarjota juuri Sinulle parhaiten sopivimmat palvelut.",
+      "go_to_amazon_by_link": "Osta Amazonista",
+      "go_to_rakuten_by_link": "Osta LOTTESTA",
+      "go_to_yahoo_by_link": "Osta Yahoosta",
+      "in_stock": "Varastossa saatavilla",
+      "inventory_in_stock": "Varastoissa",
+      "inventory_in_stock_show_count": "Varasto : {{ quantity }} jäljellä",
+      "inventory_low_stock": "Matala varasto:",
+      "inventory_low_stock_show_count": "Matala varasto: {{ quantity }} jäljellä",
+      "inventory_out_of_stock": "Varasto loppuneet",
+      "inventory_out_of_stock_continue_selling": "Varastoissa",
+      "inventory_quantity": "Varaston määrä",
+      "leave_us_message": "Kirjoita tähän viestisi",
+      "leave_us_message_get_back": "Jätäthän meille viestin ja olemme Sinuun päin yhteydessä mahdollisimman pian.",
+      "link_preview_does_not_support": "Linkin esikatselun toimintaa ei tueta",
+      "load_more": "Lataa lisää",
+      "maximum_length_of_message": "Viestin pituus saa olla enintään 1500 sanaa.",
+      "message": "Viestisi",
+      "moq_increment": "Useita {{num}}:sta",
+      "moq_increment_tips": "Ostoskoriin lisätty määrä tukee vain {{num}}:n kerrannaisia",
+      "moq_max_tips": "Enintään {{num}} kappaleen osto tällä eritelmällä",
+      "moq_maximum": "Enimmäisosto {{num}}",
+      "moq_min_tips": "Yli {{num}} on ostettava tätä määritystä varten",
+      "moq_minimum": "Vähimmäisosto {{num}}",
+      "more_payment_options": "Lisää maksutapavaihtoehtoja",
+      "name": "Nimi",
+      "optional": "Valinnainen",
+      "phone_number": "Puhelinnumero",
+      "price": "Hinta",
+      "price_break_title": "Joukkohinnoittelu",
+      "price_breaks_view_less": "Piilota",
+      "price_breaks_view_more": "Näytä lisää",
+      "product_enquiry": "Tuotekysely",
+      "share_button_text": "Jakaa",
+      "shipping_policy": "<a href=\"{{ link }}\">Toimitus</a> lasketaan kassalla",
+      "submission_failed": "Lähetys epäonnistui, yritä uudelleen",
+      "submission_successfully": "Lähetetty onnistuneesti",
+      "submit": "Lähetä",
+      "table_each_price": "{{price}}kpl",
+      "table_each_price_ssr": "{{{priceDom}}}kpl",
+      "tax_included": "sisältäen verot",
+      "taxes_included": "Sisällytettävä vero",
+      "view_details": "Näytä tiedot",
+      "view_product_detail": "Näytä tuotteen tarkemmat tiedot"
+    },
+    "product_list": {
+      "add_to_cart": "LISÄÄ OSTSKORIIN",
+      "filter": "Suodatin",
+      "filters_selected": "{{count}} on valittu",
+      "from_price": "Alkaen {{price}}",
+      "infinite_btn_desc": "{{last_current_offset}} {{total}}-kohteista",
+      "less": "vähemmän",
+      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} {{total}}-kohteista",
+      "load_more_tip": "Ladataan lisää kohteita",
+      "more": "lisää",
+      "more_product_num": "{{num}} Tuotteet",
+      "new_arrivals": "Uusimmat",
+      "new_products": "Alenevassa luomisjärjestyksessä",
+      "no_product": "Valitettavasti tässä kokoelmassa ei ole tuotteita",
+      "one_product_num": "{{num}} Tuote",
+      "price_break_tag": "Saatavilla joukkohinnoittelu",
+      "price_high_to_low": "Kalleimmat ensin",
+      "price_low_to_high": "Halvimmat ensin",
+      "product_has_been_removed": "Tuote on poistunut valikoimasta",
+      "product_sold_out": "LOPPUUNMYYTY",
+      "products": "tuotetta",
+      "quick_shop": "Pikakauppa",
+      "recommend": "Suositeltuja",
+      "sale": "Myyntiin",
+      "save": "Alennus {{{priceDom}}}",
+      "save_byjs": "Alennus {{priceDom}}",
+      "save_ratio": "{{price}}% alennus",
+      "select_product_all_options": "Valittu tuotevaihtoehto on puutteellinen tai ei ole saatavilla. Valitse uudelleen",
+      "show": "Näytä",
+      "sort_button": "Lajittelu",
+      "top_sellers": "Myydyimmät"
+    },
+    "product_search": {
+      "back_to_home": "Takaisin etusivulle",
+      "ount_results": "{{count}} tulosta",
+      "results_found_for": "{{count}} tulosta löytyi haulle ”{{keyword}}”",
+      "search": "Etsi",
+      "search_no_results": "Hakuasi ”{{keyword}}” vastaavia tuloksia ei löytynyt"
+    },
+    "recently_viewed_products": {
+      "recently_viewed_products": "Äskeittäin katsotut tuotteet"
+    }
+  },
+  "reduction_code": {
+    "giftcard": "Lahjakortit"
+  },
+  "sales": {
+    "discount_coupon": {
+      "active_date_until": "Voimassa: {{endTime}}",
+      "applied": "Sovellettu",
+      "applied_successfully": "Alennuskoodia käytettiin onnistuneesti",
+      "apply": "Lähetä",
+      "buy_x_get_y_all_discount_content": "Hanki {{benefitCount}}{{discount}} POIS PÄÄLTÄ",
+      "buy_x_get_y_all_free_content": "Hanki {{benefitCount}} ILMAISEKSI",
+      "buy_x_get_y_discount_content": "{{discount}} inaktivoitu",
+      "buy_x_get_y_free_content": "ILMAINEN",
+      "buy_x_get_y_threshold": "Osta {{threshold}} ja hanki{{benefitCount}}",
+      "coupon_content_level": "{{level}} varten",
+      "coupon_discount_content": "{discount} alennusta",
+      "coupon_not_found": "Alennuskoodia ei ole",
+      "failed_to_apply_coupon_code": "Sovellus epäonnistui",
+      "free_shipping": "Ilmainen toimitus",
+      "get_code": "Hanki alennuskuponkeja",
+      "popup_label": "Tallennetut kuponkit :",
+      "shipping_rate_below": "Rahti on pienempi kuin {value}",
+      "specified_customer": "Kiinteille asiakkaille",
+      "threshold": "Osta {threshold}"
+    },
+    "flash": {
+      "day": "päivä",
+      "days": "päivää"
+    },
+    "general": {
+      "activity_banner_benefit": "{{benefit}} inaktivoitu",
+      "activity_banner_copy_success_text": "Kuponkikoodin kopio",
+      "activity_banner_free_shipping": "Ilmainen toimitus",
+      "activity_selector_new_arrivals": "Uudet arkistot",
+      "activity_selector_price_high_to_low": "Hinta korkeasta matalaan",
+      "activity_selector_price_low_to_high": "Hinta alhaisesta korkeaan",
+      "activity_selector_recommended": "Suosituksia",
+      "apply_common": "Lähetä",
+      "bundle_save_tip": "Säästä {{amount}} ostaessasi tuotteet yhdessä",
+      "bundle_title": "Usein yhdessä ostetut tuotteet",
+      "common_buy_now": "Osta nyt",
+      "coupon_code_copied": "Kuponkikoodin kopio",
+      "coupon_code_copy": "Kopioida",
+      "flash_sale_text": "FLASH-MYYNTI",
+      "flash_sale_tip": "Osto rajoitus: {{count}} asia(t)",
+      "hot_sale": "Nyt myynnissä!",
+      "product_tabs_benefit_amount_locked": "Saat {{benefitAmount}}-alennuksen",
+      "product_tabs_benefit_amount_unlocked": "{{benefitAmount}}-alennus on avattu!",
+      "product_tabs_benefit_discount_locked": "Saat {{offPercent}}%-alennuksen",
+      "product_tabs_benefit_discount_unlocked": "{{offPercent}}%-alennus on avattu!",
+      "product_tabs_benefit_free_locked": "Ilmainen tarjous",
+      "product_tabs_benefit_free_unlocked": "Ilmainen tarjous on avattu!",
+      "product_tabs_benefit_unlocked_tip": "Voit nyt nauttia tuotteen alennuksesta",
+      "product_tabs_code_benefit_amount_unlocked": "Saat {{benefitCount}} tuotetta {{benefitAmount}} alennuksella",
+      "product_tabs_code_benefit_discount_unlocked": "Hanki {{benefitCount}} {{offPercent}}% POIS PÄÄLTÄ",
+      "product_tabs_code_benefit_free_unlocked": "Hanki {{benefitCount}} ILMAISEKSI",
+      "product_tabs_threshold": "Osta {{threshold}}",
+      "purchase_limit": "Osto on rajoitettu {{count}} asia(t) edistämiseen tuote",
+      "purchase_limit_each_item": "Osto on rajoitettu {{count}} asia(t) jokaiselle muunnelmalle",
+      "purchase_limit_each_product": "Osto on rajoitettu {{count}} asia(t) jokaiselle edistämiseen tuote",
+      "select_promotional_product": "{{selectCount}} tapahtumatuotetta valittu",
+      "sold": "{{count}} myyty"
+    },
+    "gift": {
+      "got_all_gifts_tip": "Onnea! Sinulla on {{saved}} ILMAINEN Lahja!",
+      "not_meet_amount_tip": "Osta {{threshold}} lisää, nauti jopa {{willSave}} ILMAINEN Lahja",
+      "not_meet_quantity_tip": "Osta {{threshold}} lisää kohteita, hyödynnä jopa {{willSave}} ILMAINEN Lahja",
+      "select": "Valitse",
+      "select_gift_tip": "Onnea! Voit hyödynnä jopa {{willSave}} ILMAINEN Lahja",
+      "spend_more_money_get_more_tip": "Onnea! Saatu {{saved}} ilmainen lahjaa jo! Käytä {{threshold}} lisää, nauti jopa {{willSave}} ILMAINEN Lahja",
+      "spend_more_quantity_get_more_tip": "Onnea! Saatu {{saved}} ilmainen lahjaa jo! Osta {{threshold}} lisää, nauti jopa {{willSave}} ILMAINEN Lahja"
+    },
+    "promotion": {
+      "discount_tag": {
+        "b11_t1_free": "Ostaessasi {{threshold}} tuotetta, saat yhden tuotteen ilmaiseksi!",
+        "b11_t1_normal": "Ostaessasi {{threshold}} tuotetta, saat {{save}} alennuksen yhdestä tuotteesta!",
+        "b1_t0": "Ostaessasi {{threshold}} säästät {{save}}",
+        "b1_t1": "Ostaessasi {{threshold}} saat {{save}} alennusta",
+        "b2_t0": "Ostaessasi {{threshold}} säästät {{save}}",
+        "b2_t1": "Ostaessasi {{threshold}} SAAT {{save}} ALENNUSTA",
+        "label": "Alennus:"
+      }
+    }
+  },
+  "search": {
+    "count_results": "{{count}} tulosta",
+    "product_list": {
+      "title": "tuotetta"
+    }
+  },
+  "trade": {
+    "order_summary": {
+      "rounding": "Pyöristys"
+    },
+    "payments_name": {
+      "COD": "Postiennakko",
+      "MultiplePayment": "Monikanavaiset maksut",
+      "Paypal": "Paypal",
+      "adjustPay": "manual",
+      "mpay": {
+        "alipay": "Alipay (For Real-name user of the Mainland China.)",
+        "mpay": "MPay (For MPay Users)"
+      },
+      "third_part": "Credit-kortti"
+    },
+    "reduction_code": {
+      "giftcard": "Lahjakortit"
+    }
+  },
+  "transaction": {
+    "contact": {
+      "discounts_stack_not": "Alennus on jo käytetty tähän tilaukseen. Et voi lisätä toista alennusta."
+    },
+    "couponCode": {
+      "freeShipping": {
+        "existCode": "Alennuskoodi toistuvaa ilmaista toimitusta varten"
+      }
+    },
+    "discount": {
+      "code": {
+        "country_not_support": "Maksu kuponkikoodi ilmaista toimitusta varten - maa ei täsmää",
+        "logistics_fee_over_limit": "Kuponkikoodi ilmaista toimitusta varten - toimituskulut ylittävät rajan"
+      },
+      "code_error": "Alennuskoodi on syötetty väärin",
+      "code_item_unmatched": "{{discountCode}} on syötetty oikein, mutta tuotteen hinta tai määrä ei täytä vaatimuksia",
+      "code_overdue": "Kuponkikoodi on vanhentunut",
+      "code_user_exceedLimit": "Se, kuinka monta kertaa käyttäjä käyttää tätä toimintaa, ylittää rajan",
+      "code_user_notSupport": "Käyttäjä ei voi käyttää tätä aktiviteettia",
+      "coupon_code": "Kuponkikoodi",
+      "coupon_invalid_for_the_shipping_method": "{{discountCode}} -kuponki on voimassa toimitustavalle",
+      "discount_codes_cannot_stack": "Tuotteelle on jo suosikki tapahtuma, jota ei voida käyttää yhdessä muiden suosikkitapahtumien kanssa",
+      "use_coupon_alone": "Tätä kuponkikoodia ei voi yhdistää muihin kampanja- tai alennustarjouksiin."
+    },
+    "general": {
+      "discount_off": "Alennus",
+      "free_charge": "Ilmainen toimitus",
+      "free_shipping": "Ilmainen toimitus",
+      "order_seller_discount": "Myyjän antama lisäalennus",
+      "order_tax": "Verottaa",
+      "order_tip": "Tippi",
+      "payment_subtotal_cost": "Välisumma",
+      "point_discount": "Alennus pisteistä",
+      "shipping_fee": "Toimitus",
+      "trade_coupon_discount": "Alennus"
+    },
+    "item": {
+      "invalid_product": "Tuotteet, joita alennus ei koske",
+      "remove_invalid_product": "Poista nämä tuotteet",
+      "removed": "VIRHEELLINEN",
+      "sold_out": "Loppuunmyyty"
+    },
+    "lack_multilingualism": "*Tämä lausunto ei latautunut. Ota yhteyttä asiakaspalveluun tilanteen selvittämiseksi*",
+    "notices": {
+      "insufficient_product_inventory": "Tuotteita ei ole saatavilla",
+      "network": "Verkkovirhe",
+      "product_expired": "Tuote on vanhentunut",
+      "product_limit": "Tuoteraja on ylitetty"
+    },
+    "order": {
+      "deleted": "VIRHEELLINEN",
+      "rebuy": "Osta se uudelleen"
+    },
+    "payment": {
+      "continue_shopping": "Jatka ostoksia",
+      "more": "Lisää",
+      "saved": "Säästi",
+      "total": "Yhteensä"
+    },
+    "payment_disconut_channelinvalid_code": {
+      "tips": "Tämä alennuskoodi {{discountCode}} ei kelpaa myyntikanavalle"
+    },
+    "policy": {
+      "refund_policy": "Palautusoikeus"
+    },
+    "refund": {
+      "cost_points": "Hinta {{value}} pistettä",
+      "deduct_point": "Voit käyttää {{deductMemberPointNum}} pistettä säästäksesi {{deductMemberPointAmount}}"
+    }
+  },
+  "unvisiable": {
+    "applepay": {
+      "cancel": "Peruuttaa",
+      "enquire": "Jatka tilauksen tekemistä Apple Pay: llä?",
+      "paywith": "Maksaa"
+    },
+    "customer": {
+      "error_message_1": "Tilaa minulle sähköpostit saadaksesi päivityksiä, pääsyn eksklusiivisiin tarjouksiin ja paljon muuta.",
+      "error_message_1001": "Salasanavirhe",
+      "error_message_1002": "Käyttäjää ei ole olemassa",
+      "error_message_1003": "Tili on väliaikaisesti lukittu",
+      "error_message_1004": "Saa se toimimaan usein. Yritä uudelleen myöhemmin",
+      "error_message_1005": "Koodi on vanhentunut",
+      "error_message_1006": "Koodivirhe",
+      "error_message_1007": "Käytä usein varmennuskoodia. Lataa vahvistuskoodi",
+      "error_message_1008": "Yhdistä määrittämättä kolmansien osapuolien kanavia",
+      "error_message_1009": "Ei voi soittaa kolmannen osapuolen käyttöliittymään",
+      "error_message_1010": "Älä lähetä",
+      "error_message_1011": "Tiliä ei ole aktivoitu Rekisteröidy saadaksesi salasanan ja muut tiedot.",
+      "error_message_1012": "Palvelu Poikkeus",
+      "error_message_1013": "Palvelu Poikkeus",
+      "error_message_1014": "Älä tarkista varmennuskoodi",
+      "error_message_1015": "Tarkista dynaaminen varmennuskoodi",
+      "error_message_1016": "Palvelu Poikkeus",
+      "error_message_1017": "Tilinumero aiheuttaa riskin",
+      "error_message_1018": "Postilaatikko liitettiin",
+      "error_message_1020": "Kirjautumisen aikakatkaisu",
+      "error_message_1021": "Kirjautumisen aikakatkaisu",
+      "error_message_1022": "Tilinumero on sidottu",
+      "error_message_1023": "Palvelu Poikkeus",
+      "error_message_1024": "Palvelu Poikkeus",
+      "error_message_1035": "Lähetä vahvistuskoodi",
+      "error_message_2": "Palvelu Poikkeus",
+      "error_message_2001": "Matkapuhelinnumero on jo rekisteröity",
+      "error_message_2002": "Sähköpostiosoite on jo rekisteröity",
+      "error_message_2003": "Älä yritä kovin usein",
+      "error_message_2004": "Koodi on vanhentunut",
+      "error_message_2005": "Koodivirhe",
+      "error_message_2006": "Liian monta vahvistuspyyntöä lyhyen ajan sisällä, pyydä vahvistuskoodi uudelleen",
+      "error_message_2007": "Palvelupoikkeus, yritä myöhemmin uudelleen",
+      "error_message_2014": "Tilit ovat vaarassa",
+      "error_message_2016": "Tilit ovat vaarassa",
+      "error_message_2020": "Järjestelmä on varattu. Yritä myöhemmin uudelleen",
+      "error_message_3": "Oleskelu on liian pitkä, päivitä sivu.",
+      "error_message_3001": "Palvelupoikkeus, yritä myöhemmin uudelleen",
+      "error_message_3002": "Käyttäjät, jotka on linkitetty matkapuhelinnumeroonsa/sähköpostiinsa, yrittävät vaihtaa salasanaa",
+      "error_message_3003": "Älä yritä kovin usein",
+      "error_message_3004": "Koodi on vanhentunut",
+      "error_message_3005": "Koodivirhe",
+      "error_message_3006": "Liian monta vahvistuspyyntöä lyhyen ajan sisällä, pyydä vahvistuskoodi uudelleen",
+      "error_message_3007": "Matkapuhelinnumeroa ei ole olemassa",
+      "error_message_3008": "Sähköpostiosoitetta ei ole olemassa",
+      "error_message_3009": "Tämä matkapuhelinnumero on linkitetty muihin tileihin",
+      "error_message_3010": "Tämä sähköpostiosoite on linkitetty muihin tileihin",
+      "error_message_3014": "Koodin lähettäminen epäonnistui",
+      "error_message_3015": "Tili on aktivoitu",
+      "error_message_3021": "Järjestelmä on varattu. Yritä myöhemmin uudelleen",
+      "error_message_3022": "Linkki on vanhentunut",
+      "error_message_3023": "Linkki on väärässä muodossa",
+      "error_message_3024": "Linkki ei ole hyvä.",
+      "error_message_3026": "Tilin muodon virhe",
+      "error_message_3027": "Salasana ei saa olla sama kuin viimeksi。",
+      "error_message_3029": "Matkapuhelinnumeron aktivointi ei ole toistaiseksi mahdollista",
+      "error_message_4": "Palvelu Poikkeus",
+      "error_message_5": "Palvelu Poikkeus",
+      "error_message_6": "Palvelu Poikkeus",
+      "error_message_7": "Salasanan tulee olla 6-18 merkkiä, joka koostuu numeroista, isoista ja pienistä kirjaimista"
+    },
+    "editorSwitchCountryTip": "Toimittaja ei tue maiden vaihtoa",
+    "shopby": {
+      "button": {
+        "show": "Turvallisesti ja nopeammin"
+      }
+    }
+  }
+}

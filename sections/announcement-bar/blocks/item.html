@@ -1,0 +1,55 @@
+<div
+  class="announcement-bar__group-item
+    {{props.section_settings | class_list()}}
+    color-{{block.settings.color_scheme.id}}
+    {{#if block.settings.divide_line}}announcement-bar__group-item-divide-line{{/if}}"
+    data-color-scheme="color-{{block.settings.color_scheme.id}}"
+    {{{block.shopline_attributes}}}
+>
+  <div class="announcement-bar__group-item-inner">
+    {{#if block.settings.link}}
+      <a href="{{block.settings.link | default("javascript:;")}}" class="announcement-bar__group-item-link"></a>
+    {{/if}}
+    <div class="rte body4">
+      {{{block.settings.content}}}
+    </div>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.announcement_bar.blocks.item.name",
+  "icon": "announcementBar",
+  "tag": "",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:sections.announcement_bar.blocks.item.settings.content.label",
+      "default": "30-day postage paid returns"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:sections.announcement_bar.blocks.item.settings.link.label"
+    },
+    {
+      "id": "color_scheme",
+      "type": "color_scheme",
+      "label": "t:sections.announcement_bar.blocks.item.settings.color_scheme.label",
+      "default": "scheme-4"
+    },
+    {
+      "id": "divide_line",
+      "type": "switch",
+      "label": "t:sections.announcement_bar.blocks.item.settings.divide_line.label",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.announcement_bar.blocks.item.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

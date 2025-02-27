@@ -1,0 +1,115 @@
+{{#if blog.comments_enabled}}
+  <div class="main-article__comment" {{{block.shopline_attributes}}}>
+    <div class="main-article__comment-content">
+      <div class="main-article__comment-title title4">
+        {{#if article.comments_count == 1}}
+          {{"blog.comment.single_count" | t(count=article.comments_count)}}
+        {{#else/}}
+          {{"blog.comment.title" | t(comment_length=article.comments_count)}}
+        {{/if}}
+      </div>
+
+      {{#var comments_paginate = article | get_comment_pagination(5) /}}
+
+      {{#if (comments_paginate.list | size()) > 0}}
+        <ul class="main-article__comment-list">
+          {{#for comment in comments_paginate.list}}
+            <li class="main-article__comment-item">
+              <div class="body3">{{comment.content}}</div>
+              <div class="body6 main-article__comment-info">
+                <span>{{comment.author}}</span>
+                <span>{{comment.created_at | date(format="abbreviated_date")}}</span>
+              </div>
+            </li>
+          {{/for}}
+        </ul>
+      {{/if}}
+
+      {{#component "pagination/pagination" paginate=comments_paginate /}}
+    </div>
+
+    {{#new_comment_form article class="main-article__comment-form"}}
+      {{#var post_message /}}
+      {{#if blog.moderated && form.posted_successfully}}
+        {{#set post_message = "blog.comment.comment_audit_tip" | t() /}}
+      {{#else/}}
+        {{#set post_message = "blog.comment.success" | t() /}}
+      {{/if}}
+      <div class="title4 main-article__comment-form-title">{{"blog.comment.post_comment" | t()}}</div>
+      {{#if form.errors.messages}}
+        <div class="field__info field__info--error body6">
+          {{#component "icons/error" /}}{{form.errors.messages}}
+        </div>
+      {{/if}}
+      {{#if form.posted_successfully}}
+        <div class="field__info body6">
+          {{#component "icons/success" /}}{{post_message | t()}}
+        </div>
+      {{/if}}
+      <div {{#if !blog.moderated}}class="main-article__comments-fields"{{/if}}>
+        <div class="main-article__comment-fields">
+          <label class="field field--with-error">
+            <input type="text" name="comment[author]" class="field__input" autocomplete="name" value="{{form.author}}" required placeholder="{{`customer.account.name` | t()}}" />
+            <span class="field__label">
+              {{"customer.account.name" | t()}}
+            </span>
+          </label>
+
+          {{#component
+            "input/input-email"
+            class="field--with-error"
+            input_name="comment[email]"
+            input_autocomplete="email"
+            input_class="field__input"
+            input_value=form.email
+            input_autocorrect="off"
+            input_autocapitalize="off"
+            input_required=true
+            input_placeholder="customer.account.email" | t()
+          /}}
+        </div>
+
+        <label class="field field--with-error">
+          <textarea
+            rows="5"
+            name="comment[body]"
+            class="field__input textarea"
+            required
+            placeholder="{{`blog.comment.post_comment` | t()}}"
+            value="{{form.body}}"
+          >{{form.body}}</textarea>
+          <span class="field__label">
+            {{"blog.comment.post_comment" | t()}}
+          </span>
+        </label>
+      </div>
+
+      {{#if blog.moderated}}
+        <div class="main-article__comment-tip body6">
+          {{"blog.comment.moderated_tip" | t()}}
+        </div>
+      {{/if}}
+      <div class="main-article__comment-submit">
+        <button type="submit" class="button">{{"blog.comment.post_comment" | t()}}</button>
+      </div>
+    {{/new_comment_form}}
+  </div>
+{{/if}}
+
+{{#schema}}
+{
+  "name": "t:sections.main_article.blocks.comment.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "group_header",
+      "label": "t:sections.main_article.blocks.comment.settings.group_header_0.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main_article.blocks.comment.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,80 @@
+{{#component "stylesheet" src="./main-search.css" | asset_url() /}}
+{{#component "script" src="./search-box.js" | asset_url() /}}
+
+<section class="page-width">
+  <div class="main-search
+    {{section.settings | class_list()}}
+    color-{{section.settings.color_scheme.id}}"
+    data-section-id="{{section.id}}"
+  >
+    
+    <div class="main-search__header">
+      <h4 class="main-search__title">{{"products.product_search.search" | t() }}</h4>
+
+      <theme-search-box class="main-search-box">
+        <form action="{{routes.search_url}}" method="get" class="main-search-box__form">
+          <input type="hidden" name="resourceType" value="collection,article,page" />
+
+          <label class="main-search-box__input">
+            <span class="main-search-box__icon body3" aria-label="Search">{{#component "icons/search" /}}</span>
+            <input class="field__input body2" name="keyword" type="search" value="{{search.terms}}" data-role="search-box-input" placeholder="{{`general.search.search` | t()}}" />
+          </label>
+
+          <button class="main-search-box__close main-search-box__icon button button--icon" aria-label="Clear keyword" data-role="search-box-clear" role="button" type="button">
+            {{#component "icons/close" /}}
+          </button>
+        </form>
+
+        <div class="main-search-box__result" data-role="search-box-result">
+          <div class="main-search-box__result-loading">
+            {{#component "icons/loading" class="header-search-bar__results-spinner" /}}
+          </div>
+
+          <form class="main-search-box__result-list" data-role="search-box-result-list" action="{{routes.search_url}}"></form>
+        </div>
+      </theme-search-box>
+    </div>
+
+    {{#if search.performed}}
+      <div class="main-search__count">
+        <h4 class="title-font-bold">{{"search.count_results" | t(count=search.results_count)}}</h4>
+
+        {{#if search.results_count == 0}}
+          <p class="body3">{{{"products.product_search.search_no_results" | t(keyword=search.terms)}}}</p>
+        {{/if}}
+      </div>
+
+      <div class="main-search__body">
+        {{#blocks}}
+          {{#block section=section /}}
+        {{/blocks}}
+      </div>
+    {{/if}}
+  </div>
+</section>
+
+{{#schema}}
+{
+  "name": "t:sections.main_search.name",
+  "settings": [
+    {
+      "id": "color_scheme",
+      "type": "color_scheme",
+      "label": "t:sections.main_search.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.main_search.settings.spacing.label",
+      "default": {}
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$results",
+      "limit": 1
+    }
+  ]
+}
+{{/schema}}

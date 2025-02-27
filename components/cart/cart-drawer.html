@@ -1,0 +1,58 @@
+
+
+{{#component "stylesheet" src="components/modal/index.css" | asset_url() /}}
+{{#component "stylesheet" src="./cart-drawer.css" | asset_url() /}}
+
+{{#component "script" src="components/modal/index.js" | asset_url() /}}
+{{#component "script" src="cart/base-items.js" | asset_url() /}}
+{{#component "script" src="./cart-drawer.js" | asset_url() /}}
+
+{{#var SCENE = "drawer" /}}
+
+<theme-cart-drawer data-cart-section-to-render>
+  <theme-modal data-placement="right" data-mask-closable data-esc-to-exit>
+    <details class="cart-drawer">
+      <summary></summary>
+      <div class="cart-drawer__body color-{{settings.cart_color_scheme.id}}">
+
+        <div class="cart-drawer__header">
+          <h2 class="title4">{{"general.header.cart" | t()}}</h2>
+          <button class="cart-drawer__close" type="button" name="close">
+            {{#component "icons/close" /}}
+          </button>
+        </div>
+
+        <div class="cart-drawer__inner">
+          {{#if cart && !cart.empty}}
+            <div class="cart-drawer__items">
+              {{#component "./widgets/cart-items" scene=SCENE /}}
+            </div>
+
+            <div class="cart-drawer__payment">
+              {{#if shop.cart_discount_enable}}
+                {{#component "./widgets/cart-coupon" /}}
+              {{/if}}
+
+              <div class="cart-drawer__amount">
+                {{#component "./widgets/cart-amount" show_total=false /}}
+              </div>
+            </div>
+          {{#else/}}
+            {{#component "./widgets/cart-empty" /}}
+          {{/if}}
+
+          <div class="cart-drawer__loading">
+            <div class="cart-drawer__loading-inn loading">
+              {{#component "icons/loading-spinner" /}}
+              <p class="body2">{{ "general.general.loading" | t()}}</p>
+            </div>
+          </div>
+        </div>
+
+        {{#if cart && !cart.empty}}
+        {{#component "./widgets/cart-fixed-checkout" scene=SCENE class_name="cart-drawer__fixed-checkout" /}}
+        {{/if}}
+      </div>
+    </details>
+  </theme-modal>
+</theme-cart-drawer>

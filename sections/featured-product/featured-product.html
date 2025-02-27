@@ -1,0 +1,113 @@
+{{#var product = section.settings.product /}}
+
+{{#capture content}}
+  {{#blocks}}
+    {{#block product=product /}}
+  {{/blocks}}
+{{/capture}}
+
+{{#component "product/detail" product=product can_update_url=false content=content section_type="featured-product" /}}
+
+{{#schema}}
+{
+  "name": "t:sections.featured_product.name",
+  "icon": "featuredProduct",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:sections.featured_product.settings.product.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.featured_product.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.featured_product.settings.layout.label",
+      "default": {
+        "flex-direction": "row",
+        "flex-wrap": "nowrap",
+        "row-gap": "60px",
+        "column-gap": "60px",
+        "@media (--mobile)": {
+          "flex-direction": "column",
+          "row-gap": "20px",
+          "column-gap": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.featured_product.settings.spacing.label",
+      "default": {
+        "padding-block-start": "24px",
+        "padding-block-end": "24px",
+        "padding-inline-start": "0px",
+        "padding-inline-end": "0px"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$product-media",
+      "limit": 1
+    },
+    {
+      "type": "$product-info",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "category": "t:sections.featured_product.presets.presets_0.category",
+      "name": "t:sections.featured_product.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "$product-media",
+          "settings": {}
+        },
+        {
+          "type": "$product-info",
+          "settings": {},
+          "blocks": [
+            {
+              "type": "product/detail-heading",
+              "settings": {}
+            },
+            {
+              "type": "product/detail-price",
+              "settings": {}
+            },
+            {
+              "type": "product/detail-variant-picker",
+              "settings": {}
+            },
+            {
+              "type": "product/detail-quantity-selector",
+              "settings": {}
+            },
+            {
+              "type": "product/detail-buy-buttons",
+              "settings": {}
+            },
+            {
+              "type": "product/detail-share",
+              "settings": {}
+            }
+          ]
+        }
+      ],
+      "block_order": [
+        "media",
+        "info"
+      ]
+    }
+  ]
+}
+{{/schema}}

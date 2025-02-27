@@ -1,0 +1,162 @@
+<style>
+{{{settings.sort_title_font | font_modify("weight", "400") | font_face()}}}
+{{{settings.sort_title_font | font_modify("weight", "500") | font_face()}}}
+{{{settings.sort_title_font | font_modify("weight", "600") | font_face()}}}
+{{{settings.sort_title_font | font_modify("weight", "700") | font_face()}}}
+{{{settings.sort_title_font | font_face()}}}
+{{{settings.sort_body_font | font_modify("weight", "400") | font_face()}}}
+{{{settings.sort_body_font | font_modify("weight", "500") | font_face()}}}
+{{{settings.sort_body_font | font_modify("weight", "600") | font_face()}}}
+{{{settings.sort_body_font | font_modify("weight", "700") | font_face()}}}
+{{{settings.sort_body_font | font_face()}}}
+
+:root {
+/* Exception text color */
+--color-error-message: 240, 73, 73;
+
+--color-page-background: {{settings.color_page_background.red}}, {{settings.color_page_background.green}}, {{settings.color_page_background.blue}};
+--color-mask: {{settings.color_mask.red}}, {{settings.color_mask.green}}, {{settings.color_mask.blue}};
+--color-shadow: {{settings.color_shadow.red}}, {{settings.color_shadow.green}}, {{settings.color_shadow.blue}};
+--color-sale: {{settings.color_sale.red}}, {{settings.color_sale.green}}, {{settings.color_sale.blue}};
+--color-discount: {{settings.color_discount.red}}, {{settings.color_discount.green}}, {{settings.color_discount.blue}};
+--color-tag-background: {{settings.color_tag_background.red}}, {{settings.color_tag_background.green}}, {{settings.color_tag_background.blue}};
+--color-tag-text: {{settings.color_tag_text.red}}, {{settings.color_tag_text.green}}, {{settings.color_tag_text.blue}};
+
+--color-image-background: {{settings.color_image_background.red}}, {{settings.color_image_background.green}}, {{settings.color_image_background.blue}};
+--color-image-loading-background: {{settings.color_image_loading_background.red}}, {{settings.color_image_loading_background.green}}, {{settings.color_image_loading_background.blue}};
+
+--color-cart-bubble: {{settings.color_cart_bubble.red}},{{settings.color_cart_bubble.green}},{{settings.color_cart_bubble.blue}};
+--color-cart-bubble-text: {{settings.color_cart_bubble_text.red}},{{settings.color_cart_bubble_text.green}},{{settings.color_cart_bubble_text.blue}};
+
+--button-border-thickness: {{settings.button_border_thickness}}px;
+--button-border-opacity: {{settings.button_border_opacity}}%;
+--button-border-radius: {{settings.button_border_radius}}px;
+--button-shadow-opacity: {{settings.button_shadow_opacity}}%;
+--button-shadow-offset-x: {{settings.button_shadow_offset_x}}px;
+--button-shadow-offset-y: {{settings.button_shadow_offset_y}}px;
+--button-shadow-blur: {{settings.button_shadow_blur}}px;
+
+--sort-title-font: "{{settings.sort_title_font.family}}", "{{settings.sort_title_font.fallback_families}}";
+--sort-title-font-weight: {{settings.sort_title_font.weight}};
+--sort-title-font-style: {{settings.sort_title_font.style}};
+--sort-title-letter-spacing: {{#if settings.sort_title_letter_spacing == 0}}0.00000001em{{#else/}}{{ settings.sort_title_letter_spacing | divided_by(1000, integer=false) }}em{{/if}};
+--sort-title-size: {{settings.sort_title_size}}px;
+--sort-title-line-height: {{settings.sort_title_line_height}};
+--sort-title-text-transform: {{#if settings.sort_title_uppercase}}uppercase{{#else/}}unset{{/if}};
+
+--sort-body-font: "{{settings.sort_body_font.family}}", "{{settings.sort_body_font.fallback_families}}";
+--sort-body-style: {{settings.sort_body_font.style}};
+--sort-body-weight: {{settings.sort_body_font.weight}};
+{{#var body_font_weight = settings.sort_body_font.weight /}}
+{{#var body_font_weight_bold = body_font_weight | plus(300) /}}
+--sort-body-weight-bold: {{#if body_font_weight >= 1000}}1000{{#else/}}{{body_font_weight}}{{/if}};
+--sort-body-letter-spacing: {{#if settings.sort_body_letter_spacing == 0}}0.00000001em{{#else/}}{{ settings.sort_body_letter_spacing | divided_by(1000, integer=false) }}em{{/if}};
+--sort-body-size: {{settings.sort_body_size}}px;
+--sort-body-line-height: {{settings.sort_body_line_height}};
+
+--input-border-thickness: {{settings.input_border_thickness}}px;
+--input-border-opacity: {{settings.input_border_opacity}}%;
+--input-border-radius: {{settings.input_border_radius}}px;
+{{#var input_border_radius_outset = 0 /}}
+{{#if settings.input_border_radius != 0}}
+  {{#set input_border_radius_outset = settings.input_border_radius | plus(settings.input_border_thickness) /}}
+{{/if}}
+--input-border-radius-outset: {{ input_border_radius_outset }}px;
+--input-shadow-opacity: {{settings.input_shadow_opacity}}%;
+--input-shadow-offset-x: {{settings.input_shadow_offset_x}}px;
+--input-shadow-offset-y: {{settings.input_shadow_offset_y}}px;
+--input-shadow-blur: {{settings.input_shadow_blur}}px;
+
+--card-border-thickness: {{settings.card_border_thickness}}px;
+--card-border-opacity: {{settings.card_border_opacity}}%;
+--card-border-radius: {{settings.card_border_radius}}px;
+--card-shadow-opacity: {{settings.card_shadow_opacity}}%;
+--card-shadow-offset-x: {{settings.card_shadow_offset_x}}px;
+--card-shadow-offset-y: {{settings.card_shadow_offset_y}}px;
+--card-shadow-blur: {{settings.card_shadow_blur}}px;
+
+--variant-selector-border-thickness: {{settings.variant_selector_border_thickness}}px;
+--variant-selector-border-opacity: {{settings.variant_selector_border_opacity}}%;
+--variant-selector-border-radius: {{settings.variant_selector_border_radius}}px;
+--variant-selector-shadow-opacity: {{settings.variant_selector_shadow_opacity}}%;
+--variant-selector-shadow-offset-x: {{settings.variant_selector_shadow_offset_x}}px;
+--variant-selector-shadow-offset-y: {{settings.variant_selector_shadow_offset_y}}px;
+--variant-selector-shadow-blur: {{settings.variant_selector_shadow_blur}}px;
+
+--modal-border-thickness: {{settings.modal_border_thickness}}px;
+--modal-border-opacity: {{settings.modal_border_opacity}}%;
+--modal-border-radius: {{settings.modal_border_radius}}px;
+--modal-shadow-opacity: {{settings.modal_shadow_opacity}}%;
+--modal-shadow-offset-x: {{settings.modal_shadow_offset_x}}px;
+--modal-shadow-offset-y: {{settings.modal_shadow_offset_y}}px;
+--modal-shadow-blur: {{settings.modal_shadow_blur}}px;
+
+--drawer-border-thickness: {{settings.drawer_border_thickness}}px;
+--drawer-border-opacity: {{settings.drawer_border_opacity}}%;
+--drawer-border-radius: {{settings.drawer_border_radius}}px;
+--drawer-shadow-opacity: {{settings.drawer_shadow_opacity}}%;
+--drawer-shadow-offset-x: {{settings.drawer_shadow_offset_x}}px;
+--drawer-shadow-offset-y: {{settings.drawer_shadow_offset_y}}px;
+--drawer-shadow-blur: {{settings.drawer_shadow_blur}}px;
+
+--product-card-border-thickness: {{ settings.product_card_border_thickness }}px;
+--product-card-border-opacity: {{ settings.product_card_border_opacity }}%;
+--product-card-border-radius: {{ settings.product_card_border_radius }}px;
+{{#var product_card_border_radius_outset = settings.product_card_border_radius | plus(settings.product_card_border_thickness) /}}
+{{#if settings.product_card_border_radius <= 0}}
+  {{#set product_card_border_radius_outset = 0 /}}
+{{/if}}
+--product-card-border-radius-outset: {{ product_card_border_radius_outset }}px;
+--product-card-shadow-opacity: {{ settings.product_card_shadow_opacity }}%;
+--product-card-shadow-offset-x: {{ settings.product_card_shadow_offset_x }}px;
+--product-card-shadow-offset-y: {{ settings.product_card_shadow_offset_y }}px;
+--product-card-shadow-blur: {{ settings.product_card_shadow_blur }}px;
+
+--collection-card-border-thickness: {{ settings.collection_card_border_thickness }}px;
+--collection-card-border-opacity: {{ settings.collection_card_border_opacity }}%;
+--collection-card-border-radius: {{ settings.collection_card_border_radius }}px;
+{{#var collection_card_border_radius_outset = settings.collection_card_border_radius | plus(settings.collection_card_border_thickness) /}}
+{{#if settings.collection_card_border_radius <= 0}}
+  {{#set collection_card_border_radius_outset = 0 /}}
+{{/if}}
+--collection-card-border-radius-outset: {{ collection_card_border_radius_outset }}px;
+--collection-card-shadow-opacity: {{ settings.collection_card_shadow_opacity }}%;
+--collection-card-shadow-offset-x: {{ settings.collection_card_shadow_offset_x }}px;
+--collection-card-shadow-offset-y: {{ settings.collection_card_shadow_offset_y }}px;
+--collection-card-shadow-blur: {{ settings.collection_card_shadow_blur }}px;
+
+--article-card-border-thickness: {{ settings.article_card_border_thickness }}px;
+--article-card-border-opacity: {{ settings.article_card_border_opacity }}%;
+--article-card-border-radius: {{ settings.article_card_border_radius }}px;
+{{#var article_card_border_radius_outset = settings.article_card_border_radius | plus(settings.article_card_border_thickness) /}}
+{{#if settings.article_card_border_radius <= 0}}
+  {{#set article_card_border_radius_outset = 0 /}}
+{{/if}}
+--article-card-border-radius-outset: {{ article_card_border_radius_outset }}px;
+--article-card-shadow-opacity: {{ settings.article_card_shadow_opacity }}%;
+--article-card-shadow-offset-x: {{ settings.article_card_shadow_offset_x }}px;
+--article-card-shadow-offset-y: {{ settings.article_card_shadow_offset_y }}px;
+--article-card-shadow-blur: {{ settings.article_card_shadow_blur }}px;
+
+--page-width: {{settings.page_width}}px;
+--grid-horizontal-spacing: {{ settings.grid_horizontal_spacing }}px;
+--grid-vertical-spacing: {{ settings.grid_vertical_spacing }}px;
+}
+
+{{#for scheme in settings.color_schemes}}
+.color-{{scheme.id}} {
+  --color-background: {{scheme.settings.color_background.red}},{{scheme.settings.color_background.green}},{{scheme.settings.color_background.blue}};
+  --color-text: {{scheme.settings.color_text.red}},{{scheme.settings.color_text.green}},{{scheme.settings.color_text.blue}};
+  --color-light-text: {{scheme.settings.color_light_text.red}},{{scheme.settings.color_light_text.green}},{{scheme.settings.color_light_text.blue}};
+  --color-entry-line: {{scheme.settings.color_entry_line.red}},{{scheme.settings.color_entry_line.green}},{{scheme.settings.color_entry_line.blue}};
+  --color-button-background: {{scheme.settings.color_button_background.red}},{{scheme.settings.color_button_background.green}},{{scheme.settings.color_button_background.blue}};
+  --color-button-text: {{scheme.settings.color_button_text.red}},{{scheme.settings.color_button_text.green}},{{scheme.settings.color_button_text.blue}};
+  --color-button-secondary-background: {{scheme.settings.color_button_secondary_background.red}},{{scheme.settings.color_button_secondary_background.green}},{{scheme.settings.color_button_secondary_background.blue}};
+  --color-button-secondary-text: {{scheme.settings.color_button_secondary_text.red}},{{scheme.settings.color_button_secondary_text.green}},{{scheme.settings.color_button_secondary_text.blue}};
+  --color-button-secondary-border: {{scheme.settings.color_button_secondary_border.red}},{{scheme.settings.color_button_secondary_border.green}},{{scheme.settings.color_button_secondary_border.blue}};
+  --color-button-text-link: {{scheme.settings.color_button_text_link.red}},{{scheme.settings.color_button_text_link.green}},{{scheme.settings.color_button_text_link.blue}};
+
+  color: rgba(var(--color-text));
+}
+{{/for}}
+</style>

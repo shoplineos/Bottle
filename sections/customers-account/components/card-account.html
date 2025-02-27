@@ -1,0 +1,36 @@
+<div class="card card-account">
+  <div class="body2 card__title">
+    <p class="card__title-text font-bold">{{"customer.account.account_information" | t()}}</p>
+    <div class="card__title-edit" data-edit-hide>{{#component "icons/edit" /}}</div>
+  </div>
+
+  <div class="card__detail body4">
+    
+    {{#component "./card-account-username" /}}
+
+    
+    {{#component "./card-account-email" /}}
+
+    
+    {{#component "./card-account-phone" /}}
+
+    
+    {{#component "./card-account-third-login" /}}
+
+    
+    {{#component "./card-account-delete" /}}
+
+  </div>
+
+  
+  <div class="card__actions hidden" data-edit-show>
+    
+    <div class="button button--secondary card__cancel">
+      {{"customer.general.cancel_common" | t()}}
+    </div>
+    <button type="submit" form="update-username-form" class="button">
+      {{"customer.account.confirm_btn" | t()}}
+      {{#component "icons/loading" class="button__spinner" /}}
+    </button>
+  </div>
+</div>

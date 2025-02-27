@@ -1,0 +1,38 @@
+{{#var template_directory = "" /}}
+{{#if template.directory}}
+  {{#set template_directory = template.directory | append("/") /}}
+{{/if}}
+{{#var template_suffix = "" /}}
+{{#if template.suffix}}
+  {{#set template_suffix = "." | append(template.suffix) /}}
+{{/if}}
+{{#capture section_template~}}
+  {{template_directory}}{{template.name}}{{template_suffix}}
+{{~/capture}}
+
+<div class="product-detail-wrapper color-{{section.settings.color_scheme.id}}">
+  <div class="page-width">
+    <theme-product-detail
+      class="product-detail {{section.settings | class_list()}} color-{{section.settings.color_scheme.id}}"
+      style="
+        --detail-padding-inline-start: {{section.settings.spacing | css_var(`padding-inline-start`)}};
+        --detail-padding-inline-end: {{section.settings.spacing | css_var(`padding-inline-start`)}};
+        --detail-padding-block-start: {{section.settings.spacing | css_var(`padding-block-start`)}};
+        --detail-padding-block-end: {{section.settings.spacing | css_var(`padding-block-end`)}};
+      "
+      data-desktop-direction="{{section.settings.layout[`flex-direction`]}}"
+      data-id="{{props.product.id}}"
+      data-url="{{props.product.url}}"
+      data-handle="{{props.product.handle}}"
+      data-section-id="{{section.id}}"
+      data-section-type="{{props.section_type}}"
+      data-section-template="{{section_template}}"
+      data-update-url="{{props.can_update_url}}"
+    >
+      {{#component "stylesheet" src="./detail.css" | asset_url() /}}
+      {{#component "script" src="./detail.js" | asset_url() /}}
+
+      {{{props.content}}}
+    </theme-product-detail>
+  </div>
+</div>

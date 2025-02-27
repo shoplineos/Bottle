@@ -1,0 +1,26 @@
+{{#layout "proofing" /}}
+
+<style>
+  html,body{
+    margin:0;
+    padding: 0;
+  }
+  .stage__proofing {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .stage__proofing--en {
+    margin-top: 46px;
+  }
+</style>
+<div class="page-width stage__proofing">
+  <div>
+    <img width="240" height="160" src="{{`images/image-store-close.png` | asset_url()}}" alt="close the store" />
+    <p class="body1 stage__proofing--en">
+      {{{"general.general.proofing_tip" | t() }}}
+    </p>
+  </div>
+</div>

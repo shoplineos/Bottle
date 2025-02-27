@@ -1,0 +1,85 @@
+{
+  "sections": {
+    "main-collection-cover": {
+      "type": "main-collection-cover",
+      "settings": {},
+      "blocks": {
+        "banner": {
+          "type": "$banner",
+          "settings": {},
+          "blocks": {
+            "banner_heading": {
+              "type": "$heading"
+            }
+          },
+          "block_order": ["banner_heading"]
+        },
+        "description": {
+          "type": "$description"
+        }
+      },
+      "block_order": ["banner", "description"]
+    },
+    "main-collection-products": {
+      "type": "main-collection-products",
+      "settings": {},
+      "blocks": {
+        "main-collection-products__card": {
+          "type": "product-list/card",
+          "settings": {},
+          "blocks": {
+            "main-collection-products__card__image": {
+              "type": "product-list/image",
+              "settings": {},
+              "blocks": {
+                "main-collection__product-list__card__image__layer-1": {
+                  "type": "product-list/layer",
+                  "settings": {
+                    "layout": {
+                      "justify-content": "flex-end"
+                    }
+                  },
+                  "blocks": {
+                    "main-collection__product-list__card__image__layer__quick-add-to-cart": {
+                      "type": "product-list/quick_add"
+                    }
+                  },
+                  "block_order": [
+                    "main-collection__product-list__card__image__layer__quick-add-to-cart"
+                  ]
+                },
+                "main-collection__product-list__card__image__layer-2": {
+                  "type": "product-list/layer",
+                  "blocks": {
+                    "main-collection__product-list__card__image__layer__discount-tag": {
+                      "type": "product-list/discount_tag"
+                    }
+                  },
+                  "block_order": [
+                    "main-collection__product-list__card__image__layer__discount-tag"
+                  ]
+                }
+              },
+              "block_order": ["main-collection__product-list__card__image__layer-1", "main-collection__product-list__card__image__layer-2"]
+            },
+            "main-collection-products__card__title": {
+              "type": "product-list/title",
+              "settings": {}
+            },
+            "main-collection-products__card__price": {
+              "type": "product-list/price",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "main-collection-products__card__image",
+            "main-collection-products__card__title",
+            "main-collection-products__card__price"
+          ]
+        }
+      },
+      "block_order": ["main-collection-products__card"]
+    }
+  },
+  "order": ["main-collection-cover", "main-collection-products"]
+}

@@ -1,0 +1,60 @@
+
+
+{{#component "stylesheet" src="components/modal/index.css" | asset_url() /}}
+{{#component "stylesheet" src="./cart-notification.css" | asset_url() /}}
+
+{{#component "script" src="components/modal/index.js" | asset_url() /}}
+{{#component "script" src="./cart-notification.js" | asset_url() /}}
+
+{{#var SCENE = "notification" /}}
+
+<theme-cart-notification data-cart-section-to-render>
+  <theme-modal data-placement="top" data-lock-scroll="false" data-mask-closable data-esc-to-exit>
+    <details class="cart-notification loading">
+      <summary></summary>
+      <div class="cart-notification__body color-{{settings.cart_color_scheme.id}} modal-border-shadow">
+
+        <button class="cart-notification__hide" type="button" name="close">
+          {{#component "icons/close" /}}
+        </button>
+
+        <div class="cart-notification__tips title6">
+          {{#component "icons/correct" /}}
+          <span>{{"cart.cart.added_to_cart" | t() }}:</span>
+        </div>
+
+        
+        <div class="cart-notification__items"></div>
+
+        <div class="cart-notification__subtotal">
+          <i class="body2">{{"cart.cart.cart_subtotal" | t()}}</i>
+          {{#if cart}}
+            <span class="body1 font-bold">{{{cart.items_subtotal_price | money_with_currency()}}}</span>
+          {{/if}}
+        </div>
+
+        <div class="cart-notification__buttons">
+          {{#if cart}}
+            <div class="cart-notification__buttons-jump-to-cart">
+              <a class="button button--secondary" href="{{routes.cart_url}}">
+                {{"cart.cart.cart_view" | t()}}
+                ({{cart.item_count}})
+              </a>
+            </div>
+
+            <div class="cart-notification__buttons-checkout">
+              {{#component "cart/widgets/cart-checkout" scene=SCENE hide_additional_checkout_buttons=true /}}
+            </div>
+          {{/if}}
+        </div>
+
+        <div class="cart-notification__loading">
+          <div class="cart-notification__loading-inn loading">
+            {{#component "icons/loading-spinner" /}}
+            <p class="body2">{{ "general.general.loading" | t()}}</p>
+          </div>
+        </div>
+      </div>
+    </details>
+  </theme-modal>
+</theme-cart-notification>

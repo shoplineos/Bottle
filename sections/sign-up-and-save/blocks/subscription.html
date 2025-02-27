@@ -1,0 +1,87 @@
+<div class="sign-up-and-save__subscription {{block.settings | class_list()}}">
+  {{#customer_form}}
+    <div class="sign-up-and-save__inline-form" {{{block.shopline_attributes}}}>
+      {{#component
+        "input/input-email"
+        input_id="subscribe-form-email"
+        input_name="contact[email]"
+        input_required=true
+        input_placeholder=block.settings.placeholder
+      /}}
+
+      <button type="submit" class="button">
+        {{block.settings.button_text}}
+      </button>
+    </div>
+
+    {{#if form.errors.messages}}
+      <p class="field__info field__info--error">
+        {{#component "icons/warning" /}}
+        {{form.errors.messages}}
+      </p>
+    {{/if}}
+
+    {{#if form.posted_successfully}}
+      <p class="field__info">
+        {{#component "icons/success" /}}
+        {{"general.footer.subscribe_success" | t()}}
+      </p>
+    {{/if}}
+  {{/customer_form}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.sign_up_and_save.blocks.subscription.name",
+  "icon": "email",
+  "tag": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "t:sections.sign_up_and_save.blocks.subscription.settings.placeholder.label",
+      "default": "Enter your email"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "t:sections.sign_up_and_save.blocks.subscription.settings.button_text.label",
+      "default": "Subscribe"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.sign_up_and_save.blocks.subscription.settings.spacing.label",
+      "default": {
+        "padding-top": "30px",
+        "padding-right": "10px",
+        "padding-bottom": "0",
+        "padding-left": "10px",
+        "@media (--mobile)": {
+          "padding-top": "10px",
+          "padding-right": "0px",
+          "padding-bottom": "0px",
+          "padding-left": "0px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.sign_up_and_save.blocks.subscription.settings.size.label",
+      "default": {
+        "width": "auto",
+        "height": "auto",
+        "@media (--mobile)": {
+          "width": "100%"
+        }
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sign_up_and_save.blocks.subscription.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

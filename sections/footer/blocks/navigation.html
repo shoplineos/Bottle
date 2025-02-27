@@ -1,0 +1,65 @@
+{{#component "script" src="./navigation.js" | asset_url() /}}
+
+<theme-footer-navigation class="footer__navigation {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  <h3 class="footer__navigation-title body3">
+    {{block.settings.title}}
+    <span class="icon__arrow">{{#component "icons/arrow-thin" /}}</span>
+    <span class="icon__minus">{{#component "icons/minus" /}}</span>
+  </h3>
+  <ul class="footer__navigation-content body5">
+    {{#for link in block.settings.menu.links}}
+      <li class="footer__navigation-item {{#if link.active}}footer__navigation-item--active{{/if}}">
+        <a href="{{link.url | default("javascript:;")}}">
+          {{link.title}}
+        </a>
+      </li>
+    {{/for}}
+  </ul>
+</theme-footer-navigation>
+
+{{#schema}}
+{
+  "name": "t:sections.footer.blocks.navigation.name",
+  "icon": "navigation",
+  "tag": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.footer.blocks.navigation.settings.title.label",
+      "default": "Menu title"
+    },
+    {
+      "type": "menu",
+      "id": "menu",
+      "label": "t:sections.footer.blocks.navigation.settings.menu.label",
+      "default": "footer"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.footer.blocks.navigation.settings.spacing.label",
+      "default": {
+        "padding-top": "0px",
+        "padding-right": "0px",
+        "padding-bottom": "0px",
+        "padding-left": "0px"
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.footer.blocks.navigation.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.footer.blocks.navigation.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

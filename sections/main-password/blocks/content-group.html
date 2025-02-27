@@ -1,0 +1,91 @@
+<div class="main__content body3 {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{#content "blocks" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_password.blocks.content_group.name",
+  "icon": "general",
+  "tag": "",
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.main_password.blocks.content_group.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "align-items": "center",
+        "justify-content": "center",
+        "column-gap": "20px",
+        "row-gap": "20px"
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.main_password.blocks.content_group.settings.spacing.label",
+      "default": {
+        "padding-top": "80px",
+        "padding-bottom": "80px",
+        "padding-left": "35px",
+        "padding-right": "35px",
+        "@media (--mobile)": {
+          "padding-top": "30px",
+          "padding-bottom": "30px",
+          "padding-left": "20px",
+          "padding-right": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.main_password.blocks.content_group.settings.size.label",
+      "default": {
+        "width": "auto",
+        "height": "auto"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "limit": 1
+    },
+    {
+      "type": "rich-text",
+      "limit": 1
+    },
+    {
+      "type": "$email-subscribe",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main_password.blocks.content_group.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "text": "Opening soon",
+            "text_size": "title3",
+            "text_align": "center"
+          }
+        },
+        {
+          "type": "rich-text",
+          "settings": {
+            "content": "<p>Be the first to know when we launch.</p>",
+            "text_align": "center"
+          }
+        },
+        {
+          "type": "$email-subscribe",
+          "settings": {}
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

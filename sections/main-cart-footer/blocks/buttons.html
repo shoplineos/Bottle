@@ -1,0 +1,23 @@
+<div class="main-cart-footer__buttons" {{{block.shopline_attributes}}}>
+  <div class="main-cart-footer__checkout">
+    {{#component "cart/widgets/cart-checkout" scene=props.scene /}}
+  </div>
+
+  <div class="main-cart-footer__tips">
+    {{#component "cart/widgets/cart-taxes" /}}
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_cart_footer.blocks.buttons.name",
+  "icon": "button",
+  "tag": "",
+  "settings": [],
+  "presets": [
+    {
+      "name": "t:sections.main_cart_footer.blocks.buttons.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

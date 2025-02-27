@@ -1,0 +1,107 @@
+
+
+{{#component "script" src="./card-account-phone.js" | asset_url() /}}
+
+<theme-card-account-phone class="card__item card-account__phone">
+  <div class="card__item-label">{{"customer.account.phone" | t()}}</div>
+  <div class="card__item-value">
+
+    
+    {{#if customer.phone}}
+      <span>{{customer.phone}}</span>
+      <div class="card__item-operate hidden card-account__edit" data-edit-show>
+        {{#component "icons/edit" /}}
+        <span>{{"customer.account.modify_phone" | t()}}</span>
+      </div>
+    {{#else/}}
+      <div class="card__item-operate card-account__edit">
+        {{#component "icons/plus" /}}
+        <span>{{"customer.general.bind_phone" | t()}}</span>
+      </div>
+    {{/if}}
+
+    
+    <theme-modal data-placement="center" data-mask-closable data-esc-to-exit>
+      <details>
+        <summary></summary>
+        <div class="modify-modal__container">
+          
+          <button class="modify-modal__close" name="close">
+            {{#component "icons/close" /}}
+          </button>
+
+          
+          <div class="modify-modal__title body3 font-bold">
+            {{#if customer.email}}
+              {{"customer.account.modify_phone" | t()}}
+            {{#else/}}
+              {{"customer.general.bind_phone" | t()}}
+            {{/if}}
+          </div>
+
+          
+          {{#bind_customer_phone_form}}
+            
+            {{#if form.register_config.check_tag}}
+              
+              <div class="modify-modal__step1">
+                <div class="modify-modal__desc body4"></div>
+                <div class="modify-modal__content">
+                  {{#component "input/input-verify-code" input_name="customer[verifycode1]" /}}
+                </div>
+
+                <div class="modify-modal__actions">
+                  <button class="button button--secondary" type="button" name="close">
+                    {{"customer.general.cancel_common" | t()}}
+                  </button>
+                  <button class="button modify-modal__next" type="button">
+                    <span>{{"customer.account.next" | t()}}</span>
+                    {{#component "icons/loading" class="button__spinner" /}}
+                  </button>
+                </div>
+              </div>
+
+              
+              <div class="modify-modal__step2 hidden">
+                <div class="modify-modal__content">
+                  {{#component "input/input-phone" input_name="customer[phone]" code_name="customer[code]" input_autocomplete="tel" all_country_dialing_code=all_country_dialing_code country_iso_code=localization.country.iso_code /}}
+
+                  {{#component "input/input-verify-code" input_name="customer[verifycode]" /}}
+                </div>
+
+                <div class="modify-modal__actions">
+                  <button class="button button--secondary" type="button" name="close">
+                    {{"customer.general.cancel_common" | t()}}
+                  </button>
+                  <button class="button" type="submit">
+                    <span>{{"customer.account.confirm_btn" | t()}}</span>
+                    {{#component "icons/loading" class="button__spinner" /}}
+                  </button>
+                </div>
+              </div>
+            {{#else/}}
+              
+              <div class="modify-modal__default">
+                <div class="modify-modal__content">
+                  {{#component "input/input-phone" input_name="customer[phone]" code_name="customer[code]" input_autocomplete="tel" all_country_dialing_code=all_country_dialing_code country_iso_code=localization.country.iso_code /}}
+
+                  
+                  <div class="modify-modal__actions">
+                    <button class="button button--secondary" type="button" name="close">
+                      {{"customer.general.cancel_common" | t()}}
+                    </button>
+
+                    <button class="button" type="submit">
+                      <span>{{"customer.account.confirm_btn" | t()}}</span>
+                      {{#component "icons/loading" class="button__spinner" /}}
+                    </button>
+                  </div>
+                </div>
+              {{/if}}
+            {{/bind_customer_phone_form}}
+          </div>
+      </details>
+    </theme-modal>
+
+  </div>
+</theme-card-account-phone>

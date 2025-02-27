@@ -1,0 +1,18 @@
+.tips-card {
+  margin-block: 20px;
+}
+
+@media (max-width: 959px) {
+  .tips-card {
+    margin-block: 16px;
+  }
+}
+
+.tips-card svg {
+  margin-inline-end: 6px;
+  vertical-align: middle;
+}
+
+.tips-card-fail {
+  color: rgb(var(--color-error-message));
+}

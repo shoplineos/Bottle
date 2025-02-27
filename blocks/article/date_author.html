@@ -1,0 +1,47 @@
+{{#var show_date = block.settings.show_date/}}
+{{#var show_author = block.settings.show_author/}}
+{{#var article = props.article /}}
+
+<div class="body3 block-article-card__date-author" {{{block.shopline_attributes}}}>
+  {{#if article}}
+    {{#if show_date}}
+      {{ article.published_at | date(format="abbreviated_date") }}
+    {{/if}}
+    {{#if show_date && show_author && article.author}} · {{/if}}
+    {{#if show_author && article.author}}
+      {{ article.author }}
+    {{/if}}
+  {{#else/}}
+    {{#if show_date}}
+      {{"1685624554752" | date(format="abbreviated_date") }}
+    {{/if}}
+    {{#if show_date && show_author}} · {{/if}}
+    {{#if show_author}}author{{/if}}
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.article.date.author.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "switch",
+      "id": "show_author",
+      "label": "t:blocks.article.date.author.settings.show_author.label",
+      "default": true
+    },
+    {
+      "type": "switch",
+      "id": "show_date",
+      "label": "t:blocks.article.date.author.settings.show_date.label",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.article.date.author.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

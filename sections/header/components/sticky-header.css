@@ -1,0 +1,42 @@
+theme-sticky-header {
+  --theme-sticky-header-top: 0;
+
+  position: relative;
+  inset-block-start: 0;
+  z-index: calc(var(--z-index-sticky) - 1);
+  display: block;
+}
+
+.theme-sticky-header--sticky {
+  display: contents;
+}
+
+.theme-sticky-header--sticky theme-sticky-header {
+  position: sticky;
+  inset-block-start: var(--theme-sticky-header-top);
+  animation: animation-header-sticky 0.26s ease-out forwards;
+}
+
+.theme-sticky-header--sticky-collapse theme-sticky-header {
+  animation-name: animation-header-sticky-collapse;
+}
+
+@keyframes animation-header-sticky {
+  0% {
+    transform: translateY(calc(-100% + var(--theme-sticky-header-top) * -1));
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animation-header-sticky-collapse {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(calc(-100% + var(--theme-sticky-header-top) * -1));
+  }
+}

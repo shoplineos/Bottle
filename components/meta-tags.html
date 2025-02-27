@@ -1,0 +1,38 @@
+{{~#var og_title = page_title | default(shop.name) /}}
+{{~#var og_url = canonical_url | default(request.origin) /}}
+{{~#var og_type = "website" /}}
+{{#var intermediate_value_6 = shop.description | default(shop.name) /}}
+{{~#var og_description = page_description | default(intermediate_value_6) /}}
+
+{{~#var page_type = template.name /}}
+{{~#if page_type == "product"}}
+  {{~#set og_type = "product" /}}
+{{~#else if page_type == "article" /}}
+  {{~#set og_type = "article" /}}
+{{~/if}}
+
+<meta property="og:site_name" content="{{shop.name}}" />
+<meta property="og:url" content="{{og_url}}" />
+<meta property="og:title" content="{{og_title}}" />
+<meta property="og:type" content="{{og_type}}" />
+<meta property="og:description" content="{{og_description}}" />
+
+{{~#if page_image.src}}
+  <meta property="og:image" content="{{page_image.src}}" />
+  <meta property="og:image:secure_url" content="{{page_image.src}}" />
+  <meta property="og:image:width" content="{{page_image.width}}" />
+  <meta property="og:image:height" content="{{page_image.height}}" />
+{{/if}}
+
+{{~#if page_type == "product"}}
+  <meta property="og:price:amount" content="{{product.price | money_without_currency()}}" />
+  <meta property="og:price:currency" content="{{cart.currency.iso_code}}" />
+{{/if}}
+
+{{~#if settings.social_media_twitter_link}}
+  {{#var intermediate_value_7 = settings.social_media_twitter_link | split("twitter.com/") | last() /}}
+  <meta name="twitter:site" content="{{"@" | append(intermediate_value_7)}}" />
+{{/if}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{og_title}}" />
+<meta name="twitter:description" content="{{og_description}}" />

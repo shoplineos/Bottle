@@ -1,0 +1,14 @@
+
+
+{{#if !cart.empty}}
+  {{#for item in cart.items}}
+    {{#switch props.scene}}
+      {{#case "page" /}}
+        {{#component "./cart-page-item" item=item /}}
+      {{#case "drawer" /}}
+        {{#component "./cart-drawer-item" item=item /}}
+      {{#case "notification" /}}
+        {{#component "./cart-notification-item" item=item /}}
+    {{/switch}}
+  {{/for}}
+{{/if}}

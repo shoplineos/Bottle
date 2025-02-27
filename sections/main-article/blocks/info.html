@@ -1,0 +1,38 @@
+{{#var show_date = block.settings.show_date /}}
+{{#var show_author = block.settings.show_author /}}
+
+<div class="main-article__info body3" {{{block.shopline_attributes}}}>
+  {{#if show_date}}
+    <span>{{article.published_at | date(format="abbreviated_date")}}</span>
+  {{/if}}
+  {{#if show_date && show_author && article.author}} · {{/if}}
+  {{#if show_author}}
+    <span>{{article.author}}</span>
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_article.blocks.info.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "switch",
+      "id": "show_date",
+      "label": "t:sections.main_article.blocks.info.settings.show_date.label",
+      "default": true
+    },
+    {
+      "type": "switch",
+      "id": "show_author",
+      "label": "t:sections.main_article.blocks.info.settings.show_author.label",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main_article.blocks.info.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,123 @@
+.product-media-preview .modal__content {
+  --modal-animation-name: animation-fade-in;
+
+  inset-block: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.product-media-preview__content {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 250px;
+  overflow: auto;
+  scrollbar-width: auto;
+  -ms-overflow-style: auto;
+}
+.product-media-preview__content::-webkit-scrollbar {
+  display: initial;
+}
+@media (max-width: 959px) {
+  .product-media-preview__content {
+    flex-direction: row;
+    padding: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .product-media-preview__content::-webkit-scrollbar {
+    display: none;
+  }
+}
+.product-media-preview__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s;
+  transform-origin: center;
+}
+@media (max-width: 959px) {
+  .product-media-preview__image {
+    max-height: 80%;
+    object-fit: contain;
+  }
+}
+.product-media-preview__media {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+@media (max-width: 959px) {
+  .product-media-preview__media {
+    height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .product-media-preview__media::-webkit-scrollbar {
+    display: none;
+  }
+}
+.product-media-preview__media::before {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: -1;
+  display: block;
+  width: 180%;
+  height: auto;
+  aspect-ratio: var(--aspect-ratio, 1);
+  content: "";
+}
+.product-media-preview__media.zoom-in {
+  overflow: auto;
+}
+.product-media-preview__media.zoom-in .product-media-preview__image {
+  max-height: unset;
+  margin-block-start: var(--offset-y, 0);
+  margin-inline-start: var(--offset-x, 0);
+  transform: scale(1.8);
+}
+.product-media-preview__arrows {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+@media (min-width: 960px) {
+  .product-media-preview__arrows {
+    display: none;
+  }
+}
+.product-media-preview__arrow {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  line-height: 1;
+  background: none;
+  border: none;
+}
+.product-media-preview__arrow .icon {
+  width: 10px;
+  height: 10px;
+}
+.product-media-preview__arrow[name="previous"] .icon {
+  transform: rotate(90deg);
+}
+.product-media-preview__arrow[name="next"] .icon {
+  transform: rotate(-90deg);
+}
+.product-media-preview__status {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}

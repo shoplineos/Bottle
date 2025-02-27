@@ -1,0 +1,55 @@
+{{#component "stylesheet" src="./detail-sell-info.css" | asset_url() /}}
+
+<ul class="product-detail__sell-info" {{{block.shopline_attributes}}}>
+  {{#content "blocks" /}}
+</ul>
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_sell_info.name",
+  "tag": "",
+  "icon": "logoList",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "product/detail-sell-info-row",
+      "limit": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_sell_info.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "product/detail-sell-info-row",
+          "settings": {
+            "info_icon": "globe",
+            "info_text": "Free worldwide shipping"
+          }
+        },
+        {
+          "type": "product/detail-sell-info-row",
+          "settings": {
+            "info_icon": "checkmark",
+            "info_text": "Free returns"
+          }
+        },
+        {
+          "type": "product/detail-sell-info-row",
+          "settings": {
+            "info_icon": "leaf",
+            "info_text": "Carbon neutral"
+          }
+        },
+        {
+          "type": "product/detail-sell-info-row",
+          "settings": {
+            "info_icon": "lock",
+            "info_text": "Secure payments"
+          }
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

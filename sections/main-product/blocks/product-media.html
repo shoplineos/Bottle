@@ -1,0 +1,114 @@
+{{#component "product/media" block=block product=product section=section /}}
+
+{{#schema}}
+{
+  "name": "t:sections.main_product.blocks.product_media.name",
+  "tag": "",
+  "settings": [
+    {
+      "id": "layout_size",
+      "label": "t:sections.main_product.blocks.product_media.settings.layout_size.label",
+      "type": "select",
+      "options": [
+        {
+          "value": "large",
+          "label": "t:sections.main_product.blocks.product_media.settings.layout_size.options_0.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.main_product.blocks.product_media.settings.layout_size.options_1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.main_product.blocks.product_media.settings.layout_size.options_2.label"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "select",
+      "id": "image_quality",
+      "label": "t:sections.main_product.blocks.product_media.settings.image_quality.label",
+      "info": "t:sections.main_product.blocks.product_media.settings.image_quality.info",
+      "default": 80,
+      "options": [
+        {
+          "label": "t:sections.main_product.blocks.product_media.settings.image_quality.options_0.label",
+          "value": 100
+        },
+        {
+          "label": "t:sections.main_product.blocks.product_media.settings.image_quality.options_1.label",
+          "value": 90
+        },
+        {
+          "label": "t:sections.main_product.blocks.product_media.settings.image_quality.options_2.label",
+          "value": 80
+        },
+        {
+          "label": "t:sections.main_product.blocks.product_media.settings.image_quality.options_3.label",
+          "value": 70
+        }
+      ]
+    },
+    {
+      "type": "switch",
+      "id": "video_loop",
+      "label": "t:sections.main_product.blocks.product_media.settings.video_loop.label",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "t:sections.main_product.blocks.product_media.settings.desktop_layout.label",
+      "options": [
+        {
+          "value": "flatten",
+          "label": "t:sections.main_product.blocks.product_media.settings.desktop_layout.options_0.label"
+        },
+        {
+          "value": "two-columns",
+          "label": "t:sections.main_product.blocks.product_media.settings.desktop_layout.options_1.label"
+        },
+        {
+          "value": "thumbnail-flatten",
+          "label": "t:sections.main_product.blocks.product_media.settings.desktop_layout.options_2.label"
+        },
+        {
+          "value": "thumbnail-carousel",
+          "label": "t:sections.main_product.blocks.product_media.settings.desktop_layout.options_3.label"
+        }
+      ],
+      "default": "thumbnail-carousel"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "t:sections.main_product.blocks.product_media.settings.mobile_layout.label",
+      "options": [
+        {
+          "value": "two-columns",
+          "label": "t:sections.main_product.blocks.product_media.settings.mobile_layout.options_0.label"
+        },
+        {
+          "value": "hide-thumbnail",
+          "label": "t:sections.main_product.blocks.product_media.settings.mobile_layout.options_1.label"
+        },
+        {
+          "value": "show-thumbnail",
+          "label": "t:sections.main_product.blocks.product_media.settings.mobile_layout.options_2.label"
+        },
+        {
+          "value": "fullscreen",
+          "label": "t:sections.main_product.blocks.product_media.settings.mobile_layout.options_3.label"
+        }
+      ],
+      "default": "two-columns"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main_product.blocks.product_media.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

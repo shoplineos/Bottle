@@ -1,0 +1,64 @@
+<div class="footer__social-media {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  <h3 class="footer__social-media-title body3">{{block.settings.title}}</h3>
+  {{#component "social-medias" class="footer__social-media-content" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.footer.blocks.social_media.name",
+  "icon": "socialMedia",
+  "tag": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.footer.blocks.social_media.settings.title.label",
+      "default": "Contact us"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.footer.blocks.social_media.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "flex-start",
+        "justify-content": "center",
+        "row-gap": "20px",
+        "column-gap": "20px",
+        "@media (--mobile)": {
+          "justify-content": "flex-start"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.footer.blocks.social_media.settings.spacing.label",
+      "default": {
+        "padding-top": "0px",
+        "padding-right": "0px",
+        "padding-bottom": "0px",
+        "padding-left": "0px"
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.footer.blocks.social_media.settings.size.label",
+      "default": {
+        "width": "75%",
+        "height": "auto",
+        "@media (--mobile)": {
+          "width": "100%"
+        }
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.footer.blocks.social_media.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

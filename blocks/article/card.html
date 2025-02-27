@@ -1,0 +1,102 @@
+{{#component "stylesheet" src="./card.css" | asset_url() /}}
+
+{{#var article = props.article /}}
+
+<a
+  href="{{ article.url | default(`javascript:void(0)`)}}"
+  class="block-article-card {{#if settings.article_card_style == "card"}}article-card-border-shadow{{/if}} {{ block.settings | class_list() }}"
+  {{{block.shopline_attributes}}}
+>
+  {{#blocks}}
+    {{#if forblock.type == "article/cover"}}
+      <div class="block-article-card__cover {{#if settings.article_card_style != "card"}}article-card-border-shadow{{/if}}">
+      {{#block
+        image=article.image
+        mobile_columns=props.mobile_columns
+        mobile_columns=props.desktop_columns
+      /}}
+      </div>
+    {{#else if forblock.type == "article/info" /}}
+      {{#block article=article /}}
+    {{/if}}
+  {{/blocks}}
+
+  <span class="body2 body-font-bold button button--link block-article-card__button hidden-mobile">
+    READ NOW
+  </span>
+</a>
+
+{{#schema}}
+{
+  "name": "t:blocks.article.card.name",
+  "icon": "cardComponent",
+  "tag": "",
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:blocks.article.card.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "16px",
+        "column-gap": "16px",
+        "@media (--mobile)": {
+          "row-gap": "8px",
+          "column-gap": "8px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:blocks.article.card.settings.spacing.label",
+      "default": {}
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:blocks.article.card.settings.size.label",
+      "default": {
+        "width": "100%"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article/cover",
+      "limit": 1
+    },
+    {
+      "type": "article/info",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.article.card.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "article/cover"
+        },
+        {
+          "type": "article/info",
+          "blocks": [
+            {
+              "type": "article/title"
+            },
+            {
+              "type": "article/date_author"
+            },
+            {
+              "type": "article/excerpt"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

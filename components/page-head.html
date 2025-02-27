@@ -1,0 +1,26 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+
+{{#if page_description}}
+  <meta name="description" content="{{page_description}}" />
+{{/if}}
+
+{{#if page_keyword}}
+  <meta name="keywords" content="{{page_keyword}}" />
+{{/if}}
+
+{{#if settings.favicon_image}}
+  <link rel="icon" type="image/png" href="{{settings.favicon_image}}" />
+{{/if}}
+
+<link rel="canonical" href="{{canonical_url}}" />
+
+{{#component "meta-tags" /}}
+
+<title>
+  {{page_title}}
+  {{#if current_tags}} &ndash; Tagged "{{current_tags | join(`,`)}}"{{/if}}
+  {{#if current_page != 1}} &ndash; Page {{current_page}}{{/if}}
+  {{~#if page_title|contains(shop.name)}} &ndash; {{shop.name}}{{~/if}}
+</title>

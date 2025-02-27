@@ -1,0 +1,454 @@
+.card {
+  display: block;
+  padding-block: 0 24px;
+  padding-inline: 40px;
+  word-break: break-word;
+  border: 1px solid rgb(var(--color-entry-line));
+}
+
+.card + .card {
+  margin-block-start: 20px;
+}
+
+@media (max-width: 959px) {
+  .card {
+    padding-block: 10px 20px;
+    padding-inline: 10px;
+  }
+}
+
+.card__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 24px;
+  padding-inline: 0;
+  margin-block-end: 24px;
+  color: rgb(var(--color-text));
+  border-block-end: 1px solid rgb(var(--color-entry-line));
+}
+
+@media (max-width: 959px) {
+  .card__title {
+    padding-block: 10px;
+    padding-inline: 0;
+    margin-block-end: 20px;
+  }
+}
+
+.card__title-text {
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.card__title-tips {
+  margin-block-start: 4px;
+  opacity: 0.6;
+}
+
+.card__title-edit {
+  line-height: 1;
+  cursor: pointer;
+}
+
+.card__title-edit svg {
+  width: 24px;
+  height: 24px;
+}
+
+.card__item {
+  display: block;
+  margin-block-start: 16px;
+}
+
+.card__item:first-child {
+  margin-block-start: 0;
+}
+
+.card__item-label {
+  margin-block-end: 4px;
+  color: rgb(var(--color-light-text));
+}
+
+.card__item-value {
+  display: flex;
+  align-items: center;
+}
+
+.card__item-operate {
+  display: flex;
+  align-items: center;
+  color: rgb(var(--color-button-background));
+  cursor: pointer;
+}
+
+.card__item-operate svg {
+  width: 16px;
+  height: 16px;
+}
+
+.card__item-operate span {
+  margin-inline-start: 4px;
+}
+
+.card__row {
+  padding-block: 16px;
+}
+
+.card__row-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__row:first-child {
+  padding-block-start: 0;
+}
+
+.card__row:last-child {
+  padding-block-end: 0;
+}
+
+.card__row + .card__row {
+  border-block-start: 1px solid rgb(var(--color-entry-line));
+}
+
+.card__actions {
+  display: flex;
+  column-gap: 12px;
+  justify-content: flex-end;
+  padding-block-start: 20px;
+  margin-block-start: 24px;
+  border-block-start: 1px solid rgb(var(--color-entry-line));
+}
+.modify-modal__container {
+  --modal-animation-name: animation-fade-in-center;
+
+  inset: 0;
+  width: 480px;
+  padding-block: 24px;
+  padding-inline: 24px;
+  background-color: rgb(var(--color-page-background));
+  border-radius: 10px;
+}
+@media (max-width: 959px) {
+  .modify-modal__container {
+    width: calc(100% - 80px);
+    padding-block: 24px;
+    padding-inline: 20px;
+  }
+}
+.modify-modal__close {
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  display: none;
+  padding-block: 9px;
+  padding-inline: 9px;
+  line-height: 0;
+  color: inherit;
+  cursor: pointer;
+  user-select: none;
+  background-color: rgb(var(--color-page-background));
+  border: 1px solid rgba(var(--color-text), 0.05);
+  border-radius: 50%;
+}
+@media (max-width: 959px) {
+  .modify-modal__close {
+    display: block;
+  }
+}
+.modify-modal__title {
+  color: rgb(var(--color-text));
+}
+.modify-modal__desc {
+  margin-block-start: 4px;
+  color: rgb(var(--color-text));
+}
+.modify-modal__desc em {
+  font-style: normal;
+  text-decoration: underline;
+}
+.modify-modal__content {
+  margin-block-start: 20px;
+}
+.modify-modal .form__error-message {
+  margin-block-start: 6px;
+}
+.modify-modal__actions {
+  display: flex;
+  column-gap: 12px;
+  justify-content: flex-end;
+  margin-block-start: 30px;
+}
+@media (max-width: 959px) {
+  .modify-modal__actions {
+    display: block;
+  }
+
+  .modify-modal__actions .button {
+    width: 100%;
+  }
+
+  .modify-modal__actions .button.button--secondary {
+    display: none;
+  }
+}
+.card-account__username-edit {
+  display: flex;
+  gap: 16px;
+  color: rgb(var(--color-light-text));
+}
+.card-account__username-edit label {
+  flex: 1;
+}
+.card-account__username-edit-subtitle {
+  margin-block-end: 4px;
+}
+.card-account__username-edit input {
+  width: 100%;
+  padding: 5px 12px;
+  line-height: var(--sort-body-line-height);
+  appearance: none;
+  background: none;
+  border: 1px solid rgb(var(--color-entry-line));
+  border-radius: 4px;
+}
+@media (max-width: 959px) {
+  .card-account__username-edit {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+.card-account__email .card__item-value > span:first-child {
+  margin-inline-end: 16px;
+}
+.card-account__phone .card__item-value > span:first-child {
+  margin-inline-end: 16px;
+}
+.card-account__delete .card__item-operate {
+  color: rgb(var(--color-discount));
+}
+.card-account__delete-modal {
+  width: 510px;
+}
+@media (max-width: 959px) {
+  .card-account__delete-modal {
+    width: 90%;
+    padding: 40px 20px 20px;
+  }
+}
+.card-account__delete-modal .modify-modal__desc .modify-modal__title {
+  margin-block-end: 20px;
+}
+.card-account__delete-modal .modify-modal__desc p {
+  margin: 0;
+  margin-block-end: 20px;
+}
+.card-account__delete-modal .modify-modal__desc ul {
+  width: 100%;
+  padding-block: 0;
+  padding-inline: 0;
+  margin-block: 0 20px;
+  margin-inline: 0;
+  list-style-position: inside;
+}
+.card-account__delete-modal .modify-modal__desc ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+.card-account__delete-modal .modify-modal__desc ul li + li {
+  margin-block-start: 12px;
+}
+.card-account__delete-modal .modify-modal__content,
+.card-account__delete-modal .modify-modal__actions {
+  margin-block-start: 0;
+}
+.card-subscriptions__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+.card-subscriptions__error {
+  color: rgb(var(--color-error-message));
+}
+.card-subscriptions .unsubscribe-button {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.card-subscriptions .unsubscribe-button-status {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+.card-subscriptions .unsubscribe-button-status:last-child {
+  display: none;
+}
+@media (max-width: 959px) {
+  .card-subscriptions .unsubscribe-button-status:first-child {
+    display: none;
+  }
+
+  .card-subscriptions .unsubscribe-button-status:last-child {
+    display: flex;
+  }
+}
+.card-subscriptions .unsubscribe-button-status svg {
+  width: 12px;
+  height: 12px;
+}
+.card-subscriptions .unsubscribe-button:hover span:first-child {
+  display: none;
+}
+.card-subscriptions .unsubscribe-button:hover span:last-child {
+  display: flex;
+}
+.card-subscriptions .unsubscribe-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-subscriptions .unsubscribe-reason {
+  cursor: pointer;
+}
+.card-subscriptions .unsubscribe-reason .field-radio {
+  display: inline-block;
+  vertical-align: middle;
+}
+.card-subscriptions .unsubscribe-reason .field {
+  display: none;
+  width: 100%;
+  margin-block: 10px 0;
+}
+.card-subscriptions .unsubscribe-reason[checked] .field {
+  display: flex;
+}
+.card-personal__birthday-edit {
+  width: 160px;
+}
+.card-address__empty {
+  margin-block-start: 58px;
+  text-align: center;
+}
+.card-address__empty .icon-location {
+  width: 46px;
+  height: 56px;
+  opacity: 0.3;
+}
+.card-address__empty .icon-plus {
+  margin-block-end: 1px;
+  margin-inline-end: 6px;
+}
+.card-address__empty p {
+  margin: 28px 0 20px;
+  text-align: center;
+}
+.card-address__empty .button {
+  margin-block-end: 40px;
+}
+@media (max-width: 959px) {
+  .card-address__empty {
+    margin-block-start: 46px;
+  }
+
+  .card-address__empty p {
+    margin: 20px 0 10px;
+  }
+
+  .card-address__empty .button {
+    margin-block-end: 20px;
+  }
+}
+.card-address__default {
+  flex-shrink: 0;
+  padding-block: 2px;
+  padding-inline: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.4;
+  background-color: rgba(var(--color-entry-line), 0.5);
+}
+.card-address__list-item {
+  padding-block: 24px;
+  padding-inline: 0;
+}
+.card-address__list-item .address__detail {
+  margin-block-start: 20px;
+}
+.card-address__list-item + .card-address__list-item {
+  border-block-start: 1px solid rgb(var(--color-entry-line));
+}
+.card-address__list-operations {
+  display: flex;
+  align-items: center;
+}
+.card-address__list-operations svg {
+  width: 20px;
+  height: 20px;
+  color: rgb(var(--color-text));
+}
+.card-address__list-remove {
+  padding-block: 0;
+  padding-inline: 0;
+  margin-inline-start: 12px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+.card-address__list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-address__list-header .card-address__list-operations {
+  margin-block-start: 0;
+}
+@media (max-width: 959px) {
+  .card-address__list .card-address__list-item {
+    padding-block: 20px;
+    padding-inline: 0;
+  }
+}
+.card-address__list-detail {
+  margin-block-start: 20px;
+}
+.customer-account {
+  display: block;
+}
+.customer-account__body {
+  display: flex;
+  gap: 20px;
+}
+.customer-account__body > * {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 50%;
+}
+@media (max-width: 959px) {
+  .customer-account__body {
+    flex-direction: column;
+  }
+
+  .customer-account__body > * {
+    width: 100%;
+  }
+}
+@media (max-width: 959px) {
+  .customer-account .card__actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .customer-account .card__actions .button {
+    width: 100%;
+  }
+
+  .customer-account .card__actions .button[type="submit"] {
+    order: -1;
+  }
+}

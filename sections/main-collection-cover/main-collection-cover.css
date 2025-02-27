@@ -1,0 +1,35 @@
+.block-main-collection-banner {
+  position: relative;
+  margin-block-end: 60px;
+  background-color: rgb(0 0 0 / 20%);
+}
+
+@media (max-width: 959px) {
+  .block-main-collection-banner {
+    margin-block-end: 20px;
+  }
+}
+
+.block-main-collection-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.block-main-collection-banner__inner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: rgb(255 255 255 / 100%);
+}
+
+.block-main-collection-banner__inner a {
+  padding-inline-end: 10px;
+  color: rgb(255 255 255 / 100%);
+}
+
+.block-main-collection-banner__inner > div {
+  text-align: center;
+}

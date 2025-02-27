@@ -1,0 +1,68 @@
+{{#component "stylesheet" src="./footer.css" | asset_url() /}}
+
+<div class="footer color-{{section.settings.color_scheme.id}}">
+  <div class="page-width">
+    <div class="footer__inner {{section.settings | class_list()}}">
+      {{#content "blocks" /}}
+    </div>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.footer.name",
+  "icon": "footer",
+  "settings": [
+    {
+      "id": "color_scheme",
+      "type": "color_scheme",
+      "label": "t:sections.footer.settings.color_scheme.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.footer.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "0px",
+        "column-gap": "0px",
+        "@media (--mobile)": {
+          "row-gap": "20px",
+          "column-gap": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.footer.settings.spacing.label",
+      "default": {
+        "padding-top": "60px",
+        "padding-bottom": "60px",
+        "@media (--mobile)": {
+          "padding-top": "30px",
+          "padding-bottom": "30px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$information-group",
+      "limit": 5
+    },
+    {
+      "type": "$contact-group",
+      "limit": 1
+    },
+    {
+      "type": "$additional-group",
+      "limit": 1
+    }
+  ]
+}
+{{/schema}}

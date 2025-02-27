@@ -1,0 +1,14 @@
+
+
+{{#if cart.empty}}
+{{#component "stylesheet" src="./cart-empty.css" | asset_url() /}}
+
+<div class="cart-empty">
+  <div class="cart-empty__body body3">
+    <p class="cart-empty__tips">{{"cart.item.empty_cart" | t()}}</p>
+    <a href="{{routes.all_products_collection_url}}" class="cart-empty__button button">
+      {{"cart.checkout_proceeding.continue_shopping" | t()}}
+    </a>
+  </div>
+</div>
+{{/if}}

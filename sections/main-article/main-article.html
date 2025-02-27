@@ -1,0 +1,70 @@
+{{#component "stylesheet" src="./main-article.css" | asset_url() /}}
+
+<div class="main-article-container color-{{section.settings.color_scheme.id}}">
+  <div class="main-article page-width">
+    <div class="{{section.settings | class_list()}}">
+      {{#content "blocks" /}}
+    </div>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_article.name",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.main_article.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.main_article.settings.spacing.label",
+      "default": {
+        "padding-block-start": "40px",
+        "padding-inline-start": "250px",
+        "padding-block-end": "80px",
+        "padding-inline-end": "250px",
+        "@media (--mobile)": {
+          "padding-block-start": "40px",
+          "padding-inline-start": "20px",
+          "padding-block-end": "40px",
+          "padding-inline-end": "20px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$title",
+      "limit": 1
+    },
+    {
+      "type": "$info",
+      "limit": 1
+    },
+    {
+      "type": "$cover_image",
+      "limit": 1
+    },
+    {
+      "type": "$content",
+      "limit": 1
+    },
+    {
+      "type": "$share",
+      "limit": 1
+    },
+    {
+      "type": "$button_back",
+      "limit": 1
+    },
+    {
+      "type": "$comment",
+      "limit": 1
+    }
+  ]
+}
+{{/schema}}

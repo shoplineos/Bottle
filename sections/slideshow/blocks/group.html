@@ -1,0 +1,109 @@
+<div class="{{block.settings | class_list()}} slideshow__group" {{{block.shopline_attributes}}}>
+  {{#if props.show_text_mask}}
+    <div class="slideshow__image-text-mask slideshow__image-text-mask-{{props.text_mask_color}}"> </div>
+  {{/if}}
+
+  {{#content "blocks" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.slideshow.blocks.group.name",
+  "icon": "general",
+  "tag": "",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.slideshow.blocks.group.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "8px",
+        "column-gap": "8px"
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.slideshow.blocks.group.settings.spacing.label",
+      "default": {
+        "padding-top": "40px",
+        "padding-right": "0px",
+        "padding-bottom": "40px",
+        "padding-left": "0px",
+        "@media (--mobile)": {
+          "padding-top": "20px",
+          "padding-bottom": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.slideshow.blocks.group.settings.size.label",
+      "default": {
+        "width": "auto",
+        "height": "auto"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$title",
+      "limit": 1
+    },
+    {
+      "type": "$subtitle",
+      "limit": 1
+    },
+    {
+      "type": "$description",
+      "limit": 1
+    },
+    {
+      "type": "button-group",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.slideshow.blocks.group.presets.presets_0.name",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "$title"
+        },
+        {
+          "type": "$subtitle"
+        },
+        {
+          "type": "$description"
+        },
+        {
+          "type": "button-group",
+          "blocks": [
+            {
+              "type": "button",
+              "settings": {
+                "text": "Shop this",
+                "use_secondary_style": true
+              }
+            },
+            {
+              "type": "button",
+              "settings": {
+                "text": "Shop all",
+                "use_secondary_style": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

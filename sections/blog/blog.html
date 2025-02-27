@@ -1,0 +1,117 @@
+{{#component "stylesheet" src="./blog.css" | asset_url() /}}
+
+<div class="section-blog-container color-{{section.settings.color_scheme.id}}">
+  <div class="page-width">
+    <div class="{{ section.settings | class_list() }}">
+      {{#blocks}}
+        {{#if forblock.type == "heading-with-link/heading-with-link"}}
+          {{#block url=section.settings.blog.url /}}
+        {{#else if forblock.type == "$articles" /}}
+          {{#block blog=section.settings.blog /}}
+        {{/if}}
+      {{/blocks}}
+    </div>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.blog.name",
+  "icon": "blog",
+  "settings": [
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "t:sections.blog.settings.blog.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.blog.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.blog.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "60px",
+        "column-gap": "60px",
+        "@media (--mobile)": {
+          "row-gap": "24px",
+          "column-gap": "24px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.blog.settings.spacing.label",
+      "default": {
+        "padding-top": "60px",
+        "padding-bottom": "60px",
+        "@media (--mobile)": {
+          "padding-top": "24px",
+          "padding-bottom": "24px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading-with-link/heading-with-link",
+      "limit": 1
+    },
+    {
+      "type": "$articles",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "category": "t:sections.blog.presets.presets_0.category",
+      "name": "t:sections.blog.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "heading-with-link/heading-with-link",
+          "settings": {
+            "text": "Blogs",
+            "text_size": "title4"
+          }
+        },
+        {
+          "type": "$articles",
+          "blocks": [
+            {
+              "type": "article/card",
+              "blocks": [
+                {
+                  "type": "article/cover"
+                },
+                {
+                  "type": "article/info",
+                  "blocks": [
+                    {
+                      "type": "article/title"
+                    },
+                    {
+                      "type": "article/date_author"
+                    },
+                    {
+                      "type": "article/excerpt"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,75 @@
+
+
+{{#component "script" src="./card-account-delete.js" | asset_url() /}}
+
+{{#var hasEmailOrPhone = (customer.email || customer.phone) /}}
+
+{{#if hasEmailOrPhone && shop.allow_cancel_account}}
+  <div class="card__item card-account__delete">
+    <div class="card__item-value body4">
+      {{#if customer.cancelling_account}}
+        
+        <span class="card-account__delete-status">
+          {{#var time_str = customer.cancelling_time | date(format="%Y-%m-%d") /}}
+          {{"customer.account.delete_deadline_tip" | t(time=time_str)}}
+        </span>
+      {{#else/}}
+        <theme-card-account-delete>
+          
+          <theme-modal data-placement="center" data-mask-closable data-esc-to-exit>
+            <details>
+              <summary>
+                <div class="card__item-operate">
+                  {{#component "icons/delete" /}}
+                  <span>{{"customer.account.delete_account" | t()}}</span>
+                </div>
+              </summary>
+
+              <div class="modify-modal__container card-account__delete-modal">
+                
+                <button class="modify-modal__close" name="close">
+                  {{#component "icons/close" /}}
+                </button>
+
+                
+                <div class="modify-modal__desc">
+                  <div class="modify-modal__title body3 font-bold">{{"customer.account.delete_account" | t()}}</div>
+                  <p>
+                    {{#if customer.email}}
+                      {{"customer.account.verify_email_message" | t(email=customer.email)}}
+                    {{#else/}}
+                      {{"customer.account.verify_phone_message" | t(phone=customer.phone)}}
+                    {{/if}}
+                  </p>
+                  <p>{{"customer.account.delete_account_notify" | t()}}</p>
+                  <ul>
+                    <li>{{"customer.account.name" | t()}}</li>
+                    <li>{{"general.address.address" | t()}}</li>
+                    <li>{{"customer.account.delete_account_email" | t()}}</li>
+                    <li>{{"customer.account.ip_address" | t()}}</li>
+                    <li>{{"customer.account.credit_card_number" | t()}}</li>
+                  </ul>
+                  <p>{{"customer.account.deadline" | t()}}</p>
+                </div>
+
+                
+                {{#delete_customer_form}}
+                <div class="modify-modal__content">
+                  {{#component "input/input-verify-code" input_name="customer[verifycode]" /}}
+                </div>
+
+                <div class="modify-modal__actions">
+                  <button class="button button--fill" type="submit">
+                    {{"customer.account.delete_account" | t()}}
+                    {{#component "icons/loading" class="button__spinner" /}}
+                  </button>
+                </div>
+                {{/delete_customer_form}}
+              </div>
+            </details>
+          </theme-modal>
+        </theme-card-account-delete>
+      {{/if}}
+    </div>
+  </div>
+{{/if}}

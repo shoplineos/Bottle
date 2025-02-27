@@ -1,0 +1,59 @@
+<div class="text-columns-with-image__heading" {{{block.shopline_attributes}}}>
+  <h2 class="text-columns-with-image__heading-title {{block.settings.font_size}}">{{block.settings.title}}</h2>
+
+  <a
+    class="text-columns-with-image__heading-link"
+    href="{{block.settings.link | default("javascript:;")}}"
+    aria-label="{{block.settings.link_text}}"
+  >
+    <span class="text-columns-with-image__heading-link-text">{{block.settings.link_text}}</span>
+    <span class="text-columns-with-image__heading-link-icon">{{#component "icons/caret-right" /}}</span>
+  </a>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.text_columns_with_image.blocks.heading.name",
+  "icon": "title",
+  "tag": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.text_columns_with_image.blocks.heading.settings.title.label",
+      "default": "Text columns with images"
+    },
+    {
+      "type": "select",
+      "id": "font_size",
+      "label": "t:sections.text_columns_with_image.blocks.heading.settings.font_size.label",
+      "default": "title4",
+      "options": [
+        {
+          "value": "title2",
+          "label": "t:sections.text_columns_with_image.blocks.heading.settings.font_size.options_0.label"
+        },
+        {
+          "value": "title4",
+          "label": "t:sections.text_columns_with_image.blocks.heading.settings.font_size.options_1.label"
+        },
+        {
+          "value": "title5",
+          "label": "t:sections.text_columns_with_image.blocks.heading.settings.font_size.options_2.label"
+        }
+      ]
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:sections.text_columns_with_image.blocks.heading.settings.link.label"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "t:sections.text_columns_with_image.blocks.heading.settings.link_text.label",
+      "default": "View more"
+    }
+  ]
+}
+{{/schema}}

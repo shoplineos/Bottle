@@ -1,0 +1,25 @@
+<div class="{{#if section.settings.sync_margins_with_theme}}page-width{{/if}}">
+  {{#content "blocks" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.apps.name",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "switch",
+      "id": "sync_margins_with_theme",
+      "label": "t:sections.apps.settings.sync_margins_with_theme.label",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": []
+}
+{{/schema}}

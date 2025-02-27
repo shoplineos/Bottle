@@ -1,0 +1,153 @@
+
+
+{{#var phone_dialing_code_str = "+" | append(customer.phone_dialing_code) /}}
+{{#var customer_without_dialing_code_phone = customer.phone | remove_first(phone_dialing_code_str) /}}
+
+{{#if customer.accepts_sms_marketing}}
+
+<div class="card__row">
+  <div class="card__row-inner card-subscriptions__unsubscribe">
+    
+    <span class="body4">{{"customer.subscription.phone" | t()}}</span>
+
+    
+    <theme-modal data-placement="center" data-mask-closable data-esc-to-exit>
+      <details>
+        <summary>
+          <button class="unsubscribe-button body4" type="button">
+            <span class="unsubscribe-button-status">
+              {{#component "icons/check" /}}
+              <span>{{"customer.subscription.subscription_hint" | t()}}</span>
+            </span>
+
+            <span class="unsubscribe-button-status">
+              {{#component "icons/minus-circle" /}}
+              <span>{{"customer.subscription.unsubscribe_confirm_text" | t()}}</span>
+            </span>
+          </button>
+        </summary>
+
+        <div class="modify-modal__container">
+          
+          <button class="modify-modal__close" name="close" type="button">
+            {{#component "icons/close" /}}
+          </button>
+
+          
+          <div class="modify-modal__title body3 font-bold">
+            {{"customer.subscription.unsubscribe_title" | t()}}
+          </div>
+
+          
+          <div class="modify-modal__content">
+            {{#customer_unsubscribe_form id="customer-unsubscribe-phone-form"}}
+            <input type="hidden" name="customer[unsubscribe_type]" value="phone" />
+
+            <div class="modify-modal__desc body4">
+              {{"customer.subscription.unsubscribe_tip" | t()}}
+            </div>
+            {{/customer_unsubscribe_form}}
+          </div>
+
+          
+          <div class="modify-modal__actions">
+            <button name="close" class="button button--secondary" type="button">
+              {{"customer.general.cancel_common" | t()}}
+            </button>
+
+            <button class="button" type="submit" form="customer-unsubscribe-phone-form">
+              <span>{{"customer.subscription.unsubscribe_confirm_text" | t()}}</span>
+              {{#component "icons/loading" class="button__spinner" /}}
+            </button>
+          </div>
+        </div>
+      </details>
+    </theme-modal>
+  </div>
+</div>
+{{#else/}}
+
+<div class="card__row">
+  {{#customer_subscribe_form return_to=routes.account_url | append("?type=phone")}}
+    <div class="card__row-inner">
+      
+      <div class="card-subscriptions__info">
+        <span class="body4">
+          {{"customer.subscription.phone" | t()}}
+        </span>
+        {{#if form.errors.messages && form.type == "phone"}}
+        <div class="card-subscriptions__error body6">{{"customer.subscription.phone_subscribe_error_tip" | t()}}</div>
+        {{/if}}
+      </div>
+
+      
+      <theme-modal data-placement="center" data-mask-closable data-esc-to-exit>
+        <details>
+          <summary>
+            <button class="button button--secondary" type="button">
+              {{"customer.subscription.subscribe_button" | t() | downcase()}}
+            </button>
+          </summary>
+
+          <div class="modify-modal__container">
+            
+            <button class="modify-modal__close" name="close" type="button">
+              {{#component "icons/close" /}}
+            </button>
+
+            
+            <div class="modify-modal__title body3 font-bold">
+              {{"customer.subscription.phone_subscription_text" | t()}}
+            </div>
+
+              
+              <div class="modify-modal__content">
+                {{#var input_name_str = "customer[phone]"/}}
+                {{#var input_disable_class = ""/}}
+                {{#var is_input_required = true/}}
+                {{#var is_input_disabled = false/}}
+
+                {{#if customer_without_dialing_code_phone}}
+                  <input type="text" name="customer[phone]" hidden value="{{customer_without_dialing_code_phone}}" />
+                  <input type="text" name="customer[code]" hidden value="{{customer.phone_dialing_code}}" />
+                {{/if}}
+
+                {{#if customer_without_dialing_code_phone}}
+                  {{#set input_name_str = ""/}}
+                  {{#set input_disable_class = "field--disabled"/}}
+                  {{#set is_input_required = false/}}
+                  {{#set is_input_disabled = true/}}
+                {{/if}}
+
+                {{#component
+                  "input/input-phone"
+                  class=input_disable_class
+                  input_name=input_name_str
+                  code_name="customer[code]"
+                  input_required=is_input_required
+                  input_value=customer_without_dialing_code_phone
+                  input_placeholder="customer.phone.mobile_common" | t()
+                  input_disabled=is_input_disabled
+                  all_country_dialing_code=all_country_dialing_code
+                  country_iso_code=localization.country.iso_code
+                /}}
+              </div>
+
+              
+              <div class="modify-modal__actions">
+                <button name="close" class="button button--secondary" type="button">
+                  {{"customer.general.cancel_common" | t()}}
+                </button>
+
+                <button class="button" type="submit">
+                  <span>{{"customer.subscription.save_button" | t()}}</span>
+                  {{#component "icons/loading" class="button__spinner" /}}
+                </button>
+              </div>
+          </div>
+        </details>
+      </theme-modal>
+    </div>
+  {{/customer_subscribe_form}}
+</div>
+{{/if}}

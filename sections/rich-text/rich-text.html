@@ -1,0 +1,126 @@
+{{#component "stylesheet" src="./index.css" | asset_url() /}}
+
+<div class="rich-text">
+  <div class="rich-text__background-image">
+    {{#if section.settings.background_image}}
+      {{#component "image" data=section.settings.background_image /}}
+    {{/if}}
+  </div>
+
+  <div class="{{ section.settings | class_list()}} rich-text__content color-{{section.settings.color_scheme.id}}">
+    {{#content "blocks" /}}
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.rich_text.name",
+  "icon": "generalSection",
+  "settings": [
+    {
+      "type": "image",
+      "id": "background_image",
+      "label": "t:sections.rich_text.settings.background_image.label",
+      "default": {}
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.rich_text.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.rich_text.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "column-gap": "28px",
+        "row-gap": "28px",
+        "@media (--mobile)": {
+          "flex-direction": "column",
+          "flex-wrap": "nowrap",
+          "align-items": "center",
+          "justify-content": "center",
+          "column-gap": "14px",
+          "row-gap": "14px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.rich_text.settings.spacing.label",
+      "default": {
+        "padding-top": "100px",
+        "padding-right": "30px",
+        "padding-bottom": "100px",
+        "padding-left": "30px",
+        "@media (--mobile)": {
+          "padding-top": "24px",
+          "padding-right": "20px",
+          "padding-bottom": "24px",
+          "padding-left": "20px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "limit": 1
+    },
+    {
+      "type": "rich-text",
+      "limit": 1
+    },
+    {
+      "type": "button-group",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "category": "t:sections.rich_text.presets.presets_0.category",
+      "name": "t:sections.rich_text.presets.presets_0.name",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "text": "Rich text",
+            "text_align": "center",
+            "text_size": "title1"
+          }
+        },
+        {
+          "type": "rich-text"
+        },
+        {
+          "type": "button-group",
+          "settings": {},
+          "blocks": [
+            {
+              "type": "button",
+              "settings": {
+                "text": "Shop this",
+                "use_secondary_style": true
+              }
+            },
+            {
+              "type": "button",
+              "settings": {
+                "text": "Shop all",
+                "use_secondary_style": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

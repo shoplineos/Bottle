@@ -1,0 +1,40 @@
+.rich-text {
+  position: relative;
+  background-color: rgb(var(--color-page-background));
+}
+
+.rich-text .block-heading {
+  width: 100%;
+}
+
+.rich-text .block-button-group .button {
+  white-space: normal;
+}
+
+.rich-text__background-image {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.rich-text__background-image img,
+.rich-text__background-image svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rich-text__content {
+  position: relative;
+}
+
+.rich-text__content .block-heading,
+.rich-text__content .rte,
+.rich-text__content .block-button-group {
+  position: relative;
+  z-index: 3;
+}

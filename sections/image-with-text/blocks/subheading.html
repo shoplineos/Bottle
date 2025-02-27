@@ -1,0 +1,41 @@
+<div class="image-with-text__subheading text-{{block.settings.text_align}}" {{{block.shopline_attributes}}}>{{block.settings.subtitle}}</div>
+
+{{#schema}}
+{
+  "name": "t:sections.image_with_text.blocks.subheading.name",
+  "icon": "title",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "t:sections.image_with_text.blocks.subheading.settings.subtitle.label",
+      "default": "Subtitle"
+    },
+    {
+      "type": "text_align",
+      "id": "text_align",
+      "label": "t:sections.image_with_text.blocks.subheading.settings.text_align.label",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image_with_text.blocks.subheading.settings.text_align.options_0.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image_with_text.blocks.subheading.settings.text_align.options_1.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image_with_text.blocks.subheading.settings.text_align.options_2.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image_with_text.blocks.subheading.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

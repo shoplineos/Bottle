@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page"
+    },
+    "form": {
+      "type": "contact-form"
+    }
+  },
+  "order": ["main-page", "form"]
+}

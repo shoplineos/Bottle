@@ -1,0 +1,68 @@
+<div class="block-product-card__layer {{ block.settings | class_list() }}" {{{block.shopline_attributes}}}>
+  {{#blocks}}
+    {{#block product=props.product /}}
+  {{/blocks}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product_list.layer.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:blocks.product_list.layer.settings.layout.label",
+      "default": {}
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:blocks.product_list.layer.settings.size.label",
+      "default": {
+        "width": "100%"
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:blocks.product_list.layer.settings.spacing.label",
+      "default": {
+        "padding-top": "10px",
+        "padding-bottom": "10px",
+        "padding-left": "10px",
+        "padding-right": "10px",
+        "@media (--mobile)": {
+          "padding-top": "5px",
+          "padding-bottom": "5px",
+          "padding-left": "5px",
+          "padding-right": "5px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product-list/discount_tag",
+      "limit": 1
+    },
+    {
+      "type": "product-list/quick_add",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product_list.layer.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "product-list/discount_tag"
+        },
+        {
+          "type": "product-list/quick_add"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

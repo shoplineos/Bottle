@@ -1,0 +1,38 @@
+
+
+<div class="card__item card-account__username">
+  <div data-edit-hide>
+    <div class="card__item-label">{{"customer.account.username" | t()}}</div>
+    {{#var customer_name = "customer.account.not_set" | t() /}}
+    {{#if customer.name}}
+      {{#set customer_name = customer.name /}}
+    {{/if}}
+    <div class="card__item-value">{{customer_name}}</div>
+  </div>
+
+  
+  <div class="hidden" data-edit-show>
+    {{#update_customer_form id="update-username-form"}}
+    <div class="card-account__username-edit">
+      <label>
+        <div class="card-account__username-edit-subtitle">{{"customer.account.first_name" | t()}}</div>
+        <input
+          type="text"
+          name="customer[first_name]"
+          maxlength="128"
+          value="{{customer.first_name | default("")}}"
+        />
+      </label>
+      <label>
+        <div class="card-account__username-edit-subtitle">{{"customer.account.last_name" | t()}}</div>
+        <input
+          type="text"
+          name="customer[last_name]"
+          maxlength="128"
+          value="{{customer.last_name | default("")}}"
+        />
+      </label>
+    </div>
+    {{/update_customer_form}}
+  </div>
+</div>

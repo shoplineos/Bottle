@@ -1,0 +1,111 @@
+{{#component "stylesheet" src="./sign-up-and-save.css" | asset_url() /}}
+
+<div
+  class="sign-up-and-save-section color-{{section.settings.color_scheme.id}}"
+  data-section-type="sign-up-and-save"
+  data-section-id="{{section.id}}">
+  <div class="sign-up-and-save__container page-width {{#if section.settings.full_screen_width}}page-width--fluid{{/if}}">
+    <div class="{{section.settings | class_list()}} sign-up-and-save__content">
+      {{#content "blocks" /}}
+    </div>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.sign_up_and_save.name",
+  "icon": "email",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.sign_up_and_save.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "switch",
+      "id": "full_screen_width",
+      "label": "t:sections.sign_up_and_save.settings.full_screen_width.label",
+      "default": true
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.sign_up_and_save.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "12px",
+        "column-gap": "12px",
+        "@media (--mobile)": {
+          "row-gap": "4px",
+          "column-gap": "4px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.sign_up_and_save.settings.spacing.label",
+      "default": {
+        "padding-block-start": "60px",
+        "padding-inline-end": "0",
+        "padding-block-end": "60px",
+        "padding-inline-start": "0",
+        "@media (--mobile)": {
+          "padding-block-start": "30px",
+          "padding-block-end": "30px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.sign_up_and_save.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "limit": 1
+    },
+    {
+      "type": "rich-text",
+      "limit": 1
+    },
+    {
+      "type": "$subscription",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "category": "t:sections.sign_up_and_save.presets.presets_0.category",
+      "name": "t:sections.sign_up_and_save.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "text": "Sign up and save"
+          }
+        },
+        {
+          "type": "rich-text",
+          "settings": {
+            "content": "Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals."
+          }
+        },
+        {
+          "type": "$subscription"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

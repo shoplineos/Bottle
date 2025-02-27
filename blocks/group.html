@@ -1,0 +1,73 @@
+<div class="group {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{#content "blocks" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.group.name",
+  "icon": "general",
+  "tag": "",
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:blocks.group.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "32px",
+        "column-gap": "32px"
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:blocks.group.settings.spacing.label",
+      "default": {}
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:blocks.group.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "heading"
+    },
+    {
+      "type": "subheading"
+    },
+    {
+      "type": "description"
+    },
+    {
+      "type": "rich-text"
+    },
+    {
+      "type": "button"
+    },
+    {
+      "type": "button-group",
+      "limit": 2
+    },
+    {
+      "type": "custom-html"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.group.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

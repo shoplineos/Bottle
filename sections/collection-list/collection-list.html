@@ -1,0 +1,145 @@
+{{#component "stylesheet" src="./collection-list.css" | asset_url() /}}
+
+<div class="collection-list-wrapper color-{{section.settings.color_scheme.id}}">
+  <div class="page-width">
+    <div class="{{ section.settings | class_list() }}">
+      {{#blocks}}
+        {{#if forblock.type == "heading-with-link/heading-with-link"}}
+          {{#block url="/collections-all" /}}
+        {{#else if forblock.type == "$list" /}}
+          {{#block /}}
+        {{/if}}
+      {{/blocks}}
+    </div>
+  </div>
+</div>
+
+
+{{#schema}}
+{
+  "name": "t:sections.collection_list.name",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.collection_list.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.collection_list.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "40px",
+        "column-gap": "40px",
+        "@media (--mobile)": {
+          "align-items": "flex-start",
+          "row-gap": "20px",
+          "column-gap": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.collection_list.settings.spacing.label",
+      "default": {
+        "padding-top": "60px",
+        "padding-bottom": "60px",
+        "@media (--mobile)": {
+          "padding-top": "24px",
+          "padding-bottom": "24px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.collection_list.settings.size.label",
+      "default": {}
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading-with-link/heading-with-link",
+      "limit": 1
+    },
+    {
+      "type": "$list",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "category": "t:sections.collection_list.presets.presets_0.category",
+      "name": "t:sections.collection_list.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "heading-with-link/heading-with-link",
+          "settings": {
+            "text": "Shop by category",
+            "text_size": "title2"
+          }
+        },
+        {
+          "type": "$list",
+          "blocks": [
+            {
+              "type": "collection/card",
+              "blocks": [
+                {
+                  "type": "collection/image",
+                  "blocks": [
+                    {
+                      "type": "collection/title"
+                    }
+                  ]
+                },
+                {
+                  "type": "collection/title"
+                }
+              ]
+            },
+            {
+              "type": "collection/card",
+              "blocks": [
+                {
+                  "type": "collection/image",
+                  "blocks": [
+                    {
+                      "type": "collection/title"
+                    }
+                  ]
+                },
+                {
+                  "type": "collection/title"
+                }
+              ]
+            },
+            {
+              "type": "collection/card",
+              "blocks": [
+                {
+                  "type": "collection/image",
+                  "blocks": [
+                    {
+                      "type": "collection/title"
+                    }
+                  ]
+                },
+                {
+                  "type": "collection/title"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,31 @@
+<div class="newsletter-form" {{{block.shopline_attributes}}}>
+  {{#customer_form}}
+    {{#component
+      "input/input-email"
+      input_id="NewsletterForm"
+      input_name="contact[email]"
+      input_required=true
+      input_has_submit_button=true
+      input_placeholder="products.product_details.enter_email_address" | t()
+    /}}
+    {{#if form.posted_successfully}}
+      {{#component "tips-card/tips-card" type="success" text="general.footer.subscribe_success" | t() /}}
+    {{/if}}
+    {{#if form.errors.messages}}
+      {{#component"tips-card" type="error" text=form.errors.messages /}}
+    {{/if}}
+  {{/customer_form}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_password.blocks.email_subscribe.name",
+  "tag": "",
+  "settings": [],
+  "presets": [
+    {
+      "name": "t:sections.main_password.blocks.email_subscribe.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

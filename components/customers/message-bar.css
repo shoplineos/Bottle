@@ -1,0 +1,42 @@
+.customer-message-bar__item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  align-self: stretch;
+  justify-content: space-between;
+  padding-block: 16px;
+  padding-inline: 16px;
+  margin-block-end: 40px;
+  color: #000;
+  background: #ffebe7;
+  border: 1px solid rgb(248 97 64 / 20%);
+  border-radius: 10px;
+}
+
+@media (max-width: 959px) {
+  .customer-message-bar__item {
+    flex-direction: column;
+    padding-block: 12px;
+    padding-inline: 12px;
+    margin-block-end: 20px;
+  }
+
+  .customer-message-bar__item form {
+    margin-inline-end: auto;
+  }
+}
+
+.customer-message-bar__item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  word-wrap: break-word;
+}
+
+.customer-message-bar__item-button {
+  white-space: nowrap;
+
+  --color-button-background: 236, 25, 42;
+  --color-button-text: 255, 255, 255;
+}

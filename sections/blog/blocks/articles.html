@@ -1,0 +1,102 @@
+{{#component "stylesheet" src="./articles.css" | asset_url() /}}
+{{#var articles_pagination = props.blog | get_article_pagination(block.settings.page_size) /}}
+{{#var articles = articles_pagination.list /}}
+
+{{#var mobile_columns = 1.0 /}}
+{{#var extra_columns = 0.3 /}}
+{{#var articles_size = articles | size() /}}
+{{#if (articles_size > 1) || (articles_size == 0)}}
+  {{#set mobile_columns = mobile_columns | plus(extra_columns) /}}
+{{/if}}
+
+<ul
+  class="block-articles grid"
+  style="
+    --mobile-columns: {{mobile_columns}};
+    --mobile-gap-columns: {{mobile_columns | ceil()}};
+    --desktop-columns: {{block.settings.desktop_columns}};
+    --mobile-auto-flow: column;
+  "
+  {{{block.shopline_attributes}}}
+>
+{{#blocks}}
+  {{#for article in articles}}
+    <li class="block-articles__item">
+      {{#block
+        article=article
+        mobile_columns=mobile_columns | floor()
+        desktop_columns=block.settings.desktop_columns
+      /}}
+    </li>
+  {{#else/}}
+    {{#for _ in 1 | range(3)}}
+      <li class="block-articles__item">
+        {{#block /}}
+      </li>
+    {{/for}}
+  {{/for}}
+{{/blocks}}
+</ul>
+
+{{#schema}}
+{
+  "name": "t:sections.blog.blocks.articles.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "t:sections.blog.blocks.articles.settings.page_size.label",
+      "default": 3,
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "unit": "t:sections.blog.blocks.articles.settings.page_size.unit"
+    },
+    {
+      "id": "desktop_columns",
+      "type": "range",
+      "label": "t:sections.blog.blocks.articles.settings.desktop_columns.label",
+      "default": 3,
+      "min": 1,
+      "max": 4,
+      "step": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article/card",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.blog.blocks.articles.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "article/card",
+          "blocks": [
+            {
+              "type": "article/cover"
+            },
+            {
+              "type": "article/info",
+              "blocks": [
+                {
+                  "type": "article/title"
+                },
+                {
+                  "type": "article/date_author"
+                },
+                {
+                  "type": "article/excerpt"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

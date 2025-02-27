@@ -1,0 +1,57 @@
+{{#var product = props.product /}}
+
+<div
+  class="product-detail__title hidden-empty {{block.settings.text_size}} text-{{block.settings.text_align}}"
+  {{{block.shopline_attributes}}}
+>{{block.settings.heading | default(product.title)}}</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_heading.name",
+  "icon": "title",
+  "tag": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:blocks.product.detail_heading.settings.heading.label",
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "t:blocks.product.detail_heading.settings.text_size.label",
+      "default": "title3",
+      "options": [
+        {
+          "value": "title1",
+          "label": "t:blocks.product.detail_heading.settings.text_size.options_0.label"
+        },
+        {
+          "value": "title2",
+          "label": "t:blocks.product.detail_heading.settings.text_size.options_1.label"
+        },
+        {
+          "value": "title3",
+          "label": "t:blocks.product.detail_heading.settings.text_size.options_2.label"
+        },
+        {
+          "value": "title4",
+          "label": "t:blocks.product.detail_heading.settings.text_size.options_3.label"
+        }
+      ]
+    },
+    {
+      "id": "text_align",
+      "type": "text_align",
+      "label": "t:blocks.product.detail_heading.settings.text_align.label",
+      "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_heading.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,32 @@
+{{#var product = props.product /}}
+
+<div {{{block.shopline_attributes}}}>
+  {{#if product.available && (product.compare_at_price > product.price)}}
+    <div
+      style="--product-discount-radius: {{settings.product_discount_radius}}px;"
+      class="body4 body-font-bold block-product-card__discount-tag"
+    >
+      {{#var save_price = product.compare_at_price | minus(product.price) | money() /}}
+      {{{ "products.product_list.save_byjs" | t(priceDom=save_price) }}}
+    </div>
+  {{#else if product && !product.available /}}
+    <div
+      style="--product-discount-radius: {{settings.product_discount_radius}}px;"
+      class="body4 body-font-bold block-product-card__sold-out"
+    >
+      {{ "products.general.sold_out" | t() }}
+    </div>
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product_list.discount.tag.name",
+  "tag": "",
+  "presets": [
+    {
+      "name": "t:blocks.product_list.discount.tag.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

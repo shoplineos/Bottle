@@ -1,0 +1,10 @@
+.main-page__title {
+  margin-block-end: 30px;
+  text-align: center;
+}
+
+@media (--destop) {
+  .main-page__title {
+    margin-block-end: 20px;
+  }
+}

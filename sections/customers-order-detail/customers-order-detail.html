@@ -1,0 +1,302 @@
+{{#component "stylesheet" src="./customers-order-detail.css" | asset_url() /}}
+
+<div class="order-detail-page color-{{section.settings.color_scheme.id}} {{section.settings | class_list()}}">
+  <section class="order-detail">
+    {{#component "breadcrumb/breadcrumb" class="hidden-desktop" title="customer.general.orders" | t() href=routes.account_order_list_url /}}
+
+    <div class="order-detail__title body4">
+      {{#var order_number = "#" | append(order.order_number) /}}
+      <div class="order-detail__seq body2 font-bold">{{"order.order_status.sequence" | t(id=order_number) }}</div>
+      <div class="order-detail__create-time">
+        <span>{{"order.order_details.time" | t() }}</span>
+        {{order.created_at | date(format="%Y-%m-%d %H:%M")}}
+      </div>
+      
+      {{#if order.cancelled}}
+        <span class="order-detail__status font-bold">
+          {{"order.order_status.canceled" | t()}}
+        </span>
+      {{/if}}
+    </div>
+
+
+    
+    <div class="order-detail__panel">
+      <h3 class="panel__title body2 font-bold">{{"order.shipping.information" | t() }}</h3>
+      <div class="panel__content body4 order-detail__info">
+        {{#if customer.name}}<p>{{customer.name}}</p>{{/if}}
+        {{#if customer.email}}<p>{{customer.email}}</p>{{/if}}
+        {{#if customer.phone}}<p>{{customer.phone}}</p>{{/if}}
+        {{#if order.shipping_address}}{{#format_address order.shipping_address /}}{{/if}}
+      </div>
+    </div>
+
+    
+    <div class="order-detail__content">
+      
+      <table class="order-detail__product-table">
+        <thead class="product-table__head body2 font-bold">
+          <tr>
+            <th align="left" colspan="3">{{"order.order_list.item_amount" | t(item=order.item_count) }}</th>
+            <th class="head-title--quantity" align="right">{{"order.order_details.products.quantity" | t() }}</th>
+            <th class="hidden-mobile" align="right">{{"filters.price.label" | t() }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#for line_item in order.line_items}}
+            {{#var has_fulfillment = false /}}
+            {{#if line_item.fulfillments | size() > 0 }}
+              {{#set has_fulfillment = true /}}
+            {{/if}}
+            <tr class="body3">
+              <td align="left">
+                <div class="product-item__cover">
+                  {{#if line_item.image.src}}
+                    {{#component "image" data=line_item.image desktop_size="80px" mobile_size="64px" /}}
+                  {{#else/}}
+                    {{#placeholder_svg "image" class="image-fallback" /}}
+                  {{/if}}
+                </div>
+              </td>
+              <td class="main-col left" align="left" {{#if !has_fulfillment}}colspan="2"{{/if}}>
+                <div class="product-item__main">
+                  <div class="product-item__info">
+                    <p class="product-item__title tag-unstyled">{{line_item.title}}</p>
+                    <p class="product-item__spec tag-unstyled body5">
+                      {{#for option in line_item.options_with_values}}
+                        <span>{{option.value}}</span>{{#if !forloop.last}} / {{/if}}
+                      {{/for}}
+                    </p>
+                    {{#for discount in line_item.line_level_discount_allocations}}
+                      <span class="product-item__discount body5">
+                        {{#component "icons/discount-simple" /}}
+                        {{discount.discount_application.title}}(-{{{discount.amount | money_with_currency(currency=order.currency)}}})
+                      </span>
+                    {{/for}}
+
+                    
+                    {{#if line_item.properties | size() > 0}}
+                      {{#for property in line_item.properties}}
+                        <div class="product-property product-item__spec body5">
+                          <span class="product-property__name">{{property.name}}:&amp;nbsp;</span>
+                          {{#if property.type == "text"}}
+                            <span>{{property.value}}</span>
+                          {{#else if property.type == "link" /}}
+                            <a class="button button--link" href="{{property.urls[0]}}" target="_blank">
+                              {{#if property.value}}
+                                {{property.value}}
+                              {{#else/}}
+                                 {{"cart.item.click_to_view" | t() }}
+                              {{/if}}
+                            </a>
+                          {{#else if property.type == "picture" /}}
+                            <div class="product-property__value">
+                              {{#for url in property.urls}}
+                                <a class="product-property__link" href="{{url}}" target="_blank">
+                                  {{#component "image" class="product-property__image" data=url /}}
+                                </a>
+                              {{/for}}
+                            </div>
+                          {{/if}}
+                        </div>
+                      {{/for}}
+                    {{/if}}
+                  </div>
+                  
+                  {{#if has_fulfillment}}
+                    <div class="product-item__fulfillments hidden-desktop">
+                      {{#for fulfillment in line_item.fulfillments}}
+                        <div class="product-item__fulfillment">
+                          <div class="fulfillment__text body4">{{"order.fulfillment.createTime" | t(time=fulfillment.created_at) }}</div>
+                          {{#if fulfillment.tracking_number}}
+                            <div class="fulfillment__text body4 font-bold">{{fulfillment.tracking_company}} {{fulfillment.tracking_number}}</div>
+                          {{/if}}
+                          {{#if fulfillment.tracking_url}}
+                            <a class="fulfillment__text fulfillment__link body4 font-bold" href="{{fulfillment.tracking_url}}" target="_blank">{{"order.shipping.package_tracking" | t() }}</a>
+                          {{/if}}
+                        </div>
+                      {{/for}}
+                    </div>
+                  {{/if}}
+                  
+                  <span class="product-item__prices font-bold hidden-desktop">
+                    {{#if line_item.original_price != line_item.final_price}}
+                      <span class="product-item__ori-price">{{{line_item.original_price | money_with_currency(currency=order.currency)}}}</span>
+                    {{/if}}
+                    <span class="product-item__price">{{{line_item.final_price | money_with_currency(currency=order.currency)}}}</span>
+                  </span>
+                </div>
+              </td>
+              
+              {{#if has_fulfillment}}
+                <td class="fulfillment-td" align="left">
+                  <div class="product-item__fulfillments hidden-mobile">
+                    {{#for fulfillment in line_item.fulfillments}}
+                      <div class="product-item__fulfillment">
+                        <div class="fulfillment__text body4">{{"order.fulfillment.createTime" | t(time=fulfillment.created_at) }}</div>
+                        {{#if fulfillment.tracking_number}}<div class="fulfillment__text body4 font-bold">{{fulfillment.tracking_company}} {{fulfillment.tracking_number}}</div>{{/if}}
+                        {{#if fulfillment.tracking_url}}<a class="fulfillment__text fulfillment__link body4 font-bold" href="{{fulfillment.tracking_url}}" target="_blank">{{"order.shipping.package_tracking" | t() }}</a>{{/if}}
+                      </div>
+                    {{/for}}
+                  </div>
+                </td>
+              {{/if}}
+              <td class="tool-col font-bold" align="right">
+                <div class="col-wrap">
+                  <span class="product-item__quantity">x{{line_item.quantity}}</span>
+                </div>
+              </td>
+              <td class="tool-col hidden-mobile font-bold" align="right">
+                <div class="col-wrap">
+                  <div class="product-item__prices">
+                    {{#if line_item.original_price != line_item.final_price}}
+                      <span class="product-item__ori-price">{{{line_item.original_price | money_with_currency(currency=order.currency)}}}</span>
+                    {{/if}}
+                    <span class="product-item__price">{{{line_item.final_price | money_with_currency(currency=order.currency)}}}</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          {{/for}}
+        </tbody>
+      </table>
+      
+      <div class="order-detail__cost">
+        <div class="cost__block body4">
+          <div class="cost__item">
+            <div class="cost__label">{{"cart.payment.subtotal_price" | t() }}</div>
+            <div class="cost__content">
+              <span>{{{order.line_items_subtotal_price | money_with_currency(currency=order.currency)}}}</span>
+            </div>
+          </div>
+          <div class="cost__item">
+            <div class="cost__label">{{"transaction.general.shipping_fee" | t() }}</div>
+            <div class="cost__content">
+              <span>
+                {{#if order.shipping_price}}
+                  {{{order.shipping_price | money_with_currency(currency=order.currency)}}}
+                {{#else/}}
+                  {{"transaction.general.free_charge" | t()}}
+                {{/if}}
+              </span>
+            </div>
+          </div>
+          {{#if order.tip}}
+            <div class="cost__item">
+              <div class="cost__label">{{"transaction.general.order_tip" | t() }}</div>
+              <div class="cost__content">
+                <span>{{{order.tip | money_with_currency(currency=order.currency)}}}</span>
+              </div>
+            </div>
+          {{/if}}
+          {{#if order.rounding}}
+            <div class="cost__item">
+              <div class="cost__label">{{"order.order_details.adjust" | t() }}</div>
+              <div class="cost__content">
+                <span>{{{order.rounding | money_with_currency(currency=order.currency)}}}</span>
+              </div>
+            </div>
+          {{/if}}
+          {{#if order.tax_price}}
+            <div class="cost__item">
+              <div class="cost__label">{{"transaction.general.order_tax" | t() }}</div>
+              <div class="cost__content">
+                <span>{{{order.tax_price | money_with_currency(currency=order.currency)}}}</span>
+              </div>
+            </div>
+          {{/if}}
+          {{#if order.total_discounts}}
+            <div class="cost__item">
+              <div class="cost__label">{{"transaction.general.trade_coupon_discount" | t() }}</div>
+              <div class="cost__content">
+                <span>-{{{order.total_discounts | money_with_currency(currency=order.currency)}}}</span>
+              </div>
+            </div>
+          {{/if}}
+          {{#for transaction in order.transactions}}
+            {{#if transaction.payment_details.gift_card}}
+              <div class="cost__item">
+                <div class="cost__label">{{"trade.reduction_code.giftcard" | t() }}(....{{transaction.payment_details.gift_card.last_four_characters}})</div>
+                <div class="cost__content">
+                  <span>-{{{transaction.amount | money_with_currency(currency=order.currency)}}}</span>
+                </div>
+              </div>
+            {{/if}}
+          {{/for}}
+        </div>
+        <div class="cost__block body3">
+          <div class="cost__item">
+            <div class="cost__label font-bold">{{"transaction.payment.total" | t() }}</div>
+            <div class="cost__content font-bold">
+              <span>{{{order.total_price | money_with_currency(currency=order.currency)}}}</span>
+            </div>
+          </div>
+        </div>
+        <a href="{{order.rebuy_url}}" class="order-detail__rebuy button button--secondary">
+          {{"transaction.order.rebuy" | t() }}
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="order-detail__panel">
+      <h3 class="panel__title body2 font-bold">{{"order.payment.payment" | t() }}</h3>
+      <div class="panel__content body4 order-detail__pay-info">
+        <div class="pay-info">
+          <div class="pay-info__label">{{"order.payment.payment_status" | t() }}</div>
+          <div class="pay-info__content">{{order.financial_status_label}}</div>
+        </div>
+        <div class="pay-info">
+          <div class="pay-info__label">{{"order.payment.billing_address" | t() }}</div>
+          {{#capture format_billing_address}}{{#format_address order.billing_address /}}{{/capture}}
+          <div class="pay-info__content">{{{format_billing_address | replace("<br>", ", ")}}}</div>
+        </div>
+      </div>
+    </div>
+
+    
+    {{#if order.note}}
+      <div class="order-detail__panel">
+        <h3 class="panel__title body2 font-bold">{{"order.order_details.remark" | t() }}</h3>
+        <div class="panel__content body4">
+          {{order.note}}
+        </div>
+      </div>
+    {{/if}}
+
+    
+    <div class="order-detail__panel">
+      <h3 class="panel__title body2 font-bold">{{"order.order_status.contact_us" | t() }}</h3>
+      <div class="panel__content body4">
+        {{"order.order_status.help_tips" | t(email=shop.email) }}
+      </div>
+    </div>
+  </section>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.customers_order_detail.name",
+  "class": "page-width",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.customers_order_detail.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.customers_order_detail.settings.spacing.label",
+      "default": {
+        "padding-top": "40px",
+        "padding-bottom": "40px",
+        "@media (--mobile)": {
+          "padding-top": "0px"
+        }
+      }
+    }
+  ]
+}
+{{/schema}}

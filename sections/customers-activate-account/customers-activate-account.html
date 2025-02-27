@@ -1,0 +1,110 @@
+{{#component "stylesheet" src="customers/base.css" | asset_url() /}}
+{{#component "stylesheet" src="./customers-activate-account.css" | asset_url() /}}
+
+{{#component "script" src="customers/base.js" | asset_url() /}}
+{{#component "script" src="customers/base-form.js" | asset_url() /}}
+{{#component "script" src="./customers-activate-account.js" | asset_url() /}}
+
+<script>
+  if (window.Shopline.i18nInit) {
+    window.Shopline.i18nInit();
+  }
+</script>
+
+<theme-main-activate-account
+  class="customer customer-activate-account
+    {{section.settings.spacing | class_list()}}
+    color-{{section.settings.color_scheme.id}}"
+>
+  <h2 class="title5 text-center customer__title">
+    {{#if invite_activation_information.discount_enable}}
+      {{"customer.activate.normal_title_with_discount_code" | t()}}
+    {{#else/}}
+      {{"customer.activate.normal_title" | t()}}
+    {{/if}}
+  </h2>
+
+  
+  {{#if invite_activation_information.discount_enable}}
+    <div class="marketing-discount" style="--background-color: {{invite_activation_information.discount_bg_color.rgba}}">
+      {{#if invite_activation_information.discount_banner_image}}
+        <div class="marketing-banner-image">
+          {{#component "image" data=invite_activation_information.discount_banner_image /}}
+        </div>
+      {{/if}}
+      <div class="marketing-banner-body">
+        <div class="marketing-banner-title">
+          {{#component "icon-star" /}}
+          <span class="marketing-banner-title-text">Gift For Avtivation</span>
+          {{#component "icon-star" /}}
+        </div>
+        <div class="marketing-banner-text">
+          <div class="marketing-banner-text--inner body3">
+            {{invite_activation_information.discount_dec}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+
+  <theme-base-form>
+    {{#activate_customer_password_form class="customer__form"}}
+      
+      {{#component "input/input-password" input_name="customer[password]" input_required=true input_autocomplete="password" /}}
+
+      
+      <p class="customer__error-message" class="body6"></p>
+
+      <button class="button customer__submit" type="submit">
+        {{"customer.activate.button" | t()}}
+        {{#component "icons/loading" class="button__spinner" /}}
+      </button>
+
+      
+      {{#component "customers/provisions" /}}
+
+      <div class="customer__extra">
+        
+        <label>
+          <span class="field-checkbox">
+            <input type="checkbox" name="customer[accepts_marketing]" checked value="true" />
+            <span class="checkbox"></span>
+          </span>
+
+          <span class="body6">
+            {{"unvisiable.customer.error_message_1" | t()}}
+          </span>
+        </label>
+      </div>
+    {{/activate_customer_password_form}}
+  </theme-base-form>
+</theme-main-activate-account>
+
+{{#schema}}
+{
+  "name": "t:sections.customers_activate_account.name",
+  "settings": [
+    {
+      "id": "color_scheme",
+      "type": "color_scheme",
+      "label": "t:sections.customers_activate_account.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.customers_activate_account.settings.spacing.label",
+      "default": {
+        "padding-top": "80px",
+        "padding-bottom": "80px",
+        "@media (--mobile)": {
+          "padding-top": "40px",
+          "padding-right": "20px",
+          "padding-bottom": "40px",
+          "padding-left": "20px"
+        }
+      }
+    }
+  ]
+}
+{{/schema}}

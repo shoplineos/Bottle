@@ -1,0 +1,115 @@
+{{#component "stylesheet" src="./custom-page.css" | asset_url() /}}
+
+<div class="custom-page color-{{section.settings.color_scheme.id}}">
+  <div class="page-width">
+    <div class="custom-page__inner {{section.settings | class_list()}}">
+      <h2 class="custom-page__title {{section.settings.title_size}}">
+        {{#if section.settings.page.title}}
+          {{section.settings.page.title}}
+        {{#else/}}
+          {{"customer.general.title" | t()}}
+        {{/if}}
+      </h2>
+      <div class="custom-page__content rte">
+        {{#if section.settings.page.content}}
+          {{{section.settings.page.content}}}
+        {{#else/}}
+          {{#placeholder_svg "image" class="empty-image-class" /}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.custom_page.name",
+  "icon": "generalSection",
+  "settings": [
+    {
+      "type": "page",
+      "id": "page",
+      "label": "t:sections.custom_page.settings.page.label"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "t:sections.custom_page.settings.title_size.label",
+      "options": [
+        {
+          "value": "title1",
+          "label": "t:sections.custom_page.settings.title_size.options_0.label"
+        },
+        {
+          "value": "title2",
+          "label": "t:sections.custom_page.settings.title_size.options_1.label"
+        },
+        {
+          "value": "title3",
+          "label": "t:sections.custom_page.settings.title_size.options_2.label"
+        },
+        {
+          "value": "title4",
+          "label": "t:sections.custom_page.settings.title_size.options_3.label"
+        }
+      ],
+      "default": "title3"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.custom_page.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.custom_page.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "30px",
+        "column-gap": "30px",
+        "@media (--mobile)": {
+          "row-gap": "20px",
+          "column-gap": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.custom_page.settings.spacing.label",
+      "default": {
+        "padding-top": "80px",
+        "padding-right": "210px",
+        "padding-bottom": "80px",
+        "padding-left": "210px",
+        "@media (--mobile)": {
+          "padding-top": "40px",
+          "padding-right": "0",
+          "padding-bottom": "40px",
+          "padding-left": "0"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.custom_page.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "category": "t:sections.custom_page.presets.presets_0.category",
+      "name": "t:sections.custom_page.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

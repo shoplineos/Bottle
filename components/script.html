@@ -1,0 +1,3 @@
+{{#var defer = props.defer | default(true) /}}
+{{#var async = props.async | default(false) /}}
+<script src="{{props.src}}" {{#if defer}}defer{{/if}} {{#if async}}async{{/if}}></script>

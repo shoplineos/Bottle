@@ -1,0 +1,13 @@
+{{#var page = props.page /}}
+
+<a href="{{page.url | default("javascript:void(0);")}}" class="main-search__page-card">
+  <div class="main-search__page-card-image-wrapper">
+    {{#placeholder_svg "image" /}}
+  </div>
+  <div class="main-search__page-card-title-wrapper">
+    {{#component "icons/edit" /}}
+    <span class="main-search__page-card-title body3 body-font-bold">
+      {{page.title}}
+    </span>
+  </div>
+</a>

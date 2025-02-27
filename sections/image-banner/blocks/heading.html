@@ -1,0 +1,69 @@
+<h2
+  class="image-banner__heading {{block.settings.text_size}} text-{{block.settings.text_align}}"
+  {{{block.shopline_attributes}}}
+>{{block.settings.heading}}</h2>
+
+{{#schema}}
+{
+  "name": "t:sections.image_banner.blocks.heading.name",
+  "icon": "title",
+  "tag": "",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "t:sections.image_banner.blocks.heading.settings.heading.label",
+      "default": "Two Line\nTitle Slide"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "t:sections.image_banner.blocks.heading.settings.text_size.label",
+      "default": "title2",
+      "options": [
+        {
+          "value": "title1",
+          "label": "t:sections.image_banner.blocks.heading.settings.text_size.options_0.label"
+        },
+        {
+          "value": "title2",
+          "label": "t:sections.image_banner.blocks.heading.settings.text_size.options_1.label"
+        },
+        {
+          "value": "title3",
+          "label": "t:sections.image_banner.blocks.heading.settings.text_size.options_2.label"
+        },
+        {
+          "value": "title4",
+          "label": "t:sections.image_banner.blocks.heading.settings.text_size.options_3.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "t:sections.image_banner.blocks.heading.settings.text_align.label",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image_banner.blocks.heading.settings.text_align.options_0.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image_banner.blocks.heading.settings.text_align.options_1.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image_banner.blocks.heading.settings.text_align.options_2.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image_banner.blocks.heading.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

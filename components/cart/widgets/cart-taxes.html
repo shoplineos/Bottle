@@ -1,0 +1,13 @@
+
+
+<div class="cart-taxes text-center body4 rte">
+  {{#if shop.cart_taxes_included && shop.shipping_policy.body}}
+    {{{"cart.next_step.taxes_included_and_shipping_policy" | t(link=shop.shipping_policy.url)}}}
+  {{#else if shop.taxes_included /}}
+    {{"cart.next_step.taxes_included_and_shipping_at_checkout" | t()}}
+  {{#else if shop.shipping_policy.body /}}
+    {{{"cart.next_step.taxes_not_included_and_shipping_policy_at_checkout" | t(link=shop.shipping_policy.url)}}}
+  {{#else /}}
+    {{"cart.next_step.calculated_taxes_fees" | t()}}
+  {{/if}}
+</div>

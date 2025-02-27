@@ -1,0 +1,176 @@
+
+
+{{#component "script" src="components/checkbox-group/index.js" | asset_url() /}}
+{{#component "script" src="./card-subscriptions-email.js" | asset_url() /}}
+
+{{#if customer.accepts_email_marketing}}
+  
+  <div class="card__row">
+    <div class="card__row-inner card-subscriptions__unsubscribe">
+      
+      <span class="body4">{{"customer.subscription.email" | t()}}</span>
+
+      
+      <theme-modal data-placement="center" data-mask-closable data-esc-to-exit>
+        <details>
+          <summary>
+            <button class="unsubscribe-button body4" type="button">
+              <span class="unsubscribe-button-status">
+                {{#component "icons/check" /}}
+                <span>{{"customer.subscription.subscription_hint" | t()}}</span>
+              </span>
+
+              <span class="unsubscribe-button-status">
+                
+                {{#component "icons/minus-circle" /}}
+                <span>{{"customer.subscription.unsubscribe_confirm_text" | t()}}</span>
+              </span>
+            </button>
+          </summary>
+
+          <theme-card-subscriptions-email class="modify-modal__container">
+            
+            <button class="modify-modal__close" name="close" type="button">
+              {{#component "icons/close" /}}
+            </button>
+
+            
+            <div class="modify-modal__title body3 font-bold">
+              {{"customer.subscription.unsubscribe_title" | t()}}
+            </div>
+
+            
+            <div class="modify-modal__content">
+
+              {{#customer_unsubscribe_form id="customer-unsubscribe-email-form"}}
+                <input type="hidden" name="customer[unsubscribe_type]" value="email" />
+
+                <div class="modify-modal__desc body4">
+                  {{"customer.subscription.unsubscribe_subtitle" | t()}}
+                </div>
+
+                <div class="modify-modal__content body4">
+                  <theme-checkbox-group class="unsubscribe-reasons" type="radio">
+                    {{#for reason in form.unsubscribe_reasons}}
+                      <label class="unsubscribe-reason">
+                        <span class="field-radio">
+                          <input type="radio" name="customer[unsubscribe_reason]" value="{{reason.value}}" />
+                          <span class="radio"></span>
+                        </span>
+
+                        <span>{{reason.text | t()}}</span>
+                        {{#if reason.show_other_reason}}
+                        <label class="field field--normal">
+                          <input type="text" class="field__input" name="customer[other_reason]" placeholder="{{`customer.subscription.reason_other_placeholder` | t()}}" />
+                        </label>
+                        {{/if}}
+                      </label>
+                    {{/for}}
+                  </theme-checkbox-group>
+                </div>
+              {{/customer_unsubscribe_form}}
+            </div>
+
+            
+            <div class="modify-modal__actions">
+              <button name="close" class="button button--secondary" type="button">
+                {{"customer.general.cancel_common" | t()}}
+              </button>
+
+              <button class="button" type="submit" form="customer-unsubscribe-email-form" disabled>
+                <span>{{"customer.subscription.unsubscribe_confirm_text" | t()}}</span>
+                {{#component "icons/loading" class="button__spinner" /}}
+              </button>
+            </div>
+          </theme-card-subscriptions-email>
+        </details>
+      </theme-modal>
+    </div>
+  </div>
+{{#else/}}
+  
+  <div class="card__row">
+    {{#customer_subscribe_form return_to=routes.account_url | append("?type=email")}}
+      <div class="card__row-inner">
+        
+        <div class="card-subscriptions__info">
+          <span class="body4">
+            {{"customer.subscription.email" | t()}}
+          </span>
+          {{#if form.errors.messages && form.type == "email"}}
+          <div class="card-subscriptions__error body6">{{"customer.subscription.email_subscribe_error_tip" | t()}}</div>
+          {{/if}}
+        </div>
+
+        
+        <theme-modal data-placement="center" data-mask-closable data-esc-to-exit>
+          <details>
+            <summary>
+              <button class="button button--secondary" type="button">
+                {{"customer.subscription.subscribe_button" | t() | downcase()}}
+              </button>
+            </summary>
+
+            <div class="modify-modal__container">
+              
+              <button class="modify-modal__close" name="close" type="button">
+                {{#component "icons/close" /}}
+              </button>
+
+              
+              <div class="modify-modal__title body3 font-bold">
+                {{"customer.subscription.email_subscription_text" | t()}}
+              </div>
+
+
+                
+                <div class="modify-modal__content">
+                  {{#var input_name_str = "customer[email]"/}}
+                  {{#var input_class = "field--normal"/}}
+                  {{#var is_input_required = true/}}
+                  {{#var is_input_disabled = false/}}
+
+                  {{#if customer.email}}
+                    <input type="text" name="{{input_name_str}}" hidden value="{{customer.email}}" />
+                  {{/if}}
+
+                  {{#if customer.email}}
+                    {{#set input_name_str = ""/}}
+                    {{#set input_class = input_class | append(" field--disabled") /}}
+                    {{#set is_input_required = false/}}
+                    {{#set is_input_disabled = true/}}
+                  {{/if}}
+
+                  {{#component
+                    "input/input-email"
+                    class=input_class
+                    input_name=input_name_str
+                    input_required=true
+                    input_autocomplete="email"
+                    input_spellcheck="false"
+                    input_autocapitalize="off"
+                    input_required=is_input_required
+                    input_disabled=is_input_disabled
+                    input_value=customer.email
+                    input_placeholder="customer.general.email" | t()
+                  /}}
+                </div>
+
+                
+                <div class="modify-modal__actions">
+                  <button name="close" class="button button--secondary" type="button">
+                    {{"customer.general.cancel_common" | t()}}
+                  </button>
+
+                  <button class="button" type="submit">
+                    <span>{{"customer.subscription.save_button" | t()}}</span>
+                    {{#component "icons/loading" class="button__spinner" /}}
+                  </button>
+                </div>
+            </div>
+          </details>
+        </theme-modal>
+      </div>
+    {{/customer_subscribe_form}}
+  </div>
+{{/if}}

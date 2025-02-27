@@ -1,0 +1,68 @@
+{
+  "current": "Default",
+  "presets": {
+    "Default": {
+      "theme": {
+        "color_schemes": {
+          "scheme-1": {
+            "settings": {
+              "color_background": "#F3F2E0",
+              "color_text": "#3D3819",
+              "color_light_text": "#726C4A",
+              "color_entry_line": "#CBCBCB",
+              "color_button_background": "#3D3819",
+              "color_button_text": "#F3F2E0",
+              "color_button_secondary_background": "#F3F2E0",
+              "color_button_secondary_text": "#3D3819",
+              "color_button_secondary_border": "#726C4A",
+              "color_button_text_link": "#3D3819"
+            }
+          },
+          "scheme-2": {
+            "settings": {
+              "color_background": "#A7A92F",
+              "color_text": "#F3F2E0",
+              "color_light_text": "#FFFFFB",
+              "color_entry_line": "#FFFFFB",
+              "color_button_background": "#F3F2E0",
+              "color_button_text": "#87891E",
+              "color_button_secondary_background": "#A7A92F",
+              "color_button_secondary_text": "#F3F2E0",
+              "color_button_secondary_border": "#F3F2E0",
+              "color_button_text_link": "#FFFFFB"
+            }
+          },
+          "scheme-3": {
+            "settings": {
+              "color_background": "#DA9E52",
+              "color_text": "#3D3819",
+              "color_light_text": "#514E3B",
+              "color_entry_line": "#AF7D3E",
+              "color_button_background": "#AF7D3E",
+              "color_button_text": "#DA9E52",
+              "color_button_secondary_background": "#DA9E52",
+              "color_button_secondary_text": "#3D3819",
+              "color_button_secondary_border": "#3D3820",
+              "color_button_text_link": "#3D3821"
+            }
+          },
+          "scheme-4": {
+            "settings": {
+              "color_background": "#1E1E1E",
+              "color_text": "#FFFFFF",
+              "color_light_text": "#9A9A9A",
+              "color_entry_line": "#FFFFFF",
+              "color_button_background": "#FFFFFF",
+              "color_button_text": "#1E1E1E",
+              "color_button_secondary_background": "rgba(0,0,0,0)",
+              "color_button_secondary_text": "#FFFFFF",
+              "color_button_secondary_border": "#FFFFFF",
+              "color_button_text_link": "#FFFFFF"
+            }
+          }
+        }
+      },
+      "sections": {}
+    }
+  }
+}

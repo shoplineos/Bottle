@@ -1,0 +1,109 @@
+<section class="page-width">
+  <div class="section-featured-collection {{ section.settings | class_list() }}">
+    {{#blocks }}
+      {{#if forblock.type == "heading-with-link/heading-with-link"}}
+        {{#block url=section.settings.collection.url /}}
+      {{#else if forblock.type == "product-list/list" /}}
+        {{#block collection=section.settings.collection product_placeholder=true /}}
+      {{/if}}
+    {{/blocks}}
+  </div>
+</section>
+
+{{#schema}}
+{
+  "name": "t:sections.featured_collection.name",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured_collection.settings.collection.label"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.featured_collection.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "row-gap": "40px",
+        "column-gap": "40px",
+        "@media (--mobile)": {
+          "row-gap": "20px",
+          "column-gap": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.featured_collection.settings.spacing.label",
+      "default": {
+        "padding-top": "60px",
+        "padding-bottom": "60px",
+        "@media (--mobile)": {
+          "padding-top": "24px",
+          "padding-bottom": "24px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading-with-link/heading-with-link",
+      "limit": 1
+    },
+    {
+      "type": "product-list/list",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "category": "t:sections.featured_collection.presets.presets_0.category",
+      "name": "t:sections.featured_collection.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "heading-with-link/heading-with-link",
+          "settings": {
+            "text": "Featured collection",
+            "text_size": "title2"
+          }
+        },
+        {
+          "type": "product-list/list",
+          "blocks": [
+            {
+              "type": "product-list/card",
+              "blocks": [
+                {
+                  "type": "product-list/image",
+                  "blocks": [
+                    {
+                      "type": "product-list/layer",
+                      "blocks": [
+                        {
+                          "type": "product-list/discount_tag"
+                        },
+                        {
+                          "type": "product-list/quick_add"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "product-list/title"
+                },
+                {
+                  "type": "product-list/price"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

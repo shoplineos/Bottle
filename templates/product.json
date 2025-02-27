@@ -1,0 +1,186 @@
+{
+  "sections": {
+    "main-product-info": {
+      "type": "main-product",
+      "settings": {},
+      "blocks": {
+        "media": {
+          "type": "$product-media",
+          "settings": {}
+        },
+        "info": {
+          "type": "$product-info",
+          "settings": {},
+          "blocks": {
+            "title": {
+              "type": "product/detail-heading",
+              "settings": {}
+            },
+            "price": {
+              "type": "product/detail-price",
+              "settings": {}
+            },
+            "variant-picker": {
+              "type": "product/detail-variant-picker",
+              "settings": {}
+            },
+            "quantity-selector": {
+              "type": "product/detail-quantity-selector",
+              "settings": {}
+            },
+            "buy-buttons": {
+              "type": "product/detail-buy-buttons",
+              "settings": {}
+            },
+            "share": {
+              "type": "product/detail-share",
+              "settings": {}
+            },
+            "sell-info": {
+              "type": "product/detail-sell-info",
+              "settings": {},
+              "blocks": {
+                "sell_info_1": {
+                  "type": "product/detail-sell-info-row",
+                  "settings": {
+                    "info_icon": "globe",
+                    "info_text": "Free worldwide shipping"
+                  }
+                },
+                "sell_info_2": {
+                  "type": "product/detail-sell-info-row",
+                  "settings": {
+                    "info_icon": "checkmark",
+                    "info_text": "Free returns"
+                  }
+                },
+                "sell_info_3": {
+                  "type": "product/detail-sell-info-row",
+                  "settings": {
+                    "info_icon": "leaf",
+                    "info_text": "Carbon neutral"
+                  }
+                },
+                "sell_info_4": {
+                  "type": "product/detail-sell-info-row",
+                  "settings": {
+                    "info_icon": "lock",
+                    "info_text": "Secure payments"
+                  }
+                }
+              },
+              "block_order": ["sell_info_1", "sell_info_2", "sell_info_3", "sell_info_4"]
+            },
+            "description": {
+              "type": "product/detail-description",
+              "settings": {}
+            },
+            "additional": {
+              "type": "product/detail-additional",
+              "settings": {
+                "title": "Example title",
+                "icon": "none",
+                "description": "",
+                "custom_page": "",
+                "enabled_fold": true
+              }
+            }
+          },
+          "block_order": [
+            "title",
+            "price",
+            "sell-info",
+            "variant-picker",
+            "quantity-selector",
+            "buy-buttons",
+            "description",
+            "share",
+            "additional"
+          ]
+        }
+      },
+      "block_order": ["media", "info"]
+    },
+    "recommended-product": {
+      "type": "recommended-product",
+      "settings": {},
+      "blocks": {
+        "recommended-product__heading": {
+          "type": "heading",
+          "settings": {
+            "text": "You may also like",
+            "text_align": "center"
+          }
+        },
+        "recommended-product__product-list": {
+          "type": "product-list/list",
+          "settings": {
+            "page_size": 4,
+            "desktop_columns": 4,
+            "mobile_columns": 2,
+            "desktop_enable_slider": true,
+            "mobile_enable_slider": true
+          },
+          "blocks": {
+            "recommended-product__product-list__card": {
+              "type": "product-list/card",
+              "blocks": {
+                "recommended-product__product-list__card__image": {
+                  "type": "product-list/image",
+                  "blocks": {
+                    "recommended-product__product-list__card__image__layer-1": {
+                      "type": "product-list/layer",
+                      "settings": {
+                        "layout": {
+                          "align-items": "flex-end"
+                        }
+                      },
+                      "blocks": {
+                        "recommended-product__product-list__card__image__layer__discount-tag": {
+                          "type": "product-list/discount_tag"
+                        }
+                      },
+                      "block_order": ["recommended-product__product-list__card__image__layer__discount-tag"]
+                    },
+                    "recommended-product__product-list__card__image__layer-2": {
+                      "type": "product-list/layer",
+                      "settings": {
+                        "layout": {
+                          "justify-content": "flex-end"
+                        }
+                      },
+                      "blocks": {
+                        "recommended-product__product-list__card__image__layer__quick-add-to-cart": {
+                          "type": "product-list/quick_add"
+                        }
+                      },
+                      "block_order": ["recommended-product__product-list__card__image__layer__quick-add-to-cart"]
+                    }
+                  },
+                  "block_order": [
+                    "recommended-product__product-list__card__image__layer-1",
+                    "recommended-product__product-list__card__image__layer-2"
+                  ]
+                },
+                "recommended-product__product-list__card__title": {
+                  "type": "product-list/title"
+                },
+                "recommended-product__product-list__card__price": {
+                  "type": "product-list/price"
+                }
+              },
+              "block_order": [
+                "recommended-product__product-list__card__image",
+                "recommended-product__product-list__card__title",
+                "recommended-product__product-list__card__price"
+              ]
+            }
+          },
+          "block_order": ["recommended-product__product-list__card"]
+        }
+      },
+      "block_order": ["recommended-product__heading", "recommended-product__product-list"]
+    }
+  },
+  "order": ["main-product-info", "recommended-product"]
+}

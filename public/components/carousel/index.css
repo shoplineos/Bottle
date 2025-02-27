@@ -1,0 +1,34 @@
+@layer component {
+  theme-carousel {
+    position: relative;
+    display: block;
+  }
+
+  theme-carousel .carousel__track {
+    position: relative;
+    display: flex;
+    flex-wrap: inherit;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  theme-carousel .carousel__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  theme-carousel .carousel__track > * {
+    flex-shrink: 0;
+    list-style: none;
+    scroll-snap-align: start;
+  }
+  theme-carousel[data-direction="vertical"] .carousel__track {
+    flex-direction: column;
+    overflow-x: unset;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
+}

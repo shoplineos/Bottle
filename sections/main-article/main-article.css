@@ -1,0 +1,111 @@
+.main-article-container {
+  background-color: rgb(var(--color-background));
+}
+.main-article__title {
+  padding-block-end: 20px;
+}
+.main-article__cover-image {
+  aspect-ratio: var(--aspect-ratio);
+  margin-block-end: 20px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+.main-article__cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-article__info {
+  display: flex;
+  gap: 10px;
+  padding-block-end: 20px;
+  margin-block-end: 20px;
+  color: rgb(var(--color-light-text));
+  border-block-end: 1px solid rgb(221 221 221 / 100%);
+}
+.main-article__button-back {
+  padding-block-end: 40px;
+}
+.main-article__button-back svg {
+  transform: rotate(90deg);
+}
+.main-article__content {
+  padding-block: 40px;
+}
+.main-article__comment-title {
+  padding-block: 40px;
+}
+.main-article__comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-block-end: 40px;
+}
+.main-article__comment-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.main-article__comment-info {
+  display: flex;
+  gap: 52px;
+  justify-content: end;
+}
+.main-article__comment-fields {
+  display: flex;
+  gap: 20px;
+}
+.main-article .text-area + .field__label {
+  inset-block-start: 20px;
+}
+.main-article__share {
+  padding-block: 40px 80px;
+}
+.main-article__comment-submit {
+  display: flex;
+  justify-content: center;
+}
+.main-article__comment-form {
+  padding-block-start: 40px;
+}
+.main-article__comment-form-title {
+  margin-block-end: 40px;
+}
+.main-article__comment-tip {
+  padding-block: 40px;
+}
+.main-article .field__info {
+  padding-block-end: 40px;
+}
+@media (max-width: 959px) {
+  .main-article__content {
+    margin-block-end: 20px;
+  }
+
+  .main-article__share {
+    margin-block-end: 40px;
+  }
+
+  .main-article__comment-title {
+    margin-block-end: 20px;
+  }
+
+  .main-article__comment-content {
+    padding: 0;
+  }
+
+  .main-article__comment-form-title {
+    margin-block-end: 20px;
+  }
+
+  .main-article__comment-fields {
+    display: block;
+  }
+
+  .main-article__comment-tip {
+    padding-block-start: 20px;
+  }
+}

@@ -1,0 +1,32 @@
+
+
+{{#var has_privacy_policy = shop.privacy_policy.body /}}
+{{#var has_terms_of_service = shop.terms_of_service.body /}}
+
+{{#if has_privacy_policy || has_terms_of_service}}
+<div class="customer__extra body4">
+  <label class="customer__extra-label">
+    <span class="field-checkbox">
+      <input type="checkbox" name="customer[agree]" required />
+      <span class="checkbox"></span>
+    </span>
+
+    <span>
+      {{"customer.register.tips_agree_with_the_shop" | t()}}
+
+      {{#if has_privacy_policy}}
+      <a class="button button--link body4" target="_blank" href="{{shop.privacy_policy.url}}">
+        {{"customer.register.privacy_policy" | t()}}
+      </a>
+      {{/if}}
+
+      {{#if has_terms_of_service}}
+      <span>{{"customer.general.and_button"|t()}}</span>
+      <a class="button button--link body4" target="_blank" href="{{shop.terms_of_service.url}}">
+        {{"customer.register.terms_of_service" | t()}}
+      </a>
+      {{/if}}
+    </span>
+  </label>
+</div>
+{{/if}}

@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "customers-addresses": {
+      "type": "customers-addresses",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": ["customers-addresses"]
+}

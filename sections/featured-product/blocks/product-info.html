@@ -1,0 +1,99 @@
+<div
+  class="product-detail__info product-detail__col {{block.settings | class_list()}}"
+  style="
+    --info-row-gap: {{block.settings.layout | css_var(`row-gap`)}};
+  "
+  {{{block.shopline_attributes}}}>
+  {{#blocks}}
+    {{#block product=props.product /}}
+  {{/blocks}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.featured_product.blocks.product_info.name",
+  "tag": "",
+  "icon": "generalSection",
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.featured_product.blocks.product_info.settings.layout.label",
+      "default": {
+        "flex-wrap": "nowrap",
+        "flex-direction": "column",
+        "row-gap": "20px",
+        "column-gap": "20px"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "product/detail-heading",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-price",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-variant-picker",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-quantity-selector",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-buy-buttons",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-share",
+      "limit": 1
+    },
+    {
+      "type": "rich-text"
+    },
+    {
+      "type": "custom-html"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.featured_product.blocks.product_info.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "product/detail-heading",
+          "settings": {
+            "heading": "{{section.settings.product.title}}"
+          }
+        },
+        {
+          "type": "product/detail-price",
+          "settings": {}
+        },
+        {
+          "type": "product/detail-variant-picker",
+          "settings": {}
+        },
+        {
+          "type": "product/detail-quantity-selector",
+          "settings": {}
+        },
+        {
+          "type": "product/detail-buy-buttons",
+          "settings": {}
+        },
+        {
+          "type": "product/detail-share",
+          "settings": {}
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

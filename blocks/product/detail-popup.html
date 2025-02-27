@@ -1,0 +1,48 @@
+{{#component "stylesheet" src="components/modal/index.css" | asset_url() /}}
+{{#component "stylesheet" src="./detail-popup.css" | asset_url() /}}
+{{#component "script" src="components/modal/index.js" | asset_url() /}}
+
+<div class="product-detail__popup quick-add-hidden" {{{block.shopline_attributes}}}>
+  <theme-modal data-mask-closable="true" data-esc-to-exit="true">
+    <details>
+      <summary class="button button--link body-font-bold">
+        {{block.settings.text | default(block.settings.page.title)}}
+      </summary>
+      <div class="modal__content">
+        <button class="modal__close-control" name="close">
+          {{#component "icons/close" /}}
+        </button>
+        <div class="popup__content">
+          <h4 class="popup__title">{{block.settings.page.title}}</h4>
+          <div class="rte">{{{block.settings.page.content}}}</div>
+        </div>
+      </div>
+    </details>
+  </theme-modal>
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_popup.name",
+  "tag": "",
+  "icon": "navigation",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "default": "Pop-up link text",
+      "label": "t:blocks.product.detail_popup.settings.text.label"
+    },
+    {
+      "id": "page",
+      "type": "page",
+      "label": "t:blocks.product.detail_popup.settings.page.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_popup.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

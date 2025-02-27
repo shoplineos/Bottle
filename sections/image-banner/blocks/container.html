@@ -1,0 +1,109 @@
+<div class="image-banner__container {{#if block.settings.show_background_color}}image-banner__container--show-bg{{/if}} color-{{block.settings.color_scheme.id}} {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{#content "blocks" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.image_banner.blocks.container.name",
+  "icon": "general",
+  "tag": "",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.image_banner.blocks.container.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "switch",
+      "id": "show_background_color",
+      "label": "t:sections.image_banner.blocks.container.settings.show_background_color.label",
+      "default": false
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.image_banner.blocks.container.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "8px",
+        "column-gap": "8px",
+        "@media (--mobile)": {
+          "flex-direction": "column",
+          "flex-wrap": "nowrap",
+          "align-items": "center",
+          "justify-content": "center",
+          "row-gap": "8px",
+          "column-gap": "8px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.image_banner.blocks.container.settings.spacing.label",
+      "default": {
+        "padding-block-start": "40px",
+        "padding-inline-end": "40px",
+        "padding-block-end": "40px",
+        "padding-inline-start": "40px",
+        "@media (--mobile)": {
+          "padding-block-start": "24px",
+          "padding-inline-end": "24px",
+          "padding-block-end": "24px",
+          "padding-inline-start": "24px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.image_banner.blocks.container.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$subheading",
+      "limit": 1
+    },
+    {
+      "type": "$heading",
+      "limit": 1
+    },
+    {
+      "type": "$description",
+      "limit": 1
+    },
+    {
+      "type": "$button",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image_banner.blocks.container.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "$subheading"
+        },
+        {
+          "type": "$heading"
+        },
+        {
+          "type": "$description"
+        },
+        {
+          "type": "$button"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

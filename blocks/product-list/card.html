@@ -1,0 +1,105 @@
+{{#component "stylesheet" src="./card.css" | asset_url() /}}
+
+{{#var product = props.product /}}
+{{#var product_card_style = settings.product_card_style /}}
+<a
+  href="{{product.url | default(`javascript:void(0)`)}}"
+  class="
+    block-product-card
+    product-card-style--{{settings.product_card_style}}
+    {{#if product_card_style == "card"}}product-card-border-shadow{{/if}}
+    {{ block.settings | class_list() }}
+  "
+  data-product-id="{{product.id}}"
+  data-product-handle="{{product.handle}}"
+  {{{block.shopline_attributes}}}
+>
+  {{#blocks}}
+    {{#if product}}
+      {{#if forblock.type == "product-list/image"}}
+        {{#block product=product mobile_columns=props.mobile_columns desktop_columns=props.desktop_columns /}}
+      {{#else/}}
+        {{#block product=product /}}
+      {{/if}}
+    {{#else/}}
+      {{#block /}}
+    {{/if}}
+  {{/blocks}}
+</a>
+
+{{#schema}}
+{
+  "name": "t:blocks.product_list.card.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:blocks.product_list.card.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "row-gap": "16px",
+        "column-gap": "16px",
+        "@media (--mobile)": {
+          "flex-direction": "row",
+          "flex-wrap": "wrap",
+          "row-gap": "8px",
+          "column-gap": "8px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:blocks.product_list.card.settings.size.label",
+      "default": {}
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product-list/image",
+      "limit": 1
+    },
+    {
+      "type": "product-list/title",
+      "name": "t:blocks.product_list.card.blocks.product-list/title.name",
+      "limit": 1
+    },
+    {
+      "type": "product-list/price",
+      "name": "t:blocks.product_list.card.blocks.product-list/price.name",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product_list.card.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "product-list/image",
+          "blocks": [
+            {
+              "type": "product-list/layer",
+              "blocks": [
+                {
+                  "type": "product-list/discount_tag"
+                },
+                {
+                  "type": "product-list/quick_add"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "product-list/title"
+        },
+        {
+          "type": "product-list/price"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,83 @@
+{{#var icon_class = "sell-info__icon" /}}
+
+<li class="sell-info" {{{block.shopline_attributes}}}>
+  {{#if block.settings.custom_info_icon}}
+    {{#component "image" class=icon_class data=block.settings.custom_info_icon sizes="20px" breakpoints="20" /}}
+  {{#else/}}
+      {{#switch block.settings.info_icon}}
+      {{#case "checkmark" /}}
+        {{#component "icons/checkmark" class=icon_class /}}
+      {{#case "globe" /}}
+        {{#component "icons/globe" class=icon_class /}}
+      {{#case "leaf" /}}
+        {{#component "icons/leaf" class=icon_class /}}
+      {{#case "lock" /}}
+        {{#component "icons/lock" class=icon_class /}}
+      {{#case "package" /}}
+        {{#component "icons/package" class=icon_class /}}
+      {{#case "truck" /}}
+        {{#component "icons/truck" class=icon_class /}}
+      {{#case "globe" /}}
+        {{#component "icons/globe" class=icon_class /}}
+    {{/switch}}
+  {{/if}}
+  <p class="sell-info__text body4 title-font-bold">{{{block.settings.info_text}}}</p>
+</li>
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_sell_info_row.name",
+  "tag": "",
+  "icon": "content",
+  "settings": [
+    {
+      "id": "info_icon",
+      "label": "t:blocks.product.detail_sell_info_row.settings.info_icon.label",
+      "type": "select",
+      "default": "globe",
+      "options": [
+        {
+          "value": "checkmark",
+          "label": "t:blocks.product.detail_sell_info_row.settings.info_icon.options_0.label"
+        },
+        {
+          "value": "globe",
+          "label": "t:blocks.product.detail_sell_info_row.settings.info_icon.options_1.label"
+        },
+        {
+          "value": "leaf",
+          "label": "t:blocks.product.detail_sell_info_row.settings.info_icon.options_2.label"
+        },
+        {
+          "value": "package",
+          "label": "t:blocks.product.detail_sell_info_row.settings.info_icon.options_3.label"
+        },
+        {
+          "value": "lock",
+          "label": "t:blocks.product.detail_sell_info_row.settings.info_icon.options_4.label"
+        },
+        {
+          "value": "truck",
+          "label": "t:blocks.product.detail_sell_info_row.settings.info_icon.options_5.label"
+        }
+      ]
+    },
+    {
+      "id": "custom_info_icon",
+      "label": "t:blocks.product.detail_sell_info_row.settings.custom_info_icon.label",
+      "type": "image"
+    },
+    {
+      "id": "info_text",
+      "label": "t:blocks.product.detail_sell_info_row.settings.info_text.label",
+      "type": "text",
+      "default": "Free worldwide shipping"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_sell_info_row.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

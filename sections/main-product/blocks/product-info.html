@@ -1,0 +1,160 @@
+<div
+  class="product-detail__info product-detail__col {{block.settings | class_list()}}"
+  style="
+    --info-row-gap: {{block.settings.layout | css_var(`row-gap`)}};
+  "
+  {{{block.shopline_attributes}}}>
+  {{#blocks}}
+    {{#block product=product /}}
+  {{/blocks}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_product.blocks.product_info.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.main_product.blocks.product_info.settings.layout.label",
+      "default": {
+        "flex-wrap": "nowrap",
+        "flex-direction": "column",
+        "row-gap": "20px",
+        "column-gap": "20px"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "product/detail-heading",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-price",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-variant-picker",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-quantity-selector",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-inventory",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-buy-buttons",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-description",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-share",
+      "limit": 1
+    },
+    {
+      "type": "product/detail-additional"
+    },
+    {
+      "type": "product/detail-sell-info"
+    },
+    {
+      "type": "product/detail-popup"
+    },
+    {
+      "type": "rich-text"
+    },
+    {
+      "type": "custom-html"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main_product.blocks.product_info.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "product/detail-heading",
+          "settings": {}
+        },
+        {
+          "type": "product/detail-price",
+          "settings": {}
+        },
+        {
+          "type": "product/detail-sell-info",
+          "blocks": [
+            {
+              "type": "product/detail-sell-info-row",
+              "settings": {
+                "info_icon": "globe",
+                "info_text": "Free worldwide shipping"
+              }
+            },
+            {
+              "type": "product/detail-sell-info-row",
+              "settings": {
+                "info_icon": "checkmark",
+                "info_text": "Free returns"
+              }
+            },
+            {
+              "type": "product/detail-sell-info-row",
+              "settings": {
+                "info_icon": "leaf",
+                "info_text": "Carbon neutral"
+              }
+            },
+            {
+              "type": "product/detail-sell-info-row",
+              "settings": {
+                "info_icon": "lock",
+                "info_text": "Secure payments"
+              }
+            }
+          ]
+        },
+        {
+          "type": "product/detail-variant-picker",
+          "settings": {}
+        },
+        {
+          "type": "product/detail-quantity-selector",
+          "settings": {}
+        },
+        {
+          "type": "product/detail-buy-buttons",
+          "settings": {}
+        },
+        {
+          "type": "product/detail-description",
+          "settings": {}
+        },
+        {
+          "type": "product/detail-share",
+          "settings": {}
+        },
+        {
+          "type": "product/detail-additional",
+          "settings": {
+            "title": "Example title",
+            "icon": "none",
+            "description": "",
+            "custom_page": "",
+            "enabled_fold": true
+          }
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

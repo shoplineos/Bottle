@@ -1,0 +1,39 @@
+<div class="footer__copyright {{block.settings | class_list()}} text-{{block.settings.text_align}} body6" {{{block.shopline_attributes}}}>
+  {{block.settings.text}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.footer.blocks.copyright.name",
+  "icon": "brandList",
+  "tag": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "t:sections.footer.blocks.copyright.settings.text.label",
+      "default": "Copyright © Company name"
+    },
+    {
+      "type": "text_align",
+      "id": "text_align",
+      "label": "t:sections.footer.blocks.copyright.settings.text_align.label",
+      "default": "center"
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.footer.blocks.copyright.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.footer.blocks.copyright.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

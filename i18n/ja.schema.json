@@ -1,0 +1,3865 @@
+{
+  "sections": {
+    "announcement_bar": {
+      "name": "お知らせバナー",
+      "settings": {
+        "sticky_mode": {
+          "label": "表示位置",
+          "options_0": {
+            "label": "トップに固定しない"
+          },
+          "options_1": {
+            "label": "トップに固定する"
+          },
+          "options_2": {
+            "label": "PC版でのみトップに固定"
+          },
+          "options_3": {
+            "label": "モバイル版でのみトップに固定"
+          }
+        },
+        "display_mode": {
+          "label": "複数のお知らせバナーの表示方法",
+          "options_0": {
+            "label": "タイル表示"
+          },
+          "options_1": {
+            "label": "コンパクトレイアウト"
+          },
+          "options_2": {
+            "label": "左右切替"
+          },
+          "options_3": {
+            "label": "上下切替"
+          },
+          "options_4": {
+            "label": "手動切替"
+          }
+        },
+        "interval": {
+          "label": "切り替え間隔"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "blocks": {
+        "item": {
+          "name": "お知らせ",
+          "settings": {
+            "content": {
+              "label": "テキスト"
+            },
+            "link": {
+              "label": "移動先URL"
+            },
+            "color_scheme": {
+              "label": "配色"
+            },
+            "divide_line": {
+              "label": "区切り線を表示"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "お知らせ"
+            }
+          }
+        }
+      }
+    },
+    "apps": {
+      "name": "アプリ",
+      "settings": {
+        "sync_margins_with_theme": {
+          "label": "モジュールページの余白をテーマと一致させる"
+        }
+      }
+    },
+    "blog": {
+      "blocks": {
+        "articles": {
+          "name": "ブログ一覧",
+          "settings": {
+            "page_size": {
+              "label": "表示するブログ記事数",
+              "unit": "個"
+            },
+            "desktop_columns": {
+              "label": "PC版の列数"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "ブログ一覧"
+            }
+          }
+        }
+      },
+      "name": "ブログ",
+      "settings": {
+        "blog": {
+          "label": "ブログカテゴリ"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "画像とテキストの表示",
+          "name": "ブログ"
+        }
+      }
+    },
+    "collection_list": {
+      "blocks": {
+        "list": {
+          "name": "カテゴリリスト",
+          "settings": {
+            "group_header_0": {
+              "label": "PC版"
+            },
+            "desktop_columns": {
+              "label": "PC版の列数"
+            },
+            "desktop_enable_slider": {
+              "label": "PC版で左右にスワイプして表示"
+            },
+            "group_header_1": {
+              "label": "モバイル版"
+            },
+            "mobile_columns": {
+              "label": "モバイル版の列数"
+            },
+            "mobile_limit": {
+              "label": "モバイル版で表示する最大カテゴリ数"
+            },
+            "mobile_enable_slider": {
+              "label": "モバイル版で左右にスワイプして表示"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "カテゴリリスト"
+            }
+          }
+        }
+      },
+      "name": "商品カテゴリ",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "間隔"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "商品の表示",
+          "name": "商品カテゴリ"
+        }
+      }
+    },
+    "contact_form": {
+      "name": "お問い合わせフォーム",
+      "settings": {
+        "title": {
+          "label": "タイトル"
+        },
+        "title_size": {
+          "label": "タイトルサイズ",
+          "options_0": {
+            "label": "特大"
+          },
+          "options_1": {
+            "label": "大"
+          },
+          "options_2": {
+            "label": "中"
+          },
+          "options_3": {
+            "label": "小"
+          }
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "顧客獲得",
+          "name": "お問い合わせフォーム"
+        }
+      }
+    },
+    "custom_html": {
+      "name": "カスタムHTML",
+      "settings": {
+        "html": {
+          "label": "HTML"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "カスタマイズ",
+          "name": "カスタムHTML"
+        }
+      }
+    },
+    "custom_page": {
+      "name": "カスタムページ",
+      "settings": {
+        "page": {
+          "label": "カスタムページ"
+        },
+        "title_size": {
+          "label": "タイトルサイズ",
+          "options_0": {
+            "label": "特大"
+          },
+          "options_1": {
+            "label": "大"
+          },
+          "options_2": {
+            "label": "中"
+          },
+          "options_3": {
+            "label": "小"
+          }
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "カスタマイズ",
+          "name": "カスタムページ"
+        }
+      }
+    },
+    "custom_section": {
+      "name": "カスタムセクション",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "カスタマイズ",
+          "name": "カスタムセクション"
+        },
+        "presets_1": {
+          "category": "カスタマイズ",
+          "name": "2列均等配置レイアウト"
+        },
+        "presets_2": {
+          "category": "カスタマイズ",
+          "name": "3列均等配置レイアウト"
+        },
+        "presets_3": {
+          "category": "カスタマイズ",
+          "name": "1:2レイアウト"
+        },
+        "presets_4": {
+          "category": "カスタマイズ",
+          "name": "1:2:1レイアウト"
+        }
+      }
+    },
+    "customers_account": {
+      "name": "アカウント",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "customers_activate_account": {
+      "name": "アカウントページを有効化",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "customers_addresses": {
+      "name": "住所",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        }
+      }
+    },
+    "customers_company": {
+      "name": "会社アカウント登録",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "customers_forgot_password": {
+      "name": "パスワードを忘れた",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        }
+      }
+    },
+    "customers_login": {
+      "name": "顧客ログイン",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "customers_order_detail": {
+      "name": "注文の詳細",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "customers_order_list": {
+      "name": "注文リスト",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "customers_register": {
+      "name": "顧客登録",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "faq": {
+      "blocks": {
+        "collapsible_group": {
+          "name": "質問一覧",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "blocks": {
+            "$collapsible-panel": {
+              "name": "折りたたみ可能な行"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "質問一覧"
+            }
+          }
+        },
+        "collapsible_panel": {
+          "name": "折りたたみ可能な行",
+          "settings": {
+            "title": {
+              "label": "タイトル"
+            },
+            "icon": {
+              "label": "アイコン",
+              "options_0": {
+                "label": "なし"
+              },
+              "options_1": {
+                "label": "リンゴ"
+              },
+              "options_2": {
+                "label": "バナナ"
+              },
+              "options_3": {
+                "label": "ボトル"
+              },
+              "options_4": {
+                "label": "ボックス"
+              },
+              "options_5": {
+                "label": "にんじん"
+              },
+              "options_6": {
+                "label": "チャットバブル"
+              },
+              "options_7": {
+                "label": "チェックマーク"
+              },
+              "options_8": {
+                "label": "クリップボード"
+              },
+              "options_9": {
+                "label": "乳製品"
+              }
+            },
+            "content": {
+              "label": "テキスト"
+            },
+            "custom_content": {
+              "label": "カスタムコンテンツ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "折りたたみ可能な行"
+            }
+          }
+        },
+        "group": {
+          "name": "コンテンツ",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "blocks": {
+            "$image": {
+              "name": "画像"
+            },
+            "$collapsible-group": {
+              "name": "質問一覧"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "コンテンツ"
+            }
+          }
+        },
+        "heading": {
+          "name": "タイトル",
+          "settings": {
+            "text": {
+              "label": "タイトル"
+            },
+            "text_size": {
+              "label": "テキストサイズ",
+              "options_0": {
+                "label": "特大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "テキストの配置"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "タイトル"
+            }
+          }
+        },
+        "image": {
+          "name": "画像",
+          "settings": {
+            "image": {
+              "label": "画像"
+            },
+            "image_aspect_ratio": {
+              "label": "画像の比率",
+              "options_0": {
+                "label": "初期比率"
+              },
+              "options_1": {
+                "label": "1:1"
+              },
+              "options_2": {
+                "label": "4:3"
+              },
+              "options_3": {
+                "label": "3:2"
+              },
+              "options_4": {
+                "label": "16:9"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "画像"
+            }
+          }
+        },
+        "$heading": {
+          "name": "タイトル"
+        },
+        "$group": {
+          "name": "コンテンツ"
+        }
+      },
+      "name": "よくある質問",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "expand_first_label": {
+          "label": "最初のタブを展開"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "信頼性関連パーツ",
+          "name": "よくある質問"
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "おすすめ商品",
+      "settings": {
+        "collection": {
+          "label": "商品カテゴリ"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "間隔"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "商品の表示",
+          "name": "おすすめ商品"
+        }
+      }
+    },
+    "featured_product": {
+      "blocks": {
+        "product_info": {
+          "name": "商品情報",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "商品情報"
+            }
+          }
+        },
+        "product_media": {
+          "name": "商品画像",
+          "settings": {
+            "video_loop": {
+              "label": "動画ループ再生"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "商品画像"
+            }
+          }
+        }
+      },
+      "name": "単一商品",
+      "settings": {
+        "product": {
+          "label": "商品"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "商品の表示",
+          "name": "単一商品"
+        }
+      }
+    },
+    "footer": {
+      "blocks": {
+        "additional_group": {
+          "name": "追加コンテンツ",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "追加コンテンツ"
+            }
+          }
+        },
+        "contact_group": {
+          "name": "お問い合わせ",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "お問い合わせ"
+            }
+          }
+        },
+        "copyright": {
+          "name": "著作権情報",
+          "settings": {
+            "text": {
+              "label": "著作権情報"
+            },
+            "text_align": {
+              "label": "テキストの配置"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "著作権情報"
+            }
+          }
+        },
+        "custom_text": {
+          "name": "カスタムコンテンツ",
+          "settings": {
+            "title": {
+              "label": "タイトル"
+            },
+            "content": {
+              "label": "テキスト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "カスタムコンテンツ"
+            }
+          }
+        },
+        "email_subscribe": {
+          "name": "メール購読",
+          "settings": {
+            "title": {
+              "label": "タイトル"
+            },
+            "placeholder": {
+              "label": "入力ボックスのテキスト"
+            },
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "メール購読"
+            }
+          }
+        },
+        "image": {
+          "name": "画像",
+          "settings": {
+            "image": {
+              "label": "画像"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "画像"
+            }
+          }
+        },
+        "information_group": {
+          "name": "フッター情報",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "フッター情報"
+            }
+          }
+        },
+        "market_selector": {
+          "name": "マルチ言語",
+          "settings": {
+            "show_type": {
+              "label": "表示内容",
+              "info": "国・地域セレクターを有効にするには、2つ以上のマーケットを追加する必要があります。マーケットの追加は、[設定] > [マーケット] から行えます。また、言語セレクターを有効にするには、マーケットに2つ以上の言語を設定する必要があります。言語の追加は、[設定] > [言語] から行えます。言語を追加した後、[設定] > [マーケット]ページからマーケットの言語を設定できます。",
+              "options_0": {
+                "label": "すべて表示"
+              },
+              "options_1": {
+                "label": "国・地域セレクターのみを表示"
+              },
+              "options_2": {
+                "label": "言語セレクターのみを表示"
+              }
+            },
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "マルチ言語"
+            }
+          }
+        },
+        "navigation": {
+          "name": "ナビゲーション",
+          "settings": {
+            "title": {
+              "label": "タイトル"
+            },
+            "menu": {
+              "label": "ナビゲーションメニュー"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "ナビゲーション"
+            }
+          }
+        },
+        "payment_icons": {
+          "name": "支払いアイコン",
+          "settings": {
+            "payment_icons": {
+              "label": "支払いアイコン"
+            },
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "支払いアイコン"
+            }
+          }
+        },
+        "social_media": {
+          "name": "ソーシャルメディア",
+          "settings": {
+            "title": {
+              "label": "タイトル"
+            },
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "ソーシャルメディア"
+            }
+          }
+        }
+      },
+      "name": "フッター",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "header": {
+      "name": "ヘッダー",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "show_divider": {
+          "label": "ヘッダーの下に区切り線を表示"
+        },
+        "group_header_0": {
+          "label": "ロゴ"
+        },
+        "logo_image": {
+          "label": "ロゴ"
+        },
+        "desktop_logo_width": {
+          "label": "PC版ロゴの幅"
+        },
+        "mobile_logo_width": {
+          "label": "モバイル版ロゴの幅"
+        },
+        "group_header_1": {
+          "label": "メニュー"
+        },
+        "navigation_menu": {
+          "label": "ナビゲーションメニュー"
+        },
+        "desktop_menu_type": {
+          "label": "PC版のメニュータイプ",
+          "options_0": {
+            "label": "ドロップダウンメニュー"
+          },
+          "options_1": {
+            "label": "引き出しメニュー"
+          }
+        },
+        "desktop_menu_layout": {
+          "label": "ナビゲーションレイアウト",
+          "options_0": {
+            "label": "中央にロゴ、メニューを改行"
+          },
+          "options_1": {
+            "label": "左にロゴ、左にメニュー"
+          },
+          "options_2": {
+            "label": "左にロゴ、中央にメニュー"
+          },
+          "options_3": {
+            "label": "中央にロゴ、左にメニュー"
+          }
+        },
+        "header_sticky_mode": {
+          "label": "ヘッダーをトップに固定する方法",
+          "options_0": {
+            "label": "トップに固定しない"
+          },
+          "options_1": {
+            "label": "常にトップに表示"
+          },
+          "options_2": {
+            "label": "スワイプアップ時のみトップに固定"
+          }
+        },
+        "group_header_2": {
+          "label": "ツールバー"
+        },
+        "show_search_entry": {
+          "label": "検索ボックスを表示"
+        },
+        "show_user_entry": {
+          "label": "マイページを表示"
+        },
+        "show_cart_entry": {
+          "label": "ショッピングカートを表示"
+        },
+        "desktop_spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "image_banner": {
+      "blocks": {
+        "button": {
+          "name": "ボタン",
+          "settings": {
+            "button_text_1": {
+              "label": "ボタンの文字"
+            },
+            "button_url_1": {
+              "label": "移動先URL"
+            },
+            "secondary_button_style_1": {
+              "label": "サブボタンスタイルを使用する"
+            },
+            "button_text_2": {
+              "label": "ボタンの文字2"
+            },
+            "button_url_2": {
+              "label": "移動先URL2"
+            },
+            "secondary_button_style_2": {
+              "label": "サブボタンスタイルを使用する"
+            },
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "ボタン"
+            }
+          }
+        },
+        "container": {
+          "name": "コンテンツコンテナ",
+          "settings": {
+            "color_scheme": {
+              "label": "配色"
+            },
+            "show_background_color": {
+              "label": "背景色を表示"
+            },
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "コンテンツコンテナ"
+            }
+          }
+        },
+        "description": {
+          "name": "説明文",
+          "settings": {
+            "text": {
+              "label": "テキスト"
+            },
+            "text_align": {
+              "label": "テキストの配置"
+            },
+            "spacing": {
+              "label": "余白"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "説明文"
+            }
+          }
+        },
+        "heading": {
+          "name": "タイトル",
+          "settings": {
+            "heading": {
+              "label": "タイトル"
+            },
+            "text_size": {
+              "label": "テキストサイズ",
+              "options_0": {
+                "label": "特大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "テキストの配置",
+              "options_0": {
+                "label": "左"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "右"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "タイトル"
+            }
+          }
+        },
+        "subheading": {
+          "name": "サブタイトル",
+          "settings": {
+            "subheading": {
+              "label": "サブタイトル"
+            },
+            "text_align": {
+              "label": "テキストの配置",
+              "options_0": {
+                "label": "左"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "右"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "サブタイトル"
+            }
+          }
+        }
+      },
+      "name": "画像バナー",
+      "settings": {
+        "first_image": {
+          "label": "画像1"
+        },
+        "second_image": {
+          "label": "画像2"
+        },
+        "image_height": {
+          "label": "画像の高さ",
+          "info": "推奨される画像比率：2:3",
+          "options_0": {
+            "label": "小"
+          },
+          "options_1": {
+            "label": "中"
+          },
+          "options_2": {
+            "label": "大"
+          }
+        },
+        "match_height_to_first_image": {
+          "label": "高さを最初の画像に合わせる",
+          "info": "開いたときの画像の高さの設定"
+        },
+        "overlay_opacity": {
+          "label": "オーバーレイの不透明度"
+        },
+        "show_text_below_image": {
+          "label": "画像下部にテキストを表示"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "画像とテキストの表示",
+          "name": "画像バナー"
+        }
+      }
+    },
+    "image_with_text": {
+      "blocks": {
+        "button": {
+          "name": "ボタン",
+          "settings": {
+            "text": {
+              "label": "ボタンの文字"
+            },
+            "link": {
+              "label": "移動先URL"
+            },
+            "use_secondary_style": {
+              "label": "サブボタンスタイルを使用する"
+            },
+            "size": {
+              "label": "サイズ"
+            },
+            "spacing": {
+              "label": "間隔"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "ボタン"
+            }
+          }
+        },
+        "group": {
+          "name": "コンテンツコンテナ",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "コンテンツコンテナ"
+            }
+          }
+        },
+        "heading": {
+          "name": "タイトル",
+          "settings": {
+            "heading": {
+              "label": "タイトル"
+            },
+            "text_size": {
+              "label": "テキストサイズ",
+              "options_0": {
+                "label": "特大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "テキストの配置",
+              "options_0": {
+                "label": "左"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "右"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "メインタイトル"
+            }
+          }
+        },
+        "image": {
+          "name": "画像",
+          "settings": {
+            "image": {
+              "label": "画像を追加"
+            },
+            "aspect_ratio": {
+              "label": "画像サイズ",
+              "options_0": {
+                "label": "初期比率"
+              },
+              "options_1": {
+                "label": "1:1"
+              },
+              "options_2": {
+                "label": "4:3"
+              },
+              "options_3": {
+                "label": "3:2"
+              },
+              "options_4": {
+                "label": "16:9"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "画像"
+            }
+          }
+        },
+        "rich_text": {
+          "name": "リッチテキスト",
+          "settings": {
+            "content": {
+              "label": "テキスト"
+            },
+            "text_align": {
+              "label": "テキストの配置",
+              "options_0": {
+                "label": "左"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "右"
+              }
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "リッチテキスト"
+            }
+          }
+        },
+        "subheading": {
+          "name": "サブタイトル",
+          "settings": {
+            "subtitle": {
+              "label": "サブタイトル"
+            },
+            "text_align": {
+              "label": "テキストの配置",
+              "options_0": {
+                "label": "左"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "右"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "サブタイトル"
+            }
+          }
+        }
+      },
+      "name": "画像とテキストパーツ",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "画像とテキストの表示",
+          "name": "画像とテキストパーツ"
+        }
+      }
+    },
+    "main_article": {
+      "blocks": {
+        "button": {
+          "back": {
+            "name": "戻るボタン",
+            "presets": {
+              "presets_0": {
+                "name": "戻るボタン"
+              }
+            }
+          }
+        },
+        "comment": {
+          "name": "コメント",
+          "settings": {
+            "group_header_0": {
+              "label": "「ブログ」へ移動し、ブログコレクションのコメント処理方法を管理してコメントを許可してください"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "コメント"
+            }
+          }
+        },
+        "content": {
+          "name": "コンテンツ",
+          "presets": {
+            "presets_0": {
+              "name": "コンテンツ"
+            }
+          }
+        },
+        "cover": {
+          "image": {
+            "name": "画像",
+            "settings": {
+              "aspect_ratio": {
+                "label": "画像の比率",
+                "options_0": {
+                  "label": "初期比率"
+                },
+                "options_1": {
+                  "label": "1:1"
+                },
+                "options_2": {
+                  "label": "4:3"
+                },
+                "options_3": {
+                  "label": "3:2"
+                },
+                "options_4": {
+                  "label": "16:9"
+                }
+              },
+              "border_radius": {
+                "label": "角丸の半径"
+              }
+            },
+            "presets": {
+              "presets_0": {
+                "name": "画像"
+              }
+            }
+          }
+        },
+        "info": {
+          "name": "作者/時間",
+          "settings": {
+            "show_date": {
+              "label": "日付を表示"
+            },
+            "show_author": {
+              "label": "作者を表示"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "作者/時間"
+            }
+          }
+        },
+        "share": {
+          "name": "共有",
+          "presets": {
+            "presets_0": {
+              "name": "共有"
+            }
+          }
+        },
+        "title": {
+          "name": "タイトル",
+          "presets": {
+            "presets_0": {
+              "name": "タイトル"
+            }
+          }
+        }
+      },
+      "name": "ブログ記事",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "main_blog": {
+      "blocks": {
+        "title": {
+          "name": "ブログコレクション名",
+          "settings": {
+            "text_size": {
+              "label": "テキストサイズ",
+              "options_0": {
+                "label": "特大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "テキストの配置",
+              "options_0": {
+                "label": "左揃え"
+              },
+              "options_1": {
+                "label": "中央揃え"
+              },
+              "options_2": {
+                "label": "右揃え"
+              }
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "ブログコレクション名"
+            }
+          }
+        }
+      },
+      "name": "ブログカテゴリ",
+      "settings": {
+        "desktop_columns": {
+          "label": "PC版の列数",
+          "options_0": {
+            "label": "1列"
+          },
+          "options_1": {
+            "label": "2列"
+          }
+        },
+        "page_size": {
+          "label": "ページあたりのブログ記事数"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "main_cart_footer": {
+      "blocks": {
+        "buttons": {
+          "name": "チェックアウトボタン",
+          "presets": {
+            "presets_0": {
+              "name": "チェックアウトボタン"
+            }
+          }
+        },
+        "subtotal": {
+          "name": "小計価格",
+          "presets": {
+            "presets_0": {
+              "name": "小計価格"
+            }
+          }
+        }
+      },
+      "name": "小計"
+    },
+    "main_cart_items": {
+      "name": "商品リスト",
+      "settings": {
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "main_collection_cover": {
+      "blocks": {
+        "banner": {
+          "name": "カテゴリ画像",
+          "settings": {
+            "mobile_banner_image": {
+              "label": "モバイル版のバナー画像"
+            },
+            "layout": {
+              "label": "レイアウト"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "blocks": {
+            "$heading": {
+              "name": "タイトル"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "カテゴリ画像"
+            }
+          }
+        },
+        "description": {
+          "name": "カテゴリの説明",
+          "settings": {
+            "group_header_0": {
+              "label": "[カテゴリ] > [カテゴリの説明] からコンテンツとレイアウトを調整できます。"
+            }
+          }
+        },
+        "heading": {
+          "name": "タイトル",
+          "settings": {
+            "text_size": {
+              "label": "テキストサイズ",
+              "options_0": {
+                "label": "特大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "テキストの配置"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "タイトル"
+            }
+          }
+        },
+        "$banner": {
+          "name": "カテゴリ画像"
+        },
+        "$heading": {
+          "name": "タイトル"
+        },
+        "$description": {
+          "name": "カテゴリの説明"
+        }
+      },
+      "name": "カテゴリのカバー"
+    },
+    "main_collection_products": {
+      "name": "商品リスト",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "page_size": {
+          "label": "ページごとの合計商品数"
+        },
+        "desktop_columns": {
+          "label": "PC版の列数"
+        },
+        "mobile_columns": {
+          "label": "モバイル版の列数",
+          "options_0": {
+            "label": "2列"
+          },
+          "options_1": {
+            "label": "1列"
+          }
+        },
+        "filter_layout": {
+          "label": "フィルターレイアウト",
+          "options_0": {
+            "label": "引き出し"
+          },
+          "options_1": {
+            "label": "水平"
+          },
+          "options_2": {
+            "label": "垂直"
+          }
+        },
+        "enable_filtering": {
+          "label": "フィルターを有効にする"
+        },
+        "enable_sorting": {
+          "label": "商品の並べ替えを有効にする"
+        }
+      }
+    },
+    "main_collections_all": {
+      "blocks": {
+        "list": {
+          "name": "カテゴリリスト",
+          "settings": {
+            "sort": {
+              "label": "並び順",
+              "options_0": {
+                "label": "名称（A～Z）"
+              },
+              "options_1": {
+                "label": "名称（Z～A）"
+              },
+              "options_2": {
+                "label": "日付（新しい順）"
+              },
+              "options_3": {
+                "label": "日付（古い順）"
+              },
+              "options_4": {
+                "label": "商品数（多い順）"
+              },
+              "options_5": {
+                "label": "商品数（少ない順）"
+              }
+            },
+            "image_full_screen": {
+              "label": "画像全画面表示"
+            },
+            "desktop_columns": {
+              "label": "PC版の列数"
+            },
+            "mobile_columns": {
+              "label": "モバイル版の列数"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "カテゴリリスト"
+            }
+          }
+        }
+      },
+      "name": "カテゴリリスト",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        }
+      }
+    },
+    "main_not_found": {
+      "name": "404ページ",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        }
+      }
+    },
+    "main_order_tracking": {
+      "name": "注文の追跡",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "間隔"
+        },
+        "title": {
+          "label": "タイトル"
+        },
+        "btn_text": {
+          "label": "ボタンの文字"
+        }
+      }
+    },
+    "main_page": {
+      "name": "カスタムページ",
+      "settings": {
+        "spacing": {
+          "name": "間隔"
+        }
+      }
+    },
+    "main_password": {
+      "blocks": {
+        "content_group": {
+          "name": "コンテンツコンテナ",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "コンテンツコンテナ"
+            }
+          }
+        },
+        "email_subscribe": {
+          "name": "メール購読",
+          "presets": {
+            "presets_0": {
+              "name": "メール購読"
+            }
+          }
+        }
+      },
+      "name": "パスワード",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "image": {
+          "label": "背景画像"
+        },
+        "blend_overlay_with_opacity": {
+          "label": "画像オーバーレイの不透明度"
+        },
+        "show_background_image": {
+          "label": "背景画像を表示"
+        },
+        "banner_height": {
+          "label": "バナーの高さ",
+          "info": "最適な効果を得るには、アスペクト比16:9の画像を使用してください。",
+          "options_0": {
+            "label": "自動調整"
+          },
+          "options_1": {
+            "label": "小"
+          },
+          "options_2": {
+            "label": "中"
+          },
+          "options_3": {
+            "label": "大"
+          }
+        },
+        "show_text_below": {
+          "label": "モバイル版の画像の下にコンテンツを表示"
+        }
+      }
+    },
+    "main_password_footer": {
+      "name": "ページフッター",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        }
+      }
+    },
+    "main_password_header": {
+      "name": "ページヘッダー",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "logo_image": {
+          "label": "ロゴ"
+        },
+        "desktop_logo_width": {
+          "label": "PC版ロゴの幅"
+        },
+        "mobile_logo_width": {
+          "label": "モバイル版ロゴの幅"
+        }
+      }
+    },
+    "main_product": {
+      "blocks": {
+        "product_info": {
+          "name": "商品情報",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "商品情報"
+            }
+          }
+        },
+        "product_media": {
+          "name": "商品画像",
+          "settings": {
+            "layout_size": {
+              "label": "PC版のメディアサイズ",
+              "options_0": {
+                "label": "大"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "小"
+              }
+            },
+            "image_quality": {
+              "label": "画像圧縮率",
+              "info": "メイン画像とサムネイル画像の圧縮率を設定します。ストアのパフォーマンスとユーザーエクスペリエンスを確保するには、80%以下の圧縮率を選択することをお勧めします。",
+              "options_0": {
+                "label": "元の画像の比率"
+              },
+              "options_1": {
+                "label": "90%"
+              },
+              "options_2": {
+                "label": "80%"
+              },
+              "options_3": {
+                "label": "70%"
+              }
+            },
+            "video_loop": {
+              "label": "動画ループ再生"
+            },
+            "desktop_layout": {
+              "label": "PC版のレイアウト",
+              "options_0": {
+                "label": "タイル"
+              },
+              "options_1": {
+                "label": "2列"
+              },
+              "options_2": {
+                "label": "サムネイルのフラット表示"
+              },
+              "options_3": {
+                "label": "サムネイルのスライドショー"
+              }
+            },
+            "mobile_layout": {
+              "label": "モバイル版のレイアウト",
+              "options_0": {
+                "label": "2列"
+              },
+              "options_1": {
+                "label": "サムネイルを非表示にする"
+              },
+              "options_2": {
+                "label": "サムネイルを表示"
+              },
+              "options_3": {
+                "label": "全画面表示画像"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "商品画像"
+            }
+          }
+        }
+      },
+      "name": "商品詳細",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "main_search": {
+      "blocks": {
+        "results": {
+          "name": "結果一覧",
+          "settings": {
+            "page_size": {
+              "label": "ページごとの結果の数"
+            },
+            "desktop_columns": {
+              "label": "PC版の列数"
+            },
+            "mobile_columns": {
+              "label": "モバイル版の列数",
+              "options_0": {
+                "label": "1列"
+              },
+              "options_1": {
+                "label": "2列"
+              }
+            },
+            "filter_layout": {
+              "label": "フィルターレイアウト",
+              "options_0": {
+                "label": "引き出し"
+              },
+              "options_1": {
+                "label": "水平"
+              },
+              "options_2": {
+                "label": "垂直"
+              }
+            },
+            "enable_filtering": {
+              "label": "フィルターを有効にする"
+            },
+            "enable_sorting": {
+              "label": "商品の並べ替えを有効にする"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "結果一覧"
+            }
+          }
+        }
+      },
+      "name": "検索結果",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      }
+    },
+    "predictive_search": {
+      "name": "結果一覧"
+    },
+    "recommended_product": {
+      "name": "おすすめ商品",
+      "settings": {
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "レイアウト"
+        }
+      }
+    },
+    "rich_text": {
+      "name": "リッチテキスト",
+      "settings": {
+        "background_image": {
+          "label": "背景画像"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "画像とテキストの表示",
+          "name": "リッチテキスト"
+        }
+      }
+    },
+    "sign_up_and_save": {
+      "blocks": {
+        "subscription": {
+          "name": "購読情報入力ボックス",
+          "settings": {
+            "placeholder": {
+              "label": "入力ボックスのテキスト"
+            },
+            "button_text": {
+              "label": "ボタンの文字"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "購読情報入力ボックス"
+            }
+          }
+        }
+      },
+      "name": "メール購読",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "full_screen_width": {
+          "label": "全画面幅"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "顧客獲得",
+          "name": "メール購読"
+        }
+      }
+    },
+    "slideshow": {
+      "blocks": {
+        "description": {
+          "name": "説明文",
+          "settings": {
+            "text": {
+              "label": "テキスト"
+            },
+            "text_align": {
+              "label": "テキストの配置"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "説明文"
+            }
+          }
+        },
+        "group": {
+          "name": "コンテンツコンテナ",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "コンテンツコンテナ"
+            }
+          }
+        },
+        "image": {
+          "name": "画像",
+          "settings": {
+            "desktop_image": {
+              "label": "PC版の画像"
+            },
+            "mobile_image": {
+              "label": "モバイル版の画像"
+            },
+            "image_mask_opacity": {
+              "label": "画像の不透明度"
+            },
+            "show_text_mask": {
+              "label": "テキストマスクを表示"
+            },
+            "text_mask_color": {
+              "label": "テキストオーバーレイ色",
+              "options_0": {
+                "label": "濃色"
+              },
+              "options_1": {
+                "label": "薄色"
+              }
+            },
+            "color_scheme": {
+              "label": "配色"
+            },
+            "layout": {
+              "label": "レイアウト"
+            },
+            "spacing": {
+              "label": "余白"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "画像"
+            }
+          }
+        },
+        "subtitle": {
+          "name": "サブタイトル",
+          "settings": {
+            "subtitle": {
+              "label": "サブタイトル"
+            },
+            "text_align": {
+              "label": "テキストの配置"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "サブタイトル"
+            }
+          }
+        },
+        "title": {
+          "name": "タイトル",
+          "settings": {
+            "text": {
+              "label": "タイトル"
+            },
+            "text_size": {
+              "label": "テキストサイズ",
+              "options_0": {
+                "label": "特大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "テキストの配置"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "タイトル"
+            }
+          }
+        }
+      },
+      "name": "スライドショー",
+      "settings": {
+        "desktop_height": {
+          "label": "PC版に表示する画像の高さ",
+          "options_0": {
+            "label": "1枚目の画像サイズに合わせる"
+          },
+          "options_1": {
+            "label": "450px"
+          },
+          "options_2": {
+            "label": "550px"
+          },
+          "options_3": {
+            "label": "650px"
+          },
+          "options_4": {
+            "label": "750px"
+          },
+          "options_5": {
+            "label": "全画面"
+          }
+        },
+        "mobile_height": {
+          "label": "モバイル版に表示する画像の高さ",
+          "options_0": {
+            "label": "1枚目の画像サイズに合わせる"
+          },
+          "options_1": {
+            "label": "250px"
+          },
+          "options_2": {
+            "label": "300px"
+          },
+          "options_3": {
+            "label": "400px"
+          },
+          "options_4": {
+            "label": "500px"
+          },
+          "options_5": {
+            "label": "全画面"
+          }
+        },
+        "pagination_style": {
+          "label": "ページめくりのスタイル",
+          "options_0": {
+            "label": "矢印"
+          },
+          "options_1": {
+            "label": "進行状況バー"
+          },
+          "options_2": {
+            "label": "ドット"
+          }
+        },
+        "auto_switch": {
+          "label": "自動切替を有効にする"
+        },
+        "switch_interval": {
+          "label": "切り替え間隔"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "画像とテキストの表示",
+          "name": "スライドショー"
+        }
+      }
+    },
+    "text_columns_with_image": {
+      "blocks": {
+        "card_group": {
+          "name": "画像とテキストカードグループ",
+          "settings": {
+            "image_aspect_ratio": {
+              "label": "画像の比率",
+              "options_0": {
+                "label": "元の比率"
+              },
+              "options_1": {
+                "label": "1:1"
+              },
+              "options_3": {
+                "label": "円形"
+              }
+            },
+            "content_alignment": {
+              "label": "コンテンツの配置方法",
+              "options_0": {
+                "label": "左揃え"
+              },
+              "options_1": {
+                "label": "右揃え"
+              }
+            },
+            "desktop_columns": {
+              "label": "PC版の列数",
+              "options_0": {
+                "label": "1"
+              },
+              "options_2": {
+                "label": "3"
+              },
+              "options_3": {
+                "label": "4"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "画像とテキストカードグループ"
+            }
+          }
+        },
+        "card": {
+          "name": "画像とテキストのカード",
+          "settings": {
+            "button_text": {
+              "label": "ボタンの文字"
+            },
+            "link": {
+              "label": "移動先URL"
+            },
+            "layout": {
+              "label": "レイアウト"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "画像とテキストのカード"
+            }
+          }
+        },
+        "heading": {
+          "name": "タイトルとリンク先",
+          "settings": {
+            "title": {
+              "label": "タイトル"
+            },
+            "font_size": {
+              "label": "テキストサイズ",
+              "options_0": {
+                "label": "大"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "小"
+              }
+            },
+            "link": {
+              "label": "移動先URL"
+            },
+            "link_text": {
+              "label": "リンクのテキスト"
+            }
+          }
+        },
+        "image": {
+          "name": "画像",
+          "settings": {
+            "image": {
+              "label": "画像"
+            }
+          }
+        },
+        "text": {
+          "name": "テキスト",
+          "settings": {
+            "text": {
+              "label": "テキスト"
+            }
+          }
+        },
+        "title": {
+          "name": "タイトル",
+          "settings": {
+            "title": {
+              "label": "タイトル"
+            }
+          }
+        }
+      },
+      "name": "画像とテキストリスト",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "画像とテキストの表示",
+          "name": "画像とテキストリスト"
+        }
+      }
+    },
+    "video": {
+      "blocks": {
+        "name": "動画",
+        "settings": {
+          "poster_image": {
+            "label": "カバー画像"
+          },
+          "video_local_media": {
+            "label": "ローカルファイルのアップロード"
+          },
+          "video_external_media": {
+            "label": "外部動画のURL",
+            "info": "YouTube 埋め込みリンクを入力"
+          },
+          "autoplay": {
+            "label": "動画の自動再生"
+          },
+          "loop": {
+            "label": "再生を繰り返す"
+          },
+          "size": {
+            "label": "サイズ"
+          }
+        }
+      },
+      "name": "動画",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "画像とテキストの表示",
+          "name": "動画"
+        }
+      }
+    }
+  },
+  "blocks": {
+    "article": {
+      "card": {
+        "name": "ブログカード",
+        "settings": {
+          "layout": {
+            "label": "レイアウト"
+          },
+          "spacing": {
+            "label": "余白"
+          },
+          "size": {
+            "label": "サイズ"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "ブログカード"
+          }
+        }
+      },
+      "cover": {
+        "name": "カバー画像",
+        "settings": {
+          "aspect_ratio": {
+            "label": "画像の比率",
+            "options_0": {
+              "label": "初期比率"
+            },
+            "options_1": {
+              "label": "1:1"
+            },
+            "options_2": {
+              "label": "4:3"
+            },
+            "options_3": {
+              "label": "3:2"
+            },
+            "options_4": {
+              "label": "16:9"
+            }
+          },
+          "border_radius": {
+            "label": "角丸の半径"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "カバー画像"
+          }
+        }
+      },
+      "date": {
+        "author": {
+          "name": "作者/日付",
+          "settings": {
+            "show_author": {
+              "label": "作者を表示"
+            },
+            "show_date": {
+              "label": "日付を表示"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "作者/日付"
+            }
+          }
+        }
+      },
+      "excerpt": {
+        "name": "概要",
+        "presets": {
+          "presets_0": {
+            "name": "概要"
+          }
+        }
+      },
+      "info": {
+        "name": "ブログ情報",
+        "settings": {
+          "layout": {
+            "label": "レイアウト"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "ブログ情報"
+          }
+        }
+      },
+      "title": {
+        "name": "タイトル",
+        "presets": {
+          "presets_0": {
+            "name": "タイトル"
+          }
+        }
+      }
+    },
+    "button_group": {
+      "name": "ボタングループ",
+      "settings": {
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "ボタングループ"
+        }
+      }
+    },
+    "button": {
+      "name": "ボタン",
+      "settings": {
+        "text": {
+          "label": "ボタンの文字"
+        },
+        "link": {
+          "label": "移動先URL"
+        },
+        "use_secondary_style": {
+          "label": "サブボタンスタイルを使用する"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "ボタン"
+        }
+      }
+    },
+    "collection": {
+      "card": {
+        "name": "商品カテゴリカード",
+        "settings": {
+          "color_scheme": {
+            "label": "配色"
+          },
+          "collection": {
+            "label": "商品カテゴリ"
+          },
+          "layout": {
+            "label": "レイアウト"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "商品カテゴリカード"
+          }
+        }
+      },
+      "image": {
+        "name": "カテゴリ画像",
+        "settings": {
+          "aspect_ratio": {
+            "label": "カテゴリ画像の比率",
+            "options_0": {
+              "label": "初期比率"
+            },
+            "options_1": {
+              "label": "1:1"
+            },
+            "options_2": {
+              "label": "4:3"
+            },
+            "options_3": {
+              "label": "2:3"
+            }
+          },
+          "fit_type": {
+            "label": "画像の塗りつぶしモード",
+            "options_0": {
+              "label": "塗りつぶし"
+            },
+            "options_1": {
+              "label": "自動調整"
+            }
+          },
+          "shape": {
+            "label": "カテゴリ画像の形状",
+            "options_0": {
+              "label": "四角形"
+            },
+            "options_1": {
+              "label": "円形"
+            }
+          },
+          "layout": {
+            "label": "レイアウト"
+          }
+        }
+      },
+      "title": {
+        "name": "カテゴリ名",
+        "settings": {
+          "size": {
+            "label": "サイズ"
+          }
+        }
+      }
+    },
+    "custom_html": {
+      "name": "カスタムHTML",
+      "settings": {
+        "html": {
+          "label": "HTML"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "カスタムHTML"
+        }
+      }
+    },
+    "description": {
+      "name": "説明文",
+      "settings": {
+        "content": {
+          "label": "テキスト"
+        },
+        "text_align": {
+          "label": "テキストの配置"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      }
+    },
+    "group": {
+      "name": "コンテンツコンテナ",
+      "settings": {
+        "layout": {
+          "label": "レイアウト"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "グループ"
+        }
+      }
+    },
+    "heading_with_link": {
+      "name": "タイトルとリンク先",
+      "settings": {
+        "text": {
+          "label": "タイトル"
+        },
+        "text_size": {
+          "label": "テキストサイズ",
+          "options_0": {
+            "label": "大"
+          },
+          "options_1": {
+            "label": "中"
+          },
+          "options_2": {
+            "label": "小"
+          }
+        },
+        "link_text": {
+          "label": "リンクのテキスト",
+          "info": "このテキストはPC版でのみ表示されます。"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "タイトルとリンク先"
+        }
+      }
+    },
+    "heading": {
+      "name": "タイトル",
+      "settings": {
+        "text": {
+          "label": "タイトル"
+        },
+        "text_size": {
+          "label": "テキストサイズ",
+          "options_0": {
+            "label": "特大"
+          },
+          "options_1": {
+            "label": "大"
+          },
+          "options_2": {
+            "label": "中"
+          },
+          "options_3": {
+            "label": "小"
+          }
+        },
+        "text_align": {
+          "label": "テキストの配置"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "タイトル"
+        }
+      }
+    },
+    "product": {
+      "detail_additional": {
+        "name": "カスタムコンテンツ",
+        "settings": {
+          "title": {
+            "label": "タイトル"
+          },
+          "icon": {
+            "label": "アイコン",
+            "options_0": {
+              "label": "非表示"
+            },
+            "options_1": {
+              "label": "安全な支払い"
+            },
+            "options_2": {
+              "label": "パッケージ"
+            },
+            "options_3": {
+              "label": "電子メールアドレス"
+            },
+            "options_4": {
+              "label": "位置"
+            },
+            "options_5": {
+              "label": "顧客"
+            },
+            "options_6": {
+              "label": "チャット"
+            },
+            "options_7": {
+              "label": "ギフト"
+            },
+            "options_8": {
+              "label": "携帯電話"
+            },
+            "options_9": {
+              "label": "ヘルプ情報"
+            },
+            "options_10": {
+              "label": "物流"
+            },
+            "options_11": {
+              "label": "割引ラベル"
+            }
+          },
+          "description": {
+            "label": "説明内容"
+          },
+          "custom_page": {
+            "label": "カスタムページ"
+          },
+          "enabled_fold": {
+            "label": "折りたたみ表示"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "カスタムコンテンツ"
+          }
+        }
+      },
+      "detail_buy_buttons": {
+        "name": "購入ボタン",
+        "presets": {
+          "presets_0": {
+            "name": "購入ボタン"
+          }
+        }
+      },
+      "detail_description": {
+        "name": "商品説明",
+        "settings": {
+          "text_align": {
+            "label": "テキストの配置"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "商品説明"
+          }
+        }
+      },
+      "detail_heading": {
+        "name": "タイトル",
+        "settings": {
+          "heading": {
+            "label": "タイトル"
+          },
+          "text_size": {
+            "label": "テキストサイズ",
+            "options_0": {
+              "label": "特大"
+            },
+            "options_1": {
+              "label": "大"
+            },
+            "options_2": {
+              "label": "中"
+            },
+            "options_3": {
+              "label": "小"
+            }
+          },
+          "text_align": {
+            "label": "テキストの配置"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "タイトル"
+          }
+        }
+      },
+      "detail_inventory": {
+        "name": "在庫状態",
+        "settings": {
+          "inventory_threshold": {
+            "label": "低在庫時の閾値",
+            "info": "0を選択すると常に「在庫あり」を表示"
+          },
+          "show_inventory_quantity": {
+            "label": "在庫数を表示"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "在庫状態"
+          }
+        }
+      },
+      "detail_popup": {
+        "name": "ポップアップボックス",
+        "settings": {
+          "text": {
+            "label": "ポップアップタイトル"
+          },
+          "page": {
+            "label": "ポップアップページ"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "ポップアップボックス"
+          }
+        }
+      },
+      "detail_price": {
+        "name": "価格",
+        "presets": {
+          "presets_0": {
+            "name": "価格"
+          }
+        }
+      },
+      "detail_quantity_selector": {
+        "name": "数量セレクター",
+        "presets": {
+          "presets_0": {
+            "name": "数量セレクター"
+          }
+        }
+      },
+      "detail_sell_info_row": {
+        "name": "販売情報ライン",
+        "settings": {
+          "info_icon": {
+            "label": "アイコン",
+            "options_0": {
+              "label": "チェックボックス"
+            },
+            "options_1": {
+              "label": "地球"
+            },
+            "options_2": {
+              "label": "グリーン"
+            },
+            "options_3": {
+              "label": "パッケージ"
+            },
+            "options_4": {
+              "label": "ロック"
+            },
+            "options_5": {
+              "label": "トラック"
+            }
+          },
+          "custom_info_icon": {
+            "label": "カスタムアイコン"
+          },
+          "info_text": {
+            "label": "テキスト"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "販売情報ライン"
+          }
+        }
+      },
+      "detail_sell_info": {
+        "name": "販売情報",
+        "presets": {
+          "presets_0": {
+            "name": "販売情報"
+          }
+        }
+      },
+      "detail_share": {
+        "name": "共有",
+        "presets": {
+          "presets_0": {
+            "name": "共有"
+          }
+        }
+      },
+      "detail_variant_picker": {
+        "name": "多属性セレクター",
+        "settings": {
+          "picker_type": {
+            "label": "多属性の表示方法",
+            "options_0": {
+              "label": "タイル"
+            },
+            "options_1": {
+              "label": "ドロップダウンリスト"
+            }
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "多属性セレクター"
+          }
+        }
+      }
+    },
+    "product_list": {
+      "card": {
+        "name": "商品カード",
+        "settings": {
+          "layout": {
+            "label": "レイアウト"
+          },
+          "size": {
+            "label": "サイズ"
+          }
+        },
+        "blocks": {
+          "product-list/title": {
+            "name": "タイトル"
+          },
+          "product-list/price": {
+            "name": "価格"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "商品カード"
+          }
+        }
+      },
+      "discount": {
+        "tag": {
+          "name": "ラベルの表示ルール",
+          "presets": {
+            "presets_0": {
+              "name": "ラベルの表示ルール"
+            }
+          }
+        }
+      },
+      "image": {
+        "name": "商品画像",
+        "settings": {
+          "aspect_ratio": {
+            "label": "商品画像比率",
+            "options_0": {
+              "label": "初期比率"
+            },
+            "options_1": {
+              "label": "1:1"
+            },
+            "options_3": {
+              "label": "4:3"
+            },
+            "options_4": {
+              "label": "2:3"
+            }
+          },
+          "fit_type": {
+            "label": "商品画像の塗りつぶしモード",
+            "options_0": {
+              "label": "塗りつぶし"
+            },
+            "options_1": {
+              "label": "自動調整"
+            }
+          },
+          "shape": {
+            "label": "画像の形状",
+            "options_0": {
+              "label": "四角形"
+            },
+            "options_1": {
+              "label": "円形"
+            }
+          },
+          "hover_show_next_image": {
+            "label": "マウスオーバーして次の商品画像を表示"
+          },
+          "layout": {
+            "label": "レイアウト"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "商品リスト"
+          }
+        }
+      },
+      "layer": {
+        "name": "画像オーバーレイ",
+        "settings": {
+          "layout": {
+            "label": "レイアウト"
+          },
+          "size": {
+            "label": "サイズ"
+          },
+          "spacing": {
+            "label": "余白"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "画像オーバーレイ"
+          }
+        }
+      },
+      "list": {
+        "name": "商品リスト",
+        "settings": {
+          "color_scheme": {
+            "label": "配色"
+          },
+          "page_size": {
+            "label": "表示される商品の最大数"
+          },
+          "desktop_columns": {
+            "label": "PC版の列数"
+          },
+          "mobile_columns": {
+            "label": "モバイル版の列数"
+          },
+          "desktop_enable_slider": {
+            "label": "PC版でスワイプして表示"
+          },
+          "mobile_enable_slider": {
+            "label": "モバイル版でスワイプして表示"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "商品リスト"
+          }
+        }
+      },
+      "price": {
+        "name": "商品価格",
+        "presets": {
+          "presets_0": {
+            "name": "商品価格"
+          }
+        }
+      },
+      "quick": {
+        "add": {
+          "name": "クイック購入",
+          "presets": {
+            "presets_0": {
+              "name": "クイック購入"
+            }
+          }
+        }
+      },
+      "title": {
+        "name": "商品名",
+        "presets": {
+          "presets_0": {
+            "name": "商品名"
+          }
+        }
+      }
+    },
+    "rich_text": {
+      "name": "リッチテキスト",
+      "settings": {
+        "content": {
+          "label": "テキスト"
+        },
+        "text_align": {
+          "label": "テキストの配置"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "リッチテキスト"
+        }
+      }
+    },
+    "subheading": {
+      "name": "サブタイトル",
+      "settings": {
+        "subtitle": {
+          "label": "サブタイトル"
+        },
+        "text_align": {
+          "label": "テキストの配置"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "サブタイトル"
+        }
+      }
+    }
+  },
+  "settings_schema": {
+    "color": {
+      "name": "色",
+      "settings": {
+        "color_schemes": {
+          "definition_0": {
+            "label": "背景"
+          },
+          "definition_1": {
+            "label": "テキスト"
+          },
+          "definition_2": {
+            "label": "薄色文字"
+          },
+          "definition_3": {
+            "label": "線と枠線"
+          },
+          "definition_4": {
+            "label": "ボタンの背景"
+          },
+          "definition_5": {
+            "label": "ボタンの文字"
+          },
+          "definition_6": {
+            "label": "サブボタンの背景"
+          },
+          "definition_7": {
+            "label": "サブボタンの文字"
+          },
+          "definition_8": {
+            "label": "サブボタンの枠線"
+          },
+          "definition_9": {
+            "label": "テキストリンク"
+          }
+        },
+        "group_header_0": {
+          "label": "商品"
+        },
+        "color_sale": {
+          "label": "販売価格"
+        },
+        "color_discount": {
+          "label": "割引額"
+        },
+        "color_tag_background": {
+          "label": "割引ラベル"
+        },
+        "color_tag_text": {
+          "label": "割引ラベルの文字"
+        },
+        "group_header_1": {
+          "label": "その他"
+        },
+        "color_page_background": {
+          "label": "ページの背景色"
+        },
+        "color_cart_bubble": {
+          "label": "カートのプロンプトポイント"
+        },
+        "color_cart_bubble_text": {
+          "label": "カートのプロンプトテキスト"
+        },
+        "color_image_background": {
+          "label": "画像の背景"
+        },
+        "color_image_loading_background": {
+          "label": "画像読み込みの背景"
+        },
+        "color_mask": {
+          "label": "ポップアップオーバーレイの背景"
+        },
+        "color_shadow": {
+          "label": "影",
+          "info": "ボタン/商品カード/カテゴリカード/ブログカードに使用される影の色"
+        }
+      }
+    },
+    "font": {
+      "name": "フォント",
+      "settings": {
+        "group_header_0": {
+          "label": "タイトル"
+        },
+        "sort_title_font": {
+          "label": "フォント"
+        },
+        "sort_title_letter_spacing": {
+          "label": "フォントの間隔"
+        },
+        "sort_title_size": {
+          "label": "フォントサイズ"
+        },
+        "sort_title_line_height": {
+          "label": "フォント行の高さ"
+        },
+        "sort_title_uppercase": {
+          "label": "テキストをすべて大文字にする"
+        },
+        "group_header_1": {
+          "label": "テキスト"
+        },
+        "sort_body_font": {
+          "label": "フォント"
+        },
+        "sort_body_letter_spacing": {
+          "label": "フォントの間隔"
+        },
+        "sort_body_size": {
+          "label": "フォントサイズ"
+        },
+        "sort_body_line_height": {
+          "label": "フォント行の高さ"
+        }
+      }
+    },
+    "layout": {
+      "name": "表示方法",
+      "settings": {
+        "group_header_0": {
+          "label": "基本"
+        },
+        "page_width": {
+          "label": "ページ幅"
+        },
+        "section_vertical_spacing": {
+          "label": "パーツ内の垂直方向の間隔"
+        },
+        "group_header_1": {
+          "label": "グリッド",
+          "info": "複数の列または行が存在するグリッドレイアウトに影響します。"
+        },
+        "grid_horizontal_spacing": {
+          "label": "水平間隔"
+        },
+        "grid_vertical_spacing": {
+          "label": "垂直間隔"
+        }
+      }
+    },
+    "button": {
+      "name": "ボタン",
+      "settings": {
+        "group_header_0": {
+          "label": "枠線"
+        },
+        "button_border_thickness": {
+          "label": "太さ"
+        },
+        "button_border_opacity": {
+          "label": "不透明度"
+        },
+        "button_border_radius": {
+          "label": "角丸の半径"
+        },
+        "group_header_1": {
+          "label": "影"
+        },
+        "button_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "button_shadow_offset_x": {
+          "label": "水平オフセット"
+        },
+        "button_shadow_offset_y": {
+          "label": "垂直オフセット"
+        },
+        "button_shadow_blur": {
+          "label": "ぼかし"
+        }
+      }
+    },
+    "sku": {
+      "name": "多属性セレクター",
+      "settings": {
+        "group_header_0": {
+          "label": "枠線"
+        },
+        "variant_selector_border_thickness": {
+          "label": "太さ"
+        },
+        "variant_selector_border_opacity": {
+          "label": "不透明度"
+        },
+        "variant_selector_border_radius": {
+          "label": "角丸の半径"
+        },
+        "group_header_1": {
+          "label": "影"
+        },
+        "variant_selector_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "variant_selector_shadow_offset_x": {
+          "label": "水平オフセット"
+        },
+        "variant_selector_shadow_offset_y": {
+          "label": "垂直オフセット"
+        },
+        "variant_selector_shadow_blur": {
+          "label": "ぼかし"
+        }
+      }
+    },
+    "input": {
+      "name": "入力ボックス",
+      "settings": {
+        "group_header_0": {
+          "label": "枠線"
+        },
+        "input_border_thickness": {
+          "label": "太さ"
+        },
+        "input_border_opacity": {
+          "label": "不透明度"
+        },
+        "input_border_radius": {
+          "label": "角丸の半径"
+        },
+        "group_header_1": {
+          "label": "影"
+        },
+        "input_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "input_shadow_offset_x": {
+          "label": "水平オフセット"
+        },
+        "input_shadow_offset_y": {
+          "label": "垂直オフセット"
+        },
+        "input_shadow_blur": {
+          "label": "ぼかし"
+        }
+      }
+    },
+    "product_card": {
+      "name": "商品カード",
+      "settings": {
+        "group_header_0": {
+          "label": "商品情報"
+        },
+        "product_quick_add": {
+          "label": "クイック購入"
+        },
+        "product_desktop_title_show": {
+          "label": "PC版で商品タイトルを表示"
+        },
+        "product_mobile_title_show": {
+          "label": "モバイル版で商品タイトルを表示"
+        },
+        "product_title_display_type": {
+          "label": "商品タイトルの表示ルール",
+          "options_0": {
+            "label": "フルディスプレイ"
+          },
+          "options_1": {
+            "label": "最大1行まで表示"
+          },
+          "options_2": {
+            "label": "最大2行まで表示"
+          }
+        },
+        "group_header_1": {
+          "label": "商品カードの割引ラベル",
+          "info": "商品リストにのみ適用されます。商品詳細ページの割引ラベルは商品詳細ページの価格エリアで設定できます。"
+        },
+        "product_discount_radius": {
+          "label": "割引ラベルの角丸半径"
+        },
+        "product_card_style": {
+          "label": "スタイル",
+          "options_0": {
+            "label": "標準"
+          },
+          "options_1": {
+            "label": "カード"
+          }
+        },
+        "product_card_image_padding": {
+          "label": "画像の余白",
+          "info": "画像と背景の間隔を設定します。"
+        },
+        "group_header_2": {
+          "label": "枠線"
+        },
+        "product_card_border_thickness": {
+          "label": "太さ"
+        },
+        "product_card_border_opacity": {
+          "label": "不透明度"
+        },
+        "product_card_border_radius": {
+          "label": "角丸の半径"
+        },
+        "group_header_3": {
+          "label": "影"
+        },
+        "product_card_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "product_card_shadow_offset_x": {
+          "label": "水平オフセット"
+        },
+        "product_card_shadow_offset_y": {
+          "label": "垂直オフセット"
+        },
+        "product_card_shadow_blur": {
+          "label": "ぼかし"
+        }
+      }
+    },
+    "collection_card": {
+      "name": "商品カテゴリカード",
+      "settings": {
+        "collection_card_style": {
+          "label": "スタイル",
+          "options_0": {
+            "label": "標準"
+          },
+          "options_1": {
+            "label": "カード"
+          }
+        },
+        "collection_card_image_padding": {
+          "label": "画像の余白",
+          "info": "画像と背景の間隔を設定します。"
+        },
+        "group_header_0": {
+          "label": "枠線"
+        },
+        "collection_card_border_thickness": {
+          "label": "太さ"
+        },
+        "collection_card_border_opacity": {
+          "label": "不透明度"
+        },
+        "collection_card_border_radius": {
+          "label": "角丸の半径"
+        },
+        "group_header_1": {
+          "label": "影"
+        },
+        "collection_card_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "collection_card_shadow_offset_x": {
+          "label": "水平オフセット"
+        },
+        "collection_card_shadow_offset_y": {
+          "label": "垂直オフセット"
+        },
+        "collection_card_shadow_blur": {
+          "label": "ぼかし"
+        }
+      }
+    },
+    "blog_card": {
+      "name": "ブログカード",
+      "settings": {
+        "article_card_style": {
+          "label": "スタイル",
+          "options_0": {
+            "label": "標準"
+          },
+          "options_1": {
+            "label": "カード"
+          }
+        },
+        "article_card_image_padding": {
+          "label": "画像の余白",
+          "info": "画像と背景の間隔を設定します。"
+        },
+        "group_header_0": {
+          "label": "枠線"
+        },
+        "article_card_border_thickness": {
+          "label": "太さ"
+        },
+        "article_card_border_opacity": {
+          "label": "不透明度"
+        },
+        "article_card_border_radius": {
+          "label": "角丸の半径"
+        },
+        "group_header_1": {
+          "label": "影"
+        },
+        "article_card_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "article_card_shadow_offset_x": {
+          "label": "水平オフセット"
+        },
+        "article_card_shadow_offset_y": {
+          "label": "垂直オフセット"
+        },
+        "article_card_shadow_blur": {
+          "label": "ぼかし"
+        }
+      }
+    },
+    "other_card": {
+      "name": "その他のカード",
+      "settings": {
+        "group_header_0": {
+          "label": "枠線"
+        },
+        "card_border_thickness": {
+          "label": "太さ"
+        },
+        "card_border_opacity": {
+          "label": "不透明度"
+        },
+        "card_border_radius": {
+          "label": "角丸の半径"
+        },
+        "group_header_1": {
+          "label": "影"
+        },
+        "card_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "card_shadow_offset_x": {
+          "label": "水平オフセット"
+        },
+        "card_shadow_offset_y": {
+          "label": "垂直オフセット"
+        },
+        "card_shadow_blur": {
+          "label": "ぼかし"
+        }
+      }
+    },
+    "dropdown_menu": {
+      "name": "ドロップダウンとポップアップ",
+      "settings": {
+        "group_header_0": {
+          "label": "枠線"
+        },
+        "modal_border_thickness": {
+          "label": "太さ"
+        },
+        "modal_border_opacity": {
+          "label": "不透明度"
+        },
+        "modal_border_radius": {
+          "label": "角丸の半径"
+        },
+        "group_header_1": {
+          "label": "影"
+        },
+        "modal_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "modal_shadow_offset_x": {
+          "label": "水平オフセット"
+        },
+        "modal_shadow_offset_y": {
+          "label": "垂直オフセット"
+        },
+        "modal_shadow_blur": {
+          "label": "ぼかし"
+        }
+      }
+    },
+    "drawer": {
+      "name": "引き出し",
+      "settings": {
+        "group_header_0": {
+          "label": "枠線"
+        },
+        "drawer_border_thickness": {
+          "label": "太さ"
+        },
+        "drawer_border_opacity": {
+          "label": "不透明度"
+        },
+        "group_header_1": {
+          "label": "影"
+        },
+        "drawer_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "drawer_shadow_offset_x": {
+          "label": "水平オフセット"
+        },
+        "drawer_shadow_offset_y": {
+          "label": "垂直オフセット"
+        },
+        "drawer_shadow_blur": {
+          "label": "ぼかし"
+        }
+      }
+    },
+    "cart": {
+      "name": "ショッピングカート",
+      "settings": {
+        "cart_add_type": {
+          "label": "カートのスタイル",
+          "options_0": {
+            "label": "引き出し型カート"
+          },
+          "options_1": {
+            "label": "カートページに移動"
+          },
+          "options_2": {
+            "label": "ポップアップ通知"
+          }
+        },
+        "cart_color_scheme": {
+          "label": "配色"
+        }
+      }
+    },
+    "media_sosial": {
+      "name": "ソーシャルメディア",
+      "settings": {
+        "group_header_0": {
+          "label": "アカウント",
+          "info": "顧客がソーシャルメディアにアクセスするために使用されます。"
+        },
+        "social_media_facebook_link": {
+          "label": "Facebook"
+        },
+        "social_media_twitter_link": {
+          "label": "X（Twitter）"
+        },
+        "social_media_pinterest_link": {
+          "label": "Pinterest"
+        },
+        "social_media_instagram_link": {
+          "label": "Instagram"
+        },
+        "social_media_snapchat_link": {
+          "label": "Snapchat"
+        },
+        "social_media_tiktok_link": {
+          "label": "TikTok"
+        },
+        "social_media_youtube_link": {
+          "label": "YouTube"
+        },
+        "social_media_vimeo_link": {
+          "label": "Vimeo"
+        },
+        "social_media_tumblr_link": {
+          "label": "Tumblr"
+        },
+        "social_media_line_link": {
+          "label": "LINE"
+        },
+        "social_media_linkedin_link": {
+          "label": "LinkedIn"
+        }
+      }
+    },
+    "favicon": {
+      "name": "ウェブサイトのアイコン",
+      "settings": {
+        "favicon_image": {
+          "label": "ウェブサイトのアイコン",
+          "info": "ブラウザータブに表示されます。サイズ：32×32px。"
+        }
+      }
+    }
+  }
+}

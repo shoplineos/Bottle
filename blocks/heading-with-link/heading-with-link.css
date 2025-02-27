@@ -1,0 +1,28 @@
+.heading-with-link {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.heading-with-link__view-more {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-width: 10%;
+}
+
+.heading-with-link__view-more > span {
+  color: rgb(var(--color-text));
+}
+
+@media (max-width: 959px) {
+  .heading-with-link__view-more > span {
+    display: none;
+  }
+}
+
+.heading-with-link__view-more svg {
+  flex-shrink: 0;
+}

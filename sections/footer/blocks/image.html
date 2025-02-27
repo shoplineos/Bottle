@@ -1,0 +1,36 @@
+<div class="footer__image {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{#if block.settings.image}}
+    {{#capture style_str}}contain: size;contain-intrinsic-size: {{block.settings.image.width}}px {{block.settings.image.height}}px;{{/capture}}
+
+    {{#component "image" style=style_str data=block.settings.image /}}
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.footer.blocks.image.name",
+  "icon": "image",
+  "tag": "",
+  "settings": [
+    {
+      "type": "image",
+      "id": "image",
+      "label": "t:sections.footer.blocks.image.settings.image.label"
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.footer.blocks.image.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.footer.blocks.image.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

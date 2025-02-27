@@ -1,0 +1,114 @@
+{{#if block.settings.payment_icons.show}}
+  <div class="footer__payment-icons {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+    {{#for pay_channel in block.settings.payment_icons.pay_channel_list}}
+      {{#payment_type_svg pay_channel.type /}}
+    {{/for}}
+  </div>
+{{/if}}
+
+{{#schema}}
+{
+  "name": "t:sections.footer.blocks.payment_icons.name",
+  "icon": "currency",
+  "tag": "",
+  "settings": [
+    {
+      "type": "choose_payment_icons",
+      "id": "payment_icons",
+      "label": "t:sections.footer.blocks.payment_icons.settings.payment_icons.label",
+      "default": {
+        "show": true,
+        "pay_channel_list": [
+          {
+            "type": "visa",
+            "show": true
+          },
+          {
+            "type": "master-card",
+            "show": true
+          },
+          {
+            "type": "master-card2",
+            "show": true
+          },
+          {
+            "type": "visa-electron",
+            "show": true
+          },
+          {
+            "type": "jcb",
+            "show": true
+          },
+          {
+            "type": "american-express",
+            "show": true
+          },
+          {
+            "type": "diners-club",
+            "show": true
+          },
+          {
+            "type": "discover",
+            "show": true
+          },
+          {
+            "type": "paypal",
+            "show": true
+          },
+          {
+            "type": "union-pay",
+            "show": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.footer.blocks.payment_icons.settings.layout.label",
+      "default": {
+        "flex-direction": "row",
+        "flex-wrap": "wrap",
+        "align-items": "center",
+        "justify-content": "flex-end",
+        "row-gap": "10px",
+        "column-gap": "10px",
+        "@media (--mobile)": {
+          "justify-content": "center",
+          "row-gap": "8px",
+          "column-gap": "8px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.footer.blocks.payment_icons.settings.spacing.label",
+      "default": {
+        "padding-top": "0px",
+        "padding-right": "0px",
+        "padding-bottom": "0px",
+        "padding-left": "0px"
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.footer.blocks.payment_icons.settings.size.label",
+      "default": {
+        "width": "50%",
+        "height": "auto",
+        "@media (--mobile)": {
+          "width": "auto",
+          "height": "auto"
+        }
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.footer.blocks.payment_icons.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

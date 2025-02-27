@@ -1,0 +1,57 @@
+<h2
+  class="block-heading {{block.settings.text_size}} text-{{block.settings.text_align}}"
+  {{{block.shopline_attributes}}}
+>
+  {{{block.settings.text | newline_to_br()}}}
+</h2>
+
+{{#schema}}
+{
+  "name": "t:blocks.heading.name",
+  "icon": "title",
+  "tag": "",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "t:blocks.heading.settings.text.label",
+      "default": "Title"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "t:blocks.heading.settings.text_size.label",
+      "default": "title3",
+      "options": [
+        {
+          "value": "title1",
+          "label": "t:blocks.heading.settings.text_size.options_0.label"
+        },
+        {
+          "value": "title2",
+          "label": "t:blocks.heading.settings.text_size.options_1.label"
+        },
+        {
+          "value": "title3",
+          "label": "t:blocks.heading.settings.text_size.options_2.label"
+        },
+        {
+          "value": "title4",
+          "label": "t:blocks.heading.settings.text_size.options_3.label"
+        }
+      ]
+    },
+    {
+      "id": "text_align",
+      "type": "text_align",
+      "label": "t:blocks.heading.settings.text_align.label",
+      "default": "center"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.heading.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

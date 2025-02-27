@@ -1,0 +1,77 @@
+<div class="block-button-group {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{#content "blocks" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.button_group.name",
+  "icon": "general",
+  "tag": "",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:blocks.button_group.settings.layout.label",
+      "default": {
+        "flex-direction": "row",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "column-gap": "14px",
+        "row-gap": "14px"
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:blocks.button_group.settings.spacing.label",
+      "default": {
+        "padding-top": "8px",
+        "padding-right": "0px",
+        "padding-bottom": "0px",
+        "padding-left": "0px"
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:blocks.button_group.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "limit": 2
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.button_group.presets.presets_0.name",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "button",
+          "settings": {
+            "text": "Shop this",
+            "link": "",
+            "use_secondary_style": true
+          }
+        },
+        {
+          "type": "button",
+          "settings": {
+            "text": "Shop all",
+            "link": "",
+            "use_secondary_style": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

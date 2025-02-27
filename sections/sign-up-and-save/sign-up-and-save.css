@@ -1,0 +1,57 @@
+.sign-up-and-save-section {
+  word-break: break-all;
+}
+.sign-up-and-save__container {
+  background-color: rgb(var(--color-background));
+}
+.sign-up-and-save__content {
+  box-sizing: border-box;
+}
+.sign-up-and-save__subscription {
+  display: flex;
+  max-width: 100%;
+}
+@media (max-width: 959px) {
+  .sign-up-and-save__subscription form {
+    width: 100%;
+  }
+}
+.sign-up-and-save__subscription .field__info {
+  display: inline-block;
+  line-height: 1.5833;
+}
+.sign-up-and-save__subscription .field__info--error {
+  color: rgb(227 38 25 / 100%);
+}
+.sign-up-and-save__subscription .field__info > svg {
+  margin-inline-end: 4px;
+  vertical-align: middle;
+}
+.sign-up-and-save__inline-form {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  justify-content: center;
+}
+.sign-up-and-save__inline-form .field {
+  flex-shrink: 0;
+  width: 260px;
+  margin-block-end: 0;
+}
+@media (max-width: 959px) {
+  .sign-up-and-save__inline-form .field {
+    width: auto;
+  }
+}
+.sign-up-and-save__inline-form .field::after {
+  border-color: rgba(var(--color-entry-line), 1);
+}
+.sign-up-and-save__inline-form .field:hover::after {
+  --input-border-thickness: 2px;
+
+  border-color: rgba(var(--color-text), 1);
+}
+.sign-up-and-save__inline-form .button {
+  flex: 1;
+  overflow: hidden;
+}

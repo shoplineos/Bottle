@@ -1,0 +1,88 @@
+
+
+{{#var local_media = props.local_media /}}
+{{#var external_media = props.external_media /}}
+{{#var poster_image = props.poster_image /}}
+{{#var poster_image_lazy = props.poster_image_lazy /}}
+{{#var poster_image_desktop_size = props.poster_image_desktop_size /}}
+{{#var poster_image_quality = props.poster_image_quality /}}
+
+{{#component "stylesheet" src="./video-media.css" | asset_url() /}}
+{{#component "script" src="./video-media.js" | asset_url() /}}
+
+{{#var is_have_poster = false /}}
+{{#if poster_image}}
+  {{#set poster_image_lazy = true /}}
+{{/if}}
+{{#var is_have_media = false /}}
+{{#if local_media || external_media}}
+  {{#set is_have_media = true /}}
+{{/if}}
+
+{{#var loop = props.loop | default(false) /}}
+{{#var muted = props.muted | default(false) /}}
+{{#var autoplay = props.autoplay | default(false) /}}
+
+{{#capture aspect_ratio}}
+  aspect-ratio:
+  {{#if poster_image}}
+    calc({{poster_image.width}}/{{poster_image.height}})
+  {{#else if local_media /}}
+    {{local_media.aspect_ratio}}
+  {{#else if external_media.aspect_ratio /}}
+    {{external_media.aspect_ratio}}
+  {{#else /}}
+    calc(16/9)
+  {{/if}}
+{{/capture}}
+
+{{#if poster_image}}
+  {{#set is_have_poster = true /}}
+{{/if}}
+
+{{#capture poster}}
+  <div class="theme-video-media__poster">
+    {{#if poster_image.src}}
+      {{#component "image" sizes="100%" data=poster_image lazy=poster_image_lazy desktop_size=poster_image_desktop_size mobile_size=poster_image_mobile_size quality=poster_image_quality /}}
+    {{#else if local_media.preview_image.src /}}
+      {{#component "image" sizes="100%" data=local_media.preview_image lazy=poster_image_lazy desktop_size=poster_image_desktop_size mobile_size=poster_image_mobile_size quality=poster_image_quality /}}
+    {{#else if external_media.preview_image.src /}}
+      {{#component "image" sizes="100%" data=external_media.preview_image lazy=poster_image_lazy desktop_size=poster_image_desktop_size mobile_size=poster_image_mobile_size quality=poster_image_quality /}}
+    {{#else/}}
+      {{#placeholder_svg "image" /}}
+    {{/if}}
+  </div>
+{{/capture}}
+
+{{#capture media}}
+  <template>
+    {{#if !local_media && external_media}}
+      {{#if external_media.host == "youtube"}}
+        {{#external_video_tag external_media | external_video_url(playlist=external_media.external_id, autoplay=true, loop=loop, muted=muted) class="video-media-youtube" frameborder="0" /}}
+      {{#else if external_media.host == "vimeo" /}}
+        {{#external_video_tag external_media | external_video_url(autoplay=true, loop=loop, muted=muted) class="video-media-vimeo" frameborder="0" /}}
+      {{/if}}
+    {{#else/}}
+      {{#video_tag local_media autoplay=true loop=loop muted=muted controls=true controlsList="nodownload" /}}
+    {{/if}}
+  </template>
+{{/capture}}
+
+<theme-video-media class="{{props.class}}" data-autoplay="{{autoplay}}" data-loop="{{loop}}" data-muted="{{muted}}">
+  <div
+    class="theme-video-media {{#if !is_have_poster && !is_have_media}}theme-video-media--empty{{/if}}"
+    style="{{aspect_ratio | trim()}}"
+  >
+    {{#if is_have_media}}
+      {{{poster}}}
+      <button class="theme-video-media__play-button">
+        {{#component "icons/video-play" class="theme-video-media__play-button-icon" /}}
+      </button>
+      <div class="theme-video-media__media">
+        {{{media}}}
+      </div>
+    {{#else/}}
+      {{{poster}}}
+    {{/if}}
+  </div>
+</theme-video-media>

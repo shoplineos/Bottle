@@ -1,0 +1,107 @@
+.main-search__results {
+  overflow: visible;
+}
+
+@media (min-width: 960px) {
+  .main-search__results {
+    display: grid;
+  }
+
+  .main-search__results .main-search__results-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-area: list;
+    gap: 40px;
+  }
+
+  .main-search__results .facets-filtering {
+    grid-area: filtering;
+  }
+
+  .main-search__results .facets-sorting {
+    grid-area: sorting;
+  }
+
+  .main-search__results .facets-count {
+    grid-area: count;
+  }
+
+  .main-search__results.facets-layout-horizontal {
+    grid-template:
+      "filtering sorting count"
+      "list list list" /
+      1fr auto auto;
+    row-gap: 40px;
+  }
+
+  .main-search__results.facets-layout-vertical {
+    grid-template:
+      "filtering count sorting" 10px
+      "filtering list list" /
+      256px auto auto;
+    gap: 40px;
+  }
+
+  .main-search__results.facets-layout-drawer {
+    grid-template:
+      "filtering sorting count"
+      "list list list" /
+      1fr auto auto;
+  }
+}
+
+.main-search__page-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgb(243 243 243 / 100%);
+  border: 1px solid rgb(var(--color-entry-line));
+}
+
+@media (max-width: 959px) {
+  .main-search__page-card {
+    padding: 10px;
+  }
+}
+
+.main-search__page-card-image-wrapper {
+  height: 100%;
+  aspect-ratio: var(--aspect-ratio);
+  overflow: hidden;
+  background-color: rgb(243 243 243 / 100%);
+}
+
+.main-search__page-card-title-wrapper {
+  position: absolute;
+  inset-block-end: 20px;
+  inset-inline-start: 0;
+  display: flex;
+  gap: 16px;
+  width: calc(100% - 40px);
+  padding: 10px 16px;
+  margin-inline: 20px;
+  background-color: rgb(255 255 255 / 100%);
+}
+
+.main-search__page-card-title-wrapper > svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 959px) {
+  .main-search__page-card-title-wrapper {
+    inset-block-end: 10px;
+    gap: 4px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-inline: 10px;
+  }
+}
+
+.main-search__page-card-title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}

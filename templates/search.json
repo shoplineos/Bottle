@@ -1,0 +1,108 @@
+{
+  "sections": {
+    "main-search": {
+      "type": "main-search",
+      "blocks": {
+        "main-search__results": {
+          "type": "$results",
+          "blocks": {
+            "main-search__results__product-card": {
+              "type": "product-list/card",
+              "blocks": {
+                "main-search__results__product-card__image": {
+                  "type": "product-list/image",
+                  "blocks": {
+                    "main-search__results__product-card__image__layer": {
+                      "type": "product-list/layer",
+                      "blocks": {
+                        "main-search__results__product-card__image__layer__discount-tag": {
+                          "type": "product-list/discount_tag"
+                        },
+                        "main-search__results__product-card__image__layer__quick-add": {
+                          "type": "product-list/quick_add"
+                        }
+                      },
+                      "block_order": [
+                        "main-search__results__product-card__image__layer__discount-tag",
+                        "main-search__results__product-card__image__layer__quick-add"
+                      ]
+                    }
+                  },
+                  "block_order": ["main-search__results__product-card__image__layer"]
+                },
+                "main-search__results__product-card__title": {
+                  "type": "product-list/title"
+                },
+                "main-search__results__product-card__price": {
+                  "type": "product-list/price"
+                }
+              },
+              "block_order": [
+                "main-search__results__product-card__image",
+                "main-search__results__product-card__title",
+                "main-search__results__product-card__price"
+              ]
+            },
+            "main-search__results__article-card": {
+              "type": "article/card",
+              "blocks": {
+                "main-search__results__article-card__cover": {
+                  "type": "article/cover"
+                },
+                "main-search__results__article-card__info": {
+                  "type": "article/info",
+                  "blocks": {
+                    "main-search__results__article-card__title": {
+                      "type": "article/title"
+                    },
+                    "main-search__results__article-card__date_author": {
+                      "type": "article/date_author"
+                    },
+                    "main-search__results__article-card__excerpt": {
+                      "type": "article/excerpt"
+                    }
+                  },
+                  "block_order": [
+                    "main-search__results__article-card__title",
+                    "main-search__results__article-card__date_author",
+                    "main-search__results__article-card__excerpt"
+                  ]
+                }
+              },
+              "block_order": [
+                "main-search__results__article-card__cover",
+                "main-search__results__article-card__info"
+              ]
+            },
+            "main-search__results__collection-card": {
+              "type": "collection/card",
+              "blocks": {
+                "main-search__results__collection-card__image": {
+                  "type": "collection/image"
+                },
+                "main-search__results__collection-card__title": {
+                  "type": "collection/title"
+                }
+              },
+              "block_order": [
+                "main-search__results__collection-card__image",
+                "main-search__results__collection-card__title"
+              ]
+            },
+            "main-search__results__page-card": {
+              "type": "$page-card"
+            }
+          },
+          "block_order": [
+            "main-search__results__product-card",
+            "main-search__results__article-card",
+            "main-search__results__collection-card",
+            "main-search__results__page-card"
+          ]
+        }
+      },
+      "block_order": ["main-search__results"]
+    }
+  },
+  "order": ["main-search"]
+}

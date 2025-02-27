@@ -1,0 +1,39 @@
+<h2 class="body3 text-{{block.settings.text_align}} {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{block.settings.subtitle}}
+</h2>
+
+{{#schema}}
+{
+  "name": "t:sections.slideshow.blocks.subtitle.name",
+  "icon": "title",
+  "tag": "",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "t:sections.slideshow.blocks.subtitle.settings.subtitle.label",
+      "default": "Subtitle"
+    },
+    {
+      "type": "text_align",
+      "id": "text_align",
+      "label": "t:sections.slideshow.blocks.subtitle.settings.text_align.label",
+      "default": "center"
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.slideshow.blocks.subtitle.settings.size.label",
+      "default": {
+        "width": "100%"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.slideshow.blocks.subtitle.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

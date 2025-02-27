@@ -1,0 +1,66 @@
+.customer-company {
+  width: 780px;
+}
+
+.customer-company .field {
+  margin-block-end: 16px;
+}
+
+.customer-company__success-message,
+.customer-company__error-message {
+  padding-block: 120px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+@media (max-width: 959px) {
+  .customer-company__success-message,
+  .customer-company__error-message {
+    padding-block: 80px;
+  }
+}
+
+.customer-company__error-message span {
+  display: inline-block;
+  max-width: 500px;
+  padding-block: 20px;
+  padding-inline: 16px;
+  color: #fff;
+  background: rgb(0 0 0 / 100%);
+}
+
+.customer-company__title {
+  margin-block-end: 32px;
+}
+
+.customer-company__subtitle {
+  margin-block-end: 20px;
+}
+
+.customer-company .address-cascade__group {
+  width: 100%;
+}
+
+.customer-company__billing {
+  padding-block-start: 16px;
+  border-block-start: 1px solid rgba(var(--color-entry-line));
+}
+
+.customer-company__operation {
+  margin-block-start: 16px;
+  text-align: end;
+}
+
+@media (max-width: 959px) {
+  .customer-company {
+    width: 100%;
+  }
+
+  .customer-company .field__group {
+    flex-direction: column;
+    gap: 0;
+  }
+  .customer-company .customer-company__operation .button {
+    width: 100%;
+  }
+}

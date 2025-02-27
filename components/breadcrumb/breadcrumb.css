@@ -1,0 +1,16 @@
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.breadcrumb__icon {
+  width: 12px;
+  height: 12px;
+  transform: rotate(-180deg);
+}
+
+.breadcrumb__title {
+  font-weight: bold;
+}

@@ -1,0 +1,63 @@
+{{#component "script" src="./recommended-product.js" | asset_url() /}}
+
+<div class="page-width">
+  <div class="section-recommended-product {{section.settings | class_list()}}">
+    {{#blocks}}
+      {{#switch forblock.type}}
+        {{#case "product-list/list" /}}
+          <theme-recommended-product class="block-full-width" data-url="{{routes.product_recommendations_url}}?section_id={{section.id}}&product_id={{product.id}}&limit={{forblock.settings.page_size}}">
+            {{#block products=recommendations.products product_placeholder=false /}}
+          </theme-recommended-product>
+        {{#else/}}
+          {{#block /}}
+      {{/switch}}
+    {{/blocks}}
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.recommended_product.name",
+  "icon": "featuredProduct",
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.recommended_product.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "row-gap": "40px",
+        "column-gap": "40px",
+        "@media (--mobile)": {
+          "row-gap": "20px",
+          "column-gap": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.recommended_product.settings.spacing.label",
+      "default": {
+        "padding-top": "60px",
+        "padding-bottom": "60px",
+        "@media (--mobile)": {
+          "padding-top": "20px",
+          "padding-bottom": "20px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "limit": 1
+    },
+    {
+      "type": "product-list/list",
+      "limit": 1
+    }
+  ]
+}
+{{/schema}}

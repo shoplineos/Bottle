@@ -1,0 +1,59 @@
+{{#component "stylesheet" src="./heading-with-link.css" | asset_url() /}}
+
+<div class="heading-with-link" {{{block.shopline_attributes}}}>
+  <div class="{{block.settings.text_size}} title-font-bold heading-with-link__title">{{block.settings.text}}</div>
+  {{#if block.settings.link_text}}
+    <a class="body1 heading-with-link__view-more" href="{{props.url | default("javascript:void(0)")}}">
+      <span>{{block.settings.link_text}}</span>
+      {{#component "icons/arrow" /}}
+    </a>
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.heading_with_link.name",
+  "icon": "title",
+  "tag": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "t:blocks.heading_with_link.settings.text.label",
+      "default": "Heading with link"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "t:blocks.heading_with_link.settings.text_size.label",
+      "default": "title3",
+      "options": [
+        {
+          "value": "title2",
+          "label": "t:blocks.heading_with_link.settings.text_size.options_0.label"
+        },
+        {
+          "value": "title3",
+          "label": "t:blocks.heading_with_link.settings.text_size.options_1.label"
+        },
+        {
+          "value": "title4",
+          "label": "t:blocks.heading_with_link.settings.text_size.options_2.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "t:blocks.heading_with_link.settings.link_text.label",
+      "info": "t:blocks.heading_with_link.settings.link_text.info",
+      "default": "View more"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.heading_with_link.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

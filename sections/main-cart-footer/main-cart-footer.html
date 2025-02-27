@@ -1,0 +1,53 @@
+{{#component "stylesheet" src="./main-cart-footer.css" | asset_url() /}}
+{{#component "script" src="./main-cart-footer.js" | asset_url() /}}
+
+{{#var SCENE = "page" /}}
+
+<div class="main-cart-footer__container color-{{settings.cart_color_scheme.id}}">
+  <div class="page-width">
+    <theme-main-cart-footer
+      data-cart-section-to-render
+      data-root-margin="0px"
+      data-section-id="{{section.id}}"
+      class="main-cart-footer color-{{settings.cart_color_scheme.id}}"
+    >
+      <div class="main-cart-footer__inner">
+        {{#if !cart.empty}}
+          <div class="main-cart-footer__infos">
+            <div class="main-cart-footer__payment-info">
+              {{#blocks}}
+                {{#if forblock.type == "$buttons"}}
+                  {{#block scene=SCENE /}}
+                {{#else/}}
+                  {{#block /}}
+                {{/if}}
+              {{/blocks}}
+            </div>
+          </div>
+
+          {{#component "cart/widgets/cart-fixed-checkout" scene=SCENE /}}
+        {{/if}}
+      </div>
+    </theme-main-cart-footer>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_cart_footer.name",
+  "icon": "generalSection",
+  "blocks": [
+    {
+      "type": "$buttons",
+      "limit": 1
+    },
+    {
+      "type": "$subtotal",
+      "limit": 1
+    },
+    {
+      "type": "@app"
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,160 @@
+{{#component "stylesheet" src="./detail-variant-picker.css" | asset_url() /}}
+{{#component "script" src="./detail-variant-picker.js" | asset_url() /}}
+
+{{#var product = props.product /}}
+{{#var selected_variant = product.selected_or_first_available_variant /}}
+
+{{#capture variant_data}}
+  <script name="variant-data" type="application/json">{{{product | get_variants() | json()}}}</script>
+{{/capture}}
+
+{{#if block.settings.picker_type == "flatten"}}
+  {{#component "stylesheet" src="components/popover/index.css" | asset_url() /}}
+  {{#component "script" src="components/popover/index.js" | asset_url() /}}
+
+  <theme-variant-radio-picker class="product-detail__variant-picker" data-size="{{product.options_with_values | size()}}" {{{block.shopline_attributes}}}>
+    {{#for option in product.options_with_values}}
+      {{#var current_selected_option /}}
+      {{#if selected_variant}}
+        {{#set current_selected_option = selected_variant.options[forloop.index0] /}}
+      {{/if}}
+      <fieldset class="variant-picker__group">
+        <div class="product-detail__row">
+          <div class="variant-picker__group-head">
+            <legend class="variant-picker__group-label body3 title-font-bold">{{option.name}}</legend>
+          </div>
+
+          <div class="variant-picker__options">
+            {{#for item in option.values_images}}
+              {{#var is_selected = false /}}
+              {{#if current_selected_option == item.value}}
+                {{#set is_selected = true /}}
+              {{/if}}
+
+              {{#var is_sold_out_selected = false /}}
+              {{#if !selected_variant && forloop.index0 == 0}}
+                {{#set is_sold_out_selected = true /}}
+              {{/if}}
+
+              <label class="variant-picker__option body3">
+                <input type="radio" name="{{section.id}}_{{product.id}}_{{option.name}}" value="{{item.value}}" {{#if is_selected || is_sold_out_selected}}checked{{/if}} />
+                {{#if item.image}}
+                  <theme-popover data-trigger="hover" data-position="top" data-mode="tooltip">
+                    <span class="variant-picker__button variant-picker__button--image" role="button">
+                      {{#component
+                        "image"
+                        data=item.image
+                        class="variant-picker__image"
+                        breakpoints="40"
+                        sizes="40px"
+                        lazy=true
+                        fetchpriority="auto"
+                      /}}
+                    </span>
+                    <theme-popover-content class="body6">{{item.value}}</theme-popover-content>
+                  </theme-popover>
+                {{#else/}}
+                   <span class="variant-picker__button" role="button">
+                    {{item.value}}
+                  </span>
+                {{/if}}
+              </label>
+            {{/for}}
+          </div>
+        </div>
+      </fieldset>
+    {{/for}}
+
+    {{{variant_data}}}
+  </theme-variant-radio-picker>
+{{#else/}}
+   {{#component "stylesheet" src="components/select/index.css" | asset_url() /}}
+   {{#component "script" src="components/select/index.js" | asset_url() /}}
+
+   <theme-variant-select-picker class="product-detail__variant-picker" data-size="{{product.options_with_values | size()}}" {{{block.shopline_attributes}}}>
+    {{#for option in product.options_with_values}}
+      {{#var current_selected_option /}}
+      {{#if selected_variant}}
+        {{#set current_selected_option = selected_variant.options[forloop.index0] /}}
+      {{/if}}
+      <div class="product-detail__row">
+        <div class="variant-picker__group-head">
+          <div class="variant-picker__group-label body3 title-font-bold">{{option.name}}</div>
+        </div>
+
+        <theme-select>
+          <select class="variant-picker__select">
+            {{#for item in option.values_images}}
+              {{#var is_selected = false /}}
+              {{#if current_selected_option == item.value}}
+                {{#set is_selected = true /}}
+              {{/if}}
+
+              {{#var is_sold_out_selected = false /}}
+              {{#if !selected_variant && forloop.index0 == 0}}
+                {{#set is_sold_out_selected = true /}}
+              {{/if}}
+
+              <option value="{{item.value}}" {{#if is_selected || is_sold_out_selected}}selected{{/if}}>
+                {{item.value}}
+
+                <template>
+                  <div class="variant-picker__select-option">
+                    {{#if item.image}}
+                      {{#component
+                        "image"
+                        data=item.image
+                        class="variant-picker__image"
+                        breakpoints="40"
+                        sizes="40px"
+                        lazy=true
+                        fetchpriority="auto"
+                      /}}
+                    {{/if}}
+                    <span>{{item.value}}</span>
+                  </div>
+                </template>
+              </option>
+            {{/for}}
+          </select>
+
+          {{#component "icons/arrow-thin" class="theme-select__arrow" /}}
+        </theme-select>
+      </div>
+    {{/for}}
+
+    {{{variant_data}}}
+  </theme-variant-select-picker>
+{{/if}}
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_variant_picker.name",
+  "tag": "",
+  "icon": "productSku",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "select",
+      "id": "picker_type",
+      "label": "t:blocks.product.detail_variant_picker.settings.picker_type.label",
+      "default": "flatten",
+      "options": [
+        {
+          "value": "flatten",
+          "label": "t:blocks.product.detail_variant_picker.settings.picker_type.options_0.label"
+        },
+        {
+          "value": "select",
+          "label": "t:blocks.product.detail_variant_picker.settings.picker_type.options_1.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_variant_picker.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,19 @@
+<div class="body2" {{{block.shopline_attributes}}}>
+  {{#if props.article }}
+    {{props.article.excerpt}}
+  {{#else /}}
+    Give your customers a summary of your blog post
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.article.excerpt.name",
+  "tag": "",
+  "presets": [
+    {
+      "name": "t:blocks.article.excerpt.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

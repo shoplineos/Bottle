@@ -1,0 +1,245 @@
+{{#component "stylesheet" src="./facets.css" | asset_url() /}}
+{{#component "script" src="./facets.js" | asset_url() /}}
+
+{{#component "stylesheet" src="components/modal/index.css" | asset_url() /}}
+{{#component "script" src="components/modal/index.js" | asset_url() /}}
+
+{{#component "script" src="components/collapse/index.js" | asset_url() /}}
+
+{{#var section = props.section /}}
+{{#var results = props.results /}}
+{{#var enable_filtering = props.enable_filtering /}}
+{{#var enable_sorting = props.enable_sorting /}}
+{{#var filter_layout = props.filter_layout /}}
+
+{{#var results_count = results.products_count | default(results.results_count) /}}
+
+{{#var is_drawer = false /}}
+{{#if filter_layout == "drawer"}}
+  {{#set is_drawer = true /}}
+{{/if}}
+
+{{#var is_vertical = false /}}
+{{#if filter_layout == "vertical"}}
+  {{#set is_vertical = true /}}
+{{/if}}
+
+{{#var is_horizontal = false /}}
+{{#if filter_layout == "horizontal"}}
+  {{#set is_horizontal = true /}}
+{{/if}}
+
+{{#var results_url = "" /}}
+{{#if results.url}}
+  {{#set results_url = results.url /}}
+{{#else/}}
+  {{#capture results_terms_url}}?keyword={{results.terms}}{{/capture}}
+  {{#set results_url = results_terms_url /}}
+{{/if}}
+
+
+
+{{#capture filters_active}}
+  <div class="facets-filtering__active js-action">
+
+    <div class="facets-filtering__active-buttons">
+      {{~#for filter in results.filters}}
+        {{~#if filter.type == "price_range"}}
+          {{~#if filter.min_value.value || filter.max_value.value || (filter.min_value.value == "0") || (filter.max_value.value == "0")}}
+            <theme-facets-remove>
+              <a href="{{filter.url_to_remove}}" class="facets-filtering__active-button body4">
+                <span class="facets-filtering__active-button-inner">
+                  {{#component "icons/close" /}}
+                  {{#if filter.min_value.value || (filter.min_value.value == "0")}}
+                    {{{filter.min_value.value | money()}}}
+                  {{#else/}}
+                    {{{0 | money()}}}
+                  {{/if}}
+                  -
+                  {{#if filter.max_value.value || (filter.max_value.value == "0")}}
+                    {{{filter.max_value.value | money()}}}
+                  {{#else/}}
+                    {{{filter.range_max | money()}}}
+                  {{/if}}
+                </span>
+              </a>
+            </theme-facets-remove>
+          {{~/if}}
+
+        {{~#else/}}
+          {{~#for value in filter.active_values}}
+            <theme-facets-remove>
+              <a href="{{value.url_to_remove}}" class="facets-filtering__active-button body4">
+                <span class="facets-filtering__active-button-inner">
+                  {{#component "icons/close" /}}
+                  {{filter.label}}:{{value.label}}
+                </span>
+              </a>
+            </theme-facets-remove>
+          {{~/for}}
+        {{~/if}}
+      {{~/for~}}
+    </div>
+
+    <theme-facets-remove>
+      <a href="{{results_url}}" class="facets-filtering__active-clear-all button button--link body4 body-font-bold">
+        <span>
+          {{ "filters.clear_all_filter" | t() }}
+        </span>
+      </a>
+    </theme-facets-remove>
+  </div>
+{{/capture}}
+
+<theme-facets-form
+  class="hidden-mobile"
+  data-type="desktop"
+  data-preview-query="{{{request.preview_query}}}"
+  data-section-id="{{section.id}}"
+>
+
+  <form class="facets-desktop">
+
+    {{#if enable_filtering}}
+      <div class="facets-filtering">
+        <div class="facets-filtering__filters hidden-mobile">
+          {{#if is_drawer }}
+            <theme-modal data-mask-closable data-esc-to-exit data-placement="right">
+              <details>
+                <summary class="facets-filtering__modal-summary">
+                  {{#component "icons/filter" /}}
+                  <span class="body2 body-font-bold">{{ "products.filters.filter_button" | t()}}</span>
+                </summary>
+                <div class="facets-filtering__modal-content">
+                  <div class="facets-filtering__modal-header">
+                    <div class="body1 body-font-bold">{{ "products.filters.filter_button" | t()}}</div>
+                    <div class="facets-count body3 js-action">
+                      {{ "filters.product_count" | t(product_count=results_count)}}
+                    </div>
+                  </div>
+
+                  <div class="facets-filtering__modal-body">
+                    <div class="facets-filtering__modal-body-inner">
+                    {{#for filter in results.filters}}
+                      <theme-modal>
+                        {{#capture content_header}}
+                          <button type="button" name="close" class="body2 body-font-bold facets-filtering__submenu-summary">
+                            {{#component "icons/arrow-thin" /}}
+                            <span>{{filter.label}}</span>
+                          </button>
+                        {{/capture}}
+
+                        {{#capture submenu_button_group}}
+                          <div class="facets-filtering__submenu-button-group">
+                            <theme-facets-remove>
+                              <a href="{{filter.url_to_remove}}" class="button button--secondary">{{ "products.filters.clear" | t()}}</a>
+                            </theme-facets-remove>
+                            <button type="button" name="confirm" class="button">{{ "products.filters.confirm" | t()}}</button>
+                          </div>
+                        {{/capture}}
+
+                        {{#component
+                          "./filter"
+                          facets_form_type="desktop"
+                          filter=filter
+                          content_header=content_header
+                          submenu_button_group=submenu_button_group
+                        /}}
+                      </theme-modal>
+                    {{/for}}
+                    </div>
+                  </div>
+
+                </div>
+              </details>
+            </theme-modal>
+          {{#else/}}
+            {{#for filter in results.filters}}
+              {{#if is_horizontal }}
+                <theme-modal data-lock-scroll="false">
+                  {{#component "facets/filter" facets_form_type="desktop" filter=filter /}}
+                </theme-modal>
+              {{/if}}
+
+              {{#if is_vertical }}
+                <theme-collapse>
+                  {{#component "facets/filter" facets_form_type="desktop" filter=filter /}}
+                </theme-collapse>
+              {{/if}}
+            {{/for}}
+          {{/if}}
+        </div>
+
+        {{{filters_active}}}
+      </div>
+    {{/if}}
+
+    {{#if enable_sorting }}
+      <div class="facets-sorting">
+        {{#component "./sorts" results=results products_count=products_count type="desktop" /}}
+      </div>
+
+      <div class="facets-count hidden-mobile js-action">
+        {{ "filters.product_count" | t(product_count=results_count)}}
+      </div>
+    {{/if}}
+
+  </form>
+</theme-facets-form>
+
+<theme-facets-form
+  class="hidden-desktop"
+  data-type="mobile"
+  data-preview-query="{{{request.preview_query}}}"
+  data-section-id="{{section.id}}"
+>
+
+  <form class="facets-mobile">
+    <div class="facets-mobile__modals">
+
+      {{#if enable_filtering }}
+        <div class="facets-filtering">
+          <theme-modal data-mask-closable data-esc-to-exit data-placement="right">
+            <details>
+              <summary class="body3 js-action">{{ "products.filters.filter_button" | t()}}({{ results_count }})</summary>
+              <div class="facets-filtering__modal-content">
+                <div class="facets-filtering__modal-header">
+                  <div class="body1 body-font-bold">{{ "products.filters.filter_button" | t()}}</div>
+                  <div class="facets-count body3 js-action">
+                    {{ "filters.product_count" | t(product_count=results_count)}}
+                  </div>
+                </div>
+
+                <div class="facets-filtering__modal-body">
+                  <div>
+                    {{#for filter in results.filters}}
+                      <theme-collapse>
+                        {{#component "./filter" facets_form_type="mobile" filter=filter /}}
+                      </theme-collapse>
+                    {{/for}}
+                  </div>
+
+                  <div class="facets-filtering__submenu-button-group">
+                    <theme-facets-remove>
+                      <a href="{{results_url}}" class="button button--secondary">{{ "products.filters.clear" | t()}}</a>
+                    </theme-facets-remove>
+                    <button type="button" name="confirm" class="button">{{ "products.filters.confirm" | t()}}</button>
+                  </div>
+                </div>
+
+              </div>
+            </details>
+          </theme-modal>
+        </div>
+      {{/if}}
+
+      {{#if enable_sorting }}
+        {{#component "./sorts" results=results products_count=products_count type="mobile" /}}
+      {{/if}}
+    </div>
+
+    {{#if enable_filtering }}
+      {{{filters_active}}}
+    {{/if}}
+  </form>
+</theme-facets-form>

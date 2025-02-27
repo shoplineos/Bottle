@@ -1,0 +1,190 @@
+{{#var mobile_image = block.settings.mobile_image /}}
+{{#var desktop_image = block.settings.desktop_image /}}
+
+{{#capture mobile_image_element}}
+  {{#if mobile_image}}
+    {{#component "image" sizes="100%" data=mobile_image /}}
+  {{#else /}}
+    {{#placeholder_svg "image" /}}
+  {{/if}}
+{{/capture}}
+
+{{#capture desktop_image_element}}
+  {{#if desktop_image}}
+    {{#component "image" sizes="100%" data=desktop_image /}}
+  {{#else /}}
+    {{#placeholder_svg "image" /}}
+  {{/if}}
+{{/capture}}
+
+
+<li class="slideshow__item">
+  <div
+    class="slideshow__image"
+    style="
+      --slideshow-image-mask-opacity: {{block.settings.image_mask_opacity}};
+      --slideshow-image-width: {{block.settings.size | css_var(`width`)}};
+      --slideshow-image-height: {{block.settings.size | css_var(`height`)}};
+    "
+    {{{block.shopline_attributes}}}
+  >
+    <div class="slideshow__image--mobile">
+      {{{mobile_image_element}}}
+    </div>
+    <div class="slideshow__image--desktop">
+      {{{desktop_image_element}}}
+    </div>
+    <div class="{{block.settings | class_list()}} slideshow__image-container color-{{block.settings.color_scheme.id}}">
+      {{#blocks}}
+        {{#block show_text_mask=block.settings.show_text_mask text_mask_color=block.settings.text_mask_color /}}
+      {{/blocks}}
+    </div>
+
+    <div class="slideshow__image-mask"></div>
+  </div>
+</li>
+
+{{#schema}}
+{
+  "name": "t:sections.slideshow.blocks.image.name",
+  "icon": "image",
+  "tag": "",
+  "limit": 5,
+  "settings": [
+    {
+      "type": "image",
+      "id": "desktop_image",
+      "label": "t:sections.slideshow.blocks.image.settings.desktop_image.label"
+    },
+    {
+      "type": "image",
+      "id": "mobile_image",
+      "label": "t:sections.slideshow.blocks.image.settings.mobile_image.label"
+    },
+    {
+      "type": "range",
+      "id": "image_mask_opacity",
+      "label": "t:sections.slideshow.blocks.image.settings.image_mask_opacity.label",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "%"
+    },
+    {
+      "type": "switch",
+      "id": "show_text_mask",
+      "label": "t:sections.slideshow.blocks.image.settings.show_text_mask.label",
+      "default": false
+    },
+    {
+      "type": "select",
+      "label": "t:sections.slideshow.blocks.image.settings.text_mask_color.label",
+      "id": "text_mask_color",
+      "default": "deep",
+      "options": [
+        {
+          "label": "t:sections.slideshow.blocks.image.settings.text_mask_color.options_0.label",
+          "value": "deep"
+        },
+        {
+          "label": "t:sections.slideshow.blocks.image.settings.text_mask_color.options_1.label",
+          "value": "light"
+        }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.slideshow.blocks.image.settings.color_scheme.label",
+      "default": "scheme-4"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.slideshow.blocks.image.settings.layout.label",
+      "default": {
+        "flex-direction": "row",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "0px",
+        "column-gap": "0px"
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.slideshow.blocks.image.settings.spacing.label",
+      "default": {
+        "padding-top": "40px",
+        "padding-right": "250px",
+        "padding-bottom": "40px",
+        "padding-left": "250px",
+        "@media (--mobile)": {
+          "padding-top": "40px",
+          "padding-bottom": "40px",
+          "padding-right": "24px",
+          "padding-left": "24px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.slideshow.blocks.image.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "100%"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$group",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.slideshow.blocks.image.presets.presets_0.name",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "$group",
+          "blocks": [
+            {
+              "type": "$subtitle"
+            },
+            {
+              "type": "$title"
+            },
+            {
+              "type": "$description"
+            },
+            {
+              "type": "button-group",
+              "blocks": [
+                {
+                  "type": "button",
+                  "settings": {
+                    "text": "Shop this",
+                    "use_secondary_style": true
+                  }
+                },
+                {
+                  "type": "button",
+                  "settings": {
+                    "text": "Shop all",
+                    "use_secondary_style": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

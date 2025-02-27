@@ -1,0 +1,17 @@
+
+
+<div class="block-product-card__price product-card-style--{{settings.product_card_style}}" {{{block.shopline_attributes}}}>
+  {{#component "product/price" product=props.product /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product_list.price.name",
+  "tag": "",
+  "presets": [
+    {
+      "name": "t:blocks.product_list.price.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

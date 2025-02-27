@@ -1,0 +1,22 @@
+
+
+{{#component "stylesheet" src="./message-bar.css" | asset_url() /}}
+
+<div class="customer-message-bar">
+
+  
+  {{#if customer.cancelling_account}}
+  <div class="customer-message-bar__item">
+    <div class="customer-message-bar__item-content">
+      <div class="body3 font-bold">{{"customer.account.unregister" | t()}}</div>
+      {{#var date_str = customer.cancelling_time | date(format="%Y-%m-%d") /}}
+      <div class="body4">{{"customer.account.revoke_message" | t(time=date_str)}}</div>
+    </div>
+
+    {{#cancel_delete_customer_form}}
+    <button type="submit" class="button customer-message-bar__item-button">{{"customer.account.revoke_btn" | t()}}</button>
+    {{/cancel_delete_customer_form}}
+  </div>
+  {{/if}}
+
+</div>

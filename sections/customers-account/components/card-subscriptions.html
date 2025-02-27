@@ -1,0 +1,16 @@
+<div class="card card-subscriptions">
+  <div class="body2 card__title">
+    <div class="card__title-text font-bold">
+      <div>{{"customer.subscription.subscription_title" | t()}}</div>
+      <div class="body4 card__title-tips">{{"customer.general.subscription_desc" | t()}}</div>
+    </div>
+  </div>
+
+  <div class="card__detail">
+    
+    {{#component "./card-subscriptions-email" /}}
+
+    
+    {{#component "./card-subscriptions-phone" /}}
+  </div>
+</div>

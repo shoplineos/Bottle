@@ -1,0 +1,21 @@
+{{#var product = props.product /}}
+{{#var product_path = product.selected_or_first_available_variant.url | default(product.url) /}}
+{{#var product_url = request.origin | append(product_path) /}}
+
+<div class="product-detail__share display-inline-flex quick-add-hidden" {{{block.shopline_attributes}}}>
+  {{#component "share-button/share-button" href=product_url /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_share.name",
+  "tag": "",
+  "icon": "socialMedia",
+  "settings": [],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_share.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

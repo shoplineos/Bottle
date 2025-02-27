@@ -1,0 +1,41 @@
+<div class="image-banner__description body1 text-{{block.settings.text_align}} {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{{block.settings.text}}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.image_banner.blocks.description.name",
+  "icon": "content",
+  "tag": "",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "t:sections.image_banner.blocks.description.settings.text.label",
+      "default": "And optional subtext"
+    },
+    {
+      "type": "text_align",
+      "id": "text_align",
+      "label": "t:sections.image_banner.blocks.description.settings.text_align.label",
+      "default": "center"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.image_banner.blocks.description.settings.spacing.label",
+      "default": {
+        "padding-block-start": "0px",
+        "padding-inline-end": "0px",
+        "padding-block-end": "0px",
+        "padding-inline-start": "0px"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image_banner.blocks.description.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

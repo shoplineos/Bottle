@@ -1,0 +1,91 @@
+<div class="image-with-text__group full-width {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{#content "blocks" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.image_with_text.blocks.group.name",
+  "icon": "general",
+  "tag": "",
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.image_with_text.blocks.group.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "flex-start",
+        "justify-content": "center",
+        "row-gap": "10px",
+        "column-gap": "10px",
+        "@media (--mobile)": {
+          "row-gap": "8px",
+          "column-gap": "8px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.image_with_text.blocks.group.settings.spacing.label",
+      "default": {
+        "padding-top": "60px",
+        "padding-right": "0px",
+        "padding-bottom": "60px",
+        "padding-left": "0px",
+        "@media (--mobile)": {
+          "padding-top": "15px",
+          "padding-bottom": "0px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.image_with_text.blocks.group.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$heading",
+      "limit": 1
+    },
+    {
+      "type": "$subheading",
+      "limit": 1
+    },
+    {
+      "type": "$rich-text",
+      "limit": 1
+    },
+    {
+      "type": "$button",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image_with_text.blocks.group.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "$subheading"
+        },
+        {
+          "type": "$heading"
+        },
+        {
+          "type": "$rich-text"
+        },
+        {
+          "type": "$button"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

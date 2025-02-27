@@ -1,0 +1,17 @@
+
+
+{{#var type = props.type /}}
+{{#var style_secondary = props.style_secondary /}}
+{{#var style_link = props.style_link /}}
+{{#var text = props.text /}}
+{{#var html = props.html /}}
+{{#var link_url = props.link_url /}}
+{{#var shopline_attributes = props.shopline_attributes /}}
+
+{{#if type == "link"}}
+  <a class="button {{#if style_link}} button--link{{/if}}{{#if style_secondary}} button--secondary{{/if}}" href="{{link_url | default(`javascript:;`)}}" {{{shopline_attributes}}}>{{#if html}}{{{html}}}{{#else /}}{{text}}{{/if}}</a>
+{{#else/}}
+  <button class="button {{#if style_link}} button--link{{/if}}{{#if style_secondary}} button--secondary{{/if}}" {{{shopline_attributes}}}>
+    {{#if html}}{{{html}}}{{#else /}}{{text}}{{/if}}
+  </button>
+{{/if}}

@@ -1,0 +1,32 @@
+theme-address-cascade {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  gap: var(--form-field-gap);
+}
+
+@media (max-width: 959px) {
+  theme-address-cascade {
+    gap: var(--form-field-gap-mobile);
+  }
+}
+
+theme-address-cascade .address-cascade__group {
+  display: none;
+}
+
+theme-address-cascade .address-cascade__group.shown {
+  display: block;
+}
+
+theme-address-cascade .address-cascade__group .address-cascade__select {
+  display: none;
+}
+
+theme-address-cascade .address-cascade__group.select .address-cascade__select {
+  display: block;
+}
+
+theme-address-cascade .address-cascade__group.select .address-cascade__input {
+  display: none;
+}

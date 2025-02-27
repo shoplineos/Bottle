@@ -1,0 +1,110 @@
+{{#component "stylesheet" src="./video.css" | asset_url() /}}
+
+<div class="{{section.settings | class_list()}} video color-{{section.settings.color_scheme.id}}">
+  {{#content "blocks" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.video.name",
+  "icon": "video",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.video.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.video.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "column-gap": "28px",
+        "row-gap": "28px",
+        "@media (--mobile)": {
+          "flex-direction": "column",
+          "flex-wrap": "nowrap",
+          "align-items": "center",
+          "justify-content": "center",
+          "column-gap": "14px",
+          "row-gap": "14px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.video.settings.spacing.label",
+      "default": {
+        "padding-top": "60px",
+        "padding-right": "0px",
+        "padding-bottom": "60px",
+        "padding-left": "0px",
+        "@media (--mobile)": {
+          "padding-top": "30px",
+          "padding-right": "0px",
+          "padding-bottom": "30px",
+          "padding-left": "0px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.video.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto",
+        "@media (--mobile)": {
+          "width": "100%",
+          "height": "auto"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "limit": 1
+    },
+    {
+      "type": "$video",
+      "limit": 1
+    },
+    {
+      "type": "description",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "category": "t:sections.video.presets.presets_0.category",
+      "name": "t:sections.video.presets.presets_0.name",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "text": "Video",
+            "text_size": "title2"
+          }
+        },
+        {
+          "type": "$video"
+        },
+        {
+          "type": "description",
+          "settings": {
+            "content": "A short description of the video."
+          }
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

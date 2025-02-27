@@ -1,0 +1,28 @@
+{
+  "name": "Header Group",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {},
+      "blocks": {
+        "announcement-bar__item1": {
+          "type": "$item",
+          "settings": {}
+        },
+        "announcement-bar__item2": {
+          "type": "$item",
+          "settings": {
+            "content": "Free shipping special for you",
+            "color_scheme": "scheme-3"
+          }
+        }
+      },
+      "block_order": ["announcement-bar__item1", "announcement-bar__item2"]
+    },
+    "header": {
+      "type": "header"
+    }
+  },
+  "order": ["announcement-bar", "header"]
+}

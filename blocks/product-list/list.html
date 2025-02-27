@@ -1,0 +1,167 @@
+{{#component "stylesheet" src="./list.css" | asset_url() /}}
+
+{{#var products /}}
+{{#if props.products}}
+  {{#set products = props.products /}}
+{{#else/}}
+  {{#var products_pagination = props.collection | get_product_pagination(block.settings.page_size) /}}
+  {{#set products = products_pagination.list /}}
+{{/if}}
+{{#var product_placeholder = props.product_placeholder | default(false) /}}
+
+{{#var mobile_enable_slider = block.settings.mobile_enable_slider /}}
+{{#var desktop_enable_slider = block.settings.desktop_enable_slider /}}
+
+{{#if desktop_enable_slider || mobile_enable_slider}}
+  {{#component "stylesheet" src="components/carousel/index.css" | asset_url() /}}
+  {{#component "script" src="components/carousel/index.js" | asset_url() /}}
+{{/if}}
+
+{{#var mobile_columns /}}
+{{~#if mobile_enable_slider}}
+  {{~#var extra_columns = 0.0 /}}
+  {{~#var products_size = products | size() /}}
+  {{~#if products_size == 0}}
+    {{~#set products_size = 4 /}}
+  {{/if}}
+  {{~#if (block.settings.mobile_columns < block.settings.page_size) && (products_size > 1)}}
+    {{~#set extra_columns = 0.3 /}}
+  {{~/if}}
+  {{~#set mobile_columns = block.settings.mobile_columns | plus(extra_columns) /}}
+{{~#else/}}
+  {{#set mobile_columns = block.settings.mobile_columns /}}
+{{~/if}}
+
+<theme-carousel class="block-product-list__carousel" data-direction="horizontal">
+  <ul
+    class="block-product-list grid carousel__track color-{{block.settings.color_scheme.id}}"
+    style="
+    --mobile-columns: {{mobile_columns}};
+    --mobile-gap-columns: {{mobile_columns | ceil()}};
+    {{~#if mobile_enable_slider}}--mobile-auto-flow: column;{{~/if}}
+    --desktop-columns: {{block.settings.desktop_columns}};
+    {{#if desktop_enable_slider}}--desktop-auto-flow: column;{{/if}}
+  "
+  {{{block.shopline_attributes}}}
+  >
+    {{#blocks}}
+      {{#for product in products}}
+        <li>
+          {{#block product=product mobile_columns=(mobile_columns | floor()) desktop_columns=block.settings.desktop_columns /}}
+        </li>
+      {{#else/}}
+        {{#if product_placeholder}}
+          {{#for _ in 1 | range(4)}}
+            <li>
+              {{#block/}}
+            </li>
+          {{/for}}
+        {{/if}}
+      {{/for}}
+    {{/blocks}}
+  </ul>
+
+  {{#if desktop_enable_slider && (products.size > block.settings.desktop_columns)}}
+    <button name="previous" class="block-product-list__button block-product-list__button--previous hidden-mobile">
+      {{#component "icons/arrow" /}}
+    </button>
+    <button name="next" class="block-product-list__button block-product-list__button--next hidden-mobile">
+      {{#component "icons/arrow" /}}
+    </button>
+  {{/if}}
+</theme-carousel>
+
+{{#schema}}
+{
+  "name": "t:blocks.product_list.list.name",
+  "icon": "collection",
+  "tag": "",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:blocks.product_list.list.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "t:blocks.product_list.list.settings.page_size.label",
+      "default": 12,
+      "min": 1,
+      "max": 12,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "label": "t:blocks.product_list.list.settings.desktop_columns.label",
+      "default": 4,
+      "min": 1,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "t:blocks.product_list.list.settings.mobile_columns.label",
+      "default": 2,
+      "min": 1,
+      "max": 2,
+      "step": 1
+    },
+    {
+      "type": "switch",
+      "id": "desktop_enable_slider",
+      "label": "t:blocks.product_list.list.settings.desktop_enable_slider.label",
+      "default": true
+    },
+    {
+      "type": "switch",
+      "id": "mobile_enable_slider",
+      "label": "t:blocks.product_list.list.settings.mobile_enable_slider.label",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product-list/card",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product_list.list.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "product-list/card",
+          "blocks": [
+            {
+              "type": "product-list/image",
+              "blocks": [
+                {
+                  "type": "product-list/layer",
+                  "blocks": [
+                    {
+                      "type": "product-list/discount_tag"
+                    },
+                    {
+                      "type": "product-list/quick_add"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "product-list/title"
+            },
+            {
+              "type": "product-list/price"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

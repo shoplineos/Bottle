@@ -1,0 +1,265 @@
+{{#component "stylesheet" src="./header.css" | asset_url() /}}
+
+
+{{#component "script" src="./components/nav.js" | asset_url() /}}
+
+
+{{#component "stylesheet" src="./components/search-bar.css" | asset_url() /}}
+{{#component "script" src="./components/search-bar.js" | asset_url() /}}
+
+
+{{#component "stylesheet" src="predictive-search/predictive-search.css" | asset_url() /}}
+
+
+{{#component "stylesheet" src="./components/sticky-header.css" | asset_url() /}}
+{{#component "script" src="./components/sticky-header.js" | asset_url() /}}
+
+{{#component "stylesheet" src="./components/action-bar.css" | asset_url() /}}
+
+<theme-sticky-header data-sticky-mode="{{section.settings.header_sticky_mode}}" style="
+  --header-padding-block-end: {{section.settings.desktop_spacing | css_var("padding-block-end")}};
+">
+  <header class="section header-section color-{{section.settings.color_scheme.id}}" data-section-id="{{section.id}}">
+    <div class="header__container" layout="{{section.settings.desktop_menu_layout}}" type="{{section.settings.desktop_menu_type}}">
+      <div class="header__container-top{{#if section.settings.show_divider}} divider{{/if}}">
+        <div class="header__container-top-wrap page-width {{section.settings | class_list()}}">
+          
+          {{#if section.settings.desktop_menu_layout != "center_logo_wrap_menu" && section.settings.desktop_menu_type == "dropdown"}}
+            {{#component "./components/nav" links=section.settings.navigation_menu.links /}}
+          {{/if}}
+
+          {{#component
+            "./components/action-bar"
+            class="left"
+            desktop_menu_type=section.settings.desktop_menu_type
+            show_search_entry=section.settings.show_search_entry
+          /}}
+
+          
+          {{#capture header_logo_content}}
+            <a class="header__logo-link" href="/">
+              {{#if section.settings.logo_image}}
+                {{#var desktop_size=section.settings.desktop_logo_width | append("px") /}}
+                {{#var mobile_size=section.settings.mobile_logo_width | append("px") /}}
+
+                {{#var alt=shop.name /}}
+                {{#if section.settings.logo_image.alt.default}}
+                  {{#set alt=section.settings.logo_image.alt.default /}}
+                {{/if}}
+
+                {{#var style="--desktop-size:" | append(desktop_size) | append(";--mobile-size:") | append(mobile_size) /}}
+
+                {{#component
+                  "image"
+                  class="header__logo-image"
+                  data=section.settings.logo_image
+                  desktop_size=desktop_size
+                  mobile_size=mobile_size
+                  style=style
+                  alt=alt
+                /}}
+              {{#else/}}
+                <span>{{shop.name}}</span>
+              {{/if}}
+            </a>
+          {{/capture}}
+
+          
+          {{#if template.name == "index"}}
+            <h1 class="header__logo">{{{header_logo_content}}}</h1>
+          {{#else/}}
+            <div class="header__logo">{{{header_logo_content}}}</div>
+          {{/if}}
+
+          {{#component
+            "./components/action-bar"
+            class="right"
+            show_search_entry=section.settings.show_search_entry
+            show_user_entry=section.settings.show_user_entry
+            show_cart_entry=section.settings.show_cart_entry
+          /}}
+        </div>
+      </div>
+
+      
+      {{#component "./components/search-bar" show_divider=section.settings.show_divider /}}
+
+      
+      {{#if section.settings.desktop_menu_layout == "center_logo_wrap_menu"}}
+        <div class="header__container-bottom">
+          {{#component "./components/nav" links=section.settings.navigation_menu.links /}}
+        </div>
+      {{/if}}
+    </div>
+
+    {{#if settings.cart_add_type == "notification" && request.page_type != "cart"}}
+      {{#component "cart/cart-notification" /}}
+    {{/if}}
+  </header>
+</theme-sticky-header>
+
+
+{{#component
+  "./components/nav-drawer"
+  show_user_entry=section.settings.show_user_entry
+  color_scheme=section.settings.color_scheme
+  links=section.settings.navigation_menu.links
+/}}
+
+{{#schema}}
+{
+  "name": "t:sections.header.name",
+  "icon": "header",
+  "settings": [
+    {
+      "id": "color_scheme",
+      "type": "color_scheme",
+      "label": "t:sections.header.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "id": "show_divider",
+      "type": "switch",
+      "label": "t:sections.header.settings.show_divider.label",
+      "default": false
+    },
+    {
+      "type": "group_header",
+      "label": "t:sections.header.settings.group_header_0.label"
+    },
+    {
+      "type": "image",
+      "id": "logo_image",
+      "label": "t:sections.header.settings.logo_image.label",
+      "default": {}
+    },
+    {
+      "type": "range",
+      "id": "desktop_logo_width",
+      "label": "t:sections.header.settings.desktop_logo_width.label",
+      "default": 150,
+      "min": 50,
+      "max": 400,
+      "step": 10
+    },
+    {
+      "type": "range",
+      "id": "mobile_logo_width",
+      "label": "t:sections.header.settings.mobile_logo_width.label",
+      "default": 100,
+      "min": 30,
+      "max": 200,
+      "step": 10
+    },
+    {
+      "type": "group_header",
+      "label": "t:sections.header.settings.group_header_1.label"
+    },
+    {
+      "type": "menu",
+      "id": "navigation_menu",
+      "label": "t:sections.header.settings.navigation_menu.label",
+      "default": "main-menu"
+    },
+    {
+      "type": "select",
+      "id": "desktop_menu_type",
+      "label": "t:sections.header.settings.desktop_menu_type.label",
+      "default": "dropdown",
+      "options": [
+        {
+          "value": "dropdown",
+          "label": "t:sections.header.settings.desktop_menu_type.options_0.label"
+        },
+        {
+          "value": "drawer",
+          "label": "t:sections.header.settings.desktop_menu_type.options_1.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "desktop_menu_layout",
+      "label": "t:sections.header.settings.desktop_menu_layout.label",
+      "default": "center_logo_left_menu",
+      "options": [
+        {
+          "value": "center_logo_wrap_menu",
+          "label": "t:sections.header.settings.desktop_menu_layout.options_0.label"
+        },
+        {
+          "value": "left_logo_left_menu",
+          "label": "t:sections.header.settings.desktop_menu_layout.options_1.label"
+        },
+        {
+          "value": "left_logo_center_menu",
+          "label": "t:sections.header.settings.desktop_menu_layout.options_2.label"
+        },
+        {
+          "value": "center_logo_left_menu",
+          "label": "t:sections.header.settings.desktop_menu_layout.options_3.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "header_sticky_mode",
+      "label": "t:sections.header.settings.header_sticky_mode.label",
+      "default": "sticky_on_scroll_up",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.header.settings.header_sticky_mode.options_0.label"
+        },
+        {
+          "value": "always_sticky",
+          "label": "t:sections.header.settings.header_sticky_mode.options_1.label"
+        },
+        {
+          "value": "sticky_on_scroll_up",
+          "label": "t:sections.header.settings.header_sticky_mode.options_2.label"
+        }
+      ]
+    },
+    {
+      "type": "group_header",
+      "label": "t:sections.header.settings.group_header_2.label"
+    },
+    {
+      "type": "switch",
+      "id": "show_search_entry",
+      "label": "t:sections.header.settings.show_search_entry.label",
+      "default": true
+    },
+    {
+      "type": "switch",
+      "id": "show_user_entry",
+      "label": "t:sections.header.settings.show_user_entry.label",
+      "default": true
+    },
+    {
+      "type": "switch",
+      "id": "show_cart_entry",
+      "label": "t:sections.header.settings.show_cart_entry.label",
+      "default": true
+    },
+    {
+      "type": "style.spacing",
+      "id": "desktop_spacing",
+      "label": "t:sections.header.settings.desktop_spacing.label",
+      "default": {
+        "padding-block-start": "8px",
+        "padding-inline-end": "30px",
+        "padding-block-end": "8px",
+        "padding-inline-start": "30px",
+        "@media (--mobile)": {
+          "padding-block-start": "10px",
+          "padding-inline-end": "20px",
+          "padding-block-end": "10px",
+          "padding-inline-start": "20px"
+        }
+      }
+    }
+  ]
+}
+{{/schema}}

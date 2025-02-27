@@ -1,0 +1,100 @@
+<div class="card card-personal">
+  <div class="body2 card__title">
+    <p class="card__title-text font-bold">{{"customer.account.personal_information" | t()}}</p>
+    <div class="card__title-edit" data-edit-hide>{{#component "icons/edit" /}}</div>
+  </div>
+
+  <div class="card__detail body4">
+    {{#update_customer_form id="update-personal-info-form"}}
+      
+      <div class="card__item card-personal__birthday">
+        <div class="card__item-label">{{"customer.account.birthday" | t()}}</div>
+        <div class="card__item-value" data-edit-hide>
+          {{#if customer.birthday}}
+            {{customer.birthday | date(format="%Y-%m-%d")}}
+          {{#else/}}
+            {{"customer.account.gender_secret" | t()}}
+          {{/if}}
+        </div>
+
+        
+        <label class="field hidden card-personal__birthday-edit" data-edit-show>
+          {{#var birthday_str = "" /}}
+
+          {{#if customer.birthday}}
+            {{#set birthday_str = customer.birthday | date(format="%Y-%m-%d") /}}
+          {{/if}}
+
+          <input
+            type="date"
+            value="{{birthday_str}}"
+            class="field__input"
+            name="customer[birthday]"
+            autocomplete="off"
+            autocomplete="birthday"
+            placeholder="{{`customer.account.select_date` | t()}}"
+          />
+
+          <span class="field__label">
+            {{"customer.account.birthday" | t()}}
+          </span>
+        </label>
+      </div>
+
+      
+      <div class="card__item card-personal__gender">
+        <div class="card__item-label">{{"customer.account.gender" | t()}}</div>
+        <div class="card__item-value" data-edit-hide>
+          {{#if customer.gender == 1}}
+            {{"customer.account.gender_male" | t()}}
+          {{#else if customer.gender == 2 /}}
+            {{"customer.account.gender_female" | t()}}
+          {{#else/}}
+            {{"customer.account.gender_secret" | t()}}
+          {{/if}}
+        </div>
+
+        
+        <div class="hidden" data-edit-show>
+
+          <label class="field-radio-wrapper">
+            <span class="field-radio">
+              <input type="radio" name="customer[gender]" value="male" {{#if customer.gender == 1}}checked{{/if}} />
+              <span class="radio"></span>
+            </span>
+            <span>{{"customer.account.gender_male" | t()}}</span>
+          </label>
+
+          <label class="field-radio-wrapper">
+            <span class="field-radio">
+              <input type="radio" name="customer[gender]" value="female" {{#if customer.gender == 2}}checked{{/if}} />
+              <span class="radio"></span>
+            </span>
+            <span>{{"customer.account.gender_female" | t()}}</span>
+          </label>
+
+          <label class="field-radio-wrapper">
+            <span class="field-radio">
+              <input type="radio" name="customer[gender]" value="prefer not to say" {{#if customer.gender == 3}}checked{{/if}} />
+              <span class="radio"></span>
+            </span>
+            <span>{{"customer.account.gender_secret" | t()}}</span>
+          </label>
+
+        </div>
+      </div>
+    {{/update_customer_form}}
+  </div>
+
+  
+  <div class="card__actions hidden" data-edit-show>
+    
+    <div class="button button--secondary card__cancel">
+      {{"customer.general.cancel_common" | t()}}
+    </div>
+    <button type="submit" form="update-personal-info-form" class="button">
+      {{"customer.account.confirm_btn" | t()}}
+      {{#component "icons/loading" class="button__spinner" /}}
+    </button>
+  </div>
+</div>

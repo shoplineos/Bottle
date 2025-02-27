@@ -1,0 +1,176 @@
+{{#var product = props.product /}}
+{{#var shape = block.settings.shape /}}
+{{#var fit_type = block.settings.fit_type /}}
+
+{{#var aspect_ratio /}}
+{{~#if shape == "circle"~}}
+  {{#set aspect_ratio = "1/1" /}}
+{{~#else if (block.settings.aspect_ratio == "unset") /}}
+  {{~#if product.featured_media}}
+    {{#set aspect_ratio = product.featured_media.aspect_ratio /}}
+  {{~#else/}}
+    {{#set aspect_ratio = "1/1" /}}
+  {{~/if}}
+{{~#else/}}
+  {{#set aspect_ratio = block.settings.aspect_ratio /}}
+{{~/if}}
+
+{{#var hover_show_next_image = false /}}
+{{#if product.media[1] && block.settings.hover_show_next_image}}
+  {{#set hover_show_next_image = true /}}
+{{/if}}
+
+<div
+  style="--padding: {{settings.product_card_image_padding}}px;"
+  class="
+    block-product-card__layer-image-wrapper
+    {{#if hover_show_next_image}}hover{{/if}}
+    {{#if settings.product_card_style != "card"}}product-card-border-shadow{{/if}}
+  "
+  {{{block.shopline_attributes}}}
+>
+  <div
+    class="block-product-card__image-wrapper"
+    style="
+      --aspect-ratio: {{aspect_ratio}};
+      --fit-type: {{fit_type}};
+      {{#if shape == "circle"}}--border-radius: 50%;{{/if}}
+    "
+  >
+    {{#if product.featured_media}}
+      {{#component
+        "image"
+        data=product.featured_media
+        class="block-product-card__image"
+        mobile_size=props.mobile_columns
+        desktop_size=props.desktop_columns
+      /}}
+
+      {{#if hover_show_next_image}}
+        {{#component
+          "image"
+          data=product.media[1]
+          class="block-product-card__image"
+          mobile_size=props.mobile_columns
+          desktop_size=props.desktop_columns
+        /}}
+      {{/if}}
+    {{#else/}}
+      {{#placeholder_svg "image" /}}
+    {{/if}}
+  </div>
+
+  <div class="block-product-card__layer-wrapper {{ block.settings | class_list() }}">
+    {{#blocks}}
+      {{#block product=product /}}
+    {{/blocks}}
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product_list.image.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "t:blocks.product_list.image.settings.aspect_ratio.label",
+      "default": "3/4",
+      "options": [
+        {
+          "value": "unset",
+          "label": "t:blocks.product_list.image.settings.aspect_ratio.options_0.label"
+        },
+        {
+          "value": "1/1",
+          "label": "t:blocks.product_list.image.settings.aspect_ratio.options_1.label"
+        },
+        {
+          "value": "3/4",
+          "label": "3:4"
+        },
+        {
+          "value": "4/3",
+          "label": "t:blocks.product_list.image.settings.aspect_ratio.options_3.label"
+        },
+        {
+          "value": "2/3",
+          "label": "t:blocks.product_list.image.settings.aspect_ratio.options_4.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "label": "t:blocks.product_list.image.settings.fit_type.label",
+      "id": "fit_type",
+      "default": "cover",
+      "options": [
+        {
+          "value": "cover",
+          "label": "t:blocks.product_list.image.settings.fit_type.options_0.label"
+        },
+        {
+          "value": "contain",
+          "label": "t:blocks.product_list.image.settings.fit_type.options_1.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "shape",
+      "label": "t:blocks.product_list.image.settings.shape.label",
+      "default": "square",
+      "options": [
+        {
+          "value": "square",
+          "label": "t:blocks.product_list.image.settings.shape.options_0.label"
+        },
+        {
+          "value": "circle",
+          "label": "t:blocks.product_list.image.settings.shape.options_1.label"
+        }
+      ]
+    },
+    {
+      "type": "switch",
+      "label": "t:blocks.product_list.image.settings.hover_show_next_image.label",
+      "id": "hover_show_next_image",
+      "default": true
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:blocks.product_list.image.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "justify-content": "space-between"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product-list/layer",
+      "limit": 2
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product_list.image.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "product-list/layer",
+          "blocks": [
+            {
+              "type": "$discount_tag"
+            },
+            {
+              "type": "$quick_add"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

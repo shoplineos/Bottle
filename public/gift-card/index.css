@@ -1,0 +1,180 @@
+#gift-card-page {
+  box-sizing: border-box;
+  max-width: 680px;
+  padding: 40px 80px;
+  margin: 0 auto;
+}
+
+#gift-card-page .store-name {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  color: #1e1e1e;
+  text-align: center;
+}
+
+#gift-card-page .gift-card-status {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #1e1e1e;
+  text-align: center;
+}
+
+#gift-card-page .gift-card-wrapper {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow:
+    0 0 4px rgb(0 0 0 / 4%),
+    0 8px 16px rgb(0 0 0 / 8%);
+}
+
+#gift-card-page .gift-card-wrapper .gift-card-box {
+  position: relative;
+  width: 100%;
+}
+
+#gift-card-page .gift-card-wrapper .gift-card-box .gift-card-bg {
+  width: 100%;
+  padding-block-end: 47.7%;
+  background-image: url("https://img.myshopline.com/image/official/a4277ef9ce9744809be9bde7b1495a93.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#gift-card-page .gift-card-wrapper .gift-card-box .gift-card-code {
+  position: absolute;
+  inset-block-end: 8%;
+  inset-inline: 0;
+  width: 54.8%;
+  padding: 16px 24px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #1e1e1e;
+  text-align: center;
+  user-select: all;
+  background: rgb(255 255 255 / 80%);
+  border: 1px dashed #000;
+  border-radius: 4px;
+}
+
+#gift-card-page .gift-card-wrapper .gift-card-info {
+  padding: 16px 20px;
+}
+
+#gift-card-page .gift-card-wrapper .gift-card-info .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-start: 8px;
+}
+
+#gift-card-page .gift-card-wrapper .gift-card-info .item:first-child {
+  margin-block-start: 0;
+}
+
+#gift-card-page .gift-card-wrapper .gift-card-info .item .name {
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(30 30 30 / 60%);
+}
+
+#gift-card-page .gift-card-wrapper .gift-card-info .item .content {
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #1e1e1e;
+  text-align: end;
+}
+
+#gift-card-page .gift-card-wrapper .gift-card-info .item .content .date-hms {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(30 30 30 / 60%);
+}
+
+#gift-card-page .gift-card-wrapper .gift-card-info .item .content .date-ymd {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#gift-card-page .gift-card-wrapper .gift-card-info .item .content .date-ymd em {
+  margin: 0 5px;
+  font-style: normal;
+}
+
+#gift-card-page .gift-card-wrapper.disabled .gift-card-box .gift-card-bg {
+  background-image: url("https://img.myshopline.com/image/official/b26a6aa580dd4d2c8708ca4352d52a87.jpeg");
+}
+
+#gift-card-page .gift-card-wrapper.disabled .gift-card-box .gift-card-code {
+  text-decoration-line: line-through;
+  border-color: rgb(0 0 0 / 60%);
+  opacity: 0.6;
+}
+
+#gift-card-page .gift-card-use-box {
+  padding: 40px 0;
+  text-align: center;
+}
+
+#gift-card-page .gift-card-use-box .btn-use {
+  display: inline-block;
+  min-width: 200px;
+  padding: 16px 60px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+  text-decoration: none;
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+#gift-card-page .gift-card-use-box .use-explain {
+  margin-block-start: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(30 30 30 / 60%);
+}
+
+@media (max-width: 959px) {
+  #gift-card-page {
+    max-width: 520px;
+    padding: 40px 20px;
+  }
+
+  #gift-card-page .store-name {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  #gift-card-page .gift-card-status {
+    font-size: 20px;
+  }
+  #gift-card-page .gift-card-wrapper .gift-card-box .gift-card-code {
+    width: 66.2%;
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+  #gift-card-page .gift-card-wrapper .gift-card-info .item .name {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  #gift-card-page .gift-card-wrapper .gift-card-info .item .content {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  #gift-card-page .gift-card-wrapper .gift-card-info .item .content .date-hms {
+    font-size: 12px;
+  }
+}

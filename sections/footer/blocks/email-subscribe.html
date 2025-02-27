@@ -1,0 +1,78 @@
+<div class="footer__email-subscribe {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{#if block.settings.title}}
+    <h3 class="footer__email-subscribe-title body3 rte">{{{block.settings.title}}}</h3>
+  {{/if}}
+  {{#customer_form}}
+    {{#component "input/input-email" input_name="contact[email]" input_required=true input_has_submit_button=true input_placeholder=block.settings.placeholder /}}
+
+    {{#if form.posted_successfully}}
+      {{#component "tips-card/tips-card" type="success" text="general.footer.subscribe_success" | t() /}}
+    {{/if}}
+    {{#if form.errors.messages}}
+      {{#component "tips-card/tips-card" type="error" text=form.errors.messages /}}
+    {{/if}}
+  {{/customer_form}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.footer.blocks.email_subscribe.name",
+  "icon": "email",
+  "tag": "",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "t:sections.footer.blocks.email_subscribe.settings.title.label",
+      "default": "Subscribe today and get 10% off your first purchase"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "t:sections.footer.blocks.email_subscribe.settings.placeholder.label",
+      "default": "Enter your email"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.footer.blocks.email_subscribe.settings.layout.label",
+      "default": {
+        "flex-direction": "column",
+        "flex-wrap": "nowrap",
+        "align-items": "flex-start",
+        "justify-content": "flex-start",
+        "row-gap": "15px",
+        "column-gap": "15px"
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.footer.blocks.email_subscribe.settings.spacing.label",
+      "default": {
+        "padding-top": "0px",
+        "padding-right": "0px",
+        "padding-bottom": "0px",
+        "padding-left": "0px"
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.footer.blocks.email_subscribe.settings.size.label",
+      "default": {
+        "width": "25%",
+        "height": "auto",
+        "@media (--mobile)": {
+          "width": "100%"
+        }
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.footer.blocks.email_subscribe.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

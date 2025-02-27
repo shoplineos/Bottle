@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "main-blog": {
+      "type": "main-blog",
+      "settings": {},
+      "blocks": {
+        "main-blog__title": {
+          "type": "$title"
+        },
+        "main-blog__card": {
+          "type": "article/card",
+          "blocks": {
+            "main-blog__card__cover": {
+              "type": "article/cover"
+            },
+            "main-blog__card__info": {
+              "type": "article/info",
+              "blocks": {
+                "main-blog__card__title": {
+                  "type": "article/title"
+                },
+                "main-blog__card__date_author": {
+                  "type": "article/date_author"
+                },
+                "main-blog__card__excerpt": {
+                  "type": "article/excerpt"
+                }
+              },
+              "block_order": ["main-blog__card__title", "main-blog__card__date_author", "main-blog__card__excerpt"]
+            }
+          },
+          "block_order": [
+            "main-blog__card__cover",
+            "main-blog__card__info"
+          ]
+        }
+      },
+      "block_order": ["main-blog__title", "main-blog__card"]
+    }
+  },
+  "order": ["main-blog"]
+}

@@ -1,0 +1,34 @@
+
+
+{{#component "stylesheet" src="./navbar.css" | asset_url() /}}
+
+<div class="customer-navbar">
+  <div class="customer-navbar__menu">
+    {{#var account_menu_active_class = "" /}}
+
+    {{#if request.path == routes.account_url}}
+    {{#set account_menu_active_class = "active" /}}
+    {{/if}}
+
+    <a class="body2 customer-navbar__menu-item {{account_menu_active_class}}" href="{{routes.account_url}}">
+      {{"customer.account.personal_information" | t()}}
+    </a>
+
+    {{#var account_order_list_active_class = "" /}}
+
+    {{#if request.path == routes.account_order_list_url}}
+    {{#set account_order_list_active_class = "active" /}}
+    {{/if}}
+
+    <a class="body2 customer-navbar__menu-item {{account_order_list_active_class}}"
+      href="{{routes.account_order_list_url}}">
+      {{"customer.general.orders" | t()}}
+    </a>
+  </div>
+
+  <div class="hidden-mobile">
+    <a class="button button--link font-bold body5" href="{{routes.account_logout_url}}">
+      {{"customer.general.sign_out" | t()}}
+    </a>
+  </div>
+</div>

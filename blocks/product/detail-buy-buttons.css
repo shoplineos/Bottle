@@ -1,0 +1,22 @@
+.product-detail__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-detail__form .form__error-message {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: rgb(var(--color-tag-background));
+}
+
+.product-detail__form .form__error-message::after {
+  content: attr(data-message);
+}
+
+.product-detail__form .form__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

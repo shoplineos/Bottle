@@ -1,0 +1,44 @@
+
+
+{{#component "script" src="./input-phone.js" | asset_url() /}}
+
+<theme-input-phone class="field{{#if props.class}} {{props.class}}{{/if}}">
+  <label class="field__inner">
+    <input
+      class="field__input"
+      type="tel"
+      name="{{props.input_name}}"
+      {{#if props.input_autocomplete}}autocomplete="{{props.input_autocomplete}}"{{/if}}
+      placeholder="{{#if props.input_placeholder}}{{props.input_placeholder}}{{#else/}}{{"general.order_tracking.other_phone" | t()}}{{/if}}"
+      {{#if props.input_required}}required{{/if}}
+      {{#if props.input_disabled}}disabled{{/if}}
+      {{#if props.input_value}}value="{{props.input_value}}"{{/if}}
+    />
+
+    <span class="field__label">
+      {{#if props.input_placeholder}}
+        {{props.input_placeholder}}
+      {{#else/}}
+        {{"general.order_tracking.other_phone" | t()}}
+      {{/if}}
+    </span>
+  </label>
+
+
+  <div class="field__suffix country-select">
+    <div class="country-select__trigger">
+      <span class="country-select__label"></span>
+      {{#component "icons/arrow-thin" /}}
+    </div>
+
+    <select name="{{props.code_name}}" class="country-select__dropdown" {{#if props.input_disabled}}disabled{{/if}}>
+      {{#for item in props.all_country_dialing_code}}
+        {{#if props.country_iso_code == item.iso_code}}
+          <option value="{{item.dialing_code}}" data-iso-code="{{item.iso_code}}" selected="selected">{{item.name}}</option>
+        {{#else/}}
+          <option value="{{item.dialing_code}}" data-iso-code="{{item.iso_code}}">{{item.name}}</option>
+        {{/if}}
+      {{/for}}
+    </select>
+  </div>
+</theme-input-phone>

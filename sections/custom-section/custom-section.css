@@ -1,0 +1,17 @@
+.custom-section {
+  background-color: rgb(var(--color-background));
+}
+
+.custom-section .block-heading,
+.custom-section .subheading {
+  width: 100%;
+}
+
+.custom-section .custom-html-block {
+  background-color: rgb(var(--color-background));
+}
+
+.custom-section .subheading,
+.custom-section .rte {
+  word-break: break-word;
+}

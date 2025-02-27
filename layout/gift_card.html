@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{request.locale.iso_code}}">
+
+  <head>
+    {{#var gift_card_balance = gift_card.balance | money_with_currency() /}}
+
+    {{#component
+      "page-head"
+      page_title="products.giftcard.seoTitle" | t(value=gift_card_balance, shop=shop.name)
+      page_description="products.giftcard.title" | t()
+    /}}
+
+    {{#content "header" /}}
+  </head>
+
+  <body>
+    {{#content "layout" /}}
+
+    {{#content "footer" /}}
+  </body>
+</html>

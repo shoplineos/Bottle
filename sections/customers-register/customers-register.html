@@ -1,0 +1,192 @@
+
+
+{{#component "stylesheet" src="customers/base.css" | asset_url() /}}
+
+{{#component "script" src="customers/base.js" | asset_url() /}}
+{{#component "script" src="customers/base-form.js" | asset_url() /}}
+{{#component "script" src="./customers-register.js" | asset_url() /}}
+
+<script>
+  if (window.Shopline.i18nInit) {
+    window.Shopline.i18nInit();
+  }
+</script>
+
+<div class="customer-container color-{{section.settings.color_scheme.id}}">
+  <theme-main-register class="customer customer-register {{section.settings.spacing | class_list()}}">
+    <theme-base-form>
+      {{#create_customer_form class="customer-register__form"}}
+        {{#var support_type_list = form.register_config.types | split(",") /}}
+
+        {{#var has_switch = false /}}
+        {{#if support_type_list | contains("email") && support_type_list | contains("mobile")}}
+          {{#set has_switch = true /}}
+        {{/if}}
+
+        <h2 class="title5 text-center customer__title">{{"customer.general.sign_up" | t()}}</h2>
+
+        
+        {{#if has_switch}}
+          <div class="customer__tab">
+            <span class="body3 active" data-register-type="email">
+              {{"customer.account.email" | t()}}
+            </span>
+            <span class="body3" data-register-type="mobile">
+              {{"customer.account.phone" | t()}}
+            </span>
+          </div>
+        {{/if}}
+
+        
+        {{#for type in support_type_list}}
+          {{#if type == "email"}}
+            <div data-register-type="email">
+              {{#component "input/input-email" input_name="customer[email]" input_required=true input_autocomplete="email" input_placeholder="customer.general.email" | t() /}}
+            </div>
+          {{/if}}
+
+          {{#if type == "mobile"}}
+            <div class="{{#if has_switch}}hidden{{/if}}" data-register-type="mobile">
+              {{#component "input/input-phone" all_country_dialing_code=all_country_dialing_code input_name="customer[phone]" code_name="customer[code]" input_required=true input_autocomplete="tel" country_iso_code=localization.country.iso_code /}}
+            </div>
+          {{/if}}
+        {{/for}}
+
+        
+        {{#component "input/input-password" input_name="customer[password]" input_required=true input_autocomplete="password" /}}
+
+        
+        {{#if form.register_config.check_tag}}
+          {{#component "input/input-verify-code" input_name="customer[verifycode]" input_required=true /}}
+        {{/if}}
+
+        <div class="field__group">
+          
+          {{#if form.register_config.first_name_check}}
+            <label class="field">
+              <input type="text" class="field__input" name="customer[first_name]" autocomplete="first-name" placeholder="{{`customer.account.first_name` | t()}}" />
+
+              <span class="field__label body3">
+                {{"customer.account.first_name" | t()}}
+              </span>
+            </label>
+          {{/if}}
+
+          
+          {{#if form.register_config.last_name_check}}
+            <label class="field">
+              <input type="text" class="field__input" name="customer[last_name]" autocomplete="last-name" placeholder="{{`customer.account.last_name` | t()}}" />
+
+              <span class="field__label body3">
+                {{"customer.account.last_name" | t()}}
+              </span>
+            </label>
+          {{/if}}
+        </div>
+
+        
+        {{#if form.register_config.birthday_check}}
+          <label class="field">
+            <input type="date" class="field__input" name="customer[birthday]" autocomplete="off" placeholder="{{`customer.account.birthday` | t()}}" value="1970-01-01" />
+
+            <span class="field__label body3">
+              {{"customer.account.birthday" | t()}}
+            </span>
+          </label>
+        {{/if}}
+
+        
+        {{#if form.register_config.gender_check}}
+          <label class="field">
+            <select class="field__input" name="customer[gender]" autocomplete="gender" placeholder="{{`customer.account.gender` | t()}}">
+              <option value="0">
+                {{"customer.account.gender_secret" | t()}}
+              </option>
+              <option value="1">
+                {{"customer.account.gender_male" | t()}}
+              </option>
+              <option value="2">
+                {{"customer.account.gender_female" | t()}}
+              </option>
+            </select>
+
+            <span class="field__label body3">
+              {{"customer.account.gender" | t()}}
+            </span>
+
+            {{#component "icons/arrow-thin" class="icon-arrow" /}}
+          </label>
+        {{/if}}
+
+        
+        <button class="button customer__submit" type="submit">
+          {{"customer.general.sign_up" | t()}}
+          {{#component "icons/loading" class="button__spinner" /}}
+        </button>
+
+        
+        {{#component "customers/provisions" /}}
+
+        
+        {{#if support_type_list | contains("email")}}
+          <div class="customer__extra customer-register__email-marketing">
+            <label class="customer__extra-label">
+              <span class="field-checkbox">
+                <input type="checkbox" name="customer[accepts_marketing]" checked value="true" />
+                <span class="checkbox"></span>
+              </span>
+
+              <span class="body4">
+                {{"unvisiable.customer.error_message_1" | t()}}
+              </span>
+            </label>
+          </div>
+        {{/if}}
+
+        
+        {{#var hasCompanyRegisterEntry = form.register_config.company_account_application_entry_visible /}}
+        <div class="customer__jump-link {{#if hasCompanyRegisterEntry}}customer__jump-link--between{{/if}}">
+          <a class="button button--link body5 font-bold" href="{{routes.account_login_url}}">
+            {{"customer.register.go_to_login" | t()}}
+          </a>
+
+          
+          {{#if hasCompanyRegisterEntry}}
+            <a href="{{routes.company_account_register_url}}" class="button button--link body5 font-bold">
+              {{"customer.company.account.link" | t()}}
+            </a>
+          {{/if}}
+        </div>
+      {{/create_customer_form}}
+    </theme-base-form>
+  </theme-main-register>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.customers_register.name",
+  "settings": [
+    {
+      "id": "color_scheme",
+      "type": "color_scheme",
+      "label": "t:sections.customers_register.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.customers_register.settings.spacing.label",
+      "default": {
+        "padding-top": "80px",
+        "padding-bottom": "80px",
+        "@media (--mobile)": {
+          "padding-top": "40px",
+          "padding-right": "20px",
+          "padding-bottom": "40px",
+          "padding-left": "20px"
+        }
+      }
+    }
+  ]
+}
+{{/schema}}

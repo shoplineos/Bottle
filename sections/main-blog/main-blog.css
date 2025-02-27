@@ -1,0 +1,17 @@
+.main-blog {
+  background-color: rgb(var(--color-background));
+}
+
+.main-blog__container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.main-blog__list {
+  --gap: 22px;
+}
+
+.main-blog__title {
+  color: rgba(var(--color-text));
+}

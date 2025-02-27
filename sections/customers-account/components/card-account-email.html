@@ -1,0 +1,108 @@
+
+
+{{#component "script" src="./card-account-email.js" | asset_url() /}}
+
+<theme-card-account-email class="card__item card-account__email">
+  <div class="card__item-label">{{"customer.account.email" | t()}}</div>
+  <div class="card__item-value">
+
+    
+    {{#if customer.email}}
+      <span>{{customer.email}}</span>
+      <div class="card__item-operate hidden card-account__edit" data-edit-show>
+        {{#component "icons/edit" /}}
+        <span>{{"customer.account.modify_email" | t()}}</span>
+      </div>
+    {{#else/}}
+      <div class="card__item-operate card-account__edit">
+        {{#component "icons/plus" /}}
+        <span>{{"customer.general.bind_email" | t()}}</span>
+      </div>
+    {{/if}}
+
+    
+    <theme-modal data-placement="center" data-mask-closable data-esc-to-exit>
+      <details>
+        <summary></summary>
+        <div class="modify-modal__container">
+          
+          <button class="modify-modal__close" name="close">
+            {{#component "icons/close" /}}
+          </button>
+
+          
+          <div class="modify-modal__title body3 font-bold">
+            {{#if customer.email}}
+            {{"customer.account.modify_email" | t()}}
+            {{#else/}}
+            {{"customer.general.bind_email" | t()}}
+            {{/if}}
+          </div>
+
+          
+          {{#bind_customer_email_form}}
+            
+            {{#if form.register_config.check_tag}}
+              
+              <div class="modify-modal__step1">
+                <div class="modify-modal__desc body4"></div>
+                <div class="modify-modal__content">
+                  {{#component "input/input-verify-code" input_name="customer[verifycode1]" /}}
+                </div>
+
+                <div class="modify-modal__actions">
+                  <button class="button button--secondary" type="button" name="close">
+                    {{"customer.general.cancel_common" | t()}}
+                  </button>
+                  <button class="button modify-modal__next" type="button">
+                    <span>{{"customer.account.next" | t()}}</span>
+                    {{#component "icons/loading" class="button__spinner" /}}
+                  </button>
+                </div>
+              </div>
+
+              
+              <div class="modify-modal__step2 hidden">
+                <div class="modify-modal__content">
+                  {{#component "input/input-email" input_name="customer[email]" input_autocomplete="email" input_placeholder="customer.general.email" | t() /}}
+
+                  {{#component "input/input-verify-code" input_name="customer[verifycode]" /}}
+                </div>
+
+                <div class="modify-modal__actions">
+                  <button class="button button--secondary" type="button" name="close">
+                    {{"customer.general.cancel_common" | t()}}
+                  </button>
+                  <button class="button" type="submit">
+                    <span>{{"customer.account.confirm_btn" | t()}}</span>
+                    {{#component "icons/loading" class="button__spinner" /}}
+                  </button>
+                </div>
+              </div>
+            {{#else/}}
+              
+              <div class="modify-modal__default">
+                <div class="modify-modal__content">
+                  {{#component "input/input-email" input_name="customer[email]" input_autocomplete="email" input_placeholder="customer.general.new_email" | t() /}}
+                </div>
+
+                
+                <div class="modify-modal__actions">
+                  <button class="button button--secondary" type="button" name="close">
+                    {{"customer.general.cancel_common" | t()}}
+                  </button>
+
+                  <button class="button" type="submit">
+                    <span>{{"customer.account.confirm_btn" | t()}}</span>
+                    {{#component "icons/loading" class="button__spinner" /}}
+                  </button>
+                </div>
+              </div>
+            {{/if}}
+          {{/bind_customer_email_form}}
+        </div>
+      </details>
+    </theme-modal>
+
+  </div>
+</theme-card-account-email>

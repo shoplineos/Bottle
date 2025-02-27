@@ -1,0 +1,3865 @@
+{
+  "sections": {
+    "announcement_bar": {
+      "name": "公告栏",
+      "settings": {
+        "sticky_mode": {
+          "label": "展示位置",
+          "options_0": {
+            "label": "不固顶"
+          },
+          "options_1": {
+            "label": "固顶"
+          },
+          "options_2": {
+            "label": "仅电脑端固顶"
+          },
+          "options_3": {
+            "label": "仅移动端固顶"
+          }
+        },
+        "display_mode": {
+          "label": "多公告栏展示方式",
+          "options_0": {
+            "label": "平铺显示"
+          },
+          "options_1": {
+            "label": "紧凑布局"
+          },
+          "options_2": {
+            "label": "左右切换"
+          },
+          "options_3": {
+            "label": "上下切换"
+          },
+          "options_4": {
+            "label": "手动切换"
+          }
+        },
+        "interval": {
+          "label": "切换间隔"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "blocks": {
+        "item": {
+          "name": "公告",
+          "settings": {
+            "content": {
+              "label": "正文"
+            },
+            "link": {
+              "label": "跳转链接"
+            },
+            "color_scheme": {
+              "label": "配色"
+            },
+            "divide_line": {
+              "label": "显示分割线"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "公告"
+            }
+          }
+        }
+      }
+    },
+    "apps": {
+      "name": "应用",
+      "settings": {
+        "sync_margins_with_theme": {
+          "label": "使模块页边距与主题一致"
+        }
+      }
+    },
+    "blog": {
+      "blocks": {
+        "articles": {
+          "name": "博客列表",
+          "settings": {
+            "page_size": {
+              "label": "博客数量",
+              "unit": "个"
+            },
+            "desktop_columns": {
+              "label": "电脑端列数"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "博客列表"
+            }
+          }
+        }
+      },
+      "name": "博客",
+      "settings": {
+        "blog": {
+          "label": "博客集合"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "图文展示",
+          "name": "博客"
+        }
+      }
+    },
+    "collection_list": {
+      "blocks": {
+        "list": {
+          "name": "分类列表",
+          "settings": {
+            "group_header_0": {
+              "label": "电脑端"
+            },
+            "desktop_columns": {
+              "label": "电脑端列数"
+            },
+            "desktop_enable_slider": {
+              "label": "电脑端左右滑动查看"
+            },
+            "group_header_1": {
+              "label": "移动端"
+            },
+            "mobile_columns": {
+              "label": "移动端列数"
+            },
+            "mobile_limit": {
+              "label": "移动端最多展示分类数"
+            },
+            "mobile_enable_slider": {
+              "label": "移动端左右滑动查看"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "分类列表"
+            }
+          }
+        }
+      },
+      "name": "商品分类",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "间距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "商品展示",
+          "name": "商品分类"
+        }
+      }
+    },
+    "contact_form": {
+      "name": "联系表单",
+      "settings": {
+        "title": {
+          "label": "标题"
+        },
+        "title_size": {
+          "label": "标题大小",
+          "options_0": {
+            "label": "超大"
+          },
+          "options_1": {
+            "label": "大"
+          },
+          "options_2": {
+            "label": "中"
+          },
+          "options_3": {
+            "label": "小"
+          }
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "客户运营",
+          "name": "联系表单"
+        }
+      }
+    },
+    "custom_html": {
+      "name": "自定义HTML",
+      "settings": {
+        "html": {
+          "label": "HTML"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "自定义",
+          "name": "自定义HTML"
+        }
+      }
+    },
+    "custom_page": {
+      "name": "自定义页面",
+      "settings": {
+        "page": {
+          "label": "自定义页面"
+        },
+        "title_size": {
+          "label": "标题大小",
+          "options_0": {
+            "label": "超大"
+          },
+          "options_1": {
+            "label": "大"
+          },
+          "options_2": {
+            "label": "中"
+          },
+          "options_3": {
+            "label": "小"
+          }
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "自定义",
+          "name": "自定义页面"
+        }
+      }
+    },
+    "custom_section": {
+      "name": "自定义section",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "自定义",
+          "name": "自定义section"
+        },
+        "presets_1": {
+          "category": "自定义",
+          "name": "2列等分布局"
+        },
+        "presets_2": {
+          "category": "自定义",
+          "name": "3列等分布局"
+        },
+        "presets_3": {
+          "category": "自定义",
+          "name": "1:2布局"
+        },
+        "presets_4": {
+          "category": "自定义",
+          "name": "1:2:1布局"
+        }
+      }
+    },
+    "customers_account": {
+      "name": "账户",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "customers_activate_account": {
+      "name": "激活账户页",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "customers_addresses": {
+      "name": "地址",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        }
+      }
+    },
+    "customers_company": {
+      "name": "公司账号注册页",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "customers_forgot_password": {
+      "name": "忘记密码",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        }
+      }
+    },
+    "customers_login": {
+      "name": "客户登录",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "customers_order_detail": {
+      "name": "订单详情",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "customers_order_list": {
+      "name": "订单列表",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "customers_register": {
+      "name": "客户注册",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "faq": {
+      "blocks": {
+        "collapsible_group": {
+          "name": "问题列表",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "blocks": {
+            "$collapsible-panel": {
+              "name": "可折叠行"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "问题列表"
+            }
+          }
+        },
+        "collapsible_panel": {
+          "name": "可折叠行",
+          "settings": {
+            "title": {
+              "label": "标题"
+            },
+            "icon": {
+              "label": "图标",
+              "options_0": {
+                "label": "无"
+              },
+              "options_1": {
+                "label": "苹果"
+              },
+              "options_2": {
+                "label": "香蕉"
+              },
+              "options_3": {
+                "label": "瓶子"
+              },
+              "options_4": {
+                "label": "箱子"
+              },
+              "options_5": {
+                "label": "胡萝卜"
+              },
+              "options_6": {
+                "label": "聊天泡泡"
+              },
+              "options_7": {
+                "label": "复选标记"
+              },
+              "options_8": {
+                "label": "剪贴板"
+              },
+              "options_9": {
+                "label": "乳制品"
+              }
+            },
+            "content": {
+              "label": "正文"
+            },
+            "custom_content": {
+              "label": "自定义内容"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "可折叠行"
+            }
+          }
+        },
+        "group": {
+          "name": "内容",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "blocks": {
+            "$image": {
+              "name": "图片"
+            },
+            "$collapsible-group": {
+              "name": "问题列表"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "内容"
+            }
+          }
+        },
+        "heading": {
+          "name": "标题",
+          "settings": {
+            "text": {
+              "label": "标题"
+            },
+            "text_size": {
+              "label": "文字大小",
+              "options_0": {
+                "label": "超大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "文字对齐"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "标题"
+            }
+          }
+        },
+        "image": {
+          "name": "图片",
+          "settings": {
+            "image": {
+              "label": "图片"
+            },
+            "image_aspect_ratio": {
+              "label": "图片比例",
+              "options_0": {
+                "label": "原始比例"
+              },
+              "options_1": {
+                "label": "1:1"
+              },
+              "options_2": {
+                "label": "4:3"
+              },
+              "options_3": {
+                "label": "3:2"
+              },
+              "options_4": {
+                "label": "16:9"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "图片"
+            }
+          }
+        },
+        "$heading": {
+          "name": "标题"
+        },
+        "$group": {
+          "name": "内容"
+        }
+      },
+      "name": "常见问题",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "expand_first_label": {
+          "label": "展开第1个标签"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "信任组件",
+          "name": "常见问题"
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "精选商品",
+      "settings": {
+        "collection": {
+          "label": "商品分类"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "间距"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "商品展示",
+          "name": "精选商品"
+        }
+      }
+    },
+    "featured_product": {
+      "blocks": {
+        "product_info": {
+          "name": "商品信息",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "商品信息"
+            }
+          }
+        },
+        "product_media": {
+          "name": "商品图片",
+          "settings": {
+            "video_loop": {
+              "label": "视频循环播放"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "商品图片"
+            }
+          }
+        }
+      },
+      "name": "单个商品",
+      "settings": {
+        "product": {
+          "label": "商品"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "商品展示",
+          "name": "单个商品"
+        }
+      }
+    },
+    "footer": {
+      "blocks": {
+        "additional_group": {
+          "name": "附加内容",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "附加内容"
+            }
+          }
+        },
+        "contact_group": {
+          "name": "联系我们",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "联系我们"
+            }
+          }
+        },
+        "copyright": {
+          "name": "版权信息",
+          "settings": {
+            "text": {
+              "label": "版权信息"
+            },
+            "text_align": {
+              "label": "文字对齐"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "版权信息"
+            }
+          }
+        },
+        "custom_text": {
+          "name": "自定义内容",
+          "settings": {
+            "title": {
+              "label": "标题"
+            },
+            "content": {
+              "label": "正文"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "自定义内容"
+            }
+          }
+        },
+        "email_subscribe": {
+          "name": "邮件订阅",
+          "settings": {
+            "title": {
+              "label": "标题"
+            },
+            "placeholder": {
+              "label": "输入框提示文案"
+            },
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "邮件订阅"
+            }
+          }
+        },
+        "image": {
+          "name": "图片",
+          "settings": {
+            "image": {
+              "label": "图片"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "图片"
+            }
+          }
+        },
+        "information_group": {
+          "name": "页脚信息",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "页脚信息"
+            }
+          }
+        },
+        "market_selector": {
+          "name": "多国家地区语言",
+          "settings": {
+            "show_type": {
+              "label": "展示内容",
+              "info": "需要添加两项及以上的市场，「展示国家/地区选择器」才能生效。若要添加市场，可前往市场设置；需要在市场-语言管理中添加两项及以上的语言，选择器才能生效。若添加语言，可前往语言设置，添加完后可去前往市场-语言管理页面添加当前市场多语言",
+              "options_0": {
+                "label": "全部展示"
+              },
+              "options_1": {
+                "label": "仅展示国家/地区选择器"
+              },
+              "options_2": {
+                "label": "仅展示语言选择器"
+              }
+            },
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "多国家地区语言"
+            }
+          }
+        },
+        "navigation": {
+          "name": "导航",
+          "settings": {
+            "title": {
+              "label": "标题"
+            },
+            "menu": {
+              "label": "导航菜单"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "导航"
+            }
+          }
+        },
+        "payment_icons": {
+          "name": "支付图标",
+          "settings": {
+            "payment_icons": {
+              "label": "支付图标"
+            },
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "支付图标"
+            }
+          }
+        },
+        "social_media": {
+          "name": "社交媒体",
+          "settings": {
+            "title": {
+              "label": "标题"
+            },
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "社交媒体"
+            }
+          }
+        }
+      },
+      "name": "页脚",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "header": {
+      "name": "页头",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "show_divider": {
+          "label": "页头下方显示分割线"
+        },
+        "group_header_0": {
+          "label": "Logo"
+        },
+        "logo_image": {
+          "label": "Logo"
+        },
+        "desktop_logo_width": {
+          "label": "电脑端Logo宽度"
+        },
+        "mobile_logo_width": {
+          "label": "移动端Logo宽度"
+        },
+        "group_header_1": {
+          "label": "菜单"
+        },
+        "navigation_menu": {
+          "label": "导航菜单"
+        },
+        "desktop_menu_type": {
+          "label": "电脑端菜单类型",
+          "options_0": {
+            "label": "下拉菜单"
+          },
+          "options_1": {
+            "label": "抽屉菜单"
+          }
+        },
+        "desktop_menu_layout": {
+          "label": "导航布局",
+          "options_0": {
+            "label": "LOGO居中，菜单换行"
+          },
+          "options_1": {
+            "label": "Logo居左，菜单居左"
+          },
+          "options_2": {
+            "label": "LOGO居左，菜单居中"
+          },
+          "options_3": {
+            "label": "Logo居中，菜单居左"
+          }
+        },
+        "header_sticky_mode": {
+          "label": "页头悬浮置顶方式",
+          "options_0": {
+            "label": "不置顶"
+          },
+          "options_1": {
+            "label": "始终置顶"
+          },
+          "options_2": {
+            "label": "仅向上滑动时置顶"
+          }
+        },
+        "group_header_2": {
+          "label": "工具栏"
+        },
+        "show_search_entry": {
+          "label": "展示搜索入口"
+        },
+        "show_user_entry": {
+          "label": "展示个人中心入口"
+        },
+        "show_cart_entry": {
+          "label": "显示购物车"
+        },
+        "desktop_spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "image_banner": {
+      "blocks": {
+        "button": {
+          "name": "按钮",
+          "settings": {
+            "button_text_1": {
+              "label": "按钮文案"
+            },
+            "button_url_1": {
+              "label": "跳转链接"
+            },
+            "secondary_button_style_1": {
+              "label": "使用次级按钮样式"
+            },
+            "button_text_2": {
+              "label": "按钮文案2"
+            },
+            "button_url_2": {
+              "label": "跳转链接2"
+            },
+            "secondary_button_style_2": {
+              "label": "使用次级按钮样式"
+            },
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "按钮"
+            }
+          }
+        },
+        "container": {
+          "name": "内容容器",
+          "settings": {
+            "color_scheme": {
+              "label": "配色"
+            },
+            "show_background_color": {
+              "label": "显示背景色"
+            },
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "内容容器"
+            }
+          }
+        },
+        "description": {
+          "name": "描述",
+          "settings": {
+            "text": {
+              "label": "正文"
+            },
+            "text_align": {
+              "label": "文字对齐"
+            },
+            "spacing": {
+              "label": "边距"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "描述"
+            }
+          }
+        },
+        "heading": {
+          "name": "标题",
+          "settings": {
+            "heading": {
+              "label": "标题"
+            },
+            "text_size": {
+              "label": "文字大小",
+              "options_0": {
+                "label": "超大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "文本对齐",
+              "options_0": {
+                "label": "左"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "右"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "标题"
+            }
+          }
+        },
+        "subheading": {
+          "name": "副标题",
+          "settings": {
+            "subheading": {
+              "label": "副标题"
+            },
+            "text_align": {
+              "label": "文本对齐",
+              "options_0": {
+                "label": "左"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "右"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "副标题"
+            }
+          }
+        }
+      },
+      "name": "图片横幅",
+      "settings": {
+        "first_image": {
+          "label": "图片1"
+        },
+        "second_image": {
+          "label": "图片2"
+        },
+        "image_height": {
+          "label": "图片高度",
+          "info": "推荐上传2:3比例的图片",
+          "options_0": {
+            "label": "小"
+          },
+          "options_1": {
+            "label": "中"
+          },
+          "options_2": {
+            "label": "大"
+          }
+        },
+        "match_height_to_first_image": {
+          "label": "高度适应第一张图片",
+          "info": "打开时覆盖图片高度设置"
+        },
+        "overlay_opacity": {
+          "label": "遮罩不透明度"
+        },
+        "show_text_below_image": {
+          "label": "图片下方显示文字"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "图文展示",
+          "name": "图片横幅"
+        }
+      }
+    },
+    "image_with_text": {
+      "blocks": {
+        "button": {
+          "name": "按钮",
+          "settings": {
+            "text": {
+              "label": "按钮文案"
+            },
+            "link": {
+              "label": "跳转链接"
+            },
+            "use_secondary_style": {
+              "label": "使用次级按钮样式"
+            },
+            "size": {
+              "label": "尺寸"
+            },
+            "spacing": {
+              "label": "间距"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "按钮"
+            }
+          }
+        },
+        "group": {
+          "name": "内容容器",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "内容容器"
+            }
+          }
+        },
+        "heading": {
+          "name": "标题",
+          "settings": {
+            "heading": {
+              "label": "标题"
+            },
+            "text_size": {
+              "label": "文字大小",
+              "options_0": {
+                "label": "超大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "文本对齐",
+              "options_0": {
+                "label": "左"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "右"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "主标题"
+            }
+          }
+        },
+        "image": {
+          "name": "图片",
+          "settings": {
+            "image": {
+              "label": "添加图片"
+            },
+            "aspect_ratio": {
+              "label": "图片尺寸",
+              "options_0": {
+                "label": "原始比例"
+              },
+              "options_1": {
+                "label": "1:1"
+              },
+              "options_2": {
+                "label": "4:3"
+              },
+              "options_3": {
+                "label": "3:2"
+              },
+              "options_4": {
+                "label": "16:9"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "图片"
+            }
+          }
+        },
+        "rich_text": {
+          "name": "富文本",
+          "settings": {
+            "content": {
+              "label": "正文"
+            },
+            "text_align": {
+              "label": "文本对齐",
+              "options_0": {
+                "label": "左"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "右"
+              }
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "富文本"
+            }
+          }
+        },
+        "subheading": {
+          "name": "副标题",
+          "settings": {
+            "subtitle": {
+              "label": "副标题"
+            },
+            "text_align": {
+              "label": "文字对齐",
+              "options_0": {
+                "label": "左"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "右"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "副标题"
+            }
+          }
+        }
+      },
+      "name": "图文模块",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "图文展示",
+          "name": "图文模块"
+        }
+      }
+    },
+    "main_article": {
+      "blocks": {
+        "button": {
+          "back": {
+            "name": "返回按钮",
+            "presets": {
+              "presets_0": {
+                "name": "返回按钮"
+              }
+            }
+          }
+        },
+        "comment": {
+          "name": "评论",
+          "settings": {
+            "group_header_0": {
+              "label": "请前往「博客」，管理博客集合中评论处理方式允许评论"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "评论"
+            }
+          }
+        },
+        "content": {
+          "name": "内容",
+          "presets": {
+            "presets_0": {
+              "name": "内容"
+            }
+          }
+        },
+        "cover": {
+          "image": {
+            "name": "配图",
+            "settings": {
+              "aspect_ratio": {
+                "label": "图片比例",
+                "options_0": {
+                  "label": "原始比例"
+                },
+                "options_1": {
+                  "label": "1:1"
+                },
+                "options_2": {
+                  "label": "4:3"
+                },
+                "options_3": {
+                  "label": "3:2"
+                },
+                "options_4": {
+                  "label": "16:9"
+                }
+              },
+              "border_radius": {
+                "label": "圆角半径"
+              }
+            },
+            "presets": {
+              "presets_0": {
+                "name": "配图"
+              }
+            }
+          }
+        },
+        "info": {
+          "name": "作者/时间",
+          "settings": {
+            "show_date": {
+              "label": "显示日期"
+            },
+            "show_author": {
+              "label": "显示作者"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "作者/时间"
+            }
+          }
+        },
+        "share": {
+          "name": "分享",
+          "presets": {
+            "presets_0": {
+              "name": "分享"
+            }
+          }
+        },
+        "title": {
+          "name": "标题",
+          "presets": {
+            "presets_0": {
+              "name": "标题"
+            }
+          }
+        }
+      },
+      "name": "博客文章",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "main_blog": {
+      "blocks": {
+        "title": {
+          "name": "博客集合名称",
+          "settings": {
+            "text_size": {
+              "label": "文字大小",
+              "options_0": {
+                "label": "超大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "文本对齐",
+              "options_0": {
+                "label": "左对齐"
+              },
+              "options_1": {
+                "label": "居中对齐"
+              },
+              "options_2": {
+                "label": "右对齐"
+              }
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "博客集合名称"
+            }
+          }
+        }
+      },
+      "name": "博客集合",
+      "settings": {
+        "desktop_columns": {
+          "label": "电脑端列数",
+          "options_0": {
+            "label": "1列"
+          },
+          "options_1": {
+            "label": "2列"
+          }
+        },
+        "page_size": {
+          "label": "每页博客数量"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "main_cart_footer": {
+      "blocks": {
+        "buttons": {
+          "name": "结账按钮",
+          "presets": {
+            "presets_0": {
+              "name": "结账按钮"
+            }
+          }
+        },
+        "subtotal": {
+          "name": "小计价格",
+          "presets": {
+            "presets_0": {
+              "name": "小计价格"
+            }
+          }
+        }
+      },
+      "name": "小计"
+    },
+    "main_cart_items": {
+      "name": "商品列表",
+      "settings": {
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "main_collection_cover": {
+      "blocks": {
+        "banner": {
+          "name": "分类图",
+          "settings": {
+            "mobile_banner_image": {
+              "label": "移动端banner图"
+            },
+            "layout": {
+              "label": "排版"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "blocks": {
+            "$heading": {
+              "name": "标题"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "分类图"
+            }
+          }
+        },
+        "description": {
+          "name": "分类描述",
+          "settings": {
+            "group_header_0": {
+              "label": "内容和排版可前往【分类-分类描述】进行调整"
+            }
+          }
+        },
+        "heading": {
+          "name": "标题",
+          "settings": {
+            "text_size": {
+              "label": "文字大小",
+              "options_0": {
+                "label": "超大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "文字对齐"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "标题"
+            }
+          }
+        },
+        "$banner": {
+          "name": "分类图"
+        },
+        "$heading": {
+          "name": "标题"
+        },
+        "$description": {
+          "name": "分类描述"
+        }
+      },
+      "name": "分类封面"
+    },
+    "main_collection_products": {
+      "name": "商品列表",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "page_size": {
+          "label": "每页商品总数"
+        },
+        "desktop_columns": {
+          "label": "电脑端列数"
+        },
+        "mobile_columns": {
+          "label": "移动端列数",
+          "options_0": {
+            "label": "2列"
+          },
+          "options_1": {
+            "label": "1列"
+          }
+        },
+        "filter_layout": {
+          "label": "筛选布局",
+          "options_0": {
+            "label": "抽屉"
+          },
+          "options_1": {
+            "label": "水平"
+          },
+          "options_2": {
+            "label": "垂直"
+          }
+        },
+        "enable_filtering": {
+          "label": "启用筛选器"
+        },
+        "enable_sorting": {
+          "label": "启用商品排序"
+        }
+      }
+    },
+    "main_collections_all": {
+      "blocks": {
+        "list": {
+          "name": "分类列表",
+          "settings": {
+            "sort": {
+              "label": "排序",
+              "options_0": {
+                "label": "名称：A-Z"
+              },
+              "options_1": {
+                "label": "名称：Z-A"
+              },
+              "options_2": {
+                "label": "日期从近到早"
+              },
+              "options_3": {
+                "label": "日期从早到近"
+              },
+              "options_4": {
+                "label": "商品：多-少"
+              },
+              "options_5": {
+                "label": "商品：少-多"
+              }
+            },
+            "image_full_screen": {
+              "label": "图片全屏展示"
+            },
+            "desktop_columns": {
+              "label": "电脑端列数"
+            },
+            "mobile_columns": {
+              "label": "移动端列数"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "分类列表"
+            }
+          }
+        }
+      },
+      "name": "分类列表",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        }
+      }
+    },
+    "main_not_found": {
+      "name": "404页面",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        }
+      }
+    },
+    "main_order_tracking": {
+      "name": "订单查询",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "间距"
+        },
+        "title": {
+          "label": "标题"
+        },
+        "btn_text": {
+          "label": "按钮文案"
+        }
+      }
+    },
+    "main_page": {
+      "name": "自定义页面",
+      "settings": {
+        "spacing": {
+          "name": "间距"
+        }
+      }
+    },
+    "main_password": {
+      "blocks": {
+        "content_group": {
+          "name": "内容容器",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "内容容器"
+            }
+          }
+        },
+        "email_subscribe": {
+          "name": "邮件订阅",
+          "presets": {
+            "presets_0": {
+              "name": "邮件订阅"
+            }
+          }
+        }
+      },
+      "name": "密码",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "image": {
+          "label": "背景图片"
+        },
+        "blend_overlay_with_opacity": {
+          "label": "图片叠加不透明度"
+        },
+        "show_background_image": {
+          "label": "显示背景图片"
+        },
+        "banner_height": {
+          "label": "横幅高度",
+          "info": "若要获得最佳效果，请使用宽高比为 16:9 的图片",
+          "options_0": {
+            "label": "适应图片"
+          },
+          "options_1": {
+            "label": "小"
+          },
+          "options_2": {
+            "label": "中"
+          },
+          "options_3": {
+            "label": "大"
+          }
+        },
+        "show_text_below": {
+          "label": "移动端图片下方显示内容"
+        }
+      }
+    },
+    "main_password_footer": {
+      "name": "密码页脚",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        }
+      }
+    },
+    "main_password_header": {
+      "name": "密码页头",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "logo_image": {
+          "label": "Logo"
+        },
+        "desktop_logo_width": {
+          "label": "电脑端Logo宽度"
+        },
+        "mobile_logo_width": {
+          "label": "移动端Logo宽度"
+        }
+      }
+    },
+    "main_product": {
+      "blocks": {
+        "product_info": {
+          "name": "商品信息",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "商品信息"
+            }
+          }
+        },
+        "product_media": {
+          "name": "商品图片",
+          "settings": {
+            "layout_size": {
+              "label": "电脑端媒体大小",
+              "options_0": {
+                "label": "大"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "小"
+              }
+            },
+            "image_quality": {
+              "label": "图片压缩比",
+              "info": "配置主图和缩略图的压缩比，建议选择80%及以下的压缩比，以保证店铺性能及用户体验。",
+              "options_0": {
+                "label": "原图比例"
+              },
+              "options_1": {
+                "label": "90%"
+              },
+              "options_2": {
+                "label": "80%"
+              },
+              "options_3": {
+                "label": "70%"
+              }
+            },
+            "video_loop": {
+              "label": "视频循环播放"
+            },
+            "desktop_layout": {
+              "label": "电脑端布局",
+              "options_0": {
+                "label": "平铺"
+              },
+              "options_1": {
+                "label": "两列"
+              },
+              "options_2": {
+                "label": "缩略图平铺"
+              },
+              "options_3": {
+                "label": "缩略图轮播"
+              }
+            },
+            "mobile_layout": {
+              "label": "移动端布局",
+              "options_0": {
+                "label": "两列"
+              },
+              "options_1": {
+                "label": "隐藏缩略图"
+              },
+              "options_2": {
+                "label": "显示缩略图"
+              },
+              "options_3": {
+                "label": "全屏大图"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "商品图片"
+            }
+          }
+        }
+      },
+      "name": "商品详情",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "main_search": {
+      "blocks": {
+        "results": {
+          "name": "结果列表",
+          "settings": {
+            "page_size": {
+              "label": "每页结果数量"
+            },
+            "desktop_columns": {
+              "label": "电脑端列数"
+            },
+            "mobile_columns": {
+              "label": "移动端列数",
+              "options_0": {
+                "label": "1列"
+              },
+              "options_1": {
+                "label": "2列"
+              }
+            },
+            "filter_layout": {
+              "label": "筛选布局",
+              "options_0": {
+                "label": "抽屉"
+              },
+              "options_1": {
+                "label": "水平"
+              },
+              "options_2": {
+                "label": "垂直"
+              }
+            },
+            "enable_filtering": {
+              "label": "启用筛选器"
+            },
+            "enable_sorting": {
+              "label": "启用商品排序"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "结果列表"
+            }
+          }
+        }
+      },
+      "name": "搜索结果",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      }
+    },
+    "predictive_search": {
+      "name": "结果列表"
+    },
+    "recommended_product": {
+      "name": "商品推荐",
+      "settings": {
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "排版"
+        }
+      }
+    },
+    "rich_text": {
+      "name": "富文本",
+      "settings": {
+        "background_image": {
+          "label": "背景图片"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "图文展示",
+          "name": "富文本"
+        }
+      }
+    },
+    "sign_up_and_save": {
+      "blocks": {
+        "subscription": {
+          "name": "订阅输入框",
+          "settings": {
+            "placeholder": {
+              "label": "输入框提示文案"
+            },
+            "button_text": {
+              "label": "按钮文案"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "订阅输入框"
+            }
+          }
+        }
+      },
+      "name": "邮件订阅",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "full_screen_width": {
+          "label": "宽度全屏"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "客户运营",
+          "name": "邮件订阅"
+        }
+      }
+    },
+    "slideshow": {
+      "blocks": {
+        "description": {
+          "name": "描述",
+          "settings": {
+            "text": {
+              "label": "正文"
+            },
+            "text_align": {
+              "label": "文本对齐"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "描述"
+            }
+          }
+        },
+        "group": {
+          "name": "内容容器",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "内容容器"
+            }
+          }
+        },
+        "image": {
+          "name": "图片",
+          "settings": {
+            "desktop_image": {
+              "label": "电脑端图片"
+            },
+            "mobile_image": {
+              "label": "移动端图片"
+            },
+            "image_mask_opacity": {
+              "label": "图片遮罩"
+            },
+            "show_text_mask": {
+              "label": "显示文字蒙层"
+            },
+            "text_mask_color": {
+              "label": "文字蒙层颜色",
+              "options_0": {
+                "label": "深色"
+              },
+              "options_1": {
+                "label": "浅色"
+              }
+            },
+            "color_scheme": {
+              "label": "配色"
+            },
+            "layout": {
+              "label": "排版"
+            },
+            "spacing": {
+              "label": "边距"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "图片"
+            }
+          }
+        },
+        "subtitle": {
+          "name": "副标题",
+          "settings": {
+            "subtitle": {
+              "label": "副标题"
+            },
+            "text_align": {
+              "label": "文本对齐"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "副标题"
+            }
+          }
+        },
+        "title": {
+          "name": "标题",
+          "settings": {
+            "text": {
+              "label": "标题"
+            },
+            "text_size": {
+              "label": "文字大小",
+              "options_0": {
+                "label": "超大"
+              },
+              "options_1": {
+                "label": "大"
+              },
+              "options_2": {
+                "label": "中"
+              },
+              "options_3": {
+                "label": "小"
+              }
+            },
+            "text_align": {
+              "label": "文本对齐"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "标题"
+            }
+          }
+        }
+      },
+      "name": "轮播图",
+      "settings": {
+        "desktop_height": {
+          "label": "电脑端高度",
+          "options_0": {
+            "label": "适应第一张图片尺寸"
+          },
+          "options_1": {
+            "label": "450px"
+          },
+          "options_2": {
+            "label": "550px"
+          },
+          "options_3": {
+            "label": "650px"
+          },
+          "options_4": {
+            "label": "750px"
+          },
+          "options_5": {
+            "label": "全屏"
+          }
+        },
+        "mobile_height": {
+          "label": "移动端高度",
+          "options_0": {
+            "label": "适应第一张图片尺寸"
+          },
+          "options_1": {
+            "label": "250px"
+          },
+          "options_2": {
+            "label": "300px"
+          },
+          "options_3": {
+            "label": "400px"
+          },
+          "options_4": {
+            "label": "500px"
+          },
+          "options_5": {
+            "label": "全屏"
+          }
+        },
+        "pagination_style": {
+          "label": "翻页样式",
+          "options_0": {
+            "label": "箭头"
+          },
+          "options_1": {
+            "label": "进度条"
+          },
+          "options_2": {
+            "label": "小圆点"
+          }
+        },
+        "auto_switch": {
+          "label": "启用自动切换"
+        },
+        "switch_interval": {
+          "label": "切换间隔"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "图文展示",
+          "name": "轮播图"
+        }
+      }
+    },
+    "text_columns_with_image": {
+      "blocks": {
+        "card_group": {
+          "name": "图文卡片组",
+          "settings": {
+            "image_aspect_ratio": {
+              "label": "图片比例",
+              "options_0": {
+                "label": "原比例"
+              },
+              "options_1": {
+                "label": "1:1"
+              },
+              "options_3": {
+                "label": "圆形"
+              }
+            },
+            "content_alignment": {
+              "label": "内容对齐方式",
+              "options_0": {
+                "label": "左对齐"
+              },
+              "options_1": {
+                "label": "右对齐"
+              }
+            },
+            "desktop_columns": {
+              "label": "电脑端列数",
+              "options_0": {
+                "label": "1"
+              },
+              "options_2": {
+                "label": "3"
+              },
+              "options_3": {
+                "label": "4"
+              }
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "图文卡片组"
+            }
+          }
+        },
+        "card": {
+          "name": "图文卡片",
+          "settings": {
+            "button_text": {
+              "label": "按钮文案"
+            },
+            "link": {
+              "label": "跳转链接"
+            },
+            "layout": {
+              "label": "排版"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "图文卡片"
+            }
+          }
+        },
+        "heading": {
+          "name": "标题和跳转",
+          "settings": {
+            "title": {
+              "label": "标题"
+            },
+            "font_size": {
+              "label": "文字大小",
+              "options_0": {
+                "label": "大"
+              },
+              "options_1": {
+                "label": "中"
+              },
+              "options_2": {
+                "label": "小"
+              }
+            },
+            "link": {
+              "label": "跳转链接"
+            },
+            "link_text": {
+              "label": "跳转链接文案"
+            }
+          }
+        },
+        "image": {
+          "name": "图片",
+          "settings": {
+            "image": {
+              "label": "图片"
+            }
+          }
+        },
+        "text": {
+          "name": "正文",
+          "settings": {
+            "text": {
+              "label": "正文"
+            }
+          }
+        },
+        "title": {
+          "name": "标题",
+          "settings": {
+            "title": {
+              "label": "标题"
+            }
+          }
+        }
+      },
+      "name": "图文列表",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "图文展示",
+          "name": "图文列表"
+        }
+      }
+    },
+    "video": {
+      "blocks": {
+        "name": "视频",
+        "settings": {
+          "poster_image": {
+            "label": "封面图"
+          },
+          "video_local_media": {
+            "label": "本地上传"
+          },
+          "video_external_media": {
+            "label": "外部视频链接",
+            "info": "输入 YouTube 嵌入链接"
+          },
+          "autoplay": {
+            "label": "自动播放视频"
+          },
+          "loop": {
+            "label": "循环播放"
+          },
+          "size": {
+            "label": "尺寸"
+          }
+        }
+      },
+      "name": "视频",
+      "settings": {
+        "color_scheme": {
+          "label": "配色"
+        },
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "category": "图文展示",
+          "name": "视频"
+        }
+      }
+    }
+  },
+  "blocks": {
+    "article": {
+      "card": {
+        "name": "博客卡片",
+        "settings": {
+          "layout": {
+            "label": "排版"
+          },
+          "spacing": {
+            "label": "边距"
+          },
+          "size": {
+            "label": "尺寸"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "博客卡片"
+          }
+        }
+      },
+      "cover": {
+        "name": "封面图",
+        "settings": {
+          "aspect_ratio": {
+            "label": "图片比例",
+            "options_0": {
+              "label": "原始比例"
+            },
+            "options_1": {
+              "label": "1:1"
+            },
+            "options_2": {
+              "label": "4:3"
+            },
+            "options_3": {
+              "label": "3:2"
+            },
+            "options_4": {
+              "label": "16:9"
+            }
+          },
+          "border_radius": {
+            "label": "圆角半径"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "封面图"
+          }
+        }
+      },
+      "date": {
+        "author": {
+          "name": "作者日期",
+          "settings": {
+            "show_author": {
+              "label": "显示作者"
+            },
+            "show_date": {
+              "label": "显示日期"
+            }
+          },
+          "presets": {
+            "presets_0": {
+              "name": "作者日期"
+            }
+          }
+        }
+      },
+      "excerpt": {
+        "name": "摘要",
+        "presets": {
+          "presets_0": {
+            "name": "摘要"
+          }
+        }
+      },
+      "info": {
+        "name": "博客信息",
+        "settings": {
+          "layout": {
+            "label": "排版"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "博客信息"
+          }
+        }
+      },
+      "title": {
+        "name": "标题",
+        "presets": {
+          "presets_0": {
+            "name": "标题"
+          }
+        }
+      }
+    },
+    "button_group": {
+      "name": "按钮组",
+      "settings": {
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "按钮组"
+        }
+      }
+    },
+    "button": {
+      "name": "按钮",
+      "settings": {
+        "text": {
+          "label": "按钮文案"
+        },
+        "link": {
+          "label": "跳转链接"
+        },
+        "use_secondary_style": {
+          "label": "使用次级按钮样式"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "按钮"
+        }
+      }
+    },
+    "collection": {
+      "card": {
+        "name": "商品分类卡片",
+        "settings": {
+          "color_scheme": {
+            "label": "配色"
+          },
+          "collection": {
+            "label": "商品分类"
+          },
+          "layout": {
+            "label": "排版"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "商品分类卡片"
+          }
+        }
+      },
+      "image": {
+        "name": "分类图片",
+        "settings": {
+          "aspect_ratio": {
+            "label": "分类图片比例",
+            "options_0": {
+              "label": "原始比例"
+            },
+            "options_1": {
+              "label": "1:1"
+            },
+            "options_2": {
+              "label": "4:3"
+            },
+            "options_3": {
+              "label": "2:3"
+            }
+          },
+          "fit_type": {
+            "label": "图片填充方式",
+            "options_0": {
+              "label": "填充"
+            },
+            "options_1": {
+              "label": "适应"
+            }
+          },
+          "shape": {
+            "label": "分类图片形状",
+            "options_0": {
+              "label": "方形"
+            },
+            "options_1": {
+              "label": "圆形"
+            }
+          },
+          "layout": {
+            "label": "排版"
+          }
+        }
+      },
+      "title": {
+        "name": "分类名称",
+        "settings": {
+          "size": {
+            "label": "尺寸"
+          }
+        }
+      }
+    },
+    "custom_html": {
+      "name": "自定义HTML",
+      "settings": {
+        "html": {
+          "label": "HTML"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "自定义HTML"
+        }
+      }
+    },
+    "description": {
+      "name": "描述",
+      "settings": {
+        "content": {
+          "label": "正文"
+        },
+        "text_align": {
+          "label": "文本对齐"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      }
+    },
+    "group": {
+      "name": "内容容器",
+      "settings": {
+        "layout": {
+          "label": "排版"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "group"
+        }
+      }
+    },
+    "heading_with_link": {
+      "name": "标题和跳转",
+      "settings": {
+        "text": {
+          "label": "标题"
+        },
+        "text_size": {
+          "label": "文字大小",
+          "options_0": {
+            "label": "大"
+          },
+          "options_1": {
+            "label": "中"
+          },
+          "options_2": {
+            "label": "小"
+          }
+        },
+        "link_text": {
+          "label": "跳转链接文案",
+          "info": "该段文案仅展示在电脑端"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "标题和跳转"
+        }
+      }
+    },
+    "heading": {
+      "name": "标题",
+      "settings": {
+        "text": {
+          "label": "标题"
+        },
+        "text_size": {
+          "label": "文字大小",
+          "options_0": {
+            "label": "超大"
+          },
+          "options_1": {
+            "label": "大"
+          },
+          "options_2": {
+            "label": "中"
+          },
+          "options_3": {
+            "label": "小"
+          }
+        },
+        "text_align": {
+          "label": "文字对齐"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "标题"
+        }
+      }
+    },
+    "product": {
+      "detail_additional": {
+        "name": "自定义内容",
+        "settings": {
+          "title": {
+            "label": "标题"
+          },
+          "icon": {
+            "label": "图标",
+            "options_0": {
+              "label": "不显示"
+            },
+            "options_1": {
+              "label": "安全支付"
+            },
+            "options_2": {
+              "label": "包裹"
+            },
+            "options_3": {
+              "label": "电子邮箱"
+            },
+            "options_4": {
+              "label": "定位"
+            },
+            "options_5": {
+              "label": "顾客"
+            },
+            "options_6": {
+              "label": "聊天"
+            },
+            "options_7": {
+              "label": "礼物"
+            },
+            "options_8": {
+              "label": "手机"
+            },
+            "options_9": {
+              "label": "帮助信息"
+            },
+            "options_10": {
+              "label": "物流"
+            },
+            "options_11": {
+              "label": "折扣标签"
+            }
+          },
+          "description": {
+            "label": "描述内容"
+          },
+          "custom_page": {
+            "label": "自定义页面"
+          },
+          "enabled_fold": {
+            "label": "折叠展示"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "自定义内容"
+          }
+        }
+      },
+      "detail_buy_buttons": {
+        "name": "购买按钮",
+        "presets": {
+          "presets_0": {
+            "name": "购买按钮"
+          }
+        }
+      },
+      "detail_description": {
+        "name": "商品描述",
+        "settings": {
+          "text_align": {
+            "label": "文字对齐"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "商品描述"
+          }
+        }
+      },
+      "detail_heading": {
+        "name": "标题",
+        "settings": {
+          "heading": {
+            "label": "标题"
+          },
+          "text_size": {
+            "label": "文字大小",
+            "options_0": {
+              "label": "超大"
+            },
+            "options_1": {
+              "label": "大"
+            },
+            "options_2": {
+              "label": "中"
+            },
+            "options_3": {
+              "label": "小"
+            }
+          },
+          "text_align": {
+            "label": "文字对齐"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "标题"
+          }
+        }
+      },
+      "detail_inventory": {
+        "name": "库存状态",
+        "settings": {
+          "inventory_threshold": {
+            "label": "低库存阈值",
+            "info": "选择 0 代表总是展示“有货”"
+          },
+          "show_inventory_quantity": {
+            "label": "显示库存数量"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "库存状态"
+          }
+        }
+      },
+      "detail_popup": {
+        "name": "弹出框",
+        "settings": {
+          "text": {
+            "label": "弹窗标题"
+          },
+          "page": {
+            "label": "弹窗页面"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "弹出框"
+          }
+        }
+      },
+      "detail_price": {
+        "name": "价格",
+        "presets": {
+          "presets_0": {
+            "name": "价格"
+          }
+        }
+      },
+      "detail_quantity_selector": {
+        "name": "数量选择器",
+        "presets": {
+          "presets_0": {
+            "name": "数量选择器"
+          }
+        }
+      },
+      "detail_sell_info_row": {
+        "name": "销售信息行",
+        "settings": {
+          "info_icon": {
+            "label": "图标",
+            "options_0": {
+              "label": "复选框"
+            },
+            "options_1": {
+              "label": "地球"
+            },
+            "options_2": {
+              "label": "环保"
+            },
+            "options_3": {
+              "label": "包裹"
+            },
+            "options_4": {
+              "label": "安全锁"
+            },
+            "options_5": {
+              "label": "货车"
+            }
+          },
+          "custom_info_icon": {
+            "label": "自定义图标"
+          },
+          "info_text": {
+            "label": "文案"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "销售信息行"
+          }
+        }
+      },
+      "detail_sell_info": {
+        "name": "销售信息",
+        "presets": {
+          "presets_0": {
+            "name": "销售信息"
+          }
+        }
+      },
+      "detail_share": {
+        "name": "分享",
+        "presets": {
+          "presets_0": {
+            "name": "分享"
+          }
+        }
+      },
+      "detail_variant_picker": {
+        "name": "多属性选择器",
+        "settings": {
+          "picker_type": {
+            "label": "多属性展示方式",
+            "options_0": {
+              "label": "平铺"
+            },
+            "options_1": {
+              "label": "下拉框"
+            }
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "多属性选择器"
+          }
+        }
+      }
+    },
+    "product_list": {
+      "card": {
+        "name": "商品卡片",
+        "settings": {
+          "layout": {
+            "label": "排版"
+          },
+          "size": {
+            "label": "尺寸"
+          }
+        },
+        "blocks": {
+          "product-list/title": {
+            "name": "标题"
+          },
+          "product-list/price": {
+            "name": "价格"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "商品卡片"
+          }
+        }
+      },
+      "discount": {
+        "tag": {
+          "name": "标签显示规则",
+          "presets": {
+            "presets_0": {
+              "name": "标签显示规则"
+            }
+          }
+        }
+      },
+      "image": {
+        "name": "商品图片",
+        "settings": {
+          "aspect_ratio": {
+            "label": "商品图比例",
+            "options_0": {
+              "label": "原始比例"
+            },
+            "options_1": {
+              "label": "1:1"
+            },
+            "options_3": {
+              "label": "4:3"
+            },
+            "options_4": {
+              "label": "2:3"
+            }
+          },
+          "fit_type": {
+            "label": "商品图填充方式",
+            "options_0": {
+              "label": "填充"
+            },
+            "options_1": {
+              "label": "适应"
+            }
+          },
+          "shape": {
+            "label": "图片形状",
+            "options_0": {
+              "label": "方形"
+            },
+            "options_1": {
+              "label": "圆形"
+            }
+          },
+          "hover_show_next_image": {
+            "label": "鼠标悬停时显示下一张商品图"
+          },
+          "layout": {
+            "label": "排版"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "商品列表"
+          }
+        }
+      },
+      "layer": {
+        "name": "图片浮层",
+        "settings": {
+          "layout": {
+            "label": "排版"
+          },
+          "size": {
+            "label": "尺寸"
+          },
+          "spacing": {
+            "label": "边距"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "图片浮层"
+          }
+        }
+      },
+      "list": {
+        "name": "商品列表",
+        "settings": {
+          "color_scheme": {
+            "label": "配色"
+          },
+          "page_size": {
+            "label": "最多显示商品数"
+          },
+          "desktop_columns": {
+            "label": "电脑端列数"
+          },
+          "mobile_columns": {
+            "label": "移动端列数"
+          },
+          "desktop_enable_slider": {
+            "label": "电脑端滑动查看"
+          },
+          "mobile_enable_slider": {
+            "label": "移动端滑动查看"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "商品列表"
+          }
+        }
+      },
+      "price": {
+        "name": "商品价格",
+        "presets": {
+          "presets_0": {
+            "name": "商品价格"
+          }
+        }
+      },
+      "quick": {
+        "add": {
+          "name": "快速加购",
+          "presets": {
+            "presets_0": {
+              "name": "快速加购"
+            }
+          }
+        }
+      },
+      "title": {
+        "name": "商品名称",
+        "presets": {
+          "presets_0": {
+            "name": "商品名称"
+          }
+        }
+      }
+    },
+    "rich_text": {
+      "name": "富文本",
+      "settings": {
+        "content": {
+          "label": "正文"
+        },
+        "text_align": {
+          "label": "文字对齐"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "富文本"
+        }
+      }
+    },
+    "subheading": {
+      "name": "副标题",
+      "settings": {
+        "subtitle": {
+          "label": "副标题"
+        },
+        "text_align": {
+          "label": "文字对齐"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "副标题"
+        }
+      }
+    }
+  },
+  "settings_schema": {
+    "color": {
+      "name": "颜色",
+      "settings": {
+        "color_schemes": {
+          "definition_0": {
+            "label": "背景"
+          },
+          "definition_1": {
+            "label": "文字"
+          },
+          "definition_2": {
+            "label": "浅色文字"
+          },
+          "definition_3": {
+            "label": "线条与边框"
+          },
+          "definition_4": {
+            "label": "按钮背景"
+          },
+          "definition_5": {
+            "label": "按钮文字"
+          },
+          "definition_6": {
+            "label": "次级按钮背景"
+          },
+          "definition_7": {
+            "label": "次级按钮文字"
+          },
+          "definition_8": {
+            "label": "次级按钮描边"
+          },
+          "definition_9": {
+            "label": "文字链接"
+          }
+        },
+        "group_header_0": {
+          "label": "商品"
+        },
+        "color_sale": {
+          "label": "售价"
+        },
+        "color_discount": {
+          "label": "优惠金额"
+        },
+        "color_tag_background": {
+          "label": "折扣标签"
+        },
+        "color_tag_text": {
+          "label": "折扣标签文字"
+        },
+        "group_header_1": {
+          "label": "其他"
+        },
+        "color_page_background": {
+          "label": "页面背景色"
+        },
+        "color_cart_bubble": {
+          "label": "购物车提示点"
+        },
+        "color_cart_bubble_text": {
+          "label": "购物车提示文字"
+        },
+        "color_image_background": {
+          "label": "图片背景"
+        },
+        "color_image_loading_background": {
+          "label": "图片加载背景"
+        },
+        "color_mask": {
+          "label": "弹窗遮罩背景"
+        },
+        "color_shadow": {
+          "label": "阴影",
+          "info": "用于按钮/商品卡片/分类卡片/博客卡片的阴影色值"
+        }
+      }
+    },
+    "font": {
+      "name": "字体",
+      "settings": {
+        "group_header_0": {
+          "label": "标题"
+        },
+        "sort_title_font": {
+          "label": "字体"
+        },
+        "sort_title_letter_spacing": {
+          "label": "字体间距"
+        },
+        "sort_title_size": {
+          "label": "字体大小"
+        },
+        "sort_title_line_height": {
+          "label": "字体行高"
+        },
+        "sort_title_uppercase": {
+          "label": "文字全部大写"
+        },
+        "group_header_1": {
+          "label": "正文"
+        },
+        "sort_body_font": {
+          "label": "字体"
+        },
+        "sort_body_letter_spacing": {
+          "label": "字体间距"
+        },
+        "sort_body_size": {
+          "label": "字体大小"
+        },
+        "sort_body_line_height": {
+          "label": "字体行高"
+        }
+      }
+    },
+    "layout": {
+      "name": "布局",
+      "settings": {
+        "group_header_0": {
+          "label": "基础"
+        },
+        "page_width": {
+          "label": "页面宽度"
+        },
+        "section_vertical_spacing": {
+          "label": "组件内垂直间距"
+        },
+        "group_header_1": {
+          "label": "网格",
+          "info": "影响存在多个列或行的网格布局"
+        },
+        "grid_horizontal_spacing": {
+          "label": "水平间距"
+        },
+        "grid_vertical_spacing": {
+          "label": "垂直间距"
+        }
+      }
+    },
+    "button": {
+      "name": "按钮",
+      "settings": {
+        "group_header_0": {
+          "label": "边框"
+        },
+        "button_border_thickness": {
+          "label": "厚度"
+        },
+        "button_border_opacity": {
+          "label": "不透明度"
+        },
+        "button_border_radius": {
+          "label": "圆角半径"
+        },
+        "group_header_1": {
+          "label": "阴影"
+        },
+        "button_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "button_shadow_offset_x": {
+          "label": "水平偏移"
+        },
+        "button_shadow_offset_y": {
+          "label": "垂直偏移"
+        },
+        "button_shadow_blur": {
+          "label": "模糊"
+        }
+      }
+    },
+    "sku": {
+      "name": "多属性选择器",
+      "settings": {
+        "group_header_0": {
+          "label": "边框"
+        },
+        "variant_selector_border_thickness": {
+          "label": "厚度"
+        },
+        "variant_selector_border_opacity": {
+          "label": "不透明度"
+        },
+        "variant_selector_border_radius": {
+          "label": "圆角半径"
+        },
+        "group_header_1": {
+          "label": "阴影"
+        },
+        "variant_selector_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "variant_selector_shadow_offset_x": {
+          "label": "水平偏移"
+        },
+        "variant_selector_shadow_offset_y": {
+          "label": "垂直偏移"
+        },
+        "variant_selector_shadow_blur": {
+          "label": "模糊"
+        }
+      }
+    },
+    "input": {
+      "name": "输入框",
+      "settings": {
+        "group_header_0": {
+          "label": "边框"
+        },
+        "input_border_thickness": {
+          "label": "厚度"
+        },
+        "input_border_opacity": {
+          "label": "不透明度"
+        },
+        "input_border_radius": {
+          "label": "圆角半径"
+        },
+        "group_header_1": {
+          "label": "阴影"
+        },
+        "input_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "input_shadow_offset_x": {
+          "label": "水平偏移"
+        },
+        "input_shadow_offset_y": {
+          "label": "垂直偏移"
+        },
+        "input_shadow_blur": {
+          "label": "模糊"
+        }
+      }
+    },
+    "product_card": {
+      "name": "商品卡片",
+      "settings": {
+        "group_header_0": {
+          "label": "商品信息"
+        },
+        "product_quick_add": {
+          "label": "快速加购"
+        },
+        "product_desktop_title_show": {
+          "label": "电脑端展示商品标题"
+        },
+        "product_mobile_title_show": {
+          "label": "移动端展示商品标题"
+        },
+        "product_title_display_type": {
+          "label": "商品标题显示",
+          "options_0": {
+            "label": "完整显示"
+          },
+          "options_1": {
+            "label": "最多显示1行"
+          },
+          "options_2": {
+            "label": "最多显示2行"
+          }
+        },
+        "group_header_1": {
+          "label": "商品卡片优惠标签",
+          "info": "仅适用于商品列表，详情页的优惠标签可前往 商品详情-价格 进行单独设置"
+        },
+        "product_discount_radius": {
+          "label": "优惠标签圆角半径"
+        },
+        "product_card_style": {
+          "label": "样式",
+          "options_0": {
+            "label": "标准"
+          },
+          "options_1": {
+            "label": "卡片"
+          }
+        },
+        "product_card_image_padding": {
+          "label": "图片边距",
+          "info": "设置图片和背景之间的间距"
+        },
+        "group_header_2": {
+          "label": "边框"
+        },
+        "product_card_border_thickness": {
+          "label": "厚度"
+        },
+        "product_card_border_opacity": {
+          "label": "不透明度"
+        },
+        "product_card_border_radius": {
+          "label": "圆角半径"
+        },
+        "group_header_3": {
+          "label": "阴影"
+        },
+        "product_card_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "product_card_shadow_offset_x": {
+          "label": "水平偏移"
+        },
+        "product_card_shadow_offset_y": {
+          "label": "垂直偏移"
+        },
+        "product_card_shadow_blur": {
+          "label": "模糊"
+        }
+      }
+    },
+    "collection_card": {
+      "name": "商品分类卡片",
+      "settings": {
+        "collection_card_style": {
+          "label": "样式",
+          "options_0": {
+            "label": "标准"
+          },
+          "options_1": {
+            "label": "卡片"
+          }
+        },
+        "collection_card_image_padding": {
+          "label": "图片边距",
+          "info": "设置图片和背景之间的间距"
+        },
+        "group_header_0": {
+          "label": "边框"
+        },
+        "collection_card_border_thickness": {
+          "label": "厚度"
+        },
+        "collection_card_border_opacity": {
+          "label": "不透明度"
+        },
+        "collection_card_border_radius": {
+          "label": "圆角半径"
+        },
+        "group_header_1": {
+          "label": "阴影"
+        },
+        "collection_card_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "collection_card_shadow_offset_x": {
+          "label": "水平偏移"
+        },
+        "collection_card_shadow_offset_y": {
+          "label": "垂直偏移"
+        },
+        "collection_card_shadow_blur": {
+          "label": "模糊"
+        }
+      }
+    },
+    "blog_card": {
+      "name": "博客卡片",
+      "settings": {
+        "article_card_style": {
+          "label": "样式",
+          "options_0": {
+            "label": "标准"
+          },
+          "options_1": {
+            "label": "卡片"
+          }
+        },
+        "article_card_image_padding": {
+          "label": "图片边距",
+          "info": "设置图片和背景之间的间距"
+        },
+        "group_header_0": {
+          "label": "边框"
+        },
+        "article_card_border_thickness": {
+          "label": "厚度"
+        },
+        "article_card_border_opacity": {
+          "label": "不透明度"
+        },
+        "article_card_border_radius": {
+          "label": "圆角半径"
+        },
+        "group_header_1": {
+          "label": "阴影"
+        },
+        "article_card_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "article_card_shadow_offset_x": {
+          "label": "水平偏移"
+        },
+        "article_card_shadow_offset_y": {
+          "label": "垂直偏移"
+        },
+        "article_card_shadow_blur": {
+          "label": "模糊"
+        }
+      }
+    },
+    "other_card": {
+      "name": "其他卡片",
+      "settings": {
+        "group_header_0": {
+          "label": "边框"
+        },
+        "card_border_thickness": {
+          "label": "厚度"
+        },
+        "card_border_opacity": {
+          "label": "不透明度"
+        },
+        "card_border_radius": {
+          "label": "圆角半径"
+        },
+        "group_header_1": {
+          "label": "阴影"
+        },
+        "card_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "card_shadow_offset_x": {
+          "label": "水平偏移"
+        },
+        "card_shadow_offset_y": {
+          "label": "垂直偏移"
+        },
+        "card_shadow_blur": {
+          "label": "模糊"
+        }
+      }
+    },
+    "dropdown_menu": {
+      "name": "下拉菜单和弹窗",
+      "settings": {
+        "group_header_0": {
+          "label": "边框"
+        },
+        "modal_border_thickness": {
+          "label": "厚度"
+        },
+        "modal_border_opacity": {
+          "label": "不透明度"
+        },
+        "modal_border_radius": {
+          "label": "圆角半径"
+        },
+        "group_header_1": {
+          "label": "阴影"
+        },
+        "modal_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "modal_shadow_offset_x": {
+          "label": "水平偏移"
+        },
+        "modal_shadow_offset_y": {
+          "label": "垂直偏移"
+        },
+        "modal_shadow_blur": {
+          "label": "模糊"
+        }
+      }
+    },
+    "drawer": {
+      "name": "抽屉",
+      "settings": {
+        "group_header_0": {
+          "label": "边框"
+        },
+        "drawer_border_thickness": {
+          "label": "厚度"
+        },
+        "drawer_border_opacity": {
+          "label": "不透明度"
+        },
+        "group_header_1": {
+          "label": "阴影"
+        },
+        "drawer_shadow_opacity": {
+          "label": "不透明度"
+        },
+        "drawer_shadow_offset_x": {
+          "label": "水平偏移"
+        },
+        "drawer_shadow_offset_y": {
+          "label": "垂直偏移"
+        },
+        "drawer_shadow_blur": {
+          "label": "模糊"
+        }
+      }
+    },
+    "cart": {
+      "name": "购物车",
+      "settings": {
+        "cart_add_type": {
+          "label": "购物车形式",
+          "options_0": {
+            "label": "抽屉"
+          },
+          "options_1": {
+            "label": "进入购物车页"
+          },
+          "options_2": {
+            "label": "通知弹窗"
+          }
+        },
+        "cart_color_scheme": {
+          "label": "配色方案"
+        }
+      }
+    },
+    "media_sosial": {
+      "name": "社交媒体",
+      "settings": {
+        "group_header_0": {
+          "label": "账号",
+          "info": "用于客户访问你的社交媒体账号"
+        },
+        "social_media_facebook_link": {
+          "label": "Facebook"
+        },
+        "social_media_twitter_link": {
+          "label": "X（Twitter）"
+        },
+        "social_media_pinterest_link": {
+          "label": "Pinterest"
+        },
+        "social_media_instagram_link": {
+          "label": "Instagram"
+        },
+        "social_media_snapchat_link": {
+          "label": "Snapchat"
+        },
+        "social_media_tiktok_link": {
+          "label": "TikTok"
+        },
+        "social_media_youtube_link": {
+          "label": "Youtube"
+        },
+        "social_media_vimeo_link": {
+          "label": "Vimeo"
+        },
+        "social_media_tumblr_link": {
+          "label": "Tumblr"
+        },
+        "social_media_line_link": {
+          "label": "Line"
+        },
+        "social_media_linkedin_link": {
+          "label": "Linkedin"
+        }
+      }
+    },
+    "favicon": {
+      "name": "网站图标",
+      "settings": {
+        "favicon_image": {
+          "label": "网站图标",
+          "info": "展示在浏览器标签页处，尺寸：32 x 32px"
+        }
+      }
+    }
+  }
+}

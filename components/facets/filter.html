@@ -1,0 +1,133 @@
+{{#var filter = props.filter /}}
+{{#var content_header = props.content_header /}}
+{{#var submenu_button_group = props.submenu_button_group /}}
+
+<details class="facets-filtering__details">
+  <summary class="facets-filtering__summary">
+    <span class="body2 body-font-bold">{{filter.label}}</span>
+    {{#component "icons/arrow-thin" /}}
+  </summary>
+  {{#switch filter.type}}
+    {{#case "price_range" /}}
+      <div class="facets-filtering__content price-range">
+        <div class="facets-filtering__content-header body4">
+          {{#if content_header}}
+            {{{content_header}}}
+          {{#else/}}
+            <span>
+              {{#var price = filter.range_max | money() /}}
+              {{{ "filters.max_price" | t(price=price)}}}
+            </span>
+            <theme-facets-remove>
+              <a href="{{filter.url_to_remove}}" class="facets-filtering__reset body4 body-font-bold">
+                {{ "filters.reset" | t() }}
+              </a>
+            </theme-facets-remove>
+          {{/if}}
+        </div>
+        <fieldset class="js-action">
+          {{#var initial_min_value /}}
+          {{#if filter.min_value.value}}
+            {{#set initial_min_value = filter.min_value.value /}}
+          {{#else/}}
+            {{#set initial_min_value = 0 /}}
+          {{/if}}
+
+          {{#var initial_max_value /}}
+          {{#if filter.max_value.value}}
+            {{#set initial_max_value = filter.max_value.value /}}
+          {{#else/}}
+            {{#set initial_max_value = filter.range_max /}}
+          {{/if}}
+          <theme-price-range>
+            <div class="price-range-input">
+              <div class="field">
+                <span class="field-currency body3">{{localization.country.currency.symbol}}</span>
+                <input
+                  class="field__input body3"
+                  name="{{filter.min_value.param_name}}"
+                  type="number"
+                  inputmode="decimal"
+                  min="0"
+                  max="{{#component `./digital-value` value=filter.range_max /}}"
+                  value="{{#component `./digital-value` value=initial_min_value /}}"
+                  data-type="min"
+                  step="0.01"
+                />
+              </div>
+              <span class="line"></span>
+              <div class="field">
+                <span class="field-currency body3">{{localization.country.currency.symbol}}</span>
+                <input
+                  class="field__input body3"
+                  name="{{filter.max_value.param_name}}"
+                  type="number"
+                  inputmode="decimal"
+                  min="0"
+                  max="{{#component `./digital-value` value=filter.range_max /}}"
+                  value="{{#component `./digital-value` value=initial_max_value /}}"
+                  data-type="max"
+                  step="0.01"
+                />
+              </div>
+            </div>
+          </theme-price-range>
+
+          {{{submenu_button_group}}}
+        </fieldset>
+
+        {{#if !submenu_button_group}}
+          <button type="button" name="confirm" class="facets-confirm button body3 body-font-bold">{{ "products.filters.confirm" | t()}}</button>
+        {{/if}}
+      </div>
+    {{#else/}}
+      <div class="facets-filtering__content">
+
+        <div class="facets-filtering__content-header body4 js-action">
+          {{#if content_header }}
+            {{{content_header}}}
+          {{#else/}}
+            <span>
+              {{#var count = filter.active_values | size() /}}
+              {{ "products.product_list.filters_selected" | t(count=count) }}
+            </span>
+            <theme-facets-remove>
+              <a href="{{filter.url_to_remove}}" class="facets-filtering__reset body4 body-font-bold">
+                {{ "filters.reset" | t() }}
+              </a>
+            </theme-facets-remove>
+          {{/if}}
+        </div>
+
+        <fieldset>
+          <ul class="facets-filtering__list js-action">
+            {{#for value in filter.values}}
+              <li class="facets-filtering__item">
+                {{#capture id}}Filter-{{props.facets_form_type}}-{{filter.param_name}}-{{forloop.index0}}{{/capture}}
+                {{#capture disabled }}{{#if !value.active && (value.count == 0)}}disabled{{/if}}{{/capture}}
+
+                <label for="{{id}}" class="facets-filtering__checkbox-wrapper {{disabled}}">
+                  <input
+                    id="{{id}}"
+                    type="checkbox"
+                    name="{{value.param_name}}"
+                    value="{{value.value}}"
+                    {{#if value.active}}checked{{/if}}
+                    {{disabled}}
+                  />
+                  <span class="body3">
+                    {{value.label}}
+                  </span>
+                  <span class="body4">
+                    {{value.count}}
+                  </span>
+                </label>
+              </li>
+            {{/for}}
+          </ul>
+
+          {{{submenu_button_group}}}
+        </fieldset>
+      </div>
+  {{/switch}}
+</details>

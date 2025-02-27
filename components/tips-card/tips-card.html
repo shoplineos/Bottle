@@ -1,0 +1,21 @@
+
+
+{{#component "stylesheet" src="./tips-card.css" | asset_url() /}}
+
+{{#var class_name = "" /}}
+
+{{#if props.type == "error"}}
+  {{#set class_name = "tips-card-fail" /}}
+{{/if}}
+
+<div class="tips-card body6 flex-align-center {{class_name}} {{props.class}}">
+  {{#if props.type == "success"}}
+    {{#component "icons/success" /}}
+  {{/if}}
+
+  {{#if props.type == "error"}}
+    {{#component "icons/warning" /}}
+  {{/if}}
+
+  {{props.text}}
+</div>

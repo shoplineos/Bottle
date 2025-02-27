@@ -1,0 +1,63 @@
+.customer-activate-account .marketing-discount {
+  display: flex;
+  max-height: 180px;
+  margin-block: 20px;
+  margin-inline: 0;
+  overflow: hidden;
+  background-color: rgba(var(--background-color));
+  border-radius: 8px;
+}
+.customer-activate-account .marketing-banner-image {
+  width: 140px;
+  max-height: 180px;
+}
+.customer-activate-account .marketing-banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+.customer-activate-account .marketing-banner-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.customer-activate-account .marketing-banner-body .marketing-banner-title {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  margin-block-end: 10px;
+  white-space: nowrap;
+}
+.customer-activate-account .marketing-banner-body .marketing-banner-title svg {
+  width: 12px;
+  height: 12px;
+}
+.customer-activate-account .marketing-banner-body .marketing-banner-title-text {
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(var(--color-text));
+  text-transform: capitalize;
+}
+.customer-activate-account .marketing-banner-body .marketing-banner-text {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(var(--color-page-background));
+  border-radius: 4px;
+}
+.customer-activate-account
+  .marketing-banner-body
+  .marketing-banner-text--inner {
+  display: -webkit-box;
+  flex: 1;
+  overflow: hidden;
+  font-weight: 500;
+  color: rgb(var(--color-text));
+  text-align: center;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

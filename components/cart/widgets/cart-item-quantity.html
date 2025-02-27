@@ -1,0 +1,45 @@
+
+
+{{#component "script" src="./cart-item-remove.js" | asset_url() /}}
+
+<div class="cart-item__amount">
+  <div class="cart-item__amount-operator">
+    
+    {{#if props.item.enable_quantity_adjust}}
+      {{#component
+        "input/input-number"
+        value=props.item.quantity
+        min=props.item.variant.quantity_rule.min
+        max=props.item.variant.quantity_rule.max
+        step=props.item.variant.quantity_rule.increment
+        name="quantity"
+      /}}
+    {{#else /}}
+      {{#component
+        "input/input-number"
+        value=props.item.quantity
+        min=props.item.quantity
+        max=props.item.quantity
+        step=props.item.variant.quantity_rule.increment
+        name="quantity"
+        disabled=true
+      /}}
+    {{/if}}
+
+    
+    {{#if props.item.enable_delete}}
+      <theme-cart-item-remove class="cart-item__remove">
+        {{#component "icons/delete" /}}
+      </theme-cart-item-remove>
+    {{/if}}
+  </div>
+
+  
+  {{#component "./cart-item-volume-pricing" item=props.item /}}
+
+  
+  <div class="cart-item__fail">
+    <span class="cart-item__fail-tip body5"></span>
+    {{#component "icons/warning" /}}
+  </div>
+</div>

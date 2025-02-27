@@ -1,0 +1,37 @@
+{{#component "stylesheet" src="./main-page.css" | asset_url() /}}
+
+<div class="page-width">
+  <div class="main-page {{section.settings | class_list()}}">
+    <h1 class="main-page__title title4">
+      {{page.title}}
+    </h1>
+    <div class="main-page__content rte">
+      {{{page.content}}}
+    </div>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_page.name",
+  "settings": [
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "name": "t:sections.main_page.settings.spacing.name",
+      "default": {
+        "padding-top": "80px",
+        "padding-right": "210px",
+        "padding-bottom": "80px",
+        "padding-left": "210px",
+        "@media (--mobile)": {
+          "padding-top": "40px",
+          "padding-right": "0",
+          "padding-bottom": "40px",
+          "padding-left": "0"
+        }
+      }
+    }
+  ]
+}
+{{/schema}}

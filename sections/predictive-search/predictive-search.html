@@ -1,0 +1,54 @@
+
+<div class="predictive-search-section">
+  {{#if predictive_search.products | size()}}
+    <div>
+      <h2 class="predictive-search__title">{{"search.product_list.title" | t()}}</h2>
+      <ul class="predictive-search__results">
+        {{#for product in predictive_search.products}}
+          <li class="predictive-search__result-item">
+            <a class="predictive-search__product" href="{{product.url}}">
+              <div class="predictive-search__product-image-wrap">
+                {{#var save_price = product.compare_at_price | minus(product.price) /}}
+                {{#if save_price}}
+                  <span class="predictive-search__product-save-price">{{{save_price | money()}}}</span>
+                {{/if}}
+
+                {{#if product.featured_image_v2}}
+                  {{#component "image" data=product.featured_image_v2 class="predictive-search__product-image" /}}
+                {{#else/}}
+                  {{#placeholder_svg "image" class="predictive-search__product-image" /}}
+                {{/if}}
+              </div>
+
+              <div class="predictive-search__product-content">
+                <h3 class="predictive-search__product-title">{{product.title}}</h3>
+                <span class="predictive-search__product-price">{{{product.price | money()}}}</span>
+              </div>
+            </a>
+          </li>
+        {{/for}}
+      </ul>
+    </div>
+  {{/if}}
+
+  <footer class="predictive-search__footer">
+    <input type="hidden" name="keyword" value="__QUERY_KEY__" />
+    <button class="predictive-search__more button button--link body3" type="submit" data-role="search-bar-more">
+      {{"general.search.search_hint" | t(key="__QUERY_KEY__") }}
+      {{#component "icons/arrow-right" /}}
+    </button>
+  </footer>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.predictive_search.name",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "product-list/card",
+      "limit": 1
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,29 @@
+
+
+
+
+{{#if customer.login_sources}}
+  <div class="card__item card-account__third-login">
+    <div class="body4 card__item-label">{{"customer.account.account_binding" | t()}}</div>
+
+    <div class="body4 card__item-value">
+      <div class="card__item-operate">
+        {{#for source in customer.login_sources}}
+          {{#if source.login_source == "facebook"}}
+            {{#component "icons/facebook-official" /}}
+          {{#else if source.login_source == "line" /}}
+            {{#component "icons/line-official" /}}
+          {{#else if source.login_source == "google" /}}
+            {{#component "icons/google-official" /}}
+          {{#else if source.login_source == "tiktok" /}}
+            {{#component "icons/tiktok-official" /}}
+          {{#else if source.login_source == "apple" /}}
+            {{#component "icons/apple-official" /}}
+        {{/if}}
+
+        <span>{{source.nickname | default(customer.name)}}</span>
+        {{/for}}
+      </div>
+    </div>
+  </div>
+{{/if}}

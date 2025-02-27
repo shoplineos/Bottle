@@ -1,0 +1,67 @@
+{{#layout "gift_card" /}}
+
+{{#component "stylesheet" src="gift-card/index.css" | asset_url() /}}
+
+{{#var invalid = false /}}
+{{#if !gift_card.enabled || gift_card.expired}}
+  {{#set invalid = true /}}
+{{/if}}
+
+{{#if gift_card.code}}
+  <div id="gift-card-page">
+    <div class="store-name">{{shop.name}}</div>
+    {{#if invalid}}
+      <div class="gift-card-status">{{"products.giftcard.invalid_tip" | t() }}</div>
+    {{#else/}}
+       <div class="gift-card-status">{{"products.giftcard.receive_tip" | t() }}</div>
+    {{/if}}
+    <div class="gift-card-wrapper {{#if invalid}}disabled{{/if}}">
+      <div class="gift-card-box">
+        <div class="gift-card-bg">
+          <div class="gift-card-code notranslate">{{gift_card.code}}</div>
+        </div>
+      </div>
+      <div class="gift-card-info">
+        <div class="balance item">
+          <div class="name">{{"products.giftcard.balance" | t() }}</div>
+          <div class="content notranslate">{{{gift_card.balance | money_with_currency()}}}</div>
+        </div>
+        <div class="expiration-time item">
+          <div class="name">{{"products.giftcard.expired_date" | t() }}</div>
+          {{#if gift_card.expires_on}}
+            <div class="content">
+              <div class="date-ymd">
+                {{#if gift_card.expired}}
+                  {{#component "icon_giftcard_warning" /}}
+                  <em>{{"products.giftcard.receive_at" | t() }}</em>
+                {{/if}}
+                <span>
+                  {{gift_card.expires_on | date(format="%Y-%m-%d")}}
+                </span>
+              </div>
+              <div class="date-hms">
+                {{gift_card.expires_on | date(format="%H:%M")}}
+              </div>
+            </div>
+          {{#else/}}
+             <div class="content">{{"products.giftcard.permanent" | t() }}</div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    <div class="gift-card-use-box">
+      <a href="{{routes.root_url}}" target="_blank" rel="noopener" class="btn-use">
+        {{#if invalid}}
+          {{"products.giftcard.buy_giftcard" | t() }}
+        {{#else/}}
+          {{"products.giftcard.use_giftcard" | t() }}
+        {{/if}}
+      </a>
+      {{#if !invalid}}
+        <div class="use-explain">{{"products.giftcard.use_giftcard_tip" | t() }}</div>
+      {{/if}}
+    </div>
+  </div>
+{{#else/}}
+   <div class="noGiftCardData"></div>
+{{/if}}

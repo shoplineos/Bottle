@@ -1,0 +1,105 @@
+<div class="image-banner__button-group {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{#if block.settings.button_text_1}}
+    {{#component
+      "button"
+      style_secondary=block.settings.secondary_button_style_1
+      text=block.settings.button_text_1
+      type="link"
+      link_url=block.settings.button_url_1
+    /}}
+  {{/if}}
+
+  {{#if block.settings.button_text_2}}
+    {{#component
+      "button"
+      text=block.settings.button_text_2
+      style_secondary=block.settings.secondary_button_style_2
+      type="link"
+      link_url=block.settings.button_url_2
+    /}}
+  {{/if}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.image_banner.blocks.button.name",
+  "icon": "button",
+  "tag": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_text_1",
+      "label": "t:sections.image_banner.blocks.button.settings.button_text_1.label",
+      "default": "Shop this"
+    },
+    {
+      "type": "url",
+      "id": "button_url_1",
+      "label": "t:sections.image_banner.blocks.button.settings.button_url_1.label",
+      "default": ""
+    },
+    {
+      "type": "switch",
+      "id": "secondary_button_style_1",
+      "label": "t:sections.image_banner.blocks.button.settings.secondary_button_style_1.label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text_2",
+      "label": "t:sections.image_banner.blocks.button.settings.button_text_2.label",
+      "default": "Shop all"
+    },
+    {
+      "type": "url",
+      "id": "button_url_2",
+      "label": "t:sections.image_banner.blocks.button.settings.button_url_2.label",
+      "default": ""
+    },
+    {
+      "type": "switch",
+      "id": "secondary_button_style_2",
+      "label": "t:sections.image_banner.blocks.button.settings.secondary_button_style_2.label",
+      "default": false
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.image_banner.blocks.button.settings.layout.label",
+      "default": {
+        "flex-direction": "row",
+        "flex-wrap": "nowrap",
+        "align-items": "center",
+        "justify-content": "center",
+        "row-gap": "14px",
+        "column-gap": "14px"
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.image_banner.blocks.button.settings.spacing.label",
+      "default": {
+        "padding-block-start": "8px",
+        "padding-inline-end": "0px",
+        "padding-block-end": "0px",
+        "padding-inline-start": "0px"
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.image_banner.blocks.button.settings.size.label",
+      "default": {
+        "width": "auto",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image_banner.blocks.button.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

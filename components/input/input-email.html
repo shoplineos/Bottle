@@ -1,0 +1,30 @@
+
+
+<div class="field{{#if props.class}} {{props.class}}{{/if}}">
+  <label class="field__inner">
+    <input
+      type="email"
+      pattern="^[a-zA-Z0-9+._\-]{1,50}@[a-zA-Z0-9_\-]+\.([\.]?[a-zA-Z0-9_\-]+){1,5}$"
+      class="field__input"
+      name="{{props.input_name}}"
+      placeholder="{{props.input_placeholder}}"
+      {{#if props.input_spellcheck}}spellcheck="{{props.input_spellcheck}}"{{/if}}
+      {{#if props.input_autocomplete}}autocomplete="{{props.input_autocomplete}}"{{/if}}
+      {{#if props.input_autocapitalize}}autocapitalize="{{props.input_autocapitalize}}"{{/if}}
+      {{#if props.input_autocorrect}}autocorrect="{{props.input_autocorrect}}"{{/if}}
+      {{#if props.input_required}}required{{/if}}
+      {{#if props.input_disabled}}disabled{{/if}}
+      {{#if props.input_value}}value="{{props.input_value}}"{{/if}}
+    />
+
+    <span class="field__label">{{props.input_placeholder}}</span>
+  </label>
+
+  {{#if props.input_has_submit_button}}
+    <div class="field__suffix">
+      <button type="submit" class="button button--link">
+        {{#component "icons/email" /}}
+      </button>
+    </div>
+  {{/if}}
+</div>

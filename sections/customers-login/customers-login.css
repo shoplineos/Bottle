@@ -1,0 +1,42 @@
+.customer-login__tips {
+  margin-block-end: 40px;
+}
+
+@media (max-width: 959px) {
+  .customer-login__tips {
+    margin-block-end: 20px;
+  }
+}
+.customer-login__third {
+  margin-block-start: 28px;
+}
+.customer-login__third-desc {
+  position: relative;
+  width: 100%;
+  margin-block-end: 26px;
+  text-align: center;
+}
+.customer-login__third-desc::before {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 0;
+  display: block;
+  width: 100%;
+  content: "";
+  border-block-start: 1px solid rgb(var(--color-entry-line));
+}
+.customer-login__third-desc span {
+  position: relative;
+  display: inline-block;
+  padding-inline: 20px;
+  background-color: rgb(var(--color-page-background));
+}
+.customer-login__third-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.customer-login__third-container a {
+  display: inline-block;
+  margin-inline: 12px;
+}

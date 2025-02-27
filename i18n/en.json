@@ -1,0 +1,1178 @@
+{
+  "blog": {
+    "blog": {
+      "next": "Next",
+      "previous": "Previous",
+      "read_more": "View more",
+      "related_articles": "Related articles"
+    },
+    "blog_list": {
+      "empty_description": "There are no blog posts in this blog.",
+      "readmore": "View More",
+      "title": "Blog",
+      "view_more": "View more"
+    },
+    "comment": {
+      "comment": "Comment",
+      "comment_audit_tip": "Your comment is submitted but needs to be moderated.",
+      "comment_empty": "Please fill in the comments",
+      "email": "Email",
+      "email_empty": "E-mail can not be empty",
+      "email_format": "Please enter correct email",
+      "form_title": "Comment",
+      "loadmore": "More comments",
+      "moderated_tip": "Note: commnets needs to be approved before publication",
+      "name": "Name",
+      "name_empty": "Please fill in name",
+      "post_comment": "Post comment",
+      "single_count": "{{count}} comments",
+      "submit": "Submit",
+      "submit_audit_tip": "Submitted successfully, pending review",
+      "success": "Comment posted sucessfully",
+      "title": "{{comment_length}} comments"
+    },
+    "general": {
+      "back": "Back to the blog title",
+      "back_to": "Back to {{{collectionTitle}}}."
+    }
+  },
+  "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "This item only sold start with amount of {{num}}"
+        },
+        "most": {
+          "desc": "This item only sold with amount of {{num}} at most"
+        },
+        "noIncrement": {
+          "desc": "This item only sold with increment of {{num}}"
+        }
+      }
+    },
+    "cart": {
+      "added_to_cart": "Added to your cart",
+      "buy_now": "Buy now",
+      "cancel": "Cancel",
+      "cart_subtotal": "Cart subtotal",
+      "cart_view": "View cart",
+      "confirm": "OK",
+      "got_it": "Got it"
+    },
+    "cart_error": "An error occured when updating the shopping cart, please try again.",
+    "cart_quantity_error": "You can only add {{quantity}} units of this product into shopping cart",
+    "checkout": {
+      "max_amount_limit": "You exceeded the maximum amount for checkout"
+    },
+    "checkout_proceeding": {
+      "checkout": "Checkout",
+      "checkout_proceed": "Below products exceed the purchasing limit, still proceed to checkout?",
+      "continue": "Continue",
+      "continue_shopping": "Continue shopping",
+      "day": "days",
+      "remove": "Remove",
+      "return_to_cart": "Return to cart",
+      "subtotal": "Subtotal",
+      "tax_included": "Tax included"
+    },
+    "couponCode": {
+      "exceedLimit": "Discount codes exceed quantity limit",
+      "existCode": "Discount code already exists",
+      "list": {
+        "unavailable": "All discount codes have expired"
+      },
+      "notSupport": {
+        "stacked": "Discount codes are not stackable"
+      },
+      "unavailable": "Discount code has expired"
+    },
+    "discount": {
+      "coupon_code_amount": "Coupon code discount",
+      "coupon_code_length_limit": "Coupon code cannot exceed {{range}} characters.",
+      "expected_discount": "Expected discount"
+    },
+    "discount_item": {
+      "buy_limit5": "You can buy up to {{stock}} item(s) with discount price at the same time"
+    },
+    "discount_price": {
+      "buy_limit1": "Only {{stock}}pieces left with this discount price",
+      "buy_limit2": "You can buy up to {{stock}} item(s) with discount price at the same time",
+      "buy_limit3": "You can only buy {{stock}} item(s) of this product with discount price"
+    },
+    "error": {
+      "default": "Failed to load resource",
+      "noshipping": "No available shipping rate plans",
+      "order": "Unable to place order",
+      "renew": "Failed to update data"
+    },
+    "general": {
+      "continue_as_a_guest": "Continue as a guest",
+      "support_oneTime_purchase_only": "Product supports only one-time purchase",
+      "support_subscription_only": "Product supports only purchase after subscription"
+    },
+    "item": {
+      "add_limit2": "You can add up to 99999 items to the shopping cart",
+      "click_to_view": "Click to view",
+      "custom_preview": "Custom preview",
+      "empty_cart": "Your cart is currently empty.",
+      "item_left": "Only {{stock}} item(s) left",
+      "market": {
+        "illegal": {
+          "excludedState": "The market goods are illegal, and this product is in an excluded state in the market."
+        }
+      },
+      "none_existent": "Product does not exist"
+    },
+    "next_step": {
+      "calculated_taxes_fees": "Taxes and shipping fee will be calculated at checkout",
+      "included_taxes_fees": "Tax and shipping will be added at checkout.",
+      "taxes_included_and_shipping_at_checkout": "Tax and shipping will be added at checkout.",
+      "taxes_included_and_shipping_policy": "Tax included. <a href=\"{{link}}\">Shipping</a> calculated at checkout.",
+      "taxes_not_included_and_shipping_policy_at_checkout": "Taxes and <a href=\"{{ link }}\">shipping</a> will be added at checkout."
+    },
+    "notices": {
+      "change_password_after_verification": "You can change password after verification",
+      "excess_product": "The products below exceed the purchase limit, please modify the quantity",
+      "product_amount_limit": "Sorry, the number of products in the cart exceeds the limit.",
+      "product_selected_invalid": "Sorry, the product you selected cannot be purchased. Please select again",
+      "store_nonexistent": "The store does not exist"
+    },
+    "order": {
+      "invalid_order_number": "invalid order number",
+      "paymentVoucher": {
+        "downloadDoc": "Download file",
+        "format": "Format",
+        "formatLimit": "Supports .jpg, .png, .pdf files with file size less than 20MB. You can upload at most 5 images",
+        "uploadAmount": "{{num}} payment proof(s) were uploaded",
+        "uploadLimit": "Please upload .jpg, .png, .pdf files with size less than 20MB"
+      },
+      "payment_voucher_confirmation": "Got it",
+      "shipping_address": "Shipping address",
+      "sign_in": "Or sign in with the following methods",
+      "tax_included": "Including {{price}} in taxes",
+      "try_again": "Upload failed. Please try again.",
+      "try_later": "system busy, please try again later.",
+      "upload_bank_transfer_vouhcer_for_confirmation": "Please upload payment proof here and we will confirm the payment for you, thank you.",
+      "upload_image_within_10_m_b": "Please upload JPG, PNG, GIF images within 10MB"
+    },
+    "payment": {
+      "channel": "Payment channel",
+      "create_time": "Created at",
+      "free": "Free",
+      "log_in": "Go to Sign In",
+      "payment_details": "Payment Detail",
+      "pending_review": "Paying",
+      "reference_number": "Payment reference number",
+      "status": "Status",
+      "subtotal_price": "Subtotal",
+      "sum": "Amount",
+      "total_sum": "Total",
+      "update_time": "Updated at"
+    },
+    "policy": {
+      "privacy_policy": "Privacy Policy"
+    },
+    "product": {
+      "unavailable_sale": "This product is not available for online sale"
+    },
+    "promotion": {
+      "no_promotion": "Do not join in promotion"
+    },
+    "shpping": {
+      "service_terms": "Terms of Service"
+    },
+    "stock": {
+      "limit": "Only {{stock}} left"
+    },
+    "subscription": {
+      "information": "Subscription"
+    },
+    "tips": {
+      "agree_with_the_shop": "I have read and agree to the",
+      "change_binding_after_verification": "You can connect/change {{value}} after verification",
+      "forget_password": "Forgot password",
+      "proceed_to_checkout": "Proceed to checkout",
+      "reset_password": "You're resetting password for account {{account}}"
+    }
+  },
+  "customer": {
+    "account": {
+      "account_binding": "Account Binding",
+      "account_information": "Account",
+      "address": "Address",
+      "bind": "Add",
+      "birthday": "Birthday",
+      "change_password": "Change password",
+      "confirm_btn": "Confirm",
+      "confirm_subscription_modal_btn": "Confirm Subscription",
+      "confirm_subscription_modal_content": "You have submitted a subscription before. A confirm email has been sent to this email address. You can either confirm in your email or click this button",
+      "confirm_subscription_modal_title": "Confirm your E-mail subscription",
+      "credit_card_number": "Credit card number",
+      "deadline": "For the purpose of business report, your order will still be visible. Your account data will be deleted after 9 days, you can cancel the process before that date.",
+      "delete_account": "Delete account",
+      "delete_account_email": "Email",
+      "delete_account_notify": "You can apply for closing this account. Once closed, any information for identifying this account will be deleted, including:",
+      "delete_deadline_tip": "User data will be deleted at {{time}}",
+      "email": "Email",
+      "email_repeat_tip": "The email has been registered",
+      "email_subscribe_invalid_tip": "Invalid Email Address",
+      "first_name": "First Name",
+      "gender": "Gender",
+      "gender_female": "Female",
+      "gender_male": "Male",
+      "gender_secret": "Prefer not to say",
+      "invalidEmail": "Invalid Email Address",
+      "ip_address": "IP address",
+      "last_name": "Last Name",
+      "modify_email": "Modify Email",
+      "modify_email_modal_title": "Modify Email",
+      "modify_phone": "Modify Phone",
+      "modify_phone_modal_title": "Modify Phone",
+      "name": "Name",
+      "next": "Next",
+      "nickname_empty_error": "Both First Name and Last Name can not be left blank",
+      "not_set": "Not set",
+      "password": "Password",
+      "personal_information": "Personal information",
+      "phone": "Phone number",
+      "reset_password_error_hint": "Please bind email or mobile phone first",
+      "revoke": "Cancel closing",
+      "revoke_btn": "Revoke account",
+      "revoke_message": "This account is under process for closing, account data will be deleted at {{time}}, you can cancel the process before that date.",
+      "save_btn": "SAVE",
+      "select_date": "Select Date",
+      "subscribe_confirm_tip": "Thanks for your subscription",
+      "timeout_tip": "Operation timed out, please verify again",
+      "unknow_error_tip": "Server error, please try again",
+      "unregister": "Delete your account",
+      "username": "Name",
+      "verify_email_message": "Before closing account, we need to verify your identity\nYour email {{email}} will receive a verification email",
+      "verify_phone_message": "Before closing account, we need to verify your identity\nYour mobile phone {{phone}} will receive a verification message"
+    },
+    "activate": {
+      "account_activated": "The account has been activated",
+      "apply_code": "Apply Code",
+      "apply_success": "Applied",
+      "button": "Activate",
+      "copy_success": "Coupon code copied",
+      "discount_title": "Activate account and get discount code",
+      "normal_title": "Activate account",
+      "normal_title_with_discount_code": "",
+      "subscription_text": "Subscribe for emails to receive updates, access to exclusive deals, and more.",
+      "success_title": "Congratulations on getting a great discount",
+      "token_expired": "The link has expired"
+    },
+    "address": {
+      "add_address": "Add address",
+      "address": "Address",
+      "address1": "Address ",
+      "address2": "Address 2",
+      "address_full_tip": "50 addresses have been saved and cannot be added at the moment",
+      "adress_full_tip": "50 addresses have been saved and cannot be added at the moment",
+      "city": "City",
+      "common_max": "Less than {{max}} characters!",
+      "common_min": "More than {{min}} characters",
+      "company": "Company",
+      "country": "Country/region",
+      "default": "Default",
+      "delete_address": "Delete Address",
+      "district": "District",
+      "edit_last_name_hint": "Please enter your last name",
+      "edit_phone_hint": "Please enter your mobile phone number",
+      "edit_shipping_address": "EDIT SHIPPING ADDRESS",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "max_address_tip": "At most 50 addresses can be created",
+      "no_address_data": "Currently, there is no delivery address",
+      "no_adress_data": "Currently, there is no delivery address",
+      "phone": "Mobile number",
+      "province": "Province",
+      "set_default_address": "Set as the default address",
+      "zip_code": "Postal code"
+    },
+    "company": {
+      "account": {
+        "billTitle": "Company billing address",
+        "link": "Company account application",
+        "shipping": "Company shipping address",
+        "title": "Company account application"
+      },
+      "address": {
+        "placeholder": "Street address"
+      },
+      "address2": {
+        "placeholder": "Apartment/Unit/Building"
+      },
+      "bill": {
+        "sameAsCompany": "Company billing address same as company shipping address"
+      },
+      "billing": {
+        "address": {
+          "placeholder": "Street address"
+        },
+        "address2": {
+          "placeholder": "Apartment/Unit/Building"
+        },
+        "city": {
+          "placeholder": "City"
+        },
+        "country": {
+          "placeholder": "Country/Region"
+        },
+        "district": {
+          "placeholder": "District"
+        },
+        "phone": {
+          "placeholder": "Phone number"
+        },
+        "province": {
+          "placeholder": "Province"
+        },
+        "zip": {
+          "placeholder": "Postal code"
+        }
+      },
+      "billingSameAsShipping": {
+        "placeholder": "Billing address is the same as the shipping address"
+      },
+      "billing_address": {
+        "title": "Company billing address"
+      },
+      "city": {
+        "placeholder": "City"
+      },
+      "company_name": {
+        "placeholder": "Company name"
+      },
+      "country": {
+        "placeholder": "Country/Region"
+      },
+      "create": {
+        "limit": "The number of companies for the shop has reached its limit. Please contact the merchant for assistance.",
+        "success": "Thank you. The form has been submitted."
+      },
+      "district": {
+        "placeholder": "District"
+      },
+      "email": {
+        "placeholder": "Email"
+      },
+      "field": {
+        "companyName": "Company name",
+        "email": "Email"
+      },
+      "first_name": {
+        "placeholder": "FIrst name"
+      },
+      "form": {
+        "submit": "Submit"
+      },
+      "last_name": {
+        "placeholder": "Last name"
+      },
+      "phone": {
+        "placeholder": "Phone number"
+      },
+      "province": {
+        "placeholder": "Province"
+      },
+      "register": {
+        "button": "Submit",
+        "success": {
+          "description": "Form submitted successfully",
+          "title": "Thank you!"
+        },
+        "title": "Company account application"
+      },
+      "shipping_address": {
+        "title": "Company shipping address"
+      },
+      "zip": {
+        "placeholder": "Postal code"
+      }
+    },
+    "email": {
+      "mail_common": "Email"
+    },
+    "forget_password": {
+      "forget_password_tips": "Forgot password",
+      "reset_password": "RESET PASSWORD",
+      "tips_password_can_be_changed_after_verification": "You can change password after verification",
+      "tips_reset_password": "You're resetting password for account {{account}}",
+      "token_expired": "Your reset password link has expired"
+    },
+    "general": {
+      "account": "ACCOUNT",
+      "and_button": "and",
+      "apr": "Apr",
+      "april": "April",
+      "aug": "Aug",
+      "august": "August",
+      "back_to_user_center": "Back to User Center",
+      "bind_change_email": "Connect/Change an email",
+      "bind_change_phone": "Connect/Change a mobile phone number",
+      "bind_email": "Bind email address",
+      "bind_phone": "Bind account",
+      "bind_success": "Connected",
+      "cancel": "CANCEL",
+      "cancel_common": "Cancel",
+      "cancel_mobile_button": "cancel",
+      "clear_button": "Clear",
+      "company_empty_hint": "Company name can't be blank",
+      "company_existed": "Company name already exists",
+      "company_frequent_operation": "Repeated operation. Please try again later.",
+      "company_registry_closed": "The merchant has not enabled the company account application feature. Please contact the merchant to apply.",
+      "confirm": "OK",
+      "confirm_button": "Ok",
+      "continue_as_a_guest": "Continue as a guest",
+      "date_format": "MM/dd/yyyy",
+      "dec": "Dec",
+      "december": "December",
+      "edit": "Edit",
+      "email": "Email address",
+      "email_empty_hint": "Please enter email address",
+      "email_error_hint": "Please enter an email address with valid format and less than 50 characters",
+      "email_tip": "Verify your email to reset your password.",
+      "enter_verification_code": "Please enter the verification code",
+      "feb": "Feb",
+      "february": "February",
+      "first_day": "0",
+      "fr": "Fr",
+      "fri": "Fri",
+      "friday": "Friday",
+      "image_size_less_than_tips": "Image size should be smaller than {{max}} MB",
+      "jan": "Jan",
+      "january": "January",
+      "jul": "Jul",
+      "july": "July",
+      "jun": "Jun",
+      "june": "June",
+      "login_method": "Or sign in with the following methods",
+      "mar": "Mar",
+      "march": "March",
+      "max_image_upload_tips": "You can upload a maximum of {{max}} images",
+      "may": "May",
+      "may_short": "May",
+      "mo": "Mo",
+      "mon": "Mon",
+      "monday": "Monday",
+      "network_error_message": "No internet connection",
+      "new_email": "New email address",
+      "new_phone": "New mobile No.",
+      "nov": "Nov",
+      "november": "November",
+      "oct": "Oct",
+      "october": "October",
+      "ok": "OK",
+      "okay_common": "OK",
+      "orders": "Orders",
+      "password": "Password",
+      "password_empty_hint": "Please enter password",
+      "phone": "Phone",
+      "phone_empty_message": "Please enter mobile phone number",
+      "phone_error_message": "Please enter a mobile phone number with valid format",
+      "phone_number_error_message": "Please enter a valid phone number",
+      "phone_tip": "Please verify your login phone to reset your password",
+      "proceed_to_checkout": "Proceed to checkout",
+      "register": "Sign up",
+      "repeat_passport_error": "The passwords you entered do not match",
+      "repeat_password": "Re-enter password",
+      "resend": "Re-send",
+      "sa": "Sa",
+      "sat": "Sat",
+      "saturday": "Saturday",
+      "save": "SAVE",
+      "select_date": "Select Date",
+      "send": "Send",
+      "send_error": "Please send verification code first",
+      "send_verification_code_hint": "Please re-enter your password",
+      "sep": "Sep",
+      "september": "September",
+      "set_password": "Password must be 6-18 characters consisting of numbers, uppercase and lowercase letters",
+      "sign_in": "Log in",
+      "sign_in_activate": "Verification code has been sent to your account {{account}}. You can get your account activated after verification",
+      "sign_in_activate_title": "account activation",
+      "sign_out": "Log out",
+      "sign_up": "Sign up",
+      "su": "Su",
+      "subscription_desc": "Get the latest updates from our store",
+      "sun": "Sun",
+      "sunday": "Sunday",
+      "th": "Th",
+      "thu": "Thu",
+      "thursday": "Thursday",
+      "time_format": "hh:mm aa",
+      "title": "Page title",
+      "today": "Today",
+      "tu": "Tu",
+      "tue": "Tue",
+      "tuesday": "Tuesday",
+      "update_passport": "Change password",
+      "user_agreement_tip": "Please read and agree to the user agreement first",
+      "username": "Email address/mobile phone number",
+      "username_empty_hint": "Please enter email address or mobile phone number",
+      "verification_code": "Verification code",
+      "verification_code_sent_tip": "Verification code has been sent to your account",
+      "verification_code_success": "Verification code has been sent to your login {{type}} <em>{{value}}</em>, please enter the code below",
+      "verift_account_tip": "Please verify your account and reset password",
+      "we": "We",
+      "wed": "Wed",
+      "wednesday": "Wednesday"
+    },
+    "login": {
+      "member_login_common": "Member login",
+      "subscribe_confirm_tip": "Thanks for your subscription. You can login for better experience."
+    },
+    "message": {
+      "format_error": "Message format is not supported",
+      "input_placeholder": "Would you like to leave a message?",
+      "message": "Message",
+      "send": "Send"
+    },
+    "phone": {
+      "mobile_common": "Phone"
+    },
+    "register": {
+      "go_to_login": "Go to Sign In",
+      "privacy_policy": "Privacy Policy",
+      "terms_of_service": "Terms of Service",
+      "tips_agree_with_the_shop": "I agree to the"
+    },
+    "subscribe": {
+      "email_has_bind": "This email has been bound to another account",
+      "phone_has_bind": "This phone has been bound to another account"
+    },
+    "subscription": {
+      "email": "Email",
+      "email_subscribe_error_tip": "This email address is already linked to another acount",
+      "email_subscription_text": "Subscribe E-mail promotion",
+      "line": "LINE",
+      "messenger": "Messenger",
+      "phone": "Phone number",
+      "phone_subscribe_error_tip": "This phone number is already linked to another account",
+      "phone_subscription_text": "Optin to get SMS alerts",
+      "reason_other_length": "You can enter at most 300 characters",
+      "reason_other_placeholder": "Enter content",
+      "save_button": "SAVE",
+      "subscribe_button": "Subscribe",
+      "subscription_cancel_text": "UNSUBSCRIBE",
+      "subscription_hint": "Subscribed",
+      "subscription_title": "Subscriptions",
+      "unsubscribe": "Unsubscribe",
+      "unsubscribe_btn": "Unsubscribe",
+      "unsubscribe_confirm_text": "Unsubscribe",
+      "unsubscribe_feedback_text": "You won’t receive any more marketing updates from us. You can subscribe again at anytime",
+      "unsubscribe_feedback_title": "You’ve unsubscribed from <italic>{{name}}</italic> mailing list",
+      "unsubscribe_reason1": "I no longer want to receive these emails",
+      "unsubscribe_reason2": "I receive too many emails",
+      "unsubscribe_reason3": "I did not subscribe to this list",
+      "unsubscribe_reason4": "Emails are not relevant to me",
+      "unsubscribe_reason5": "Email content is too long",
+      "unsubscribe_reason6": "Other",
+      "unsubscribe_subtitle": "We are sorry to see you go! Please let us know why you unsubscribed：",
+      "unsubscribe_success": "The subscription has been cancelled and will return to home page soon",
+      "unsubscribe_tip": "Once unsubscribed, you would not recieve latest promotion any longer.",
+      "unsubscribe_title": "Unsubscribe"
+    },
+    "unsubscribe": {
+      "content_placeholder": "Please enter your content",
+      "goto_btn": "Go to store",
+      "notyet": "You have not subscribed yet",
+      "notyet_desc": "You can enter the store to subscribe",
+      "success": "Unsubscribed",
+      "success_tip": "You've unsubscribed from {{storeName}}"
+    }
+  },
+  "filters": {
+    "clear_all_filter": "Clear all",
+    "max_price": "Maximum price is {{ price }}",
+    "price": {
+      "label": "Price"
+    },
+    "product_count": "{{product_count}} items",
+    "reset": "Reset"
+  },
+  "footer": {
+    "subscribe": {
+      "error": "Subscription failed"
+    }
+  },
+  "general": {
+    "404": {
+      "subtext": "The page you were looking for does not exist.",
+      "title": "404 page not found"
+    },
+    "abandon": {
+      "Order": {
+        "risk": "You have sent too many requests"
+      }
+    },
+    "activate_account_discount": "Activate account and get discount code",
+    "address": {
+      "address": "Address"
+    },
+    "contact_us": {
+      "contact_us": "CONTACT US",
+      "send_success": "Thank you for reaching out, we’ll get back to you soon.",
+      "success_feedback": "Thanks for contacting us, we will reply you ASAP."
+    },
+    "copy_button_text": "copy",
+    "copy_success_text": "Link has been copied to clipboard",
+    "footer": {
+      "copyright": "© {{year}} {{storeName}}",
+      "subscribe_format_error": "Invalid email address",
+      "subscribe_success": "Subscribed successfully"
+    },
+    "general": {
+      "accept": "Accept",
+      "decline": "Decline",
+      "email_tip": "Invalid email address, please enter again",
+      "home": "Home",
+      "link": "Privacy Policy",
+      "loading": "loading",
+      "more": "more",
+      "no_data": "No data available",
+      "pack_up": "Pack up",
+      "privacy_policy": "Privacy Policy",
+      "proofing_tip": "SORRY,THE SHOP YOU ARE LOOKING IS CLOSED RIGHT NOW,<br/>PLEASE TRY AGAIN LATER.",
+      "tel_phone": "Phone",
+      "tips": "This website uses cookies to ensure you can get the best experience on our website.",
+      "title": "We care about your privacy",
+      "username": "Name"
+    },
+    "handle_success": "Operation successful",
+    "header": {
+      "cart": "Cart",
+      "center": "User Center",
+      "close": "Close",
+      "login": "Log in",
+      "no_currency_fallback": "No relevant currency found",
+      "search_input_placeholder": "Enter here and click search"
+    },
+    "order_tracking": {
+      "code": "Verification code",
+      "email": "Email",
+      "form_error": "Query failed",
+      "orderId": "Order ID",
+      "orderId_error": "Order id cannot be empty",
+      "other_email": "Email address",
+      "other_phone": "Phone",
+      "phone": "SMS",
+      "query_illegal": "The order does not exist",
+      "risk_black_user": "This account is at risk",
+      "risk_interception": "The order does not exist",
+      "submit_btn": "View order",
+      "username": "Email/Phone Number"
+    },
+    "password": {
+      "back": "Back",
+      "entry_store": "Enter the store",
+      "forget_password": "Password access",
+      "goto_admin": "Sign in now",
+      "i_am_admin": "I’m the owner",
+      "input_password": "Enter password",
+      "log_in_here": "Login here",
+      "password_is_error": "Incorrect password, please try again",
+      "use_password_enter": "Login with password",
+      "you_are_admin": "Are you the store owner?"
+    },
+    "policy": {
+      "service": "Terms of Service",
+      "shipping": "Shipping policy"
+    },
+    "search": {
+      "search": "Enter here and click search",
+      "search_hint": "Search for “{{key}}”"
+    },
+    "select": {
+      "placeholder": "Select..."
+    },
+    "share_button_text": "Share"
+  },
+  "onboarding": {
+    "product_title": "Example Product Title"
+  },
+  "order": {
+    "buy_again": "Buy again",
+    "checkout_order": {
+      "pay_amount": "pay amount",
+      "receiver_account": "receiver account",
+      "reference_number": "reference number",
+      "upload_time": "Upload time",
+      "upload_voucher": "Upload Payment Proof",
+      "voucher_amount_limit": "You can only upload up to 5 vouchers."
+    },
+    "detail": {
+      "dutyFee": "Duty",
+      "orderstatus": {
+        "detail": "Details"
+      }
+    },
+    "fulfillment": {
+      "createTime": "Fulfilled at:{{time}} "
+    },
+    "order_details": {
+      "adjust": "Rounding",
+      "details": "Order details",
+      "insuranceService": "Insurance Service",
+      "insuranceService_applyClaim": "Apply for a claim",
+      "insuranceService_content_line1_email": "1. Insurance policy has been sent to your email \"{{email}}\" by {{serviceName}}. If you have not received the policy email, please contact the store customer service.",
+      "insuranceService_content_line1_phone": "1. You've purchased your travel insurance plan via {{serviceName}}. For any questions, contact us.",
+      "insuranceService_content_line2": "2. In case of damage, loss, or delay during transportation, you can apply for a claim.",
+      "order": "Order",
+      "products": {
+        "price": "Price",
+        "quantity": "Quantity"
+      },
+      "remark": "Order remark",
+      "tax_included": "Including {{price}} in taxes",
+      "time": "Ordered at:"
+    },
+    "order_list": {
+      "item_amount": "Item ({{item}})",
+      "no_more_information": "No more info",
+      "no_record": "No orders record, go shopping",
+      "package_amount": "Package {{num}}（{{item}} items）",
+      "total_amount": "{{transPackages}} items in total"
+    },
+    "order_status": {
+      "canceled": "Canceled",
+      "click_to_track": "Please click on the link below to track your package:",
+      "contact_us": "Contact us",
+      "help_tips": "Need help? Please contact us:{{email}}",
+      "payment_voucher_transfer_success": "Payment transferred successfully",
+      "payment_voucher_waiting_for_payment": "Waiting for payment",
+      "sequence": "No. {{id}}",
+      "tracking": "Tracking"
+    },
+    "payment": {
+      "authorized": "Authorized",
+      "billing_address": "Billing address",
+      "detail": "Details",
+      "method": "Payment method",
+      "paid": "Paid",
+      "partially_paid": "Partially paid",
+      "partially_refund": "Partially refund",
+      "paying": "Paying",
+      "payment": "Payment",
+      "payment_status": "Payment status",
+      "refund": "Refunded",
+      "unpaid": "Unpaid"
+    },
+    "shipping": {
+      "information": "Information",
+      "no_information": "No delivery information yet, please check later.",
+      "package_tracking": "Package Tracking",
+      "partially_shipped": "Partially Shipped",
+      "preparing_order": "Preparing",
+      "processing_amount": "Processing ({{num}})",
+      "shipped_order": "Shipped"
+    }
+  },
+  "products": {
+    "collection": {
+      "collection": "Collections"
+    },
+    "filters": {
+      "clear": "Clear",
+      "clear_all_filter": "Clear all",
+      "confirm": "Confirm",
+      "filter_and_sort": "Filter and sort",
+      "filter_button": "Filter",
+      "in_stock_only": "Show only in-stock items",
+      "less_than": "less than",
+      "max_price": "Maximum price is {{ price }}",
+      "more_than": "more than",
+      "price": {
+        "label": "Price"
+      },
+      "product_count": "{{product_count}} items",
+      "reset": "Reset",
+      "sort_button": "Sort",
+      "stock": {
+        "label": "Product supply",
+        "value": "In stock"
+      }
+    },
+    "general": {
+      "added_to_cart_successfully": "Added to cart successfully",
+      "load_more_btn": "Loading more items",
+      "load_more_items": "Loading {{current_offset}} ~ {{last_current_offset}} of {{total}} items",
+      "loading_btn": "Load more",
+      "no_product_data_found": "No product data found. Please try again later",
+      "sold_out": "Sold Out",
+      "unavailable": "Variant doesn't exist"
+    },
+    "giftcard": {
+      "balance": "Balance",
+      "buy_giftcard": "Buy a giftcard",
+      "description": "Here's your {{price}} gift card for {{shop}}!",
+      "expired_date": "Expiry date",
+      "invalid_tip": "Your giftcard is invalid, please buy another one",
+      "permanent": "Permanent",
+      "receive_at": "Expired at",
+      "receive_tip": "Please receive your giftcard",
+      "seoTitle": "Your {{ value }} gift card balance for {{ shop }}",
+      "title": "Your gift card",
+      "use_giftcard": "Use the giftcard",
+      "use_giftcard_tip": "You can enter the giftcard number at checkout for deduction"
+    },
+    "product_details": {
+      "activity_toast_price_limit": "You can only buy {{num}} item(s) of this product with discount price",
+      "activity_toast_product_limit": "You can buy at most {{stock}} product(s) with discount price at the same time",
+      "activity_toast_title_limit": "Products below exceed the purchase limit",
+      "amount": "Quantity",
+      "buy_more_save_more": "Buy More Save More!",
+      "cancel": "Cancel",
+      "copy_button_text": "copy",
+      "copy_success_text": "Link has been copied to clipboard",
+      "country_region": "Country/Region",
+      "default_placeholder": "Please select {{attrName}}",
+      "description": "Description",
+      "each_price": "{{price}}/each",
+      "email": "Email",
+      "enter_email_address": "Please enter your email address",
+      "enter_valid_email_address": "Please enter a valid email address",
+      "give_us_more_of_your_information": "You can give us more of your information so that we can provide you with more appropriate services",
+      "go_to_amazon_by_link": "Buy in Amazon",
+      "go_to_rakuten_by_link": "Buy in Rakuten",
+      "go_to_yahoo_by_link": "Buy in Yahoo",
+      "in_stock": "In stock",
+      "inventory_in_stock": "In stock",
+      "inventory_in_stock_show_count": "Inventory: {{ quantity }} remaining available",
+      "inventory_low_stock": "Low inventory",
+      "inventory_low_stock_show_count": "Low inventory: {{ quantity }} remaining available",
+      "inventory_out_of_stock": "Out of stock",
+      "inventory_out_of_stock_continue_selling": "In stock",
+      "inventory_quantity": "Inventory quantity",
+      "leave_us_message": "Please enter your message",
+      "leave_us_message_get_back": "Leave us a message, and we’ll get back to you shortly",
+      "link_preview_does_not_support": "The link preview does not support this action",
+      "load_more": "Load more",
+      "maximum_length_of_message": "The maximum length of your message should be no more than 1500 characters",
+      "message": "Your message",
+      "moq_increment": "Increments of {{num}}",
+      "moq_increment_tips": "Can only buy at an increment of {{num}}",
+      "moq_max_tips": "Maximum {{num}} orders",
+      "moq_maximum": "Maximum of {{num}}",
+      "moq_min_tips": "Minimum {{num}} orders",
+      "moq_minimum": "Minimum of {{num}}",
+      "more_payment_options": "More payment options",
+      "name": "Name",
+      "optional": "Optional",
+      "phone_number": "Phone",
+      "price": "Price",
+      "price_break_title": "Volume Pricing",
+      "price_breaks_view_less": "View less",
+      "price_breaks_view_more": "View more",
+      "product_enquiry": "Product enquiry",
+      "share_button_text": "Share",
+      "shipping_policy": "<a href=\"{{ link }}\">Shipping fees</a> will be calculated at checkout.",
+      "submission_failed": "Submission failed, please try again",
+      "submission_successfully": "Submitted successfully",
+      "submit": "Submit",
+      "table_each_price": "{{price}} each",
+      "table_each_price_ssr": "{{{priceDom}}} each",
+      "tax_included": "tax included",
+      "taxes_included": "Tax included.",
+      "view_details": "View details",
+      "view_product_detail": "View product details"
+    },
+    "product_list": {
+      "add_to_cart": "Add to cart",
+      "filter": "Filter",
+      "filters_selected": "{{count}} selected",
+      "from_price": "From {{price}}",
+      "infinite_btn_desc": "{{last_current_offset}} of {{total}} items",
+      "less": "less",
+      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} of {{total}} items",
+      "load_more_tip": "Loading more items",
+      "more": "more",
+      "more_product_num": "{{num}} products",
+      "new_arrivals": "New arrivals",
+      "new_products": "New to old creation time",
+      "no_product": "Sorry, there are no products in this category",
+      "one_product_num": "{{num}} product",
+      "price_break_tag": "Volume pricing available",
+      "price_high_to_low": "Price high to low",
+      "price_low_to_high": "Price low to high",
+      "product_has_been_removed": "The product has been removed from shelves",
+      "product_sold_out": "SOLD OUT",
+      "products": "All Products",
+      "quick_shop": "Quick view",
+      "recommend": "Recommended",
+      "sale": "On sale",
+      "save": "Save {{{priceDom}}}",
+      "save_byjs": "Save {{priceDom}}",
+      "save_ratio": "{{price}}% OFF",
+      "select_product_all_options": "The selected product variant is incomplete or unavailable. Please choose again.",
+      "show": "Show",
+      "sort_button": "Sort",
+      "top_sellers": "Top sellers"
+    },
+    "product_search": {
+      "back_to_home": "Back to homepage",
+      "ount_results": "{{count}} Results",
+      "results_found_for": "{{count}} results found for \"{{keyword}}\"",
+      "search": "Search",
+      "search_no_results": "Your search for \"{{keyword}}\" did not yield any results"
+    },
+    "recently_viewed_products": {
+      "recently_viewed_products": "Recently Viewed Products"
+    }
+  },
+  "reduction_code": {
+    "giftcard": "Gift Cards"
+  },
+  "sales": {
+    "discount_coupon": {
+      "active_date_until": "until: {{endTime}}",
+      "applied": "Applied",
+      "applied_successfully": "Coupon code is successfully applied",
+      "apply": "Apply",
+      "buy_x_get_y_all_discount_content": "Get {{benefitCount}} {{discount}} OFF",
+      "buy_x_get_y_all_free_content": "Get {{benefitCount}} FREE",
+      "buy_x_get_y_discount_content": "{{discount}} OFF",
+      "buy_x_get_y_free_content": "FREE",
+      "buy_x_get_y_threshold": "Buy {{threshold}}, get {{benefitCount}}",
+      "coupon_content_level": "for {{level}}",
+      "coupon_discount_content": "{discount} OFF",
+      "coupon_not_found": "Coupon code does not exist",
+      "failed_to_apply_coupon_code": "Failed to apply",
+      "free_shipping": "Free Shipping",
+      "get_code": "Get Code",
+      "popup_label": "Shop coupons:",
+      "shipping_rate_below": "for shipping fee below {value}",
+      "specified_customer": "for specified customers",
+      "threshold": "Buy {threshold}"
+    },
+    "flash": {
+      "day": "day",
+      "days": "days"
+    },
+    "general": {
+      "activity_banner_benefit": "{{benefit}} OFF",
+      "activity_banner_copy_success_text": "Coupon code is successfully copied",
+      "activity_banner_free_shipping": "Free Shipping",
+      "activity_selector_new_arrivals": "New arrivals",
+      "activity_selector_price_high_to_low": "Price high to low",
+      "activity_selector_price_low_to_high": "Price low to high",
+      "activity_selector_recommended": "Recommended",
+      "apply_common": "Apply",
+      "bundle_save_tip": "Buy together to save {{amount}}",
+      "bundle_title": "Frequently bought together",
+      "common_buy_now": "Buy now",
+      "coupon_code_copied": "Coupon code is successfully copied",
+      "coupon_code_copy": "copy",
+      "flash_sale_text": "FLASH SALE",
+      "flash_sale_tip": "Purchase limit: {{count}} items",
+      "hot_sale": "Best selling",
+      "product_tabs_benefit_amount_locked": "get {{benefitAmount}} off",
+      "product_tabs_benefit_amount_unlocked": "{{benefitAmount}} off is unlocked！",
+      "product_tabs_benefit_discount_locked": "get {{offPercent}}% off",
+      "product_tabs_benefit_discount_unlocked": "{{offPercent}}% off is unlocked！",
+      "product_tabs_benefit_free_locked": "free offer",
+      "product_tabs_benefit_free_unlocked": "free offer is unlocked！",
+      "product_tabs_benefit_unlocked_tip": "You can now enjoy product discount",
+      "product_tabs_code_benefit_amount_unlocked": "Get {{benefitCount}} at {{benefitAmount}} OFF",
+      "product_tabs_code_benefit_discount_unlocked": "Get {{benefitCount}} at {{offPercent}}% OFF",
+      "product_tabs_code_benefit_free_unlocked": "Get {{benefitCount}} FREE",
+      "product_tabs_threshold": "buy {{threshold}}",
+      "purchase_limit": "Purchase limited to {{count}} promotional product(s) in total",
+      "purchase_limit_each_item": "Purchase limited to {{count}} item(s) for each variant",
+      "purchase_limit_each_product": "Purchase limited to {{count}} item(s) for each promotional product",
+      "select_promotional_product": "{{selectCount}} promotional products selected",
+      "sold": "{{count}} sold"
+    },
+    "gift": {
+      "got_all_gifts_tip": "Congratulations! You’ve got {{saved}} FREE-GIFT!",
+      "not_meet_amount_tip": "Buy {{threshold}} more to enjoy up to {{willSave}} Free Gifts",
+      "not_meet_quantity_tip": "Buy {{threshold}} more item(s) to enjoy up to {{willSave}} Free Gifts",
+      "select": "Select",
+      "select_gift_tip": "Congratulations! You can select {{willSave}} Free Gifts",
+      "spend_more_money_get_more_tip": "Congratulations! Got {{saved}} Free Gift already! Spend {{threshold}} more to enjoy up to {{willSave}} Free Gifts",
+      "spend_more_quantity_get_more_tip": "Congratulations! Got {{saved}} Free Gift already! Buy {{threshold}} more item(s) to enjoy up to {{willSave}} Free Gifts"
+    },
+    "promotion": {
+      "discount_tag": {
+        "b11_t1_free": "Buy {{threshold}} more item(s) to get one free",
+        "b11_t1_normal": "Buy {{threshold}} items to get {{save}} OFF on one of the items!",
+        "b1_t0": "Buy {{threshold}} save {{save}}",
+        "b1_t1": "Buy {{threshold}} Get {{save}} OFF",
+        "b2_t0": "Buy {{threshold}} save {{save}}",
+        "b2_t1": "Buy {{threshold}} GET {{save}} OFF",
+        "label": "Discount:"
+      }
+    }
+  },
+  "search": {
+    "count_results": "{{count}} Results",
+    "product_list": {
+      "title": "Products"
+    }
+  },
+  "trade": {
+    "order_summary": {
+      "rounding": "Rounding"
+    },
+    "payments_name": {
+      "COD": "Cash on delivery",
+      "MultiplePayment": "Multiple payments",
+      "Paypal": "Paypal",
+      "adjustPay": "manual",
+      "mpay": {
+        "alipay": "Alipay (For Real-name user of the Mainland China.)",
+        "mpay": "MPay (For MPay Users)"
+      },
+      "third_part": "Credit Card"
+    },
+    "reduction_code": {
+      "giftcard": "Gift Cards"
+    }
+  },
+  "transaction": {
+    "contact": {
+      "discounts_stack_not": "A discount has been applied to this order. You can’t add another discount."
+    },
+    "couponCode": {
+      "freeShipping": {
+        "existCode": "Duplicate free shipping discount code"
+      }
+    },
+    "discount": {
+      "code": {
+        "country_not_support": "Pay free shipping discount code - country does not match",
+        "logistics_fee_over_limit": "Free shipping discount code - shipping rates exceed maximum limit"
+      },
+      "code_error": "Enter a valid discount code",
+      "code_item_unmatched": "{{discountCode}} discount code isn’t valid for the items in your cart",
+      "code_overdue": "Expired discount code",
+      "code_user_exceedLimit": "User has exceeded maximum limit on using this activity",
+      "code_user_notSupport": "User cannot use this activity",
+      "coupon_code": "Coupon code",
+      "coupon_invalid_for_the_shipping_method": "{{discountCode}} coupon is unvalid for the shipping method",
+      "discount_codes_cannot_stack": "Discount codes don't stack. Only one discount at a time can apply to a single order.",
+      "use_coupon_alone": "This coupon code cannot be used in conjunction with other promotional or discount offers."
+    },
+    "general": {
+      "discount_off": "Discount",
+      "free_charge": "Free shipping",
+      "free_shipping": "Free Shipping",
+      "order_seller_discount": "Seller discount",
+      "order_tax": "Tax",
+      "order_tip": "Tip",
+      "payment_subtotal_cost": "Subtotal",
+      "point_discount": "Points discount",
+      "shipping_fee": "Shipping fee",
+      "trade_coupon_discount": "Discount"
+    },
+    "item": {
+      "invalid_product": "INVALID PRODUCT",
+      "remove_invalid_product": "Remove invalid product",
+      "removed": "REMOVED",
+      "sold_out": "Sold out"
+    },
+    "lack_multilingualism": "*Failed to load the statement, you can contact customer service and report this case",
+    "notices": {
+      "insufficient_product_inventory": "Insufficient product inventory",
+      "network": "Network Error",
+      "product_expired": "The product has expired",
+      "product_limit": "The product limit has been exceeded"
+    },
+    "order": {
+      "deleted": "DELETED",
+      "rebuy": "Buy again"
+    },
+    "payment": {
+      "continue_shopping": "Continue shopping",
+      "more": "Shop more",
+      "saved": "You saved",
+      "total": "Total"
+    },
+    "payment_disconut_channelinvalid_code": {
+      "tips": "This discount code {{discountCode}} is invalid for the sales channel"
+    },
+    "policy": {
+      "refund_policy": "Refund policy"
+    },
+    "refund": {
+      "cost_points": "Cost {{value}} Points",
+      "deduct_point": "You can use {{deductMemberPointNum}} points to deduct {{deductMemberPointAmount}}"
+    }
+  },
+  "unvisiable": {
+    "applepay": {
+      "cancel": "Cancel",
+      "enquire": "Continue to place the order with Apple Pay?",
+      "paywith": "Pay with"
+    },
+    "customer": {
+      "error_message_1": "Sign me up for emails to receive updates, exclusive deals, and more.",
+      "error_message_1001": "Password error",
+      "error_message_1002": "User not exist",
+      "error_message_1003": "Account was temporarily locked",
+      "error_message_1004": "Don't try so frequently",
+      "error_message_1005": "Code expired",
+      "error_message_1006": "Code error",
+      "error_message_1007": "Too many times of verification, please get another code",
+      "error_message_1008": "The thirdId or channel has not been configured",
+      "error_message_1009": "Third party validation failed",
+      "error_message_1010": "Send code failed",
+      "error_message_1011": "Account not activated. Please register to complete password and other information",
+      "error_message_1012": "The system is busy, please try again later",
+      "error_message_1013": "The system is busy, please try again later",
+      "error_message_1014": "Verification code check failed",
+      "error_message_1015": "Please check dynamic verification code",
+      "error_message_1016": "The system is busy, please try again later",
+      "error_message_1017": "We are unable to complete your login request. Please check your account status.",
+      "error_message_1018": "Email bound successfully",
+      "error_message_1020": "Login failed",
+      "error_message_1021": "Login failed",
+      "error_message_1022": "Account bound successfully",
+      "error_message_1023": "The system is busy, please try again later",
+      "error_message_1024": "The system is busy, please try again later",
+      "error_message_1035": "Please send verification code",
+      "error_message_2": "The system is busy, please try again later",
+      "error_message_2001": "The mobile has been registered",
+      "error_message_2002": "The email has been registered",
+      "error_message_2003": "Don't try so frequently",
+      "error_message_2004": "Code expired",
+      "error_message_2005": "Code error",
+      "error_message_2006": "Too many times of verification, please get another code",
+      "error_message_2007": "Server error, please try again",
+      "error_message_2014": "Your account is at risk",
+      "error_message_2016": "Your account is at risk",
+      "error_message_2020": "The system is busy, please try again later",
+      "error_message_3": "The stay is too long, please refresh the page.",
+      "error_message_3001": "Server error, please try again",
+      "error_message_3002": "Illegal operation",
+      "error_message_3003": "Don't try so frequently",
+      "error_message_3004": "Code expired",
+      "error_message_3005": "Code error",
+      "error_message_3006": "Too many times of verification, please get another code",
+      "error_message_3007": "The mobile doesn't exist",
+      "error_message_3008": "The email doesn't exist",
+      "error_message_3009": "The mobile has been bound by other accounts",
+      "error_message_3010": "The email has been bound by other accounts",
+      "error_message_3014": "Send code failed",
+      "error_message_3015": "The account has been activated",
+      "error_message_3021": "The system is busy, please try again later",
+      "error_message_3022": "The link has expired",
+      "error_message_3023": "The link has a wrong format",
+      "error_message_3024": "The link is wrong",
+      "error_message_3026": "Invalid account",
+      "error_message_3027": "The password cannot be the same as the last time.",
+      "error_message_3029": "Verification with phone number is not supported yet",
+      "error_message_4": "The system is busy, please try again later",
+      "error_message_5": "The system is busy, please try again later",
+      "error_message_6": "The system is busy, please try again later",
+      "error_message_7": "Password must be 6-18 characters consisting of numbers, uppercase and lowercase letters"
+    },
+    "editorSwitchCountryTip": "Unable to change the country in editor",
+    "shopby": {
+      "button": {
+        "show": "Secured and Faster"
+      }
+    }
+  }
+}

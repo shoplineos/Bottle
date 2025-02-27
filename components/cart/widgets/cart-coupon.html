@@ -1,0 +1,34 @@
+
+
+{{#component "script" src="./cart-coupon.js" | asset_url() /}}
+
+<theme-cart-coupon class="cart-coupon">
+
+  <div class="cart-coupon__form">
+    <label class="field">
+      <input class="field__input" name="_" placeholder="{{`transaction.discount.coupon_code` | t()}}" />
+      <span class="field__label body3">
+        {{"transaction.discount.coupon_code" | t()}}
+      </span>
+    </label>
+    <button class="button cart-coupon__button">
+      {{"sales.general.apply_common" | t()}}
+      {{#component "icons/loading" class="button__spinner" /}}
+    </button>
+  </div>
+
+  <div class="cart-coupon__error field__info field__info--error"></div>
+
+  <ul class="cart-coupon__list">
+    {{#for item in cart.discount_applications}}
+      {{#if item.code}}
+      <li class="cart-coupon__list-item" data-code="{{item.code}}">
+        <span class="cart-coupon__list-tag">{{#component "icons/bookmark" /}}</span>
+        <span class="body4 cart-coupon__list-code">{{item.code}}</span>
+        <i class="cart-coupon__list-close">{{#component "icons/close" /}}</i>
+      </li>
+      {{/if}}
+    {{/for}}
+  </ul>
+
+</theme-cart-coupon>

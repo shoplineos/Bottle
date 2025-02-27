@@ -1,0 +1,12 @@
+{{#var value = props.value /}}
+{{~#capture digital_value}}
+  {{#var array = "ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND" | split(",") /}}
+  {{#var result = value | money_without_currency() | replace("," "") /}}
+  {{#for currency in array}}
+    {{#if localization.country.currency.symbol == currency}}
+      {{#set result = value | money_without_currency() | replace(".", "") | replace(",", ".") /}}
+    {{/if}}
+  {{/for}}
+  {{{result}}}
+{{/capture}}
+{{~digital_value | trim()~}}

@@ -1,0 +1,18 @@
+
+
+<div class="cart-item__total body2">
+  <div class="cart-item__total-loading">
+    {{#component "icons/loading" /}}
+  </div>
+
+  <div class="cart-item__total-amount">
+    <b class="cart-item__total-final">{{{props.item.final_line_price | money_with_currency()}}}</b>
+
+    {{#if props.item.original_line_price != props.item.final_line_price}}
+      <span class="cart-item__total-original body5">
+        {{{props.item.original_line_price | money_with_currency()}}}
+      </span>
+    {{/if}}
+  </div>
+
+</div>

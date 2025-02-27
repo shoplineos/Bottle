@@ -1,0 +1,35 @@
+.block-collection-card {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(var(--color-background));
+}
+
+.block-collection-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--aspect-ratio);
+  padding: var(--padding);
+  overflow: hidden;
+  background-color: rgb(243 243 243 / 100%);
+}
+
+.block-collection-card__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: var(--fit-type);
+}
+
+.block-collection-card__image-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.block-collection-card__image-title-wrapper {
+  position: absolute;
+  inset: 0;
+  padding: 10px 20px;
+}
+
+.block-collection-card__title {
+  color: rgb(var(--color-text));
+}

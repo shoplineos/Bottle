@@ -1,0 +1,36 @@
+{{#if block.settings.text}}
+  {{#component "button" type="link" shopline_attributes=block.shopline_attributes link_url=block.settings.link text=block.settings.text style_secondary=block.settings.use_secondary_style /}}
+{{/if}}
+
+{{#schema}}
+{
+  "name": "t:blocks.button.name",
+  "icon": "button",
+  "tag": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "t:blocks.button.settings.text.label",
+      "default": "Button"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:blocks.button.settings.link.label",
+      "default": ""
+    },
+    {
+      "type": "switch",
+      "id": "use_secondary_style",
+      "label": "t:blocks.button.settings.use_secondary_style.label",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.button.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

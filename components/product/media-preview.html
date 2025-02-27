@@ -1,0 +1,72 @@
+{{#component "stylesheet" src="components/modal/index.css" | asset_url() /}}
+{{#component "stylesheet" src="components/carousel/index.css" | asset_url() /}}
+{{#component "stylesheet" src="./media-preview.css" | asset_url() /}}
+
+{{#component "script" src="components/modal/index.js" | asset_url() /}}
+{{#component "script" src="components/carousel/index.js" | asset_url() /}}
+{{#component "script" src="./media-preview.js" | asset_url() /}}
+
+<theme-product-media-preview data-theme-modal="true" data-popup-container="body">
+  <details class="product-media-preview">
+    <summary></summary>
+
+    <theme-carousel class="modal__content">
+      <button class="modal__close-control" type="button" name="close">
+        {{#component "icons/close" /}}
+      </button>
+
+      <div class="carousel__track product-media-preview__content">
+        {{#for media in props.medias}}
+          <div class="product-media-preview__media" style="--aspect-ratio: {{media.preview_image.aspect_ratio}};" data-media-id="{{media.id}}">
+            {{#switch media.media_type}}
+              {{#case "video" /}}
+                {{#component
+                  "media/video-media"
+                  local_media=media
+                  muted=true
+                  autoplay=false
+                  loop=props.video_loop
+                  poster_image_lazy=true
+                /}}
+              {{#case "external_video" /}}
+                {{#component
+                  "media/video-media"
+                  external_media=media
+                  muted=true
+                  autoplay=false
+                  loop=props.video_loop
+                  poster_image_lazy=true
+                /}}
+              {{#else/}}
+                {{#component
+                  "image"
+                  class="product-media-preview__image"
+                  data=media.preview_image
+                  quality=image_quality
+                  original=true
+                  lazy=true
+                  fetchpriority="auto"
+                /}}
+            {{/switch}}
+          </div>
+        {{/for}}
+      </div>
+
+      {{#if medias | size() > 0}}
+        <div class="product-media-preview__arrows">
+          <button name="previous" class="product-media-preview__arrow">
+            {{#component "icons/arrow-thin" /}}
+          </button>
+          <div class="product-media-preview__status body4">
+            <span name="current">1</span>
+            /
+            <span name="total">{{props.medias | size()}}</span>
+          </div>
+          <button name="next" class="product-media-preview__arrow">
+            {{#component "icons/arrow-thin" /}}
+          </button>
+        </div>
+      {{/if}}
+    </theme-carousel>
+  </details>
+</theme-product-media-preview>

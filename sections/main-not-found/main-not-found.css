@@ -1,0 +1,22 @@
+.section-main-not-found {
+  padding: 160px 0;
+  background-color: rgba(var(--color-background, var(--color-page-background)));
+}
+
+.section-main-not-found__title {
+  margin-block-end: 10px;
+}
+
+.section-main-not-found__subtext {
+  margin-block: 0 40px;
+}
+
+@media (max-width: 959px) {
+  .section-main-not-found {
+    padding: 80px 0;
+  }
+
+  .section-main-not-found__subtext {
+    margin-block: 0 20px;
+  }
+}

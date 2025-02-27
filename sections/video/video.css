@@ -1,0 +1,15 @@
+.video {
+  background-color: rgb(var(--color-background));
+}
+
+.video .block-heading {
+  width: 100%;
+}
+
+.video .theme-video-media__poster {
+  background-color: rgb(243 243 243 / 100%);
+}
+
+.video theme-video-media {
+  height: 100%;
+}

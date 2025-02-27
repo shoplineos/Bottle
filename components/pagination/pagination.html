@@ -1,0 +1,56 @@
+{{#var paginate = props.paginate /}}
+{{#var part_total = paginate.parts | size() /}}
+{{#var current_part /}}
+{{#var current_part_index = 1 /}}
+{{#var current_part_index0 = 0 /}}
+{{#for part in paginate.parts}}
+  {{#var current_page_string = paginate.current_page | json() /}}
+  {{#if part.title == current_page_string}}
+    {{#set current_part = part /}}
+    {{#set current_part_index = forloop.index /}}
+    {{#set current_part_index0 = forloop.index0 /}}
+  {{/if}}
+{{/for}}
+{{#var before_parts = paginate.parts | slice(0, len=current_part_index0) /}}
+{{#var after_part_length = part_total | minus(current_part_index) /}}
+{{#var after_parts = paginate.parts | slice(current_part_index, len=after_part_length) | reverse() /}}
+
+{{#if paginate.pages > 1}}
+
+  {{#component "stylesheet" src="./pagination.css" | asset_url() /}}
+  <div class="pagination">
+    {{#if paginate.previous}}
+      <a href="{{paginate.previous.url | default(`javascript:void(0)`)}}" class="pagination__item pagination__button pagination__button--previous">
+        {{#component "icons/arrow" /}}
+      </a>
+    {{/if}}
+
+    <div class="pagination__parts-wrapper">
+      <ul class="pagination__parts">
+        {{#for part in before_parts}}
+          <li class="pagination__item pagination__indicator {{#if !part.is_link}}is-text{{/if}}">
+            <a href="{{#if part.is_link}}{{part.url}}{{#else/}}javascript:void(0);{{/if}}" class="body3">{{part.title}}</a>
+          </li>
+        {{/for}}
+      </ul>
+      <ul class="pagination__parts">
+        <li class="pagination__item pagination__indicator active">
+          <a href="javascript:void(0);" class="body3">{{current_part.title}}</a>
+        </li>
+      </ul>
+      <ul class="pagination__parts pagination__parts--reverse">
+        {{#for part in after_parts}}
+          <li class="pagination__item pagination__indicator {{#if !part.is_link}}is-text{{/if}}">
+            <a href="{{#if part.is_link}}{{part.url}}{{#else/}}javascript:void(0);{{/if}}" class="body3">{{part.title}}</a>
+          </li>
+        {{/for}}
+      </ul>
+    </div>
+
+    {{#if paginate.next }}
+      <a href="{{paginate.next.url | default(`javascript:void(0)`)}}" class="pagination__item pagination__button pagination__button--next">
+        {{#component "icons/arrow" /}}
+      </a>
+    {{/if}}
+  </div>
+{{/if}}

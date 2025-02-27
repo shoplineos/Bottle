@@ -1,0 +1,40 @@
+.main-order-tracking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-order-tracking__wrapper {
+  width: 430px;
+}
+
+.main-order-tracking__title {
+  margin-block-end: 40px;
+}
+
+.main-order-tracking__tabs {
+  margin-block-end: 40px;
+  color: rgb(var(--color-text));
+}
+
+.main-order-tracking__tabs > span {
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.main-order-tracking__tabs > span.active {
+  border-block-end: 1px solid rgb(var(--color-text));
+}
+
+.main-order-tracking__submit {
+  width: 100%;
+}
+
+.main-order-tracking .error-message {
+  color: #f04949;
+}
+
+.main-order-tracking .error-message:not(:empty) {
+  margin-block: -14px 20px;
+}

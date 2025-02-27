@@ -1,0 +1,164 @@
+{{#component "stylesheet" src="./contact-form.css" | asset_url() /}}
+{{#component "script" src="./contact-form.js" | asset_url() /}}
+
+<div class="contact-form color-{{section.settings.color_scheme.id}}">
+  <div class="page-width">
+    <div class="contact-form__inner {{section.settings | class_list()}}">
+      {{#if section.settings.title}}
+        <h2 class="contact-form__title {{section.settings.title_size}}">
+          {{section.settings.title}}
+        </h2>
+      {{/if}}
+
+      <theme-contact-form class="contact-form">
+        {{#contact_form}}
+          {{#if form.posted_successfully}}
+            {{#component "tips-card/tips-card" type="success" text="general.contact_us.success_feedback" | t() /}}
+          {{/if}}
+
+          {{#if form.errors.messages}}
+            {{#component "tips-card/tips-card" type="error" text=form.errors.messages /}}
+          {{/if}}
+
+          <div class="field__group contact-form__group">
+            <label class="field">
+              <input
+                class="field__input"
+                autocomplete="name"
+                type="text"
+                name="contact[name]"
+                value="{{form.name}}"
+                placeholder="{{ "general.general.username" | t() }}"
+                title="{{ "general.general.username" | t() }}"
+              />
+              <span class="field__label">
+                {{ "general.general.username" | t() }}
+              </span>
+            </label>
+
+            {{#component
+              "input/input-email"
+              input_autocomplete="email"
+              input_name="contact[email]"
+              input_spellcheck="false"
+              input_autocapitalize="off"
+              input_required=true
+              input_value=form.email
+              input_placeholder="customer.email.mail_common" | t()
+            /}}
+          </div>
+
+          <label class="field">
+            <input
+              type="tel"
+              class="field__input"
+              autocomplete="tel"
+              name="contact[phone]"
+              pattern="[0-9\-]*"
+              value="{{form.phone}}"
+              placeholder="{{ "general.general.tel_phone" | t() }}"
+              title="{{ "general.general.tel_phone" | t() }}"
+            />
+            <span class="field__label">{{ "general.general.tel_phone" | t() }}</span>
+          </label>
+
+          <label class="field">
+            <textarea
+              rows="10"
+              class="field__input textarea"
+              name="contact[comment]"
+              placeholder="{{ "products.product_details.message" | t() }}"
+              title="{{ "products.product_details.message" | t() }}"
+            >{{form.body}}</textarea>
+            <span class="field__label">
+              {{ "products.product_details.message" | t() }}
+            </span>
+          </label>
+
+          <div class="contact-form__button">
+            <button type="submit" class="button">
+              {{ "customer.general.send" | t() }}
+            </button>
+          </div>
+        {{/contact_form}}
+      </theme-contact-form>
+    </div>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.contact_form.name",
+  "icon": "inquiryForm",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.contact_form.settings.title.label",
+      "default": "Contact us"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "t:sections.contact_form.settings.title_size.label",
+      "options": [
+        {
+          "value": "title1",
+          "label": "t:sections.contact_form.settings.title_size.options_0.label"
+        },
+        {
+          "value": "title2",
+          "label": "t:sections.contact_form.settings.title_size.options_1.label"
+        },
+        {
+          "value": "title3",
+          "label": "t:sections.contact_form.settings.title_size.options_2.label"
+        },
+        {
+          "value": "title4",
+          "label": "t:sections.contact_form.settings.title_size.options_3.label"
+        }
+      ],
+      "default": "title3"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.contact_form.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.contact_form.settings.spacing.label",
+      "default": {
+        "padding-top": "60px",
+        "padding-bottom": "60px",
+        "@media (--mobile)": {
+          "padding-top": "40px",
+          "padding-bottom": "40px"
+        }
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.contact_form.settings.size.label",
+      "default": {
+        "width": "1000px",
+        "height": "auto",
+        "@media (--mobile)": {
+          "width": "100%",
+          "height": "auto"
+        }
+      }
+    }
+  ],
+  "presets": [
+    {
+      "category": "t:sections.contact_form.presets.presets_0.category",
+      "name": "t:sections.contact_form.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

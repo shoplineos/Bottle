@@ -1,0 +1,27 @@
+.section-main-collections-all {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-block: 80px;
+  background-color: rgb(var(--color-background));
+}
+
+@media (max-width: 959px) {
+  .section-main-collections-all {
+    padding-block: 40px;
+  }
+}
+
+.block-main-collections-all {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.block-main-collections-all__list {
+  overflow: visible;
+}
+
+.block-main-collections-all:not(.page-width) .block-main-collections-all__list {
+  --gap: 0px;
+}

@@ -1,0 +1,48 @@
+<div class="{{block.settings.text_size}} text-{{block.settings.text_align}}" {{{block.shopline_attributes}}}>
+  {{collection.title}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_collection_cover.blocks.heading.name",
+  "icon": "title",
+  "tag": "",
+  "settings": [
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "t:sections.main_collection_cover.blocks.heading.settings.text_size.label",
+      "default": "title0",
+      "options": [
+        {
+          "value": "title0",
+          "label": "t:sections.main_collection_cover.blocks.heading.settings.text_size.options_0.label"
+        },
+        {
+          "value": "title2",
+          "label": "t:sections.main_collection_cover.blocks.heading.settings.text_size.options_1.label"
+        },
+        {
+          "value": "title3",
+          "label": "t:sections.main_collection_cover.blocks.heading.settings.text_size.options_2.label"
+        },
+        {
+          "value": "title4",
+          "label": "t:sections.main_collection_cover.blocks.heading.settings.text_size.options_3.label"
+        }
+      ]
+    },
+    {
+      "id": "text_align",
+      "type": "text_align",
+      "label": "t:sections.main_collection_cover.blocks.heading.settings.text_align.label",
+      "default": "center"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main_collection_cover.blocks.heading.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

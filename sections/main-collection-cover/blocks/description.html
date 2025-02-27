@@ -1,0 +1,19 @@
+{{#if collection.description}}
+  <div
+    class="page-width block-main-collection__description rte"
+    {{{block.shopline_attributes}}}
+  >{{{collection.description}}}</div>
+{{/if}}
+
+{{#schema}}
+{
+  "name": "t:sections.main_collection_cover.blocks.description.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "group_header",
+      "label": "t:sections.main_collection_cover.blocks.description.settings.group_header_0.label"
+    }
+  ]
+}
+{{/schema}}

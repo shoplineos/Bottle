@@ -1,0 +1,60 @@
+
+
+{{#component "stylesheet" src="components/popover/index.css" | asset_url() /}}
+
+{{#component "script" src="components/popover/index.js" | asset_url() /}}
+
+{{#var variant = props.item | get_variant() /}}
+
+{{#var has_quantity_rules = false /}}
+{{#if variant.quantity_rule.increment > 1 || variant.quantity_rule.min > 1 || variant.quantity_rule.max}}
+{{#set has_quantity_rules  = true /}}
+{{/if}}
+
+{{#var has_volume_pricing = false /}}
+{{#if variant.quantity_price_breaks | size()}}
+{{#set has_volume_pricing = true /}}
+{{/if}}
+
+{{#if has_quantity_rules || has_volume_pricing}}
+<theme-popover class="cart-item__volume-pricing" data-trigger="hover" data-position="bottom" data-mode="popover">
+  <div class="body5 cart-item__volume-pricing-title">
+    {{#component "icons/warning" /}}
+    <span>{{"products.product_list.price_break_tag" | t()}}</span>
+  </div>
+
+  <theme-popover-content>
+    {{#if variant.quantity_rule}}
+    <div class="cart-item__volume-pricing-rules body5">
+      {{#if variant.quantity_rule.increment > 1}}
+      <span>{{"products.product_details.moq_increment" | t(num=variant.quantity_rule.increment)}}</span>
+      {{/if}}
+      {{#if variant.quantity_rule.min > 1}}
+      <span>{{"products.product_details.moq_minimum" | t(num=variant.quantity_rule.min)}}</span>
+      {{/if}}
+      {{#if variant.quantity_rule.max}}
+      <span>{{"products.product_details.moq_maximum" | t(num=variant.quantity_rule.max)}}</span>
+      {{/if}}
+    </div>
+    {{/if}}
+
+    {{#if variant.quantity_price_breaks | size() > 0}}
+    <ul class="cart-item__volume-pricing-list body5">
+      <li>
+        <span>{{variant.quantity_rule.min}}+</span>
+        {{#var variant_price = variant.price | money_with_currency() /}}
+        <span>{{{"products.product_details.each_price" | t(price=variant_price)}}}</span>
+      </li>
+
+      {{#for price_break in variant.quantity_price_breaks}}
+      <li>
+        <span>{{price_break.minimum_quantity}}+</span>
+        {{#var break_price = price_break.price | money_with_currency() /}}
+        <span>{{{"products.product_details.each_price" | t(price=break_price)}}}</span>
+      </li>
+      {{/for}}
+    </ul>
+    {{/if}}
+  </theme-popover-content>
+</theme-popover>
+{{/if}}

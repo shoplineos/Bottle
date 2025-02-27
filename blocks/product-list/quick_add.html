@@ -1,0 +1,70 @@
+{{#var product = props.product /}}
+
+{{#if product && product.available && settings.product_quick_add }}
+  {{#var variants_size = product | get_variants() | size() /}}
+  {{#if variants_size == 1}}
+    {{#component "script" src="product/form.js" | asset_url() /}}
+    <theme-product-form
+      data-default-error-message="{{ `products.general.no_product_data_found` | t() }}"
+      data-add-to-cart-text="{{ `products.product_list.add_to_cart` | t() }}"
+      data-sold-out-text="{{ `products.general.sold_out` | t() }}"
+      data-unavailable-text="{{ `products.general.unavailable` | t() }}"
+      {{{block.shopline_attributes}}}
+    >
+      {{#product_form product id="quick-add-product-form-{{product.id}}"}}
+        <input type="hidden" name="id" value="{{product.first_available_variant.id}}" />
+        <input type="hidden" required name="quantity" value="1" />
+        <button
+          class="block-product-card__quick-add"
+          type="submit"
+          name="add"
+          {{#if !product.first_available_variant.available}}
+            disabled
+          {{/if}}
+        >
+          {{#component "icons/quick-add" class="icon-quick-add" /}}
+          {{#component "icons/loading-spinner" class="icon-loading" /}}
+        </button>
+      {{/product_form}}
+    </theme-product-form>
+  {{#else/}}
+    {{#component "stylesheet" src="components/modal/index.css" | asset_url() /}}
+    {{#component "script" src="components/modal/index.js" | asset_url() /}}
+    {{#component "script" src="./quick-add-modal.js" | asset_url() /}}
+
+    <theme-quick-add-modal
+      data-theme-modal
+      data-mask-closable
+      data-esc-to-exit
+      data-popup-container="body"
+      product-url="{{product.url}}"
+      {{{block.shopline_attributes}}}
+    >
+      <details>
+        <summary class="block-product-card__quick-add">
+          {{#component "icons/quick-add" class="icon-quick-add" /}}
+          {{#component "icons/loading-spinner" class="icon-loading" /}}
+        </summary>
+        <div class="block-product-card__modal">
+          <div class="block-product-card__modal-content"></div>
+          <button name="close" class="modal__close-control block-product-card__modal-close">
+            {{#component "icons/close" class="icon-close" /}}
+          </button>
+        </div>
+      </details>
+    </theme-quick-add-modal>
+
+  {{/if}}
+{{/if}}
+
+{{#schema}}
+{
+  "name": "t:blocks.product_list.quick.add.name",
+  "tag": "",
+  "presets": [
+    {
+      "name": "t:blocks.product_list.quick.add.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

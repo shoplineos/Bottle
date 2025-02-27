@@ -1,0 +1,130 @@
+{{#var shape = block.settings.shape /}}
+{{#var collection = props.collection /}}
+{{#var collection_card_style = settings.collection_card_style /}}
+{{#var collection_card_image_padding = settings.collection_card_image_padding /}}
+
+{{#capture aspect_ratio}}
+  {{~#if shape == "circle"~}}
+    1/1
+  {{~#else/}}
+    {{~block.settings.aspect_ratio}}
+  {{~/if}}
+{{/capture}}
+
+<div
+  class="block-collection-card__image-wrapper {{#if collection_card_style != "card"}}collection-card-border-shadow{{/if}}"
+  style="
+    --aspect-ratio: {{aspect_ratio}};
+    --fit-type: {{block.settings.fit_type}};
+    {{#if shape == "circle"}}border-radius: 50%;{{/if}}
+    --padding: {{collection_card_image_padding}}px;
+  "
+  {{{block.shopline_attributes}}}
+>
+  {{#if collection.featured_image}}
+    {{#component
+      "image"
+      data=collection.featured_image
+      mobile_size=props.mobile_columns
+      desktop_size=props.desktop_columns
+    /}}
+  {{#else/}}
+    {{#placeholder_svg "image" /}}
+  {{/if}}
+
+  <div class="block-collection-card__image-title-wrapper {{block.settings | class_list()}}">
+    {{#blocks}}
+      {{#block collection=collection /}}
+    {{/blocks}}
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.collection.image.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "t:blocks.collection.image.settings.aspect_ratio.label",
+      "default": "1/1",
+      "options": [
+        {
+          "value": "unset",
+          "label": "t:blocks.collection.image.settings.aspect_ratio.options_0.label"
+        },
+        {
+          "value": "1/1",
+          "label": "t:blocks.collection.image.settings.aspect_ratio.options_1.label"
+        },
+        {
+          "value": "4/3",
+          "label": "t:blocks.collection.image.settings.aspect_ratio.options_2.label"
+        },
+        {
+          "value": "2/3",
+          "label": "t:blocks.collection.image.settings.aspect_ratio.options_3.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "fit_type",
+      "label": "t:blocks.collection.image.settings.fit_type.label",
+      "default": "cover",
+      "options": [
+        {
+          "value": "cover",
+          "label": "t:blocks.collection.image.settings.fit_type.options_0.label"
+        },
+        {
+          "value": "contain",
+          "label": "t:blocks.collection.image.settings.fit_type.options_1.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "shape",
+      "label": "t:blocks.collection.image.settings.shape.label",
+      "default": "square",
+      "options": [
+        {
+          "value": "square",
+          "label": "t:blocks.collection.image.settings.shape.options_0.label"
+        },
+        {
+          "value": "circle",
+          "label": "t:blocks.collection.image.settings.shape.options_1.label"
+        }
+      ]
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:blocks.collection.image.settings.layout.label",
+      "default": {
+        "align-items": "center",
+        "justify-content": "center"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection/title",
+      "limit": 1
+    }
+  ],
+  "preset": [
+    {
+      "name": "分类图片",
+      "blocks": [
+        {
+          "type": "collection/title"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

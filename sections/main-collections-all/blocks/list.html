@@ -1,0 +1,118 @@
+{{#var modulo_result = 28 | modulo(block.settings.desktop_columns) /}}
+{{#var paginate_by = 30 /}}
+{{#if modulo_result == 0}}
+  {{#set paginate_by = 28 /}}
+{{/if}}
+
+{{#var collections_paginate = all_collections | get_pagination(paginate_by, sort=block.settings.sort) /}}
+
+<div class="{{#if !block.settings.image_full_screen}}page-width{{/if}} block-main-collections-all" {{{block.shopline_attributes}}}>
+  <ul
+    class="grid block-main-collections-all__list"
+    style="
+    --mobile-columns: {{block.settings.mobile_columns}};
+    --desktop-columns: {{block.settings.desktop_columns}};
+  "
+  >
+    {{#blocks}}
+      {{#for collection in collections_paginate.list}}
+        <li>
+          {{#block collection=collection /}}
+        </li>
+      {{/for}}
+    {{/blocks}}
+  </ul>
+
+  {{#component "pagination/pagination" paginate=collections_paginate /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_collections_all.blocks.list.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "select",
+      "id": "sort",
+      "options": [
+        {
+          "value": "title_asc",
+          "label": "t:sections.main_collections_all.blocks.list.settings.sort.options_0.label"
+        },
+        {
+          "value": "title_desc",
+          "label": "t:sections.main_collections_all.blocks.list.settings.sort.options_1.label"
+        },
+        {
+          "value": "create_time_desc",
+          "label": "t:sections.main_collections_all.blocks.list.settings.sort.options_2.label"
+        },
+        {
+          "value": "create_time_asc",
+          "label": "t:sections.main_collections_all.blocks.list.settings.sort.options_3.label"
+        },
+        {
+          "value": "product_num_desc",
+          "label": "t:sections.main_collections_all.blocks.list.settings.sort.options_4.label"
+        },
+        {
+          "value": "product_num_asc",
+          "label": "t:sections.main_collections_all.blocks.list.settings.sort.options_5.label"
+        }
+      ],
+      "default": "title_asc",
+      "label": "t:sections.main_collections_all.blocks.list.settings.sort.label"
+    },
+    {
+      "type": "switch",
+      "id": "image_full_screen",
+      "label": "t:sections.main_collections_all.blocks.list.settings.image_full_screen.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "label": "t:sections.main_collections_all.blocks.list.settings.desktop_columns.label",
+      "default": 2,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "t:sections.main_collections_all.blocks.list.settings.mobile_columns.label",
+      "default": 1,
+      "min": 1,
+      "max": 4,
+      "step": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection/card",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main_collections_all.blocks.list.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "collection/card",
+          "blocks": [
+            {
+              "type": "collection/image",
+              "blocks": [
+                {
+                  "type": "collection/title"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

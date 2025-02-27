@@ -1,0 +1,60 @@
+<a
+  href="javascript:;"
+  class="image-with-text__image full-width hover-scale overflow-hidden"
+  style="--aspect-ratio: {{block.settings.aspect_ratio}};"
+  {{{block.shopline_attributes}}}
+>
+  {{#if block.settings.image}}
+    {{#component "image" data=block.settings.image class="hover-scale__image" /}}
+  {{#else /}}
+    {{#placeholder_svg "image" class="empty-image-class" /}}
+  {{/if}}
+</a>
+
+{{#schema}}
+{
+  "name": "t:sections.image_with_text.blocks.image.name",
+  "icon": "image",
+  "tag": "",
+  "settings": [
+    {
+      "type": "image",
+      "id": "image",
+      "label": "t:sections.image_with_text.blocks.image.settings.image.label"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "t:sections.image_with_text.blocks.image.settings.aspect_ratio.label",
+      "default": "unset",
+      "options": [
+        {
+          "value": "unset",
+          "label": "t:sections.image_with_text.blocks.image.settings.aspect_ratio.options_0.label"
+        },
+        {
+          "value": "1/1",
+          "label": "t:sections.image_with_text.blocks.image.settings.aspect_ratio.options_1.label"
+        },
+        {
+          "value": "4/3",
+          "label": "t:sections.image_with_text.blocks.image.settings.aspect_ratio.options_2.label"
+        },
+        {
+          "value": "3/2",
+          "label": "t:sections.image_with_text.blocks.image.settings.aspect_ratio.options_3.label"
+        },
+        {
+          "value": "16/9",
+          "label": "t:sections.image_with_text.blocks.image.settings.aspect_ratio.options_4.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image_with_text.blocks.image.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

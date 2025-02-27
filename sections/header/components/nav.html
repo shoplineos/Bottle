@@ -1,0 +1,99 @@
+{{#var links = props.links /}}
+
+<theme-nav-bar>
+  <nav class="header-nav" data-role="header-nav">
+    <ul class="header-nav__menu">
+      {{#for link in links}}
+        {{#var total = link.links | size() /}}
+
+        <li class="header-nav__menu-item header-nav__underline-control" {{#if total > 0}}data-role="menu"{{/if}}>
+          <a class="header-nav__underline" {{#if link.url && total == 0}}href="{{link.url}}"{{#else/}}href="javascript:;" role="link"{{/if}}>
+            <span class="header-nav__ellipsis">
+              {{link.title}}
+            </span>
+          </a>
+
+          
+          {{#if total > 0}}
+            
+            {{#if link.levels == 1}}
+              <div class="header-nav-dropdown-menu-scope">
+                <div class="header-nav-dropdown-menu" aria-hidden="true">
+                  <ul class="header-nav-dropdown-menu__menu">
+                    {{#for link in link.links}}
+                      <li>
+                        <a
+                          class="header-nav-dropdown-menu__hero header-nav__underline-control"
+                          {{#if link.url}}href="{{link.url}}"{{#else/}}href="javascript:;" role="link"{{/if}}
+                        >
+                          <div class="header-nav__underline">
+                            <span class="header-nav__ellipsis">
+                              {{link.title}}
+                            </span>
+                          </div>
+                        </a>
+                      </li>
+                    {{/for}}
+                  </ul>
+                </div>
+              </div>
+            {{#else/}}
+              
+              <div class="header-nav-dropdown-panel" aria-hidden="true">
+                
+                <ul class="header-nav-dropdown-panel__menu">
+                  
+                  {{#var total = link.links | size() /}}
+                  {{#if total == 0}}
+                    <li>
+                      <div class="header-nav__underline-control">
+                        <a
+                          class="header-nav-dropdown-panel__link header-nav__underline"
+                          {{#if link.url}}href="{{link.url}}"{{#else/}}href="javascript:;" role="link"{{/if}}
+                        >
+                          {{link.title}}
+                        </a>
+                      </div>
+                    </li>
+                  {{#else/}}
+                    
+                    {{#for link in link.links}}
+                      <li>
+                        <div class="header-nav__underline-scope">
+                          <a
+                            class="header-nav-dropdown-panel__hero header-nav__underline-control"
+                            {{#if link.url}}href="{{link.url}}"{{#else/}}href="javascript:;" role="link"{{/if}}
+                          >
+                            <div class="header-nav__underline">
+                              <span class="header-nav__ellipsis">{{link.title}}</span>
+                            </div>
+                          </a>
+
+                          
+                          <ul class="header-nav-dropdown-panel__submenu">
+                            {{#for link in link.links}}
+                              <li>
+                                <a
+                                  class="header-nav-dropdown-panel__link"
+                                  {{#if link.url}}href="{{link.url}}"{{#else/}}href="javascript:;" role="link"{{/if}}
+                                >
+                                  <div class="header-nav__underline">
+                                    <span class="header-nav__ellipsis">{{link.title}}</span>
+                                  </div>
+                                </a>
+                              </li>
+                            {{/for}}
+                          </ul>
+                        </div>
+                      </li>
+                    {{/for}}
+                  {{/if}}
+                </ul>
+              </div>
+            {{/if}}
+          {{/if}}
+        </li>
+      {{/for}}
+    </ul>
+  </nav>
+</theme-nav-bar>

@@ -1,0 +1,184 @@
+@layer component {
+  theme-select {
+    --icon-size: 12px;
+
+    position: relative;
+    display: inline-block;
+    color: rgba(var(--color-text));
+    cursor: pointer;
+    user-select: none;
+  }
+
+  theme-select::before {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border-radius: var(--input-border-radius-outset);
+    box-shadow: var(--input-shadow-offset-x) var(--input-shadow-offset-y)
+      var(--input-shadow-blur)
+      rgba(var(--color-text), var(--input-shadow-opacity));
+  }
+
+  theme-select::after {
+    position: absolute;
+    inset: var(--input-border-thickness);
+    z-index: var(--z-index-hover);
+    pointer-events: none;
+    content: "";
+    border-radius: var(--input-border-radius);
+    box-shadow: 0 0 0 var(--input-border-thickness)
+      rgba(var(--color-text), var(--input-border-opacity));
+    transition: box-shadow 0.2s;
+  }
+  theme-select:hover::after {
+    box-shadow: 0 0 0 calc(var(--input-border-thickness) + 1px)
+      rgba(var(--color-text), var(--input-border-opacity));
+  }
+
+  theme-select > select {
+    position: relative;
+    z-index: var(--z-index-hover);
+    width: 100%;
+    height: calc(0.5em * 2 + 1.625em);
+    padding: 0.5em calc(2em + var(--icon-size)) 0.5em 0.75em;
+    font-size: inherit;
+    color: inherit;
+    appearance: none;
+    background-color: rgb(var(--color-background));
+    border: none;
+    border-radius: var(--input-border-radius);
+    outline: none;
+  }
+  theme-select .theme-select__arrow {
+    position: absolute;
+    inset-block-start: calc((0.5em * 2 + 1.625em - 10px) / 2);
+    inset-inline-end: 1em;
+    z-index: var(--z-index-hover);
+    width: var(--icon-size);
+    color: inherit;
+    pointer-events: none;
+    user-select: none;
+    transition: transform 0.2s;
+  }
+
+  theme-select .theme-select__main {
+    position: absolute;
+    inset-inline-start: 0;
+    z-index: var(--z-index-dropdown);
+    display: none;
+    width: max-content;
+    min-width: 100%;
+    font-size: 0.875em;
+    cursor: default;
+  }
+
+  @media (max-width: 959px) {
+    theme-select .theme-select__main {
+      position: fixed;
+      inset-block: auto 0;
+      inset-inline-start: 0;
+      z-index: var(--z-index-popover);
+      width: 100%;
+      height: 100%;
+      font-size: 1em;
+      content: "";
+      background-color: rgb(var(--color-mask), 0.4);
+    }
+  }
+
+  theme-select .theme-select__content {
+    padding: 0.5em 0;
+    overflow: hidden;
+    background-color: rgb(var(--color-background));
+    animation-duration: 0.2s;
+    animation-timing-function: ease;
+  }
+
+  @media (max-width: 959px) {
+    theme-select .theme-select__content {
+      --select-animation-name: animation-slide-in-bottom;
+
+      position: absolute;
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      width: 100%;
+      height: fit-content;
+      padding: 8px 0;
+      border: none;
+    }
+  }
+
+  @media (min-width: 960px) {
+    theme-select .theme-select__main,
+    theme-select .theme-select__main[data-position="bottom"] {
+      inset-block: calc(100% + 10px) auto;
+    }
+
+    theme-select .theme-select__main[data-position="top"] {
+      inset-block: auto calc(100% + 10px);
+    }
+  }
+
+  theme-select .theme-select__list {
+    display: block;
+    max-height: 60vh;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  theme-select .theme-select__check-icon {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-end: var(--padding-inline);
+    display: none;
+    width: var(--icon-size);
+    transform: translateY(-50%);
+  }
+
+  theme-select .theme-select__option {
+    --padding-inline: 0.75em;
+    --padding-block: 0.5em;
+
+    position: relative;
+    display: block;
+    padding: var(--padding-block) var(--padding-inline);
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  @media (max-width: 959px) {
+    theme-select .theme-select__option {
+      --padding-inline: 20px;
+      --padding-block: 8px;
+    }
+  }
+
+  theme-select .theme-select__option:hover {
+    background-color: rgb(0 0 0 / 3%);
+  }
+
+  theme-select .theme-select__option[selected] {
+    padding-inline-end: calc(
+      var(--icon-size) + var(--padding-inline) + var(--padding-block)
+    );
+    background-color: rgb(0 0 0 / 5%);
+  }
+
+  theme-select .theme-select__option[selected] .theme-select__check-icon {
+    display: block;
+  }
+
+  theme-select .theme-select__option[disabled] {
+    cursor: not-allowed;
+    background: none;
+    opacity: 0.3;
+  }
+  theme-select[open] .theme-select__arrow {
+    transform: rotate(180deg);
+  }
+
+  theme-select[open] .theme-select__main {
+    display: block;
+  }
+}

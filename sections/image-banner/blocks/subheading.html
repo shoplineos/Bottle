@@ -1,0 +1,44 @@
+<div class="image-banner__subheading body3 body-font-bold text-{{block.settings.text_align}}" {{{block.shopline_attributes}}}>
+  {{block.settings.subheading}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.image_banner.blocks.subheading.name",
+  "icon": "title",
+  "tag": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "t:sections.image_banner.blocks.subheading.settings.subheading.label",
+      "default": "Subtitle"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "t:sections.image_banner.blocks.subheading.settings.text_align.label",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image_banner.blocks.subheading.settings.text_align.options_0.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image_banner.blocks.subheading.settings.text_align.options_1.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image_banner.blocks.subheading.settings.text_align.options_2.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image_banner.blocks.subheading.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

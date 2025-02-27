@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{request.locale.iso_code}}">
+  <head>
+    {{#component "page-head" /}}
+
+    {{#component "theme-css-var" /}}
+    {{#component "stylesheet" src="base/index.css" | asset_url() /}}
+    {{#component "script" src="base/index.js" | asset_url() /}}
+
+    {{#content "header" /}}
+  </head>
+  <body data-page-type="{{request.page_type}}" data-cart-add-type="{{settings.cart_add_type}}">
+    {{#sections "header-group" /}}
+
+    {{#content "layout" /}}
+
+    {{#sections "footer-group" /}}
+
+    {{#content "footer" /}}
+
+    {{#if settings.cart_add_type == "drawer" && request.page_type != "cart"}}
+      {{#component "cart/cart-drawer" /}}
+    {{/if}}
+
+    <script>
+      window.shopUrl = "{{request.origin}}";
+      window.routes = {
+        cartAddUrl: "{{routes.cart_add_url}}",
+        cartChangeUrl: "{{routes.cart_change_url}}",
+        cartUpdateUrl: "{{routes.cart_update_url}}",
+        cartUrl: "{{routes.cart_url}}",
+        cartCountUrl: "{{routes.cart_count_url}}",
+        predictiveSearchUrl: "{{routes.predictive_search_url}}",
+        accountUrl: "{{routes.account_url}}",
+        accountLoginUrl: "{{routes.account_login_url}}",
+        addressUrl: "{{routes.address_url}}",
+        cartDiscountCodeApplyUrl: "{{routes.cart_discount_code_apply_url}}",
+        cartDiscountCodeRemoveUrl: "{{routes.cart_discount_code_remove_url}}",
+        addressCountriesUrl: "{{ routes.address_countries_url }}",
+        addressCountryTemplateUrl: "{{ routes.address_country_template_url }}",
+        addressNextUrl: "{{ routes.address_next_url }}",
+      };
+    </script>
+  </body>
+</html>

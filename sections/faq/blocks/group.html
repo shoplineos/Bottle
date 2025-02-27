@@ -1,0 +1,94 @@
+<div class="{{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{#content "blocks" /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.faq.blocks.group.name",
+  "icon": "general",
+  "tag": "",
+  "settings": [
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.faq.blocks.group.settings.layout.label",
+      "default": {
+        "flex-direction": "row",
+        "flex-wrap": "nowrap",
+        "align-items": "flex-start",
+        "justify-content": "center",
+        "row-gap": "40px",
+        "column-gap": "40px",
+        "@media (--mobile)": {
+          "flex-direction": "column",
+          "row-gap": "20px",
+          "column-gap": "20px"
+        }
+      }
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.faq.blocks.group.settings.spacing.label",
+      "default": {
+        "padding-top": "0px",
+        "padding-right": "0px",
+        "padding-bottom": "0px",
+        "padding-left": "0px"
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.faq.blocks.group.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "max_blocks": 2,
+  "blocks": [
+    {
+      "type": "$image",
+      "name": "t:sections.faq.blocks.group.blocks.$image.name",
+      "limit": 1
+    },
+    {
+      "type": "$collapsible-group",
+      "name": "t:sections.faq.blocks.group.blocks.$collapsible-group.name",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.faq.blocks.group.presets.presets_0.name",
+      "settings": {
+        "layout": {
+          "flex-direction": "column",
+          "flex-wrap": "nowrap",
+          "align-items": "flex-start",
+          "justify-content": "center",
+          "row-gap": "20px",
+          "column-gap": "20px"
+        },
+        "spacing": {
+          "padding-top": "0px",
+          "padding-right": "0px",
+          "padding-bottom": "0px",
+          "padding-left": "0px"
+        },
+        "size": {
+          "width": "100%",
+          "height": "auto"
+        }
+      },
+      "blocks": [
+        {
+          "type": "$collapsible-group"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,149 @@
+{{#component "stylesheet" src="components/carousel/index.css" | asset_url() /}}
+{{#component "stylesheet" src="./media.css" | asset_url() /}}
+{{#component "script" src="components/carousel/index.js" | asset_url() /}}
+{{#component "script" src="./media-gallery.js" | asset_url() /}}
+
+{{#var block = props.block /}}
+{{#var section = props.section /}}
+{{#var product = props.product /}}
+
+{{#var layout_size = block.settings.layout_size | default("medium") /}}
+{{#var video_loop = block.settings.video_loop | default(false) /}}
+{{#var image_quality = block.settings.image_quality | default(80) /}}
+{{#var desktop_layout = block.settings.desktop_layout | default("thumbnail-carousel") /}}
+{{#var mobile_layout = block.settings.mobile_layout | default("hide-thumbnail") /}}
+{{#var first_featured_media = product.media | first() /}}
+{{#var selected_variant_media = product.selected_or_first_available_variant.featured_media | default(first_featured_media) /}}
+{{#var should_sticky_selected_variant_media = false /}}
+{{#if desktop_layout == "two-columns" || desktop_layout == "flatten"}}
+  {{#set should_sticky_selected_variant_media = true /}}
+{{/if}}
+{{#var min_aspect_ratio =  product.media | map("preview_image") | map("aspect_ratio") | sort() | first() /}}
+{{#var media_total = product.media | size() /}}
+
+{{#if media_total <= 6 && desktop_layout == "thumbnail-carousel"}}
+  {{#set desktop_layout = "thumbnail-flatten" /}}
+{{/if}}
+{{#if media_total <= 3 && mobile_layout == "show-thumbnail"}}
+  {{#set mobile_layout = "show-thumbnail-flatten" /}}
+{{/if}}
+
+<theme-product-media-gallery
+  class="product-detail__media-gallery product-detail__col product-detail__col--{{layout_size}}"
+  data-desktop-layout="{{desktop_layout}}"
+  data-mobile-layout="{{mobile_layout}}"
+  data-media-total="{{#if media_total > 0}}{{media_total}}{{#else/}}1{{/if}}"
+  {{{block.shopline_attributes}}}
+>
+  <theme-carousel
+    class="media-gallery__content"
+    style="
+      --aspect-ratio: {{selected_variant_media.preview_image.aspect_ratio}};
+      --min-aspect-ratio: {{min_aspect_ratio}}
+    "
+    data-restore-position="true"
+    data-direction="horizontal"
+  >
+    <div class="media-gallery__list-wrapper">
+      {{#if should_sticky_selected_variant_media}}
+        <div class="media-gallery__sticky-wrapper">
+          {{#component
+            "product/media-item"
+            media=selected_variant_media
+            video_loop=video_loop
+            image_lazy=false
+            image_quality=image_quality
+          /}}
+        </div>
+      {{/if}}
+      <ul class="carousel__track media-gallery__list">
+        {{#if media_total > 0}}
+          {{#for media in product.media}}
+            {{#var is_active = false /}}
+            {{#if media.id == selected_variant_media.id}}
+              {{#set is_active = true /}}
+            {{/if}}
+            {{#capture media_class}}{{#if is_active}}is-active is-select{{/if}}{{/capture}}
+
+            {{#component
+              "product/media-item"
+              tag="li"
+              class=media_class
+              media=media
+              video_loop=video_loop
+              image_lazy=!is_active
+              image_quality=image_quality
+            /}}
+          {{/for}}
+        {{#else/}}
+           <li class="media-gallery__item is-active">
+            <div class="media-gallery__placeholder">
+              {{#placeholder_svg "image" class="product-image-placeholder" /}}
+            </div>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+
+    {{#if media_total > 0}}
+      <div class="media-gallery__arrows">
+        <button name="previous" class="media-gallery__arrow">
+          {{#component "icons/arrow-thin" /}}
+        </button>
+        <div class="media-gallery__status body4">
+          <span name="current">1</span>
+          /
+          <span name="total">{{media_total}}</span>
+        </div>
+        <button name="next" class="media-gallery__arrow">
+          {{#component "icons/arrow-thin" /}}
+        </button>
+      </div>
+
+      <div class="media-gallery__pagination">
+        {{#for media in product.media}}
+          <button name="pager" data-index="{{forloop.index0}}"></button>
+        {{/for}}
+      </div>
+
+      {{#if desktop_layout == "thumbnail-flatten" || desktop_layout == "thumbnail-carousel" || mobile_layout == "show-thumbnail"}}
+        <theme-carousel class="media-gallery__thumbnails" data-restore-position="true">
+          <div class="carousel__track media-gallery__thumbnail-list">
+            {{#for media in product.media}}
+              <button
+                class="media-gallery__thumbnail {{#if media.id == selected_variant_media.id}}is-select is-active{{/if}}"
+                data-media-id="{{media.id}}"
+                data-aspect-ratio="{{media.preview_image.aspect_ratio}}"
+              >
+                {{#component
+                  "image"
+                  class="media-gallery__thumbnail-image"
+                  data=media.preview_image
+                  quality=image_quality
+                  lazy=true
+                  desktop_size="1/12"
+                  mobile_size="1/3"
+                  fetchpriority="auto"
+                /}}
+
+                {{#if media.media_type == "video" || media.media_type == "external_video"}}
+                  {{#component "icons/video-play" class="media-gallery__thumbnail-play-icon" /}}
+                {{/if}}
+              </button>
+            {{/for}}
+          </div>
+          <div class="media-gallery__thumbnail-arrows">
+            <button name="previous" class="media-gallery__arrow" data-step="3">
+              {{#component "icons/arrow-thin" /}}
+            </button>
+            <button name="next" class="media-gallery__arrow" data-step="3">
+              {{#component "icons/arrow-thin" /}}
+            </button>
+          </div>
+        </theme-carousel>
+      {{/if}}
+    {{/if}}
+  </theme-carousel>
+
+  {{#component "product/media-preview" medias=product.media video_loop=video_loop /}}
+</theme-product-media-gallery>

@@ -1,0 +1,24 @@
+theme-product-volume-pricing:empty {
+  display: none;
+}
+
+.volume-pricing__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.volume-pricing__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6em 1em;
+}
+
+.volume-pricing__item:nth-child(odd) {
+  background: rgba(var(--color-text), 0.03);
+}
+
+.volume-pricing__item:nth-child(even) {
+  background: rgba(var(--color-text), 0.09);
+}

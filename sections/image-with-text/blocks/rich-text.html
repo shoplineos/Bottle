@@ -1,0 +1,52 @@
+<div class="image-with-text__rich-text text-{{block.settings.text_align}} {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+  {{{block.settings.content}}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.image_with_text.blocks.rich_text.name",
+  "icon": "generalSection",
+  "settings": [
+    {
+      "type": "richtext",
+      "label": "t:sections.image_with_text.blocks.rich_text.settings.content.label",
+      "id": "content",
+      "default": "Pair large text with a full-width image to draw attention to an important detail of your brand or product line."
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "t:sections.image_with_text.blocks.rich_text.settings.text_align.label",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image_with_text.blocks.rich_text.settings.text_align.options_0.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image_with_text.blocks.rich_text.settings.text_align.options_1.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image_with_text.blocks.rich_text.settings.text_align.options_2.label"
+        }
+      ]
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.image_with_text.blocks.rich_text.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image_with_text.blocks.rich_text.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

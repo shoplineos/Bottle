@@ -1,0 +1,128 @@
+<div class="faq-collapse-panel" {{{block.shopline_attributes}}}>
+  <details {{#if props.open}}open{{/if}}>
+    <summary>
+      {{#if block.settings.icon != "none"}}
+        <div class="faq-collapse-panel__icon">
+          {{#var icon = block.settings.icon /}}
+          {{#if icon == "apple"}}
+            {{#component "icons/apple" /}}
+          {{#else if icon == "banana" /}}
+            {{#component "icons/banana" /}}
+          {{#else if icon == "bottle" /}}
+            {{#component "icons/bottle" /}}
+          {{#else if icon == "box" /}}
+            {{#component "icons/box" /}}
+          {{#else if icon == "carrot" /}}
+            {{#component "icons/carrot" /}}
+          {{#else if icon == "chat_bubble" /}}
+            {{#component "icons/chat_bubble" /}}
+          {{#else if icon == "checkbox" /}}
+            {{#component "icons/accordion-checkbox" /}}
+          {{#else if icon == "clipboard" /}}
+            {{#component "icons/clipboard" /}}
+          {{#else if icon == "dairy" /}}
+            {{#component "icons/dairy" /}}
+          {{/if}}
+        </div>
+      {{/if}}
+
+      <h3 class="faq-collapse-panel__title title6">
+        {{block.settings.title}}
+      </h3>
+
+      <div class="faq-collapse-panel__fold open">{{#component "icons/plus" /}}</div>
+      <div class="faq-collapse-panel__fold close">{{#component "icons/minus" /}}</div>
+    </summary>
+  </details>
+  <div class="faq-collapse-panel__collapse">
+    <div class="faq-collapse-panel__content rte body3">
+      {{{block.settings.content}}}
+      {{{block.settings.custom_content.content}}}
+    </div>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.faq.blocks.collapsible_panel.name",
+  "icon": "content",
+  "tag": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.faq.blocks.collapsible_panel.settings.title.label",
+      "default": "Collapsible row"
+    },
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "t:sections.faq.blocks.collapsible_panel.settings.icon.label",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.faq.blocks.collapsible_panel.settings.icon.options_0.label"
+        },
+        {
+          "value": "apple",
+          "label": "t:sections.faq.blocks.collapsible_panel.settings.icon.options_1.label"
+        },
+        {
+          "value": "banana",
+          "label": "t:sections.faq.blocks.collapsible_panel.settings.icon.options_2.label"
+        },
+        {
+          "value": "bottle",
+          "label": "t:sections.faq.blocks.collapsible_panel.settings.icon.options_3.label"
+        },
+        {
+          "value": "box",
+          "label": "t:sections.faq.blocks.collapsible_panel.settings.icon.options_4.label"
+        },
+        {
+          "value": "carrot",
+          "label": "t:sections.faq.blocks.collapsible_panel.settings.icon.options_5.label"
+        },
+        {
+          "value": "chat_bubble",
+          "label": "t:sections.faq.blocks.collapsible_panel.settings.icon.options_6.label"
+        },
+        {
+          "value": "checkbox",
+          "label": "t:sections.faq.blocks.collapsible_panel.settings.icon.options_7.label"
+        },
+        {
+          "value": "clipboard",
+          "label": "t:sections.faq.blocks.collapsible_panel.settings.icon.options_8.label"
+        },
+        {
+          "value": "dairy",
+          "label": "t:sections.faq.blocks.collapsible_panel.settings.icon.options_9.label"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:sections.faq.blocks.collapsible_panel.settings.content.label",
+      "default": "A sentence or two introducing your brand, what you sell, and what makes your brand compelling to customers."
+    },
+    {
+      "type": "page",
+      "id": "custom_content",
+      "label": "t:sections.faq.blocks.collapsible_panel.settings.custom_content.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.faq.blocks.collapsible_panel.presets.presets_0.name",
+      "settings": {
+        "title": "Collapsible row",
+        "icon": "none",
+        "content": "A sentence or two introducing your brand, what you sell, and what makes your brand compelling to customers."
+      }
+    }
+  ]
+}
+{{/schema}}

@@ -1,0 +1,36 @@
+{{#var product = props.product /}}
+
+{{#component "stylesheet" src="./detail-price.css" | asset_url() /}}
+
+<div class="product-detail__price" {{{block.shopline_attributes}}}>
+
+  {{#component "product/price" product=product use_variant=true /}}
+
+  {{#if product.quantity_price_breaks_configured}}
+    <div class="body4">
+      {{"products.product_list.price_break_tag" | t() }}
+    </div>
+  {{/if}}
+
+  <div class="hidden-empty body4 rte">
+    {{~#if shop.cart_taxes_included}}
+      {{"products.product_details.taxes_included" | t() }}
+    {{/if~}}
+    {{~#if shop.shipping_policy.body}}
+      {{{"products.product_details.shipping_policy" | t(link=shop.shipping_policy.url) }}}
+    {{/if~}}
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_price.name",
+  "tag": "",
+  "icon": "currency",
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_price.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

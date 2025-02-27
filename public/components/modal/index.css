@@ -1,0 +1,117 @@
+@layer component {
+  theme-modal > details,
+  [data-mount-modal],
+  [data-theme-modal] > details {
+    --z-index: var(--z-index-modal);
+  }
+  theme-modal > details[open]::before,
+  [data-mount-modal][open]::before,
+  [data-theme-modal] > details[open]::before {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-index);
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    background-color: rgb(var(--color-mask), 0.4);
+  }
+
+  theme-modal > details > summary + :not(details, summary),
+  [data-mount-modal] > summary + :not(details, summary),
+  [data-theme-modal] > details > summary + :not(details, summary) {
+    position: fixed;
+    inset: 0;
+    z-index: calc(var(--z-index) + 1);
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    background-color: rgba(
+      var(--color-background, var(--color-page-background, 255, 255, 255))
+    );
+    animation-duration: 0.2s;
+    animation-timing-function: ease;
+  }
+
+  @media (max-width: 959px) {
+    theme-modal > details > summary + :not(details, summary),
+    [data-mount-modal] > summary + :not(details, summary),
+    [data-theme-modal] > details > summary + :not(details, summary) {
+      --modal-animation-name: animation-slide-in-bottom;
+
+      inset-block: auto 0;
+      width: 100vw;
+    }
+  }
+  [data-placement="left"] > summary + :not(details, summary),
+  [data-placement="left"] > details > summary + :not(details, summary) {
+    --modal-animation-name: animation-slide-in-left;
+
+    inset-inline: 0 auto;
+    width: auto;
+    height: 100%;
+  }
+  [data-placement="right"] > summary + :not(details, summary),
+  [data-placement="right"] > details > summary + :not(details, summary) {
+    --modal-animation-name: animation-slide-in-right;
+
+    inset-inline: auto 0;
+    width: auto;
+    height: 100%;
+  }
+  [data-placement="top"] > summary + :not(details, summary),
+  [data-placement="top"] > details > summary + :not(details, summary) {
+    --modal-animation-name: animation-slide-in-top;
+
+    inset-block: 0 auto;
+    width: 100vw;
+  }
+  [data-placement="bottom"] > summary + :not(details, summary),
+  [data-placement="bottom"] > details > summary + :not(details, summary) {
+    --modal-animation-name: animation-slide-in-bottom;
+
+    inset-block: auto 0;
+    width: 100vw;
+  }
+  .modal__content {
+    background-color: rgba(var(--color-background, --color-page-background));
+    border-color: rgba(var(--color-text), var(--modal-border-opacity));
+    border-style: solid;
+    border-width: var(--modal-border-thickness);
+    border-radius: var(--modal-border-radius);
+    box-shadow: var(--modal-shadow-offset-x) var(--modal-shadow-offset-y)
+      var(--modal-shadow-blur)
+      rgba(var(--color-shadow), var(--modal-shadow-opacity));
+  }
+
+  .modal__close-control {
+    position: absolute;
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    color: #fff;
+    cursor: pointer;
+    background-color: rgba(0 0 0 / 30%);
+    border: 1px solid rgb(0 0 0 / 5%);
+    border-radius: 50%;
+  }
+
+  .modal__close-control:hover {
+    background-color: rgba(0 0 0 / 20%);
+  }
+
+  @media (min-width: 960px) {
+    .modal__close-control {
+      inset-block-start: 20px;
+      inset-inline-end: 20px;
+      width: 38px;
+      height: 38px;
+    }
+  }
+}

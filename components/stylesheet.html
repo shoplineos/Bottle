@@ -1,0 +1,11 @@
+
+
+{{#if props.lazy}}
+  <link rel="stylesheet" href="{{props.src}}" media="print" onload="this.media='all'" />
+{{#else/}}
+  {{#var first_screen_section = false /}}
+  {{#if section.index <= 2}}
+    {{#set first_screen_section = true /}}
+  {{/if}}
+  {{#stylesheet props.src preload=props.preload | default(first_screen_section) rel="stylesheet" /}}
+{{/if}}

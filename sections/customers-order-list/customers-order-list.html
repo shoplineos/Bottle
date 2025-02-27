@@ -1,0 +1,119 @@
+{{#component "stylesheet" src="./customers-order-list.css" | asset_url() /}}
+
+<div class="page-width color-{{section.settings.color_scheme.id}} {{section.settings | class_list()}}">
+  {{#component "customers/navbar" /}}
+
+  <section class="customer-order-list-wrap">
+    {{#var order_paginate = customer | get_order_pagination(10) /}}
+    {{#if order_paginate.items > 0}}
+      <ul class="customer-order-list list-unstyled">
+        {{#for order in order_paginate.list}}
+          <li>
+            <div class="customer-order-item">
+              <a class="customer-order-item__link" href="{{routes.account_order_list_url}}/{{order.id}}"></a>
+              <div class="customer-order-item__head body5">
+                
+                {{#var order_number = "#" | append(order.order_number) /}}
+                <span class="customer-order-item__seq font-bold">{{"order.order_status.sequence" | t(id=order_number) }}</span>
+                
+                <p class="customer-order-item__create-time">
+                  {{"order.order_details.time" | t() }}
+                  {{order.created_at | date(format="%Y-%m-%d %H:%M")}}
+                </p>
+                
+                {{#if order.cancelled}}
+                  <span class="customer-order-item__status font-bold">
+                    {{"order.order_status.canceled" | t() }}
+                  </span>
+                {{/if}}
+              </div>
+              <div class="customer-order-item__body body4">
+                
+                <div class="customer-order-item__info">
+                  <div class="customer-order-item__cover">
+                    {{#var product_image = order.line_items | where("image") | first() /}}
+                    {{#if product_image.image.src}}
+                      {{#component "image" data=product_image pc_size="80px" mobile_size="64px" /}}
+                    {{#else/}}
+                        {{#placeholder_svg "image" class="image-fallback" /}}
+                    {{/if}}
+                  </div>
+                  <div class="customer-order-item__total-content">
+                    <p class="customer-order-item__product-total">
+                      {{"order.order_list.total_amount" | t(transPackages=order.item_count) }}
+                    </p>
+                    <p class="customer-order-item__price-total body3 font-bold">
+                      <span>{{"transaction.payment.total" | t() }}</span>
+                      <span>{{{order.presentment_price | money_with_currency(currency=order.presentment_currency)}}}</span>
+                    </p>
+                  </div>
+                </div>
+
+                
+                <div class="customer-order-item__pay-status">
+                  
+                  <p class="status-box">
+                    {{#component "icons/credit-card" /}}
+                    <span class="status-info">{{order.financial_status_label}}</span>
+                  </p>
+                  <span class="status-divider hidden-desktop"></span>
+                  
+                  <p class="status-box">
+                    {{#component "icons/delivery" /}}
+                    <span class="status-info">{{order.fulfillment_status_label}}</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="customer-order-item__foot">
+                <a href="{{order.rebuy_url}}" class="customer-order-item__rebuy button button--secondary">
+                  {{"transaction.order.rebuy" | t() }}
+                </a>
+              </div>
+            </div>
+          </li>
+        {{/for}}
+      </ul>
+    {{#else/}}
+      
+      <div class="customer-order-list__empty">
+        <p class="empty-title body2">
+          {{"order.order_list.no_record" | t() }}
+        </p>
+        <a href="{{routes.all_products_collection_url}}" class="button">
+          {{"transaction.payment.continue_shopping" | t() }}
+        </a>
+      </div>
+    {{/if}}
+
+    {{#component "pagination/pagination" paginate=order_paginate /}}
+  </section>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.customers_order_list.name",
+  "class": "page-width",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.customers_order_list.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:sections.customers_order_list.settings.spacing.label",
+      "default": {
+        "padding-top": "80px",
+        "padding-bottom": "80px",
+        "@media (--mobile)": {
+          "padding-top": "20px",
+          "padding-bottom": "20px"
+        }
+      }
+    }
+  ]
+}
+{{/schema}}

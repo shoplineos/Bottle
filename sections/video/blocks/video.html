@@ -1,0 +1,68 @@
+<div class="{{block.settings | class_list()}} theme-video" {{{block.shopline_attributes}}}>
+  {{#var muted /}}
+  {{#if block.settings.autoplay}}
+    {{#set muted = true /}}
+  {{#else/}}
+    {{#set muted = false /}}
+  {{/if}}
+  {{#component
+    "media/video-media"
+    autoplay=block.settings.autoplay
+    muted=muted
+    loop=block.settings.loop
+    poster_image=block.settings.poster_image
+    local_media=block.settings.video_local_media
+    external_media=block.settings.video_external_media
+  /}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.video.blocks.name",
+  "tag": "",
+  "icon": "video",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image",
+      "id": "poster_image",
+      "label": "t:sections.video.blocks.settings.poster_image.label",
+      "default": {}
+    },
+    {
+      "type": "video",
+      "id": "video_local_media",
+      "label": "t:sections.video.blocks.settings.video_local_media.label"
+    },
+    {
+      "type": "external_video",
+      "id": "video_external_media",
+      "format": "video",
+      "label": "t:sections.video.blocks.settings.video_external_media.label",
+      "placeholder": "",
+      "info": "t:sections.video.blocks.settings.video_external_media.info"
+    },
+    {
+      "type": "switch",
+      "id": "autoplay",
+      "label": "t:sections.video.blocks.settings.autoplay.label",
+      "default": false
+    },
+    {
+      "type": "switch",
+      "id": "loop",
+      "label": "t:sections.video.blocks.settings.loop.label",
+      "default": false
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.video.blocks.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ]
+}
+{{/schema}}

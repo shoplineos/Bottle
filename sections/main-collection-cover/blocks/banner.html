@@ -1,0 +1,72 @@
+<div class="block-main-collection-banner {{ block.settings.size | class_list() }}" {{{block.shopline_attributes}}}>
+  {{#if collection.banner_image}}
+    {{#var hidden_mobile_class = "" /}}
+    {{#if block.settings.mobile_banner_image}}
+      {{#set hidden_mobile_class = "hidden-mobile" /}}
+    {{/if}}
+    {{#component "image" data=collection.banner_image class=hidden_mobile_class /}}
+  {{/if}}
+  {{#if block.settings.mobile_banner_image}}
+    {{#component "image" data=block.settings.mobile_banner_image class="hidden-desktop" /}}
+  {{/if}}
+  <div class="block-main-collection-banner__inner {{ block.settings.layout | class_list() }}">
+    <div>
+      <a class="body4" href="{{routes.root_url}}">{{ "general.general.home" | t() }}</a>/<br />
+      {{#content "blocks" /}}
+    </div>
+  </div>
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_collection_cover.blocks.banner.name",
+  "tag": "",
+  "settings": [
+    {
+      "type": "image",
+      "id": "mobile_banner_image",
+      "label": "t:sections.main_collection_cover.blocks.banner.settings.mobile_banner_image.label"
+    },
+    {
+      "type": "style.layout",
+      "id": "layout",
+      "label": "t:sections.main_collection_cover.blocks.banner.settings.layout.label",
+      "default": {
+        "align-items": "center",
+        "justify-content": "center"
+      }
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:sections.main_collection_cover.blocks.banner.settings.size.label",
+      "default": {
+        "height": "470px",
+        "@media (--mobile)": {
+          "height": "384px"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "t:sections.main_collection_cover.blocks.banner.blocks.$heading.name",
+      "type": "$heading",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main_collection_cover.blocks.banner.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "$heading",
+          "settings": {
+            "text_size": "title1"
+          }
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}
