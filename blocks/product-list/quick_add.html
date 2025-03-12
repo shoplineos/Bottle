@@ -11,7 +11,8 @@
       data-unavailable-text="{{ `products.general.unavailable` | t() }}"
       {{{block.shopline_attributes}}}
     >
-      {{#product_form product id="quick-add-product-form-{{product.id}}"}}
+      {{#capture product_form_id}}quick-add-product-form-{{product.id}}{{/capture}}
+      {{#product_form product id=product_form_id}}
         <input type="hidden" name="id" value="{{product.first_available_variant.id}}" />
         <input type="hidden" required name="quantity" value="1" />
         <button

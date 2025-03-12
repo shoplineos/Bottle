@@ -1,10 +1,9 @@
 {
-  "name": "Bottle",
   "theme_name": "Bottle",
   "theme_version": "1.0.0",
-  "theme_author": "Shopline",
-  "theme_documentation_url": "",
-  "theme_support_url": "",
+  "theme_author": "SHOPLINE",
+  "theme_documentation_url": "https://themes.shopline.com/themes/Bottle/styles/Default",
+  "theme_support_url": "https://help.shopline.com/",
   "theme_type_version": "OS_3.0",
   "schemas": [
     {

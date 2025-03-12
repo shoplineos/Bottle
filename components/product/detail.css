@@ -30,6 +30,11 @@
     inset-block-start: var(--detail-padding-block-start, 0);
     z-index: var(--z-index-hover);
   }
+
+  .product-detail[data-desktop-direction="row"] .product-detail__col {
+    flex: 1 0 0;
+  }
+
   .product-detail[data-desktop-direction="row"] .product-detail__col--small {
     width: 34%;
   }

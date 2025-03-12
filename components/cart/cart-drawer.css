@@ -297,7 +297,32 @@
   margin-block-start: 4px;
 }
 .cart-item__property {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin-block-start: 4px;
+}
+.cart-item__property-name {
+  margin-inline-end: 3px;
+}
+.cart-item__property-text {
+  display: block;
+  max-width: 100%;
+  word-break: break-all;
+}
+.cart-item__property-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.cart-item__property-link {
+  display: block;
+}
+.cart-item__property-image {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 .cart-item__discount {
   margin-block-start: 4px;

@@ -56,15 +56,20 @@
   {{#set sizes = "(max-width: 959px) " | append(mobile_size_breakpoint) | append(",(min-width: 960px) ") | append(desktop_size_breakpoint) /}}
 {{/if}}
 
-{{#var src = props.data | image_url(quality = props.quality) /}}
 {{#var class = props.class | default("") /}}
 {{#var style = props.style | default("") /}}
-{{#var alt = props.data.alt | default("") /}}
 {{#var fetchpriority = props.fetchpriority | default(default_fetchpriority) /}}
+{{#var src = "" /}}
+{{#var alt = "" /}}
 
-{{#if props.alt}}
+{{#if props.data}}
+  {{#set src = props.data | image_url(quality = props.quality) /}}
+  {{#set alt = props.data.alt /}}
+{{#else /}}
+  {{#set src = props.src /}}
   {{#set alt = props.alt /}}
 {{/if}}
+
 
 {{#image_tag
   src
@@ -75,5 +80,5 @@
   decoding="async"
   loading=loading
   fetchpriority=fetchpriority
-  alt=alt
+  alt=alt | default("")
 /}}

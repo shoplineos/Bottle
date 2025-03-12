@@ -51,23 +51,23 @@
         <div class="cart-item__property body6">
           <span class="cart-item__property-name font-bold">{{property.name}}:</span>
           {{#if property.type == "text"}}
-          <span>{{property.value}}</span>
+            <span class="cart-item__property-text">{{property.value}}</span>
           {{#else if property.type == "link" /}}
-          <a class="button button--link" href="{{property.urls[0]}}" target="_blank">
-            {{#if property.value}}
-            {{property.value}}
-            {{else}}
-            {{ "cart.item.click_to_view" | t() }}
-            {{/if}}
-          </a>
-          {{#else if property.type == "picture" /}}
-          <div class="cart-item__property-value">
-            {{#for url in property.urls}}
-            <a class="cart-item__property-link" href="{{url}}" target="_blank">
-              {{#component "image" class="cart-item__property-image" data=url /}}
+            <a class="button button--link" href="{{property.urls[0]}}" target="_blank">
+              {{#if property.value}}
+                {{property.value}}
+              {{#else /}}
+                {{ "cart.item.click_to_view" | t() }}
+              {{/if}}
             </a>
-            {{/for}}
-          </div>
+          {{#else if property.type == "picture" /}}
+            <div class="cart-item__property-images">
+              {{#for url in property.urls}}
+                <a class="cart-item__property-link" href="{{url}}" target="_blank">
+                  {{#component "image" class="cart-item__property-image" src=url  /}}
+                </a>
+              {{/for}}
+            </div>
           {{/if}}
         </div>
         {{/for}}
