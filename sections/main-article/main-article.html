@@ -8,6 +8,37 @@
   </div>
 </div>
 
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "articleBody": {{{article.content | strip_html() | json()}}},
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{{request.origin | append(article.url)}}}"
+    },
+    "headline": "{{article.title}}",
+    {{#if article.excerpt}}
+      "description": {{{article.excerpt | strip_html() | json()}}},
+    {{/if}}
+    {{#if article.image.src}}
+      "image": [
+        "{{{article.image.src}}}"
+      ],
+    {{/if}}
+    "datePublished": "{{article.published_at | date(format="%Y-%m-%dT%H:%M:%SZ")}}",
+    "dateCreated": "{{article.created_at | date(format="%Y-%m-%dT%H:%M:%SZ")}}",
+    "author": {
+      "@type": "Person",
+      "name": "{{article.author}}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{shop.name}}"
+    }
+  }
+</script>
+
 {{#schema}}
 {
   "name": "t:sections.main_article.name",

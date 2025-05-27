@@ -1,6 +1,7 @@
 {{#component "stylesheet" src="./main-order-tracking.css" | asset_url() /}}
 {{#component "script" src="./main-order-tracking.js" | asset_url() /}}
 
+<div class="page-width">
 <div class="main-order-tracking {{section.settings | class_list()}} color-{{section.settings.color_scheme.id}}">
   <div class="main-order-tracking__wrapper">
     <div class="title5 text-center main-order-tracking__title">
@@ -59,6 +60,7 @@
       {{/order_tracking_form}}
     </theme-order-tracking>
   </div>
+</div>
 </div>
 {{#schema}}
 {

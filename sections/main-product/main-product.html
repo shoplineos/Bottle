@@ -4,6 +4,60 @@
 
 {{#component "product/detail" product=product can_update_url=true content=content section_type="main-product" /}}
 
+{{#var seo_variants = product | get_variants() /}}
+{{#var seo_media /}}
+
+{{~#if product.selected_or_first_available_variant.featured_media}}
+  {{#set seo_media = product.selected_or_first_available_variant.featured_media /}}
+{{~#else/}}
+  {{#set seo_media = product.featured_media /}}
+{{~/if}}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": "{{product.title}}",
+    "url": "{{{request.origin | append(product.url)}}}",
+    {{#if seo_media}}
+      "image": [
+        "{{{seo_media.preview_image.src}}}"
+      ],
+    {{/if}}
+    "description": {{{product.description | strip_html() | json()}}},
+    {{#if product.selected_or_first_available_variant.sku}}
+      "sku": "{{product.selected_or_first_available_variant.sku}}",
+    {{/if}}
+    "brand": {
+      "@type": "Brand",
+      "name": "{{product.vendor}}"
+    },
+    "offers": [
+      {{#for variant in seo_variants}}
+        {
+          "@type" : "Offer",
+          {{#if variant.sku}}
+            "sku": "{{variant.sku}}",
+          {{/if}}
+          {{#if variant.barcode | size() == 12}}
+            "gtin12": "{{variant.barcode}}",
+          {{/if}}
+          {{#if variant.barcode | size() == 13}}
+            "gtin13": "{{variant.barcode}}",
+          {{/if}}
+          {{#if variant.barcode | size() == 14}}
+            "gtin14": "{{variant.barcode}}",
+          {{/if}}
+          "availability" : "http://schema.org/{{#if variant.available}}InStock{{#else/}}OutOfStock{{/if}}",
+          "price" : "{{variant.price | divided_by(100)}}",
+          "priceCurrency" : "{{localization.country.currency.iso_code}}",
+          "url": "{{{request.origin | append(variant.url)}}}"
+        }{{#if !forloop.last}},{{/if}}
+      {{/for}}
+    ]
+  }
+</script>
+
 {{#schema}}
 {
   "name": "t:sections.main_product.name",

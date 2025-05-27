@@ -1,0 +1,83 @@
+{{#component "stylesheet" src="./detail-dividing-line.css" | asset_url() /}}
+
+<div
+  class="product-detail__dividing-line
+  {{#if !block.settings.show_pc_line}}hidden-desktop{{/if}}
+  {{#if !block.settings.show_mobile_line}}hidden-mobile{{/if}}"
+  style="
+    --product-detail-dividing-line-height:{{block.settings.dividing_line_height}}px;
+    --product-detail-desktop-dividing-line-height:{{block.settings.desktop_dividing_line_height}}px;
+    --product-detail-dividing-line-color:rgb({{block.settings.dividing_line_color.red}},{{block.settings.dividing_line_color.green}},{{block.settings.dividing_line_color.blue}});
+    --product-detail-dividing-line-padding-inline:{{#if block.settings.dividing_line_style == "padding_inline"}}0{{#else /}}var(--page-padding){{/if}};
+  "
+  {{{block.shopline_attributes}}}
+></div>
+
+{{#schema}}
+{
+  "name": "t:blocks.product.detail_dividing_line.name",
+  "type": "dividing_line",
+  "icon": "normal",
+  "settings": [
+    {
+      "type": "switch",
+      "id": "show_pc_line",
+      "label": "t:blocks.product.detail_dividing_line.settings.show_pc_line.label",
+      "default": true
+    },
+    {
+      "type": "switch",
+      "id": "show_mobile_line",
+      "label": "t:blocks.product.detail_dividing_line.settings.show_mobile_line.label",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "dividing_line_color",
+      "label": "t:blocks.product.detail_dividing_line.settings.dividing_line_color.label",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "desktop_dividing_line_height",
+      "label": "t:blocks.product.detail_dividing_line.settings.desktop_dividing_line_height.label",
+      "default": 1,
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "id": "dividing_line_style",
+      "type": "select",
+      "options": [
+        {
+          "value": "padding_inline",
+          "label": "t:blocks.product.detail_dividing_line.settings.dividing_line_style.options_0.label"
+        },
+        {
+          "value": "full_width",
+          "label": "t:blocks.product.detail_dividing_line.settings.dividing_line_style.options_1.label"
+        }
+      ],
+      "label": "t:blocks.product.detail_dividing_line.settings.dividing_line_style.label",
+      "default": "padding_inline"
+    },
+    {
+      "type": "range",
+      "id": "dividing_line_height",
+      "label": "t:blocks.product.detail_dividing_line.settings.dividing_line_height.label",
+      "default": 1,
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_dividing_line.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

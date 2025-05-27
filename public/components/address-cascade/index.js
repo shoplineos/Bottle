@@ -63,24 +63,35 @@ class ThemeAddressCascade extends BaseElement {
                 type: this.#getAddressFieldType(countryTemplate?.interactionType),
                 title: countryTemplate?.title,
                 targetLevel: 0,
+                required: countryTemplate.required,
+                remindCopywriter: countryTemplate?.remindCopywriter,
             },
             province: {
                 display: !!provinceTemplate?.display,
                 type: this.#getAddressFieldType(provinceTemplate?.interactionType),
                 title: provinceTemplate?.title,
                 targetLevel: 1,
+                required: provinceTemplate?.required,
+                remindCopywriter: provinceTemplate?.remindCopywriter,
+                inputElement: this.#provinceInput,
             },
             city: {
                 display: !!cityTemplate?.display,
                 type: this.#getAddressFieldType(cityTemplate?.interactionType),
                 title: cityTemplate?.title,
                 targetLevel: 2,
+                required: cityTemplate?.required,
+                remindCopywriter: cityTemplate?.remindCopywriter,
+                inputElement: this.#cityInput,
             },
             district: {
                 display: !!districtTemplate?.display,
                 type: this.#getAddressFieldType(districtTemplate?.interactionType),
                 title: districtTemplate?.title,
                 targetLevel: 3,
+                required: districtTemplate?.required,
+                remindCopywriter: districtTemplate?.remindCopywriter,
+                inputElement: this.#districtInput,
             },
         };
     }
@@ -139,6 +150,7 @@ class ThemeAddressCascade extends BaseElement {
                 if (label && province.title) {
                     label.innerHTML = province.title;
                 }
+                this.#provinceInput.required = false;
             }
             else {
                 this.#provinceGroup.classList.remove('select');
@@ -146,7 +158,9 @@ class ThemeAddressCascade extends BaseElement {
                 if (label && province.title) {
                     label.innerHTML = province.title;
                 }
+                this.#provinceInput.required = province.required;
             }
+            this.#addValidationListeners(province);
         }
         else {
             this.#provinceGroup.classList.remove('shown');
@@ -159,6 +173,7 @@ class ThemeAddressCascade extends BaseElement {
                 if (label && city.title) {
                     label.innerHTML = city.title;
                 }
+                this.#cityInput.required = false;
             }
             else {
                 this.#cityGroup.classList.remove('select');
@@ -166,7 +181,9 @@ class ThemeAddressCascade extends BaseElement {
                 if (label && city.title) {
                     label.innerHTML = city.title;
                 }
+                this.#cityInput.required = city.required;
             }
+            this.#addValidationListeners(city);
         }
         else {
             this.#cityGroup.classList.remove('shown');
@@ -179,6 +196,7 @@ class ThemeAddressCascade extends BaseElement {
                 if (label && district.title) {
                     label.innerHTML = district.title;
                 }
+                this.#districtInput.required = false;
             }
             else {
                 this.#districtGroup.classList.remove('select');
@@ -186,11 +204,47 @@ class ThemeAddressCascade extends BaseElement {
                 if (label && district.title) {
                     label.innerHTML = district.title;
                 }
+                this.#districtInput.required = district.required;
             }
+            this.#addValidationListeners(district);
         }
         else {
             this.#districtGroup.classList.remove('shown');
         }
+    }
+    #addValidationListeners(currentLevelConfig) {
+        const { inputElement, remindCopywriter, required } = currentLevelConfig;
+        const listenerKey = '_validationHandlers';
+        this.#removeCustomValidityListeners(inputElement, listenerKey);
+        if (required) {
+            const handleInvalid = () => {
+                if (inputElement.validity.valueMissing) {
+                    inputElement.setCustomValidity(remindCopywriter);
+                }
+            };
+            const handleCustomValidityInput = () => {
+                inputElement.setCustomValidity('');
+            };
+            inputElement.addEventListener('invalid', handleInvalid);
+            inputElement.addEventListener('input', handleCustomValidityInput);
+            inputElement[listenerKey] = {
+                invalid: handleInvalid,
+                input: handleCustomValidityInput,
+            };
+        }
+        else {
+            inputElement.setCustomValidity('');
+        }
+    }
+    #removeCustomValidityListeners(element, key) {
+        if (!element || !(key in element))
+            return;
+        const handlers = element[key];
+        const typedHandlers = handlers;
+        element.removeEventListener('invalid', typedHandlers.invalid);
+        element.removeEventListener('input', typedHandlers.input);
+        delete element[key];
+        element.setCustomValidity('');
     }
     #clearProvince() {
         this.#provinceSelector.innerHTML = '';

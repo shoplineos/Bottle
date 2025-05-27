@@ -1,12 +1,21 @@
 .block-product-list {
+  --product-card-shadow-offset-x-val: max(
+    var(--product-card-shadow-offset-x),
+    calc(-1 * var(--product-card-shadow-offset-x))
+  );
+  --product-card-shadow-offset-y-val: max(
+    var(--product-card-shadow-offset-y),
+    calc(-1 * var(--product-card-shadow-offset-y))
+  );
   --padding-inline: calc(
-    var(--product-card-shadow-offset-x) + var(--product-card-shadow-blur)
+    var(--product-card-shadow-offset-x-val) + var(--product-card-shadow-blur)
+  );
+  --padding-block: calc(
+    var(--product-card-shadow-offset-y-val) + var(--product-card-shadow-blur)
   );
 
   position: relative;
-  padding-block: calc(
-    var(--product-card-shadow-offset-y) + var(--product-card-shadow-blur)
-  );
+  padding-block: var(--padding-block);
   padding-inline: var(--padding-inline);
   scroll-padding-inline: var(--padding-inline);
   background-color: rgb(var(--color-background));

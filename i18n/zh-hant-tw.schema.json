@@ -2419,7 +2419,7 @@
           }
         },
         "heading": {
-          "name": "標題和跳轉",
+          "name": "標題和鏈接",
           "settings": {
             "title": {
               "label": "標題"
@@ -2736,6 +2736,11 @@
           "layout": {
             "label": "排版"
           }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "分類圖片"
+          }
         }
       },
       "title": {
@@ -2743,6 +2748,11 @@
         "settings": {
           "size": {
             "label": "尺寸"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "分類名稱"
           }
         }
       }
@@ -2803,7 +2813,7 @@
       }
     },
     "heading_with_link": {
-      "name": "標題和跳轉",
+      "name": "標題和鏈接",
       "settings": {
         "text": {
           "label": "標題"
@@ -2827,7 +2837,7 @@
       },
       "presets": {
         "presets_0": {
-          "name": "標題和跳轉"
+          "name": "標題和鏈接"
         }
       }
     },
@@ -2942,6 +2952,40 @@
         "presets": {
           "presets_0": {
             "name": "商品描述"
+          }
+        }
+      },
+      "detail_dividing_line": {
+        "name": "分割線",
+        "settings": {
+          "show_pc_line": {
+            "label": "在電腦端展示"
+          },
+          "show_mobile_line": {
+            "label": "在移動端展示"
+          },
+          "dividing_line_color": {
+            "label": "分割線顏色"
+          },
+          "desktop_dividing_line_height": {
+            "label": "電腦端分割線粗細"
+          },
+          "dividing_line_style": {
+            "label": "移動端分割線樣式",
+            "options_0": {
+              "label": "留白分割"
+            },
+            "options_1": {
+              "label": "通欄分割"
+            }
+          },
+          "dividing_line_height": {
+            "label": "移動端分割線粗細"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "分割線"
           }
         }
       },
@@ -3094,6 +3138,14 @@
         "presets": {
           "presets_0": {
             "name": "多屬性選擇器"
+          }
+        }
+      },
+      "detail_variant_sku": {
+        "name": "SKU貨號",
+        "presets": {
+          "presets_0": {
+            "name": "SKU貨號"
           }
         }
       }

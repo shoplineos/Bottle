@@ -6,7 +6,8 @@
 }
 
 .main-order-tracking__wrapper {
-  width: 430px;
+  width: 100%;
+  max-width: 430px;
 }
 
 .main-order-tracking__title {

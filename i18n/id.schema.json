@@ -75,7 +75,7 @@
       "name": "Aplikasi",
       "settings": {
         "sync_margins_with_theme": {
-          "label": "Buat margin bagian sama dengan tema"
+          "label": "Sesuaikan margin modul dengan tema"
         }
       }
     },
@@ -2419,7 +2419,7 @@
           }
         },
         "heading": {
-          "name": "Judul dan arahkan",
+          "name": "Judul dan tautan",
           "settings": {
             "title": {
               "label": "Judul"
@@ -2736,6 +2736,11 @@
           "layout": {
             "label": "Tata Letak"
           }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "Kategori Gambar"
+          }
         }
       },
       "title": {
@@ -2743,6 +2748,11 @@
         "settings": {
           "size": {
             "label": "Ukuran"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "Nama kategori"
           }
         }
       }
@@ -2803,7 +2813,7 @@
       }
     },
     "heading_with_link": {
-      "name": "Judul dan arahkan",
+      "name": "Judul dan tautan",
       "settings": {
         "text": {
           "label": "Judul"
@@ -2827,7 +2837,7 @@
       },
       "presets": {
         "presets_0": {
-          "name": "Judul dan arahkan"
+          "name": "Judul dan tautan"
         }
       }
     },
@@ -2942,6 +2952,40 @@
         "presets": {
           "presets_0": {
             "name": "Deskripsi produk"
+          }
+        }
+      },
+      "detail_dividing_line": {
+        "name": "Garis pemisah",
+        "settings": {
+          "show_pc_line": {
+            "label": "Tampilkan di port PC"
+          },
+          "show_mobile_line": {
+            "label": "Tampilkan di portseluler"
+          },
+          "dividing_line_color": {
+            "label": "Warna garis pemisah"
+          },
+          "desktop_dividing_line_height": {
+            "label": "Ketebalan garis pemisah pada sisi komputer"
+          },
+          "dividing_line_style": {
+            "label": "Gaya garis pemisah port seluler",
+            "options_0": {
+              "label": "Pemisah ruang putih"
+            },
+            "options_1": {
+              "label": "Pemisah kolom"
+            }
+          },
+          "dividing_line_height": {
+            "label": "Ketebalan garis pemisah port seluler"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "Garis pemisah"
           }
         }
       },
@@ -3094,6 +3138,14 @@
         "presets": {
           "presets_0": {
             "name": "Pemilih multi-atribut"
+          }
+        }
+      },
+      "detail_variant_sku": {
+        "name": "Nomor barang SKU",
+        "presets": {
+          "presets_0": {
+            "name": "Nomor barang SKU"
           }
         }
       }

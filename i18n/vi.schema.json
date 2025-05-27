@@ -75,7 +75,7 @@
       "name": "Ứng dụng",
       "settings": {
         "sync_margins_with_theme": {
-          "label": "Đặt lề của phần giống như chủ đề"
+          "label": "Đặt khoảng cách của mô-đun phù hợp với chủ đề"
         }
       }
     },
@@ -2736,6 +2736,11 @@
           "layout": {
             "label": ""
           }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "Phân loại ảnh"
+          }
         }
       },
       "title": {
@@ -2743,6 +2748,11 @@
         "settings": {
           "size": {
             "label": "Kích thước"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": ""
           }
         }
       }
@@ -2945,6 +2955,40 @@
           }
         }
       },
+      "detail_dividing_line": {
+        "name": "Trang phân cách",
+        "settings": {
+          "show_pc_line": {
+            "label": "Hiển thị trên máy tính"
+          },
+          "show_mobile_line": {
+            "label": "Hiển thị trên di động"
+          },
+          "dividing_line_color": {
+            "label": "Màu đường phân cách"
+          },
+          "desktop_dividing_line_height": {
+            "label": "Độ dày của đường phân chia phía bên máy tính"
+          },
+          "dividing_line_style": {
+            "label": "Kiểu đường phân cách đầu thiết bị di động",
+            "options_0": {
+              "label": "Phân cách khoảng trắng"
+            },
+            "options_1": {
+              "label": "Phân cách nhiều cột thông báo"
+            }
+          },
+          "dividing_line_height": {
+            "label": "Độ dày của đường phân cách trên đầu thiết bị di động"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "Trang phân cách"
+          }
+        }
+      },
       "detail_heading": {
         "name": "Tiêu đề",
         "settings": {
@@ -3094,6 +3138,14 @@
         "presets": {
           "presets_0": {
             "name": "Bộ chọn nhiều thuộc tính"
+          }
+        }
+      },
+      "detail_variant_sku": {
+        "name": "Số hiệu hàng SKU",
+        "presets": {
+          "presets_0": {
+            "name": "Số hiệu hàng SKU"
           }
         }
       }

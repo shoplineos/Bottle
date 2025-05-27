@@ -1,0 +1,18 @@
+<div class="product-detail__variant-sku body4" {{{block.shopline_attributes}}}>
+  {{product.selected_or_first_available_variant.sku}}
+</div>
+
+{{#schema}}
+{
+  "type": "variant_sku",
+  "icon": "normal",
+  "name": "t:blocks.product.detail_variant_sku.name",
+  "limit": 1,
+  "settings": [],
+  "presets": [
+    {
+      "name": "t:blocks.product.detail_variant_sku.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

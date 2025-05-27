@@ -75,7 +75,7 @@
       "name": "แอปพลิเคชัน",
       "settings": {
         "sync_margins_with_theme": {
-          "label": "ทำให้ระยะขอบของส่วนเหมือนกับธีม"
+          "label": "ปรับระยะขอบโมดูลให้ตรงกับธีม"
         }
       }
     },
@@ -2419,7 +2419,7 @@
           }
         },
         "heading": {
-          "name": "หัวข้อและการเปลี่ยนทาง",
+          "name": "หัวข้อและลิงก์",
           "settings": {
             "title": {
               "label": "หัวข้อ"
@@ -2736,6 +2736,11 @@
           "layout": {
             "label": "การจัดรูปแบบ"
           }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "รูปภาพหมวดหมู่"
+          }
         }
       },
       "title": {
@@ -2743,6 +2748,11 @@
         "settings": {
           "size": {
             "label": "ขนาด"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "ชื่อหมวดหมู่"
           }
         }
       }
@@ -2803,7 +2813,7 @@
       }
     },
     "heading_with_link": {
-      "name": "หัวข้อและการเปลี่ยนทาง",
+      "name": "หัวข้อและลิงก์",
       "settings": {
         "text": {
           "label": "หัวข้อ"
@@ -2827,7 +2837,7 @@
       },
       "presets": {
         "presets_0": {
-          "name": "หัวข้อและการเปลี่ยนทาง"
+          "name": "หัวข้อและลิงก์"
         }
       }
     },
@@ -2942,6 +2952,40 @@
         "presets": {
           "presets_0": {
             "name": "รายละเอียดสินค้า"
+          }
+        }
+      },
+      "detail_dividing_line": {
+        "name": "เส้นแบ่ง",
+        "settings": {
+          "show_pc_line": {
+            "label": "แสดงผลบนคอมพิวเตอร์"
+          },
+          "show_mobile_line": {
+            "label": "แสดงผลบนมือถือ"
+          },
+          "dividing_line_color": {
+            "label": "สีของเส้นแบ่ง"
+          },
+          "desktop_dividing_line_height": {
+            "label": "ความหนาของเส้นแบ่งด้านคอมพิวเตอร์"
+          },
+          "dividing_line_style": {
+            "label": "รูปแบบเส้นแบ่งบนมือถือ",
+            "options_0": {
+              "label": "การแบ่งด้วยพื้นที่ว่างเปล่า"
+            },
+            "options_1": {
+              "label": "การแบ่งด้วยทั้งคอลัมน์"
+            }
+          },
+          "dividing_line_height": {
+            "label": "ความหนาของเส้นแบ่งบนมือถือ"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "เส้นแบ่ง"
           }
         }
       },
@@ -3094,6 +3138,14 @@
         "presets": {
           "presets_0": {
             "name": "ตัวเลือกคุณลักษณะหลายรายการ"
+          }
+        }
+      },
+      "detail_variant_sku": {
+        "name": "หมายเลขสินค้า SKU",
+        "presets": {
+          "presets_0": {
+            "name": "หมายเลขสินค้า SKU"
           }
         }
       }

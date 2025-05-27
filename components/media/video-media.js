@@ -44,6 +44,7 @@ defineModule('theme-video-media', () => {
             });
         }
         #playButton = null;
+        #mediaElement = null;
         get loaded() {
             return this.getDatasetValue('loaded', 'boolean');
         }
@@ -58,6 +59,7 @@ defineModule('theme-video-media', () => {
         constructor() {
             super();
             this.#playButton = this.querySelector('.theme-video-media__play-button');
+            this.#mediaElement = this.querySelector('.theme-video-media__media');
             this.#playButton?.addEventListener('click', this.play.bind(this));
             this.#autoPlayHandler();
         }
@@ -82,6 +84,9 @@ defineModule('theme-video-media', () => {
         play() {
             if (this.#playButton) {
                 this.#playButton.style.display = 'none';
+            }
+            if (this.#mediaElement) {
+                this.#mediaElement.classList.add("active");
             }
             if (!this.loaded) {
                 this.load();

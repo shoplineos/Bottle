@@ -2419,7 +2419,7 @@
           }
         },
         "heading": {
-          "name": "タイトルとリンク先",
+          "name": "タイトルとリンク",
           "settings": {
             "title": {
               "label": "タイトル"
@@ -2736,6 +2736,11 @@
           "layout": {
             "label": "レイアウト"
           }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "カテゴリ画像"
+          }
         }
       },
       "title": {
@@ -2743,6 +2748,11 @@
         "settings": {
           "size": {
             "label": "サイズ"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "カテゴリ名"
           }
         }
       }
@@ -2803,7 +2813,7 @@
       }
     },
     "heading_with_link": {
-      "name": "タイトルとリンク先",
+      "name": "タイトルとリンク",
       "settings": {
         "text": {
           "label": "タイトル"
@@ -2827,7 +2837,7 @@
       },
       "presets": {
         "presets_0": {
-          "name": "タイトルとリンク先"
+          "name": "タイトルとリンク"
         }
       }
     },
@@ -2942,6 +2952,40 @@
         "presets": {
           "presets_0": {
             "name": "商品説明"
+          }
+        }
+      },
+      "detail_dividing_line": {
+        "name": "区切り線",
+        "settings": {
+          "show_pc_line": {
+            "label": "PC版で表示"
+          },
+          "show_mobile_line": {
+            "label": "モバイル版で表示"
+          },
+          "dividing_line_color": {
+            "label": "区切り線の色"
+          },
+          "desktop_dividing_line_height": {
+            "label": "PC版の区切り線の太さ"
+          },
+          "dividing_line_style": {
+            "label": "モバイル版の区切り線のスタイル",
+            "options_0": {
+              "label": "余白分割"
+            },
+            "options_1": {
+              "label": "全幅"
+            }
+          },
+          "dividing_line_height": {
+            "label": "モバイル版の区切り線の太さ"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "区切り線"
           }
         }
       },
@@ -3094,6 +3138,14 @@
         "presets": {
           "presets_0": {
             "name": "多属性セレクター"
+          }
+        }
+      },
+      "detail_variant_sku": {
+        "name": "SKU番号",
+        "presets": {
+          "presets_0": {
+            "name": "SKU番号"
           }
         }
       }

@@ -75,7 +75,7 @@
       "name": "Apps",
       "settings": {
         "sync_margins_with_theme": {
-          "label": "Make section margins the same as theme"
+          "label": "Align module margins with the theme"
         }
       }
     },
@@ -116,7 +116,7 @@
       },
       "presets": {
         "presets_0": {
-          "category": "Graphic display",
+          "category": "Image-text display",
           "name": "Blogs"
         }
       }
@@ -594,7 +594,7 @@
           "label": "Color"
         },
         "expand_first_label": {
-          "label": "Expand label 1"
+          "label": "Expand tag 1"
         },
         "layout": {
           "label": "Typesetting"
@@ -1206,7 +1206,7 @@
       },
       "presets": {
         "presets_0": {
-          "category": "Graphic display",
+          "category": "Image-text display",
           "name": "Image banner"
         }
       }
@@ -1382,7 +1382,7 @@
           }
         }
       },
-      "name": "Image with text",
+      "name": "Image-text module",
       "settings": {
         "color_scheme": {
           "label": "Color"
@@ -1399,8 +1399,8 @@
       },
       "presets": {
         "presets_0": {
-          "category": "Graphic display",
-          "name": "Image with text"
+          "category": "Image-text display",
+          "name": "Image-text module"
         }
       }
     },
@@ -2089,7 +2089,7 @@
       },
       "presets": {
         "presets_0": {
-          "category": "Graphic display",
+          "category": "Image-text display",
           "name": "Rich text"
         }
       }
@@ -2349,7 +2349,7 @@
       },
       "presets": {
         "presets_0": {
-          "category": "Graphic display",
+          "category": "Image-text display",
           "name": "Slideshow"
         }
       }
@@ -2419,7 +2419,7 @@
           }
         },
         "heading": {
-          "name": "Title & Redirect ",
+          "name": "Title & Link",
           "settings": {
             "title": {
               "label": "Title"
@@ -2469,7 +2469,7 @@
           }
         }
       },
-      "name": "Text columns with images",
+      "name": "Image-text list",
       "settings": {
         "color_scheme": {
           "label": "Color"
@@ -2486,8 +2486,8 @@
       },
       "presets": {
         "presets_0": {
-          "category": "Graphic display",
-          "name": "Text columns with images"
+          "category": "Image-text display",
+          "name": "Image-text list"
         }
       }
     },
@@ -2533,7 +2533,7 @@
       },
       "presets": {
         "presets_0": {
-          "category": "Graphic display",
+          "category": "Image-text display",
           "name": "Video"
         }
       }
@@ -2736,6 +2736,11 @@
           "layout": {
             "label": "Typesetting"
           }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "Collection image"
+          }
         }
       },
       "title": {
@@ -2743,6 +2748,11 @@
         "settings": {
           "size": {
             "label": "Size"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "Collection name"
           }
         }
       }
@@ -2803,7 +2813,7 @@
       }
     },
     "heading_with_link": {
-      "name": "Title & Redirect ",
+      "name": "Title & Link",
       "settings": {
         "text": {
           "label": "Title"
@@ -2827,7 +2837,7 @@
       },
       "presets": {
         "presets_0": {
-          "name": "Title & Redirect "
+          "name": "Title & Link"
         }
       }
     },
@@ -2942,6 +2952,40 @@
         "presets": {
           "presets_0": {
             "name": "Product description"
+          }
+        }
+      },
+      "detail_dividing_line": {
+        "name": "Divider",
+        "settings": {
+          "show_pc_line": {
+            "label": "Display on PC"
+          },
+          "show_mobile_line": {
+            "label": "Display on mobile device"
+          },
+          "dividing_line_color": {
+            "label": "Divider color"
+          },
+          "desktop_dividing_line_height": {
+            "label": "Divider thickness on desktop"
+          },
+          "dividing_line_style": {
+            "label": "Divider style on mobile",
+            "options_0": {
+              "label": "White space divider"
+            },
+            "options_1": {
+              "label": "Full screen divider"
+            }
+          },
+          "dividing_line_height": {
+            "label": "Divider thickness on mobile"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "Divider"
           }
         }
       },
@@ -3094,6 +3138,14 @@
         "presets": {
           "presets_0": {
             "name": "Variant picker"
+          }
+        }
+      },
+      "detail_variant_sku": {
+        "name": "SKU(Stock Keeping Unit)",
+        "presets": {
+          "presets_0": {
+            "name": "SKU(Stock Keeping Unit)"
           }
         }
       }

@@ -106,6 +106,29 @@
   links=section.settings.navigation_menu.links
 /}}
 
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "{{ shop.name }}",
+    {{#if settings.favicon_image}}"logo": "{{ settings.favicon_image }}",{{/if}}
+    "sameAs": [
+      "{{ settings.social_media_twitter_link }}",
+      "{{ settings.social_media_facebook_link }}",
+      "{{ settings.social_media_pinterest_link }}",
+      "{{ settings.social_media_instagram_link }}",
+      "{{ settings.social_media_tiktok_link }}",
+      "{{ settings.social_media_linkedin_link }}",
+      "{{ settings.social_media_snapchat_link }}",
+      "{{ settings.social_media_youtube_link }}",
+      "{{ settings.social_media_vimeo_link }}",
+      "{{ settings.social_media_tumblr_link }}",
+      "{{ settings.social_media_line_link }}"
+    ],
+    "url": "{{ request.origin }}"
+  }
+</script>
+
 {{#schema}}
 {
   "name": "t:sections.header.name",

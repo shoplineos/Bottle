@@ -102,7 +102,7 @@ defineModule('theme-search-bar', () => {
                 throw new Error(`Failed to fetch search results: ${response.status} ${response.statusText}`);
             }
             const html = await response.text();
-            listEl.innerHTML = html.replace(/__QUERY_KEY__/g, keyword);
+            listEl.innerHTML = html.replace(/__QUERY_KEY__/g, themeUtils.sanitizeInput(keyword));
         }
         toggle(force) {
             if (this.classList.toggle('open', force)) {

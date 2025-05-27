@@ -1,0 +1,14 @@
+.product-detail__dividing-line {
+  display: block;
+  height: var(--product-detail-desktop-dividing-line-height, 1px);
+  background: var(--product-detail-dividing-line-color);
+}
+
+@media (max-width: 959px) {
+  .product-detail__dividing-line {
+    height: var(--product-detail-dividing-line-height);
+    margin-inline: calc(
+      -1 * var(--product-detail-dividing-line-padding-inline)
+    );
+  }
+}

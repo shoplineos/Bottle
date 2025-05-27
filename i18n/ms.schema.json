@@ -75,7 +75,7 @@
       "name": "Aplikasi",
       "settings": {
         "sync_margins_with_theme": {
-          "label": "Jadikan margin bahagian sama dengan tema"
+          "label": "Sesuaikan margin modul dengan tema"
         }
       }
     },
@@ -2419,7 +2419,7 @@
           }
         },
         "heading": {
-          "name": "Tajuk dan lompatan",
+          "name": "Tajuk dan pautan",
           "settings": {
             "title": {
               "label": "Tajuk"
@@ -2736,6 +2736,11 @@
           "layout": {
             "label": "Penyusunan huruf"
           }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "Klasifikasi gambar"
+          }
         }
       },
       "title": {
@@ -2743,6 +2748,11 @@
         "settings": {
           "size": {
             "label": "Saiz"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "Nama klasifikasi"
           }
         }
       }
@@ -2803,7 +2813,7 @@
       }
     },
     "heading_with_link": {
-      "name": "Tajuk dan lompatan",
+      "name": "Tajuk dan pautan",
       "settings": {
         "text": {
           "label": "Tajuk"
@@ -2827,7 +2837,7 @@
       },
       "presets": {
         "presets_0": {
-          "name": "Tajuk dan lompatan"
+          "name": "Tajuk dan pautan"
         }
       }
     },
@@ -2942,6 +2952,40 @@
         "presets": {
           "presets_0": {
             "name": "Huraian produk"
+          }
+        }
+      },
+      "detail_dividing_line": {
+        "name": "Garisan berpecah",
+        "settings": {
+          "show_pc_line": {
+            "label": "Menunjukkan di komputer"
+          },
+          "show_mobile_line": {
+            "label": "Menunjukkan di telefon bimbit"
+          },
+          "dividing_line_color": {
+            "label": "Warna garis pemisah"
+          },
+          "desktop_dividing_line_height": {
+            "label": "Ketebalan garis pemisah pada bahagian komputer"
+          },
+          "dividing_line_style": {
+            "label": "Rekabentu garis pemisah versi mudah alih",
+            "options_0": {
+              "label": "Pemisahan kosong"
+            },
+            "options_1": {
+              "label": "Pemisahan bar"
+            }
+          },
+          "dividing_line_height": {
+            "label": "Ketebalan garis pemisah versi mudah alih"
+          }
+        },
+        "presets": {
+          "presets_0": {
+            "name": "Garisan berpecah"
           }
         }
       },
@@ -3094,6 +3138,14 @@
         "presets": {
           "presets_0": {
             "name": "Mesin berbilang pilihan"
+          }
+        }
+      },
+      "detail_variant_sku": {
+        "name": "Nombor produk SKU",
+        "presets": {
+          "presets_0": {
+            "name": "Nombor produk SKU"
           }
         }
       }

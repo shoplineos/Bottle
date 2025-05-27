@@ -16,10 +16,6 @@
       filter_layout=section.settings.filter_layout
     /}}
     <div class="main-collection__products" id="ResultsContainer">
-      <div class="facets-loading">
-        {{#component "icons/loading-spinner" /}}
-      </div>
-
       {{#var products_paginate = collection | get_product_pagination(section.settings.page_size) /}}
       {{#var products = products_paginate.list /}}
 

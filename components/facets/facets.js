@@ -42,10 +42,12 @@ defineModule('theme-facets', () => {
     class FacetsForm extends HTMLElement {
         #formElement;
         #listContainerElement;
+        #loadingElement;
         #loading = false;
         constructor() {
             super();
             this.#listContainerElement = document.querySelector('#ResultsContainer');
+            this.#loadingElement = document.querySelector('.facets-loading-wrapper');
             this.#formElement = this.querySelector('form');
             this.addListeners();
         }
@@ -97,7 +99,7 @@ defineModule('theme-facets', () => {
             if (this.#loading) {
                 return;
             }
-            this.#listContainerElement.classList.add('loading');
+            this.#loadingElement.classList.add('loading');
             this.#loading = true;
             const searchParams = new URL(window.location.href).searchParams.toString();
             urlSearchParamsPrev = searchParams;
@@ -117,7 +119,7 @@ defineModule('theme-facets', () => {
                 this.updateResults(html);
             }
             finally {
-                this.#listContainerElement.classList.remove('loading');
+                this.#loadingElement.classList.remove('loading');
                 this.#loading = false;
             }
         }

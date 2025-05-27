@@ -635,3 +635,41 @@ theme-facets-form {
   padding-inline-end: 5px;
   opacity: 0.5;
 }
+
+.facets-loading {
+  position: fixed;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  z-index: var(--z-index-fixed);
+  width: 92px;
+  height: 92px;
+  background-color: rgb(var(--color-page-background));
+  border-radius: 12px;
+  box-shadow: 0 10px 50px 0 rgba(var(--color-text), 0.08);
+  transform: translate(-50%, -50%);
+}
+
+.facets-loading > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.facets-loading > div svg {
+  width: 60%;
+  height: 60%;
+}
+
+.facets-loading-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-fixed);
+  display: none;
+  content: "";
+}
+
+.facets-loading-wrapper.loading {
+  display: block;
+}

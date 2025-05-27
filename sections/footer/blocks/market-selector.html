@@ -1,12 +1,12 @@
 {{#var show_locale_selector = false /}}
 
-{{#if block.settings.show_type == "all" || block.settings.show_type == "only_language" && localization.available_countries | size() >= 1}}
+{{#if (block.settings.show_type == "all" || block.settings.show_type == "only_language") && localization.available_languages | size() >= 1}}
   {{#set show_locale_selector = true /}}
 {{/if}}
 
 {{#var show_country_selector = false /}}
 
-{{#if block.settings.show_type == "all" || block.settings.show_type == "only_country" && localization.available_countries | size() >= 1}}
+{{#if (block.settings.show_type == "all" || block.settings.show_type == "only_country") && localization.available_countries | size() >= 1}}
   {{#set show_country_selector = true /}}
 {{/if}}
 
