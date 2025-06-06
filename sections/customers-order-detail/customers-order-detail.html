@@ -108,12 +108,20 @@
                       {{#for fulfillment in line_item.fulfillments}}
                         <div class="product-item__fulfillment">
                           <div class="fulfillment__text body4">{{"order.fulfillment.createTime" | t(time=fulfillment.created_at) }}</div>
-                          {{#if fulfillment.tracking_number}}
-                            <div class="fulfillment__text body4 font-bold">{{fulfillment.tracking_company}} {{fulfillment.tracking_number}}</div>
-                          {{/if}}
-                          {{#if fulfillment.tracking_url}}
-                            <a class="fulfillment__text fulfillment__link body4 font-bold" href="{{fulfillment.tracking_url}}" target="_blank">{{"order.shipping.package_tracking" | t() }}</a>
-                          {{/if}}
+                          {{#for tracking in fulfillment.tracking_info}}
+                            {{#if tracking.tracking_number}}
+                              <div class="fulfillment__text body4 fw-bold">
+                                <span class="fulfillment__company">{{ tracking.tracking_company }}</span>
+                                <a
+                                  class="fulfillment__link body4 fw-bold {{#if !tracking.tracking_url}}pointer-events-none{{/if}}"
+                                  href="{{ tracking.tracking_url }}"
+                                  target="_blank"
+                                >
+                                  {{ tracking.tracking_number }}
+                                </a>
+                              </div>
+                            {{/if}}
+                          {{/for}}
                         </div>
                       {{/for}}
                     </div>
@@ -134,8 +142,20 @@
                     {{#for fulfillment in line_item.fulfillments}}
                       <div class="product-item__fulfillment">
                         <div class="fulfillment__text body4">{{"order.fulfillment.createTime" | t(time=fulfillment.created_at) }}</div>
-                        {{#if fulfillment.tracking_number}}<div class="fulfillment__text body4 font-bold">{{fulfillment.tracking_company}} {{fulfillment.tracking_number}}</div>{{/if}}
-                        {{#if fulfillment.tracking_url}}<a class="fulfillment__text fulfillment__link body4 font-bold" href="{{fulfillment.tracking_url}}" target="_blank">{{"order.shipping.package_tracking" | t() }}</a>{{/if}}
+                        {{#for tracking in fulfillment.tracking_info}}
+                          {{#if tracking.tracking_number}}
+                            <div class="fulfillment__tracking-info fulfillment__text body4">
+                              <span class="fulfillment__company">{{ tracking.tracking_company }}</span>
+                              <a
+                                class="fulfillment__link body4 body-font-bold {{#if !tracking.tracking_url}}pointer-events-none{{/if}}"
+                                href="{{ tracking.tracking_url }}"
+                                target="_blank"
+                              >
+                                {{ tracking.tracking_number }}
+                              </a>
+                            </div>
+                          {{/if}}
+                        {{/for}}
                       </div>
                     {{/for}}
                   </div>

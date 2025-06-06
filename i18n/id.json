@@ -930,7 +930,7 @@
       "applied": "Telah menggunakan",
       "applied_successfully": "Kode diskon berhasil digunakan",
       "apply": "Aplikasi",
-      "buy_x_get_y_all_discount_content": "{{{discount}}} diskon akan dapat{{{benefitCount}}}",
+      "buy_x_get_y_all_discount_content": "{{discount}} diskon akan dapat{{benefitCount}}",
       "buy_x_get_y_all_free_content": "Dapatkan {{{benefitCount}}} yang gartis",
       "buy_x_get_y_discount_content": "Diskon {{discount}}",
       "buy_x_get_y_free_content": "Gratis",

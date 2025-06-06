@@ -930,7 +930,7 @@
       "applied": "Anvendt",
       "applied_successfully": "Rabatkode anvendt med succes",
       "apply": "Anvend",
-      "buy_x_get_y_all_discount_content": "Få {{{benefitCount}} {{discount}} rabat",
+      "buy_x_get_y_all_discount_content": "Få {{benefitCount}} {{discount}} rabat",
       "buy_x_get_y_all_free_content": "Få {{benefitCount}}gratis",
       "buy_x_get_y_discount_content": "{{discount}} af",
       "buy_x_get_y_free_content": "GRATIS",

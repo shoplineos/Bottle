@@ -830,7 +830,7 @@
           "settings": {
             "show_type": {
               "label": "Mempamerkan kandungan",
-              "info": "Dua atau lebih pasaran perlu ditambah untuk Pemilih Negara/Wilayah Pameran berkuat kuasa. Untuk menambah pasaran, anda boleh pergi ke Tetapan Pasaran; Anda perlu menambah dua atau lebih bahasa ke Marketplace - Pengurusan Bahasa agar pemilih berkuat kuasa. Jika anda ingin menambah bahasa, anda boleh pergi ke tetapan bahasa, dan selepas menambahnya, anda boleh pergi ke halaman Pengurusan Bahasa Pasaran untuk menambah berbilang bahasa pasaran semasa",
+              "info": "Anda perlu menambah dua atau lebih pasaran untuk 'pilihan negara/rantau' berfungsi. Untuk menambah pasaran, pergi ke tetapan pasaran; anda perlu menambah dua atau lebih bahasa dalam pengurusan bahasa pasaran untuk pilihan berfungsi. Untuk menambah bahasa, pergi ke tetapan bahasa, dan selepas itu, pergi ke halaman pengurusan bahasa pasaran untuk menambah pelbagai bahasa semasa pasaran [pengenalan](https://help.shopline.com/hc/en-001/articles/27936284578585-Markets-Management-Overview)",
               "options_0": {
                 "label": "Tunjukkan mereka semua"
               },
@@ -3348,8 +3348,8 @@
     }
   },
   "settings_schema": {
-    "color": {
-      "name": "warna",
+    "component_color": {
+      "name": "Warna komponen",
       "settings": {
         "color_schemes": {
           "definition_0": {

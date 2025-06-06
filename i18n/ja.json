@@ -968,7 +968,7 @@
       "flash_sale_tip": "購入制限：{{count}}点",
       "hot_sale": "好評発売中",
       "product_tabs_benefit_amount_locked": "{{benefitAmount}}引き",
-      "product_tabs_benefit_amount_unlocked": "{{benefitAmount}引きの条件が満たされました！",
+      "product_tabs_benefit_amount_unlocked": "{{benefitAmount}}引きの条件が満たされました！",
       "product_tabs_benefit_discount_locked": "{{benefitAmount}}％引き",
       "product_tabs_benefit_discount_unlocked": "{{offPercent}}％引きの条件が満たされました！",
       "product_tabs_benefit_free_locked": "無料商品",

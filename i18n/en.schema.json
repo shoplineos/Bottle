@@ -830,7 +830,7 @@
           "settings": {
             "show_type": {
               "label": "Show content",
-              "info": "To enable the 'Country/Region Selector,' add at least two markets in market settings. Then, go to 'Market > Languages' to add at least two languages. Once done, you can enable multilingual support for the current market in 'Market > Languages.",
+              "info": "You need to add two or more markets for the 'country/region selector' to work. To add markets, go to market settings. You also need to add two or more languages in market-language management for the selector to function. To add languages, visit language settings, and after adding, go to market-language management to set up multilingual support for the current market [overview](https://help.shopline.com/hc/en-001/articles/27936284578585-Markets-Management-Overview)",
               "options_0": {
                 "label": "Display all"
               },
@@ -3260,7 +3260,7 @@
             "label": "Color"
           },
           "page_size": {
-            "label": "Maximum number of products displayed"
+            "label": "Max number of products displayed"
           },
           "desktop_columns": {
             "label": "No. of rows on desktop"
@@ -3348,8 +3348,8 @@
     }
   },
   "settings_schema": {
-    "color": {
-      "name": "Color",
+    "component_color": {
+      "name": "Component color",
       "settings": {
         "color_schemes": {
           "definition_0": {

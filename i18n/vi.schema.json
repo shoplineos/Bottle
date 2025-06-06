@@ -830,7 +830,7 @@
           "settings": {
             "show_type": {
               "label": "",
-              "info": "",
+              "info": "Bạn cần thêm hai hoặc nhiều thị trường để 'trình chọn quốc gia/khu vực' hoạt động. Để thêm thị trường, hãy vào cài đặt thị trường; cần thêm hai hoặc nhiều ngôn ngữ trong quản lý ngôn ngữ thị trường để trình chọn hoạt động. Để thêm ngôn ngữ, hãy vào cài đặt ngôn ngữ, sau khi thêm xong, bạn có thể vào trang quản lý ngôn ngữ thị trường để thêm đa ngôn ngữ cho thị trường hiện tại [giới thiệu](https://help.shopline.com/hc/en-001/articles/27936284578585-Markets-Management-Overview)",
               "options_0": {
                 "label": ""
               },
@@ -3348,8 +3348,8 @@
     }
   },
   "settings_schema": {
-    "color": {
-      "name": "Màu sắc",
+    "component_color": {
+      "name": "Màu sắc thành phần",
       "settings": {
         "color_schemes": {
           "definition_0": {

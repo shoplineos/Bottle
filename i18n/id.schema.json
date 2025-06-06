@@ -830,7 +830,7 @@
           "settings": {
             "show_type": {
               "label": "Tampilkan konten",
-              "info": "Diperlukan untuk menambahkan dua atau lebih pasar, maka \"Pemilih negara/region\" akan aktif. Untuk menambah pasar, kunjungi pengaturan pasar; perlu menambahkan dua atau lebih bahasa di pengaturan bahasa pasar agar pemilih dapat berfungsi. Jika menambah bahasa, kunjungi pengaturan bahasa, setelah selesai dapat pergi ke halaman pengaturan bahasa pasar untuk menambahkan beberapa bahasa pasar saat ini",
+              "info": "Anda perlu menambahkan dua atau lebih pasar agar 'pemilih negara/region' dapat berfungsi. Untuk menambahkan pasar, silakan pergi ke pengaturan pasar; Anda juga perlu menambahkan dua atau lebih bahasa di manajemen bahasa pasar agar pemilih dapat berfungsi. Untuk menambahkan bahasa, silakan pergi ke pengaturan bahasa, setelah selesai, Anda dapat pergi ke halaman manajemen bahasa pasar untuk menambahkan multibahasa saat ini[ringkasan](https://help.shopline.com/hc/en-001/articles/27936284578585-Markets-Management-Overview)",
               "options_0": {
                 "label": "Tampilkan semua"
               },
@@ -3348,8 +3348,8 @@
     }
   },
   "settings_schema": {
-    "color": {
-      "name": "warna",
+    "component_color": {
+      "name": "Warna komponen",
       "settings": {
         "color_schemes": {
           "definition_0": {
