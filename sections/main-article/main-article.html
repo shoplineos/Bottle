@@ -26,8 +26,8 @@
         "{{{article.image.src}}}"
       ],
     {{/if}}
-    "datePublished": "{{article.published_at | date(format="%Y-%m-%dT%H:%M:%SZ")}}",
-    "dateCreated": "{{article.created_at | date(format="%Y-%m-%dT%H:%M:%SZ")}}",
+    "datePublished": "{{article.published_at | date(format=`%Y-%m-%dT%H:%M:%SZ`)}}",
+    "dateCreated": "{{article.created_at | date(format=`%Y-%m-%dT%H:%M:%SZ`)}}",
     "author": {
       "@type": "Person",
       "name": "{{article.author}}"

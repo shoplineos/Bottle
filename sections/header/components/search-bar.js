@@ -80,7 +80,7 @@ defineModule('theme-search-bar', () => {
             }
             const finalOptions = { ...HeaderSearchBar.SEARCH_DEFAULT_OPTIONS, ...options };
             const uri = new URL(searchUrl, window.location.origin);
-            uri.searchParams.set('q', encodeURIComponent(keyword));
+            uri.searchParams.set('q', keyword);
             uri.searchParams.set('field', finalOptions.field);
             uri.searchParams.set('resource_type', finalOptions.resourceType);
             uri.searchParams.set('limit', finalOptions.limit);

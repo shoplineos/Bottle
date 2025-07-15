@@ -150,7 +150,7 @@ class ThemeAddressCascade extends BaseElement {
                 if (label && province.title) {
                     label.innerHTML = province.title;
                 }
-                this.#provinceInput.required = false;
+                this.#provinceSelector.required = province.required;
             }
             else {
                 this.#provinceGroup.classList.remove('select');
@@ -173,7 +173,7 @@ class ThemeAddressCascade extends BaseElement {
                 if (label && city.title) {
                     label.innerHTML = city.title;
                 }
-                this.#cityInput.required = false;
+                this.#citySelector.required = city.required;
             }
             else {
                 this.#cityGroup.classList.remove('select');
@@ -196,7 +196,7 @@ class ThemeAddressCascade extends BaseElement {
                 if (label && district.title) {
                     label.innerHTML = district.title;
                 }
-                this.#districtInput.required = false;
+                this.#districtSelector.required = district.required;
             }
             else {
                 this.#districtGroup.classList.remove('select');
@@ -249,17 +249,23 @@ class ThemeAddressCascade extends BaseElement {
     #clearProvince() {
         this.#provinceSelector.innerHTML = '';
         this.#provinceSelector.value = '';
+        this.#provinceSelector.required = false;
         this.#provinceInput.value = '';
+        this.#provinceInput.required = false;
     }
     #clearCity() {
         this.#citySelector.innerHTML = '';
         this.#citySelector.value = '';
+        this.#citySelector.required = false;
         this.#cityInput.value = '';
+        this.#cityInput.required = false;
     }
     #clearDistrict() {
         this.#districtSelector.innerHTML = '';
         this.#districtSelector.value = '';
+        this.#districtSelector.required = false;
         this.#districtInput.value = '';
+        this.#districtInput.required = false;
     }
     async #updateProvince(value) {
         if (this.#config.province.type === 'select') {

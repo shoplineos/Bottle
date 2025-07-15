@@ -127,7 +127,7 @@
                   <div class="facets-filtering__modal-body">
                     <div class="facets-filtering__modal-body-inner">
                     {{#for filter in results.filters}}
-                      <theme-modal>
+                      <theme-modal data-lock-scroll="false">
                         {{#capture content_header}}
                           <button type="button" name="close" class="body2 body-font-bold facets-filtering__submenu-summary">
                             {{#component "icons/arrow-thin" /}}

@@ -85,6 +85,10 @@
   overflow: hidden;
 }
 
+.faq-collapse-panel__icon svg {
+  color: rgb(var(--color-text));
+}
+
 .faq-collapse-panel__fold {
   display: flex;
   align-items: center;

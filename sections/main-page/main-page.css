@@ -3,7 +3,7 @@
   text-align: center;
 }
 
-@media (--destop) {
+@media (min-width: 960px) {
   .main-page__title {
     margin-block-end: 20px;
   }

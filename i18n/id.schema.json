@@ -2003,6 +2003,14 @@
     },
     "main_search": {
       "blocks": {
+        "page_card": {
+          "name": "Kartu halaman kustom",
+          "presets": {
+            "presets_0": {
+              "name": "Kartu halaman kustom"
+            }
+          }
+        },
         "results": {
           "name": "Daftar hasil",
           "settings": {

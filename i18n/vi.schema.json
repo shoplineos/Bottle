@@ -192,7 +192,7 @@
             "label": "to"
           },
           "options_2": {
-            "label": "vừa"
+            "label": "Trung bình"
           },
           "options_3": {
             "label": "nhỏ"
@@ -256,7 +256,7 @@
             "label": "to"
           },
           "options_2": {
-            "label": "vừa"
+            "label": "Trung bình"
           },
           "options_3": {
             "label": "nhỏ"
@@ -534,7 +534,7 @@
                 "label": "to"
               },
               "options_2": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_3": {
                 "label": "nhỏ"
@@ -1115,7 +1115,7 @@
                 "label": "to"
               },
               "options_2": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_3": {
                 "label": "nhỏ"
@@ -1127,7 +1127,7 @@
                 "label": "Trái"
               },
               "options_1": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_2": {
                 "label": "Phải"
@@ -1152,7 +1152,7 @@
                 "label": "Trái"
               },
               "options_1": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_2": {
                 "label": "Phải"
@@ -1181,7 +1181,7 @@
             "label": "nhỏ"
           },
           "options_1": {
-            "label": "vừa"
+            "label": "Trung bình"
           },
           "options_2": {
             "label": "to"
@@ -1272,7 +1272,7 @@
                 "label": "to"
               },
               "options_2": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_3": {
                 "label": "nhỏ"
@@ -1284,7 +1284,7 @@
                 "label": "Trái"
               },
               "options_1": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_2": {
                 "label": "Phải"
@@ -1340,7 +1340,7 @@
                 "label": "Trái"
               },
               "options_1": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_2": {
                 "label": "Phải"
@@ -1368,7 +1368,7 @@
                 "label": "Trái"
               },
               "options_1": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_2": {
                 "label": "Phải"
@@ -1527,7 +1527,7 @@
                 "label": "to"
               },
               "options_2": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_3": {
                 "label": "nhỏ"
@@ -1653,7 +1653,7 @@
                 "label": "to"
               },
               "options_2": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_3": {
                 "label": "nhỏ"
@@ -1865,7 +1865,7 @@
             "label": "nhỏ"
           },
           "options_2": {
-            "label": "vừa"
+            "label": "Trung bình"
           },
           "options_3": {
             "label": "to"
@@ -1925,7 +1925,7 @@
                 "label": "to"
               },
               "options_1": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_2": {
                 "label": "nhỏ"
@@ -2003,6 +2003,14 @@
     },
     "main_search": {
       "blocks": {
+        "page_card": {
+          "name": "Thẻ trang tùy chỉnh",
+          "presets": {
+            "presets_0": {
+              "name": "Thẻ trang tùy chỉnh"
+            }
+          }
+        },
         "results": {
           "name": "",
           "settings": {
@@ -2264,7 +2272,7 @@
                 "label": "to"
               },
               "options_2": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_3": {
                 "label": "nhỏ"
@@ -2430,7 +2438,7 @@
                 "label": "to"
               },
               "options_1": {
-                "label": "vừa"
+                "label": "Trung bình"
               },
               "options_2": {
                 "label": "nhỏ"
@@ -2824,7 +2832,7 @@
             "label": "to"
           },
           "options_1": {
-            "label": "vừa"
+            "label": "Trung bình"
           },
           "options_2": {
             "label": "nhỏ"
@@ -2856,7 +2864,7 @@
             "label": "to"
           },
           "options_2": {
-            "label": "vừa"
+            "label": "Trung bình"
           },
           "options_3": {
             "label": "nhỏ"
@@ -3004,7 +3012,7 @@
               "label": "to"
             },
             "options_2": {
-              "label": "vừa"
+              "label": "Trung bình"
             },
             "options_3": {
               "label": "nhỏ"

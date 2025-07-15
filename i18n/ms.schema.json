@@ -192,7 +192,7 @@
             "label": "Besar"
           },
           "options_2": {
-            "label": "Tengah"
+            "label": "Sederhana"
           },
           "options_3": {
             "label": "Kecil"
@@ -256,7 +256,7 @@
             "label": "Besar"
           },
           "options_2": {
-            "label": "Tengah"
+            "label": "Sederhana"
           },
           "options_3": {
             "label": "Kecil"
@@ -534,7 +534,7 @@
                 "label": "Besar"
               },
               "options_2": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_3": {
                 "label": "Kecil"
@@ -1115,7 +1115,7 @@
                 "label": "Besar"
               },
               "options_2": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_3": {
                 "label": "Kecil"
@@ -1127,7 +1127,7 @@
                 "label": "Kiri"
               },
               "options_1": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_2": {
                 "label": "Kanan"
@@ -1152,7 +1152,7 @@
                 "label": "Kiri"
               },
               "options_1": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_2": {
                 "label": "Kanan"
@@ -1181,7 +1181,7 @@
             "label": "Kecil"
           },
           "options_1": {
-            "label": "Tengah"
+            "label": "Sederhana"
           },
           "options_2": {
             "label": "Besar"
@@ -1272,7 +1272,7 @@
                 "label": "Besar"
               },
               "options_2": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_3": {
                 "label": "Kecil"
@@ -1284,7 +1284,7 @@
                 "label": "Kiri"
               },
               "options_1": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_2": {
                 "label": "Kanan"
@@ -1340,7 +1340,7 @@
                 "label": "Kiri"
               },
               "options_1": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_2": {
                 "label": "Kanan"
@@ -1368,7 +1368,7 @@
                 "label": "Kiri"
               },
               "options_1": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_2": {
                 "label": "Kanan"
@@ -1527,7 +1527,7 @@
                 "label": "Besar"
               },
               "options_2": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_3": {
                 "label": "Kecil"
@@ -1653,7 +1653,7 @@
                 "label": "Besar"
               },
               "options_2": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_3": {
                 "label": "Kecil"
@@ -1865,7 +1865,7 @@
             "label": "Kecil"
           },
           "options_2": {
-            "label": "Tengah"
+            "label": "Sederhana"
           },
           "options_3": {
             "label": "Besar"
@@ -1925,7 +1925,7 @@
                 "label": "Besar"
               },
               "options_1": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_2": {
                 "label": "Kecil"
@@ -2003,6 +2003,14 @@
     },
     "main_search": {
       "blocks": {
+        "page_card": {
+          "name": "Kad halaman tersuai",
+          "presets": {
+            "presets_0": {
+              "name": "Kad halaman tersuai"
+            }
+          }
+        },
         "results": {
           "name": "Senarai keputusan",
           "settings": {
@@ -2264,7 +2272,7 @@
                 "label": "Besar"
               },
               "options_2": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_3": {
                 "label": "Kecil"
@@ -2430,7 +2438,7 @@
                 "label": "Besar"
               },
               "options_1": {
-                "label": "Tengah"
+                "label": "Sederhana"
               },
               "options_2": {
                 "label": "Kecil"
@@ -2824,7 +2832,7 @@
             "label": "Besar"
           },
           "options_1": {
-            "label": "Tengah"
+            "label": "Sederhana"
           },
           "options_2": {
             "label": "Kecil"
@@ -2856,7 +2864,7 @@
             "label": "Besar"
           },
           "options_2": {
-            "label": "Tengah"
+            "label": "Sederhana"
           },
           "options_3": {
             "label": "Kecil"
@@ -3004,7 +3012,7 @@
               "label": "Besar"
             },
             "options_2": {
-              "label": "Tengah"
+              "label": "Sederhana"
             },
             "options_3": {
               "label": "Kecil"

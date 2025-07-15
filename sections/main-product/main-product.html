@@ -49,7 +49,7 @@
             "gtin14": "{{variant.barcode}}",
           {{/if}}
           "availability" : "http://schema.org/{{#if variant.available}}InStock{{#else/}}OutOfStock{{/if}}",
-          "price" : "{{variant.price | divided_by(100)}}",
+          "price" : "{{variant.price | divided_by(100, integer=false)}}",
           "priceCurrency" : "{{localization.country.currency.iso_code}}",
           "url": "{{{request.origin | append(variant.url)}}}"
         }{{#if !forloop.last}},{{/if}}

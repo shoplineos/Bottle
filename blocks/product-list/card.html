@@ -2,30 +2,30 @@
 
 {{#var product = props.product /}}
 {{#var product_card_style = settings.product_card_style /}}
-<a
-  href="{{product.url | default(`javascript:void(0)`)}}"
-  class="
-    block-product-card
-    product-card-style--{{settings.product_card_style}}
-    {{#if product_card_style == "card"}}product-card-border-shadow{{/if}}
-    {{ block.settings | class_list() }}
-  "
-  data-product-id="{{product.id}}"
-  data-product-handle="{{product.handle}}"
-  {{{block.shopline_attributes}}}
->
-  {{#blocks}}
-    {{#if product}}
-      {{#if forblock.type == "product-list/image"}}
-        {{#block product=product mobile_columns=props.mobile_columns desktop_columns=props.desktop_columns /}}
+
+{{#product_item product class="block-product-card"}}
+  <a
+    href="{{product.url | default(`javascript:void(0)`)}}"
+    class="
+      product-card-style--{{settings.product_card_style}}
+      {{#if product_card_style == "card"}}product-card-border-shadow{{/if}}
+      {{ block.settings | class_list() }}
+    "
+    {{{block.shopline_attributes}}}
+  >
+    {{#blocks}}
+      {{#if product}}
+        {{#if forblock.type == "product-list/image"}}
+          {{#block product=product mobile_columns=props.mobile_columns desktop_columns=props.desktop_columns /}}
+        {{#else/}}
+          {{#block product=product /}}
+        {{/if}}
       {{#else/}}
-        {{#block product=product /}}
+        {{#block /}}
       {{/if}}
-    {{#else/}}
-      {{#block /}}
-    {{/if}}
-  {{/blocks}}
-</a>
+    {{/blocks}}
+  </a>
+{{/product_item}}
 
 {{#schema}}
 {

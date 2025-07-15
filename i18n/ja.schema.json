@@ -2003,6 +2003,14 @@
     },
     "main_search": {
       "blocks": {
+        "page_card": {
+          "name": "カスタムページカード",
+          "presets": {
+            "presets_0": {
+              "name": "カスタムページカード"
+            }
+          }
+        },
         "results": {
           "name": "結果一覧",
           "settings": {

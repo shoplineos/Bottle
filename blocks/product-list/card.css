@@ -1,4 +1,4 @@
-.block-product-card.product-card-style--card {
+.block-product-card .product-card-style--card {
   background-color: rgb(var(--color-background));
 }
 .block-product-card__layer-image-wrapper {

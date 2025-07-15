@@ -2003,6 +2003,14 @@
     },
     "main_search": {
       "blocks": {
+        "page_card": {
+          "name": "自定义页面卡片",
+          "presets": {
+            "presets_0": {
+              "name": "自定义页面卡片"
+            }
+          }
+        },
         "results": {
           "name": "结果列表",
           "settings": {
