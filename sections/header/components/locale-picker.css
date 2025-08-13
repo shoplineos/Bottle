@@ -1,0 +1,9 @@
+theme-locale-picker {
+  display: contents;
+}
+
+theme-locale-picker .theme-locale-picker__inner {
+  display: inline-flex;
+  gap: 28px;
+  align-items: center;
+}

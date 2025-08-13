@@ -648,8 +648,19 @@
             }
           }
         },
+        "product_media_layer": {
+          "name": "媒體文件浮層",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          }
+        },
         "product_media": {
-          "name": "商品圖片",
+          "name": "商品媒體文件",
           "settings": {
             "video_loop": {
               "label": "啟用視頻循環"
@@ -657,7 +668,7 @@
           },
           "presets": {
             "presets_0": {
-              "name": "商品圖片"
+              "name": "商品媒體文件"
             }
           }
         }
@@ -945,6 +956,14 @@
         },
         "show_divider": {
           "label": "頁頭下方顯示分割線"
+        },
+        "show_locale_picker": {
+          "label": "展示語言選擇器",
+          "info": "需要在市場-語言管理中添加兩項及以上的語言，選擇器才能生效。若添加語言，可前往[語言設置](/admin/settings/lang)，添加完後可去前往[市場](/admin/settings/markets)-語言管理頁面添加當前市場多語言"
+        },
+        "show_country_picker": {
+          "label": "顯示國家/地區選擇器",
+          "info": "需要添加兩項及以上的市場，「展示國家/地區選擇器」才能生效。若要添加市場，可前往[市場設置](/admin/settings/markets)"
         },
         "group_header_0": {
           "label": "Logo"
@@ -1916,8 +1935,27 @@
             }
           }
         },
+        "product_media_group": {
+          "name": "商品媒體",
+          "presets": {
+            "presets_0": {
+              "name": "商品媒體"
+            }
+          }
+        },
+        "product_media_layer": {
+          "name": "媒體文件浮層",
+          "settings": {
+            "layout": {
+              "label": "排版"
+            },
+            "size": {
+              "label": "尺寸"
+            }
+          }
+        },
         "product_media": {
-          "name": "商品圖片",
+          "name": "商品媒體文件",
           "settings": {
             "layout_size": {
               "label": "電腦端媒體大小",
@@ -1983,7 +2021,7 @@
           },
           "presets": {
             "presets_0": {
-              "name": "商品圖片"
+              "name": "商品媒體文件"
             }
           }
         }

@@ -16,10 +16,9 @@ defineModule('theme-recommended-product', () => {
                 const recommendations = responseHTML.querySelector('theme-recommended-product');
                 if (recommendations) {
                     this.innerHTML = recommendations?.innerHTML;
-                    const SHOPLINEstyle = responseHTML?.querySelector(`style[${window.Shopline.styleSelector.local}]`);
-                    if (SHOPLINEstyle) {
-                        document.head.append(SHOPLINEstyle);
-                    }
+                    responseHTML?.querySelectorAll(`style[${window.Shopline.styleSelector.local}]`).forEach((style) => {
+                        document.body.append(style);
+                    });
                     themeUtils.execDomScript(this);
                 }
             }

@@ -1,0 +1,73 @@
+{{#var position = props.position /}}
+{{#var show_locale_picker = props.show_locale_picker /}}
+{{#var show_country_picker = props.show_country_picker /}}
+
+{{#if show_locale_picker || show_country_picker }}
+  <theme-locale-picker>
+    {{#localization_form enctype="multipart/form-data" accept-charset="UTF-8" }}
+      <div class="theme-locale-picker__inner">
+        
+        {{#if show_locale_picker == true }}
+          <theme-dropdown-menu class="{{ position }}">
+            <label class="dropdown-menu__label body4">
+              <input class="dropdown-menu__trigger" type="checkbox" data-role="dropdown-menu-trigger"/>
+              <span class="dropdown-menu__label-text">{{ localization.language.endonym_name }}</span>
+              <span class="dropdown-menu__label-arrow">{{#component "icons/arrow-thin" /}}</span>
+            </label>
+
+            <ul class="dropdown-menu__list body3">
+              {{#for language in localization.available_languages }}
+                <li>
+                  <label class="dropdown-menu__list-item">
+                    <input
+                      class="dropdown-menu__trigger"
+                      type="radio"
+                      name="locale_code"
+                      value="{{ language.iso_code }}"
+                      {{#if localization.language.iso_code == language.iso_code }}checked{{/if}}
+                    />
+                    <span data-hide>{{ language.endonym_name }}</span>
+                  </label>
+                </li>
+              {{/for}}
+            </ul>
+          </theme-dropdown-menu>
+        {{/if}}
+
+        
+        {{#if show_country_picker == true }}
+          <theme-dropdown-menu class="{{ position }}">
+            <label class="dropdown-menu__label body4">
+              <input class="dropdown-menu__trigger" type="checkbox" data-role="dropdown-menu-trigger"/>
+              <span class="dropdown-menu__label-text">
+                {{ localization.country.name }}
+                ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
+              </span>
+              <span class="dropdown-menu__label-arrow">{{#component "icons/arrow-thin" /}}</span>
+            </label>
+
+            <ul class="dropdown-menu__list body3">
+              {{#for country in localization.available_countries }}
+                <li>
+                  <label class="dropdown-menu__list-item">
+                    <input
+                      class="dropdown-menu__trigger"
+                      type="radio"
+                      name="country_code"
+                      value="{{ country.iso_code }}"
+                      {{#if localization.country.iso_code == country.iso_code }}checked{{/if}}
+                    />
+                    <span data-hide>
+                      {{ country.name }}
+                      ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                    </span>
+                  </label>
+                </li>
+              {{/for}}
+            </ul>
+          </theme-dropdown-menu>
+        {{/if}}
+      </div>
+    {{/localization_form}}
+  </theme-locale-picker>
+{{/if}}

@@ -108,7 +108,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -161,7 +161,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Spasi"
@@ -225,7 +225,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -266,7 +266,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -289,7 +289,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -420,7 +420,7 @@
           "name": "Daftar pertanyaan",
           "settings": {
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -496,7 +496,7 @@
           "name": "Teks",
           "settings": {
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -597,7 +597,7 @@
           "label": "Perluas tab pertama"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -620,7 +620,7 @@
           "label": "Klasifikasi produk"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Spasi"
@@ -639,7 +639,7 @@
           "name": "Informasi Produk",
           "settings": {
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             }
           },
           "presets": {
@@ -648,8 +648,19 @@
             }
           }
         },
+        "product_media_layer": {
+          "name": "Lapisan berkas media",
+          "settings": {
+            "layout": {
+              "label": "Tipografi"
+            },
+            "size": {
+              "label": "Ukuran"
+            }
+          }
+        },
         "product_media": {
-          "name": "Gambar produk",
+          "name": "Berkas media produk",
           "settings": {
             "video_loop": {
               "label": "Aktifkan loop video"
@@ -657,7 +668,7 @@
           },
           "presets": {
             "presets_0": {
-              "name": "Gambar produk"
+              "name": "Berkas media produk"
             }
           }
         }
@@ -671,7 +682,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -690,7 +701,7 @@
           "name": "Tambah isi",
           "settings": {
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -709,7 +720,7 @@
           "name": "Hubungi kami",
           "settings": {
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -775,7 +786,7 @@
               "label": "Tulisan tip kotak masukan"
             },
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -810,7 +821,7 @@
           "name": "Informasi footer",
           "settings": {
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -842,7 +853,7 @@
               }
             },
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -886,7 +897,7 @@
               "label": "Ikon pembayaran"
             },
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -908,7 +919,7 @@
               "label": "Judul"
             },
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -930,7 +941,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -945,6 +956,14 @@
         },
         "show_divider": {
           "label": "Perlihatkan garis pemisah di bawah tajuk"
+        },
+        "show_locale_picker": {
+          "label": "Tampilkan pilihan bahasa",
+          "info": "Perlu menambahkan dua bahasa atau lebih dalam Pasar-Manajemen Bahasa agar pemilih dapat diterapkan. Jika Anda menambahkan bahasa, dapat pergi ke [Pengaturan Bahasa](/admin/settings/lang), setelah ditambahkan, Anda dapat pergi ke [pasar](/admin/settings/markets)- halaman manajemen bahasa untuk menambahkan pasar saat ini beberapa bahasa"
+        },
+        "show_country_picker": {
+          "label": "Tampilkan pemilih negara/kawasan",
+          "info": "Dua pasar atau lebih perlu ditambahkan, \"Tampilkan pemilih negara/wilayah\" baru berlaku. Untuk menambahkan pasar, buka [pengaturan pasar](/admin/settings/markets)"
         },
         "group_header_0": {
           "label": "Logo"
@@ -1041,7 +1060,7 @@
               "label": "Gunakan gaya tombol sekunder"
             },
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -1066,7 +1085,7 @@
               "label": "Tampilkan warna latar belakang"
             },
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -1198,7 +1217,7 @@
           "label": "Teks ditampilkan di bawah gambar"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -1242,7 +1261,7 @@
           "name": "Kontainer Isi",
           "settings": {
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -1388,7 +1407,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -1616,7 +1635,7 @@
               "label": "Banner di perangkat mobile"
             },
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "size": {
               "label": "Ukuran"
@@ -1811,7 +1830,7 @@
           "name": "Kontainer Isi",
           "settings": {
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -1841,7 +1860,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -1907,7 +1926,7 @@
           "name": "Informasi Produk",
           "settings": {
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             }
           },
           "presets": {
@@ -1916,8 +1935,27 @@
             }
           }
         },
+        "product_media_group": {
+          "name": "Media produk",
+          "presets": {
+            "presets_0": {
+              "name": "Media produk"
+            }
+          }
+        },
+        "product_media_layer": {
+          "name": "Lapisan berkas media",
+          "settings": {
+            "layout": {
+              "label": "Tipografi"
+            },
+            "size": {
+              "label": "Ukuran"
+            }
+          }
+        },
         "product_media": {
-          "name": "Gambar produk",
+          "name": "Berkas media produk",
           "settings": {
             "layout_size": {
               "label": "Ukuran media komputer",
@@ -1983,7 +2021,7 @@
           },
           "presets": {
             "presets_0": {
-              "name": "Gambar produk"
+              "name": "Berkas media produk"
             }
           }
         }
@@ -1994,7 +2032,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2072,10 +2110,10 @@
       "name": "Produk Unggulan",
       "settings": {
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         }
       }
     },
@@ -2089,7 +2127,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2136,7 +2174,7 @@
           "label": "Layar penuh lebar"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2180,7 +2218,7 @@
           "name": "Kontainer Isi",
           "settings": {
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -2223,7 +2261,7 @@
               "label": "Pencocokan warna"
             },
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -2417,7 +2455,7 @@
               "label": "lompat link"
             },
             "layout": {
-              "label": "Tata Letak"
+              "label": "Tipografi"
             }
           },
           "presets": {
@@ -2483,7 +2521,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2530,7 +2568,7 @@
           "label": "Pencocokan warna"
         },
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2553,7 +2591,7 @@
         "name": "Kartu Blog",
         "settings": {
           "layout": {
-            "label": "Tata Letak"
+            "label": "Tipografi"
           },
           "spacing": {
             "label": "Margin"
@@ -2629,7 +2667,7 @@
         "name": "Informasi blog",
         "settings": {
           "layout": {
-            "label": "Tata Letak"
+            "label": "Tipografi"
           }
         },
         "presets": {
@@ -2651,7 +2689,7 @@
       "name": "Kelompok tombol",
       "settings": {
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2696,7 +2734,7 @@
             "label": "Klasifikasi produk"
           },
           "layout": {
-            "label": "Tata Letak"
+            "label": "Tipografi"
           }
         },
         "presets": {
@@ -2742,7 +2780,7 @@
             }
           },
           "layout": {
-            "label": "Tata Letak"
+            "label": "Tipografi"
           }
         },
         "presets": {
@@ -2805,7 +2843,7 @@
       "name": "Kontainer Isi",
       "settings": {
         "layout": {
-          "label": "Tata Letak"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -3163,7 +3201,7 @@
         "name": "Kartu produk",
         "settings": {
           "layout": {
-            "label": "Tata Letak"
+            "label": "Tipografi"
           },
           "size": {
             "label": "Ukuran"
@@ -3233,7 +3271,7 @@
             "label": "Tampilkan gambar produk berikutnya ketika mouse melayang"
           },
           "layout": {
-            "label": "Tata Letak"
+            "label": "Tipografi"
           }
         },
         "presets": {
@@ -3246,7 +3284,7 @@
         "name": "Lapisan gambar",
         "settings": {
           "layout": {
-            "label": "Tata Letak"
+            "label": "Tipografi"
           },
           "size": {
             "label": "Ukuran"

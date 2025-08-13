@@ -92,6 +92,7 @@ defineModule('theme-product-detail', () => {
             ]);
             this.quantity = quantity;
             this.#volumePricingTipElement = this.#replaceElement(newProductInfoElement, this, '.product-detail__quantity-selector .volume-pricing__tip');
+            this.#replaceElement(newProductInfoElement, this, '.product-detail__variant-sku');
             this.volumePricingElement = this.#replaceElement(newProductInfoElement, this, '.product-detail__volume-pricing');
             this.#updateVolumePricingTip();
         }

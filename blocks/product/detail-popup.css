@@ -1,4 +1,4 @@
-.product-detail__popup .modal__content {
+.product-detail__popup-main .modal__content {
   --modal-animation-name: animation-fade-in-center;
 
   inset-block: 60px auto;
@@ -9,24 +9,24 @@
 }
 
 @media (min-width: 960px) {
-  .product-detail__popup .modal__content {
+  .product-detail__popup-main .modal__content {
     width: 90%;
     max-width: 1200px;
     height: calc(100% - 120px);
     max-height: unset;
   }
 }
-.product-detail__popup .popup__title {
+.product-detail__popup-main .popup__title {
   margin-block-end: 20px;
 }
-.product-detail__popup .popup__content {
+.product-detail__popup-main .popup__content {
   width: 100%;
   height: 100%;
   padding: 20px;
   overflow: auto;
 }
 @media (min-width: 960px) {
-  .product-detail__popup .popup__content {
+  .product-detail__popup-main .popup__content {
     padding: 40px;
   }
 }

@@ -108,7 +108,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -161,7 +161,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Jarak perkataan"
@@ -225,7 +225,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -266,7 +266,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -289,7 +289,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -420,7 +420,7 @@
           "name": "Senarai soalan",
           "settings": {
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -496,7 +496,7 @@
           "name": "Kandungan",
           "settings": {
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -597,7 +597,7 @@
           "label": "Kembangkan tab 1"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -620,7 +620,7 @@
           "label": "Produk kategori"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Jarak perkataan"
@@ -639,7 +639,7 @@
           "name": "Maklumat produk",
           "settings": {
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             }
           },
           "presets": {
@@ -648,8 +648,19 @@
             }
           }
         },
+        "product_media_layer": {
+          "name": "Lapisan fail media",
+          "settings": {
+            "layout": {
+              "label": "Tipografi"
+            },
+            "size": {
+              "label": "Saiz"
+            }
+          }
+        },
         "product_media": {
-          "name": "Imej produk",
+          "name": "Fail media produk",
           "settings": {
             "video_loop": {
               "label": "Dayakan gelung video"
@@ -657,7 +668,7 @@
           },
           "presets": {
             "presets_0": {
-              "name": "Imej produk"
+              "name": "Fail media produk"
             }
           }
         }
@@ -671,7 +682,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -690,7 +701,7 @@
           "name": "Tambah kandungan",
           "settings": {
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -709,7 +720,7 @@
           "name": "Hubungi kami",
           "settings": {
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -775,7 +786,7 @@
               "label": "Copywriting penunjuk ruangan input"
             },
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -810,7 +821,7 @@
           "name": "Maklumat pengaki",
           "settings": {
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -842,7 +853,7 @@
               }
             },
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -886,7 +897,7 @@
               "label": "Ikon pembayaran"
             },
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -908,7 +919,7 @@
               "label": "Tajuk"
             },
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -930,7 +941,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -945,6 +956,14 @@
         },
         "show_divider": {
           "label": "Papar garis pemisah di bawah pengepala halaman"
+        },
+        "show_locale_picker": {
+          "label": "Tunjuk pemilih bahasa",
+          "info": "Dua atau lebih bahasa perlu ditambah kepada pengurusan pasaran-bahasa untuk pemilih berkuatkuasa. Jika anda menambah bahasa, anda boleh pergi ke [tetapan bahasa] (/admin/settings/lang), dan selepas menambah, anda boleh pergi ke [pasar] (/admin/settings/markets) - halaman pengurusan bahasa untuk menambah pelbagai bahasa pasaran semasa"
+        },
+        "show_country_picker": {
+          "label": "Tunjukkan pemilih negara/rantau",
+          "info": "Dua atau lebih pasaran perlu ditambah untuk (pemilih papar negera/wilayah) berkuatkuasa. Untuk menambah pasaran, pergi ke (tetapan pasaran) (/admin/settings/markets)"
         },
         "group_header_0": {
           "label": "Logo"
@@ -1041,7 +1060,7 @@
               "label": "Gunakan gaya butang sekunder"
             },
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -1066,7 +1085,7 @@
               "label": "Memaparkan warna latar belakang"
             },
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -1198,7 +1217,7 @@
           "label": "Paparan teks di bawah gambar"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -1242,7 +1261,7 @@
           "name": "Tempat kandungan",
           "settings": {
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -1388,7 +1407,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -1616,7 +1635,7 @@
               "label": "Imej sepanduk mudah alih"
             },
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "size": {
               "label": "Saiz"
@@ -1811,7 +1830,7 @@
           "name": "Tempat kandungan",
           "settings": {
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -1841,7 +1860,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -1907,7 +1926,7 @@
           "name": "Maklumat produk",
           "settings": {
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             }
           },
           "presets": {
@@ -1916,8 +1935,27 @@
             }
           }
         },
+        "product_media_group": {
+          "name": "Media produk",
+          "presets": {
+            "presets_0": {
+              "name": "Media produk"
+            }
+          }
+        },
+        "product_media_layer": {
+          "name": "Lapisan fail media",
+          "settings": {
+            "layout": {
+              "label": "Tipografi"
+            },
+            "size": {
+              "label": "Saiz"
+            }
+          }
+        },
         "product_media": {
-          "name": "Imej produk",
+          "name": "Fail media produk",
           "settings": {
             "layout_size": {
               "label": "Saiz media PC",
@@ -1983,7 +2021,7 @@
           },
           "presets": {
             "presets_0": {
-              "name": "Imej produk"
+              "name": "Fail media produk"
             }
           }
         }
@@ -1994,7 +2032,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2072,10 +2110,10 @@
       "name": "Produk yang Ditampilkan",
       "settings": {
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         }
       }
     },
@@ -2089,7 +2127,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2136,7 +2174,7 @@
           "label": "Kelebaran skrin penuh"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2180,7 +2218,7 @@
           "name": "Tempat kandungan",
           "settings": {
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -2223,7 +2261,7 @@
               "label": "Warna"
             },
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             },
             "spacing": {
               "label": "Margin"
@@ -2417,7 +2455,7 @@
               "label": "Pautan lompat"
             },
             "layout": {
-              "label": "Penyusunan huruf"
+              "label": "Tipografi"
             }
           },
           "presets": {
@@ -2483,7 +2521,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2530,7 +2568,7 @@
           "label": "Warna"
         },
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2553,7 +2591,7 @@
         "name": "Kad blog",
         "settings": {
           "layout": {
-            "label": "Penyusunan huruf"
+            "label": "Tipografi"
           },
           "spacing": {
             "label": "Margin"
@@ -2629,7 +2667,7 @@
         "name": "Maklumat blog",
         "settings": {
           "layout": {
-            "label": "Penyusunan huruf"
+            "label": "Tipografi"
           }
         },
         "presets": {
@@ -2651,7 +2689,7 @@
       "name": "Kumpulan butang",
       "settings": {
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -2696,7 +2734,7 @@
             "label": "Produk kategori"
           },
           "layout": {
-            "label": "Penyusunan huruf"
+            "label": "Tipografi"
           }
         },
         "presets": {
@@ -2742,7 +2780,7 @@
             }
           },
           "layout": {
-            "label": "Penyusunan huruf"
+            "label": "Tipografi"
           }
         },
         "presets": {
@@ -2805,7 +2843,7 @@
       "name": "Tempat kandungan",
       "settings": {
         "layout": {
-          "label": "Penyusunan huruf"
+          "label": "Tipografi"
         },
         "spacing": {
           "label": "Margin"
@@ -3163,7 +3201,7 @@
         "name": "Kad produk",
         "settings": {
           "layout": {
-            "label": "Penyusunan huruf"
+            "label": "Tipografi"
           },
           "size": {
             "label": "Saiz"
@@ -3233,7 +3271,7 @@
             "label": "Paparkan gambar produk seterusnya apabila tetikus berhenti"
           },
           "layout": {
-            "label": "Penyusunan huruf"
+            "label": "Tipografi"
           }
         },
         "presets": {
@@ -3246,7 +3284,7 @@
         "name": "Tindanan gambar",
         "settings": {
           "layout": {
-            "label": "Penyusunan huruf"
+            "label": "Tipografi"
           },
           "size": {
             "label": "Saiz"

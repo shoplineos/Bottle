@@ -648,8 +648,19 @@
             }
           }
         },
+        "product_media_layer": {
+          "name": "メディアファイルレイヤー",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          }
+        },
         "product_media": {
-          "name": "商品画像",
+          "name": "商品メディアファイル",
           "settings": {
             "video_loop": {
               "label": "動画ループ再生"
@@ -657,7 +668,7 @@
           },
           "presets": {
             "presets_0": {
-              "name": "商品画像"
+              "name": "商品メディアファイル"
             }
           }
         }
@@ -945,6 +956,14 @@
         },
         "show_divider": {
           "label": "ヘッダーの下に区切り線を表示"
+        },
+        "show_locale_picker": {
+          "label": "言語セレクターを表示",
+          "info": "2つ以上のマーケット言語が設定されている場合のみ、セレクターが有効になります。言語の追加は、[設定] > [言語]（/admin/settings/lang）にアクセスして行えます。追加後に、[設定] > [マーケット]（/admin/settings/markets）にアクセスしてマーケットの言語を設定できます。"
+        },
+        "show_country_picker": {
+          "label": "国・地域セレクターを表示",
+          "info": "2つ以上のマーケットが設定されている場合のみ有効になります。マーケットの追加は、[設定] > [マーケット]（/admin/settings/markets）にアクセスして行えます。"
         },
         "group_header_0": {
           "label": "ロゴ"
@@ -1916,8 +1935,27 @@
             }
           }
         },
+        "product_media_group": {
+          "name": "商品メディア",
+          "presets": {
+            "presets_0": {
+              "name": "商品メディア"
+            }
+          }
+        },
+        "product_media_layer": {
+          "name": "メディアファイルレイヤー",
+          "settings": {
+            "layout": {
+              "label": "レイアウト"
+            },
+            "size": {
+              "label": "サイズ"
+            }
+          }
+        },
         "product_media": {
-          "name": "商品画像",
+          "name": "商品メディアファイル",
           "settings": {
             "layout_size": {
               "label": "PC版のメディアサイズ",
@@ -1983,7 +2021,7 @@
           },
           "presets": {
             "presets_0": {
-              "name": "商品画像"
+              "name": "商品メディアファイル"
             }
           }
         }

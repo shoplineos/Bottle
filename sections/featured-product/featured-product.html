@@ -2,7 +2,14 @@
 
 {{#capture content}}
   {{#blocks}}
-    {{#block product=product /}}
+    {{#if forblock.type == "$product-media"}}
+      {{#block product=product order=forblock.index /}}
+    {{/if}}
+  {{/blocks}}
+  {{#blocks}}
+    {{#if forblock.type == "$product-info"}}
+      {{#block product=product order=forblock.index /}}
+    {{/if}}
   {{/blocks}}
 {{/capture}}
 
@@ -70,7 +77,12 @@
       "blocks": [
         {
           "type": "$product-media",
-          "settings": {}
+          "settings": {},
+          "blocks": [
+            {
+              "type": "$product-media-layer"
+            }
+          ]
         },
         {
           "type": "$product-info",
@@ -102,10 +114,6 @@
             }
           ]
         }
-      ],
-      "block_order": [
-        "media",
-        "info"
       ]
     }
   ]

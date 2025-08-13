@@ -1,0 +1,9 @@
+.product-detail__media-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.product-detail__media-layer * {
+  pointer-events: auto;
+}

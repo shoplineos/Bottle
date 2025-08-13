@@ -89,7 +89,7 @@
               "unit": "Item"
             },
             "desktop_columns": {
-              "label": "No. of rows on desktop"
+              "label": "Number of columns (desktop)"
             }
           },
           "presets": {
@@ -108,7 +108,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -130,7 +130,7 @@
               "label": "PC client"
             },
             "desktop_columns": {
-              "label": "No. of rows on desktop"
+              "label": "Number of columns (desktop)"
             },
             "desktop_enable_slider": {
               "label": "Scroll left and right to view on desktop"
@@ -139,7 +139,7 @@
               "label": "Mobile client"
             },
             "mobile_columns": {
-              "label": "Number of columns on mobile"
+              "label": "Number of columns (mobile)"
             },
             "mobile_limit": {
               "label": "The maximum number of categories displayed on the mobile terminal"
@@ -161,7 +161,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Spacing"
@@ -225,7 +225,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -266,7 +266,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -289,7 +289,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -420,7 +420,7 @@
           "name": "Question list",
           "settings": {
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -496,7 +496,7 @@
           "name": "Content",
           "settings": {
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -597,7 +597,7 @@
           "label": "Expand tag 1"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -620,7 +620,7 @@
           "label": "Collection list"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Spacing"
@@ -639,7 +639,7 @@
           "name": "Product information",
           "settings": {
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             }
           },
           "presets": {
@@ -648,8 +648,19 @@
             }
           }
         },
+        "product_media_layer": {
+          "name": "Media file overlay",
+          "settings": {
+            "layout": {
+              "label": "Typography"
+            },
+            "size": {
+              "label": "Size"
+            }
+          }
+        },
         "product_media": {
-          "name": "Product image",
+          "name": "Product media files",
           "settings": {
             "video_loop": {
               "label": "Turn on video loop"
@@ -657,7 +668,7 @@
           },
           "presets": {
             "presets_0": {
-              "name": "Product image"
+              "name": "Product media files"
             }
           }
         }
@@ -671,7 +682,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -690,7 +701,7 @@
           "name": "Additional content",
           "settings": {
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -709,7 +720,7 @@
           "name": "Contact us",
           "settings": {
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -775,7 +786,7 @@
               "label": "Input box prompt text"
             },
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -810,7 +821,7 @@
           "name": "Footer infomation",
           "settings": {
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -842,7 +853,7 @@
               }
             },
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -886,7 +897,7 @@
               "label": "Payment icon"
             },
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -908,7 +919,7 @@
               "label": "Title"
             },
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -930,7 +941,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -945,6 +956,14 @@
         },
         "show_divider": {
           "label": "Display divider below the header"
+        },
+        "show_locale_picker": {
+          "label": "Display Language selector",
+          "info": "You need to go to 'Market' > 'Language management' and add at least two languages for the selector to take effect. To add a language, go to ['Language settings'](/admin/settings/lang), and after adding is complete, go to ['Market'](/admin/settings/markets) > 'Language management' and add the language of the current market."
+        },
+        "show_country_picker": {
+          "label": "Display country/region selection",
+          "info": "Add at least two markets for this to take effect. To add a country/region, go to [Market settings](/admin/settings/markets)"
         },
         "group_header_0": {
           "label": "Logo"
@@ -1041,7 +1060,7 @@
               "label": "Apply secondary button style"
             },
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -1066,7 +1085,7 @@
               "label": "Display background color"
             },
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -1198,7 +1217,7 @@
           "label": "Display text below image"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -1242,7 +1261,7 @@
           "name": "Content Containers",
           "settings": {
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -1388,7 +1407,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -1559,7 +1578,7 @@
       "name": "Blogs",
       "settings": {
         "desktop_columns": {
-          "label": "No. of rows on desktop",
+          "label": "Number of columns (desktop)",
           "options_0": {
             "label": "1 column"
           },
@@ -1616,7 +1635,7 @@
               "label": "Mobile banner image"
             },
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "size": {
               "label": "Size"
@@ -1691,10 +1710,10 @@
           "label": "Products per page"
         },
         "desktop_columns": {
-          "label": "No. of rows on desktop"
+          "label": "Number of columns (desktop)"
         },
         "mobile_columns": {
-          "label": "Number of columns on mobile",
+          "label": "Number of columns (mobile)",
           "options_0": {
             "label": "2 columns"
           },
@@ -1752,10 +1771,10 @@
               "label": "Full screen image"
             },
             "desktop_columns": {
-              "label": "No. of rows on desktop"
+              "label": "Number of columns (desktop)"
             },
             "mobile_columns": {
-              "label": "Number of columns on mobile"
+              "label": "Number of columns (mobile)"
             }
           },
           "presets": {
@@ -1811,7 +1830,7 @@
           "name": "Content Containers",
           "settings": {
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -1841,7 +1860,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -1907,7 +1926,7 @@
           "name": "Product information",
           "settings": {
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             }
           },
           "presets": {
@@ -1916,8 +1935,27 @@
             }
           }
         },
+        "product_media_group": {
+          "name": "Product media",
+          "presets": {
+            "presets_0": {
+              "name": "Product media"
+            }
+          }
+        },
+        "product_media_layer": {
+          "name": "Media file overlay",
+          "settings": {
+            "layout": {
+              "label": "Typography"
+            },
+            "size": {
+              "label": "Size"
+            }
+          }
+        },
         "product_media": {
-          "name": "Product image",
+          "name": "Product media files",
           "settings": {
             "layout_size": {
               "label": "Content size on desktop",
@@ -1983,7 +2021,7 @@
           },
           "presets": {
             "presets_0": {
-              "name": "Product image"
+              "name": "Product media files"
             }
           }
         }
@@ -1994,7 +2032,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -2018,10 +2056,10 @@
               "label": "Results per page"
             },
             "desktop_columns": {
-              "label": "No. of rows on desktop"
+              "label": "Number of columns (desktop)"
             },
             "mobile_columns": {
-              "label": "Number of columns on mobile",
+              "label": "Number of columns (mobile)",
               "options_0": {
                 "label": "1 column"
               },
@@ -2072,10 +2110,10 @@
       "name": "Recommended products",
       "settings": {
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
-          "label": "Typesetting"
+          "label": "Typography"
         }
       }
     },
@@ -2089,7 +2127,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -2136,7 +2174,7 @@
           "label": "Full screen width"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -2180,7 +2218,7 @@
           "name": "Content Containers",
           "settings": {
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -2223,7 +2261,7 @@
               "label": "Color"
             },
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             },
             "spacing": {
               "label": "Padding"
@@ -2389,7 +2427,7 @@
               }
             },
             "desktop_columns": {
-              "label": "No. of rows on desktop",
+              "label": "Number of columns (desktop)",
               "options_0": {
                 "label": "1"
               },
@@ -2417,7 +2455,7 @@
               "label": "URL"
             },
             "layout": {
-              "label": "Typesetting"
+              "label": "Typography"
             }
           },
           "presets": {
@@ -2483,7 +2521,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -2530,7 +2568,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -2553,7 +2591,7 @@
         "name": "Blog cards",
         "settings": {
           "layout": {
-            "label": "Typesetting"
+            "label": "Typography"
           },
           "spacing": {
             "label": "Padding"
@@ -2629,7 +2667,7 @@
         "name": "Blog info",
         "settings": {
           "layout": {
-            "label": "Typesetting"
+            "label": "Typography"
           }
         },
         "presets": {
@@ -2651,7 +2689,7 @@
       "name": "Button group",
       "settings": {
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -2696,7 +2734,7 @@
             "label": "Collection list"
           },
           "layout": {
-            "label": "Typesetting"
+            "label": "Typography"
           }
         },
         "presets": {
@@ -2742,7 +2780,7 @@
             }
           },
           "layout": {
-            "label": "Typesetting"
+            "label": "Typography"
           }
         },
         "presets": {
@@ -2805,7 +2843,7 @@
       "name": "Content Containers",
       "settings": {
         "layout": {
-          "label": "Typesetting"
+          "label": "Typography"
         },
         "spacing": {
           "label": "Padding"
@@ -3163,7 +3201,7 @@
         "name": "Product cards",
         "settings": {
           "layout": {
-            "label": "Typesetting"
+            "label": "Typography"
           },
           "size": {
             "label": "Size"
@@ -3233,7 +3271,7 @@
             "label": "Display next product image on hover"
           },
           "layout": {
-            "label": "Typesetting"
+            "label": "Typography"
           }
         },
         "presets": {
@@ -3246,7 +3284,7 @@
         "name": "Image overlay",
         "settings": {
           "layout": {
-            "label": "Typesetting"
+            "label": "Typography"
           },
           "size": {
             "label": "Size"
@@ -3271,10 +3309,10 @@
             "label": "Max number of products displayed"
           },
           "desktop_columns": {
-            "label": "No. of rows on desktop"
+            "label": "Number of columns (desktop)"
           },
           "mobile_columns": {
-            "label": "Number of columns on mobile"
+            "label": "Number of columns (mobile)"
           },
           "desktop_enable_slider": {
             "label": "Swipe to view on desktop"

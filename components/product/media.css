@@ -39,6 +39,7 @@
 .product-detail__media-gallery .media-gallery__list-wrapper {
   --gap: 10px;
 
+  position: relative;
   width: 100%;
 }
 
@@ -606,10 +607,6 @@
   .product-detail__media-gallery[data-mobile-layout="show-thumbnail-flatten"]
     .media-gallery__thumbnail-arrows {
     display: none;
-  }
-
-  .product-detail__media-gallery[data-mobile-layout="fullscreen"] {
-    margin-block-start: calc(-1 * var(--padding-block-start));
   }
   .product-detail__media-gallery[data-mobile-layout="fullscreen"]
     .media-gallery__arrows {

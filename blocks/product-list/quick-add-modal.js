@@ -17,7 +17,7 @@ defineModule('theme-quick-add-to-cart', () => {
         async open() {
             try {
                 this.#summaryElement.classList.add('loading');
-                const response = await fetch(this.#productUrl);
+                const response = await themeUtils.fetchWithCache(this.#productUrl);
                 const htmlText = await response.text();
                 const domParser = new DOMParser();
                 const responseHTML = domParser.parseFromString(htmlText, 'text/html');
@@ -39,10 +39,9 @@ defineModule('theme-quick-add-to-cart', () => {
             await super.close();
         }
         #insertHTML(responseHTML) {
-            const SHOPLINEstyle = responseHTML?.querySelector(`style[${window.Shopline.styleSelector.local}]`);
-            if (SHOPLINEstyle) {
-                document.head.append(SHOPLINEstyle);
-            }
+            responseHTML?.querySelectorAll(`style[${window.Shopline.styleSelector.local}]`).forEach((style) => {
+                document.body.append(style);
+            });
             const productHTML = responseHTML.querySelector('theme-product-detail');
             this.#disabledFeature(productHTML);
             this.#renameFormId(productHTML);

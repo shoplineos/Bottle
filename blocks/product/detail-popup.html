@@ -3,8 +3,8 @@
 {{#component "script" src="components/modal/index.js" | asset_url() /}}
 
 <div class="product-detail__popup quick-add-hidden" {{{block.shopline_attributes}}}>
-  <theme-modal data-mask-closable="true" data-esc-to-exit="true">
-    <details>
+  <theme-modal data-popup-container="body" data-mask-closable="true" data-esc-to-exit="true">
+    <details class="product-detail__popup-main color-{{ section.settings.color_scheme.id }}">
       <summary class="button button--link body-font-bold">
         {{block.settings.text | default(block.settings.page.title)}}
       </summary>

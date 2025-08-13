@@ -3,6 +3,8 @@
 {{#var show_search_entry = props.show_search_entry /}}
 {{#var show_cart_entry = props.show_cart_entry /}}
 {{#var show_user_entry = props.show_user_entry /}}
+{{#var show_locale_picker = props.show_locale_picker /}}
+{{#var show_country_picker = props.show_country_picker /}}
 
 <theme-action-bar class="header-action-bar {{class}}">
   
@@ -14,6 +16,9 @@
   >
     {{#component "icons/menu" /}}
   </a>
+
+  
+  {{#component "./locale-picker" show_locale_picker=show_locale_picker show_country_picker=show_country_picker /}}
 
   
   {{#if show_search_entry == true}}

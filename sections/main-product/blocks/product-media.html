@@ -1,4 +1,6 @@
-{{#component "product/media" block=block product=product section=section /}}
+{{#capture media_layer}}{{#content "blocks" /}}{{/capture}}
+
+{{#component "product/media" block=block product=product section=section media_layer=media_layer outside_layout=props.outside_layout order=props.order /}}
 
 {{#schema}}
 {
@@ -103,6 +105,12 @@
         }
       ],
       "default": "two-columns"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$product-media-layer",
+      "limit": 1
     }
   ],
   "presets": [

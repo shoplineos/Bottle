@@ -16,6 +16,14 @@
 
 {{#component "stylesheet" src="./components/action-bar.css" | asset_url() /}}
 
+
+{{#component "stylesheet" src="./components/locale-picker.css" | asset_url() /}}
+{{#component "script" src="./components/locale-picker.js" | asset_url() /}}
+
+
+{{#component "stylesheet" src="./components/dropdown-menu.css" | asset_url() /}}
+{{#component "script" src="./components/dropdown-menu.js" | asset_url() /}}
+
 <theme-sticky-header data-sticky-mode="{{section.settings.header_sticky_mode}}" style="
   --header-padding-block-end: {{section.settings.desktop_spacing | css_var("padding-block-end")}};
 ">
@@ -77,6 +85,8 @@
             show_search_entry=section.settings.show_search_entry
             show_user_entry=section.settings.show_user_entry
             show_cart_entry=section.settings.show_cart_entry
+            show_locale_picker=section.settings.show_locale_picker
+            show_country_picker=section.settings.show_country_picker
           /}}
         </div>
       </div>
@@ -104,6 +114,8 @@
   show_user_entry=section.settings.show_user_entry
   color_scheme=section.settings.color_scheme
   links=section.settings.navigation_menu.links
+  show_locale_picker=section.settings.show_locale_picker
+  show_country_picker=section.settings.show_country_picker
 /}}
 
 <script type="application/ld+json">
@@ -144,6 +156,20 @@
       "id": "show_divider",
       "type": "switch",
       "label": "t:sections.header.settings.show_divider.label",
+      "default": false
+    },
+    {
+      "id": "show_locale_picker",
+      "type": "switch",
+      "label": "t:sections.header.settings.show_locale_picker.label",
+      "info": "t:sections.header.settings.show_locale_picker.info",
+      "default": false
+    },
+    {
+      "id": "show_country_picker",
+      "type": "switch",
+      "label": "t:sections.header.settings.show_country_picker.label",
+      "info": "t:sections.header.settings.show_country_picker.info",
       "default": false
     },
     {

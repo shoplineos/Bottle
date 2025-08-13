@@ -3,6 +3,7 @@
 
   position: fixed;
   z-index: -1;
+  display: none;
   pointer-events: none;
   transition: z-index 1ms ease var(--header-nav-drawer-slide-anime-duration);
 }
@@ -22,6 +23,7 @@
 .header-nav-drawer__content {
   inset-block-start: 0;
   inset-inline-start: 0;
+  flex: 1;
   width: 100%;
   height: 100%;
 }
@@ -51,9 +53,14 @@
 
 .header-nav-drawer__content {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   gap: 0;
   width: 400px;
+  height: 100vh;
+  height: 100dvh;
   padding: 15px 0;
+  padding-block-end: max(15px, env(safe-area-inset-bottom));
   background: rgb(var(--color-background));
   transition:
     width var(--header-nav-drawer-slide-anime-duration) ease,
@@ -123,6 +130,9 @@
 .header-nav-drawer__menu {
   --nav-drawer-padding-inline: 20px;
   --nav-drawer-padding-block: 12px;
+
+  flex: 1;
+  overflow-y: auto;
 }
 
 .header-nav-drawer__menu-control {
@@ -264,4 +274,55 @@ details[open]
   > details
   .header-nav-drawer__menu-control {
   transform: translate(0, 0);
+}
+
+.header-nav-drawer__footer {
+  flex-shrink: 0;
+  padding-block-start: 15px;
+  margin-block-start: auto;
+  border-block-start: 1px solid rgb(var(--color-entry-line));
+}
+
+@media (max-width: 959px) {
+  .header-nav-drawer__footer {
+    padding-block-end: env(safe-area-inset-bottom, 0);
+  }
+}
+
+.header-nav-drawer__footer .theme-locale-picker__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.header-nav-drawer__footer theme-locale-picker {
+  display: contents;
+}
+
+.header-nav-drawer__footer theme-locale-picker .dropdown-menu__list {
+  width: unset;
+  margin-block-end: env(safe-area-inset-bottom, 0);
+}
+
+.header-nav-drawer__footer theme-locale-picker theme-dropdown-menu {
+  display: flex;
+  gap: 10px;
+  padding: 12px 20px;
+}
+
+.header-nav-drawer__footer
+  theme-locale-picker
+  theme-dropdown-menu:first-child
+  .dropdown-menu__list-item {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.header-nav-drawer__footer
+  theme-locale-picker
+  theme-dropdown-menu:last-child
+  .dropdown-menu__list-item {
+  word-break: break-word;
+  white-space: normal;
 }

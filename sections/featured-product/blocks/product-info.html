@@ -1,6 +1,7 @@
 <div
   class="product-detail__info product-detail__col {{block.settings | class_list()}}"
   style="
+    order: {{props.order}};
     --info-row-gap: {{block.settings.layout | css_var(`row-gap`)}};
   "
   {{{block.shopline_attributes}}}>

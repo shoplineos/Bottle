@@ -2,6 +2,7 @@ defineModule('theme-header-nav-drawer', () => {
     class HeaderNavDrawer extends BaseElement {
         static SWITCH_NAME = '[data-role="header-nav-drawer-switch"]';
         static DISMISS_NAME = '[data-role="header-nav-drawer-dismiss"]';
+        static DEFAULT_ANIMTE_DURATION = 200;
         #switchClickHandler = (event) => {
             const targets = event.composedPath();
             if (!this.#isMatchingTarget(targets, HeaderNavDrawer.SWITCH_NAME)) {
@@ -35,15 +36,35 @@ defineModule('theme-header-nav-drawer', () => {
         #lockScreen(force) {
             document.body.classList.toggle('header-nav-drawer--lockscreen', !!force);
         }
+        #show() {
+            return new Promise((resolve) => {
+                this.style.display = 'block';
+                setTimeout(() => {
+                    const isOpen = this.classList.toggle('open', true);
+                    this.#lockScreen(isOpen);
+                    resolve();
+                }, HeaderNavDrawer.DEFAULT_ANIMTE_DURATION);
+            });
+        }
+        #hide() {
+            return new Promise((resolve) => {
+                const isOpen = this.classList.toggle('open', false);
+                this.#lockScreen(isOpen);
+                setTimeout(() => {
+                    this.style.display = 'none';
+                    resolve();
+                }, HeaderNavDrawer.DEFAULT_ANIMTE_DURATION);
+            });
+        }
         toggle(force) {
-            const isOpen = this.classList.toggle('open', force);
-            this.#lockScreen(isOpen);
+            const shouldShow = force || this.style.display !== 'block';
+            return shouldShow ? this.#show() : this.#hide();
         }
         open() {
-            this.toggle(true);
+            return this.toggle(true);
         }
         close() {
-            this.toggle(false);
+            return this.toggle(false);
         }
     }
     window.customElements.define('theme-header-nav-drawer', HeaderNavDrawer);

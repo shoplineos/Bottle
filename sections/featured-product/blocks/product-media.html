@@ -1,4 +1,8 @@
-{{#component "product/media" block=block product=props.product section=section /}}
+{{#capture media_layer}}{{#content "blocks" /}}{{/capture}}
+
+<div class="featured-product__media product-detail__col product-detail__col--medium" style="order: {{props.order}};">
+  {{#component "product/media" block=block product=props.product section=section media_layer=media_layer outside_layout=true /}}
+</div>
 
 {{#schema}}
 {
@@ -11,6 +15,12 @@
       "id": "video_loop",
       "label": "t:sections.featured_product.blocks.product_media.settings.video_loop.label",
       "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "$product-media-layer",
+      "limit": 1
     }
   ],
   "presets": [

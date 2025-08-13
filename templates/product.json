@@ -4,9 +4,20 @@
       "type": "main-product",
       "settings": {},
       "blocks": {
-        "media": {
-          "type": "$product-media",
-          "settings": {}
+        "media-group": {
+          "type": "$product-media-group",
+          "blocks": {
+            "media": {
+              "type": "$product-media",
+              "blocks": {
+                "media-layer": {
+                  "type": "$product-media-layer"
+                }
+              },
+              "block_order": ["media-layer"]
+            }
+          },
+          "block_order": ["media"]
         },
         "info": {
           "type": "$product-info",
@@ -99,7 +110,7 @@
           ]
         }
       },
-      "block_order": ["media", "info"]
+      "block_order": ["media-group", "info"]
     },
     "recommended-product": {
       "type": "recommended-product",

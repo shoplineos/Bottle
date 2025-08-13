@@ -108,7 +108,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -161,7 +161,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": "Khoảng cách"
@@ -225,7 +225,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -266,7 +266,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -289,7 +289,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -420,7 +420,7 @@
           "name": "",
           "settings": {
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -496,7 +496,7 @@
           "name": "Nội dung",
           "settings": {
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -597,7 +597,7 @@
           "label": ""
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -620,7 +620,7 @@
           "label": "Phân loại sản phẩm"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": "Khoảng cách"
@@ -639,12 +639,23 @@
           "name": "",
           "settings": {
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             }
           },
           "presets": {
             "presets_0": {
               "name": ""
+            }
+          }
+        },
+        "product_media_layer": {
+          "name": "",
+          "settings": {
+            "layout": {
+              "label": "Kiểu chữ"
+            },
+            "size": {
+              "label": "Kích thước"
             }
           }
         },
@@ -671,7 +682,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -690,7 +701,7 @@
           "name": "Thêm nội dung",
           "settings": {
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -709,7 +720,7 @@
           "name": "",
           "settings": {
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -775,7 +786,7 @@
               "label": "Văn bản thông báo của khoanh nhập"
             },
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -810,7 +821,7 @@
           "name": "",
           "settings": {
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -842,7 +853,7 @@
               }
             },
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -886,7 +897,7 @@
               "label": "Biểu tượng thanh toán"
             },
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -908,7 +919,7 @@
               "label": "Tiêu đề"
             },
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -930,7 +941,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -945,6 +956,14 @@
         },
         "show_divider": {
           "label": "Hiển thị đường phân chia bên dưới tiêu đề"
+        },
+        "show_locale_picker": {
+          "label": "Bày ra máy chọn ngôn ngữ",
+          "info": "Cần thêm từ hai ngôn ngữ trở lên trong Thị trường - Quản lý ngôn ngữ, bộ chọn mới có hiệu lực. Để thêm ngôn ngữ, có thể vào [Cài đặt ngôn ngữ] (/admin/settings/lang), sau khi thêm có thể vào [Thị trường](/admin/settings/markets) - Trang quản lý ngôn ngữ để thêm nhiều ngôn ngữ cho thị trường hiện tại"
+        },
+        "show_country_picker": {
+          "label": "Hiển thị bộ chọn quốc gia/khu vực",
+          "info": "Cần thêm hai hoặc nhiều thị trường thì [Hiển thị bộ chọn quốc gia/khu vực] mới có hiệu lực. Nếu muốn thêm thị trường, hãy đi đến [Cài đặt thị trường](/admin/settings/markets)"
         },
         "group_header_0": {
           "label": "Logo"
@@ -1041,7 +1060,7 @@
               "label": ""
             },
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -1066,7 +1085,7 @@
               "label": ""
             },
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -1198,7 +1217,7 @@
           "label": "Hiển thị văn bản bên dưới hình ảnh"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -1242,7 +1261,7 @@
           "name": "Nơi chứa nội dung",
           "settings": {
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -1388,7 +1407,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -1616,7 +1635,7 @@
               "label": ""
             },
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "size": {
               "label": "Kích thước"
@@ -1811,7 +1830,7 @@
           "name": "Nơi chứa nội dung",
           "settings": {
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -1841,7 +1860,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -1907,12 +1926,31 @@
           "name": "",
           "settings": {
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             }
           },
           "presets": {
             "presets_0": {
               "name": ""
+            }
+          }
+        },
+        "product_media_group": {
+          "name": "",
+          "presets": {
+            "presets_0": {
+              "name": ""
+            }
+          }
+        },
+        "product_media_layer": {
+          "name": "",
+          "settings": {
+            "layout": {
+              "label": "Kiểu chữ"
+            },
+            "size": {
+              "label": "Kích thước"
             }
           }
         },
@@ -1994,7 +2032,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -2072,10 +2110,10 @@
       "name": "Sản phẩm nổi bật",
       "settings": {
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
-          "label": ""
+          "label": "Kiểu chữ"
         }
       }
     },
@@ -2089,7 +2127,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -2136,7 +2174,7 @@
           "label": "Chiều rộng toàn màn hình"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -2180,7 +2218,7 @@
           "name": "Nơi chứa nội dung",
           "settings": {
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -2223,7 +2261,7 @@
               "label": "Phối màu"
             },
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             },
             "spacing": {
               "label": ""
@@ -2417,7 +2455,7 @@
               "label": "Link chuyển đổi"
             },
             "layout": {
-              "label": ""
+              "label": "Kiểu chữ"
             }
           },
           "presets": {
@@ -2483,7 +2521,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -2530,7 +2568,7 @@
           "label": "Phối màu"
         },
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -2553,7 +2591,7 @@
         "name": "Thẻ blog",
         "settings": {
           "layout": {
-            "label": ""
+            "label": "Kiểu chữ"
           },
           "spacing": {
             "label": ""
@@ -2629,7 +2667,7 @@
         "name": "",
         "settings": {
           "layout": {
-            "label": ""
+            "label": "Kiểu chữ"
           }
         },
         "presets": {
@@ -2651,7 +2689,7 @@
       "name": "",
       "settings": {
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -2696,7 +2734,7 @@
             "label": "Phân loại sản phẩm"
           },
           "layout": {
-            "label": ""
+            "label": "Kiểu chữ"
           }
         },
         "presets": {
@@ -2742,7 +2780,7 @@
             }
           },
           "layout": {
-            "label": ""
+            "label": "Kiểu chữ"
           }
         },
         "presets": {
@@ -2805,7 +2843,7 @@
       "name": "Nơi chứa nội dung",
       "settings": {
         "layout": {
-          "label": ""
+          "label": "Kiểu chữ"
         },
         "spacing": {
           "label": ""
@@ -3163,7 +3201,7 @@
         "name": "Thẻ sản phẩm",
         "settings": {
           "layout": {
-            "label": ""
+            "label": "Kiểu chữ"
           },
           "size": {
             "label": "Kích thước"
@@ -3233,7 +3271,7 @@
             "label": "Khi chuột dừng, hiển thị tấm ảnh sản phẩm tiếp theo"
           },
           "layout": {
-            "label": ""
+            "label": "Kiểu chữ"
           }
         },
         "presets": {
@@ -3246,7 +3284,7 @@
         "name": "",
         "settings": {
           "layout": {
-            "label": ""
+            "label": "Kiểu chữ"
           },
           "size": {
             "label": "Kích thước"

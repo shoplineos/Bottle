@@ -33,7 +33,7 @@
         {{#if form.register_config.first_name_visible}}
           
           <label class="field">
-            <input type="text"class="field__input" name="company[first_name]" required="false" autocomplete="first-name" placeholder="customer.company.first_name.placeholder" | t() />
+            <input type="text"class="field__input" name="company[first_name]" required="false" autocomplete="first-name" placeholder="{{`customer.company.first_name.placeholder` | t()}}" />
 
             <span class="field__label">
               {{"customer.company.first_name.placeholder" | t()}}
@@ -44,7 +44,7 @@
         {{#if form.register_config.last_name_visible}}
           
           <label class="field">
-            <input type="text" class="field__input" name="company[last_name]" required="false" autocomplete="last-name" placeholder="customer.company.last_name.placeholder" | t() />
+            <input type="text" class="field__input" name="company[last_name]" required="false" autocomplete="last-name" placeholder="{{`customer.company.last_name.placeholder` | t()}}" />
 
             <span class="field__label">
               {{"customer.company.last_name.placeholder" | t()}}
@@ -55,7 +55,7 @@
 
       
       <label class="field">
-        <input type="text" class="field__input" name="company[company_name]" required="true" maxlength="255" autocomplete="company-name" placeholder="customer.company.company_name.placeholder" | t() />
+        <input type="text" class="field__input" name="company[company_name]" required="true" maxlength="255" autocomplete="company-name" placeholder="{{`customer.company.company_name.placeholder` | t()}}" />
 
         <span class="field__label">
           {{"customer.company.company_name.placeholder" | t()}}
@@ -66,7 +66,7 @@
 
       
       <label class="field">
-        <input type="tel" class="field__input" name="company[shipping_address][mobile_phone]" maxlength="16" autocomplete="shipping-phone" placeholder="customer.company.phone.placeholder" | t() />
+        <input type="tel" class="field__input" name="company[shipping_address][mobile_phone]" maxlength="16" autocomplete="shipping-phone" placeholder="{{`customer.company.phone.placeholder` | t()}}" />
 
         <span class="field__label">
           {{"customer.company.phone.placeholder" | t()}}
@@ -143,7 +143,7 @@
         </div>
 
         <label class="field">
-          <input type="text" class="field__input" name="company[shipping_address][zip_code]" maxlength="10" autocomplete="shipping-zip" placeholder="customer.company.zip.placeholder" | t() />
+          <input type="text" class="field__input" name="company[shipping_address][zip_code]" maxlength="10" autocomplete="shipping-zip" placeholder="{{`customer.company.zip.placeholder` | t()}}" />
 
           <span class="field__label">
             {{"customer.company.zip.placeholder" | t()}}
@@ -153,7 +153,7 @@
 
       
       <label class="field">
-        <input type="text" class="field__input" name="company[shipping_address][addr]" maxlength="255" autocomplete="company-shipping-address" placeholder="customer.company.address.placeholder" | t() />
+        <input type="text" class="field__input" name="company[shipping_address][addr]" maxlength="255" autocomplete="company-shipping-address" placeholder="{{`customer.company.address.placeholder` | t()}}" />
 
         <span class="field__label">
           {{"customer.company.address.placeholder" | t()}}
@@ -162,7 +162,7 @@
 
       
       <label class="field">
-        <input type="text" class="field__input" name="company[shipping_address][addr_two]" maxlength="255" autocomplete="company-shipping-address2" placeholder="customer.company.address2.placeholder" | t() />
+        <input type="text" class="field__input" name="company[shipping_address][addr_two]" maxlength="255" autocomplete="company-shipping-address2" placeholder="{{`customer.company.address2.placeholder` | t()}}" />
 
         <span class="field__label">
           {{"customer.company.address2.placeholder" | t()}}
@@ -190,7 +190,7 @@
         </div>
 
         <label class="field">
-          <input type="tel" class="field__input" name="company[billing_address][mobile_phone]" maxlength="16" autocomplete="billing-phone" placeholder="customer.company.billing.phone.placeholder" | t() />
+          <input type="tel" class="field__input" name="company[billing_address][mobile_phone]" maxlength="16" autocomplete="billing-phone" placeholder="{{`customer.company.billing.phone.placeholder` | t()}}" />
 
           <span class="field__label">
             {{"customer.company.billing.phone.placeholder" | t()}}
@@ -267,7 +267,7 @@
           </div>
 
           <label class="field">
-            <input type="text" class="field__input" name="company[billing_address][zip_code]" maxlength="10" autocomplete="billing-zip" placeholder="customer.company.billing.zip.placeholder" | t() />
+            <input type="text" class="field__input" name="company[billing_address][zip_code]" maxlength="10" autocomplete="billing-zip" placeholder="{{`customer.company.billing.zip.placeholder` | t()}}" />
 
             <span class="field__label">
               {{"customer.company.billing.zip.placeholder" | t()}}
@@ -277,7 +277,7 @@
 
         
         <label class="field">
-          <input type="text" class="field__input" name="company[billing_address][addr]" maxlength="255" autocomplete="billing-address" placeholder="customer.company.billing.address.placeholder" | t() />
+          <input type="text" class="field__input" name="company[billing_address][addr]" maxlength="255" autocomplete="billing-address" placeholder="{{`customer.company.billing.address.placeholder` | t()}}" />
 
           <span class="field__label">
             {{"customer.company.billing.address.placeholder" | t()}}
@@ -286,7 +286,7 @@
 
         
         <label class="field">
-          <input type="text" class="field__input" name="company[billing_address][addr_two]" maxlength="255" autocomplete="billing-address2" placeholder="customer.company.billing.address2.placeholder" | t() />
+          <input type="text" class="field__input" name="company[billing_address][addr_two]" maxlength="255" autocomplete="billing-address2" placeholder="{{`customer.company.billing.address2.placeholder` | t()}}" />
 
           <span class="field__label">
             {{"customer.company.billing.address2.placeholder" | t()}}

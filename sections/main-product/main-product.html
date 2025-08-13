@@ -1,5 +1,14 @@
 {{#capture content}}
-  {{#content "blocks" /}}
+  {{#blocks}}
+    {{#if forblock.type == "$product-media" || forblock.type == "$product-media-group"}}
+      {{#block order=forblock.index /}}
+    {{/if}}
+  {{/blocks}}
+  {{#blocks}}
+    {{#if forblock.type == "$product-info"}}
+      {{#block order=forblock.index /}}
+    {{/if}}
+  {{/blocks}}
 {{/capture}}
 
 {{#component "product/detail" product=product can_update_url=true content=content section_type="main-product" /}}
@@ -100,7 +109,7 @@
   ],
   "blocks": [
     {
-      "type": "$product-media",
+      "type": "$product-media-group",
       "limit": 1
     },
     {

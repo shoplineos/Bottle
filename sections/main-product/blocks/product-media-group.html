@@ -1,0 +1,38 @@
+{{#var layout_size /}}
+{{#blocks}}
+  {{#if forblock.type == "$product-media"}}
+    {{#set layout_size = forblock.settings.layout_size /}}
+  {{/if}}
+{{/blocks}}
+
+<div class="product-detail__media-group product-detail__col product-detail__col--{{layout_size}}" style="order: {{props.order}};">
+  {{#blocks}}
+    {{#block outside_layout=true /}}
+  {{/blocks}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.main_product.blocks.product_media_group.name",
+  "tag": "",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "$product-media",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main_product.blocks.product_media_group.presets.presets_0.name",
+      "blocks": [
+        {
+          "type": "$product-media"
+        }
+      ]
+    }
+  ]
+}
+{{/schema}}

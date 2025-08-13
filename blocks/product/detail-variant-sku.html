@@ -1,11 +1,12 @@
-<div class="product-detail__variant-sku body4" {{{block.shopline_attributes}}}>
-  {{product.selected_or_first_available_variant.sku}}
+<div class="product-detail__variant-sku body4 hidden-empty" {{{block.shopline_attributes}}}>
+  {{~product.selected_or_first_available_variant.sku~}}
 </div>
 
 {{#schema}}
 {
   "type": "variant_sku",
   "icon": "normal",
+  "tag": "",
   "name": "t:blocks.product.detail_variant_sku.name",
   "limit": 1,
   "settings": [],

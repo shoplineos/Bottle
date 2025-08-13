@@ -11,6 +11,12 @@
 }
 
 @media (max-width: 959px) {
+  .header-action-bar theme-locale-picker {
+    display: none;
+  }
+}
+
+@media (max-width: 959px) {
   .header-action-bar {
     display: flex;
     column-gap: var(--header-column-gap-mobile);

@@ -6,8 +6,10 @@
 {{#var block = props.block /}}
 {{#var section = props.section /}}
 {{#var product = props.product /}}
+{{#var media_layer = props.media_layer /}}
+{{#var flex_order = props.order /}}
 
-{{#var layout_size = block.settings.layout_size | default("medium") /}}
+{{#var outside_layout = props.outside_layout /}}
 {{#var video_loop = block.settings.video_loop | default(false) /}}
 {{#var image_quality = block.settings.image_quality | default(80) /}}
 {{#var desktop_layout = block.settings.desktop_layout | default("thumbnail-carousel") /}}
@@ -29,12 +31,14 @@
 {{/if}}
 
 <theme-product-media-gallery
-  class="product-detail__media-gallery product-detail__col product-detail__col--{{layout_size}}"
+  class="product-detail__media-gallery {{#if !outside_layout}}product-detail__col product-detail__col--{{block.settings.layout_size | default("medium")}}{{/if}}"
+  style="{{#if flex_order}}order: {{flex_order}};{{/if}}"
   data-desktop-layout="{{desktop_layout}}"
   data-mobile-layout="{{mobile_layout}}"
   data-media-total="{{#if media_total > 0}}{{media_total}}{{#else/}}1{{/if}}"
   {{{block.shopline_attributes}}}
 >
+ {{#component "product/media-preview" medias=product.media video_loop=video_loop /}}
   <theme-carousel
     class="media-gallery__content"
     style="
@@ -45,6 +49,7 @@
     data-direction="horizontal"
   >
     <div class="media-gallery__list-wrapper">
+
       {{#if should_sticky_selected_variant_media}}
         <div class="media-gallery__sticky-wrapper">
           {{#component
@@ -83,6 +88,8 @@
           </li>
         {{/if}}
       </ul>
+
+      {{{ media_layer }}}
     </div>
 
     {{#if media_total > 0}}
@@ -144,6 +151,4 @@
       {{/if}}
     {{/if}}
   </theme-carousel>
-
-  {{#component "product/media-preview" medias=product.media video_loop=video_loop /}}
 </theme-product-media-gallery>

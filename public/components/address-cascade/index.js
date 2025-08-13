@@ -354,9 +354,15 @@ class ThemeAddressCascade extends BaseElement {
         }
         this.#config = await this.#fetchAddressTemplate(code);
         this.#renderAddressForm();
-        await this.#updateProvince(defaultProvinceCode);
-        await this.#updateCity(defaultCityCode);
-        await this.#updateDistrict(defaultDistrictCode);
+        if (this.#config.province.type === 'select') {
+            await this.#updateProvince(defaultProvinceCode);
+        }
+        if (this.#config.city.type === 'select') {
+            await this.#updateCity(defaultCityCode);
+        }
+        if (this.#config.district.type === 'select') {
+            await this.#updateDistrict(defaultDistrictCode);
+        }
     }
     mounted() {
         this.#initSelectors();

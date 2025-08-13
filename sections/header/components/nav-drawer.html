@@ -1,6 +1,8 @@
 {{#var color_scheme = props.color_scheme /}}
 {{#var links = props.links /}}
 {{#var show_user_entry = props.show_user_entry /}}
+{{#var show_locale_picker = props.show_locale_picker /}}
+{{#var show_country_picker = props.show_country_picker /}}
 
 
 {{#component "stylesheet" src="./nav-drawer.css" | asset_url() /}}
@@ -118,5 +120,15 @@
         {{/for}}
       </ul>
     </nav>
+
+    <footer class="header-nav-drawer__footer">
+      {{#component
+        "./locale-picker"
+        position="top left"
+        show_locale_picker=show_locale_picker
+        show_country_picker=show_country_picker
+      /}}
+    </footer>
+
   </div>
 </theme-header-nav-drawer>
