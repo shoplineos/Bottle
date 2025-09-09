@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Sutinku su",
       "change_binding_after_verification": "Galite prijungti / keisti {{value}} po patikrinimo",
+      "coupon_expired": "Baigėsi nuolaidos kodas",
       "forget_password": "Pamiršote slaptažodį",
       "proceed_to_checkout": "Pereikite prie apmokėjimo",
       "reset_password": "Atkuriate paskyros {{account}} slaptažodį"
@@ -257,7 +258,7 @@
       "copy_success": "Kupono kodas nukopijuotas",
       "discount_title": "Aktyvuokite paskyrą ir gaukite nuolaidos kodą",
       "normal_title": "Aktyvuokite paskyrą",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktyvuokite paskyrą ir gaukite nuolaidos kodą",
       "subscription_text": "Prenumeruokite el. pašto laiškus, kad gautumėte naujausią informaciją, prieigą prie išskirtinių sandorių ir dar daugiau.",
       "success_title": "Sveikiname, gavus didelę nuolaidą",
       "token_expired": "Jūsų nuoroda nebegalioja"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Bendrinti"
   },
+  "infinite_scroll": {
+    "button_desc": "{{total}} prekių {{last_current_offset}}",
+    "load_more": "Įkelti daugiau",
+    "load_more_items": "{{total}} prekių krova {{current_offset}} ~ {{last_current_offset}}"
+  },
   "onboarding": {
     "product_title": "Produkto pavadinimo pavyzdys"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Pristatyta"
     }
   },
+  "pagination": {
+    "offset_info": "{{total}} prekių {{current_offset}} ~ {{last_current_offset}}"
+  },
   "products": {
     "collection": {
       "collection": "Kategorija"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Sėkmingai įdėta į krepšelį",
+      "from_price_html": "Nuo {{price}}",
       "load_more_btn": "Įkeliama daugiau elementų",
-      "load_more_items": "{{total}} prekių krova {{current_offset}} ~ {{last_current_offset}}",
-      "loading_btn": "Įkelti daugiau",
       "no_product_data_found": "Duomenų apie prekę nerasta Prašome bandyti dar kartą vėliau",
       "sold_out": "Išparduota",
-      "unavailable": "Prekės neegzistuoja"
+      "unavailable": "Prekės neegzistuoja",
+      "variant_property_color": "Spalva"
     },
     "giftcard": {
       "balance": "Likutis",
@@ -883,9 +892,7 @@
       "filter": "Filtras",
       "filters_selected": "buvo pasirinkti {{count}}",
       "from_price": "Nuo {{price}}",
-      "infinite_btn_desc": "{{total}} prekių {{last_current_offset}}",
       "less": "mažiau etikečių",
-      "load_more_desc": "{{total}} prekių {{current_offset}} ~ {{last_current_offset}}",
       "load_more_tip": "Įkeliama daugiau prekių",
       "more": "daugiau žymų",
       "more_product_num": "{{num}} elementų skaičius yra daugiskaita",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} nuolaida",
-      "activity_banner_copy_success_text": "Kupono kodas sėkmingai nukopijuotas",
+      "activity_banner_copy_success_text": "Nuolaidų kodas sėkmingai nukopijuotas",
       "activity_banner_free_shipping": "Nemokamas siuntimas",
       "activity_selector_new_arrivals": "Naujienos",
       "activity_selector_price_high_to_low": "Kaina nuo didelės iki mažos",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Paslaugos išimtys",
       "error_message_5": "Paslaugos išimtys",
       "error_message_6": "Paslaugos išimtys",
-      "error_message_7": "Slaptažodis turi būti sudarytas iš 6-18 simbolių, sudarytų iš skaičių, didžiųjų ir mažųjų raidžių"
+      "error_message_7": "Slaptažodis turi būti sudarytas iš 5-40 simbolių, sudarytų iš skaičių, didžiųjų ir mažųjų raidžių"
     },
     "editorSwitchCountryTip": "Redagavimo priemonėje nepalaikomas šalių keitimas",
     "shopby": {

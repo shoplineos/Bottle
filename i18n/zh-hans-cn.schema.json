@@ -995,13 +995,13 @@
         "desktop_menu_layout": {
           "label": "导航布局",
           "options_0": {
-            "label": "LOGO居中，菜单换行"
+            "label": "Logo居中，菜单换行"
           },
           "options_1": {
             "label": "Logo居左，菜单居左"
           },
           "options_2": {
-            "label": "LOGO居左，菜单居中"
+            "label": "Logo居左，菜单居中"
           },
           "options_3": {
             "label": "Logo居中，菜单居左"
@@ -2915,6 +2915,61 @@
       "presets": {
         "presets_0": {
           "name": "标题"
+        }
+      }
+    },
+    "image": {
+      "name": "图片",
+      "settings": {
+        "image": {
+          "label": "图片"
+        },
+        "url": {
+          "label": "跳转链接"
+        },
+        "open_in_new_tab": {
+          "label": "在新标签页中打开链接"
+        },
+        "mask_opacity": {
+          "label": "图片遮罩"
+        },
+        "aspect_ratio": {
+          "label": "图片比例",
+          "options_0": {
+            "label": "原始比例"
+          },
+          "options_1": {
+            "label": "1:1"
+          },
+          "options_2": {
+            "label": "2:3"
+          },
+          "options_3": {
+            "label": "4:3"
+          },
+          "options_5": {
+            "label": "3:2"
+          },
+          "options_6": {
+            "label": "3:1"
+          },
+          "options_7": {
+            "label": "16:9"
+          }
+        },
+        "border_radius": {
+          "label": "圆角半径"
+        },
+        "spacing": {
+          "label": "边距"
+        },
+        "size": {
+          "label": "尺寸"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "图片"
         }
       }
     },

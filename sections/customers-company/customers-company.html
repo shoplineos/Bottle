@@ -5,195 +5,72 @@
 {{#component "script" src="components/address-cascade/index.js" | asset_url() /}}
 {{#component "script" src="./customers-company.js" | asset_url() /}}
 
-<theme-main-company class="customer customer-company {{section.settings.spacing | class_list()}} color-{{section.settings.color_scheme.id}}">
-  {{#company_account_application_form class="customer-company__form"}}
-    {{#if form.posted_successfully}}
-      
-      <div class="customer-company__success-message body3">
-        {{"customer.company.register.success.title" | t()}} {{"customer.company.register.success.description" | t()}}
-      </div>
-    {{#else if form.errors.messages /}}
-      
-      <div class="customer-company__error-message body4">
-        <span>{{form.errors.messages}}</span>
-      </div>
-    {{#else/}}
-      <h2 class="customer-company__title title5 text-center">{{"customer.company.register.title" | t()}}</h2>
-
-      
-      {{#component
-        "input/input-email"
-        input_name="company[email]"
-        input_required=true
-        input_autocomplete="email"
-        input_placeholder="customer.company.email.placeholder" | t()
-      /}}
-
-      <div class="field__group">
-        {{#if form.register_config.first_name_visible}}
-          
-          <label class="field">
-            <input type="text"class="field__input" name="company[first_name]" required="false" autocomplete="first-name" placeholder="{{`customer.company.first_name.placeholder` | t()}}" />
-
-            <span class="field__label">
-              {{"customer.company.first_name.placeholder" | t()}}
-            </span>
-          </label>
-        {{/if}}
-
-        {{#if form.register_config.last_name_visible}}
-          
-          <label class="field">
-            <input type="text" class="field__input" name="company[last_name]" required="false" autocomplete="last-name" placeholder="{{`customer.company.last_name.placeholder` | t()}}" />
-
-            <span class="field__label">
-              {{"customer.company.last_name.placeholder" | t()}}
-            </span>
-          </label>
-        {{/if}}
-      </div>
-
-      
-      <label class="field">
-        <input type="text" class="field__input" name="company[company_name]" required="true" maxlength="255" autocomplete="company-name" placeholder="{{`customer.company.company_name.placeholder` | t()}}" />
-
-        <span class="field__label">
-          {{"customer.company.company_name.placeholder" | t()}}
-        </span>
-      </label>
-
-      <div class="customer-company__subtitle body4">{{"customer.company.account.shipping" | t()}}</div>
-
-      
-      <label class="field">
-        <input type="tel" class="field__input" name="company[shipping_address][mobile_phone]" maxlength="16" autocomplete="shipping-phone" placeholder="{{`customer.company.phone.placeholder` | t()}}" />
-
-        <span class="field__label">
-          {{"customer.company.phone.placeholder" | t()}}
-        </span>
-      </label>
-
-      
-      <theme-address-cascade class="customer-company__address-cascade">
+<div class="customer-company__container color-{{ section.settings.color_scheme.id }}">
+  <theme-main-company class="customer customer-company {{section.settings.spacing | class_list()}}">
+    {{#company_account_application_form class="customer-company__form"}}
+      {{#if form.posted_successfully}}
         
-        <label class="field">
-          <select id="AddressCountry" class="field__input" name="company[shipping_address][country_code]" data-default="{{#if form.company.shipping_address.country_code}}{{form.company.shipping_address.country_code}}{{#else/}}{{country_code}}{{/if}}" autocomplete="shipping-country" required></select>
-          <span class="field__label body3">
-            {{"customer.company.country.placeholder" | t()}}
-          </span>
-          {{#component "icons/arrow-thin" class="icon-arrow" /}}
-        </label>
+        <div class="customer-company__success-message body3">
+          {{"customer.company.register.success.title" | t()}} {{"customer.company.register.success.description" | t()}}
+        </div>
+      {{#else if form.errors.messages /}}
+        
+        <div class="customer-company__error-message body4">
+          <span>{{form.errors.messages}}</span>
+        </div>
+      {{#else/}}
+        <h2 class="customer-company__title title5 text-center">{{"customer.company.register.title" | t()}}</h2>
+
+        
+        {{#component
+          "input/input-email"
+          input_name="company[email]"
+          input_required=true
+          input_autocomplete="email"
+          input_placeholder="customer.company.email.placeholder" | t()
+        /}}
 
         <div class="field__group">
-          
-          <div class="address-cascade__group" id="AddressProvinceGroup">
-            <label class="field address-cascade__select">
-              <select class="field__input" id="AddressProvinceSelect" name="company[shipping_address][province_code]" data-default="{{form.company.shipping_address.province_code}}" autocomplete="shipping-province"></select>
-              <span class="field__label body3">
-                {{"customer.company.province.placeholder" | t()}}
-              </span>
-              {{#component "icons/arrow-thin" class="icon-arrow" /}}
-            </label>
+          {{#if form.register_config.first_name_visible}}
+            
+            <label class="field">
+              <input type="text"class="field__input" name="company[first_name]" required="false" autocomplete="first-name" placeholder="{{`customer.company.first_name.placeholder` | t()}}" />
 
-            <label class="field address-cascade__input">
-              <input class="field__input" id="AddressProvinceInput" name="company[shipping_address][province]" value="{{form.company.shipping_address.province}}" placeholder="{{`customer.company.province.placeholder` | t()}}" autocomplete="shipping-province" />
-              <span class="field__label body3">
-                {{"customer.company.province.placeholder" | t()}}
+              <span class="field__label">
+                {{"customer.company.first_name.placeholder" | t()}}
               </span>
             </label>
-          </div>
+          {{/if}}
 
-          
-          <div class="address-cascade__group" id="AddressCityGroup">
-            <label class="field address-cascade__select">
-              <select type="text" id="AddressCitySelect" name="company[shipping_address][city_code]" data-default="{{form.company.shipping_address.city_code}}" autocomplete="shipping-city" placeholder="{{`customer.company.city.placeholder` | t()}}" class="field__input">
-              </select>
-              <span class="field__label body3">
-                {{"customer.company.city.placeholder" | t()}}
-              </span>
-              {{#component "icons/arrow-thin" class="icon-arrow" /}}
-            </label>
+          {{#if form.register_config.last_name_visible}}
+            
+            <label class="field">
+              <input type="text" class="field__input" name="company[last_name]" required="false" autocomplete="last-name" placeholder="{{`customer.company.last_name.placeholder` | t()}}" />
 
-            <label class="field address-cascade__input">
-              <input type="text" id="AddressCityInput" name="company[shipping_address][city]" value="{{form.company.shipping_address.city}}" maxlength="64" placeholder="{{`customer.company.city.placeholder` | t()}}" autocomplete="shipping-city" class="field__input" />
-              <span class="field__label body3">
-                {{"customer.company.city.placeholder" | t()}}
+              <span class="field__label">
+                {{"customer.company.last_name.placeholder" | t()}}
               </span>
             </label>
-          </div>
+          {{/if}}
         </div>
 
         
-        <div class="address-cascade__group" id="AddressDistrictGroup">
-          <label class="field address-cascade__select">
-            <select type="text" id="AddressDistrictSelect" name="company[shipping_address][district_code]" data-default="{{form.company.shipping_address.district_code}}" autocomplete="shipping-district" placeholder="{{`customer.company.district.placeholder` | t()}}" class="field__input">
-            </select>
-            <span class="field__label body3">
-              {{"customer.company.district.placeholder" | t()}}
-            </span>
-            {{#component "icons/arrow-thin" class="icon-arrow" /}}
-          </label>
-
-          <label class="field address-cascade__input">
-            <input type="text" id="AddressDistrictInput" name="company[shipping_address][district]" value="{{form.company.shipping_address.district}}" maxlength="64" placeholder="{{`customer.company.district.placeholder` | t()}}" class="field__input" autocomplete="shipping-district" />
-            <span class="field__label body3">
-              {{"customer.company.district.placeholder" | t()}}
-            </span>
-          </label>
-        </div>
-
         <label class="field">
-          <input type="text" class="field__input" name="company[shipping_address][zip_code]" maxlength="10" autocomplete="shipping-zip" placeholder="{{`customer.company.zip.placeholder` | t()}}" />
+          <input type="text" class="field__input" name="company[company_name]" required="true" maxlength="255" autocomplete="company-name" placeholder="{{`customer.company.company_name.placeholder` | t()}}" />
 
           <span class="field__label">
-            {{"customer.company.zip.placeholder" | t()}}
+            {{"customer.company.company_name.placeholder" | t()}}
           </span>
         </label>
-      </theme-address-cascade>
 
-      
-      <label class="field">
-        <input type="text" class="field__input" name="company[shipping_address][addr]" maxlength="255" autocomplete="company-shipping-address" placeholder="{{`customer.company.address.placeholder` | t()}}" />
+        <div class="customer-company__subtitle body4">{{"customer.company.account.shipping" | t()}}</div>
 
-        <span class="field__label">
-          {{"customer.company.address.placeholder" | t()}}
-        </span>
-      </label>
-
-      
-      <label class="field">
-        <input type="text" class="field__input" name="company[shipping_address][addr_two]" maxlength="255" autocomplete="company-shipping-address2" placeholder="{{`customer.company.address2.placeholder` | t()}}" />
-
-        <span class="field__label">
-          {{"customer.company.address2.placeholder" | t()}}
-        </span>
-      </label>
-
-      
-      <div class="customer__extra">
-        <label class="customer__extra-label">
-          <span class="field-checkbox">
-            <input type="checkbox" checked />
-            <span class="checkbox"></span>
-          </span>
-
-          <span class="body4">
-            {{"customer.company.billingSameAsShipping.placeholder" | t()}}
-          </span>
-        </label>
-      </div>
-
-      
-      <div class="customer-company__billing hidden">
-        <div class="customer-company__subtitle">
-          <span class="body4">{{"customer.company.account.billTitle" | t()}}</span>
-        </div>
-
+        
         <label class="field">
-          <input type="tel" class="field__input" name="company[billing_address][mobile_phone]" maxlength="16" autocomplete="billing-phone" placeholder="{{`customer.company.billing.phone.placeholder` | t()}}" />
+          <input type="tel" class="field__input" name="company[shipping_address][mobile_phone]" maxlength="16" autocomplete="shipping-phone" placeholder="{{`customer.company.phone.placeholder` | t()}}" />
 
           <span class="field__label">
-            {{"customer.company.billing.phone.placeholder" | t()}}
+            {{"customer.company.phone.placeholder" | t()}}
           </span>
         </label>
 
@@ -201,9 +78,9 @@
         <theme-address-cascade class="customer-company__address-cascade">
           
           <label class="field">
-            <select id="AddressCountry" class="field__input" name="company[billing_address][country_code]" data-default="{{#if form.company.billing_address.country_code}}{{form.company.billing_address.country_code}}{{#else/}}{{country_code}}{{/if}}" autocomplete="billing-country" required></select>
+            <select id="AddressCountry" class="field__input" name="company[shipping_address][country_code]" data-default="{{#if form.company.shipping_address.country_code}}{{form.company.shipping_address.country_code}}{{#else/}}{{country_code}}{{/if}}" autocomplete="shipping-country" required></select>
             <span class="field__label body3">
-              {{"customer.company.billing.country.placeholder" | t()}}
+              {{"customer.company.country.placeholder" | t()}}
             </span>
             {{#component "icons/arrow-thin" class="icon-arrow" /}}
           </label>
@@ -212,17 +89,17 @@
             
             <div class="address-cascade__group" id="AddressProvinceGroup">
               <label class="field address-cascade__select">
-                <select class="field__input" id="AddressProvinceSelect" name="company[billing_address][province_code]" data-default="{{form.company.billing_address.province_code}}" autocomplete="billing-province"></select>
+                <select class="field__input" id="AddressProvinceSelect" name="company[shipping_address][province_code]" data-default="{{form.company.shipping_address.province_code}}" autocomplete="shipping-province"></select>
                 <span class="field__label body3">
-                  {{"customer.company.billing.province.placeholder" | t()}}
+                  {{"customer.company.province.placeholder" | t()}}
                 </span>
                 {{#component "icons/arrow-thin" class="icon-arrow" /}}
               </label>
 
               <label class="field address-cascade__input">
-                <input class="field__input" id="AddressProvinceInput" name="company[billing_address][province]" value="{{form.company.billing_address.province}}" placeholder="{{`customer.company.billing.province.placeholder` | t()}}" autocomplete="billing-province" />
+                <input class="field__input" id="AddressProvinceInput" name="company[shipping_address][province]" value="{{form.company.shipping_address.province}}" placeholder="{{`customer.company.province.placeholder` | t()}}" autocomplete="shipping-province" />
                 <span class="field__label body3">
-                  {{"customer.company.billing.province.placeholder" | t()}}
+                  {{"customer.company.province.placeholder" | t()}}
                 </span>
               </label>
             </div>
@@ -230,18 +107,18 @@
             
             <div class="address-cascade__group" id="AddressCityGroup">
               <label class="field address-cascade__select">
-                <select type="text" id="AddressCitySelect" name="company[billing_address][city_code]" data-default="{{form.company.billing_address.city_code}}" autocomplete="billing-city" placeholder="{{`customer.company.billing.city.placeholder` | t()}}" class="field__input">
+                <select type="text" id="AddressCitySelect" name="company[shipping_address][city_code]" data-default="{{form.company.shipping_address.city_code}}" autocomplete="shipping-city" placeholder="{{`customer.company.city.placeholder` | t()}}" class="field__input">
                 </select>
                 <span class="field__label body3">
-                  {{"customer.company.billing.city.placeholder" | t()}}
+                  {{"customer.company.city.placeholder" | t()}}
                 </span>
                 {{#component "icons/arrow-thin" class="icon-arrow" /}}
               </label>
 
               <label class="field address-cascade__input">
-                <input type="text" id="AddressCityInput" name="company[billing_address][city]" value="{{form.company.billing_address.city}}" maxlength="64" placeholder="{{`customer.company.billing.city.placeholder` | t()}}" autocomplete="billing-city" class="field__input" />
+                <input type="text" id="AddressCityInput" name="company[shipping_address][city]" value="{{form.company.shipping_address.city}}" maxlength="64" placeholder="{{`customer.company.city.placeholder` | t()}}" autocomplete="shipping-city" class="field__input" />
                 <span class="field__label body3">
-                  {{"customer.company.billing.city.placeholder" | t()}}
+                  {{"customer.company.city.placeholder" | t()}}
                 </span>
               </label>
             </div>
@@ -250,58 +127,183 @@
           
           <div class="address-cascade__group" id="AddressDistrictGroup">
             <label class="field address-cascade__select">
-              <select type="text" id="AddressDistrictSelect" name="company[billing_address][district_code]" data-default="{{form.company.billing_address.district_code}}" autocomplete="billing-district" placeholder="{{`customer.company.billing.district.placeholder` | t()}}" class="field__input">
+              <select type="text" id="AddressDistrictSelect" name="company[shipping_address][district_code]" data-default="{{form.company.shipping_address.district_code}}" autocomplete="shipping-district" placeholder="{{`customer.company.district.placeholder` | t()}}" class="field__input">
               </select>
               <span class="field__label body3">
-                {{"customer.company.billing.district.placeholder" | t()}}
+                {{"customer.company.district.placeholder" | t()}}
               </span>
               {{#component "icons/arrow-thin" class="icon-arrow" /}}
             </label>
 
             <label class="field address-cascade__input">
-              <input type="text" id="AddressDistrictInput" name="company[billing_address][district]" value="{{form.company.billing_address.district}}" maxlength="64" placeholder="{{`customer.company.billing.district.placeholder` | t()}}" class="field__input" autocomplete="billing-district" />
+              <input type="text" id="AddressDistrictInput" name="company[shipping_address][district]" value="{{form.company.shipping_address.district}}" maxlength="64" placeholder="{{`customer.company.district.placeholder` | t()}}" class="field__input" autocomplete="shipping-district" />
               <span class="field__label body3">
-                {{"customer.company.billing.district.placeholder" | t()}}
+                {{"customer.company.district.placeholder" | t()}}
               </span>
             </label>
           </div>
 
           <label class="field">
-            <input type="text" class="field__input" name="company[billing_address][zip_code]" maxlength="10" autocomplete="billing-zip" placeholder="{{`customer.company.billing.zip.placeholder` | t()}}" />
+            <input type="text" class="field__input" name="company[shipping_address][zip_code]" maxlength="10" autocomplete="shipping-zip" placeholder="{{`customer.company.zip.placeholder` | t()}}" />
 
             <span class="field__label">
-              {{"customer.company.billing.zip.placeholder" | t()}}
+              {{"customer.company.zip.placeholder" | t()}}
             </span>
           </label>
         </theme-address-cascade>
 
         
         <label class="field">
-          <input type="text" class="field__input" name="company[billing_address][addr]" maxlength="255" autocomplete="billing-address" placeholder="{{`customer.company.billing.address.placeholder` | t()}}" />
+          <input type="text" class="field__input" name="company[shipping_address][addr]" maxlength="255" autocomplete="company-shipping-address" placeholder="{{`customer.company.address.placeholder` | t()}}" />
 
           <span class="field__label">
-            {{"customer.company.billing.address.placeholder" | t()}}
+            {{"customer.company.address.placeholder" | t()}}
           </span>
         </label>
 
         
         <label class="field">
-          <input type="text" class="field__input" name="company[billing_address][addr_two]" maxlength="255" autocomplete="billing-address2" placeholder="{{`customer.company.billing.address2.placeholder` | t()}}" />
+          <input type="text" class="field__input" name="company[shipping_address][addr_two]" maxlength="255" autocomplete="company-shipping-address2" placeholder="{{`customer.company.address2.placeholder` | t()}}" />
 
           <span class="field__label">
-            {{"customer.company.billing.address2.placeholder" | t()}}
+            {{"customer.company.address2.placeholder" | t()}}
           </span>
         </label>
-      </div>
 
-      <div class="customer-company__operation">
-        <button type="submit" class="button">
-          {{"customer.company.register.button" | t()}}
-        </button>
-      </div>
-    {{/if}}
-  {{/company_account_application_form}}
-</theme-main-company>
+        
+        <div class="customer__extra">
+          <label class="customer__extra-label">
+            <span class="field-checkbox">
+              <input type="checkbox" checked />
+              <span class="checkbox"></span>
+            </span>
+
+            <span class="body4">
+              {{"customer.company.billingSameAsShipping.placeholder" | t()}}
+            </span>
+          </label>
+        </div>
+
+        
+        <div class="customer-company__billing hidden">
+          <div class="customer-company__subtitle">
+            <span class="body4">{{"customer.company.account.billTitle" | t()}}</span>
+          </div>
+
+          <label class="field">
+            <input type="tel" class="field__input" name="company[billing_address][mobile_phone]" maxlength="16" autocomplete="billing-phone" placeholder="{{`customer.company.billing.phone.placeholder` | t()}}" />
+
+            <span class="field__label">
+              {{"customer.company.billing.phone.placeholder" | t()}}
+            </span>
+          </label>
+
+          
+          <theme-address-cascade class="customer-company__address-cascade">
+            
+            <label class="field">
+              <select id="AddressCountry" class="field__input" name="company[billing_address][country_code]" data-default="{{#if form.company.billing_address.country_code}}{{form.company.billing_address.country_code}}{{#else/}}{{country_code}}{{/if}}" autocomplete="billing-country" required></select>
+              <span class="field__label body3">
+                {{"customer.company.billing.country.placeholder" | t()}}
+              </span>
+              {{#component "icons/arrow-thin" class="icon-arrow" /}}
+            </label>
+
+            <div class="field__group">
+              
+              <div class="address-cascade__group" id="AddressProvinceGroup">
+                <label class="field address-cascade__select">
+                  <select class="field__input" id="AddressProvinceSelect" name="company[billing_address][province_code]" data-default="{{form.company.billing_address.province_code}}" autocomplete="billing-province"></select>
+                  <span class="field__label body3">
+                    {{"customer.company.billing.province.placeholder" | t()}}
+                  </span>
+                  {{#component "icons/arrow-thin" class="icon-arrow" /}}
+                </label>
+
+                <label class="field address-cascade__input">
+                  <input class="field__input" id="AddressProvinceInput" name="company[billing_address][province]" value="{{form.company.billing_address.province}}" placeholder="{{`customer.company.billing.province.placeholder` | t()}}" autocomplete="billing-province" />
+                  <span class="field__label body3">
+                    {{"customer.company.billing.province.placeholder" | t()}}
+                  </span>
+                </label>
+              </div>
+
+              
+              <div class="address-cascade__group" id="AddressCityGroup">
+                <label class="field address-cascade__select">
+                  <select type="text" id="AddressCitySelect" name="company[billing_address][city_code]" data-default="{{form.company.billing_address.city_code}}" autocomplete="billing-city" placeholder="{{`customer.company.billing.city.placeholder` | t()}}" class="field__input">
+                  </select>
+                  <span class="field__label body3">
+                    {{"customer.company.billing.city.placeholder" | t()}}
+                  </span>
+                  {{#component "icons/arrow-thin" class="icon-arrow" /}}
+                </label>
+
+                <label class="field address-cascade__input">
+                  <input type="text" id="AddressCityInput" name="company[billing_address][city]" value="{{form.company.billing_address.city}}" maxlength="64" placeholder="{{`customer.company.billing.city.placeholder` | t()}}" autocomplete="billing-city" class="field__input" />
+                  <span class="field__label body3">
+                    {{"customer.company.billing.city.placeholder" | t()}}
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            
+            <div class="address-cascade__group" id="AddressDistrictGroup">
+              <label class="field address-cascade__select">
+                <select type="text" id="AddressDistrictSelect" name="company[billing_address][district_code]" data-default="{{form.company.billing_address.district_code}}" autocomplete="billing-district" placeholder="{{`customer.company.billing.district.placeholder` | t()}}" class="field__input">
+                </select>
+                <span class="field__label body3">
+                  {{"customer.company.billing.district.placeholder" | t()}}
+                </span>
+                {{#component "icons/arrow-thin" class="icon-arrow" /}}
+              </label>
+
+              <label class="field address-cascade__input">
+                <input type="text" id="AddressDistrictInput" name="company[billing_address][district]" value="{{form.company.billing_address.district}}" maxlength="64" placeholder="{{`customer.company.billing.district.placeholder` | t()}}" class="field__input" autocomplete="billing-district" />
+                <span class="field__label body3">
+                  {{"customer.company.billing.district.placeholder" | t()}}
+                </span>
+              </label>
+            </div>
+
+            <label class="field">
+              <input type="text" class="field__input" name="company[billing_address][zip_code]" maxlength="10" autocomplete="billing-zip" placeholder="{{`customer.company.billing.zip.placeholder` | t()}}" />
+
+              <span class="field__label">
+                {{"customer.company.billing.zip.placeholder" | t()}}
+              </span>
+            </label>
+          </theme-address-cascade>
+
+          
+          <label class="field">
+            <input type="text" class="field__input" name="company[billing_address][addr]" maxlength="255" autocomplete="billing-address" placeholder="{{`customer.company.billing.address.placeholder` | t()}}" />
+
+            <span class="field__label">
+              {{"customer.company.billing.address.placeholder" | t()}}
+            </span>
+          </label>
+
+          
+          <label class="field">
+            <input type="text" class="field__input" name="company[billing_address][addr_two]" maxlength="255" autocomplete="billing-address2" placeholder="{{`customer.company.billing.address2.placeholder` | t()}}" />
+
+            <span class="field__label">
+              {{"customer.company.billing.address2.placeholder" | t()}}
+            </span>
+          </label>
+        </div>
+
+        <div class="customer-company__operation">
+          <button type="submit" class="button">
+            {{"customer.company.register.button" | t()}}
+          </button>
+        </div>
+      {{/if}}
+    {{/company_account_application_form}}
+  </theme-main-company>
+</div>
 
 {{#schema}}
 {

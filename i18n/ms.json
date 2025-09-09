@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Saya bersetuju dengan",
       "change_binding_after_verification": "Anda boleh menyambungkan/mengubah {{value}} selepas penentusahan",
+      "coupon_expired": "Kod diskaun telah tamat",
       "forget_password": "Terlupa kata laluan",
       "proceed_to_checkout": "Teruskan ke pembayaran",
       "reset_password": "Anda menetapkan semula kata laluan untuk akaun {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Kod kupon disalin",
       "discount_title": "Aktifkan akaun dan dapatkan kod diskaun",
       "normal_title": "Aktifkan akaun",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktifkan akaun dan dapatkan kod diskaun",
       "subscription_text": "Langgan e-mel untuk menerima kemas kini, akses kepada tawaran eksklusif dan pelbagai lagi.",
       "success_title": "Tahniah kerana mendapat jumlah diskaun yang hebat",
       "token_expired": "Pautan telah tamat tempoh"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Kongsi"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} daripada {{total}} item",
+    "load_more": "Muatkan lagi",
+    "load_more_items": "Sedang memuat {{current_offset}} ~ {{last_current_offset}} daripada {{total}} item"
+  },
   "onboarding": {
     "product_title": "Contoh Tajuk Produk"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Dihantar"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} daripada {{total}} item"
+  },
   "products": {
     "collection": {
       "collection": "kategori"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Berjaya ditambahkan pada troli",
+      "from_price_html": "Dari {{price}}",
       "load_more_btn": "Memuat lebih banyak item",
-      "load_more_items": "Sedang memuat {{current_offset}} ~ {{last_current_offset}} daripada {{total}} item",
-      "loading_btn": "Muatkan lagi",
       "no_product_data_found": "Tiada data produk ditemui. Sila cuba lagi kemudian",
       "sold_out": "Habis Dijual",
-      "unavailable": "Barangan tidak wujud"
+      "unavailable": "Barangan tidak wujud",
+      "variant_property_color": "Warna"
     },
     "giftcard": {
       "balance": "Baki",
@@ -883,9 +892,7 @@
       "filter": "Penapis",
       "filters_selected": "{{count}} telah dipilih",
       "from_price": "Dari {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} daripada {{total}} item",
       "less": "kurang",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} daripada {{total}} item",
       "load_more_tip": "Memuatkan lebih banyak item",
       "more": "lebih",
       "more_product_num": "{{num}} produk-produk",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} tutup",
-      "activity_banner_copy_success_text": "Kod kupon telah berjaya disalin",
+      "activity_banner_copy_success_text": "Kod diskaun telah disalin dengan jayanya",
       "activity_banner_free_shipping": "Penghantaran Percuma",
       "activity_selector_new_arrivals": "Baru tiba",
       "activity_selector_price_high_to_low": "Harga tinggi ke rendah",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Pengecualian perkhidmatan",
       "error_message_5": "Pengecualian perkhidmatan",
       "error_message_6": "Pengecualian perkhidmatan",
-      "error_message_7": "Kata laluan mestilah 6-18 aksara yang terdiri daripada nombor, huruf besar dan huruf kecil"
+      "error_message_7": "Kata laluan mestilah 5-40 aksara yang terdiri daripada nombor, huruf besar dan huruf kecil"
     },
     "editorSwitchCountryTip": "Pertukaran negara tidak disokong dalam editor",
     "shopby": {

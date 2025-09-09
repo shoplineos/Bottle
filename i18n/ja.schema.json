@@ -2918,6 +2918,61 @@
         }
       }
     },
+    "image": {
+      "name": "画像",
+      "settings": {
+        "image": {
+          "label": "画像"
+        },
+        "url": {
+          "label": "移動先URL"
+        },
+        "open_in_new_tab": {
+          "label": "新しいタブで開く"
+        },
+        "mask_opacity": {
+          "label": "画像の不透明度"
+        },
+        "aspect_ratio": {
+          "label": "画像の比率",
+          "options_0": {
+            "label": "初期比率"
+          },
+          "options_1": {
+            "label": "1:1"
+          },
+          "options_2": {
+            "label": "2:3"
+          },
+          "options_3": {
+            "label": "4:3"
+          },
+          "options_5": {
+            "label": "3:2"
+          },
+          "options_6": {
+            "label": "3:1"
+          },
+          "options_7": {
+            "label": "16:9"
+          }
+        },
+        "border_radius": {
+          "label": "角丸の半径"
+        },
+        "spacing": {
+          "label": "余白"
+        },
+        "size": {
+          "label": "サイズ"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "画像"
+        }
+      }
+    },
     "product": {
       "detail_additional": {
         "name": "カスタムコンテンツ",

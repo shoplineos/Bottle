@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Nõustun järgmisega:",
       "change_binding_after_verification": "Saad pärast kinnitamist {{value}} ühendada/muuta",
+      "coupon_expired": "Sooduskood on aegunud",
       "forget_password": "Parool ununenud",
       "proceed_to_checkout": "Liikuge kassasse",
       "reset_password": "Oled lähtestamas konto {{account}} parooli"
@@ -257,7 +258,7 @@
       "copy_success": "Kupongi kood kopeeritud",
       "discount_title": "Aktiveerige konto ja saate sooduskoodi",
       "normal_title": "Aktiveerige konto",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktiveerige konto ja saate sooduskoodi",
       "subscription_text": "Liituge e-kirjadega, et saada värskendusi, pääseda juurde eksklusiivsetele pakkumistele ja muule.",
       "success_title": "Palju õnne suurepärase allahindluse saamise puhul",
       "token_expired": "Link on aegunud"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Ühiskasutusse andmine"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} st {{total}} esemed",
+    "load_more": "Laadige rohkem",
+    "load_more_items": "Laadimine {{current_offset}} ~ {{last_current_offset}} st {{total}} esemed"
+  },
   "onboarding": {
     "product_title": "Näidistoote pealkiri"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Kohale toimetatud"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} st {{total}} esemed"
+  },
   "products": {
     "collection": {
       "collection": "Kategooria"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Lisatud ostukorvi edukalt",
+      "from_price_html": "Alates {{price}}",
       "load_more_btn": "Rohkemate üksuste laadimine",
-      "load_more_items": "Laadimine {{current_offset}} ~ {{last_current_offset}} st {{total}} esemed",
-      "loading_btn": "Laadige rohkem",
       "no_product_data_found": "Tooteandmeid ei leitud. Proovi hiljem uuesti",
       "sold_out": "Välja müüdud",
-      "unavailable": "Kaupu ei ole olemas"
+      "unavailable": "Kaupu ei ole olemas",
+      "variant_property_color": "Värvus"
     },
     "giftcard": {
       "balance": "Tasakaal",
@@ -883,9 +892,7 @@
       "filter": "Filter",
       "filters_selected": "{{count}} on valitud",
       "from_price": "Alates {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} st {{total}} esemed",
       "less": "vähem",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} st {{total}} esemed",
       "load_more_tip": "Rohkemate üksuste laadimine",
       "more": "rohkem",
       "more_product_num": "{{num}} Tooted",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} maha",
-      "activity_banner_copy_success_text": "Kupongi kood kopeeritakse edukalt",
+      "activity_banner_copy_success_text": "Sooduskood on edukalt kopeeritud",
       "activity_banner_free_shipping": "Tasuta saatmine",
       "activity_selector_new_arrivals": "Uustulnuk",
       "activity_selector_price_high_to_low": "Hind kõrge kuni madal",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Teenuse erandid",
       "error_message_5": "Teenuse erandid",
       "error_message_6": "Teenuse erandid",
-      "error_message_7": "Parool peab koosnema 6-18 tähemärgist, mis koosneb numbritest, suur- ja väiketähtedest"
+      "error_message_7": "Parool peab koosnema 5-40 tähemärgist, mis koosneb numbritest, suur- ja väiketähtedest"
     },
     "editorSwitchCountryTip": "Riigivahetust ei toetata hetkel redaktoris",
     "shopby": {

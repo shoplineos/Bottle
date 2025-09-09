@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Es piekrītu",
       "change_binding_after_verification": "Pēc verifikācijas varat izveidot savienojumu / mainīt {{value}}",
+      "coupon_expired": "Atlaides kods ir beidzies",
       "forget_password": "Aizmirsta paroli",
       "proceed_to_checkout": "Dodieties uz izrakstīšanos",
       "reset_password": "Jūs atiestatāt konta paroli {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Kopēts kupona kodu",
       "discount_title": "Aktivizējiet kontu un saņemiet diskonta kodu",
       "normal_title": "Aktivizējiet kontu",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktivizējiet kontu un saņemiet diskonta kodu",
       "subscription_text": "Abonējiet e-pastus, lai saņemtu atjauninājumus, piekļūtu ekskluzīviem piedāvājumiem un daudz ko citu.",
       "success_title": "Apsveicam ar lielas atlaides saņemšanu",
       "token_expired": "Saitē ir beidzies"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Lai dalītos"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} no {{total}} vienumiem",
+    "load_more": "Ielādēt vairāk",
+    "load_more_items": "Notiek {{current_offset}} ~ {{last_current_offset}} no {{total}} vienumu ielāde"
+  },
   "onboarding": {
     "product_title": "Produkta nosaukuma piemērs"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Piegādāts"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} no {{total}} vienumiem"
+  },
   "products": {
     "collection": {
       "collection": "Kategorija"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Pievienots grozam veiksmīgi",
+      "from_price_html": "No {{price}}",
       "load_more_btn": "Notiek citu vienumu ielāde",
-      "load_more_items": "Notiek {{current_offset}} ~ {{last_current_offset}} no {{total}} vienumu ielāde",
-      "loading_btn": "Ielādēt vairāk",
       "no_product_data_found": "Nav atrasti dati par produktu. Lūdzu, mēģiniet vēlreiz vēlāk",
       "sold_out": "Pārdevies",
-      "unavailable": "Preces neeksistē"
+      "unavailable": "Preces neeksistē",
+      "variant_property_color": "Krāsa"
     },
     "giftcard": {
       "balance": "Balanss",
@@ -883,9 +892,7 @@
       "filter": "Filtrēt",
       "filters_selected": "{{count}} ir atlasīti",
       "from_price": "No {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} no {{total}} vienumiem",
       "less": "mazāk",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} no {{total}} vienumiem",
       "load_more_tip": "Notiek citu vienumu ielāde",
       "more": "vairāk",
       "more_product_num": "{{num}} Produktiem",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} izslēgts",
-      "activity_banner_copy_success_text": "Kupona kods tiek veiksmīgi kopēts",
+      "activity_banner_copy_success_text": "Atlaides kods veiksmīgi kopēts",
       "activity_banner_free_shipping": "Bezmaksas piegāde",
       "activity_selector_new_arrivals": "Jaunpienācējs",
       "activity_selector_price_high_to_low": "Cena no augstas līdz zemai",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Pakalpojumu izņēmumi",
       "error_message_5": "Pakalpojumu izņēmumi",
       "error_message_6": "Pakalpojumu izņēmumi",
-      "error_message_7": "Parolei jābūt 6-18 rakstzīmēm, kas sastāv no cipariem, lielajiem un mazajiem burtiem"
+      "error_message_7": "Parolei jābūt 5-40 rakstzīmēm, kas sastāv no cipariem, lielajiem un mazajiem burtiem"
     },
     "editorSwitchCountryTip": "Valstu pārslēgšana šobrīd redaktorā nav atbalstīta",
     "shopby": {

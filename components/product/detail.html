@@ -32,6 +32,10 @@
       {{#component "stylesheet" src="./detail.css" | asset_url() /}}
       {{#component "script" src="./detail.js" | asset_url() /}}
 
+      {{#var first_variant = props.product | get_variants() | first() /}}
+      {{#var current_variant = product.selected_or_first_available_variant | default(first_variant) /}}
+      <script name="default-variant-data" type="application/json">{{{ current_variant | json() }}}</script>
+
       {{{props.content}}}
     </theme-product-detail>
   </div>

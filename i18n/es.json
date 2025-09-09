@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "He leído y acepto la",
       "change_binding_after_verification": "Puedes vincular/cambiar {{value}} después de la verificación",
+      "coupon_expired": "El código de descuento ha expirado",
       "forget_password": "Olvidar la contraseña",
       "proceed_to_checkout": "Proceder al pago",
       "reset_password": "Estás restableciendo la contraseña para la cuenta {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Cupón copiado",
       "discount_title": "Activar cuenta y obtener código de descuento",
       "normal_title": "Activar cuenta",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Activar cuenta y obtener código de descuento",
       "subscription_text": "Suscríbase por correo electrónico para recibir actualizaciones, acceder a ofertas exclusivas y más.",
       "success_title": "Enhorabuena por conseguir el descuento",
       "token_expired": "Su enlace ha caducado"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Compartir"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} / {{total}} Ítem",
+    "load_more": "Más información",
+    "load_more_items": ""
+  },
   "onboarding": {
     "product_title": "Ejemplo de título de producto"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Enviado"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} / {{total}} Ítem"
+  },
   "products": {
     "collection": {
       "collection": "Colecciones"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Agregado al carrito con éxito",
+      "from_price_html": "Desde {{price}}",
       "load_more_btn": "Cargar más artículos",
-      "load_more_items": "",
-      "loading_btn": "Más información",
       "no_product_data_found": "No hay información del artículo actual ahora, por favor inténtalo más tarde",
       "sold_out": "Agotado",
-      "unavailable": "El producto no existe"
+      "unavailable": "El producto no existe",
+      "variant_property_color": "Color"
     },
     "giftcard": {
       "balance": "Valor nominal",
@@ -883,9 +892,7 @@
       "filter": "Filtrar",
       "filters_selected": "{{count}} seleccionado(s)",
       "from_price": "Desde {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} / {{total}} Ítem",
       "less": "Menos etiquetas",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} / {{total}} Ítem",
       "load_more_tip": "Cargar más ítems",
       "more": "Más etiquetas",
       "more_product_num": "{{num}} Artículos",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} de descuento",
-      "activity_banner_copy_success_text": "Se ha copiado con éxito el código de cupón",
+      "activity_banner_copy_success_text": "Código de descuento copiado con éxito",
       "activity_banner_free_shipping": "Envío gratuito",
       "activity_selector_new_arrivals": "Recién llegados",
       "activity_selector_price_high_to_low": "Precio alto a bajo",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Error de servicio",
       "error_message_5": "Error de servicio",
       "error_message_6": "Error de servicio",
-      "error_message_7": "La contraseña debe tener entre 6 y 18 caracteres que constan de números, letras mayúsculas y minúsculas"
+      "error_message_7": "La contraseña debe tener entre 5 y 40 caracteres que constan de números, letras mayúsculas y minúsculas"
     },
     "editorSwitchCountryTip": "Ahora no admite cambiar de país en el editor.",
     "shopby": {

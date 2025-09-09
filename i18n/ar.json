@@ -84,7 +84,7 @@
       "notSupport": {
         "stacked": "لا يمكن تكديس أكواد الخصم"
       },
-      "unavailable": "كود الخصم غير صالح"
+      "unavailable": "انتهت صلاحية رمز الخصم"
     },
     "discount": {
       "coupon_code_amount": "خصم كود الخصم",
@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "لقد قرأت وأوافق على",
       "change_binding_after_verification": "بعد التحقق، يمكنك ربط / تعديل {{value}}",
+      "coupon_expired": "انتهت صلاحية رمز الخصم",
       "forget_password": "نسيت كلمة المرور",
       "proceed_to_checkout": "الشروع في الدفع",
       "reset_password": "أنت تعيد تعيين كلمة المرور للحساب {{account}}"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "مشاركة"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} / {{total}} العناصر",
+    "load_more": "تحميل المزيد",
+    "load_more_items": "تحميل {{current_offset}} ~ {{last_current_offset}} / {{total}} العناصر"
+  },
   "onboarding": {
     "product_title": "مثال على عنوان المنتج"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "تم الشحن"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} / {{total}} العناصر"
+  },
   "products": {
     "collection": {
       "collection": "التصنيف"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "تمت الإضافة إلى سلة التسوق بنجاح",
+      "from_price_html": "من {{price}}",
       "load_more_btn": "تحميل المزيد من المشاريع\n",
-      "load_more_items": "تحميل {{current_offset}} ~ {{last_current_offset}} / {{total}} العناصر",
-      "loading_btn": "تحميل المزيد",
       "no_product_data_found": "لا توجد بيانات للمنتج الحالي ، يرجى المحاولة مرة أخرى في وقت لاحق",
       "sold_out": "نفدت",
-      "unavailable": "العنصر غير موجود"
+      "unavailable": "العنصر غير موجود",
+      "variant_property_color": "اللون"
     },
     "giftcard": {
       "balance": "الرصيد",
@@ -883,9 +892,7 @@
       "filter": "تصفية",
       "filters_selected": "تم اختيار {{count}}",
       "from_price": "من {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} / {{total}} العناصر",
       "less": "تسميات أقل",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} / {{total}} العناصر",
       "load_more_tip": "تحميل المزيد من العناصر",
       "more": "المزيد من التسميات",
       "more_product_num": "{{num}} منتج",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "خصم {{benefit}}",
-      "activity_banner_copy_success_text": "تم نسخ كود الخصم بنجاح",
+      "activity_banner_copy_success_text": "تم نسخ رمز الخصم بنجاح",
       "activity_banner_free_shipping": "شحن مجاني",
       "activity_selector_new_arrivals": "أحدث المنتجات",
       "activity_selector_price_high_to_low": "السعر من الأعلى للأدنى",
@@ -1166,7 +1173,7 @@
       "error_message_4": "النظام مشغول",
       "error_message_5": "النظام مشغول",
       "error_message_6": "النظام مشغول",
-      "error_message_7": "يجب أن تتكون كلمة المرور من 6 إلى 18 حرفًا وتتكون من أرقام وأحرف كبيرة وصغيرة"
+      "error_message_7": "يجب أن تتكون كلمة المرور من 5 إلى 40 حرفًا وتتكون من أرقام وأحرف كبيرة وصغيرة"
     },
     "editorSwitchCountryTip": "لا يدعم المحرر تبديل البلدان حاليًا",
     "shopby": {

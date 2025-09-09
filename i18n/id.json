@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Saya setutu perjanjian toko",
       "change_binding_after_verification": "Setelah verifikasi bisa mengikat/mengubah mengikat{{value}}",
+      "coupon_expired": "Kode diskon telah kedaluwarsa",
       "forget_password": "Lupa kata sandi",
       "proceed_to_checkout": "Lanjutkan untuk pembayaran",
       "reset_password": "Anda sedang setel kata sandi untuk akun {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Kupon telah disalin",
       "discount_title": "Aktifkan akun dan dapatkan kode diskon",
       "normal_title": "Aktifkan akun",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktifkan akun Anda dan dapatkan kode diskon",
       "subscription_text": "Berlangganan email untuk menerima pembaruan, mengakses diskon eksklusif, dll.",
       "success_title": "Selamat Anda dapatkan diskon",
       "token_expired": "Link Anda sudah mati"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Membagi"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} / {{total}} item",
+    "load_more": "Muat lebih banyak",
+    "load_more_items": "Memuat item {{current_offset}} ~ {{last_current_offset}} / {{total}}"
+  },
   "onboarding": {
     "product_title": "Contoh Judul Produk"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Sudah kirim"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} / {{total}} item"
+  },
   "products": {
     "collection": {
       "collection": "Koleksi"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "कार्ट में सफलतापूर्वक जोड़ा गया",
+      "from_price_html": "dari {{price}}",
       "load_more_btn": "Muat lebih banyak item",
-      "load_more_items": "Memuat item {{current_offset}} ~ {{last_current_offset}} / {{total}}",
-      "loading_btn": "Muat lebih banyak",
       "no_product_data_found": "Tidak ada data produk saat ini, silakan coba lagi nanti",
       "sold_out": "Terjual habis",
-      "unavailable": "Produk ini tidak tersedia"
+      "unavailable": "Produk ini tidak tersedia",
+      "variant_property_color": "रंग"
     },
     "giftcard": {
       "balance": "Nilai",
@@ -883,9 +892,7 @@
       "filter": "Saring",
       "filters_selected": "{{count}} telah dipilih",
       "from_price": "dari {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} / {{total}} item",
       "less": "Label yang lebih sedikit",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} / {{total}} item",
       "load_more_tip": "Muat lebih banyak proyek",
       "more": "Label lain",
       "more_product_num": "{{num}} उत्पादों",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Layanan abnormal",
       "error_message_5": "Layanan abnormal",
       "error_message_6": "Layanan abnormal",
-      "error_message_7": "Password harus terdiri dari 6-18 karakter yang terdiri dari angka, huruf besar dan huruf kecil"
+      "error_message_7": "Password harus terdiri dari 5-40 karakter yang terdiri dari angka, huruf besar dan huruf kecil"
     },
     "editorSwitchCountryTip": "Tidak mendukung beralih negara di dalam editor",
     "shopby": {

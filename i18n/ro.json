@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Sunt de acord cu",
       "change_binding_after_verification": "Puteți conecta/schimba {{value}} după verificare",
+      "coupon_expired": "Codul de reducere a expirat",
       "forget_password": "Parolă uitată",
       "proceed_to_checkout": "Finalizează cumpărăturile",
       "reset_password": "Ați resetat parola pentru contul {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Codul cupon copiat",
       "discount_title": "Activează contul și primește cod de reducere",
       "normal_title": "Activează contul",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Activează contul și primește cod de reducere",
       "subscription_text": "Înregistrați-vă pentru e-mailuri pentru a primi actualizări, acces la oferte exclusive, și mai multe.",
       "success_title": "Felicitări pentru primirea reducerii",
       "token_expired": "Link-ul tău a expirat"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Împărtășiți"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} din {{total}} obiecte",
+    "load_more": "Încărcați mai mult",
+    "load_more_items": "Încărcare {{current_offset}} ~ {{last_current_offset}} din {{total}} obiecte"
+  },
   "onboarding": {
     "product_title": "Exemplu de titlu al produsului"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Livrat"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} din {{total}} obiecte"
+  },
   "products": {
     "collection": {
       "collection": "Categorie"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Adăugat în coș cu succes",
+      "from_price_html": "Începând de la {{price}}",
       "load_more_btn": "Se încarcă mai multe articole",
-      "load_more_items": "Încărcare {{current_offset}} ~ {{last_current_offset}} din {{total}} obiecte",
-      "loading_btn": "Încărcați mai mult",
       "no_product_data_found": "Nu a fost găsită nicio informație despre produs. Vă rugăm să încercați din nou mai târziu",
       "sold_out": "Vândut",
-      "unavailable": "Bunurile nu există"
+      "unavailable": "Bunurile nu există",
+      "variant_property_color": "Culoare"
     },
     "giftcard": {
       "balance": "Balanță",
@@ -883,9 +892,7 @@
       "filter": "Filtru",
       "filters_selected": "{{count}} au fost selectate",
       "from_price": "Începând de la {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} din {{total}} obiecte",
       "less": "Mai puține",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} din {{total}} obiecte",
       "load_more_tip": "Se încarcă mai multe articole",
       "more": "Mai multe",
       "more_product_num": "{{num}} Produse",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "Reducere {{benefit}}",
-      "activity_banner_copy_success_text": "Codul cuponului a fost copiat",
+      "activity_banner_copy_success_text": "Codul de reducere a fost copiat cu succes",
       "activity_banner_free_shipping": "Livrare gratuită",
       "activity_selector_new_arrivals": "Noi sosiți",
       "activity_selector_price_high_to_low": "Preț de la mare la mic",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Service pentru excepții",
       "error_message_5": "Service pentru excepții",
       "error_message_6": "Service pentru excepții",
-      "error_message_7": "Parola trebuie să aibă 6-18 caractere, compuse din cifre, litere mari și minuscule"
+      "error_message_7": "Parola trebuie să aibă 5-40 caractere, compuse din cifre, litere mari și minuscule"
     },
     "editorSwitchCountryTip": "Schimbarea țărilor nu are suport în editor",
     "shopby": {

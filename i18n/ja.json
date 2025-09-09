@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "同意して次に進む",
       "change_binding_after_verification": "認証が完了すると{{value}}を変更できます",
+      "coupon_expired": "割引コードの有効期限が切れています。",
       "forget_password": "パスワードを忘れた場合",
       "proceed_to_checkout": "チェックアウトに進む",
       "reset_password": "アカウント {{account}} のパスワードをリセット"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "シェア"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} / {{total}}  / {{total}}の項目を読み込む",
+    "load_more": "もっと見る",
+    "load_more_items": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 点のアイテムを読み込み中"
+  },
   "onboarding": {
     "product_title": "商品名の例"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "出荷済み"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} / {{total}}  / {{total}}の項目を読み込む"
+  },
   "products": {
     "collection": {
       "collection": "カテゴリ"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "カートに入れました",
+      "from_price_html": "{{price}}より",
       "load_more_btn": "さらにアイテムをロードする",
-      "load_more_items": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 点のアイテムを読み込み中",
-      "loading_btn": "もっと見る",
       "no_product_data_found": "商品データが見つかりません。しばらくしてからもう一度お試しください",
       "sold_out": "売り切れ",
-      "unavailable": "この商品は存在しません"
+      "unavailable": "この商品は存在しません",
+      "variant_property_color": "色"
     },
     "giftcard": {
       "balance": "バランス",
@@ -883,9 +892,7 @@
       "filter": "フィルター",
       "filters_selected": "{{count}}点を選択済み",
       "from_price": "{{price}}より",
-      "infinite_btn_desc": "{{last_current_offset}} / {{total}}  / {{total}}の項目を読み込む",
       "less": "閉じる",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} / {{total}}  / {{total}}の項目を読み込む",
       "load_more_tip": "もっと見る",
       "more": "もっと見る",
       "more_product_num": "{{num}} 製品",
@@ -1166,7 +1173,7 @@
       "error_message_4": "異常が発生しています",
       "error_message_5": "異常が発生しています",
       "error_message_6": "異常が発生しています",
-      "error_message_7": "パスワードは、英大文字、英小文字、数字を含んだ6〜18文字にしてください。"
+      "error_message_7": "パスワードは、英大文字、英小文字、数字を含んだ5〜40文字にしてください。"
     },
     "editorSwitchCountryTip": "国・地域の変更ができません",
     "shopby": {

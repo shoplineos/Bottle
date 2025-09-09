@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Elfogadom az",
       "change_binding_after_verification": "Az ellenőrzés után csatolhatja/módosíthatja a(z) {{value}}-t",
+      "coupon_expired": "A kedvezmény kód lejárt",
       "forget_password": "Elfelejtett jelszó",
       "proceed_to_checkout": "Tovább a kijelentkezéshez",
       "reset_password": "Visszaállítja a(z) {{account}} fiók jelszavát"
@@ -257,7 +258,7 @@
       "copy_success": "Kuponkód átmásolva",
       "discount_title": "Aktiválja fiókját és kedvezménykódot kap",
       "normal_title": "Fiók aktiválás",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktiválja fiókját és kedvezménykódot kap",
       "subscription_text": "Iratkozzon fel az e-mailekre és friss híreket kap, valamint hozzáfér az exkluzív ajánlatokhoz és még sok máshoz.",
       "success_title": "Gratulálunk, nagyszerű kedvezményt kapott",
       "token_expired": "Az Ön hivatkozása lejárt"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Megosztás"
   },
+  "infinite_scroll": {
+    "button_desc": "{{total}} tételből {{last_current_offset}}",
+    "load_more": "Töltsön többet",
+    "load_more_items": "{{total}} tételből {{current_offset}} ~ {{last_current_offset}} betöltése"
+  },
   "onboarding": {
     "product_title": "Példa a termék címére"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Kiszállítva"
     }
   },
+  "pagination": {
+    "offset_info": "{{total}} tételből {{current_offset}} ~ {{last_current_offset}}"
+  },
   "products": {
     "collection": {
       "collection": "Kategória"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Sikeresen a kosárba",
+      "from_price_html": "{{price}} ártól",
       "load_more_btn": "További elemek betöltése",
-      "load_more_items": "{{total}} tételből {{current_offset}} ~ {{last_current_offset}} betöltése",
-      "loading_btn": "Töltsön többet",
       "no_product_data_found": "Nem található termékadat. Kérjük, később próbálja újra",
       "sold_out": "Elfogyott",
-      "unavailable": "A javak nem léteznek"
+      "unavailable": "A javak nem léteznek",
+      "variant_property_color": "Szín"
     },
     "giftcard": {
       "balance": "Egyenleg",
@@ -883,9 +892,7 @@
       "filter": "Szűrő",
       "filters_selected": "{{count}} lett kiválasztva",
       "from_price": "{{price}} ártól",
-      "infinite_btn_desc": "{{total}} tételből {{last_current_offset}}",
       "less": "Kevesebb",
-      "load_more_desc": "{{total}} tételből {{current_offset}} ~ {{last_current_offset}}",
       "load_more_tip": "További elemek betöltése",
       "more": "Több",
       "more_product_num": "{{num}} Termékek",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} kedvezmény",
-      "activity_banner_copy_success_text": "A kuponkód másolása sikeres",
+      "activity_banner_copy_success_text": "A kedvezménykód sikeresen másolva",
       "activity_banner_free_shipping": "Ingyenes szállítás",
       "activity_selector_new_arrivals": "Újonnan érkezők",
       "activity_selector_price_high_to_low": "Ár magastól alacsonyig",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Szolgáltatás kivételek",
       "error_message_5": "Szolgáltatás kivételek",
       "error_message_6": "Szolgáltatás kivételek",
-      "error_message_7": "A jelszónak 6-18 karakterből kell állnia, amely számokból, nagy- és kisbetűkből áll"
+      "error_message_7": "A jelszónak 5-40 karakterből kell állnia, amely számokból, nagy- és kisbetűkből áll"
     },
     "editorSwitchCountryTip": "A szerkesztő nem támogatja az országok közötti váltást",
     "shopby": {

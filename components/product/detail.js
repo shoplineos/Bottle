@@ -7,6 +7,7 @@ defineModule('theme-product-detail', () => {
         shareLinkElement;
         buyFormElement;
         mediaGalleryElement;
+        defaultVariant;
         get options() {
             return this.variantPickerElement?.options ?? [];
         }
@@ -27,15 +28,16 @@ defineModule('theme-product-detail', () => {
             }
         }
         get #themeEventInitDict() {
-            const { currentVariant, quantity } = this;
+            const { currentVariant, defaultVariant, quantity } = this;
+            const variant = currentVariant || defaultVariant;
             return {
                 target: this,
                 detail: {
                     productId: this.dataset.id,
                     productHandle: this.dataset.handle,
-                    variantId: currentVariant?.id,
+                    variantId: variant?.id,
                     quantity,
-                    price: (currentVariant?.price || 0) * quantity,
+                    price: (variant?.price || 0) * quantity,
                     currency: window.Shopline.currency,
                 },
             };
@@ -49,11 +51,16 @@ defineModule('theme-product-detail', () => {
             this.buyFormElement = this.querySelector('.product-detail__buy-buttons theme-product-form');
             this.mediaGalleryElement = this.querySelector('.product-detail__media-gallery');
             this.volumePricingElement = this.querySelector('.product-detail__volume-pricing');
+            this.defaultVariant = this.#getDefaultVariantData();
             this.quantityInputElement?.parentElement?.addEventListener('change', this.#quantityChangeHandler.bind(this));
             this.variantPickerElement?.addEventListener('change', this.#variantChangeHandler.bind(this));
         }
         mounted() {
             themeEventCenter.dispatch(new ThemeEvent(EnumThemeEvent.ProductViewed, this.#themeEventInitDict));
+        }
+        #getDefaultVariantData() {
+            const jsonStr = this.querySelector('script[name="default-variant-data"][type="application/json"]')?.textContent?.trim() || '{}';
+            return JSON.parse(jsonStr);
         }
         #quantityChangeHandler() {
             if (!this.quantityInputElement) {

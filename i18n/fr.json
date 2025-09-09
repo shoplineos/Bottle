@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "J'ai lu et j'accepte la",
       "change_binding_after_verification": "Vous pouvez associer/modifier {{value}} après vérification",
+      "coupon_expired": "Le code de réduction a expiré",
       "forget_password": "Mot de passe oublié",
       "proceed_to_checkout": "Passer à la caisse",
       "reset_password": "Vous êtes en train de réinitialiser le mot de passe du compte {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Le coupon a été copié",
       "discount_title": "Activez votre compte et obtenez un code de réduction",
       "normal_title": "Activer le compte",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Activez votre compte et obtenez un code de réduction",
       "subscription_text": "Abonnez-vous aux e-mails pour recevoir des mises à jour, accéder à des offres exclusives, etc.",
       "success_title": "Félicitations pour avoir obtenu la réduction",
       "token_expired": "Votre lien a expiré"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Partager"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} d’éléments {{total}}",
+    "load_more": "Plus d'informations",
+    "load_more_items": "Chargement de {{current_offset}} ~ {{last_current_offset}} d’éléments {{total}}"
+  },
   "onboarding": {
     "product_title": "Exemple de titre de produit"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Livré"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} d’éléments {{total}}"
+  },
   "products": {
     "collection": {
       "collection": "Collections"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Achat supplémentaire réussi",
+      "from_price_html": "À partir de {{price}}",
       "load_more_btn": "Charger plus d’éléments",
-      "load_more_items": "Chargement de {{current_offset}} ~ {{last_current_offset}} d’éléments {{total}}",
-      "loading_btn": "Plus d'informations",
       "no_product_data_found": "Aucune donnée trouvée concernant le produit. Veuillez réessayer plus tard",
       "sold_out": "Épuisé",
-      "unavailable": "L’article n’existe pas"
+      "unavailable": "L’article n’existe pas",
+      "variant_property_color": "Couleur"
     },
     "giftcard": {
       "balance": "Balance",
@@ -883,9 +892,7 @@
       "filter": "Filtre",
       "filters_selected": "{{count}} sélectionné",
       "from_price": "À partir de {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} d’éléments {{total}}",
       "less": "Moins d’étiquettes",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} d’éléments {{total}}",
       "load_more_tip": "Charger plus d'articles",
       "more": "Plus d’étiquettes",
       "more_product_num": "{{num}} productions",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "Remise {{benefit}}",
-      "activity_banner_copy_success_text": "Le code de réduction a été copié avec succès",
+      "activity_banner_copy_success_text": "Code de réduction copié avec succès",
       "activity_banner_free_shipping": "Livraison gratuite",
       "activity_selector_new_arrivals": "Dernières annonces",
       "activity_selector_price_high_to_low": "Prix ​​du plus cher au moins cher",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Erreur de service",
       "error_message_5": "Erreur de service",
       "error_message_6": "Erreur de service",
-      "error_message_7": "Le mot de passe doit être composé de 6 à 18 caractères composés de chiffres, de lettres majuscules et minuscules"
+      "error_message_7": "Le mot de passe doit être composé de 5 à 40 caractères composés de chiffres, de lettres majuscules et minuscules"
     },
     "editorSwitchCountryTip": "Le changement de pays n’est actuellement pas pris en charge dans l’éditeur",
     "shopby": {

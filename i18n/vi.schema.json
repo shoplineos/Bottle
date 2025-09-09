@@ -995,16 +995,16 @@
         "desktop_menu_layout": {
           "label": "Bố cục chỉ hướng",
           "options_0": {
-            "label": "LOGO ở giữa, menu xuống dòng"
+            "label": "Logo ở giữa, menu xuống dòng"
           },
           "options_1": {
-            "label": "LOGO bên trái, menu bên phải"
+            "label": "Logo bên trái, menu bên phải"
           },
           "options_2": {
-            "label": "LOGO bên trái, menu ở giữa"
+            "label": "Logo bên trái, menu ở giữa"
           },
           "options_3": {
-            "label": "LOGO ở giữa, menu bên trái"
+            "label": "Logo ở giữa, menu bên trái"
           }
         },
         "header_sticky_mode": {
@@ -2915,6 +2915,61 @@
       "presets": {
         "presets_0": {
           "name": "Tiêu đề"
+        }
+      }
+    },
+    "image": {
+      "name": "Hình ảnh",
+      "settings": {
+        "image": {
+          "label": "Hình ảnh"
+        },
+        "url": {
+          "label": "Link chuyển đổi"
+        },
+        "open_in_new_tab": {
+          "label": "Mở liên kết trong tab mới"
+        },
+        "mask_opacity": {
+          "label": "Che hình ảnh"
+        },
+        "aspect_ratio": {
+          "label": "Tỷ lệ hình ảnh",
+          "options_0": {
+            "label": "Tỷ lệ ban đầu"
+          },
+          "options_1": {
+            "label": "1:1"
+          },
+          "options_2": {
+            "label": "2:3"
+          },
+          "options_3": {
+            "label": "4:3"
+          },
+          "options_5": {
+            "label": "3:2"
+          },
+          "options_6": {
+            "label": "3:1"
+          },
+          "options_7": {
+            "label": "16:9"
+          }
+        },
+        "border_radius": {
+          "label": "Bán kính góc tròn"
+        },
+        "spacing": {
+          "label": ""
+        },
+        "size": {
+          "label": "Kích thước"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "Hình ảnh"
         }
       }
     },

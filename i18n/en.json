@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "I have read and agree to the",
       "change_binding_after_verification": "You can connect/change {{value}} after verification",
+      "coupon_expired": "Discount code has expired",
       "forget_password": "Forgot password",
       "proceed_to_checkout": "Proceed to checkout",
       "reset_password": "You're resetting password for account {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Coupon code copied",
       "discount_title": "Activate account and get discount code",
       "normal_title": "Activate account",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Activate account and get discount code",
       "subscription_text": "Subscribe for emails to receive updates, access to exclusive deals, and more.",
       "success_title": "Congratulations on getting a great discount",
       "token_expired": "The link has expired"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Share"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} of {{total}} items",
+    "load_more": "Load more",
+    "load_more_items": "Loading {{current_offset}} ~ {{last_current_offset}} of {{total}} items"
+  },
   "onboarding": {
     "product_title": "Example Product Title"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Shipped"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} of {{total}} items"
+  },
   "products": {
     "collection": {
       "collection": "Collections"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Added to cart successfully",
+      "from_price_html": "From {{price}}",
       "load_more_btn": "Loading more items",
-      "load_more_items": "Loading {{current_offset}} ~ {{last_current_offset}} of {{total}} items",
-      "loading_btn": "Load more",
       "no_product_data_found": "No product data found. Please try again later",
       "sold_out": "Sold Out",
-      "unavailable": "Variant doesn't exist"
+      "unavailable": "Variant doesn't exist",
+      "variant_property_color": "color"
     },
     "giftcard": {
       "balance": "Balance",
@@ -883,9 +892,7 @@
       "filter": "Filter",
       "filters_selected": "{{count}} selected",
       "from_price": "From {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} of {{total}} items",
       "less": "less",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} of {{total}} items",
       "load_more_tip": "Loading more items",
       "more": "more",
       "more_product_num": "{{num}} products",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} OFF",
-      "activity_banner_copy_success_text": "Coupon code is successfully copied",
+      "activity_banner_copy_success_text": "Discount code copied successfully",
       "activity_banner_free_shipping": "Free Shipping",
       "activity_selector_new_arrivals": "New arrivals",
       "activity_selector_price_high_to_low": "Price high to low",
@@ -1166,7 +1173,7 @@
       "error_message_4": "The system is busy, please try again later",
       "error_message_5": "The system is busy, please try again later",
       "error_message_6": "The system is busy, please try again later",
-      "error_message_7": "Password must be 6-18 characters consisting of numbers, uppercase and lowercase letters"
+      "error_message_7": "Password must be 5-40 characters consisting of numbers, uppercase and lowercase letters"
     },
     "editorSwitchCountryTip": "Unable to change the country in editor",
     "shopby": {

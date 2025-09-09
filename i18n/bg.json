@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Съгласен съм с",
       "change_binding_after_verification": "Можете да свържете/промените {{value}} след потвърждение",
+      "coupon_expired": "Кодът за отстъпка е изтекъл",
       "forget_password": "Забравена парола",
       "proceed_to_checkout": "Продължете към плащането",
       "reset_password": "Възстановявате на парола за акаунт {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Кодът на купона е копиран",
       "discount_title": "Активирайте акаунт и получете код за отстъпка",
       "normal_title": "Активирайте акаунт",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Активирайте акаунт и получете код за отстъпка",
       "subscription_text": "Абонирайте се за имейли, за да получавате актуализации, достъп до изключителни оферти и много други.",
       "success_title": "Поздравления за получаването на страхотна отстъпка",
       "token_expired": "Вашият линк е изтекъл"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Споделяне"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} от {{total}} артикула",
+    "load_more": "Заредете повече",
+    "load_more_items": "Зареждат се {{current_offset}} ~ {{last_current_offset}} от {{total}} артикула"
+  },
   "onboarding": {
     "product_title": "Примерно заглавие на продукта"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Доставено"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} от {{total}} артикула"
+  },
   "products": {
     "collection": {
       "collection": "Категория"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Добавен в количката успешно",
+      "from_price_html": "От {{price}}",
       "load_more_btn": "Зареждане на още елементи",
-      "load_more_items": "Зареждат се {{current_offset}} ~ {{last_current_offset}} от {{total}} артикула",
-      "loading_btn": "Заредете повече",
       "no_product_data_found": "Не е намерена информация за продукта. Моля, опитайте по-късно",
       "sold_out": "Продадено",
-      "unavailable": "Стоката не съществува"
+      "unavailable": "Стоката не съществува",
+      "variant_property_color": "Цвят"
     },
     "giftcard": {
       "balance": "Баланс",
@@ -883,9 +892,7 @@
       "filter": "Филтър",
       "filters_selected": "Избрани са {{count}}",
       "from_price": "От {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} от {{total}} артикула",
       "less": "По-малко",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} от {{total}} артикула",
       "load_more_tip": "Зареждат се още елементи",
       "more": "Повече",
       "more_product_num": "{{num}} Продукти",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} отстъпка",
-      "activity_banner_copy_success_text": "Кодът на купона е копиран успешно",
+      "activity_banner_copy_success_text": "Кодът за отстъпка беше копиран успешно",
       "activity_banner_free_shipping": "Безплатна доставка",
       "activity_selector_new_arrivals": "Новопристигналите",
       "activity_selector_price_high_to_low": "Цена от висока към ниска",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Изключения при обслужване",
       "error_message_5": "Изключения при обслужване",
       "error_message_6": "Изключения при обслужване",
-      "error_message_7": "Паролата трябва да е от 6-18 знака, състоящи се от цифри, главни и малки букви"
+      "error_message_7": "Паролата трябва да е от 5-40 знака, състоящи се от цифри, главни и малки букви"
     },
     "editorSwitchCountryTip": "В редактора не се поддържа превключване на държави",
     "shopby": {

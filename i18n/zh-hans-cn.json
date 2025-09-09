@@ -84,7 +84,7 @@
       "notSupport": {
         "stacked": "折扣码不可叠加"
       },
-      "unavailable": "折扣码失效"
+      "unavailable": "折扣码已失效"
     },
     "discount": {
       "coupon_code_amount": "优惠码优惠",
@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "我同意店铺的",
       "change_binding_after_verification": "完成验证后可绑定/改绑{{value}}",
+      "coupon_expired": "折扣码已失效",
       "forget_password": "忘记密码",
       "proceed_to_checkout": "进行结算",
       "reset_password": "你正在为账号{{account}}重置密码"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "分享"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} / {{total}} 项目",
+    "load_more": "加载更多",
+    "load_more_items": "加载 {{current_offset}} ~ {{last_current_offset}} / {{total}} 项目"
+  },
   "onboarding": {
     "product_title": "产品标题示例"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "已发货"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 项目"
+  },
   "products": {
     "collection": {
       "collection": "分类"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "加购成功",
+      "from_price_html": "{{price}} 起",
       "load_more_btn": "加载更多项目",
-      "load_more_items": "加载 {{current_offset}} ~ {{last_current_offset}} / {{total}} 项目",
-      "loading_btn": "加载更多",
       "no_product_data_found": "暂无当前商品数据，请稍后再试",
       "sold_out": "已售罄",
-      "unavailable": "该商品不存在"
+      "unavailable": "该商品不存在",
+      "variant_property_color": "颜色"
     },
     "giftcard": {
       "balance": "面额",
@@ -883,9 +892,7 @@
       "filter": "筛选",
       "filters_selected": "已选择{{count}}个",
       "from_price": "{{price}} 起",
-      "infinite_btn_desc": "{{last_current_offset}} / {{total}} 项目",
       "less": "更少标签",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 项目",
       "load_more_tip": "加载更多项目",
       "more": "更多标签",
       "more_product_num": "{{num}} 商品",
@@ -1166,7 +1173,7 @@
       "error_message_4": "服务异常",
       "error_message_5": "服务异常",
       "error_message_6": "服务异常",
-      "error_message_7": "请设置6-18位密码，支持输入大小写字母及数字"
+      "error_message_7": "请设置 5-40 位密码，支持输入大小写字母及数字"
     },
     "editorSwitchCountryTip": "编辑器内暂不支持切换国家",
     "shopby": {

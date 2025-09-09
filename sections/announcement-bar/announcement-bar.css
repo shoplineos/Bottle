@@ -69,6 +69,7 @@
 }
 .announcement-bar__carousel-vertical {
   position: relative;
+  display: block;
   overflow: hidden;
 }
 .announcement-bar__carousel-vertical-fake {

@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Ik ga akkoord met de winkels",
       "change_binding_after_verification": "U kunt {{value}} verbinden/wijzigen na verificatie",
+      "coupon_expired": "Kortingscode is verlopen",
       "forget_password": "Wachtwoord vergeten",
       "proceed_to_checkout": "Een afrekening maken",
       "reset_password": "U bent uw wachtwoord aan het resetten voor account {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "De bon is gekopieerd",
       "discount_title": "Activeer account en ontvang een kortingscode",
       "normal_title": "Activeer account",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Activeer account en ontvang een kortingscode",
       "subscription_text": "Meld u aan voor e-mails om updates te ontvangen, toegang tot exclusieve aanbiedingen en meer.",
       "success_title": "Gefeliciteerd met het krijgen van een korting",
       "token_expired": "Uw link is verlopen"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Deel"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} van {{total}} items",
+    "load_more": "Meer laden",
+    "load_more_items": "Laden {{current_offset}} ~ {{last_current_offset}} van {{total}} items"
+  },
   "onboarding": {
     "product_title": "Voorbeeld producttitel"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Verzonden"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} van {{total}} items"
+  },
   "products": {
     "collection": {
       "collection": "Collecties"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Succesvol toegevoegd aan winkelwagen",
+      "from_price_html": "van {{price}}",
       "load_more_btn": "Meer artikelen laden",
-      "load_more_items": "Laden {{current_offset}} ~ {{last_current_offset}} van {{total}} items",
-      "loading_btn": "Meer laden",
       "no_product_data_found": "Geen gegevens van dit artikel, probeer het later nog eens",
       "sold_out": "Niet op voorraad",
-      "unavailable": "Dit artikel bestaat niet"
+      "unavailable": "Dit artikel bestaat niet",
+      "variant_property_color": "Kleur"
     },
     "giftcard": {
       "balance": "Saldo",
@@ -883,9 +892,7 @@
       "filter": "Filter",
       "filters_selected": "{{count}} zijn geselecteerd",
       "from_price": "van {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} van {{total}} items",
       "less": "Minder labels",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} van {{total}} items",
       "load_more_tip": "Meer items laden",
       "more": "Meer labels",
       "more_product_num": "{{num}} Producten",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} korting",
-      "activity_banner_copy_success_text": "De kortingscode is succesvol gekopieerd",
+      "activity_banner_copy_success_text": "Kortingscode succesvol gekopieerd",
       "activity_banner_free_shipping": "Gratis verzending",
       "activity_selector_new_arrivals": "Nieuwe Aankomsten",
       "activity_selector_price_high_to_low": "Prijs van hoog naar laag",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Service fout",
       "error_message_5": "Service fout",
       "error_message_6": "Service fout",
-      "error_message_7": "Het wachtwoord moet 6-18 tekens lang zijn, bestaande uit cijfers, hoofdletters en kleine letters"
+      "error_message_7": "Het wachtwoord moet 5-40 tekens lang zijn, bestaande uit cijfers, hoofdletters en kleine letters"
     },
     "editorSwitchCountryTip": "Het wisselen van land wordt momenteel niet ondersteund in de editor.",
     "shopby": {

@@ -57,10 +57,11 @@
 {{#capture media}}
   <template>
     {{#if !local_media && external_media}}
+      {{#capture external_muted }}{{#if muted }}1{{#else/}}0{{/if}}{{/capture}}
       {{#if external_media.host == "youtube"}}
-        {{#external_video_tag external_media | external_video_url(playlist=external_media.external_id, autoplay=true, loop=loop, muted=muted) class="video-media-youtube" frameborder="0" /}}
+        {{#external_video_tag external_media | external_video_url(playlist=external_media.external_id, autoplay=true, loop=loop, mute=external_muted) class="video-media-youtube" frameborder="0" /}}
       {{#else if external_media.host == "vimeo" /}}
-        {{#external_video_tag external_media | external_video_url(autoplay=true, loop=loop, muted=muted) class="video-media-vimeo" frameborder="0" /}}
+        {{#external_video_tag external_media | external_video_url(autoplay=true, loop=loop, muted=external_muted) class="video-media-vimeo" frameborder="0" /}}
       {{/if}}
     {{#else/}}
       {{#video_tag local_media autoplay=true loop=loop muted=muted controls=true controlsList="nodownload" /}}

@@ -420,6 +420,9 @@
 .customer-account {
   display: block;
 }
+.customer-account__container {
+  background-color: rgb(var(--color-background));
+}
 .customer-account__body {
   display: flex;
   gap: 20px;

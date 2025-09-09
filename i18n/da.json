@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Jeg accepterer",
       "change_binding_after_verification": "Du kan oprette forbindelse til/ændre {{value}} efter bekræftelse",
+      "coupon_expired": "Rabatkoden er udløbet",
       "forget_password": "Glemt adgangskode",
       "proceed_to_checkout": "Gå til kassen",
       "reset_password": "Du nulstiller adgangskoden for kontoen {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Kopieret kuponkode",
       "discount_title": "Aktivér konto og få rabatkoden",
       "normal_title": "Aktivér konto",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktivér konto og få rabatkoden",
       "subscription_text": "Abonner på e-mail for at modtage opdateringer, få adgang til eksklusive tilbud og meget mere.",
       "success_title": "Tillykke med at få en god rabat",
       "token_expired": "Linket er udløbet"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "At dele"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} af {{total}} elementer",
+    "load_more": "Indlæs mere",
+    "load_more_items": "Indlæser {{current_offset}} ~ {{last_current_offset}} af {{total}} elementer"
+  },
   "onboarding": {
     "product_title": "Eksempel på produkttitel"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Leveret"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} af {{total}} elementer"
+  },
   "products": {
     "collection": {
       "collection": "Kategori"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Føjet til indkøbskurven med succes",
+      "from_price_html": "Fra {{price}}",
       "load_more_btn": "Indlæser flere varer",
-      "load_more_items": "Indlæser {{current_offset}} ~ {{last_current_offset}} af {{total}} elementer",
-      "loading_btn": "Indlæs mere",
       "no_product_data_found": "Ingen produktdata fundet. Prøv igen senere",
       "sold_out": "Solgt Ud",
-      "unavailable": "Varen eksisterer ikke"
+      "unavailable": "Varen eksisterer ikke",
+      "variant_property_color": "Farve"
     },
     "giftcard": {
       "balance": "Saldo",
@@ -883,9 +892,7 @@
       "filter": "Filtrer",
       "filters_selected": "{{count}} er blevet valgt",
       "from_price": "Fra {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} af {{total}} elementer",
       "less": "mindre",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} af {{total}} elementer",
       "load_more_tip": "Indlæser flere varer",
       "more": "mere",
       "more_product_num": "{{num}} Produkter",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} af",
-      "activity_banner_copy_success_text": "Kuponkode kopiere",
+      "activity_banner_copy_success_text": "Rabatkode kopieret med succes",
       "activity_banner_free_shipping": "Gratis forsendelse",
       "activity_selector_new_arrivals": "Nye arkiver",
       "activity_selector_price_high_to_low": "Pris høj til lav",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Service undtagelser",
       "error_message_5": "Service undtagelser",
       "error_message_6": "Service undtagelser",
-      "error_message_7": "Adgangskoden skal bestå af 6-18 tegn bestående af tal, store og små bogstaver"
+      "error_message_7": "Adgangskoden skal bestå af 5-40 tegn bestående af tal, store og små bogstaver"
     },
     "editorSwitchCountryTip": "Landeskift er ikke understøttet i editoren i øjeblikket",
     "shopby": {

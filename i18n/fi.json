@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Hyväksyn",
       "change_binding_after_verification": "Voit yhdistää/vaihtaa {{value}} vahvistuksen jälkeen",
+      "coupon_expired": "Alennuskoodi on vanhentunut",
       "forget_password": "Unohdin salasanan",
       "proceed_to_checkout": "Siirry maksamaan",
       "reset_password": "Olet vaihtamassa tilin {{account}} salasanaa"
@@ -257,7 +258,7 @@
       "copy_success": "Kuponkikoodi kopioitu",
       "discount_title": "Aktivoi tili ja hanki alennuskoodi",
       "normal_title": "Aktivoi tili",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktivoi tili ja hanki alennuskoodi",
       "subscription_text": "Tilaa sähköposteja saadaksesi päivityksiä, käyttääksesi eksklusiivisia tarjouksia ja paljon muuta.",
       "success_title": "Onnittelut suuren alennuksen saamisesta",
       "token_expired": "Linkki on vanhentunut"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Jakaa"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} {{total}}-kohteista",
+    "load_more": "Lataa lisää",
+    "load_more_items": "Ladataan {{current_offset}} ~ {{last_current_offset}} kohdetta {{total}}"
+  },
   "onboarding": {
     "product_title": "Esimerkkituotteen nimi"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Toimitettu"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} {{total}}-kohteista"
+  },
   "products": {
     "collection": {
       "collection": "Kategoria"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Lisätty onnistuneesti ostoskoriin",
+      "from_price_html": "Alkaen {{price}}",
       "load_more_btn": "Ladataan lisää kohteita",
-      "load_more_items": "Ladataan {{current_offset}} ~ {{last_current_offset}} kohdetta {{total}}",
-      "loading_btn": "Lataa lisää",
       "no_product_data_found": "Tuotetietoja ei löytynyt Yritä myöhemmin uudelleen",
       "sold_out": "Loppuunmyyty",
-      "unavailable": "Tätä tuotetta ei ole enää saatavilla"
+      "unavailable": "Tätä tuotetta ei ole enää saatavilla",
+      "variant_property_color": "Väri"
     },
     "giftcard": {
       "balance": "Tase",
@@ -883,9 +892,7 @@
       "filter": "Suodatin",
       "filters_selected": "{{count}} on valittu",
       "from_price": "Alkaen {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} {{total}}-kohteista",
       "less": "vähemmän",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} {{total}}-kohteista",
       "load_more_tip": "Ladataan lisää kohteita",
       "more": "lisää",
       "more_product_num": "{{num}} Tuotteet",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} inaktivoitu",
-      "activity_banner_copy_success_text": "Kuponkikoodin kopio",
+      "activity_banner_copy_success_text": "Alennuskoodi kopioitu onnistuneesti",
       "activity_banner_free_shipping": "Ilmainen toimitus",
       "activity_selector_new_arrivals": "Uudet arkistot",
       "activity_selector_price_high_to_low": "Hinta korkeasta matalaan",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Palvelu Poikkeus",
       "error_message_5": "Palvelu Poikkeus",
       "error_message_6": "Palvelu Poikkeus",
-      "error_message_7": "Salasanan tulee olla 6-18 merkkiä, joka koostuu numeroista, isoista ja pienistä kirjaimista"
+      "error_message_7": "Salasanan tulee olla 5-40 merkkiä, joka koostuu numeroista, isoista ja pienistä kirjaimista"
     },
     "editorSwitchCountryTip": "Toimittaja ei tue maiden vaihtoa",
     "shopby": {

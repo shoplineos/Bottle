@@ -972,10 +972,10 @@
           "label": "Logo"
         },
         "desktop_logo_width": {
-          "label": "Lebar logo di desktop"
+          "label": "Lebar Logo di desktop"
         },
         "mobile_logo_width": {
-          "label": "Lebar logo di perangkat mobile"
+          "label": "Lebar Logo di perangkat mobile"
         },
         "group_header_1": {
           "label": "Menu"
@@ -995,16 +995,16 @@
         "desktop_menu_layout": {
           "label": "Tata letak navigasi",
           "options_0": {
-            "label": "LOGO berada di tengah, menu ganti baris"
+            "label": "Logo berada di tengah, menu ganti baris"
           },
           "options_1": {
-            "label": "LOGO berada di sebelah kiri，menu berada di sebelah kiri"
+            "label": "Logo berada di sebelah kiri，menu berada di sebelah kiri"
           },
           "options_2": {
-            "label": "LOGO berada di sebelah kiri，menu berada di tengah"
+            "label": "Logo berada di sebelah kiri，menu berada di tengah"
           },
           "options_3": {
-            "label": "LOGO berada di tengah, menu berada di sebelah kiri"
+            "label": "Logo berada di tengah, menu berada di sebelah kiri"
           }
         },
         "header_sticky_mode": {
@@ -1913,10 +1913,10 @@
           "label": "Logo"
         },
         "desktop_logo_width": {
-          "label": "Lebar logo di desktop"
+          "label": "Lebar Logo di desktop"
         },
         "mobile_logo_width": {
-          "label": "Lebar logo di perangkat mobile"
+          "label": "Lebar Logo di perangkat mobile"
         }
       }
     },
@@ -2915,6 +2915,61 @@
       "presets": {
         "presets_0": {
           "name": "Judul"
+        }
+      }
+    },
+    "image": {
+      "name": "Gambar",
+      "settings": {
+        "image": {
+          "label": "Gambar"
+        },
+        "url": {
+          "label": "lompat link"
+        },
+        "open_in_new_tab": {
+          "label": "Buka di tab baru"
+        },
+        "mask_opacity": {
+          "label": "Penutup gambar"
+        },
+        "aspect_ratio": {
+          "label": "Proporsi gambar produk",
+          "options_0": {
+            "label": "Proporsi asli"
+          },
+          "options_1": {
+            "label": "1:1"
+          },
+          "options_2": {
+            "label": "2:3"
+          },
+          "options_3": {
+            "label": "4:3"
+          },
+          "options_5": {
+            "label": "3:2"
+          },
+          "options_6": {
+            "label": "3:1"
+          },
+          "options_7": {
+            "label": "16:9"
+          }
+        },
+        "border_radius": {
+          "label": "Radius"
+        },
+        "spacing": {
+          "label": "Margin"
+        },
+        "size": {
+          "label": "Ukuran"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "Gambar"
         }
       }
     },

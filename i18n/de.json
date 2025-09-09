@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Ich habe die",
       "change_binding_after_verification": "Sie können {{value}} nach der Überprüfung verknüpfen/ändern",
+      "coupon_expired": "Rabattcode ist abgelaufen",
       "forget_password": "Kennwort vergessen",
       "proceed_to_checkout": "Weiter zur Bestellung",
       "reset_password": "Sie setzen das Kennwort für das Konto {{account}} zurück"
@@ -257,7 +258,7 @@
       "copy_success": "Gutschein bereits kopiert",
       "discount_title": "Aktivieren Sie Ihr Konto und erhalten Sie einen Rabattcode",
       "normal_title": "Aktivieren Sie Ihr Konto",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktivieren Sie Ihr Konto und erhalten Sie einen Rabattcode",
       "subscription_text": "Abonnieren Sie unseren Newsletter, um E-Mail-Updates zu exklusiven Angeboten und vielem mehr zu erhalten.",
       "success_title": "Herzlichen Glückwunsch zum Erhalt des Rabatts",
       "token_expired": "Ihr Link ist nicht mehr gültig"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Teilen"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} von {{total}} Elementen",
+    "load_more": "Weitere Informationen",
+    "load_more_items": "Laden von {{current_offset}} ~ {{last_current_offset}} / {{total}} Elementen"
+  },
   "onboarding": {
     "product_title": "Beispiel Produkttitel"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Geliefert"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} von {{total}} Elementen"
+  },
   "products": {
     "collection": {
       "collection": "Kollektionen"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Erfolgreicher Zukauf",
+      "from_price_html": "Ab {{price}}",
       "load_more_btn": "Weitere Artikel laden",
-      "load_more_items": "Laden von {{current_offset}} ~ {{last_current_offset}} / {{total}} Elementen",
-      "loading_btn": "Weitere Informationen",
       "no_product_data_found": "Keine Produktdaten gefunden. Bitte später erneut versuchen.",
       "sold_out": "Ausverkauft",
-      "unavailable": "Dieser Artikel existiert nicht"
+      "unavailable": "Dieser Artikel existiert nicht",
+      "variant_property_color": "Farbe"
     },
     "giftcard": {
       "balance": "Wert",
@@ -883,9 +892,7 @@
       "filter": "Filter",
       "filters_selected": "{{count}} ausgewählt",
       "from_price": "Ab {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} von {{total}} Elementen",
       "less": "Weniger Tags",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} von {{total}} Elementen",
       "load_more_tip": "Weitere Inhalte laden",
       "more": "Mehr Tags",
       "more_product_num": "{{num}} produkte",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Das System ist ausgelastet, bitte versuchen Sie es später erneut",
       "error_message_5": "Das System ist ausgelastet, bitte versuchen Sie es später erneut",
       "error_message_6": "Das System ist ausgelastet, bitte versuchen Sie es später erneut",
-      "error_message_7": "Das Passwort muss 6-18 Zeichen lang sein und aus Zahlen, Groß- und Kleinbuchstaben bestehen"
+      "error_message_7": "Das Passwort muss 5-40 Zeichen lang sein und aus Zahlen, Groß- und Kleinbuchstaben bestehen"
     },
     "editorSwitchCountryTip": "Der Länderwechsel wird derzeit im Editor nicht unterstützt.",
     "shopby": {

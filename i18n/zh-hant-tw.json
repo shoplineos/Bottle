@@ -84,7 +84,7 @@
       "notSupport": {
         "stacked": "折扣碼不能疊加"
       },
-      "unavailable": "折扣碼失效"
+      "unavailable": "折扣碼已失效"
     },
     "discount": {
       "coupon_code_amount": "優惠代碼折扣",
@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "我同意",
       "change_binding_after_verification": "您可以在驗證後連結/變更 {{value}}",
+      "coupon_expired": "折扣碼已失效",
       "forget_password": "忘記密碼",
       "proceed_to_checkout": "進行結算",
       "reset_password": "您正要重設帳戶 {{account}} 的密碼"
@@ -257,7 +258,7 @@
       "copy_success": "優惠券已復制",
       "discount_title": "激活賬號並獲取折扣碼",
       "normal_title": "激活賬號",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "啟動帳號並取得折扣碼",
       "subscription_text": "訂閱電子郵件以接收更新、訪問獨家優惠等。",
       "success_title": "恭喜您獲得折扣",
       "token_expired": "您的鏈接已失效"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "分享"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} / {{total}} 項目",
+    "load_more": "加載更多",
+    "load_more_items": "加載 {{current_offset}} ~ {{last_current_offset}} / {{total}} 項目"
+  },
   "onboarding": {
     "product_title": "產品標題示例"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "已運送"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 項目"
+  },
   "products": {
     "collection": {
       "collection": "分類"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "加購成功",
+      "from_price_html": "{{price}} 起",
       "load_more_btn": "加載更多項目",
-      "load_more_items": "加載 {{current_offset}} ~ {{last_current_offset}} / {{total}} 項目",
-      "loading_btn": "加載更多",
       "no_product_data_found": "找不到產品資料。請稍後再試",
       "sold_out": "已售罄",
-      "unavailable": "該商品不存在"
+      "unavailable": "該商品不存在",
+      "variant_property_color": "顏色"
     },
     "giftcard": {
       "balance": "面額",
@@ -883,9 +892,7 @@
       "filter": "篩選",
       "filters_selected": "已選擇{{count}}個",
       "from_price": "{{price}} 起",
-      "infinite_btn_desc": "{{last_current_offset}} / {{total}} 項目",
       "less": "更少標籤",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 項目",
       "load_more_tip": "加載更多項目",
       "more": "更多標籤",
       "more_product_num": "{{num}} 商品",
@@ -1166,7 +1173,7 @@
       "error_message_4": "服務異常",
       "error_message_5": "服務異常",
       "error_message_6": "服務異常",
-      "error_message_7": "請設置6-18位密碼，支持輸入大小寫字母及數字"
+      "error_message_7": "請設置5-40位密碼，支持輸入大小寫字母及數字"
     },
     "editorSwitchCountryTip": "編輯器內暫不支持切換國家",
     "shopby": {

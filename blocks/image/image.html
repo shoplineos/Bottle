@@ -1,0 +1,145 @@
+{{#component "stylesheet" src="./image.css" | asset_url() /}}
+
+{{#var class_name = block.settings | class_list() /}}
+
+{{#capture image }}
+  {{#if block.settings.image }}
+    {{#component "image" data=block.settings.image /}}
+  {{#else/}}
+    {{#placeholder_svg "image" class="empty-image-class" /}}
+  {{/if}}
+{{/capture}}
+
+{{#var style = "" /}}
+{{#if block.settings.aspect_ratio }}
+  {{#set style = style | append("--aspect-ratio:") | append(block.settings.aspect_ratio) | append(";") /}}
+{{/if}}
+
+{{#if block.settings.border_radius }}
+  {{#set style = style | append("--border-radius:") | append(block.settings.border_radius) | append("%;") /}}
+{{/if}}
+
+{{#if block.settings.mask_opacity }}
+  {{#set style = style | append("--mask-opacity:") | append(block.settings.mask_opacity) | append("%;") /}}
+{{/if}}
+
+{{#if block.settings.url }}
+  <a
+    href="{{ block.settings.url }}"
+    {{#if block.settings.open_in_new_tab }}target="_blank"{{/if}}
+    rel="noopener noreferrer"
+    class="block-image {{ class_name }} {{ props.class }}"
+    style="{{ style }}"
+    {{{ block.shopline_attributes }}}
+  >
+    {{{ image }}}
+  </a>
+{{#else/}}
+  <div style="{{ style }}" class="block-image {{ class_name }}" {{{ block.shopline_attributes }}}>
+    {{{ image }}}
+  </div>
+{{/if}}
+
+{{#schema}}
+{
+  "name": "t:blocks.image.name",
+  "icon": "image",
+  "tag": "",
+  "settings": [
+    {
+      "type": "image",
+      "id": "image",
+      "label": "t:blocks.image.settings.image.label"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "t:blocks.image.settings.url.label"
+    },
+    {
+      "type": "switch",
+      "id": "open_in_new_tab",
+      "label": "t:blocks.image.settings.open_in_new_tab.label"
+    },
+    {
+      "type": "range",
+      "id": "mask_opacity",
+      "label": "t:blocks.image.settings.mask_opacity.label",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0,
+      "unit": "%"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "t:blocks.image.settings.aspect_ratio.label",
+      "options": [
+        {
+          "value": "unset",
+          "label": "t:blocks.image.settings.aspect_ratio.options_0.label"
+        },
+        {
+          "value": "1/1",
+          "label": "t:blocks.image.settings.aspect_ratio.options_1.label"
+        },
+        {
+          "value": "2/3",
+          "label": "t:blocks.image.settings.aspect_ratio.options_2.label"
+        },
+        {
+          "value": "4/3",
+          "label": "t:blocks.image.settings.aspect_ratio.options_3.label"
+        },
+        {
+          "value": "3/4",
+          "label": "3:4"
+        },
+        {
+          "value": "3/2",
+          "label": "t:blocks.image.settings.aspect_ratio.options_5.label"
+        },
+        {
+          "value": "3/1",
+          "label": "t:blocks.image.settings.aspect_ratio.options_6.label"
+        },
+        {
+          "value": "16/9",
+          "label": "t:blocks.image.settings.aspect_ratio.options_7.label"
+        }
+      ],
+      "default": "unset"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "t:blocks.image.settings.border_radius.label",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0,
+      "unit": "%"
+    },
+    {
+      "type": "style.spacing",
+      "id": "spacing",
+      "label": "t:blocks.image.settings.spacing.label"
+    },
+    {
+      "type": "style.size",
+      "id": "size",
+      "label": "t:blocks.image.settings.size.label",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.image.presets.presets_0.name"
+    }
+  ]
+}
+{{/schema}}

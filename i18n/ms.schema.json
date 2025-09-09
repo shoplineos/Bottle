@@ -972,10 +972,10 @@
           "label": "Logo"
         },
         "desktop_logo_width": {
-          "label": "Lebar logo pada desktop"
+          "label": "Lebar Logo pada desktop"
         },
         "mobile_logo_width": {
-          "label": "Lebar logo mudah alih"
+          "label": "Lebar Logo mudah alih"
         },
         "group_header_1": {
           "label": "Menu"
@@ -995,16 +995,16 @@
         "desktop_menu_layout": {
           "label": "Susun atur navigasi",
           "options_0": {
-            "label": "LOGO di tengah, menu tukar silang"
+            "label": "Logo di tengah, menu tukar silang"
           },
           "options_1": {
-            "label": "LOGO di sebelah kiri, menu di sebelah kiri"
+            "label": "Logo di sebelah kiri, menu di sebelah kiri"
           },
           "options_2": {
-            "label": "LOGO di sebelah kiri, menu di sebelah tengah"
+            "label": "Logo di sebelah kiri, menu di sebelah tengah"
           },
           "options_3": {
-            "label": "LOGO di tengah, menu di sebelah kiri"
+            "label": "Logo di tengah, menu di sebelah kiri"
           }
         },
         "header_sticky_mode": {
@@ -1913,10 +1913,10 @@
           "label": "Logo"
         },
         "desktop_logo_width": {
-          "label": "Lebar logo pada desktop"
+          "label": "Lebar Logo pada desktop"
         },
         "mobile_logo_width": {
-          "label": "Lebar logo mudah alih"
+          "label": "Lebar Logo mudah alih"
         }
       }
     },
@@ -2915,6 +2915,61 @@
       "presets": {
         "presets_0": {
           "name": "Tajuk"
+        }
+      }
+    },
+    "image": {
+      "name": "Gambar",
+      "settings": {
+        "image": {
+          "label": "Gambar"
+        },
+        "url": {
+          "label": "Pautan lompat"
+        },
+        "open_in_new_tab": {
+          "label": "Buka Pautan dalam Tab Baru"
+        },
+        "mask_opacity": {
+          "label": "Penutup gambar"
+        },
+        "aspect_ratio": {
+          "label": "Nisbah gambar",
+          "options_0": {
+            "label": "Nisbah asal"
+          },
+          "options_1": {
+            "label": "1:1"
+          },
+          "options_2": {
+            "label": "2:3"
+          },
+          "options_3": {
+            "label": "4:3"
+          },
+          "options_5": {
+            "label": "3:2"
+          },
+          "options_6": {
+            "label": "3:1"
+          },
+          "options_7": {
+            "label": "16:9"
+          }
+        },
+        "border_radius": {
+          "label": "Jejari sudut"
+        },
+        "spacing": {
+          "label": "Margin"
+        },
+        "size": {
+          "label": "Saiz"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "Gambar"
         }
       }
     },

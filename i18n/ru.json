@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Я согласен с магазином",
       "change_binding_after_verification": "После проверки можно привязать / перевязать {{value}}",
+      "coupon_expired": "Срок действия кода скидки истек",
       "forget_password": "Забыть пароль",
       "proceed_to_checkout": "Произвести расчет",
       "reset_password": "Вы заменяете пароль для своего счета {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Купон скопирован",
       "discount_title": "Активируйте аккаунт и получите код скидки",
       "normal_title": "Активируйте аккаунт",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Активируйте аккаунт и получите код скидки",
       "subscription_text": "Подпишитесь на электронные письма, чтобы получать обновления, получать доступ к эксклюзивным льготам и т.д..",
       "success_title": "Поздравляю, что вы получили скидку",
       "token_expired": "Срок действия вашей сслыки истек"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Поделение"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} / {{total}} проект",
+    "load_more": "Загрузить больше",
+    "load_more_items": "Загрузка {{current_offset}} ~ {{last_current_offset}} / {{total}} проектов"
+  },
   "onboarding": {
     "product_title": "Пример названия продукта"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Товары отправлены"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} / {{total}} проект"
+  },
   "products": {
     "collection": {
       "collection": "Коллекции"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Успешная покупка",
+      "from_price_html": "От {{price}}",
       "load_more_btn": "Загрузите больше проектов",
-      "load_more_items": "Загрузка {{current_offset}} ~ {{last_current_offset}} / {{total}} проектов",
-      "loading_btn": "Загрузить больше",
       "no_product_data_found": "Пока нет данных о текущим продукте. Повторите попытку позже.",
       "sold_out": "Распродано",
-      "unavailable": "Данный товар не существует"
+      "unavailable": "Данный товар не существует",
+      "variant_property_color": "Цвет"
     },
     "giftcard": {
       "balance": "Номинал",
@@ -883,9 +892,7 @@
       "filter": "Отбор",
       "filters_selected": "Выбран {{count}} штука",
       "from_price": "От {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} / {{total}} проект",
       "less": "Меньше этикеток",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} / {{total}} проект",
       "load_more_tip": "Загрузите больше пунктов",
       "more": "Больше этикеток",
       "more_product_num": "{{num}} Продукты",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Аномальный сервис",
       "error_message_5": "Аномальный сервис",
       "error_message_6": "Аномальный сервис",
-      "error_message_7": "Пароль должен состоять из 6-18 символов, состоящих из цифр, прописных и строчных букв."
+      "error_message_7": "Пароль должен состоять из 5-40 символов, состоящих из цифр, прописных и строчных букв."
     },
     "editorSwitchCountryTip": "В редакторе не поддерживается переключение стран",
     "shopby": {

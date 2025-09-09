@@ -84,7 +84,7 @@
       "notSupport": {
         "stacked": "Οι κωδικοί έκπτωσης δεν στοιβάζονται"
       },
-      "unavailable": "Ο εκπτωτικός κωδικός έχει λήξει"
+      "unavailable": "Ο κωδικός έκπτωσης έχει λήξει"
     },
     "discount": {
       "coupon_code_amount": "Κουπόνι",
@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Συμφωνώ ως προς το",
       "change_binding_after_verification": "Μπορείτε να συνδεθείτε/αλλάξετε το {{value}} μετά την επαλήθευση",
+      "coupon_expired": "Ο κωδικός έκπτωσης έχει λήξει",
       "forget_password": "Ξεχάσατε τον κωδικό",
       "proceed_to_checkout": "Προχωρήστε στο ταμείο",
       "reset_password": "Επαναφέρετε τον κωδικό πρόσβασης του λογαριασμό {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Αντιγράφηκε ο κωδικός του κουπονιού",
       "discount_title": "Ενεργοποιήστε τον λογαριασμό και λάβετε τον κωδικό έκπτωσης",
       "normal_title": "Ενεργοποιήστε τον λογαριασμό",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Ενεργοποιήστε τον λογαριασμό και λάβετε τον κωδικό έκπτωσης",
       "subscription_text": "Εγγραφείτε για email ώστε να λαμβάνετε ενημερώσεις, πρόσβαση σε αποκλειστικές προσφορές και πολλά άλλα ακόμη.",
       "success_title": "Συγχαρητήρια για την εξαιρετική έκπτωση",
       "token_expired": "Ο σύνδεσμός σας έχει λήξει"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Μερίδιο"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} από {{total}} στοιχεία",
+    "load_more": "Φορτώστε περισσότερα",
+    "load_more_items": "Φόρτωση {{current_offset}} ~ {{last_current_offset}} από {{total}} στοιχεία"
+  },
   "onboarding": {
     "product_title": "Παράδειγμα τίτλου προϊόντος"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Παραδόθηκε"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} από {{total}} στοιχεία"
+  },
   "products": {
     "collection": {
       "collection": "Κατηγορία"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Προστέθηκε με επιτυχία στο καλάθι",
+      "from_price_html": "Από {{price}}",
       "load_more_btn": "Φόρτωση περισσότερων στοιχείων",
-      "load_more_items": "Φόρτωση {{current_offset}} ~ {{last_current_offset}} από {{total}} στοιχεία",
-      "loading_btn": "Φορτώστε περισσότερα",
       "no_product_data_found": "Δεν βρέθηκαν στοιχεία προϊόντος. Παρακαλούμε προσπαθήστε ξανά αργότερα",
       "sold_out": "Εξαντλημένα",
-      "unavailable": "Τα προϊόντα δεν υπάρχουν"
+      "unavailable": "Τα προϊόντα δεν υπάρχουν",
+      "variant_property_color": "Χρώμα"
     },
     "giftcard": {
       "balance": "Υπόλοιπο",
@@ -883,9 +892,7 @@
       "filter": "Φίλτρο",
       "filters_selected": "{{count}} έχουν επιλεγεί",
       "from_price": "Από {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} από {{total}} στοιχεία",
       "less": "Λιγότερο",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} από {{total}} στοιχεία",
       "load_more_tip": "Φόρτωση περισσότερων στοιχείων",
       "more": "Περισσότερο",
       "more_product_num": "{{num}} Προϊόντα",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} εκτός",
-      "activity_banner_copy_success_text": "Ο κωδικός του κουπονιού αντιγράφηκε επιτυχώς",
+      "activity_banner_copy_success_text": "Ο κωδικός έκπτωσης αντιγράφηκε με επιτυχία",
       "activity_banner_free_shipping": "Δωρεάν μεταφορά",
       "activity_selector_new_arrivals": "Νέες αφίξεις",
       "activity_selector_price_high_to_low": "Τιμή υψηλή προς χαμηλή",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Εξαιρέσεις παροχής υπηρεσιών",
       "error_message_5": "Εξαιρέσεις παροχής υπηρεσιών",
       "error_message_6": "Εξαιρέσεις παροχής υπηρεσιών",
-      "error_message_7": "Ο κωδικός πρόσβασης πρέπει να αποτελείται από 6-18 χαρακτήρες και να αποτελείται από αριθμούς, κεφαλαία και πεζά γράμματα"
+      "error_message_7": "Ο κωδικός πρόσβασης πρέπει να αποτελείται από 5-40 χαρακτήρες και να αποτελείται από αριθμούς, κεφαλαία και πεζά γράμματα"
     },
     "editorSwitchCountryTip": "Η εναλλαγή των χωρών δεν υποστηρίζεται από το πρόγραμμα επεξεργασίας",
     "shopby": {

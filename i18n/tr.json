@@ -84,7 +84,7 @@
       "notSupport": {
         "stacked": "İndirim kodları istiflenemez"
       },
-      "unavailable": "İndirim kodunun süresi doldu"
+      "unavailable": "İndirim kodu süresi doldu"
     },
     "discount": {
       "coupon_code_amount": "Kupon",
@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Gizlilik",
       "change_binding_after_verification": "Doğrulamadan sonra {{value}} bağlayabilir/değiştirebilirsiniz",
+      "coupon_expired": "İndirim kodu süresi doldu",
       "forget_password": "Parolanızı mı unuttunuz",
       "proceed_to_checkout": "Çıkışa doğru devam et",
       "reset_password": "{{account}} hesabının parolasını sıfırlıyorsunuz"
@@ -257,7 +258,7 @@
       "copy_success": "Kupon kodu kopyalandı",
       "discount_title": "Hesabı aktifleştirin ve indirim kodunu alın",
       "normal_title": "Hesabı aktifleştir",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Hesabı aktifleştirin ve indirim kodunu alın",
       "subscription_text": "Güncellemeleri almak, özel anlaşmalara erişmek ve daha fazlası için e-postalara abone olun.",
       "success_title": "Harika bir indirim aldığınız için tebrikler",
       "token_expired": "Link geçerliliği sona erdi"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Paylaş"
   },
+  "infinite_scroll": {
+    "button_desc": "{{total}} öğeden {{last_current_offset}}",
+    "load_more": "Daha fazla yükle",
+    "load_more_items": "{{total}} öğeden {{current_offset}} ~ {{last_current_offset}} yükleniyor"
+  },
   "onboarding": {
     "product_title": "Örnek Ürün Başlığı"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Teslim edildi"
     }
   },
+  "pagination": {
+    "offset_info": "{{total}} öğeden {{current_offset}} ~ {{last_current_offset}}"
+  },
   "products": {
     "collection": {
       "collection": "Kategori"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Başarıyla sepete eklendi",
+      "from_price_html": "{{price}} başlayan fiyatlarla",
       "load_more_btn": "Daha fazla öğe yükleniyor",
-      "load_more_items": "{{total}} öğeden {{current_offset}} ~ {{last_current_offset}} yükleniyor",
-      "loading_btn": "Daha fazla yükle",
       "no_product_data_found": "Ürün verisi bulunamadı. Lütfen daha sonra tekrar deneyin",
       "sold_out": "Tümü Satıldı",
-      "unavailable": "Ürünler mevcut değil"
+      "unavailable": "Ürünler mevcut değil",
+      "variant_property_color": "Renk"
     },
     "giftcard": {
       "balance": "Bakiye",
@@ -883,9 +892,7 @@
       "filter": "Filtre",
       "filters_selected": "{{count}} seçilmiştir",
       "from_price": "{{price}} başlayan fiyatlarla",
-      "infinite_btn_desc": "{{total}} öğeden {{last_current_offset}}",
       "less": "az",
-      "load_more_desc": "{{total}} öğeden {{current_offset}} ~ {{last_current_offset}}",
       "load_more_tip": "Daha fazla öğe yükleniyor",
       "more": "daha fazla",
       "more_product_num": "{{num}} ürün",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} kapali",
-      "activity_banner_copy_success_text": "Kupon kodu başarıyla kopyalandı",
+      "activity_banner_copy_success_text": "İndirim kodu başarıyla kopyalandı",
       "activity_banner_free_shipping": "Ücretsiz Kargo",
       "activity_selector_new_arrivals": "Yeni gelenler",
       "activity_selector_price_high_to_low": "Fiyat yüksekten düşüğe",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Servis istisnaları",
       "error_message_5": "Servis istisnaları",
       "error_message_6": "Servis istisnaları",
-      "error_message_7": "Şifre, sayılardan, büyük ve küçük harflerden oluşan 6-18 karakter olmalıdır."
+      "error_message_7": "Şifre, sayılardan, büyük ve küçük harflerden oluşan 5-40 karakter olmalıdır."
     },
     "editorSwitchCountryTip": "Ülke değiştirme özelliği editörde desteklenmemektedir",
     "shopby": {

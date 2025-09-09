@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "मैं इसके लिए सहमत हूँ",
       "change_binding_after_verification": "सत्यापन के बाद आप {{value}} जोड़ें/बदल सकते हैं",
+      "coupon_expired": "डिस्काउंट कोड समाप्त हो गया है",
       "forget_password": "पासवर्ड भूल गए है",
       "proceed_to_checkout": "चेक आउट करने के लिए आगे बढ़ें",
       "reset_password": "आप खाते {{account}} के लिए पासवर्ड रीसेट कर रहे हैं"
@@ -257,7 +258,7 @@
       "copy_success": "कूपन कोड कॉपी किया गया",
       "discount_title": "खाता सक्रिय करें और छूट कोड पाएं",
       "normal_title": "खाते को सक्रिय करें",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "खाता सक्रिय करें और छूट कोड पाएं",
       "subscription_text": "विशेष सौदों तक पहुंच, और बहुत कुछ ईमेल से अपडेट पाने के लिए सदस्यता लें।",
       "success_title": "अच्छा छूट मिलने पर बधाई कोड",
       "token_expired": "लिंक की वैधता समाप्त हुआ"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "शेयर करें"
   },
+  "infinite_scroll": {
+    "button_desc": "{{total}} आइटमों में से {{last_current_offset}}",
+    "load_more": "और लोड करें",
+    "load_more_items": "{{total}} आइटमों में से {{current_offset}} ~ {{last_current_offset}} लोड हो रहा है"
+  },
   "onboarding": {
     "product_title": "उदाहरण उत्पाद शीर्षक"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "पहुंचा दिया"
     }
   },
+  "pagination": {
+    "offset_info": "{{total}} आइटमों में से {{current_offset}} ~ {{last_current_offset}}"
+  },
   "products": {
     "collection": {
       "collection": "श्रेणी"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "",
+      "from_price_html": "{{price}} से",
       "load_more_btn": "और आइटम लोड किए जा रहे हैं",
-      "load_more_items": "{{total}} आइटमों में से {{current_offset}} ~ {{last_current_offset}} लोड हो रहा है",
-      "loading_btn": "और लोड करें",
       "no_product_data_found": "कोई उत्पाद डेटा नहीं मिला। बाद में पुन: प्रयास करें",
       "sold_out": "बिक गया",
-      "unavailable": "सामान मौजूद नहीं है"
+      "unavailable": "सामान मौजूद नहीं है",
+      "variant_property_color": "रंग"
     },
     "giftcard": {
       "balance": "शेष राशि",
@@ -883,9 +892,7 @@
       "filter": "फ़िल्टर",
       "filters_selected": "{{count}} का चयन कर लिया गया है",
       "from_price": "{{price}} से",
-      "infinite_btn_desc": "{{total}} आइटमों में से {{last_current_offset}}",
       "less": "कम लेबल",
-      "load_more_desc": "{{total}} आइटमों में से {{current_offset}} ~ {{last_current_offset}}",
       "load_more_tip": "और आइटम लोड हो रहे हैं",
       "more": "अधिक टैग",
       "more_product_num": "",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} छूट",
-      "activity_banner_copy_success_text": "कूपन कोड सफलतापूर्वक कॉपी किया गया",
+      "activity_banner_copy_success_text": "डिस्काउंट कोड सफलतापूर्वक कॉपी किया गया",
       "activity_banner_free_shipping": "शिपिंग मुफ्त",
       "activity_selector_new_arrivals": "नवागन्तुक",
       "activity_selector_price_high_to_low": "अधिक से कम मूल्य",
@@ -1166,7 +1173,7 @@
       "error_message_4": "सेवा के अपवाद",
       "error_message_5": "सेवा के अपवाद",
       "error_message_6": "सेवा के अपवाद",
-      "error_message_7": "पासवर्ड संख्या, अपरकेस और लोअरकेस अक्षरों से युक्त 6-18 वर्णों का होना चाहिए"
+      "error_message_7": "पासवर्ड संख्या, अपरकेस और लोअरकेस अक्षरों से युक्त 5-40 वर्णों का होना चाहिए"
     },
     "editorSwitchCountryTip": "संपादक में देश बदलना समर्थित नहीं है",
     "shopby": {

@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Jeg godtar",
       "change_binding_after_verification": "Du kan koble til/endre {{value}} etter bekreftelse",
+      "coupon_expired": "Rabattkoden er utløpt",
       "forget_password": "Glemt passord",
       "proceed_to_checkout": "Fortsett til utsjekking",
       "reset_password": "Du tilbakestiller passordet for kontoen {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Kopiert kupongkode",
       "discount_title": "Aktiver konto og få rabattkoden",
       "normal_title": "Aktiver konto",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktiver konto og få rabattkoden",
       "subscription_text": "Abonner på e-post for å motta oppdateringer, få tilgang til eksklusive tilbud og mer.",
       "success_title": "Gratulerer med å få en god rabatt",
       "token_expired": "Linken er utløpt"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Å dele"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} av {{total}} varer",
+    "load_more": "Last inn mer",
+    "load_more_items": "Lasting {{current_offset}} ~ {{last_current_offset}} av {{total}} varer"
+  },
   "onboarding": {
     "product_title": "Eksempel på produkttittel"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Levert"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} av {{total}} varer"
+  },
   "products": {
     "collection": {
       "collection": "Kategori"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Lagt til i handlekurven vellykket",
+      "from_price_html": "Fra {{price}}",
       "load_more_btn": "Laster inn flere varer",
-      "load_more_items": "Lasting {{current_offset}} ~ {{last_current_offset}} av {{total}} varer",
-      "loading_btn": "Last inn mer",
       "no_product_data_found": "Finner ingen produktdata. Prøv på nytt senere",
       "sold_out": "Utsolgt",
-      "unavailable": "Varene finnes ikke"
+      "unavailable": "Varene finnes ikke",
+      "variant_property_color": "Farge"
     },
     "giftcard": {
       "balance": "Saldo",
@@ -883,9 +892,7 @@
       "filter": "Filter",
       "filters_selected": "{{count}} er valgt",
       "from_price": "Fra {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} av {{total}} varer",
       "less": "mindre",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} av {{total}} varer",
       "load_more_tip": "Laster inn flere varer",
       "more": "mer",
       "more_product_num": "{{num}} Produkter",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} av",
-      "activity_banner_copy_success_text": "Kupongkoden er kopiert",
+      "activity_banner_copy_success_text": "Rabatteringskode kopiert vellykket",
       "activity_banner_free_shipping": "Gratis frakt",
       "activity_selector_new_arrivals": "Nye arkiver",
       "activity_selector_price_high_to_low": "Pris høy til lav",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Service unntak",
       "error_message_5": "Service unntak",
       "error_message_6": "Service unntak",
-      "error_message_7": "Passord må bestå av 6-18 tegn bestående av tall, store og små bokstaver"
+      "error_message_7": "Passord må bestå av 5-40 tegn bestående av tall, store og små bokstaver"
     },
     "editorSwitchCountryTip": "Landsendring er ikke kompatibel med editoren",
     "shopby": {

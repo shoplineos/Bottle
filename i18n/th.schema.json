@@ -995,16 +995,16 @@
         "desktop_menu_layout": {
           "label": "รูปแบบการนำทาง",
           "options_0": {
-            "label": "LOGO ตรงกลาง เมนูเปลี่ยนบรรทัด"
+            "label": "Logo ตรงกลาง เมนูเปลี่ยนบรรทัด"
           },
           "options_1": {
-            "label": "LOGO ด้านซ้าย เมนูด้านซ้าย"
+            "label": "Logo ด้านซ้าย เมนูด้านซ้าย"
           },
           "options_2": {
-            "label": "LOGO ด้านซ้าย เมนูตรงกลาง"
+            "label": "Logo ด้านซ้าย เมนูตรงกลาง"
           },
           "options_3": {
-            "label": "LOGO ตรงกลาง เมนูด้านซ้าย"
+            "label": "Logo ตรงกลาง เมนูด้านซ้าย"
           }
         },
         "header_sticky_mode": {
@@ -2915,6 +2915,61 @@
       "presets": {
         "presets_0": {
           "name": "หัวข้อ"
+        }
+      }
+    },
+    "image": {
+      "name": "รูปภาพ",
+      "settings": {
+        "image": {
+          "label": "รูปภาพ"
+        },
+        "url": {
+          "label": "ลิงก์กระโดดข้าม"
+        },
+        "open_in_new_tab": {
+          "label": "เปิดในแท็บใหม่"
+        },
+        "mask_opacity": {
+          "label": "หน้ากากภาพ"
+        },
+        "aspect_ratio": {
+          "label": "อัตราส่วนของรูปภาพ",
+          "options_0": {
+            "label": "อัตราส่วนเดิม"
+          },
+          "options_1": {
+            "label": "1:1"
+          },
+          "options_2": {
+            "label": "2:3"
+          },
+          "options_3": {
+            "label": "4:3"
+          },
+          "options_5": {
+            "label": "3:2"
+          },
+          "options_6": {
+            "label": "3:1"
+          },
+          "options_7": {
+            "label": "16:9"
+          }
+        },
+        "border_radius": {
+          "label": "รัศมีมุม"
+        },
+        "spacing": {
+          "label": "ขอบ"
+        },
+        "size": {
+          "label": "ขนาด"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "รูปภาพ"
         }
       }
     },

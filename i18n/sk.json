@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Súhlasím s",
       "change_binding_after_verification": "Po overení môžete zadať/zmeniť {{value}}",
+      "coupon_expired": "Kód zľavy vypršal",
       "forget_password": "Zabudnuté heslo",
       "proceed_to_checkout": "Pokračujte k pokladni",
       "reset_password": "Obnovujete heslo pre účet {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Kód kupónu skopírovaný",
       "discount_title": "Aktivujte účet a získajte zľavový kód",
       "normal_title": "Aktivovať účet",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktivujte účet a získajte zľavový kód",
       "subscription_text": "Prihláste sa na odber e-mailov, aby ste mohli dostávať aktualizácie, prístup k exkluzívnym ponukám a ďalšie.",
       "success_title": "Gratulujeme k získaniu veľkej zľavy",
       "token_expired": "Platnosť odkazu vypršala"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Zdieľať"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} z {{total}} položiek",
+    "load_more": "Načítať viac",
+    "load_more_items": "Načítanie {{current_offset}} ~ {{last_current_offset}} položiek {{total}}"
+  },
   "onboarding": {
     "product_title": "Príklad názvu produktu"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Doručené"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} z {{total}} položiek"
+  },
   "products": {
     "collection": {
       "collection": "Kategória"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Pridané do košíka úspešne",
+      "from_price_html": "Od {{price}}",
       "load_more_btn": "Načítava sa viac položiek",
-      "load_more_items": "Načítanie {{current_offset}} ~ {{last_current_offset}} položiek {{total}}",
-      "loading_btn": "Načítať viac",
       "no_product_data_found": "Nenašli sa žiadne údaje o produkte. Skúste to neskôr prosím",
       "sold_out": "Vypredané",
-      "unavailable": "Tovar neexistuje"
+      "unavailable": "Tovar neexistuje",
+      "variant_property_color": "Farba"
     },
     "giftcard": {
       "balance": "Zostatok",
@@ -883,9 +892,7 @@
       "filter": "Filter",
       "filters_selected": "{{count}} boli vybratí",
       "from_price": "Od {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} z {{total}} položiek",
       "less": "menej štítkov",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} z {{total}} položiek",
       "load_more_tip": "Načítava sa viac položiek",
       "more": "viac značiek",
       "more_product_num": "{{num}} produkty",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} vypnuté",
-      "activity_banner_copy_success_text": "Kód kupónu sa úspešne skopíruje",
+      "activity_banner_copy_success_text": "Zľavový kód bol úspešne skopírovaný",
       "activity_banner_free_shipping": "Doprava zadarmo",
       "activity_selector_new_arrivals": "Nový príchod",
       "activity_selector_price_high_to_low": "Cena od najvyššej po najnižšiu",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Abnormálna služba",
       "error_message_5": "Abnormálna služba",
       "error_message_6": "Abnormálna služba",
-      "error_message_7": "Heslo musí mať 6-18 znakov, ktoré pozostávajú z číslic, veľkých a malých písmen"
+      "error_message_7": "Heslo musí mať 5-40 znakov, ktoré pozostávajú z číslic, veľkých a malých písmen"
     },
     "editorSwitchCountryTip": "Prepínanie krajín nie je v editore podporované",
     "shopby": {

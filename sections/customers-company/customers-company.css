@@ -2,6 +2,10 @@
   width: 780px;
 }
 
+.customer-company__container {
+  background-color: rgb(var(--color-background));
+}
+
 .customer-company .field {
   margin-block-end: 16px;
 }

@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Eu concordo com",
       "change_binding_after_verification": "Pode vincular/alterar {{value}} após completar a verificação",
+      "coupon_expired": "O código de desconto expirou",
       "forget_password": "Esqueceu senha",
       "proceed_to_checkout": "Faça a liquidação",
       "reset_password": "Você está redefinindo a senha da conta {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Cupom copiado",
       "discount_title": "Ativar conta e obter código de desconto",
       "normal_title": "Ativar conta",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Ativar conta e obter código de desconto",
       "subscription_text": "Subscrever por e-mail para receber atualizações, acesso a ofertas exclusivas e muito mais.",
       "success_title": "Parabéns por seu desconto",
       "token_expired": "Seu link expirou"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Compartilhar"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} de {{total}} itens",
+    "load_more": "carregar mais",
+    "load_more_items": "Carregando {{current_offset}} ~ {{last_current_offset}} de {{total}} itens"
+  },
   "onboarding": {
     "product_title": "Exemplo de título do produto"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Enviado"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} de {{total}} itens"
+  },
   "products": {
     "collection": {
       "collection": "Kolekcje"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Compra adicional com sucesso",
+      "from_price_html": "de {{price}}",
       "load_more_btn": "Carregar mais itens",
-      "load_more_items": "Carregando {{current_offset}} ~ {{last_current_offset}} de {{total}} itens",
-      "loading_btn": "carregar mais",
       "no_product_data_found": "Sem dados de produto atual, tente novamente mais tarde",
       "sold_out": "Esgotado",
-      "unavailable": "O produto não existe"
+      "unavailable": "O produto não existe",
+      "variant_property_color": "Cor"
     },
     "giftcard": {
       "balance": "Balanço",
@@ -883,9 +892,7 @@
       "filter": "Filtro",
       "filters_selected": "{{count}} selecionado(s)",
       "from_price": "de {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} de {{total}} itens",
       "less": "Menos etiquetas",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} de {{total}} itens",
       "load_more_tip": "Carregar mais itens",
       "more": "Mais etiquetas",
       "more_product_num": "{{num}} Produtos",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Erro de serviço",
       "error_message_5": "Erro de serviço",
       "error_message_6": "Erro de serviço",
-      "error_message_7": "A senha deve ter de 6 a 18 caracteres, consistindo de números, letras maiúsculas e minúsculas"
+      "error_message_7": "A senha deve ter de 5 a 40 caracteres, consistindo de números, letras maiúsculas e minúsculas"
     },
     "editorSwitchCountryTip": "A mudança de país não é atualmente suportada pelo editor",
     "shopby": {

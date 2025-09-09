@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "가게를 동의합니다",
       "change_binding_after_verification": "검증 완성후 귀속/귀속 변경{{value}}",
+      "coupon_expired": "할인 코드가 만료되었습니다",
       "forget_password": "비밀번호 잊어버렸습니다",
       "proceed_to_checkout": "결산하기",
       "reset_password": "당신은 아이디{{account}} 비밀번호를 재설정중입니다"
@@ -257,7 +258,7 @@
       "copy_success": "쿠폰이 복사되었습니다",
       "discount_title": "계정을 활성화하고 할인 코드를 받으십시오.",
       "normal_title": "계정을 활성화시킵니다",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "계정을 활성화하고 할인 코드를 받으십시오.",
       "subscription_text": "이메일을 구독해 업데이트 접수, 단독 혜택 방문 등을 합니다.",
       "success_title": "할인 받으신 것을 축하드립니다",
       "token_expired": "링크가 만료되었습니다"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "나누다"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} / {{total}} 항목",
+    "load_more": "더 많이 불러오기",
+    "load_more_items": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 항목 불러오기"
+  },
   "onboarding": {
     "product_title": "제품 제목 예"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "출하함"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 항목"
+  },
   "products": {
     "collection": {
       "collection": "컬렉션"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "추가 구매에 성공하였습니다.",
+      "from_price_html": "{{price}}에서",
       "load_more_btn": "더 많은 항목 불러오기",
-      "load_more_items": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 항목 불러오기",
-      "loading_btn": "더 많이 불러오기",
       "no_product_data_found": "현재 상품 데이터가 없습니다. 잠시후 다시 시도하세요",
       "sold_out": "판매됨",
-      "unavailable": "해당 상품이 존재하지 않습니다"
+      "unavailable": "해당 상품이 존재하지 않습니다",
+      "variant_property_color": "색깔"
     },
     "giftcard": {
       "balance": "균형",
@@ -883,9 +892,7 @@
       "filter": "선택",
       "filters_selected": "{{count}}개 선택됩니다",
       "from_price": "{{price}}에서",
-      "infinite_btn_desc": "{{last_current_offset}} / {{total}} 항목",
       "less": "태그를 줄입니다",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 항목",
       "load_more_tip": "더 많은 항목을 불러옵니다",
       "more": "태그를 추가합니다.",
       "more_product_num": "상품 개수는 {{num}} 개",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} 절입니다",
-      "activity_banner_copy_success_text": "할인코드 복제가 완료되었습니다",
+      "activity_banner_copy_success_text": "할인 코드가 복사되었습니다",
       "activity_banner_free_shipping": "운임무료",
       "activity_selector_new_arrivals": "최신 출시",
       "activity_selector_price_high_to_low": "가격은 높은 것부터 낮은 것까지",
@@ -1166,7 +1173,7 @@
       "error_message_4": "서비스가 이상합니다",
       "error_message_5": "서비스가 이상합니다",
       "error_message_6": "서비스가 이상합니다",
-      "error_message_7": "비밀번호는 숫자, 대문자, 소문자로 구성된 6~18자여야 합니다."
+      "error_message_7": "비밀번호는 숫자, 대문자, 소문자로 구성된 5~40자여야 합니다."
     },
     "editorSwitchCountryTip": "편집기에서 국가 전환을 지원하지 않습니다",
     "shopby": {

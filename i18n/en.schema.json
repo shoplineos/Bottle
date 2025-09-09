@@ -40,7 +40,7 @@
           "label": "Switching interval"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -108,10 +108,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       },
       "presets": {
@@ -161,7 +161,7 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
           "label": "Spacing"
@@ -202,7 +202,7 @@
           "label": "Color"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -225,10 +225,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -266,10 +266,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -289,10 +289,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -328,7 +328,7 @@
           "label": "Color"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -339,7 +339,7 @@
           "label": "Color"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -358,7 +358,7 @@
           "label": "Color"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -377,7 +377,7 @@
           "label": "Color"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -388,7 +388,7 @@
           "label": "Color"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -399,7 +399,7 @@
           "label": "Color"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -410,7 +410,7 @@
           "label": "Color"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -420,10 +420,10 @@
           "name": "Question list",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -496,10 +496,10 @@
           "name": "Content",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -597,10 +597,10 @@
           "label": "Expand tag 1"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -620,7 +620,7 @@
           "label": "Collection list"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
           "label": "Spacing"
@@ -639,7 +639,7 @@
           "name": "Product information",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             }
           },
           "presets": {
@@ -652,7 +652,7 @@
           "name": "Media file overlay",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "size": {
               "label": "Size"
@@ -682,10 +682,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       },
       "presets": {
@@ -701,10 +701,10 @@
           "name": "Additional content",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -720,10 +720,10 @@
           "name": "Contact us",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -764,7 +764,7 @@
               "label": "Body"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -786,10 +786,10 @@
               "label": "Input box prompt text"
             },
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -821,10 +821,10 @@
           "name": "Footer infomation",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -853,10 +853,10 @@
               }
             },
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -878,7 +878,7 @@
               "label": "Navigation menu"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -897,10 +897,10 @@
               "label": "Payment icon"
             },
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -919,10 +919,10 @@
               "label": "Title"
             },
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -941,10 +941,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -972,10 +972,10 @@
           "label": "Logo"
         },
         "desktop_logo_width": {
-          "label": "Desktop logo width"
+          "label": "Desktop Logo width"
         },
         "mobile_logo_width": {
-          "label": "Mobile logo width "
+          "label": "Mobile Logo width "
         },
         "group_header_1": {
           "label": "Menu bar"
@@ -1032,7 +1032,7 @@
           "label": "Display shopping cart"
         },
         "desktop_spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -1060,10 +1060,10 @@
               "label": "Apply secondary button style"
             },
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -1085,10 +1085,10 @@
               "label": "Display background color"
             },
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -1110,7 +1110,7 @@
               "label": "Text alignment"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             }
           },
           "presets": {
@@ -1217,10 +1217,10 @@
           "label": "Display text below image"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       },
       "presets": {
@@ -1261,10 +1261,10 @@
           "name": "Content Containers",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -1407,10 +1407,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -1528,7 +1528,7 @@
           "label": "Color"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -1593,7 +1593,7 @@
           "label": "Color"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -1622,7 +1622,7 @@
       "name": "Product list",
       "settings": {
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -1635,7 +1635,7 @@
               "label": "Mobile banner image"
             },
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "size": {
               "label": "Size"
@@ -1656,7 +1656,7 @@
           "name": "Collection description",
           "settings": {
             "group_header_0": {
-              "label": "Go to 'Collection > Collection info' to modify content and typesetting"
+              "label": "Go to 'Collection > Collection info' to modify content and layout"
             }
           }
         },
@@ -1830,10 +1830,10 @@
           "name": "Content Containers",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -1860,10 +1860,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "image": {
           "label": "Background image"
@@ -1913,10 +1913,10 @@
           "label": "Logo"
         },
         "desktop_logo_width": {
-          "label": "Desktop logo width"
+          "label": "Desktop Logo width"
         },
         "mobile_logo_width": {
-          "label": "Mobile logo width "
+          "label": "Mobile Logo width "
         }
       }
     },
@@ -1926,7 +1926,7 @@
           "name": "Product information",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             }
           },
           "presets": {
@@ -1947,7 +1947,7 @@
           "name": "Media file overlay",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "size": {
               "label": "Size"
@@ -2032,10 +2032,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -2099,7 +2099,7 @@
           "label": "Color"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       }
     },
@@ -2110,10 +2110,10 @@
       "name": "Recommended products",
       "settings": {
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Typography"
+          "label": "Arrangement"
         }
       }
     },
@@ -2127,10 +2127,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         }
       },
       "presets": {
@@ -2152,7 +2152,7 @@
               "label": "Button text"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -2174,10 +2174,10 @@
           "label": "Full screen width"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -2202,7 +2202,7 @@
               "label": "Text alignment"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -2218,10 +2218,10 @@
           "name": "Content Containers",
           "settings": {
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -2261,10 +2261,10 @@
               "label": "Color"
             },
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             },
             "spacing": {
-              "label": "Padding"
+              "label": "Margin"
             },
             "size": {
               "label": "Size"
@@ -2455,7 +2455,7 @@
               "label": "URL"
             },
             "layout": {
-              "label": "Typography"
+              "label": "Arrangement"
             }
           },
           "presets": {
@@ -2521,10 +2521,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -2568,10 +2568,10 @@
           "label": "Color"
         },
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -2591,10 +2591,10 @@
         "name": "Blog cards",
         "settings": {
           "layout": {
-            "label": "Typography"
+            "label": "Arrangement"
           },
           "spacing": {
-            "label": "Padding"
+            "label": "Margin"
           },
           "size": {
             "label": "Size"
@@ -2667,7 +2667,7 @@
         "name": "Blog info",
         "settings": {
           "layout": {
-            "label": "Typography"
+            "label": "Arrangement"
           }
         },
         "presets": {
@@ -2689,10 +2689,10 @@
       "name": "Button group",
       "settings": {
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -2734,7 +2734,7 @@
             "label": "Collection list"
           },
           "layout": {
-            "label": "Typography"
+            "label": "Arrangement"
           }
         },
         "presets": {
@@ -2780,7 +2780,7 @@
             }
           },
           "layout": {
-            "label": "Typography"
+            "label": "Arrangement"
           }
         },
         "presets": {
@@ -2832,7 +2832,7 @@
           "label": "Text alignment"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -2843,10 +2843,10 @@
       "name": "Content Containers",
       "settings": {
         "layout": {
-          "label": "Typography"
+          "label": "Arrangement"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"
@@ -2915,6 +2915,61 @@
       "presets": {
         "presets_0": {
           "name": "Title"
+        }
+      }
+    },
+    "image": {
+      "name": "Image",
+      "settings": {
+        "image": {
+          "label": "Image"
+        },
+        "url": {
+          "label": "URL"
+        },
+        "open_in_new_tab": {
+          "label": "Open in new tab"
+        },
+        "mask_opacity": {
+          "label": "Layer mask opacity"
+        },
+        "aspect_ratio": {
+          "label": "Image ratio",
+          "options_0": {
+            "label": "Original image ratio"
+          },
+          "options_1": {
+            "label": "1:1"
+          },
+          "options_2": {
+            "label": "2:3"
+          },
+          "options_3": {
+            "label": "4:3"
+          },
+          "options_5": {
+            "label": "3:2"
+          },
+          "options_6": {
+            "label": "3:1"
+          },
+          "options_7": {
+            "label": "16:9"
+          }
+        },
+        "border_radius": {
+          "label": "Border radius"
+        },
+        "spacing": {
+          "label": "Margin"
+        },
+        "size": {
+          "label": "Size"
+        }
+      },
+      "presets": {
+        "presets_0": {
+          "name": "Image"
         }
       }
     },
@@ -3201,7 +3256,7 @@
         "name": "Product cards",
         "settings": {
           "layout": {
-            "label": "Typography"
+            "label": "Arrangement"
           },
           "size": {
             "label": "Size"
@@ -3271,7 +3326,7 @@
             "label": "Display next product image on hover"
           },
           "layout": {
-            "label": "Typography"
+            "label": "Arrangement"
           }
         },
         "presets": {
@@ -3284,13 +3339,13 @@
         "name": "Image overlay",
         "settings": {
           "layout": {
-            "label": "Typography"
+            "label": "Arrangement"
           },
           "size": {
             "label": "Size"
           },
           "spacing": {
-            "label": "Padding"
+            "label": "Margin"
           }
         },
         "presets": {
@@ -3364,7 +3419,7 @@
           "label": "Text alignment"
         },
         "spacing": {
-          "label": "Padding"
+          "label": "Margin"
         },
         "size": {
           "label": "Size"

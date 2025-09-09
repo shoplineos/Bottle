@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Zgadza się ze sklepem",
       "change_binding_after_verification": "Po weryfikacji już można ustalić/zmienić{{value}}",
+      "coupon_expired": "Kod rabatowy wygasł",
       "forget_password": "Nie pamięta hasła",
       "proceed_to_checkout": "Dokonuje płatności",
       "reset_password": "Teraz resetujesz hasło do konta{{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Skopiowano kod rabatowy.",
       "discount_title": "Aktywizować konto i uzyskać kod rabatowy.",
       "normal_title": "Aktywizować konto.",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktywizować konto i uzyskać kod rabatowy.",
       "subscription_text": "Subskrybuj e-mailem, żeby uzyskać nowe informacje i odwiedzić ekskluzywne rabaty.",
       "success_title": "Gratuluję, że uzyskałaś rabat.",
       "token_expired": "Twój link już jest nieważny"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Podziel"
   },
+  "infinite_scroll": {
+    "button_desc": "Elementy {{last_current_offset}}/{{total}}",
+    "load_more": "Załaduj więcej",
+    "load_more_items": "Załaduj projekt {{current_offset}} ~ {{last_current_offset}}/{{total}}"
+  },
   "onboarding": {
     "product_title": "Przykładowa nazwa produktu"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Już wysłano"
     }
   },
+  "pagination": {
+    "offset_info": "Elementy {{current_offset}} ~ {{last_current_offset}}/{{total}}"
+  },
   "products": {
     "collection": {
       "collection": "Kolekcje"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Pomyślnie dodano",
+      "from_price_html": "z {{price}}",
       "load_more_btn": "Załaduj więcej projektów",
-      "load_more_items": "Załaduj projekt {{current_offset}} ~ {{last_current_offset}}/{{total}}",
-      "loading_btn": "Załaduj więcej",
       "no_product_data_found": "Brak danych tego produktu, proszę spróbować później",
       "sold_out": "Wyprzedane",
-      "unavailable": "Brak tego produktu"
+      "unavailable": "Brak tego produktu",
+      "variant_property_color": "kolor"
     },
     "giftcard": {
       "balance": "Saldo",
@@ -883,9 +892,7 @@
       "filter": "Filtr",
       "filters_selected": "Wybrano {{count}}",
       "from_price": "z {{price}}",
-      "infinite_btn_desc": "Elementy {{last_current_offset}}/{{total}}",
       "less": "Mniej etykiet",
-      "load_more_desc": "Elementy {{current_offset}} ~ {{last_current_offset}}/{{total}}",
       "load_more_tip": "Ładuje więcej przedmiotów",
       "more": "Więcej etykiet",
       "more_product_num": "{{num}} Produktów",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}}% zniżki",
-      "activity_banner_copy_success_text": "Skupiono kod rabatowy",
+      "activity_banner_copy_success_text": "Kod rabatowy skopiowany pomyślnie",
       "activity_banner_free_shipping": "Darmowa dostawa",
       "activity_selector_new_arrivals": "najnowszy produkt",
       "activity_selector_price_high_to_low": "Cena od wysokiej do niskiej.",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Usługa działa nienormalnie",
       "error_message_5": "Usługa działa nienormalnie",
       "error_message_6": "Usługa działa nienormalnie",
-      "error_message_7": "Hasło musi składać się z 6-18 znaków składających się z cyfr, wielkich i małych liter"
+      "error_message_7": "Hasło musi składać się z 5-40 znaków składających się z cyfr, wielkich i małych liter"
     },
     "editorSwitchCountryTip": "Nie można zmienić kraju lub regionu w edytorze",
     "shopby": {

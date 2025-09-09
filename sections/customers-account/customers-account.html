@@ -13,29 +13,31 @@
   }
 </script>
 
-<div class="page-width">
-  <theme-customers-account
-    class="customer-account {{section.settings.spacing | class_list()}} color-{{section.settings.color_scheme.id}}"
-  >
+<div class="customer-account__container color-{{ section.settings.color_scheme.id }}">
+  <div class="page-width">
+    <theme-customers-account
+      class="customer-account {{section.settings.spacing | class_list()}}"
+    >
 
-    {{#component "customers/message-bar" /}}
+      {{#component "customers/message-bar" /}}
 
-    {{#component "customers/navbar" /}}
+      {{#component "customers/navbar" /}}
 
-    <div class="customer-account__body body4">
-      <div>
-        {{#component "./components/card-account" /}}
-        {{#component "./components/card-subscriptions" /}}
-        {{#component "./components/card-personal" /}}
+      <div class="customer-account__body body4">
+        <div>
+          {{#component "./components/card-account" /}}
+          {{#component "./components/card-subscriptions" /}}
+          {{#component "./components/card-personal" /}}
+        </div>
+        <div>
+          {{#component "./components/card-address" /}}
+        </div>
       </div>
-      <div>
-        {{#component "./components/card-address" /}}
-      </div>
-    </div>
 
-    {{#component "customers/footer" /}}
+      {{#component "customers/footer" /}}
 
-  </theme-customers-account>
+    </theme-customers-account>
+  </div>
 </div>
 
 {{#schema}}

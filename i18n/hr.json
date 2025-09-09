@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "pristajem na",
       "change_binding_after_verification": "Možete se povezati/promijeniti {{value}} nakon potvrde",
+      "coupon_expired": "Kod za popust je istekao",
       "forget_password": "Zaboravljena lozinka",
       "proceed_to_checkout": "Nastavite na blagajnu",
       "reset_password": "Poništavate lozinku za račun {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Kôd kupona kopiran",
       "discount_title": "Aktivirajte račun i dobijte kod za popust",
       "normal_title": "Aktivirajte račun",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktivirajte račun i dobijte kod za popust",
       "subscription_text": "Pretplatite se na e-poštu za primanje ažuriranja, pristup ekskluzivnim ponudama i ostalog.",
       "success_title": "Čestitamo na dobijanju velikog popusta",
       "token_expired": "Poveznica je istekla"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Dijeliti"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} od {{total}} stavki",
+    "load_more": "Učitaj više",
+    "load_more_items": "Učitavanje {{current_offset}} ~ {{last_current_offset}} od {{total}} stavki"
+  },
   "onboarding": {
     "product_title": "Primjer naslova proizvoda"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Isporučeno"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} od {{total}} stavki"
+  },
   "products": {
     "collection": {
       "collection": "Kategorija"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Dodano u košaricu uspješno",
+      "from_price_html": "Od {{price}}",
       "load_more_btn": "Učitavanje više stavki",
-      "load_more_items": "Učitavanje {{current_offset}} ~ {{last_current_offset}} od {{total}} stavki",
-      "loading_btn": "Učitaj više",
       "no_product_data_found": "Nisu pronađeni podaci o proizvodu. Molimo pokušajte ponovo kasnije",
       "sold_out": "Prodano",
-      "unavailable": "Roba ne postoji"
+      "unavailable": "Roba ne postoji",
+      "variant_property_color": "Boja"
     },
     "giftcard": {
       "balance": "Saldo",
@@ -883,9 +892,7 @@
       "filter": "Filter",
       "filters_selected": "{{count}} su odabrani",
       "from_price": "Od {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} od {{total}} stavki",
       "less": "manje",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} od {{total}} stavki",
       "load_more_tip": "Učitavanje više stavki",
       "more": "više",
       "more_product_num": "{{num}} proizvodi",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} isključeno",
-      "activity_banner_copy_success_text": "Kod kupona je uspješno kopiran",
+      "activity_banner_copy_success_text": "Kod za popust je uspješno kopiran",
       "activity_banner_free_shipping": "Besplatna dostava",
       "activity_selector_new_arrivals": "Nova kolekcija",
       "activity_selector_price_high_to_low": "Cijena od visoke do niske",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Iznimke usluga",
       "error_message_5": "Iznimke usluga",
       "error_message_6": "Iznimke usluga",
-      "error_message_7": "Lozinka mora imati 6-18 znakova koji se sastoje od brojeva, velikih i malih slova"
+      "error_message_7": "Lozinka mora imati 5-40 znakova koji se sastoje od brojeva, velikih i malih slova"
     },
     "editorSwitchCountryTip": "Prebacivanje zemalja nije podržano u uređivaču",
     "shopby": {

@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Jag håller med",
       "change_binding_after_verification": "Kan aktivera / ändra {{value}} efter verifiering",
+      "coupon_expired": "Rabattkoden har gått ut",
       "forget_password": "Lösenord glömt",
       "proceed_to_checkout": "Fortsätt till utcheckningen",
       "reset_password": "Du återställer Lösenord för kontot {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Kopierad kupongkod",
       "discount_title": "Aktivera konto och få rabattkoden",
       "normal_title": "Aktivera konto",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Aktivera konto och få rabattkoden",
       "subscription_text": "Prenumerera på mejl för att få uppdateringar, få tillgång till exklusiva erbjudanden och mer.",
       "success_title": "Grattis till att få en bra rabatt",
       "token_expired": "Länken har upphört att gälla"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Att dela"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} av {{total}} saker",
+    "load_more": "Ladda mer",
+    "load_more_items": "Laddar {{current_offset}} ~ {{last_current_offset}} av {{total}} saker"
+  },
   "onboarding": {
     "product_title": "Exempel på produkttitel"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Levereras"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} av {{total}} saker"
+  },
   "products": {
     "collection": {
       "collection": "Kategori"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Har lagts till i kundvagnen",
+      "from_price_html": "Från {{price}}",
       "load_more_btn": "Laddar fler objekt",
-      "load_more_items": "Laddar {{current_offset}} ~ {{last_current_offset}} av {{total}} saker",
-      "loading_btn": "Ladda mer",
       "no_product_data_found": "Inga produktdata hittades. Försök igen senare",
       "sold_out": "Slutsålt",
-      "unavailable": "Varorna finns inte"
+      "unavailable": "Varorna finns inte",
+      "variant_property_color": "Färg"
     },
     "giftcard": {
       "balance": "Balans",
@@ -883,9 +892,7 @@
       "filter": "Filtrera",
       "filters_selected": "{{count}} har valts",
       "from_price": "Från {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} av {{total}} saker",
       "less": "mindre",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} av {{total}} saker",
       "load_more_tip": "Laddar fler objekt",
       "more": "mer",
       "more_product_num": "{{num}} Produkter",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} av",
-      "activity_banner_copy_success_text": "Kupongkoden kopieras",
+      "activity_banner_copy_success_text": "Rabatterbjudande kopierat framgångsrikt",
       "activity_banner_free_shipping": "Fri frakt",
       "activity_selector_new_arrivals": "Nya arkiv",
       "activity_selector_price_high_to_low": "Pris högt till lågt",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Service Undantag",
       "error_message_5": "Service Undantag",
       "error_message_6": "Service Undantag",
-      "error_message_7": "Lösenordet måste vara 6-18 tecken bestående av siffror, versaler och gemener"
+      "error_message_7": "Lösenordet måste vara 5-40 tecken bestående av siffror, versaler och gemener"
     },
     "editorSwitchCountryTip": "Landsbyte är inte kompatibelt med redaktören",
     "shopby": {

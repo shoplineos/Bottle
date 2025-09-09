@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "Tôi đồng ý với",
       "change_binding_after_verification": "Bạn có thể kết nối/thay đổi {{value}} sau khi hoàn thành xác minh",
+      "coupon_expired": "Mã giảm giá đã hết hạn",
       "forget_password": "Quên mật khẩu",
       "proceed_to_checkout": "Tiến hành kiểm tra",
       "reset_password": "Bạn đang đặt lại mật khẩu cho tài khoản {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "Đã sao chép mã phiếu thưởng",
       "discount_title": "Kích hoạt tài khoản và nhận mã giảm giá",
       "normal_title": "Kích hoạt tài khoản",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "Kích hoạt tài khoản và nhận mã giảm giá",
       "subscription_text": "Đăng ký để nhận thông tin cập nhật qua email, truy cập vào các ưu đãi độc quyền và hơn thế nữa.",
       "success_title": "Chúc mừng bạn đã nhận được giảm giá lớn",
       "token_expired": "Liên kết đã hết hạn"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "Chia sẻ"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} trong số {{total}} mục",
+    "load_more": "Tải thêm",
+    "load_more_items": "Đang tải {{current_offset}} ~ {{last_current_offset}} trong số {{total}} mục"
+  },
   "onboarding": {
     "product_title": "Ví dụ tiêu đề sản phẩm"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "Đã vận chuyển"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} trong số {{total}} mục"
+  },
   "products": {
     "collection": {
       "collection": "Danh mục"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "Thêm vào giỏ hàng thành công",
+      "from_price_html": "Từ {{price}}",
       "load_more_btn": "Đang tải thêm mục",
-      "load_more_items": "Đang tải {{current_offset}} ~ {{last_current_offset}} trong số {{total}} mục",
-      "loading_btn": "Tải thêm",
       "no_product_data_found": "Không tìm thấy thông tin sản phẩm. Vui lòng thử lại sau.",
       "sold_out": "Hết hàng",
-      "unavailable": ""
+      "unavailable": "",
+      "variant_property_color": "Màu sắc"
     },
     "giftcard": {
       "balance": "Số dư",
@@ -883,9 +892,7 @@
       "filter": "Lọc",
       "filters_selected": "Đã chọn {{count}}",
       "from_price": "Từ {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} trong số {{total}} mục",
       "less": "ít hơn",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} trong số {{total}} mục",
       "load_more_tip": "Đang tải thêm các mặt hàng",
       "more": "nhiều hơn",
       "more_product_num": "{{num}} sản phẩm",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "{{benefit}} tắt",
-      "activity_banner_copy_success_text": "Đã sao chép mã phiếu giảm giá thành công",
+      "activity_banner_copy_success_text": "Mã giảm giá đã được sao chép thành công",
       "activity_banner_free_shipping": "Miễn phí vận chuyển",
       "activity_selector_new_arrivals": "Hàng mới về",
       "activity_selector_price_high_to_low": "Giá từ cao đến thấp",
@@ -1166,7 +1173,7 @@
       "error_message_4": "Ngoại lệ dịch vụ",
       "error_message_5": "Ngoại lệ dịch vụ",
       "error_message_6": "Ngoại lệ dịch vụ",
-      "error_message_7": "Mật khẩu phải có 6-18 ký tự bao gồm số, chữ hoa và chữ thường"
+      "error_message_7": "Mật khẩu phải có 5-40 ký tự bao gồm số, chữ hoa và chữ thường"
     },
     "editorSwitchCountryTip": "Trình chỉnh sửa này không hỗ trợ chuyển đổi quốc gia",
     "shopby": {

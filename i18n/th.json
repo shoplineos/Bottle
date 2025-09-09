@@ -84,7 +84,7 @@
       "notSupport": {
         "stacked": "รหัสส่วนลดไม่สามารถวางซ้อนกันได้"
       },
-      "unavailable": "โค้ดส่วนลดหมดอายุ"
+      "unavailable": "รหัสส่วนลดหมดอายุแล้ว"
     },
     "discount": {
       "coupon_code_amount": "รหัสคูปองส่วนลด",
@@ -190,6 +190,7 @@
     "tips": {
       "agree_with_the_shop": "ฉันยอมรับ",
       "change_binding_after_verification": "คุณสามารถเชื่อมต่อ/เปลี่ยนแปลง {{value}} ได้หลังจากการยืนยันตัวตน",
+      "coupon_expired": "รหัสส่วนลดหมดอายุแล้ว",
       "forget_password": "ลืมรหัสผ่าน",
       "proceed_to_checkout": "ดำเนินการชำระเงิน",
       "reset_password": "คุณกำลังตั้งค่ารหัสผ่านใหม่สำหรับบัญชี {{account}}"
@@ -257,7 +258,7 @@
       "copy_success": "คัดลอกคูปองแล้ว",
       "discount_title": "เปิดใช้งานบัญชีและรับรหัสส่วนลด",
       "normal_title": "เปิดใช้งานบัญชี",
-      "normal_title_with_discount_code": "",
+      "normal_title_with_discount_code": "เปิดใช้งานบัญชีและรับโค้ดส่วนลด",
       "subscription_text": "สมัครรับอีเมลเพื่อรับการอัปเดต การเข้าถึงส่วนลดพิเศษ และอื่นๆ",
       "success_title": "ยินดีด้วยที่คุณได้รับส่วนลด",
       "token_expired": "ลิงก์ของคุณหมดอายุ"
@@ -689,6 +690,11 @@
     },
     "share_button_text": "แบ่งปัน"
   },
+  "infinite_scroll": {
+    "button_desc": "{{last_current_offset}} / {{total}}รายการ",
+    "load_more": "หลดเพิ่มเติม",
+    "load_more_items": "กำลังโหลด{{current_offset}} ~ {{last_current_offset}} / {{total}}รายการ"
+  },
   "onboarding": {
     "product_title": "ตัวอย่างชื่อสินค้า"
   },
@@ -769,6 +775,9 @@
       "shipped_order": "จัดส่งแล้ว"
     }
   },
+  "pagination": {
+    "offset_info": "{{current_offset}} ~ {{last_current_offset}} / {{total}}รายการ"
+  },
   "products": {
     "collection": {
       "collection": "หมวดหมู่"
@@ -796,12 +805,12 @@
     },
     "general": {
       "added_to_cart_successfully": "ซื้อสินค้าเพิ่มเติมสำเร็จ",
+      "from_price_html": "จาก {{price}}",
       "load_more_btn": "โหลดรายการเพิ่มเติม",
-      "load_more_items": "กำลังโหลด{{current_offset}} ~ {{last_current_offset}} / {{total}}รายการ",
-      "loading_btn": "หลดเพิ่มเติม",
       "no_product_data_found": "ไม่พบข้อมูลสินค้า โปรดลองอีกครั้งในภายหลัง",
       "sold_out": "ขายหมดแล้ว",
-      "unavailable": "สินค้านี้ไม่มีอยู่"
+      "unavailable": "สินค้านี้ไม่มีอยู่",
+      "variant_property_color": "สี"
     },
     "giftcard": {
       "balance": "มูลค่าบัตร",
@@ -883,9 +892,7 @@
       "filter": "กรอง",
       "filters_selected": "เลือก {{count}} รายการแล้ว",
       "from_price": "จาก {{price}}",
-      "infinite_btn_desc": "{{last_current_offset}} / {{total}}รายการ",
       "less": "น้อยลง",
-      "load_more_desc": "{{current_offset}} ~ {{last_current_offset}} / {{total}}รายการ",
       "load_more_tip": "โหลดรายการเพิ่มเติม",
       "more": "เพิ่มเติม",
       "more_product_num": "{{num}} สินค้า",
@@ -952,7 +959,7 @@
     },
     "general": {
       "activity_banner_benefit": "ส่วนลด {{benefit}}",
-      "activity_banner_copy_success_text": "คัดลอกรหัสส่วนลดเรียบร้อยแล้ว",
+      "activity_banner_copy_success_text": "คัดลอกโค้ดส่วนลดเรียบร้อยแล้ว",
       "activity_banner_free_shipping": "จัดส่งฟรี",
       "activity_selector_new_arrivals": "ลงรายการใหม่ล่าสุด",
       "activity_selector_price_high_to_low": "ราคาจากสูงไปต่ำ",
@@ -1166,7 +1173,7 @@
       "error_message_4": "การบริการผิดปกติ",
       "error_message_5": "การบริการผิดปกติ",
       "error_message_6": "การบริการผิดปกติ",
-      "error_message_7": "รหัสผ่านต้องมีความยาว 6-18 ตัวอักษร ประกอบด้วยตัวเลข ตัวพิมพ์ใหญ่ และตัวพิมพ์เล็ก"
+      "error_message_7": "รหัสผ่านต้องมีความยาว 5-40 ตัวอักษร ประกอบด้วยตัวเลข ตัวพิมพ์ใหญ่ และตัวพิมพ์เล็ก"
     },
     "editorSwitchCountryTip": "ตัวแก้ไขไม่รองรับการสลับเปลี่ยนประเทศ",
     "shopby": {
