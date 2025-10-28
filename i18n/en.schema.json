@@ -102,7 +102,7 @@
       "name": "Blogs",
       "settings": {
         "blog": {
-          "label": "Blogs"
+          "label": "Blog category"
         },
         "color_scheme": {
           "label": "Color"
@@ -1439,7 +1439,7 @@
           "name": "Review",
           "settings": {
             "group_header_0": {
-              "label": "Please go to \"Blog\" and manage the comment handling settings in the blog collection to allow comments"
+              "label": "Please go to 'Blog' and manage the comment handling settings in the blog category to allow comments"
             }
           },
           "presets": {
@@ -1535,7 +1535,7 @@
     "main_blog": {
       "blocks": {
         "title": {
-          "name": "Blog collection name",
+          "name": "Blog category name",
           "settings": {
             "text_size": {
               "label": "Text size",
@@ -1570,12 +1570,12 @@
           },
           "presets": {
             "presets_0": {
-              "name": "Blog collection name"
+              "name": "Blog category name"
             }
           }
         }
       },
-      "name": "Blogs",
+      "name": "Blog category",
       "settings": {
         "desktop_columns": {
           "label": "Number of columns (desktop)",

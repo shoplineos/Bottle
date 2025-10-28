@@ -2,8 +2,10 @@
   {{#content "blocks" /}}
 
   {{#capture html}}
-    {{block.settings.button_text}}
-    <span class="text-columns-with-image__card-link-icon">{{#component "icons/caret-right" /}}</span>
+    {{#if block.settings.button_text}}
+      {{block.settings.button_text}}
+      <span class="text-columns-with-image__card-link-icon">{{#component "icons/caret-right" /}}</span>
+    {{/if}}
   {{/capture}}
 
   <div class="text-columns-with-image__card-link">

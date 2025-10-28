@@ -1,13 +1,17 @@
+{{#var title = props.page_title | default(page_title) /}}
+{{#var description = props.page_description | default(page_description) /}}
+{{#var keyword = props.page_keyword | default(page_keyword) /}}
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta http-equiv="x-dns-prefetch-control" content="on" />
 
-{{#if page_description}}
-  <meta name="description" content="{{page_description}}" />
+{{#if description}}
+  <meta name="description" content="{{description}}" />
 {{/if}}
 
-{{#if page_keyword}}
-  <meta name="keywords" content="{{page_keyword}}" />
+{{#if keyword}}
+  <meta name="keywords" content="{{keyword}}" />
 {{/if}}
 
 {{#if settings.favicon_image}}
@@ -19,8 +23,8 @@
 {{#component "meta-tags" /}}
 
 <title>
-  {{page_title}}
+  {{title}}
   {{#if current_tags}} &ndash; Tagged "{{current_tags | join(`,`)}}"{{/if}}
   {{#if current_page != 1}} &ndash; Page {{current_page}}{{/if}}
-  {{~#if page_title|contains(shop.name)}} &ndash; {{shop.name}}{{~/if}}
+  {{~#if !(title|contains(shop.name))}} &ndash; {{shop.name}}{{~/if}}
 </title>
