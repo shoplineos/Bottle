@@ -1,0 +1,7 @@
+{
+  "id": "{{ props.variant.id }}",
+  "options": {{{ props.variant.options | json() }}},
+  "price": "{{ props.variant.price }}",
+  "available": {{ props.variant.available }},
+  "featured_media_id": "{{ props.variant.featured_media.id }}"
+}

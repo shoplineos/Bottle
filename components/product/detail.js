@@ -74,7 +74,7 @@ defineModule('theme-product-detail', () => {
                 return;
             }
             const { currentVariant } = this;
-            const currentFeatureMedia = currentVariant?.featured_media?.id;
+            const currentFeatureMedia = currentVariant?.featured_media_id;
             if (currentFeatureMedia) {
                 this.mediaGalleryElement?.activeMedia(currentFeatureMedia);
             }
@@ -141,7 +141,7 @@ defineModule('theme-product-detail', () => {
                     sku: currentVariant?.id,
                 }));
             }
-            this.shareLinkElement?.setAttribute('href', `${window.shopUrl}${currentVariant?.url}`);
+            this.shareLinkElement?.setAttribute('href', `${this.dataset.url}?sku=${currentVariant?.id}`);
         }
         #updateVolumePricingTip() {
             const { volumePricingElement, quantity } = this;

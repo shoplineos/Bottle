@@ -4,8 +4,14 @@
 {{#var product = props.product /}}
 {{#var selected_variant = product.selected_or_first_available_variant /}}
 
-{{#capture variant_data}}
-  <script name="variant-data" type="application/json">{{{product | get_variants() | json()}}}</script>
+{{#capture variant_data }}
+  <script name="variant-data" type="application/json">
+    [
+      {{#for variant in product | get_variants() ~}}
+        {{#component "product/variant-data" variant=variant /}}{{#if !forloop.last}},{{/if}}
+      {{/for}}
+    ]
+  </script>
 {{/capture}}
 
 {{#if block.settings.picker_type == "flatten"}}
