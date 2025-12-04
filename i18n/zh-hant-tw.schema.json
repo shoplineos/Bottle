@@ -1820,7 +1820,7 @@
       "name": "自定義頁面",
       "settings": {
         "spacing": {
-          "name": "間距"
+          "label": "間距"
         }
       }
     },
@@ -2854,7 +2854,7 @@
       },
       "presets": {
         "presets_0": {
-          "name": "group"
+          "name": "內容容器"
         }
       }
     },

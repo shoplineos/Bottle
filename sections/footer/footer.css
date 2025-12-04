@@ -30,6 +30,11 @@
 .footer__localization-form form {
   display: contents;
 }
+.footer__localization-form form select {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 @media (max-width: 959px) {
   .footer__localization-form .localization__selector {
     width: 100%;

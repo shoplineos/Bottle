@@ -1820,7 +1820,7 @@
       "name": "Halaman Kustom",
       "settings": {
         "spacing": {
-          "name": "Spasi"
+          "label": "Spasi"
         }
       }
     },
@@ -2854,7 +2854,7 @@
       },
       "presets": {
         "presets_0": {
-          "name": "Grup"
+          "name": "Kontainer Isi"
         }
       }
     },

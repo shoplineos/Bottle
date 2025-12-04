@@ -1820,7 +1820,7 @@
       "name": "Custom page",
       "settings": {
         "spacing": {
-          "name": "Spacing"
+          "label": "Spacing"
         }
       }
     },
@@ -2854,7 +2854,7 @@
       },
       "presets": {
         "presets_0": {
-          "name": "group"
+          "name": "Content Containers"
         }
       }
     },

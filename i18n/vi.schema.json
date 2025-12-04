@@ -1820,7 +1820,7 @@
       "name": "Trang tùy chỉnh",
       "settings": {
         "spacing": {
-          "name": "Khoảng cách"
+          "label": "Khoảng cách"
         }
       }
     },
@@ -2854,7 +2854,7 @@
       },
       "presets": {
         "presets_0": {
-          "name": ""
+          "name": "Nơi chứa nội dung"
         }
       }
     },
