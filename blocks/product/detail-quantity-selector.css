@@ -1,6 +1,0 @@
-.product-detail__quantity-selector
-  .quantity-selector__rules
-  span
-  + span::before {
-  content: " + ";
-}

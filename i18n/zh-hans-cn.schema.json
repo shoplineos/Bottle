@@ -146,6 +146,15 @@
             },
             "mobile_enable_slider": {
               "label": "移动端左右滑动查看"
+            },
+            "inherit_grid_gap": {
+              "label": "使用全局网格间距配置"
+            },
+            "column_gap": {
+              "label": "水平间距"
+            },
+            "row_gap": {
+              "label": "垂直间距"
             }
           },
           "presets": {
@@ -2657,6 +2666,26 @@
       },
       "excerpt": {
         "name": "摘要",
+        "settings": {
+          "max_rows": {
+            "label": "展示规则",
+            "options_0": {
+              "label": "完整显示"
+            },
+            "options_1": {
+              "label": "最多显示1行"
+            },
+            "options_2": {
+              "label": "最多显示2行"
+            },
+            "options_3": {
+              "label": "最多显示3行"
+            },
+            "options_4": {
+              "label": "最多显示4行"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "摘要"
@@ -2678,6 +2707,23 @@
       },
       "title": {
         "name": "标题",
+        "settings": {
+          "max_rows": {
+            "label": "展示规则",
+            "options_0": {
+              "label": "完整显示"
+            },
+            "options_1": {
+              "label": "最多显示1行"
+            },
+            "options_2": {
+              "label": "最多显示2行"
+            },
+            "options_3": {
+              "label": "最多显示3行"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "标题"
@@ -2792,6 +2838,9 @@
       "title": {
         "name": "分类名称",
         "settings": {
+          "title": {
+            "label": "分类标题"
+          },
           "size": {
             "label": "尺寸"
           }
@@ -2910,6 +2959,9 @@
         },
         "text_align": {
           "label": "文字对齐"
+        },
+        "text_align_mobile": {
+          "label": "移动端文字对齐"
         }
       },
       "presets": {
@@ -3209,6 +3261,20 @@
       },
       "detail_sell_info": {
         "name": "销售信息",
+        "settings": {
+          "direction": {
+            "label": "布局",
+            "options_0": {
+              "label": "垂直"
+            },
+            "options_1": {
+              "label": "水平"
+            }
+          },
+          "column": {
+            "label": "展示数量"
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "销售信息"
@@ -3224,10 +3290,10 @@
         }
       },
       "detail_variant_picker": {
-        "name": "多属性选择器",
+        "name": "多款式选择器",
         "settings": {
           "picker_type": {
-            "label": "多属性展示方式",
+            "label": "多款式展示方式",
             "options_0": {
               "label": "平铺"
             },
@@ -3238,7 +3304,7 @@
         },
         "presets": {
           "presets_0": {
-            "name": "多属性选择器"
+            "name": "多款式选择器"
           }
         }
       },
@@ -3621,7 +3687,7 @@
       }
     },
     "sku": {
-      "name": "多属性选择器",
+      "name": "多款式选择器",
       "settings": {
         "group_header_0": {
           "label": "边框"

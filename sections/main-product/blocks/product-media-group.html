@@ -1,11 +1,14 @@
 {{#var layout_size /}}
 {{#blocks}}
-  {{#if forblock.type == "$product-media"}}
+  {{#if forblock.type == "$product-media" }}
     {{#set layout_size = forblock.settings.layout_size /}}
   {{/if}}
 {{/blocks}}
 
-<div class="product-detail__media-group product-detail__col product-detail__col--{{layout_size}}" style="order: {{props.order}};">
+<div
+  class="product-detail__media-group product-detail__col product-detail__col--{{ layout_size }}"
+  style="order: {{ props.order }};"
+>
   {{#blocks}}
     {{#block outside_layout=true /}}
   {{/blocks}}
@@ -15,6 +18,7 @@
 {
   "name": "t:sections.main_product.blocks.product_media_group.name",
   "tag": "",
+  "deletable": false,
   "blocks": [
     {
       "type": "@app"

@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "接受",
+      "all_products": "全部商品",
+      "collections": "全部分类",
       "decline": "拒绝",
       "email_tip": "无效的邮箱地址, 请重新输入",
       "home": "首页",

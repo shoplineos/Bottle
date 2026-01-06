@@ -5,18 +5,22 @@
 {{#var show_country_picker = props.show_country_picker /}}
 
 
-{{#component "stylesheet" src="./nav-drawer.css" | asset_url() /}}
 {{#component "script" src="./nav-drawer.js" | asset_url() /}}
 
-<theme-header-nav-drawer class="header-nav-drawer color-{{color_scheme.id}}">
+<theme-header-nav-drawer class="header-nav-drawer color-{{ color_scheme.id }}">
   <div class="header-nav-drawer__backdrop" data-role="header-nav-drawer-dismiss"></div>
 
   <div class="header-nav-drawer__content">
     <header class="header-nav-drawer__header">
       <div class="header-nav-drawer__header-container">
-        {{#if show_user_entry}}
+        {{#if show_user_entry }}
           
-          <a class="header-nav-drawer__login" title="login" aria-label="goto login page" href="{{#if customer}}{{routes.account_url}}{{#else/}}{{routes.account_login_url}}{{/if}}">
+          <a
+            class="header-nav-drawer__login"
+            title="login"
+            aria-label="goto login page"
+            href="{{#if customer }}{{ routes.account_url }}{{#else/}}{{ routes.account_login_url }}{{/if}}"
+          >
             <span class="header-nav-drawer__icon">{{#component "icons/user" /}}</span>
             <span class="body3 body-font-bold">{{ "general.header.login" | t() }}</span>
           </a>
@@ -40,16 +44,16 @@
 
     <nav class="header-nav-drawer__menu">
       <ul>
-        {{#for link in links}}
+        {{#for link in links }}
           {{#var total = link.links | size() /}}
           
-          {{#if total == 0}}
+          {{#if total == 0 }}
             <li>
               <a
-                {{#if link.url}}href="{{link.url}}"{{#else/}}href="javascript:;" role="link"{{/if}}
+                {{#if link.url }}href="{{ link.url }}"{{#else/}}href="javascript:;"role="link"{{/if}}
                 class="header-nav-drawer__menu-control body3 body-font-bold"
               >
-                <span class="header-nav-drawer__ellipsis">{{link.title}}</span>
+                <span class="header-nav-drawer__ellipsis">{{ link.title }}</span>
               </a>
             </li>
           {{#else/}}
@@ -57,7 +61,7 @@
               
               <details>
                 <summary class="header-nav-drawer__menu-control">
-                  <span class="header-nav-drawer__ellipsis body3 body-font-bold">{{link.title}}</span>
+                  <span class="header-nav-drawer__ellipsis body3 body-font-bold">{{ link.title }}</span>
                   <span
                     class="header-nav-drawer__menu-icon button button--icon"
                     title="expand menu"
@@ -71,22 +75,22 @@
 
               
               <ul class="header-nav-drawer__submenu" style="--nav-drawer-submenu-level:1;">
-                {{#for link in link.links}}
+                {{#for link in link.links }}
                   {{#var total = link.links | size() /}}
-                  {{#if total == 0}}
+                  {{#if total == 0 }}
                     <li>
                       <a
-                        {{#if link.url}}href="{{link.url}}"{{#else/}}href="javascript:;" role="link"{{/if}}
+                        {{#if link.url }}href="{{ link.url }}"{{#else/}}href="javascript:;"role="link"{{/if}}
                         class="header-nav-drawer__menu-control body3"
                       >
-                        <span class="header-nav-drawer__ellipsis">{{link.title}}</span>
+                        <span class="header-nav-drawer__ellipsis">{{ link.title }}</span>
                       </a>
                     </li>
                   {{#else/}}
                     <li>
                       <details>
                         <summary class="header-nav-drawer__menu-control">
-                          <span class="body3 header-nav-drawer__ellipsis">{{link.title}}</span>
+                          <span class="body3 header-nav-drawer__ellipsis">{{ link.title }}</span>
                           <span
                             class="header-nav-drawer__menu-icon button button--icon"
                             title="expand menu"
@@ -100,13 +104,13 @@
 
                       
                       <ul class="header-nav-drawer__submenu" style="--nav-drawer-submenu-level:2;">
-                        {{#for link in link.links}}
+                        {{#for link in link.links }}
                           <li>
                             <a
-                              {{#if link.url}}href="{{link.url}}"{{#else/}}href="javascript:;" role="link"{{/if}}
+                              {{#if link.url }}href="{{ link.url }}"{{#else/}}href="javascript:;"role="link"{{/if}}
                               class="header-nav-drawer__menu-control body3"
                             >
-                              <span class="header-nav-drawer__ellipsis">{{link.title}}</span>
+                              <span class="header-nav-drawer__ellipsis">{{ link.title }}</span>
                             </a>
                           </li>
                         {{/for}}
@@ -129,6 +133,5 @@
         show_country_picker=show_country_picker
       /}}
     </footer>
-
   </div>
 </theme-header-nav-drawer>

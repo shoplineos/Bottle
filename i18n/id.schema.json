@@ -146,6 +146,15 @@
             },
             "mobile_enable_slider": {
               "label": "Geser ke kiri dan kanan di port seluler untuk melihat"
+            },
+            "inherit_grid_gap": {
+              "label": "Gunakan pengaturan jarak grid global"
+            },
+            "column_gap": {
+              "label": "Spasi horizontal"
+            },
+            "row_gap": {
+              "label": "Spasi vertikal"
             }
           },
           "presets": {
@@ -2657,6 +2666,26 @@
       },
       "excerpt": {
         "name": "Abstrak",
+        "settings": {
+          "max_rows": {
+            "label": "Opsi tampilan",
+            "options_0": {
+              "label": "Tampilkan semua"
+            },
+            "options_1": {
+              "label": "Tampilkan hingga 1 baris"
+            },
+            "options_2": {
+              "label": "Tampilkan hingga 2 baris"
+            },
+            "options_3": {
+              "label": "Tampilkan hingga 3 baris"
+            },
+            "options_4": {
+              "label": "Tampilkan hingga 4 baris"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "Abstrak"
@@ -2678,6 +2707,23 @@
       },
       "title": {
         "name": "Judul",
+        "settings": {
+          "max_rows": {
+            "label": "Opsi tampilan",
+            "options_0": {
+              "label": "Tampilkan semua"
+            },
+            "options_1": {
+              "label": "Tampilkan hingga 1 baris"
+            },
+            "options_2": {
+              "label": "Tampilkan hingga 2 baris"
+            },
+            "options_3": {
+              "label": "Tampilkan hingga 3 baris"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "Judul"
@@ -2792,6 +2838,9 @@
       "title": {
         "name": "Nama kategori",
         "settings": {
+          "title": {
+            "label": "Judul koleksi"
+          },
           "size": {
             "label": "Ukuran"
           }
@@ -2910,6 +2959,9 @@
         },
         "text_align": {
           "label": "Penjajaran teks"
+        },
+        "text_align_mobile": {
+          "label": "Perataan teks (seluler)"
         }
       },
       "presets": {
@@ -3171,7 +3223,7 @@
         }
       },
       "detail_sell_info_row": {
-        "name": "Bar informasi penjualan",
+        "name": "Tawaran & manfaat",
         "settings": {
           "info_icon": {
             "label": "Ikon",
@@ -3203,12 +3255,26 @@
         },
         "presets": {
           "presets_0": {
-            "name": "Bar informasi penjualan"
+            "name": "Tawaran & manfaat"
           }
         }
       },
       "detail_sell_info": {
         "name": "Informasi penjualan",
+        "settings": {
+          "direction": {
+            "label": "tata letak",
+            "options_0": {
+              "label": "vertikal"
+            },
+            "options_1": {
+              "label": "Horisontal"
+            }
+          },
+          "column": {
+            "label": "Số lượng hiển thị"
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "Informasi penjualan"

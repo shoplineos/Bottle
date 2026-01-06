@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Prijať",
+      "all_products": "Všetky Produkty",
+      "collections": "Kolekcie",
       "decline": "Odmietnuť",
       "email_tip": "Neplatná schránka. Zadajte ju prosím znova",
       "home": "Domovská stránka",

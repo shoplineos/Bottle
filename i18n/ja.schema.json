@@ -146,6 +146,15 @@
             },
             "mobile_enable_slider": {
               "label": "モバイル版で左右にスワイプして表示"
+            },
+            "inherit_grid_gap": {
+              "label": "グローバルグリッド間隔設定を使用する"
+            },
+            "column_gap": {
+              "label": "水平間隔"
+            },
+            "row_gap": {
+              "label": "垂直間隔"
             }
           },
           "presets": {
@@ -2657,6 +2666,26 @@
       },
       "excerpt": {
         "name": "概要",
+        "settings": {
+          "max_rows": {
+            "label": "表示ルール",
+            "options_0": {
+              "label": "完全表示"
+            },
+            "options_1": {
+              "label": "最大1行を表示"
+            },
+            "options_2": {
+              "label": "最大2行を表示"
+            },
+            "options_3": {
+              "label": "最大3行を表示"
+            },
+            "options_4": {
+              "label": "最大4行を表示"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "概要"
@@ -2678,6 +2707,23 @@
       },
       "title": {
         "name": "タイトル",
+        "settings": {
+          "max_rows": {
+            "label": "表示ルール",
+            "options_0": {
+              "label": "完全表示"
+            },
+            "options_1": {
+              "label": "最大1行を表示"
+            },
+            "options_2": {
+              "label": "最大2行を表示"
+            },
+            "options_3": {
+              "label": "最大3行を表示"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "タイトル"
@@ -2792,6 +2838,9 @@
       "title": {
         "name": "カテゴリ名",
         "settings": {
+          "title": {
+            "label": "カテゴリタイトル"
+          },
           "size": {
             "label": "サイズ"
           }
@@ -2910,6 +2959,9 @@
         },
         "text_align": {
           "label": "テキストの配置"
+        },
+        "text_align_mobile": {
+          "label": "モバイル用のテキスト配置"
         }
       },
       "presets": {
@@ -3209,6 +3261,20 @@
       },
       "detail_sell_info": {
         "name": "販売情報",
+        "settings": {
+          "direction": {
+            "label": "表示方法",
+            "options_0": {
+              "label": "垂直"
+            },
+            "options_1": {
+              "label": "水平"
+            }
+          },
+          "column": {
+            "label": "内容表示数"
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "販売情報"

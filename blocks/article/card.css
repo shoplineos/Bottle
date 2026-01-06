@@ -39,7 +39,14 @@
   display: -webkit-box;
   flex-shrink: 0;
   overflow: hidden;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: var(--max-row);
+  -webkit-box-orient: vertical;
+}
+
+.block-article-card__excerpt {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: var(--max-row);
   -webkit-box-orient: vertical;
 }
 

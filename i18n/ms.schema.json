@@ -146,6 +146,15 @@
             },
             "mobile_enable_slider": {
               "label": "Leret ke kiri dan kanan pada versi mudah alih untuk melihat"
+            },
+            "inherit_grid_gap": {
+              "label": "Gunakan tetapan jarak grid global"
+            },
+            "column_gap": {
+              "label": "Jarak mendatar"
+            },
+            "row_gap": {
+              "label": "Jarak menegak"
             }
           },
           "presets": {
@@ -2657,6 +2666,26 @@
       },
       "excerpt": {
         "name": "Ringkasan",
+        "settings": {
+          "max_rows": {
+            "label": "Pilihan paparan",
+            "options_0": {
+              "label": "Paparkan semua"
+            },
+            "options_1": {
+              "label": "Paparkan sehingga 1 baris"
+            },
+            "options_2": {
+              "label": "Paparkan sehingga 2 baris"
+            },
+            "options_3": {
+              "label": "Paparkan sehingga 3 baris"
+            },
+            "options_4": {
+              "label": "Paparkan sehingga 4 baris"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "Ringkasan"
@@ -2678,6 +2707,23 @@
       },
       "title": {
         "name": "Tajuk",
+        "settings": {
+          "max_rows": {
+            "label": "Pilihan paparan",
+            "options_0": {
+              "label": "Paparkan semua"
+            },
+            "options_1": {
+              "label": "Paparkan sehingga 1 baris"
+            },
+            "options_2": {
+              "label": "Paparkan sehingga 2 baris"
+            },
+            "options_3": {
+              "label": "Paparkan sehingga 3 baris"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "Tajuk"
@@ -2792,6 +2838,9 @@
       "title": {
         "name": "Nama klasifikasi",
         "settings": {
+          "title": {
+            "label": "Tajuk kategori"
+          },
           "size": {
             "label": "Saiz"
           }
@@ -2910,6 +2959,9 @@
         },
         "text_align": {
           "label": "Penjajaran teks"
+        },
+        "text_align_mobile": {
+          "label": "Penjajaran teks (mudah alih)"
         }
       },
       "presets": {
@@ -3171,7 +3223,7 @@
         }
       },
       "detail_sell_info_row": {
-        "name": "Talian maklumat jualan",
+        "name": "Baris Maklumat Jualan",
         "settings": {
           "info_icon": {
             "label": "Ikon",
@@ -3203,15 +3255,29 @@
         },
         "presets": {
           "presets_0": {
-            "name": "Talian maklumat jualan"
+            "name": "Baris Maklumat Jualan"
           }
         }
       },
       "detail_sell_info": {
-        "name": "Maklumat jualan",
+        "name": "Maklumat Jualan",
+        "settings": {
+          "direction": {
+            "label": "susun atur",
+            "options_0": {
+              "label": "menegak"
+            },
+            "options_1": {
+              "label": "Mendatar"
+            }
+          },
+          "column": {
+            "label": "Bilangan dipaparkan"
+          }
+        },
         "presets": {
           "presets_0": {
-            "name": "Maklumat jualan"
+            "name": "Maklumat Jualan"
           }
         }
       },

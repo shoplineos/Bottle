@@ -146,6 +146,15 @@
             },
             "mobile_enable_slider": {
               "label": "Lướt trái phạm trên mạng di động để xem"
+            },
+            "inherit_grid_gap": {
+              "label": "Sử dụng cài đặt khoảng cách lưới toàn cầu"
+            },
+            "column_gap": {
+              "label": "Khoảng cách theo chiều ngang"
+            },
+            "row_gap": {
+              "label": "Khoảng cách theo chiều dọc"
             }
           },
           "presets": {
@@ -2657,6 +2666,26 @@
       },
       "excerpt": {
         "name": "Tóm lược",
+        "settings": {
+          "max_rows": {
+            "label": "Tùy chọn hiển thị",
+            "options_0": {
+              "label": "Hiển thị tất cả"
+            },
+            "options_1": {
+              "label": "Hiển thị tối đa 1 dòng"
+            },
+            "options_2": {
+              "label": "Hiển thị tối đa 2 dòng"
+            },
+            "options_3": {
+              "label": "Hiển thị tối đa 3 dòng"
+            },
+            "options_4": {
+              "label": "Hiển thị tối đa 4 dòng"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "Tóm lược"
@@ -2678,6 +2707,23 @@
       },
       "title": {
         "name": "Tiêu đề",
+        "settings": {
+          "max_rows": {
+            "label": "Tùy chọn hiển thị",
+            "options_0": {
+              "label": "Hiển thị tất cả"
+            },
+            "options_1": {
+              "label": "Hiển thị tối đa 1 dòng"
+            },
+            "options_2": {
+              "label": "Hiển thị tối đa 2 dòng"
+            },
+            "options_3": {
+              "label": "Hiển thị tối đa 3 dòng"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "Tiêu đề"
@@ -2792,6 +2838,9 @@
       "title": {
         "name": "",
         "settings": {
+          "title": {
+            "label": "Tiêu đề danh mục"
+          },
           "size": {
             "label": "Kích thước"
           }
@@ -2910,6 +2959,9 @@
         },
         "text_align": {
           "label": ""
+        },
+        "text_align_mobile": {
+          "label": "Căn chỉnh văn bản trên thiết bị di động"
         }
       },
       "presets": {
@@ -3171,7 +3223,7 @@
         }
       },
       "detail_sell_info_row": {
-        "name": "",
+        "name": "Dòng thông tin bán hàng",
         "settings": {
           "info_icon": {
             "label": "icon",
@@ -3203,15 +3255,29 @@
         },
         "presets": {
           "presets_0": {
-            "name": ""
+            "name": "Dòng thông tin bán hàng"
           }
         }
       },
       "detail_sell_info": {
-        "name": "Thông tin tiêu thụ",
+        "name": "Thông tin bán hàng",
+        "settings": {
+          "direction": {
+            "label": "Bố cục",
+            "options_0": {
+              "label": "thẳng đứng"
+            },
+            "options_1": {
+              "label": "Nằm ngang"
+            }
+          },
+          "column": {
+            "label": "Số lượng hiển thị"
+          }
+        },
         "presets": {
           "presets_0": {
-            "name": "Thông tin tiêu thụ"
+            "name": "Thông tin bán hàng"
           }
         }
       },

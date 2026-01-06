@@ -1,6 +1,8 @@
-{{#component "stylesheet" src="./detail-sell-info.css" | asset_url() /}}
-
-<ul class="product-detail__sell-info" {{{block.shopline_attributes}}}>
+<ul
+  class="product-detail__sell-info product-detail__sell-info--{{ block.settings.direction }}"
+  style="--sell-info-column: {{ block.settings.column }};"
+  {{{ block.shopline_attributes }}}
+>
   {{#content "blocks" /}}
 </ul>
 
@@ -9,11 +11,38 @@
   "name": "t:blocks.product.detail_sell_info.name",
   "tag": "",
   "icon": "logoList",
-  "settings": [],
+  "settings": [
+    {
+      "id": "direction",
+      "type": "select",
+      "label": "t:blocks.product.detail_sell_info.settings.direction.label",
+      "options": [
+        {
+          "value": "vertical",
+          "label": "t:blocks.product.detail_sell_info.settings.direction.options_0.label"
+        },
+        {
+          "value": "horizontal",
+          "label": "t:blocks.product.detail_sell_info.settings.direction.options_1.label"
+        }
+      ],
+      "default": "vertical"
+    },
+    {
+      "id": "column",
+      "type": "range",
+      "label": "t:blocks.product.detail_sell_info.settings.column.label",
+      "visible_if": "{{ block.settings.direction == `horizontal` }}",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    }
+  ],
   "blocks": [
     {
       "type": "product/detail-sell-info-row",
-      "limit": 5
+      "limit": 8
     }
   ],
   "presets": [

@@ -1,8 +1,11 @@
-<div class="footer__email-subscribe {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
+<div id="{{block.id}}" class="footer__email-subscribe {{block.settings | class_list()}}" {{{block.shopline_attributes}}}>
   {{#if block.settings.title}}
     <h3 class="footer__email-subscribe-title body3 rte">{{{block.settings.title}}}</h3>
   {{/if}}
-  {{#customer_form}}
+
+  {{#var return_to_url = request.path | append("?positioned_id=") | append(block.id) /}}
+
+  {{#customer_form return_to=return_to_url}}
     {{#component "input/input-email" input_name="contact[email]" input_required=true input_has_submit_button=true input_placeholder=block.settings.placeholder /}}
 
     {{#if form.posted_successfully}}

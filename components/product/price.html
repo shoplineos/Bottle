@@ -1,10 +1,8 @@
 
 
-{{#component "stylesheet" src="./price.css" | asset_url() /}}
-
 {{#var product = props.product /}}
 {{#var target /}}
-{{#if props.use_variant}}
+{{#if props.use_variant }}
   {{#var first_variant = product | get_variants() | first() /}}
   {{#set target = product.selected_or_first_available_variant | default(first_variant) /}}
 {{#else/}}
@@ -17,17 +15,17 @@
 {{#var product_money_price_min = product.price_min | money_with_currency() /}}
 {{#var product_money_price_max = product.price_max | money_with_currency() /}}
 
-<span class="product-price title-font-bold body1 {{props.class}}">
-  {{#if product.quantity_price_breaks_configured}}
+<span class="product-price title-font-bold body1 {{ props.class }}">
+  {{#if product.quantity_price_breaks_configured }}
     
-    <span class="product-price__item">{{{product_money_price_min}}} - {{{product_money_price_max}}}</span>
+    <span class="product-price__item">{{{ product_money_price_min }}} - {{{ product_money_price_max }}}</span>
   {{#else/}}
-     
-     <span class="product-price__item">
-      {{{money_price}}}
+    
+    <span class="product-price__item">
+      {{{ money_price }}}
     </span>
-     {{#if compare_at_price > price}}
-      <span class="product-price__item--compare body2">{{{compare_at_price | money_with_currency()}}}</span>
+    {{#if compare_at_price > price }}
+      <span class="product-price__item--compare body2">{{{ compare_at_price | money_with_currency() }}}</span>
     {{/if}}
   {{/if}}
 </span>

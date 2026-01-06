@@ -4,35 +4,37 @@
 {{#component "script" src="./components/nav.js" | asset_url() /}}
 
 
-{{#component "stylesheet" src="./components/search-bar.css" | asset_url() /}}
 {{#component "script" src="./components/search-bar.js" | asset_url() /}}
 
 
-{{#component "stylesheet" src="predictive-search/predictive-search.css" | asset_url() /}}
-
-
-{{#component "stylesheet" src="./components/sticky-header.css" | asset_url() /}}
 {{#component "script" src="./components/sticky-header.js" | asset_url() /}}
 
-{{#component "stylesheet" src="./components/action-bar.css" | asset_url() /}}
 
-
-{{#component "stylesheet" src="./components/locale-picker.css" | asset_url() /}}
 {{#component "script" src="./components/locale-picker.js" | asset_url() /}}
 
 
-{{#component "stylesheet" src="./components/dropdown-menu.css" | asset_url() /}}
 {{#component "script" src="./components/dropdown-menu.js" | asset_url() /}}
 
-<theme-sticky-header data-sticky-mode="{{section.settings.header_sticky_mode}}" style="
-  --header-padding-block-end: {{section.settings.desktop_spacing | css_var("padding-block-end")}};
-">
-  <header class="section header-section color-{{section.settings.color_scheme.id}}" data-section-id="{{section.id}}">
-    <div class="header__container" layout="{{section.settings.desktop_menu_layout}}" type="{{section.settings.desktop_menu_type}}">
-      <div class="header__container-top{{#if section.settings.show_divider}} divider{{/if}}">
-        <div class="header__container-top-wrap page-width {{section.settings | class_list()}}">
+<theme-sticky-header
+  data-sticky-mode="{{ section.settings.header_sticky_mode }}"
+  style="--header-padding-block-end: {{ section.settings.desktop_spacing | css_var("padding-block-end") }};"
+>
+  <header
+    class="section header-section color-{{ section.settings.color_scheme.id }}"
+    data-section-id="{{ section.id }}"
+  >
+    <div
+      class="header__container"
+      layout="{{ section.settings.desktop_menu_layout }}"
+      type="{{ section.settings.desktop_menu_type }}"
+    >
+      <div class="header__container-top{{#if section.settings.show_divider }}divider{{/if}}">
+        <div class="header__container-top-wrap page-width {{ section.settings | class_list() }}">
           
-          {{#if section.settings.desktop_menu_layout != "center_logo_wrap_menu" && section.settings.desktop_menu_type == "dropdown"}}
+          {{#if
+            section.settings.desktop_menu_layout != "center_logo_wrap_menu" &&
+            section.settings.desktop_menu_type == "dropdown"
+          }}
             {{#component "./components/nav" links=section.settings.navigation_menu.links /}}
           {{/if}}
 
@@ -44,18 +46,20 @@
           /}}
 
           
-          {{#capture header_logo_content}}
+          {{#capture header_logo_content }}
             <a class="header__logo-link" href="/">
-              {{#if section.settings.logo_image}}
-                {{#var desktop_size=section.settings.desktop_logo_width | append("px") /}}
-                {{#var mobile_size=section.settings.mobile_logo_width | append("px") /}}
+              {{#if section.settings.logo_image }}
+                {{#var desktop_size = section.settings.desktop_logo_width | append("px") /}}
+                {{#var mobile_size = section.settings.mobile_logo_width | append("px") /}}
 
-                {{#var alt=shop.name /}}
-                {{#if section.settings.logo_image.alt.default}}
-                  {{#set alt=section.settings.logo_image.alt.default /}}
+                {{#var alt = shop.name /}}
+                {{#if section.settings.logo_image.alt.default }}
+                  {{#set alt = section.settings.logo_image.alt.default /}}
                 {{/if}}
 
-                {{#var style="--desktop-size:" | append(desktop_size) | append(";--mobile-size:") | append(mobile_size) /}}
+                {{#var
+                  style = "--desktop-size:" | append(desktop_size) | append(";--mobile-size:") | append(mobile_size)
+                /}}
 
                 {{#component
                   "image"
@@ -67,16 +71,16 @@
                   alt=alt
                 /}}
               {{#else/}}
-                <span>{{shop.name}}</span>
+                <span>{{ shop.name }}</span>
               {{/if}}
             </a>
           {{/capture}}
 
           
-          {{#if template.name == "index"}}
-            <h1 class="header__logo">{{{header_logo_content}}}</h1>
+          {{#if template.name == "index" }}
+            <h1 class="header__logo">{{{ header_logo_content }}}</h1>
           {{#else/}}
-            <div class="header__logo">{{{header_logo_content}}}</div>
+            <div class="header__logo">{{{ header_logo_content }}}</div>
           {{/if}}
 
           {{#component
@@ -95,14 +99,14 @@
       {{#component "./components/search-bar" show_divider=section.settings.show_divider /}}
 
       
-      {{#if section.settings.desktop_menu_layout == "center_logo_wrap_menu"}}
+      {{#if section.settings.desktop_menu_layout == "center_logo_wrap_menu" }}
         <div class="header__container-bottom">
           {{#component "./components/nav" links=section.settings.navigation_menu.links /}}
         </div>
       {{/if}}
     </div>
 
-    {{#if settings.cart_add_type == "notification" && request.page_type != "cart"}}
+    {{#if settings.cart_add_type == "notification" && request.page_type != "cart" }}
       {{#component "cart/cart-notification" /}}
     {{/if}}
   </header>
@@ -120,23 +124,24 @@
 
 <script type="application/ld+json">
   {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "Organization",
     "name": "{{ shop.name }}",
-    {{#if settings.favicon_image}}"logo": "{{ settings.favicon_image }}",{{/if}}
-    "sameAs": [
-      "{{ settings.social_media_twitter_link }}",
-      "{{ settings.social_media_facebook_link }}",
-      "{{ settings.social_media_pinterest_link }}",
-      "{{ settings.social_media_instagram_link }}",
-      "{{ settings.social_media_tiktok_link }}",
-      "{{ settings.social_media_linkedin_link }}",
-      "{{ settings.social_media_snapchat_link }}",
-      "{{ settings.social_media_youtube_link }}",
-      "{{ settings.social_media_vimeo_link }}",
-      "{{ settings.social_media_tumblr_link }}",
-      "{{ settings.social_media_line_link }}"
-    ],
+    {{#if shop.brand.logo }}"logo": "{{ shop.brand.logo | image_url() }}",{{/if}}
+    {{#if settings.social_media_twitter_link || settings.social_media_facebook_link || settings.social_media_pinterest_link || settings.social_media_instagram_link || settings.social_media_tiktok_link || settings.social_media_linkedin_link || settings.social_media_snapchat_link || settings.social_media_youtube_link || settings.social_media_vimeo_link || settings.social_media_tumblr_link || settings.social_media_line_link}}"sameAs": [
+      {{#var is_first=true /}}
+      {{#if settings.social_media_twitter_link}}{{#if !is_first }},{{/if}}"{{ settings.social_media_twitter_link }}"{{#set is_first = false /}}{{/if}}
+      {{#if settings.social_media_facebook_link}}{{#if !is_first }},{{/if}}"{{ settings.social_media_facebook_link }}"{{#set is_first = false /}}{{/if}}
+      {{#if settings.social_media_pinterest_link}}{{#if !is_first }},{{/if}}"{{ settings.social_media_pinterest_link }}"{{#set is_first = false /}}{{/if}}
+      {{#if settings.social_media_instagram_link}}{{#if !is_first }},{{/if}}"{{ settings.social_media_instagram_link }}"{{#set is_first = false /}}{{/if}}
+      {{#if settings.social_media_tiktok_link}}{{#if !is_first }},{{/if}}"{{ settings.social_media_tiktok_link }}"{{#set is_first = false /}}{{/if}}
+      {{#if settings.social_media_linkedin_link}}{{#if !is_first }},{{/if}}"{{ settings.social_media_linkedin_link }}"{{#set is_first = false /}}{{/if}}
+      {{#if settings.social_media_snapchat_link}}{{#if !is_first }},{{/if}}"{{ settings.social_media_snapchat_link }}"{{#set is_first = false /}}{{/if}}
+      {{#if settings.social_media_youtube_link}}{{#if !is_first }},{{/if}}"{{ settings.social_media_youtube_link }}"{{#set is_first = false /}}{{/if}}
+      {{#if settings.social_media_vimeo_link}}{{#if !is_first }},{{/if}}"{{ settings.social_media_vimeo_link }}"{{#set is_first = false /}}{{/if}}
+      {{#if settings.social_media_tumblr_link}}{{#if !is_first }},{{/if}}"{{ settings.social_media_tumblr_link }}"{{#set is_first = false /}}{{/if}}
+      {{#if settings.social_media_line_link}}{{#if !is_first }},{{/if}}"{{ settings.social_media_line_link }}"{{#set is_first = false /}}{{/if}}
+    ],{{/if}}
     "url": "{{ request.origin }}"
   }
 </script>

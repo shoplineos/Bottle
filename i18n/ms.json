@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Terima",
+      "all_products": "Semua Produk",
+      "collections": "Koleksi",
       "decline": "Tolak",
       "email_tip": "Peti mel tidak sah. Sila masukkan semula",
       "home": "Laman utama",

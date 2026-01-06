@@ -1,5 +1,7 @@
-<div class="sign-up-and-save__subscription {{block.settings | class_list()}}">
-  {{#customer_form}}
+<div id="{{block.id}}" class="sign-up-and-save__subscription {{block.settings | class_list()}}">
+  {{#var return_to_url = request.path | append("?positioned_id=") | append(block.id) /}}
+
+  {{#customer_form return_to=return_to_url}}
     <div class="sign-up-and-save__inline-form" {{{block.shopline_attributes}}}>
       {{#component
         "input/input-email"

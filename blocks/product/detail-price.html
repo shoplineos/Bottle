@@ -1,7 +1,5 @@
 {{#var product = props.product /}}
 
-{{#component "stylesheet" src="./detail-price.css" | asset_url() /}}
-
 <div class="product-detail__price" {{{block.shopline_attributes}}}>
 
   {{#component "product/price" product=product use_variant=true /}}

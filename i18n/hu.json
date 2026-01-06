@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Elfogadás",
+      "all_products": "Összes Termék",
+      "collections": "Gyűjtemények",
       "decline": "Elutasítás",
       "email_tip": "Érvénytelen postafiók. Kérjük, adja meg újra",
       "home": "Címlap",

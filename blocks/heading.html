@@ -1,5 +1,5 @@
 <h2
-  class="block-heading {{block.settings.text_size}} text-{{block.settings.text_align}}"
+  class="block-heading {{block.settings.text_size}} text-{{ block.settings.text_align_mobile }}-mobile text-{{block.settings.text_align}}"
   {{{block.shopline_attributes}}}
 >
   {{{block.settings.text | newline_to_br()}}}
@@ -45,6 +45,12 @@
       "id": "text_align",
       "type": "text_align",
       "label": "t:blocks.heading.settings.text_align.label",
+      "default": "center"
+    },
+    {
+      "id": "text_align_mobile",
+      "type": "text_align",
+      "label": "t:blocks.heading.settings.text_align_mobile.label",
       "default": "center"
     }
   ],

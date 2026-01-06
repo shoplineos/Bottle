@@ -1,9 +1,49 @@
-<div class="title5 block-article-card__title" {{{block.shopline_attributes}}}>{{props.article.title | default("Blog post" )}}</div>
+<div
+  style="--max-row:{{ block.settings.max_rows }};"
+  class="
+    title5
+    block-article-card__title
+    {{#if props.has_view_all_button }}link{{/if}}
+    {{ block.settings | class_list() }}
+  "
+  {{{ block.shopline_attributes }}}
+>
+  <span>
+    {{ props.article.title | default("Blog post") }}
+  </span>
+</div>
 
 {{#schema}}
 {
   "name": "t:blocks.article.title.name",
+  "icon": "title",
   "tag": "",
+  "settings": [
+    {
+      "type": "select",
+      "id": "max_rows",
+      "label": "t:blocks.article.title.settings.max_rows.label",
+      "default": 3,
+      "options": [
+        {
+          "value": "unset",
+          "label": "t:blocks.article.title.settings.max_rows.options_0.label"
+        },
+        {
+          "value": 1,
+          "label": "t:blocks.article.title.settings.max_rows.options_1.label"
+        },
+        {
+          "value": 2,
+          "label": "t:blocks.article.title.settings.max_rows.options_2.label"
+        },
+        {
+          "value": 3,
+          "label": "t:blocks.article.title.settings.max_rows.options_3.label"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "t:blocks.article.title.presets.presets_0.name"

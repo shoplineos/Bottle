@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Aktsepteerida",
+      "all_products": "Kõik Tooted",
+      "collections": "Kollektsioonid",
       "decline": "Langus",
       "email_tip": "Invaliidne postkast. Palun sisestage uuesti",
       "home": "Esilehekülg",

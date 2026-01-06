@@ -24,7 +24,7 @@
 
 <script type="application/ld+json">
   {
-    "@context": "http://schema.org/",
+    "@context": "https://schema.org/",
     "@type": "Product",
     "name": "{{product.title}}",
     "url": "{{{request.origin | append(product.url)}}}",
@@ -33,14 +33,18 @@
         "{{{seo_media.preview_image.src}}}"
       ],
     {{/if}}
-    "description": {{{product.description | strip_html() | json()}}},
+    {{#if product.description}}
+      "description": {{{product.description | strip_html() | json()}}},
+    {{/if}}
     {{#if product.selected_or_first_available_variant.sku}}
       "sku": "{{product.selected_or_first_available_variant.sku}}",
     {{/if}}
+    {{#if product.vendor}}
     "brand": {
       "@type": "Brand",
       "name": "{{product.vendor}}"
     },
+    {{/if}}
     "offers": [
       {{#for variant in seo_variants}}
         {
@@ -57,7 +61,7 @@
           {{#if variant.barcode | size() == 14}}
             "gtin14": "{{variant.barcode}}",
           {{/if}}
-          "availability" : "http://schema.org/{{#if variant.available}}InStock{{#else/}}OutOfStock{{/if}}",
+          "availability" : "https://schema.org/{{#if variant.available}}InStock{{#else/}}OutOfStock{{/if}}",
           "price" : "{{variant.price | divided_by(100, integer=false)}}",
           "priceCurrency" : "{{localization.country.currency.iso_code}}",
           "url": "{{{request.origin | append(variant.url)}}}"

@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Godta",
+      "all_products": "Alle Produkter",
+      "collections": "Samlinger",
       "decline": "Avslå",
       "email_tip": "Ugyldig postkasse. Vennligst skriv inn på nytt",
       "home": "Hjemmeside",

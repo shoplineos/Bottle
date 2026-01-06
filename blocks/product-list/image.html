@@ -3,10 +3,10 @@
 {{#var fit_type = block.settings.fit_type /}}
 
 {{#var aspect_ratio /}}
-{{~#if shape == "circle"~}}
+{{~#if shape == "circle" ~}}
   {{#set aspect_ratio = "1/1" /}}
 {{~#else if (block.settings.aspect_ratio == "unset") /}}
-  {{~#if product.featured_media}}
+  {{~#if product.featured_media }}
     {{#set aspect_ratio = product.featured_media.aspect_ratio /}}
   {{~#else/}}
     {{#set aspect_ratio = "1/1" /}}
@@ -16,43 +16,45 @@
 {{~/if}}
 
 {{#var hover_show_next_image = false /}}
-{{#if product.media[1] && block.settings.hover_show_next_image}}
+{{#if product.media[1] && block.settings.hover_show_next_image }}
   {{#set hover_show_next_image = true /}}
 {{/if}}
 
 <div
-  style="--padding: {{settings.product_card_image_padding}}px;"
+  style="--padding: {{ settings.product_card_image_padding }}px;"
   class="
     block-product-card__layer-image-wrapper
-    {{#if hover_show_next_image}}hover{{/if}}
-    {{#if settings.product_card_style != "card"}}product-card-border-shadow{{/if}}
+    {{#if hover_show_next_image }}hover{{/if}}
+    {{#if settings.product_card_style != "card" }}product-card-border-shadow{{/if}}
   "
-  {{{block.shopline_attributes}}}
+  {{{ block.shopline_attributes }}}
 >
   <div
     class="block-product-card__image-wrapper"
     style="
-      --aspect-ratio: {{aspect_ratio}};
-      --fit-type: {{fit_type}};
-      {{#if shape == "circle"}}--border-radius: 50%;{{/if}}
+      --aspect-ratio: {{ aspect_ratio }};
+      --fit-type: {{ fit_type }};
+      {{#if shape == "circle" }}--border-radius: 50%;{{/if}}
     "
   >
-    {{#if product.featured_media}}
+    {{#if product.featured_media }}
       {{#component
         "image"
         data=product.featured_media
         class="block-product-card__image"
         mobile_size=props.mobile_columns
         desktop_size=props.desktop_columns
+        lazy=props.lazy
       /}}
 
-      {{#if hover_show_next_image}}
+      {{#if hover_show_next_image }}
         {{#component
           "image"
           data=product.media[1]
           class="block-product-card__image"
           mobile_size=props.mobile_columns
           desktop_size=props.desktop_columns
+          lazy=props.lazy
         /}}
       {{/if}}
     {{#else/}}

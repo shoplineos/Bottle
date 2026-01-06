@@ -1,5 +1,7 @@
-<div class="newsletter-form" {{{block.shopline_attributes}}}>
-  {{#customer_form}}
+<div id="{{block.id}}" class="newsletter-form" {{{block.shopline_attributes}}}>
+  {{#var return_to_url = request.path | append("?positioned_id=") | append(block.id) /}}
+
+  {{#customer_form return_to=return_to_url}}
     {{#component
       "input/input-email"
       input_id="NewsletterForm"

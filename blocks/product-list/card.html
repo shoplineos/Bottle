@@ -3,25 +3,30 @@
 {{#var product = props.product /}}
 {{#var product_card_style = settings.product_card_style /}}
 
-{{#product_item product class="block-product-card"}}
+{{#product_item product class="block-product-card" }}
   <a
-    href="{{product.url | default(`javascript:void(0)`)}}"
+    href="{{ product.url | default(`javascript:void(0)`) }}"
     class="
-      product-card-style--{{settings.product_card_style}}
-      {{#if product_card_style == "card"}}product-card-border-shadow{{/if}}
+      product-card-style--{{ settings.product_card_style }}
+      {{#if product_card_style == "card" }}product-card-border-shadow{{/if}}
       {{ block.settings | class_list() }}
     "
-    {{{block.shopline_attributes}}}
+    {{{ block.shopline_attributes }}}
   >
     {{#blocks}}
-      {{#if product}}
-        {{#if forblock.type == "product-list/image"}}
-          {{#block product=product mobile_columns=props.mobile_columns desktop_columns=props.desktop_columns /}}
+      {{#if product }}
+        {{#if forblock.type == "product-list/image" }}
+          {{#block
+            product=product
+            mobile_columns=props.mobile_columns
+            desktop_columns=props.desktop_columns
+            lazy=props.lazy
+          /}}
         {{#else/}}
           {{#block product=product /}}
         {{/if}}
       {{#else/}}
-        {{#block /}}
+        {{#block/}}
       {{/if}}
     {{/blocks}}
   </a>

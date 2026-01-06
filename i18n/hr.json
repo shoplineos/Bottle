@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Prihvatiti",
+      "all_products": "Svi Proizvodi",
+      "collections": "Kolekcije",
       "decline": "Odbiti",
       "email_tip": "Nevažeći poštanski sandučić. Molim vas ponovno se vratite",
       "home": "Naslovna strana",

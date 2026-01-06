@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Priimti",
+      "all_products": "Visi Produktai",
+      "collections": "Kolekcijos",
       "decline": "Atsisakyti",
       "email_tip": "Netinkama pašto dėžutė. Prašome įvesti iš naujo",
       "home": "Titulinis lapas",

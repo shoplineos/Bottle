@@ -933,6 +933,19 @@ h6,
 .text-right {
   text-align: end;
 }
+@media (max-width: 959px) {
+  .text-left-mobile {
+    text-align: start;
+  }
+
+  .text-center-mobile {
+    text-align: center;
+  }
+
+  .text-right-mobile {
+    text-align: end;
+  }
+}
 .hidden {
   display: none !important;
 }
@@ -1228,4 +1241,15 @@ input:checked ~ .icon--checkbox .checkmark {
   theme-show-more[open] .view-more {
     display: none !important;
   }
+}
+.product-price {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  color: rgb(var(--color-sale));
+}
+.product-price__item--compare {
+  color: rgb(var(--color-light-text));
+  text-decoration: line-through;
 }

@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Terima",
+      "all_products": "Semua Produk",
+      "collections": "Koleksi",
       "decline": "Tolak",
       "email_tip": "Alamat email tidak valid, silakan masukkan kembali",
       "home": "Halaman Pertama",

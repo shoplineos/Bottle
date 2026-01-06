@@ -140,7 +140,12 @@ const themeUtils = {
         const element = document.createElement('div');
         element.innerText = input;
         return element.innerHTML;
-    }
+    },
+    getQueryParams() {
+        const searchParams = new URLSearchParams(window.location.search);
+        const params = Object.fromEntries(Array.from(searchParams.entries()));
+        return params;
+    },
 };
 ;
 function detectingScreen(resizeHandleFn, isImmediate) {
@@ -381,4 +386,19 @@ class ShowMore extends BaseElement {
     }
 }
 customElements.define('theme-show-more', ShowMore);
+;
+(() => {
+    const queryParams = themeUtils.getQueryParams();
+    if (queryParams && queryParams.positioned_id) {
+        const targetElement = document.getElementById(queryParams.positioned_id);
+        if (targetElement) {
+            setTimeout(() => {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                });
+            }, 0);
+        }
+    }
+})();
 ;

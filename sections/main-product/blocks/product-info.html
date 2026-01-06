@@ -1,10 +1,11 @@
 <div
-  class="product-detail__info product-detail__col {{block.settings | class_list()}}"
+  class="product-detail__info product-detail__col {{ block.settings | class_list() }}"
   style="
-    order: {{props.order}};
-    --info-row-gap: {{block.settings.layout | css_var(`row-gap`)}};
+    order: {{ props.order }};
+    --info-row-gap: {{ block.settings.layout | css_var(`row-gap`) }};
   "
-  {{{block.shopline_attributes}}}>
+  {{{ block.shopline_attributes }}}
+>
   {{#blocks}}
     {{#block product=product /}}
   {{/blocks}}
@@ -14,6 +15,7 @@
 {
   "name": "t:sections.main_product.blocks.product_info.name",
   "tag": "",
+  "deletable": false,
   "settings": [
     {
       "type": "style.layout",

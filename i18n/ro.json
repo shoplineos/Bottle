@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Acceptă",
+      "all_products": "Toate Produsele",
+      "collections": "Colecții",
       "decline": "Respinge",
       "email_tip": "Căsuță poștală invalidă. Vă rugăm să introduceți din nou",
       "home": "Pagina principala",

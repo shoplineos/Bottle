@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "받아들이다.",
+      "all_products": "모든 제품",
+      "collections": "컬렉션",
       "decline": "거절합니다.",
       "email_tip": "잘못된 이메일 주소입니다. 다시 입력하십시오",
       "home": "초기 화면",

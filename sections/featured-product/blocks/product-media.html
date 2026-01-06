@@ -1,13 +1,21 @@
-{{#capture media_layer}}{{#content "blocks" /}}{{/capture}}
+{{#capture media_layer }}{{#content "blocks" /}}{{/capture}}
 
-<div class="featured-product__media product-detail__col product-detail__col--medium" style="order: {{props.order}};">
-  {{#component "product/media" block=block product=props.product section=section media_layer=media_layer outside_layout=true /}}
+<div class="featured-product__media product-detail__col product-detail__col--medium" style="order: {{ props.order }};">
+  {{#component
+    "product/media"
+    block=block
+    product=props.product
+    section=section
+    media_layer=media_layer
+    outside_layout=true
+  /}}
 </div>
 
 {{#schema}}
 {
   "name": "t:sections.featured_product.blocks.product_media.name",
   "tag": "",
+  "deletable": false,
   "icon": "textColumnsWithIcons",
   "settings": [
     {

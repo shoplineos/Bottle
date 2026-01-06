@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Modtage",
+      "all_products": "Alle Produkter",
+      "collections": "Kollektioner",
       "decline": "Forfald",
       "email_tip": "Ugyldig postkasse. Indtast venligst igen",
       "home": "Hjemmeside",

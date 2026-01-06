@@ -146,6 +146,15 @@
             },
             "mobile_enable_slider": {
               "label": "Turn on left-right scroll to View all"
+            },
+            "inherit_grid_gap": {
+              "label": "Use global grid spacing settings"
+            },
+            "column_gap": {
+              "label": "Horizontal spacing"
+            },
+            "row_gap": {
+              "label": "Vertical spacing"
             }
           },
           "presets": {
@@ -962,7 +971,7 @@
           "info": "You need to go to 'Market' > 'Language management' and add at least two languages for the selector to take effect. To add a language, go to ['Language settings'](/admin/settings/lang), and after adding is complete, go to ['Market'](/admin/settings/markets) > 'Language management' and add the language of the current market."
         },
         "show_country_picker": {
-          "label": "Display country/region selection",
+          "label": "Display country/region selector",
           "info": "Add at least two markets for this to take effect. To add a country/region, go to [Market settings](/admin/settings/markets)"
         },
         "group_header_0": {
@@ -2657,6 +2666,26 @@
       },
       "excerpt": {
         "name": "Summary",
+        "settings": {
+          "max_rows": {
+            "label": "Display options",
+            "options_0": {
+              "label": "Show all"
+            },
+            "options_1": {
+              "label": "Show up to 1 row"
+            },
+            "options_2": {
+              "label": "Show up to 2 rows"
+            },
+            "options_3": {
+              "label": "Show up to 3 rows"
+            },
+            "options_4": {
+              "label": "Show up to 4 rows"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "Summary"
@@ -2678,6 +2707,23 @@
       },
       "title": {
         "name": "Title",
+        "settings": {
+          "max_rows": {
+            "label": "Display options",
+            "options_0": {
+              "label": "Show all"
+            },
+            "options_1": {
+              "label": "Show up to 1 row"
+            },
+            "options_2": {
+              "label": "Show up to 2 rows"
+            },
+            "options_3": {
+              "label": "Show up to 3 rows"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "Title"
@@ -2792,6 +2838,9 @@
       "title": {
         "name": "Collection name",
         "settings": {
+          "title": {
+            "label": "Collection titles"
+          },
           "size": {
             "label": "Size"
           }
@@ -2910,6 +2959,9 @@
         },
         "text_align": {
           "label": "Text alignment"
+        },
+        "text_align_mobile": {
+          "label": "Text alignment (mobile)"
         }
       },
       "presets": {
@@ -3171,7 +3223,7 @@
         }
       },
       "detail_sell_info_row": {
-        "name": "Sales info",
+        "name": "Offesr & Benefits line",
         "settings": {
           "info_icon": {
             "label": "Logo",
@@ -3203,15 +3255,29 @@
         },
         "presets": {
           "presets_0": {
-            "name": "Sales info"
+            "name": "Offesr & Benefits line"
           }
         }
       },
       "detail_sell_info": {
-        "name": "Sale information",
+        "name": "Offers & Benefits",
+        "settings": {
+          "direction": {
+            "label": "Layout",
+            "options_0": {
+              "label": "Vertical"
+            },
+            "options_1": {
+              "label": "Horizontal"
+            }
+          },
+          "column": {
+            "label": "Number of offers & benefits displayed"
+          }
+        },
         "presets": {
           "presets_0": {
-            "name": "Sale information"
+            "name": "Offers & Benefits"
           }
         }
       },
@@ -3227,7 +3293,7 @@
         "name": "Variant picker",
         "settings": {
           "picker_type": {
-            "label": "Product SKU style",
+            "label": "Variant layout",
             "options_0": {
               "label": "Tiled"
             },

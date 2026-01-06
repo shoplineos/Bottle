@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Kabul et",
+      "all_products": "Tüm Ürünler",
+      "collections": "Koleksiyonlar",
       "decline": "Reddet",
       "email_tip": "Geçersiz posta kutusu. Lütfen tekrar girin",
       "home": "Anasayfa",

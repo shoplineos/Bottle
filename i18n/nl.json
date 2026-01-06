@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Accepteren",
+      "all_products": "Alle Producten",
+      "collections": "Collecties",
       "decline": "Afwijzen",
       "email_tip": "Ongeldig e-mailadres, gelieve opnieuw in te voeren",
       "home": "Homepage",

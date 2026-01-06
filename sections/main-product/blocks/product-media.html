@@ -1,11 +1,20 @@
-{{#capture media_layer}}{{#content "blocks" /}}{{/capture}}
+{{#capture media_layer }}{{#content "blocks" /}}{{/capture}}
 
-{{#component "product/media" block=block product=product section=section media_layer=media_layer outside_layout=props.outside_layout order=props.order /}}
+{{#component
+  "product/media"
+  block=block
+  product=product
+  section=section
+  media_layer=media_layer
+  outside_layout=props.outside_layout
+  order=props.order
+/}}
 
 {{#schema}}
 {
   "name": "t:sections.main_product.blocks.product_media.name",
   "tag": "",
+  "deletable": false,
   "settings": [
     {
       "id": "layout_size",

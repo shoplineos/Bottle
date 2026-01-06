@@ -1,11 +1,13 @@
 {{#component "stylesheet" src="./main-collection-products.css" | asset_url() /}}
 
-<div class="main-collection-container color-{{section.settings.color_scheme.id}}">
-  <div class="
-    page-width
-    main-collection
-    facets-layout-{{section.settings.filter_layout}}
-    {{#if section.settings.enable_filtering}}enable-filtering{{/if}}"
+<div class="main-collection-container color-{{ section.settings.color_scheme.id }}">
+  <div
+    class="
+      page-width
+      main-collection
+      facets-layout-{{ section.settings.filter_layout }}
+      {{#if section.settings.enable_filtering }}enable-filtering{{/if}}
+    "
   >
     {{#component
       "facets/form"
@@ -19,20 +21,21 @@
       {{#var products_paginate = collection | get_product_pagination(section.settings.page_size) /}}
       {{#var products = products_paginate.list /}}
 
-      {{#if (products| size()) == 0}}
-        <div class="body3 main-collection__no-products-tips">{{ "products.product_list.no_product" | t()}}</div>
+      {{#if (products | size()) == 0 }}
+        <div class="body3 main-collection__no-products-tips">{{ "products.product_list.no_product" | t() }}</div>
       {{#else/}}
         <ul
           class="grid main-collection__list"
           style="
-            --mobile-columns: {{section.settings.mobile_columns}};
-            --desktop-columns: {{section.settings.desktop_columns}};
+            --mobile-columns: {{ section.settings.mobile_columns }};
+            --desktop-columns: {{ section.settings.desktop_columns }};
           "
         >
           {{#blocks}}
-            {{#for product in products}}
+            {{#for product in products }}
+              {{#var lazy = forloop.index > 2 /}}
               <li>
-                {{#block product=product /}}
+                {{#block product=product lazy=lazy /}}
               </li>
             {{/for}}
           {{/blocks}}
@@ -40,7 +43,6 @@
 
         {{#component "pagination/pagination" paginate=products_paginate /}}
       {{/if}}
-
     </div>
   </div>
 </div>

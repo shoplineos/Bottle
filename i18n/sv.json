@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Acceptera",
+      "all_products": "Alla Produkter",
+      "collections": "Kollektioner",
       "decline": "Vägra",
       "email_tip": "Ogiltig brevlåda. Vänligen ange igen",
       "home": "Hemsida",

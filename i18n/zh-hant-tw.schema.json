@@ -146,6 +146,15 @@
             },
             "mobile_enable_slider": {
               "label": "移動端左右滑動查看"
+            },
+            "inherit_grid_gap": {
+              "label": "使用全局網格間距配置"
+            },
+            "column_gap": {
+              "label": "水平間距"
+            },
+            "row_gap": {
+              "label": "垂直間距"
             }
           },
           "presets": {
@@ -2657,6 +2666,26 @@
       },
       "excerpt": {
         "name": "摘要",
+        "settings": {
+          "max_rows": {
+            "label": "展示規則",
+            "options_0": {
+              "label": "完整顯示"
+            },
+            "options_1": {
+              "label": "最多顯示1行"
+            },
+            "options_2": {
+              "label": "最多顯示2行"
+            },
+            "options_3": {
+              "label": "最多顯示3行"
+            },
+            "options_4": {
+              "label": "最多顯示4行"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "摘要"
@@ -2678,6 +2707,23 @@
       },
       "title": {
         "name": "標題",
+        "settings": {
+          "max_rows": {
+            "label": "展示規則",
+            "options_0": {
+              "label": "完整顯示"
+            },
+            "options_1": {
+              "label": "最多顯示1行"
+            },
+            "options_2": {
+              "label": "最多顯示2行"
+            },
+            "options_3": {
+              "label": "最多顯示3行"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "標題"
@@ -2792,6 +2838,9 @@
       "title": {
         "name": "分類名稱",
         "settings": {
+          "title": {
+            "label": "分類標題"
+          },
           "size": {
             "label": "尺寸"
           }
@@ -2910,6 +2959,9 @@
         },
         "text_align": {
           "label": "文字對齊"
+        },
+        "text_align_mobile": {
+          "label": "行動版文字對齊"
         }
       },
       "presets": {
@@ -3209,6 +3261,20 @@
       },
       "detail_sell_info": {
         "name": "銷售信息",
+        "settings": {
+          "direction": {
+            "label": "佈局",
+            "options_0": {
+              "label": "垂直"
+            },
+            "options_1": {
+              "label": "水平"
+            }
+          },
+          "column": {
+            "label": "顯示數量"
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "銷售信息"

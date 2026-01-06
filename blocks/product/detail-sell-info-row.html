@@ -1,10 +1,10 @@
 {{#var icon_class = "sell-info__icon" /}}
 
-<li class="sell-info" {{{block.shopline_attributes}}}>
-  {{#if block.settings.custom_info_icon}}
+<li class="sell-info" {{{ block.shopline_attributes }}}>
+  {{#if block.settings.custom_info_icon }}
     {{#component "image" class=icon_class data=block.settings.custom_info_icon sizes="20px" breakpoints="20" /}}
   {{#else/}}
-      {{#switch block.settings.info_icon}}
+    {{#switch block.settings.info_icon }}
       {{#case "checkmark" /}}
         {{#component "icons/checkmark" class=icon_class /}}
       {{#case "globe" /}}
@@ -21,7 +21,7 @@
         {{#component "icons/globe" class=icon_class /}}
     {{/switch}}
   {{/if}}
-  <p class="sell-info__text body4 title-font-bold">{{{block.settings.info_text}}}</p>
+  <p class="sell-info__text body4 title-font-bold">{{{ block.settings.info_text }}}</p>
 </li>
 
 {{#schema}}

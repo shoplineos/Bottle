@@ -1,8 +1,8 @@
 {{#component "stylesheet" src="./main-article.css" | asset_url() /}}
 
-<div class="main-article-container color-{{section.settings.color_scheme.id}}">
+<div class="main-article-container color-{{ section.settings.color_scheme.id }}">
   <div class="main-article page-width">
-    <div class="{{section.settings | class_list()}}">
+    <div class="{{ section.settings | class_list() }}">
       {{#content "blocks" /}}
     </div>
   </div>
@@ -10,7 +10,7 @@
 
 <script type="application/ld+json">
   {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "Article",
     "articleBody": {{{article.content | strip_html() | json()}}},
     "mainEntityOfPage": {
@@ -42,6 +42,7 @@
 {{#schema}}
 {
   "name": "t:sections.main_article.name",
+  "deletable": false,
   "settings": [
     {
       "type": "color_scheme",

@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "接受",
+      "all_products": "全部商品",
+      "collections": "全部分類",
       "decline": "拒絕",
       "email_tip": "無效的郵箱地址, 請重新輸入",
       "home": "首頁",

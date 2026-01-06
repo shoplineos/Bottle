@@ -146,6 +146,15 @@
             },
             "mobile_enable_slider": {
               "label": "ปัดไปทางซ้ายและขวาบนมือถือเพื่อดู"
+            },
+            "inherit_grid_gap": {
+              "label": "ใช้การตั้งค่าระยะห่างกริดทั่วโลก"
+            },
+            "column_gap": {
+              "label": "ระยะห่างแนวนอน"
+            },
+            "row_gap": {
+              "label": "ระยะห่างแนวตั้ง"
             }
           },
           "presets": {
@@ -2657,6 +2666,26 @@
       },
       "excerpt": {
         "name": "สรุป",
+        "settings": {
+          "max_rows": {
+            "label": "ตัวเลือกการแสดงผล",
+            "options_0": {
+              "label": "แสดงทั้งหมด"
+            },
+            "options_1": {
+              "label": "แสดงสูงสุด 1 แถว"
+            },
+            "options_2": {
+              "label": "แสดงสูงสุด 2 แถว"
+            },
+            "options_3": {
+              "label": "แสดงสูงสุด 3 แถว"
+            },
+            "options_4": {
+              "label": "แสดงสูงสุด 4 แถว"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "สรุป"
@@ -2678,6 +2707,23 @@
       },
       "title": {
         "name": "หัวข้อ",
+        "settings": {
+          "max_rows": {
+            "label": "ตัวเลือกการแสดงผล",
+            "options_0": {
+              "label": "แสดงทั้งหมด"
+            },
+            "options_1": {
+              "label": "แสดงสูงสุด 1 แถว"
+            },
+            "options_2": {
+              "label": "แสดงสูงสุด 2 แถว"
+            },
+            "options_3": {
+              "label": "แสดงสูงสุด 3 แถว"
+            }
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "หัวข้อ"
@@ -2792,6 +2838,9 @@
       "title": {
         "name": "ชื่อหมวดหมู่",
         "settings": {
+          "title": {
+            "label": "ชื่อคอลเลกชัน"
+          },
           "size": {
             "label": "ขนาด"
           }
@@ -2910,6 +2959,9 @@
         },
         "text_align": {
           "label": "การจัดตำแหน่งข้อความ"
+        },
+        "text_align_mobile": {
+          "label": "การจัดตำแหน่งข้อความ (มือถือ)"
         }
       },
       "presets": {
@@ -3171,7 +3223,7 @@
         }
       },
       "detail_sell_info_row": {
-        "name": "แถบข้อมูลการขาย",
+        "name": "ข้อเสนอและสิทธิประโยชน์",
         "settings": {
           "info_icon": {
             "label": "ไอคอน",
@@ -3203,12 +3255,26 @@
         },
         "presets": {
           "presets_0": {
-            "name": "แถบข้อมูลการขาย"
+            "name": "ข้อเสนอและสิทธิประโยชน์"
           }
         }
       },
       "detail_sell_info": {
         "name": "ข้อมูลการขาย",
+        "settings": {
+          "direction": {
+            "label": "เลย์เอาต์",
+            "options_0": {
+              "label": "แนวตั้ง"
+            },
+            "options_1": {
+              "label": "แนวนอน"
+            }
+          },
+          "column": {
+            "label": "จำนวนที่แสดง"
+          }
+        },
         "presets": {
           "presets_0": {
             "name": "ข้อมูลการขาย"

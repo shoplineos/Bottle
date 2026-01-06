@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "受け入れる",
+      "all_products": "全商品",
+      "collections": "コレクション",
       "decline": "拒否する",
       "email_tip": "メールアドレスが無効です。もう一度入力してください",
       "home": "ホームページ",

@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Hyväksyä",
+      "all_products": "Kaikki Tuotteet",
+      "collections": "Kokoelmat",
       "decline": "Lasku",
       "email_tip": "Virheellinen postilaatikko. Syötä uudelleen",
       "home": "Kotisivu",

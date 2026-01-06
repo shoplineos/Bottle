@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Aceitar",
+      "all_products": "Todos os Produtos",
+      "collections": "Coleções",
       "decline": "Rejeitar",
       "email_tip": "Caixa de correio inválida. Por favor, volte a introduzir",
       "home": "Página inicial",

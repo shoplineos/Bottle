@@ -3,15 +3,15 @@
 {{#var mobile_enable_slider = block.settings.mobile_enable_slider /}}
 {{#var desktop_enable_slider = block.settings.desktop_enable_slider /}}
 
-{{#if desktop_enable_slider || mobile_enable_slider}}
+{{#if desktop_enable_slider || mobile_enable_slider }}
   {{#component "stylesheet" src="components/carousel/index.css" | asset_url() /}}
   {{#component "script" src="components/carousel/index.js" | asset_url() /}}
 {{/if}}
 
 {{~#var mobile_columns /}}
-{{~#if mobile_enable_slider}}
+{{~#if mobile_enable_slider }}
   {{~#var extra_columns = 0.0 /}}
-  {{~#if (block.settings.mobile_columns < block.settings.mobile_limit) && (block.blocks_size > 1)}}
+  {{~#if (block.settings.mobile_columns < block.settings.mobile_limit) && (block.blocks_size > 1) }}
     {{~#set extra_columns = 0.3 /}}
   {{~/if~}}
   {{#set mobile_columns = block.settings.mobile_columns | plus(extra_columns) /}}
@@ -19,32 +19,41 @@
   {{#set mobile_columns = block.settings.mobile_columns /}}
 {{~/if}}
 
-<theme-carousel data-direction="horizontal" class="block-collection-list__theme-carousel" {{{block.shopline_attributes}}}>
+<theme-carousel
+  data-direction="horizontal"
+  class="block-collection-list__theme-carousel"
+  {{{ block.shopline_attributes }}}
+>
   <ul
-    class="block-collection-list grid carousel__track
-      {{#if block.settings.mobile_columns >= block.settings.mobile_limit}}overflow-hidden{{/if}}
+    class="
+      block-collection-list grid carousel__track
+      {{#if block.settings.mobile_columns >= block.settings.mobile_limit }}overflow-hidden{{/if}}
     "
     style="
-      --mobile-columns: {{mobile_columns}};
-      --mobile-gap-columns: {{mobile_columns | ceil()}};
-      {{~#if mobile_enable_slider}}--mobile-auto-flow: column;{{~/if}}
-      --desktop-columns: {{block.settings.desktop_columns}};
-      {{#if desktop_enable_slider}}--desktop-auto-flow: column;{{/if}}
+      --mobile-columns: {{ mobile_columns }};
+      --mobile-gap-columns: {{ mobile_columns | ceil() }};
+      {{~#if mobile_enable_slider }}--mobile-auto-flow: column;{{~/if}}
+      --desktop-columns: {{ block.settings.desktop_columns }};
+      {{#if desktop_enable_slider }}--desktop-auto-flow: column;{{/if}}
+      {{#if !block.settings.inherit_grid_gap }}
+        --column-gap: {{ block.settings.column_gap }}px;
+        --row-gap: {{ block.settings.row_gap }}px;
+      {{/if}}
     "
   >
     {{#blocks}}
-      {{~#capture class}}
-        {{~#if forblock.index0 >= block.settings.mobile_limit~}}
+      {{~#capture class }}
+        {{~#if forblock.index0 >= block.settings.mobile_limit ~}}
           hidden-mobile
         {{~/if}}
       {{~/capture}}
-      <li class="{{class}}">
+      <li class="{{ class }}">
         {{#block mobile_columns=(mobile_columns | floor()) desktop_columns=block.settings.desktop_columns /}}
       </li>
     {{/blocks}}
   </ul>
 
-  {{#if desktop_enable_slider && (block.blocks_size > block.settings.desktop_columns)}}
+  {{#if desktop_enable_slider && (block.blocks_size > block.settings.desktop_columns) }}
     <button name="previous" class="block-collection-list__button block-collection-list__button--previous hidden-mobile">
       {{#component "icons/arrow" /}}
     </button>
@@ -106,6 +115,34 @@
       "id": "mobile_enable_slider",
       "label": "t:sections.collection_list.blocks.list.settings.mobile_enable_slider.label",
       "default": false
+    },
+    {
+      "type": "switch",
+      "id": "inherit_grid_gap",
+      "label": "t:sections.collection_list.blocks.list.settings.inherit_grid_gap.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "t:sections.collection_list.blocks.list.settings.column_gap.label",
+      "visible_if": "{{ block.settings.inherit_grid_gap == false }}",
+      "default": 30,
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "row_gap",
+      "label": "t:sections.collection_list.blocks.list.settings.row_gap.label",
+      "visible_if": "{{ block.settings.inherit_grid_gap == false }}",
+      "default": 30,
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px"
     }
   ],
   "blocks": [

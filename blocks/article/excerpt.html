@@ -1,15 +1,51 @@
-<div class="body2" {{{block.shopline_attributes}}}>
-  {{#if props.article }}
-    {{props.article.excerpt}}
-  {{#else /}}
-    Give your customers a summary of your blog post
-  {{/if}}
+<div
+  style="--max-row:{{ block.settings.max_rows }};"
+  class="block-article-card__excerpt body2 hidden-empty"
+  {{{ block.shopline_attributes }}}
+>
+  <span>
+    {{~#if props.article }}
+      {{~ props.article.excerpt ~}}
+    {{#else/}}
+      Give your customers a summary of your blog post
+    {{/if~}}
+  </span>
 </div>
 
 {{#schema}}
 {
   "name": "t:blocks.article.excerpt.name",
   "tag": "",
+  "settings": [
+    {
+      "type": "select",
+      "id": "max_rows",
+      "label": "t:blocks.article.excerpt.settings.max_rows.label",
+      "default": "unset",
+      "options": [
+        {
+          "value": "unset",
+          "label": "t:blocks.article.excerpt.settings.max_rows.options_0.label"
+        },
+        {
+          "value": 1,
+          "label": "t:blocks.article.excerpt.settings.max_rows.options_1.label"
+        },
+        {
+          "value": 2,
+          "label": "t:blocks.article.excerpt.settings.max_rows.options_2.label"
+        },
+        {
+          "value": 3,
+          "label": "t:blocks.article.excerpt.settings.max_rows.options_3.label"
+        },
+        {
+          "value": 4,
+          "label": "t:blocks.article.excerpt.settings.max_rows.options_4.label"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "t:blocks.article.excerpt.presets.presets_0.name"

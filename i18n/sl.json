@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Sprejmi",
+      "all_products": "Vsiti Izdelki",
+      "collections": "Zbirke",
       "decline": "Zavrni",
       "email_tip": "Nepravilen poštni predal. Ponovno vnesite",
       "home": "Domača stran",

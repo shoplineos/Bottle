@@ -3,57 +3,72 @@
 {{#var is_first_screen = false /}}
 {{#var is_first_section = false /}}
 
-{{#if section.index && section.index < 3}}
+{{#if section.index && section.index < 3 }}
   {{#set is_first_screen = true /}}
 {{/if}}
-{{#if section.index && section.index == 1}}
+{{#if section.index && section.index == 1 }}
   {{#set is_first_section = true /}}
 {{/if}}
 
 {{#var default_lazy = true /}}
 {{#var default_fetchpriority = "auto" /}}
 
-{{#if is_first_screen}}
+{{#if is_first_screen }}
   {{#set default_fetchpriority = "high" /}}
 {{/if}}
-{{#if is_first_section}}
+{{#if is_first_section }}
   {{#set default_lazy = false /}}
 {{/if}}
 
 {{#var loading = "lazy" /}}
-{{#var widths = props.breakpoints | default("375, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2160, 2660, 2960, 3260, 3860") /}}
+{{#var
+  widths = props.breakpoints | default("375, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2160, 2660, 2960, 3260, 3860")
+/}}
 {{#var sizes /}}
 
-{{#if props.original}}
+{{#if props.original }}
   {{#set widths = "999999" /}}
 {{/if}}
 
-{{#if props.lazy | default(default_lazy)}}
+{{#if props.lazy | default(default_lazy, allow_false = true) }}
   {{#set loading = "lazy" /}}
 {{#else/}}
   {{#set loading = "eager" /}}
 {{/if}}
 
-{{#if props.desktop_size || props.mobile_size}}
+{{#if props.desktop_size || props.mobile_size }}
   {{#var desktop_size_breakpoint = "100vw" /}}
   {{#var mobile_size_breakpoint = "100vw" /}}
-  {{#if props.desktop_size}}
-    {{#if props.desktop_size|contains("px") || props.desktop_size|contains("vw") || props.desktop_size|contains("%")}}
+  {{#if props.desktop_size }}
+    {{#if
+      props.desktop_size | contains("px") ||
+      props.desktop_size | contains("vw") ||
+      props.desktop_size | contains("%")
+    }}
       {{#set desktop_size_breakpoint = props.desktop_size /}}
     {{#else/}}
       {{#set desktop_size_breakpoint = "calc(100vw * " | append(props.desktop_size) | append(")") /}}
     {{/if}}
   {{/if}}
 
-  {{#if props.mobile_size}}
-    {{#if props.mobile_size|contains("px") || props.mobile_size|contains("vw") || props.mobile_size|contains("%")}}
+  {{#if props.mobile_size }}
+    {{#if
+      props.mobile_size | contains("px") ||
+      props.mobile_size | contains("vw") ||
+      props.mobile_size | contains("%")
+    }}
       {{#set mobile_size_breakpoint = props.mobile_size /}}
     {{#else/}}
       {{#set mobile_size_breakpoint = "calc(100vw * " | append(props.mobile_size) | append(")") /}}
     {{/if}}
   {{/if}}
 
-  {{#set sizes = "(max-width: 959px) " | append(mobile_size_breakpoint) | append(",(min-width: 960px) ") | append(desktop_size_breakpoint) /}}
+  {{#set
+    sizes = "(max-width: 959px) " |
+      append(mobile_size_breakpoint) |
+      append(",(min-width: 960px) ") |
+      append(desktop_size_breakpoint)
+  /}}
 {{/if}}
 
 {{#var class = props.class | default("") /}}
@@ -62,14 +77,13 @@
 {{#var src = "" /}}
 {{#var alt = "" /}}
 
-{{#if props.data}}
+{{#if props.data }}
   {{#set src = props.data | image_url(quality = props.quality) /}}
   {{#set alt = props.data.alt /}}
-{{#else /}}
+{{#else/}}
   {{#set src = props.src /}}
   {{#set alt = props.alt /}}
 {{/if}}
-
 
 {{#image_tag
   src

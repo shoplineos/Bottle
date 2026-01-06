@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Pieņemt",
+      "all_products": "Visi Produkti",
+      "collections": "Kolekcijas",
       "decline": "Noraidīt",
       "email_tip": "Nederīga pastkastīte. Lūdzu, ievadiet to vēlreiz",
       "home": "Mājas lapa",

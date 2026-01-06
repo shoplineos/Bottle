@@ -626,6 +626,8 @@
     },
     "general": {
       "accept": "Đồng ý",
+      "all_products": "Tất Cả Sản Phẩm",
+      "collections": "Bộ Sưu Tập",
       "decline": "Từ chối",
       "email_tip": "Hộp thư không hợp lệ. Vui lòng nhập lại",
       "home": "Trang chủ",
